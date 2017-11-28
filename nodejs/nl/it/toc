@@ -1,0 +1,41 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Nodejs" audience="runtime" href="/docs/runtimes/nodejs/getting-started.html"}
+SDK for Node.js
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    startup.md
+    runningLocally.md
+    enforceHTTPS.md
+
+    {: .topicgroup}
+    Lavora offline con un proxy
+        offlineMode.md
+        [Lavora offline con un proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    nodejsBuildpacks.md
+    configurationOptions.md
+    fipsMode.md
+    [Gestione di applicazioni Liberty e Node.js](../../manageapps/app_mng.html)
+
+    {: .topicgroup}
+    Applicazioni starter e pacchetti di build
+        [Utilizza le applicazioni starter](../../cfapps/starter_app_usage.html)
+        [Utilizza i pacchetti di build della community](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    updates.md
+    availableVersions.md
+    [Istruzione di supporto per il pacchetto di build](../../manageapps/buildpackSupport.html)
+
+    {: .navgroup-end}

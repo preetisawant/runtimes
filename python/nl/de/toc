@@ -1,0 +1,25 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Python" audience="runtime"}
+Python
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    Starteranwendungen und Community-Buildpacks
+        [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html)
+        [Community-Buildpacks verwenden](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    [Mit einem Proxy arbeiten](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Buildpack Support Statement](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

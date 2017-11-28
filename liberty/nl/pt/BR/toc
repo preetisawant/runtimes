@@ -1,0 +1,58 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="liberty" audience="runtime"}
+Liberty for Java
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+
+    {: .topicgroup}
+    Links relacionados
+        [Visão geral do perfil Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    secureWebApp.md
+    loggingAndTracing.md
+    [Implementar apps com o IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+    autoConfig.md
+    customizingJRE.md
+    oracle_jre.md
+    usingBetaFeatures.md
+    [Fazer opt-out de serviços de limite](autoConfig.html#opting_out)
+
+    {: .topicgroup}
+    Monitorar o Liberty no Bluemix
+        monitoring/jconsole.md
+        monitoring/dynatrace.md
+        monitoring/newRelic.md
+
+    {: .topicgroup}
+    Trabalhar off-line ou com um proxy
+        offlineMode.md
+        [Trabalhar com um proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    optionsForPushing.md
+    memoryLimits.md
+    libertyFeatures.md
+    environmentVariables.md
+
+    {: .topicgroup}
+    Aplicativos iniciadores e buildpacks
+        [Usar os aplicativos iniciadores](../../cfapps/starter_app_usage.html)
+        [Usar buildpacks de comunidade](../../cfapps/byob.html)
+
+    buildpackDefaults.md
+    [Gerenciando aplicativos Liberty e Node.js](../../manageapps/app_mng.html)
+    [Introdução ao IBM Monitoring and Analytics for Bluemix Service](../../services/monana/index.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    updates.md
+    [Instrução de suporte do buildpack](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

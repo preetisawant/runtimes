@@ -1,0 +1,59 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="liberty" audience="runtime"}
+Liberty for Java
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    
+
+    {: .topicgroup}
+    相关链接
+        [Liberty 概要文件概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    secureWebApp.md
+    loggingAndTracing.md
+    [使用 IBM Eclipse Tools for Bluemix 部署应用程序](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+    autoConfig.md
+    customizingJRE.md
+    oracle_jre.md
+    usingBetaFeatures.md
+    [选择退出绑定的服务](autoConfig.html#opting_out)
+
+    {: .topicgroup}
+    在 Bluemix 中监视 Liberty
+        monitoring/jconsole.md
+        monitoring/dynatrace.md
+        monitoring/newRelic.md
+
+    {: .topicgroup}
+    脱机工作或使用代理
+        offlineMode.md
+        [使用代理](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    optionsForPushing.md
+    memoryLimits.md
+    libertyFeatures.md
+    environmentVariables.md
+
+    {: .topicgroup}
+    入门模板应用程序和 buildpack
+        [使用入门模板应用程序](../../cfapps/starter_app_usage.html)
+        [使用社区 buildpack](../../cfapps/byob.html)
+
+    buildpackDefaults.md
+    [管理 Liberty 和 Node.js 应用程序](../../manageapps/app_mng.html)
+    [IBM Monitoring and Analytics for Bluemix 服务入门](../../services/monana/index.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    updates.md
+    [Buildpack 支持语句](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

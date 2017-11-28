@@ -1,0 +1,25 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Python" audience="runtime"}
+Python
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    スターター・アプリケーションおよびコミュニティー・ビルドパック
+        [スターター・アプリケーションの使用](../../cfapps/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    [プロキシーの処理](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [ビルドパックのサポート・ステートメント](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

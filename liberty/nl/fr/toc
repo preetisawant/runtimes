@@ -1,0 +1,58 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="liberty" audience="runtime"}
+Liberty for Java
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+
+    {: .topicgroup}
+    Liens connexes
+        [Présentation du profil Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    secureWebApp.md
+    loggingAndTracing.md
+    [Déploiement d'applications avec IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+    autoConfig.md
+    customizingJRE.md
+    oracle_jre.md
+    usingBetaFeatures.md
+    [Résiliation de services liés](autoConfig.html#opting_out)
+
+    {: .topicgroup}
+    Surveiller Liberty dans Bluemix
+        monitoring/jconsole.md
+        monitoring/dynatrace.md
+        monitoring/newRelic.md
+
+    {: .topicgroup}
+    Travailler en mode hors ligne ou avec un proxy
+        offlineMode.md
+        [Utilisation d'un proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    optionsForPushing.md
+    memoryLimits.md
+    libertyFeatures.md
+    environmentVariables.md
+
+    {: .topicgroup}
+    Applications de démarrage et packs de construction
+        [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html)
+        [Utilisation des packs de construction de communauté](../../cfapps/byob.html)
+
+    buildpackDefaults.md
+    [Gestion des applications Liberty et Node.js](../../manageapps/app_mng.html)
+    [Initiation au service IBM Monitoring and Analytics for Bluemix](../../services/monana/index.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    updates.md
+    [Déclaration de prise en charge pour les packs de construction](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

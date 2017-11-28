@@ -1,0 +1,35 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Dotnet" audience="runtime"}
+ASP.NET Core
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    disablingNuGet.md
+    compile_pub_deploy.md
+    enforceHTTPS.md
+    [プロキシーの処理](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    buildOutputfiles.md
+    usingCustomLib.md
+    usingNuGet.md
+
+    {: .topicgroup}
+    スターター・アプリケーションおよびコミュニティー・ビルドパック
+        [スターター・アプリケーションの使用](../../cfapps/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    updates.md
+    runtimeVersions.md
+    [ビルドパックのサポート・ステートメント](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

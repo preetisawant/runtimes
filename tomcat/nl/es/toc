@@ -1,0 +1,26 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Tomcat" audience="runtime"}
+Tomcat
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    [Trabajar con un proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    Aplicaciones de inicio y compilaciones de la comunidad
+        [Usar las aplicaciones de inicio](../../cfapps/starter_app_usage.html)
+        [Usar compilaciones de la comunidad](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Versiones de tiempo de ejecución](index.html#runtime_versions)
+    [Declaración de soporte de paquete de compilación](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

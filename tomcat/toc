@@ -1,0 +1,27 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Tomcat" audience="runtime"}
+Tomcat
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    eclipseTomcat.md
+    [Work with a proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    Starter applications and community buildpacks
+        [Use the starter applications](../../cfapps/starter_app_usage.html)
+        [Use community buildpacks](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Runtime versions](index.html#runtime_versions)
+    [Buildpack support statement](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

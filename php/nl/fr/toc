@@ -1,0 +1,27 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="PHP" audience="runtime"}
+PHP
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    [Utilisation d'un proxy](../../manageapps/workingWithProxy.html)
+    [Imposer l'utilisation de HTTPS sur toutes les pages](index.html#enforce_https)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+
+    {: .topicgroup}
+    Applications de démarrage et packs de construction
+        [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html)
+        [Utilisation des packs de construction de communauté](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Déclaration de prise en charge pour les packs de construction](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

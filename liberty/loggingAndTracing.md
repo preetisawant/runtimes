@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-26"
+lastupdated: "2017-12-05"
 
 ---
 
@@ -39,12 +39,12 @@ The standard Liberty logs, such as `messages.log` or the `ffdc` directory, are a
   ```
   {: codeblock}
 
-The log level and other trace options can be set through the Liberty configuration file. For more information, see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). Tracing can also be adjusted on a running application instance by using the IBM {{site.data.keyword.Bluemix_notm}} console.
+The log level and other trace options can be set through the Liberty configuration file. For more information, see [Troubleshooting Liberty: Logging and Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). Tracing can also be adjusted on a running application instance by using the {{site.data.keyword.Bluemix_notm}} console.
 
 ## Using the trace and dump capabilities
 {: #using_trace_and_dump}
 
-The Liberty tracing configuration can be adjusted for a running application directly from the {{site.data.keyword.Bluemix_notm}} console. The console also provides capability for requesting and downloading thread and heap dumps. In order to adjust the tracing configuration or request a dump, select a Liberty application in the {{site.data.keyword.Bluemix_notm}} console and choose the `Runtime` menu in the navigation. In the `Runtime` view, select an instance and press the *TRACE* or *DUMP* button. If adjusting the trace level, see [Liberty profile: Trace and logging](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) for the details of the syntax of the trace specification.
+The Liberty tracing configuration can be adjusted for a running application directly from the {{site.data.keyword.Bluemix_notm}} console. The console also provides capability for requesting and downloading thread and heap dumps. In order to adjust the tracing configuration or request a dump, select a Liberty application in the {{site.data.keyword.Bluemix_notm}} console and choose the `Runtime` menu in the navigation. In the `Runtime` view, select an instance and press the *TRACE* or *DUMP* button. If adjusting the trace level, see [Troubleshooting Liberty: Logging and Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) for the details of the syntax of the trace specification.
 
 ### Changing trace configuration via SSH in Diego
 
@@ -52,9 +52,9 @@ For a Liberty application running in a Diego cell, you can change the tracing co
 
 The pushed application must include a server.xml which contains **updateTrigger** with the value **polled**, then changes to the tracing specification in the server.xml will be detected and applied by runtime environment.
 
-See [push Liberty apps with server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized sever.xml
+See [Push Liberty apps with server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized sever.xml
 
-See [Controlling Dynamic Updates![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} for how to set up dynamic update in the server.xml.
+See [Controlling Dynamic Updates![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} for how to set up dynamic update in the server.xml.
 
 To change tracing configuration, follow these steps:
 
@@ -74,7 +74,7 @@ $ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 Note: The server.xml change will be lost on a restage or restart and is only valid for the instance you ssh into.
 
-See [Liberty profile: Trace and logging ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} for the details of the syntax of the trace specification.
+See [Troubleshooting Liberty: Logging and Trace ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} for the details of the syntax of the trace specification.
 
 ### Triggering dumps via SSH in Diego
 
@@ -144,4 +144,4 @@ It is also possible to use `scp` and other similar tools to view and download th
 ## general
 {: #general notoc}
 * [Liberty runtime](index.html)
-* [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

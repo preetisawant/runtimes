@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-10-25"
+lastupdated: "2017-12-10"
 
 ---
 
@@ -186,3 +186,9 @@ go run main.go
 
 Remember if you don't need your app live, stop it so you don't incur any unexpected charges.
 {: tip}
+
+## Next Steps
+
+* [Tutorials](/docs/tutorials/index.html)
+* [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-bluemix.github.io/){: new_window}
+* [Architecture Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

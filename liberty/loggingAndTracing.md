@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-05"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -54,7 +54,7 @@ The pushed application must include a server.xml which contains **updateTrigger*
 
 See [Push Liberty apps with server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized sever.xml
 
-See [Controlling Dynamic Updates![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} for how to set up dynamic update in the server.xml.
+See [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} for how to set up dynamic update in the server.xml.
 
 To change tracing configuration, follow these steps:
 
@@ -74,7 +74,7 @@ $ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 Note: The server.xml change will be lost on a restage or restart and is only valid for the instance you ssh into.
 
-See [Troubleshooting Liberty: Logging and Trace ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} for the details of the syntax of the trace specification.
+See [Troubleshooting Liberty: Logging and Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} for the details of the syntax of the trace specification.
 
 ### Triggering dumps via SSH in Diego
 

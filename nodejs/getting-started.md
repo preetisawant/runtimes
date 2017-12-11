@@ -2,8 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-10-26"
-
+lastupdated: "2017-12-10"
 ---
 
 {:shortdesc: .shortdesc}
@@ -183,3 +182,9 @@ npm start
 
 Remember, if you don't need your app live on {{site.data.keyword.Bluemix_notm}}, stop the app so you don't incur any unexpected charges.
 {: tip}
+
+## Next Steps
+
+* [Tutorials](/docs/tutorials/index.html)
+* [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-bluemix.github.io/){: new_window}
+* [Architecture Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

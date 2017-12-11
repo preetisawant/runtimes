@@ -1,0 +1,63 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="liberty" audience="runtime"}
+Liberty for Java
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+
+    {: .topicgroup}
+    Related links
+        [Liberty Profile Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    secureWebApp.md
+    loggingAndTracing.md
+
+    {: .topicgroup}
+    Use IBM Eclipse Tools for IBM Cloud
+        eclipseDevelop.md
+        [Deploy apps with IBM Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+
+    autoConfig.md
+    customizingJRE.md
+    using_own_jre.md
+    usingBetaFeatures.md
+    [Opt out of bound services](autoConfig.html#opting_out)
+
+    {: .topicgroup}
+    Monitor Liberty in IBM Cloud
+        monitoring/jconsole.md
+        monitoring/dynatrace.md
+        monitoring/newRelic.md
+
+    {: .topicgroup}
+    Work offline or with a proxy
+        offlineMode.md
+        [Work with a proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    optionsForPushing.md
+    memoryLimits.md
+    libertyFeatures.md
+    environmentVariables.md
+
+    {: .topicgroup}
+    Starter applications and buildpacks
+        [Use the starter applications](../../cfapps/starter_app_usage.html)
+        [Use community buildpacks](../../cfapps/byob.html)
+
+    buildpackDefaults.md
+    [Managing Liberty and Node.js apps](../../manageapps/app_mng.html)
+    [Getting started with IBM Monitoring and Analytics](../../services/monana/index.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    updates.md
+    [Buildpack support statement](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

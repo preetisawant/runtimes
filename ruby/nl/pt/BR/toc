@@ -1,0 +1,26 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Ruby" audience="runtime"}
+Ruby
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    [Trabalhar com um proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    Aplicativos iniciadores e buildpacks de comunidade
+        [Usar os aplicativos iniciadores](../../cfapps/starter_app_usage.html)
+        [Usar buildpacks de comunidade](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Versões de runtime](index.html#runtime_versions)
+    [Instrução de suporte do buildpack](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

@@ -1,0 +1,35 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="Dotnet" audience="runtime"}
+ASP.NET Core
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    disablingNuGet.md
+    compile_pub_deploy.md
+    enforceHTTPS.md
+    [Trabajar con un proxy](../../manageapps/workingWithProxy.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    buildOutputfiles.md
+    usingCustomLib.md
+    usingNuGet.md
+
+    {: .topicgroup}
+    Aplicaciones de inicio y compilaciones de la comunidad
+        [Usar las aplicaciones de inicio](../../cfapps/starter_app_usage.html)
+        [Usar compilaciones de la comunidad](../../cfapps/byob.html)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    ts_index.md
+    updates.md
+    runtimeVersions.md
+    [Declaración de soporte de paquete de compilación](../../manageapps/buildpackSupport.html)
+    {: .navgroup-end}

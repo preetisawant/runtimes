@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-26"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -31,7 +31,7 @@ environment.  See [Using the starter applications](/docs/cfapps/starter_app_usag
 You can specify the version of Python to be used by your app by setting python-versionnumber in the runtime.txt file in the root of your application. For example:
 
 ```
-python-3.6.0
+python-3.6.1
 ```
 {: codeblock}
 
@@ -52,7 +52,8 @@ currently installed in {{site.data.keyword.Bluemix_notm}}:
 * 3.4.6
 * 3.5.2
 * 3.5.3
-* 3.6.0
+* 3.6.1
+* 3.6.2
 
 If your application requires a Python version that is not listed,
 you can use the external

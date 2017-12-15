@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-12-10"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -65,7 +65,7 @@ You should see an output similar to the following:
 ```
 Server is listening on port: 8080
 ```
-{: screen}
+{: codeblock}
 
 View your app at: http://localhost:8080
 
@@ -103,12 +103,14 @@ cf api <API-endpoint>
 
 Replace the *API-endpoint* in the command with an API endpoint from the following list.
 
-|Region          |API endpoint                             |
-|:---------------|:-------------------------------|
-| US South       |https://api.ng.bluemix.net     |
-| United Kingdom | https://api.eu-gb.bluemix.net  |
-| Sydney         | https://api.au-syd.bluemix.net |
-| Frankfurt     | https://api.eu-de.bluemix.net |
+| **Region name** | **Geographic location** | **API endpoint** |
+|-----------------|-------------------------|-------------------|
+| US South region | Dallas, US | api.ng.bluemix.net |
+| US East region | Washington, DC, US | api.us-east.bluemix.net |
+| United Kingdom region | London, England | api.eu-gb.bluemix.net |
+| Sydney region | Sydney, Australia | api.au-syd.bluemix.net |
+| Germany region | Frankfurt, Germany | api.eu-de.bluemix.net |
+{: caption="Table 1. {{site.data.keyword.cloud_notm}} region list" caption-side="top"}
 
 Login to your {{site.data.keyword.Bluemix_notm}} account
 
@@ -135,7 +137,7 @@ When deployment completes you should see a message indicating that your app is r
 Next, we'll add a NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
 
 1. Log in to {{site.data.keyword.Bluemix_notm}} in your Browser. Browse to the `Dashboard`. Select your application by clicking on its name in the `Name` column.
-2. Click on `Connections` then `Connect new`.
+2. Click on `Connections` then `Create connection`.
 3. In the `Data & Analytics` section, select `Cloudant NoSQL DB`
 4. Select a pricing plan. {{site.data.keyword.Bluemix_notm}} offers free `Lite` plans for a select collection of its cloud services with enough capacity to get you started
 5. Select `Restage` when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is only available to the application when it is running on {{site.data.keyword.Bluemix_notm}}.
@@ -148,31 +150,34 @@ Environment variables enable you to separate deployment settings from your sourc
 
 We're now going to update your local code to point to this database. Create a json file that will store the credentials for the services the application will use. This file will get used ONLY when the application is running locally. When running in {{site.data.keyword.Bluemix_notm}}, the credentials will be read from the VCAP_SERVICES environment variable.
 
-Create a file called `config.json` in the `Sources` directory with the following content (see config.json.example):
+Create a file called `my-cloudant-credentials.json` in the `config` directory with the following content (as reference, see `config/my-cloudant-credentials.json.example`):
+
  ```
  {
-    "vcap":{
-       "services":{
-          "cloudantNoSQLDB":[
-             {
-                "credentials":{
-                   "host":"<host>",
-                   "password":"<password>",
-                   "port":443,
-                   "url":"<url>",
-                   "username":"<username>"
-                },
-                "label":"cloudantNoSQLDB",
-                "name": "CloudantService"
-             }
-          ]
-       }
-    }
+   "password": "<password>",
+   "url": "<url>",
+   "username": "<username>"
  }
  ```
-{: pre}
 
-This sample application uses the Swift-cfenv package to interact with {{site.data.keyword.Bluemix_notm}} to parse environment variables. [Learn more...](https://packagecatalog.com/package/IBM-Swift/Swift-cfenv)
+Update the `mappings.json` file in the `config` directory by replacing the `cloudant` placeholder with the **name** of your DB instance:
+
+```
+{
+  "MyCloudantDB": {
+    "searchPatterns": [
+      "cloudfoundry:cloudant",
+      "env:kube-cloudant-credentials",
+      "file:config/my-cloudant-credentials.json"
+    ]
+  }
+}
+```
+
+This sample application uses the `CloudEnvironment` package to interact with {{site.data.keyword.Bluemix_notm}} to parse environment variables. [Learn more...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+
+The `cloudant` placeholder in the `cloudfoundry:cloudant` configuration makes it easier to bind a user-provided Cloudant service to your application. With the `cloudfoundry:cloudant` configuration, you can create a Cloudant service that includes the string, `cloudant` somewhere in the service name and bind it to your application, without editing the `config.json` file. If you modify this configuration and later want to use a user-provided Cloudant service, you either need to edit the configuration to `cloudfoundry:cloudant` or define `cloudfoundry:` with the name of your user-provided service.
+{: tip}
 
 Back in the {{site.data.keyword.Bluemix_notm}} UI, select your App -> Connections -> Cloudant -> View Credentials
 
@@ -189,13 +194,17 @@ swift build
  ```
  {: pre}
 
-View your app at: http://localhost:8080. Any names you enter into the app will now get added to the database.
+ View your app at: http://localhost:8080. Any names you enter into the app will now get added to the database.
 
-This sample application uses the Kitura-CouchDB package to interact with Cloudant. [Learn more...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
-{: tip}
+ This sample application uses the `Kitura-CouchDB` package to interact with Cloudant. [Learn more...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
 
-Your local app and  the {{site.data.keyword.Bluemix_notm}} app are sharing the database.  View your {{site.data.keyword.Bluemix_notm}} app at the URL listed in the output of the push command from above.  Names you add from either app should appear in both when you refresh the browsers.
+ Make any changes you want and re-deploy to {{site.data.keyword.Bluemix_notm}}!
 
+ ```
+ cf app push
+ ```
+
+ View your app at the URL listed in the output of the push command, for example, *myUrl.mybluemix.net*.
 
 Remember if you don't need your app live, stop it so you don't incur any unexpected charges.
 {: tip}
@@ -203,5 +212,5 @@ Remember if you don't need your app live, stop it so you don't incur any unexpec
 ## Next Steps
 
 * [Tutorials](/docs/tutorials/index.html)
-* [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-bluemix.github.io/){: new_window}
+* [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io){: new_window}
 * [Architecture Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

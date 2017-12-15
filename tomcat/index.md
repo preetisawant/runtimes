@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-25"
+lastupdated: "2017-12-13"
 
 ---
 
@@ -39,10 +39,10 @@ Both of these can be specified in the application's manifest file.  For example:
 ```
     env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
-        JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
+        JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-The current java_buildpack version is v3.13 which contains default Tomcat version 8.0.41 and default Java version 1.8.0_121.
+The current java_buildpack version is v3.19 which contains default Tomcat version 8.0.45 and default Java version 1.8.0_141.
 For more information please see [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13).
 
 ## HTTPS redirect

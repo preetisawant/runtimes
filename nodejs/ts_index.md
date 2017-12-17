@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2017-09-18"
 
 Here are the answers to common troubleshooting questions about using SDK for Node.js on {{site.data.keyword.Bluemix}}.
 {:shortdesc}
+
+To learn more about logging and tracing, see the [Trace](../../manageapps/app_mng.html#trace) section in [Managing Liberty and Node.js Applications](../../manageapps/app_mng.html).
 
 ## Application fails to start with a “No space left on device” error
 {: #no_space_left_on_device}

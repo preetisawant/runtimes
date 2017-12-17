@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-12-10"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -95,12 +95,14 @@ In this manifest.yml file, **random-route: true** generates a random route for y
 
 Deploy your app to one of the following {{site.data.keyword.Bluemix_notm}} regions. For optimal latency, choose a region that's closest to your users.
 
-|Region          |API endpoint                             |
-|:---------------|:-------------------------------|
-| US South       |https://api.ng.bluemix.net     |
-| United Kingdom | https://api.eu-gb.bluemix.net  |
-| Sydney         | https://api.au-syd.bluemix.net |
-| Frankfurt     | https://api.eu-de.bluemix.net |
+| **Region name** | **Geographic location** | **API endpoint** |
+|-----------------|-------------------------|-------------------|
+| US South region | Dallas, US | api.ng.bluemix.net |
+| US East region | Washington, DC, US | api.us-east.bluemix.net |
+| United Kingdom region | London, England | api.eu-gb.bluemix.net |
+| Sydney region | Sydney, Australia | api.au-syd.bluemix.net |
+| Germany region | Frankfurt, Germany | api.eu-de.bluemix.net |
+{: caption="Table 1. {{site.data.keyword.cloud_notm}} region list" caption-side="top"}
 
 1. Set the API endpoint by replacing  `<API-endpoint>`  with the endpoint for your region.
   ```
@@ -138,7 +140,7 @@ You can troubleshoot errors in the deployment process by using the `cf logs <You
 Next, we'll add a NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
 
 1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select your application by clicking on its name in the **Name** column.
-2. Click on **Connections** and then **Connect new**.
+2. Click on **Connections** and then **Create connection**.
 3. In the **Data & Analytics** section, select **Cloudant NoSQL DB** and then create the service.
 4. Go to **Apps > Your App > Connections** and then choose **Connect Existing**.
 5. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
@@ -170,5 +172,5 @@ Remember, if you don't need your app live on {{site.data.keyword.Bluemix_notm}},
 ## Next Steps
 
 * [Tutorials](/docs/tutorials/index.html)
-* [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-bluemix.github.io/){: new_window}
+* [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io){: new_window}
 * [Architecture Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

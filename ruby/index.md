@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-10-26"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -32,29 +32,30 @@ You can specify the version of Ruby to be used by your app in your application's
 
 ```
   source 'https://rubygems.org'
-  ruby '2.4.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
 ```
 {: codeblock}
 
-When a version is not specified, version 2.3.3 is chosen by default.
+When a version is not specified, version 2.4.1 is chosen by default.
 
 ### Available versions:
 {: #available_versions}
 
 The following Ruby versions are available in the
 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.34)
-currently installed in {{site.data.keyword.Bluemix_notm}}:
+currently installed in {{site.data.keyword.Bluemix}}:
 
 * 2.1.8
 * 2.1.9
-* 2.2.5
 * 2.2.6
-* 2.3.2
+* 2.2.7
 * 2.3.3
+* 2.3.4
 * 2.4.0
+* 2.4.1
 
 If your app requires a Ruby version that is not listed,
 you can use the external

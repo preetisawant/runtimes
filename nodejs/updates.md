@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-12"
+  years: 2015, 2018
+lastupdated: "2018-01-08"
 
 ---
 
@@ -14,9 +14,12 @@ lastupdated: "2017-12-12"
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
 
-## December 11, 2017: Updated Node.js buildpack v3.16
-The SDK for Node.js buildpack v3.16 provides IBM SDK for Node.js versions v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. The default is latest 6.x, so it is currently 6.12.0. 
-Please note that it fixes PSIRTs: Advisory ID: 10237 Product Record ID: 104487 Title: Node.js zlib DOS security vulnerability, October 2017 (CVE-2017-14919). It is recommended to upgrade to v3.16 to get fixes for security vulnerabilties affecting 8.6.0.0 and earlier, 6.10.2.0 to 6.11.4.0 and 4.8.2.0 to 4.8.4.0.
+## January 8, 2018: Updated Nodejs buildpack v3.17
+The SDK for Node.js buildpack v3.17 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 and 8.9.3. The default is latest 6.x, so it is currently 6.12.2.
+
+## December 11, 2017: Updated Node.js buildpack v3.16.1
+The SDK for Node.js buildpack v3.16.1 provides IBM SDK for Node.js versions v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. The default is latest 6.x, so it is currently 6.12.0. 
+Please note that it fixes PSIRTs: Advisory ID: 10237 Product Record ID: 104487 Title: Node.js zlib DOS security vulnerability, October 2017 (CVE-2017-14919). It is recommended to upgrade to v3.16.1 to get fixes for security vulnerabilties affecting 8.6.0.0 and earlier, 6.10.2.0 to 6.11.4.0 and 4.8.2.0 to 4.8.4.0.
 
 ## November 1, 2017: Updated Node.js buildpack v3.15
 The SDK for Node.js buildpack v3.15 provides IBM SDK for Node.js versions 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 and 8.6.0. The default is latest 6.x, so it is currently 6.11.4.

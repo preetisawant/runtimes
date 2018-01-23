@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="PHP" audience="runtime"}
+{: .toc subcollection="PHP" audience="runtime" href="/docs/runtimes/php/getting-started.html"}}
 PHP
 
     {: .navgroup id="learn"}
@@ -10,12 +10,11 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Work with a proxy](../../manageapps/workingWithProxy.html)
+    [Work with a proxy](../common/workingWithProxy.html)
     [Enforce HTTPS on all pages](index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-
     {: .topicgroup}
     Starter applications and buildpacks
         [Use the starter applications](../../cfapps/starter_app_usage.html)
@@ -23,5 +22,5 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Buildpack support statement](../../manageapps/buildpackSupport.html)
+    [Buildpack support statement](../common/buildpackSupport.html)
     {: .navgroup-end}

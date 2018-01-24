@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-07-17"
 # Aplicar HTTPS en todas las páginas de la aplicación
 {: #enforce_https}
 
-Cuando se ejecuta la aplicación en Bluemix con la infraestructura de Express, es necesario realizar los cambios siguientes para aplicar HTTPS en lugar de HTTP en todas las páginas de la aplicación.
+Cuando se ejecuta la aplicación en {{site.data.keyword.Bluemix}} con la infraestructura de Express, es necesario realizar los cambios siguientes para aplicar HTTPS en lugar de HTTP en todas las páginas de la aplicación.
 
 ```
 var express = require("express");

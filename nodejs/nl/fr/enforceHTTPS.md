@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-07-17"
 # Imposer l'utilisation de HTTPS sur toutes les pages dans votre application
 {: #enforce_https}
 
-Lorsque vous exécutez votre application dans Bluemix avec l'infrastructure Express, les modifications suivantes doivent être effectuées pour imposer l'utilisation de HTTPS au lieu de HTTP sur toutes les pages dans votre application.
+Lorsque vous exécutez votre application dans {{site.data.keyword.Bluemix}} avec l'infrastructure Express, les modifications suivantes doivent être effectuées pour imposer l'utilisation de HTTPS au lieu de HTTP sur toutes les pages dans votre application.
 
 ```
 var express = require("express");

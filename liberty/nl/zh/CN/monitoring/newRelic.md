@@ -2,19 +2,19 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# 在 Bluemix 中使用 New Relic 监视 Liberty
+# 在 {{site.data.keyword.cloud_notm}} 中使用 New Relic 监视 Liberty
 {: #new_relic}
 
 New Relic 是第三方服务，其提供应用程序的监视度量值。有关 New Relic 服务提供哪些内容的更多信息，请参阅 [New Relic](http://newrelic.com/java)。
 
-根据 [Java 代理程序手动安装文档](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation)，要使用 New Relic 服务监视的 Java 应用程序通常需要使用 New Relic 代理程序和帐户许可证密钥进行绑定并配置。在 IBM Bluemix 环境中，可以通过在 IBM Bluemix 中创建服务实例来获取 New Relic 许可协议和帐户。然后，可以将 Java 应用程序绑定到 New Relic 服务实例；对于已准备好受 New Relic 服务监视的应用程序，Liberty buildpack 会自动进行配置。具体而言，该 buildpack 会：
+根据 [Java 代理程序手动安装文档](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation)，要使用 New Relic 服务监视的 Java 应用程序通常需要使用 New Relic 代理程序和帐户许可证密钥进行绑定并配置。在 {{site.data.keyword.Bluemix}} 环境中，可以通过在 {{site.data.keyword.Bluemix_notm}} 中创建服务实例来获取 New Relic 许可协议和帐户。然后，可以将 Java 应用程序绑定到 New Relic 服务实例；对于已准备好受 New Relic 服务监视的应用程序，Liberty buildpack 会自动进行配置。具体而言，该 buildpack 会：
 
 * 为应用程序提供 New Relic 代理程序。
 * 从 VCAP_APPLICATION 和 VCAP_SERVICES 应用程序环境变量获取应用程序名称和许可证密钥。
@@ -34,15 +34,15 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 ## 添加 New Relic 服务
 {: #add_new_relic}
 
-对于 IBM Bluemix 中要使用 New Relic 监视的现有 Java 应用程序，请执行以下步骤。
-1. 在 IBM Bluemix 中创建 New Relic 服务实例。
+对于 {{site.data.keyword.Bluemix_notm}} 中要使用 New Relic 监视的现有 Java 应用程序，请遵循以下步骤。
+1. 在 {{site.data.keyword.Bluemix_notm}} 中创建 New Relic 服务实例。
 
   <pre>
     $ cf create-service newrelic standard mynewrelic
   </pre>
   {: codeblock}
 
-2. 使用 New Relic 服务将应用程序部署到 IBM Bluemix。请参阅以下样本应用程序清单：
+2. 使用 New Relic 服务将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。请参阅以下样本应用程序清单：
 
   <pre>
         &dash;&dash;&dash;
@@ -58,7 +58,7 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
   </pre>
   {: codeblock}
 
-3. 直接从应用程序的 IBM Bluemix 仪表板访问应用程序的 New Relic 仪表板。
+3. 直接从应用程序的 {{site.data.keyword.Bluemix_notm}} 仪表板访问应用程序的 New Relic 仪表板。
 
 ### 添加用户提供的 New Relic 服务
 {: #add_user_provided_new_relic}
@@ -73,7 +73,7 @@ $ cf create-user-provided-service mynewrelic -p "licenseKey"
 ```
   {: codeblock}
 
-2. 使用用户提供的 New Relic 服务实例将应用程序部署到 IBM Bluemix。下面是使用用户提供的 New Relic 服务实例的样本应用程序清单：
+2. 使用用户提供的 New Relic 服务实例将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。下面是使用用户提供的 New Relic 服务实例的样本应用程序清单：
   <pre>
         &dash;&dash;&dash;
         applications:

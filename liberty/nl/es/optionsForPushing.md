@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,9 +13,9 @@ lastupdated: "2017-03-22"
 # Opciones para enviar apps Liberty
 {: #options_for_pushing}
 
-El comportamiento del servidor Liberty en Bluemix se controla mediante el paquete de compilación de Liberty. Los paquetes de compilación pueden ofrecer un entorno de tiempo de ejecución completo para una determinada clase de aplicaciones. Constituyen la clave para ofrecer portabilidad entre nubes y contribuir a una arquitectura de nube abierta. El paquete de compilación de Liberty proporciona un contenedor WebSphere Liberty capaz de ejecutar aplicaciones Java EE 7 y OSGi. Admite infraestructura extendidas, como Spring e incluye IBM JRE. WebSphere Liberty permite desarrollar rápidamente aplicaciones adaptadas a la nube. El paquete de compilación de Liberty da soporte a varias aplicaciones que se despliegan en un único servidor Liberty. Como parte de la integración del paquete de compilación de Liberty en Bluemix, el paquete de compilación garantiza que las variables de entorno para los servicios de enlace se muestran como variables de configuración en el servidor Liberty.
+El comportamiento del servidor Liberty en {{site.data.keyword.Bluemix}} se controla mediante el paquete de compilación de Liberty. Los paquetes de compilación pueden ofrecer un entorno de tiempo de ejecución completo para una determinada clase de aplicaciones. Constituyen la clave para ofrecer portabilidad entre nubes y contribuir a una arquitectura de nube abierta. El paquete de compilación de Liberty proporciona un contenedor WebSphere Liberty capaz de ejecutar aplicaciones Java EE 7 y OSGi. Admite infraestructura extendidas, como Spring e incluye IBM JRE. WebSphere Liberty permite desarrollar rápidamente aplicaciones adaptadas a la nube. El paquete de compilación de Liberty da soporte a varias aplicaciones que se despliegan en un único servidor Liberty. Como parte de la integración del paquete de compilación de Liberty en {{site.data.keyword.Bluemix_notm}}, el paquete de compilación garantiza que las variables de entorno para los servicios de enlace se muestran como variables de configuración en el servidor Liberty.
 
-Puede utilizar los siguientes métodos para desplegar aplicaciones Liberty en Bluemix.
+Puede utilizar los siguientes métodos para desplegar aplicaciones Liberty en {{site.data.keyword.Bluemix_notm}}.
 
 * Envío de una aplicación autónoma
 * Envío por push de un directorio del servidor
@@ -26,7 +26,7 @@ Importante: Cuando despliegue una aplicación con el paquete de compilación de 
 ## Apps autónomas
 {: #stand_alone_apps}
 
-Las aplicaciones autónomas, como los archivos WAR o EAR, se pueden desplegar en Liberty en Bluemix.
+Las aplicaciones autónomas, como los archivos WAR o EAR, se pueden desplegar en Liberty en {{site.data.keyword.Bluemix_notm}}.
 
 Para desplegar una aplicación autónoma, ejecute el mandato cf push con el parámetro -p que apunte al archivo WAR o EAR.
 Por ejemplo:
@@ -137,8 +137,7 @@ Importante: Para que los cambios en las variables de entorno de su entorno se ha
 
 En algunos casos, puede resultar necesario proporcionar una configuración personalizada del servidor Liberty con la aplicación. Esta configuración personalizada puede ser necesaria al desplegar un archivo WAR o EAR y el archivo server.xml predeterminado no tiene los valores determinados que necesita su aplicación.
 
-Si ha instalado el perfil de Liberty en la estación de trabajo y ya ha creado un servidor Liberty con la aplicación, puede enviar por push el contenido de dicho directorio a Bluemix.
-Por ejemplo, si el servidor Liberty se denomina defaultServer, ejecute el mandato:
+Si ha instalado el perfil de Liberty en la estación de trabajo y ya ha creado un servidor Liberty con la aplicación, puede enviar por push el contenido de dicho directorio a {{site.data.keyword.Bluemix_notm}}. Por ejemplo, si el servidor Liberty se denomina defaultServer, ejecute el mandato:
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
@@ -167,7 +166,7 @@ Si un perfil de Liberty no está instalado en la estación de trabajo, puede uti
 ```
 {: codeblock}
 
-Cuando el directorio del servidor esté listo, puede desplegarlo en Bluemix.
+Cuando el directorio del servidor esté listo, puede desplegarlo en {{site.data.keyword.Bluemix_notm}}.
 
 ```
     $ cf push <yourappname> -p defaultServer
@@ -184,7 +183,7 @@ Nota: Se puede acceder a las aplicaciones web desplegadas como parte del directo
 ## Servidor empaquetado
 {: #packaged_server}
 
-Puede enviar por push un archivo del servidor empaquetado a Bluemix. El archivo del servidor empaquetado se crea mediante el mandato server package de Liberty. Además de los archivos de la aplicación y de configuración, el archivo del servidor empaquetado puede contener recursos compartidos y las características de usuario de Liberty que necesita la aplicación.
+Puede enviar por push un archivo del servidor empaquetado a {{site.data.keyword.Bluemix_notm}}. El archivo del servidor empaquetado se crea mediante el mandato server package de Liberty. Además de los archivos de la aplicación y de configuración, el archivo del servidor empaquetado puede contener recursos compartidos y las características de usuario de Liberty que necesita la aplicación.
 
 Para empaquetar un servidor Liberty, utilice el mandato `./bin/server package` desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción `--include=usr`.
 Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
@@ -196,7 +195,7 @@ Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
 
 Este mandato genera un archivo serverName.zip en el directorio del servidor. Si ha utilizado la opción `--archive` para especificar un archivo de archivado distinto, asegúrese de que tenga la extensión `.zip` en lugar de `.jar`. **El paquete de compilación no da soporte a los archivos del servidor empaquetados creados con la extensión `.jar`**.
 
-Luego puede enviar por push el archivo `.zip` generado a Bluemix con el mandato `cf push`.
+Luego puede enviar por push el archivo `.zip` generado a {{site.data.keyword.Bluemix_notm}} con el mandato `cf push`.
 Por ejemplo:
 
 ```

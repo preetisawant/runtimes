@@ -11,7 +11,7 @@ lastupdated: "2017-02-07"
 {:codeblock: .codeblock}
 
 
-# 환경 변수 
+# 환경 변수
 {: #environment_variables}
 
 Java용 Liberty에서 지원하는 환경 변수
@@ -24,17 +24,17 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>[앱 관리 유틸리티](/docs/manageapps/app_mng.html)를 사용으로 설정합니다. </td>
+<td>[앱 관리 유틸리티](/docs/manageapps/app_mng.html)를 사용으로 설정합니다.</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>[앱 관리 유틸리티](/docs/manageapps/app_mng.html)를 설치합니다. </td>
+<td>[앱 관리 유틸리티](/docs/manageapps/app_mng.html)를 설치합니다.</td>
 </tr>
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>[Liberty 베타 기능](usingBetaFeatures.html)을 사용으로 설정합니다. </td>
+<td>[Liberty 베타 기능](usingBetaFeatures.html)을 사용으로 설정합니다.</td>
 </tr>
 
 <tr>
@@ -74,12 +74,12 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>JVM</td>
-<td>[JRE 유형](customizingJRE.html)을 선택합니다. </td>
+<td>[JRE 유형](customizingJRE.html)을 선택합니다.</td>
 </tr>
 
 <tr>
 <td>JVM_ARGS</td>
-<td>[JVM 인수](customizingJRE.html)를 설정합니다. </td>
+<td>[JVM 인수](customizingJRE.html)를 설정합니다.</td>
 </tr>
 
 <tr>
@@ -99,7 +99,7 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>services_autoconfig_excludes</td>
-<td>[auto-configuration](autoConfig.html#opting_out) 서비스를 사용 안함으로 설정합니다. </td>
+<td>[auto-configuration](autoConfig.html#opting_out) 서비스를 사용 안함으로 설정합니다.</td>
 </tr>
 </table>
 

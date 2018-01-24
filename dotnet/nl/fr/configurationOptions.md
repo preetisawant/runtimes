@@ -48,7 +48,7 @@ Ces changements doivent permettre à .NET CLI de trouver les `Vues` de votre app
 
 #### Utilisation des outils MSBuild
 
-Ajoutez un élément `<Content>` à l'élément `<ItemGroup>` de votre fichier .csproj :
+Ajoutez un élément `<Content>` dans l'élément `<ItemGroup>` de votre fichier .csproj :
 ```
   <ItemGroup>
     <Content Include="wwwroot/**/*;Areas/**/Views/*;Views/*;appsettings.json">
@@ -72,3 +72,4 @@ Dans la méthode `Main` de Program.cs, retirez la ligne suivante :
 {: codeblock}
 
 Ces changements doivent permettre à .NET CLI de trouver les `Vues` de votre application, car elles sont maintenant copiées dans la sortie de la génération lorsque la commande `dotnet publish` est exécutée.  Si votre application a besoin d'autres fichiers au moment de son exécution (par exemple, des fichiers de configuration json), vous devez aussi les ajouter, en les séparant par des points-virgules, à la propriété `Include` de l'élément `Content` dans le fichier .csproj de votre projet.
+

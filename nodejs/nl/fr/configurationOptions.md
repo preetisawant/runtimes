@@ -18,7 +18,7 @@ Une variété d'options sont à votre disposition pour configurer le pack de con
 
 ## Scripts NPM
 {: #npm_scripts}
-NPM est doté d'une fonction permettant d'exécuter des scripts, y compris les scripts de **pré-installation** et de **post-installation** qui sont appliqués avant et après l'installation de node_modules.  Pour des détails complets, consultez [npm-scripts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.npmjs.com/misc/scripts).
+NPM est doté d'une fonction permettant d'exécuter des scripts, y compris les scripts de **pré-installation** et de **post-installation** qui sont appliqués avant et après l'installation de node_modules.  Pour des détails complets, consultez [npm-scripts ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.npmjs.com/misc/scripts).
 
 ## Comportement du cache
 {: #cache_behavior}

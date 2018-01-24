@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -19,11 +19,13 @@ lastupdated: "2017-09-18"
 ここでは、{{site.data.keyword.Bluemix}} 上での SDK for Node.js の使用に関する一般的なトラブルシューティングの質問に対する回答を示します。
 {:shortdesc}
 
+ロギングとトレースについて詳しくは、[『Liberty アプリおよび Node.js アプリの管理』](../../manageapps/app_mng.html)の[『trace』](../../manageapps/app_mng.html#trace)セクションを参照してください。
+
 ## 「No space left on device」エラーでアプリケーションが開始に失敗する
 {: #no_space_left_on_device}
 
 
-「No space left on device」エラーで、Node.js アプリケーションが開始に失敗します。例えば、ログ内のエラーは、次のようになっています。
+「No space left on device」エラーで、Node.js アプリケーションが開始に失敗します。 例えば、ログ内のエラーは、次のようになっています。
 {: tsSymptoms}
 
 ```
@@ -66,7 +68,7 @@ Node.js は、アプリケーションが使用可能なメモリー量を認識
 ```
 {: codeblock}
 
-考えられる解決策の 1 つは、package.json ファイルでアプリケーションの開始コマンドに `--max_old_space_size` オプションを設定することです。このオプションは、アプリケーションのメモリー占有スペースの一部を表し、アプリケーションが使用可能な合計メモリーより少ない値に設定する必要があります。このトピックについての詳しい説明は、[Large memory spikes and Heroku](https://github.com/nodejs/node/issues/3370) をご覧ください。
+考えられる解決策の 1 つは、package.json ファイルでアプリケーションの開始コマンドに `--max_old_space_size` オプションを設定することです。 このオプションは、アプリケーションのメモリー占有スペースの一部を表し、アプリケーションが使用可能な合計メモリーより少ない値に設定する必要があります。 このトピックについての詳しい説明は、[Large memory spikes and Heroku](https://github.com/nodejs/node/issues/3370) をご覧ください。
 ```
   "scripts": {
     "start": "node --max_old_space_size=800 server.js"

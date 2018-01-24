@@ -2,20 +2,20 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# New Relic zur Überwachung von Liberty in Bluemix verwenden
+# New Relic zur Überwachung von Liberty in {{site.data.keyword.cloud_notm}} verwenden
 {: #new_relic}
 
 Bei New Relic handelt es sich um einen Service eines anderen Anbieters, der Überwachungsmetriken für Ihre Anwendung
 bereitstellt. Weitere Informationen zu den vom New Relic-Service bereitgestellten Funktionen finden Sie in [New Relic](http://newrelic.com/java).
 
-Gemäß der [Dokumentation zur manuellen Installation des Java-Agenten](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation) müssen Java-Anwendungen, die mithilfe des New Relic-Service überwacht werden sollen, normalerweise gebündelt und mit einem New Relic-Agenten und einem Kontolizenzschlüssel konfiguriert werden. In der Bluemix-Umgebung können Sie eine New Relic-Lizenzvereinbarung und ein zugehöriges Konto anfordern, indem Sie eine Serviceinstanz in IBM Bluemix erstellen. Java-Anwendungen können dann an die New Relic-Serviceinstanz gebunden werden. Das Liberty-Buildpack kann die Anwendung, die zur Überwachung durch den New Relic-Service bereitsteht, dann automatisch konfigurieren.
+Gemäß der [Dokumentation zur manuellen Installation des Java-Agenten](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation) müssen Java-Anwendungen, die mithilfe des New Relic-Service überwacht werden sollen, normalerweise gebündelt und mit einem New Relic-Agenten und einem Kontolizenzschlüssel konfiguriert werden. In der {{site.data.keyword.Bluemix}}-Umgebung können Sie eine New Relic-Lizenzvereinbarung und ein zugehöriges Konto anfordern, indem Sie eine Serviceinstanz in {{site.data.keyword.Bluemix_notm}} erstellen. Java-Anwendungen können dann an die New Relic-Serviceinstanz gebunden werden. Das Liberty-Buildpack kann die Anwendung, die zur Überwachung durch den New Relic-Service bereitsteht, dann automatisch konfigurieren.
 Das Buildpack hat hierbei die folgenden Funktionen:
 
 * Bereitstellen der Anwendung mit einem New Relic-Agenten.
@@ -37,15 +37,15 @@ dargestellt, die vom Liberty-Buildpack für die Anwendung generiert wird:
 ## New Relic-Service hinzufügen
 {: #add_new_relic}
 
-Führen Sie die folgenden Schritte aus, um eine bereits vorhandene Java-Anwendung mit New Relic in IBM Bluemix zu überwachen.
-1. Erstellen Sie eine New Relic-Serviceinstanz in IBM Bluemix.
+Führen Sie die folgenden Schritte aus, um eine bereits vorhandene Java-Anwendung mit New Relic in {{site.data.keyword.Bluemix_notm}} zu überwachen.
+1. Erstellen Sie eine New Relic-Serviceinstanz in {{site.data.keyword.Bluemix_notm}}.
 
   <pre>
     $ cf create-service newrelic standard mynewrelic
   </pre>
   {: codeblock}
 
-2. Implementieren Sie Ihre Anwendung mithilfe des New Relic-Service in IBM Bluemix.  Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt:
+2. Stellen Sie Ihre Anwendung mit dem New Relic-Service in {{site.data.keyword.Bluemix_notm}} bereit. Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt:
 
   <pre>
         &dash;&dash;&dash;
@@ -61,7 +61,7 @@ Führen Sie die folgenden Schritte aus, um eine bereits vorhandene Java-Anwendun
   </pre>
   {: codeblock}
 
-3. Greifen Sie direkt über das IBM Bluemix-Dashboard Ihrer Anwendung auf das New Relic-Dashboard zu.
+3. Greifen Sie direkt über das {{site.data.keyword.Bluemix_notm}}-Dashboard Ihrer Anwendung auf das New Relic-Dashboard zu.
 
 ### Vom Benutzer bereitgestellten New Relic-Service hinzufügen
 {: #add_user_provided_new_relic}
@@ -75,7 +75,7 @@ Wenn Sie über ein vorhandenes New Relic-Konto und den zugehörigen Lizenzschlü
   ```
   {: codeblock}
 
-2. Implementieren Sie Ihre Anwendung mit der vom Benutzer bereitgestellten New Relic-Serviceinstanz in IBM Bluemix.  Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt, das eine vom Benutzer bereitgestellte New Relic-Serviceinstanz verwendet:
+2. Stellen Sie Ihre Anwendung mit der vom Benutzer bereitgestellten New Relic-Serviceinstanz in {{site.data.keyword.Bluemix_notm}} bereit. Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt, das eine vom Benutzer bereitgestellte New Relic-Serviceinstanz verwendet:
   <pre>
         &dash;&dash;&dash;
         applications:

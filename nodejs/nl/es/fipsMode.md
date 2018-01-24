@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-12-13"
 
 ---
 
@@ -87,11 +87,10 @@ La siguiente tabla explica el comportamiento de node.js v4 con FIPS:
   * Los registros *NO* incluirán el mensaje *Instalación de IBM SDK habilitado para FIPS para Node.js*.
   * El valor devuelto por process.versions.openssl *NO* incluirá "fips".
 
-## Nodejs v6
+## Node.js v6 y posterior
 {: #nodejs_v6_fips}
 
-Para ejecutar en modalidad FIPS con Node.js versión 6 además de establecer **FIPS_MODE=true**, también debe incluir
-**--enable-fips** en el mandato de inicio como en el siguiente ejemplo:
+Para ejecutar en modalidad FIPS con Node.js versión 6 y posterior, además de establecer **FIPS_MODE=true**, debe incluir también **--enable-fips** en el mandato de inicio como en el siguiente ejemplo:
 ```
 {
     ...   
@@ -102,7 +101,7 @@ Para ejecutar en modalidad FIPS con Node.js versión 6 además de establecer **F
 ```
 {: codeblock}
 
-La siguiente tabla explica el comportamiento de node.js v6 con FIPS.
+La siguiente tabla explica el comportamiento de node.js v6 y posterior con FIPS. 
 
 |                 |--enable-fips  |NO --enable-fips |
 | :-------------- | :------------ | :-------------- |

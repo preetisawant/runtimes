@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Usar Dynatrace para monitorar o Liberty no Bluemix
+#Use Dynatrace para monitorar o Liberty no {{site.data.keyword.cloud_notm}}
 {: #using_dynatrace}
 
 Dynatrace é um serviço de terceiro que fornece monitoramento para seu app.
@@ -30,7 +30,8 @@ Dynatrace para conexão com o coletor Dynatrace. Veja [Arquitetura do Dynatrace]
 
 1. Configure um coletor Dynatrace.
   * Consulte o [Website da comunidade do Dynatrace](https://community.dynatrace.com/community/display/EVAL/Step+3+-+Connect+Agent+to+Dynatrace) para obter instruções sobre como fazer download e configurar o coletor Dynatrace.
-  * Assegure-se de que o coletor esteja configurado em um local que seja acessível ao agente Dynatrace em execução com seu app no Bluemix.
+  * Assegure-se de que o coletor esteja configurado em um local que seja acessível ao agente Dynatrace em execução com seu
+aplicativo no {{site.data.keyword.Bluemix_notm}}.
 2. Crie um serviço fornecido pelo usuário que aponte para o coletor Dynatrace em execução. **NOTA** O nome do serviço fornecido pelo usuário deve conter a sequência **dynatrace**. Letras maiúsculas e minúsculas são ignoradas. Por exemplo, use o comando a seguir, em que **my-dynatrace-collector** contém **dynatrace**:
 
         $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
@@ -45,7 +46,8 @@ Dynatrace para conexão com o coletor Dynatrace. Veja [Arquitetura do Dynatrace]
 
     Veja [Seção Configuração do agente em Configuração do agente](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration) no website do comunidade do Dynatrace para obter mais informações sobre as opções disponíveis. Por exemplo, usando a opção exclude, é possível excluir classes de serem monitoradas pelo Dynatrace. Veja [Estrutura do agente DynaTrace](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md) para obter mais detalhes sobre como configurar o serviço fornecido pelo usuário.
 
-3. Depois de ter enviado por push seu app para o Bluemix, ligue o serviço fornecido pelo usuário que você criou ao app. Por exemplo, use o comando
+3. Depois de ter enviado por push seu aplicativo para {{site.data.keyword.Bluemix_notm}}, ligue o serviço fornecido
+pelo usuário que você criou para o aplicativo. Por exemplo, use o comando
 
         $ cf bs myApp my-dynatrace-collector
         {: codeblock}
@@ -63,10 +65,10 @@ Dynatrace.  Nesse caso, são necessárias as etapas adicionais de configuração
 ### Hospedando o agente Dynatrace
 {: #hosting_dynatrace_agent}
 O agente Dynatrace deve ser hospedado em um servidor da web e o buildpack do Liberty deve ser capaz de fazer download do jar do agente a partir desse servidor. O servidor deve ser configurado com um arquivo `index.yml` que especifique detalhes sobre o jar. agente. Conclua as etapas a seguir para configurar o agente Dynatrace:
-  1. Faça download do jar do agente Dynatrace. Veja [Instaladores da plataforma do servidor Dynatrace](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) no website da comunidade do Dynatrace para obter instruções sobre como fazer download do jar do agente Dynatrace. O
-arquivo jar do agente apropriado para execução no Bluemix é o
+  1. Faça download do jar do agente Dynatrace. Veja [Instaladores da plataforma do servidor Dynatrace](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) no website da comunidade do Dynatrace para obter instruções sobre como fazer download do jar do agente Dynatrace. 
+O arquivo jar do agente apropriado para execução no {{site.data.keyword.Bluemix_notm}} é o
 **dynatrace-agent-unix.jar** versão **6.+**.
-  2. Hospede o arquivo jar do agente em um local a partir do qual o buildpack do Liberty possa fazer download dele. É possível hospedá-lo no próprio Bluemix, usando qualquer um dos recursos do servidor disponível ou hospedá-lo em algum local publicamente disponível.
+  2. Hospede o arquivo jar do agente em um local a partir do qual o buildpack do Liberty possa fazer download dele. É possível hospedá-lo no {{site.data.keyword.Bluemix_notm}} usando as instalações do servidor disponível ou é possível hospedá-lo em alguns locais disponíveis publicamente.
      * Assegure-se de fornecer um arquivo `index.yml` no local de hosting. O arquivo `index.yml` deve conter uma entrada que consista no ID da versão do jar agente, seguido por dois-pontos (:) e pela URL completa do local desse jar agente. Por exemplo:
 
             ---

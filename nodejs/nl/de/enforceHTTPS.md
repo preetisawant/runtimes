@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-07-17"
 # HTTPS auf allen Seiten in Ihrer Anwendung erzwingen
 {: #enforce_https}
 
-Wenn Sie Ihre Anwendung in Bluemix mit dem Express-Framework ausführen, müssen die folgenden Änderungen vorgenommen werden, um auf allen Seiten Ihrer Anwendung HTTPS anstatt HTTP zu erzwingen.
+Wenn Sie Ihre Anwendung in {{site.data.keyword.Bluemix}} mit dem Express-Framework ausführen, müssen die folgenden Änderungen vorgenommen werden, um auf allen Seiten Ihrer Anwendung HTTPS anstatt HTTP zu erzwingen.
 
 ```
 var express = require("express");

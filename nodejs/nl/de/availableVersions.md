@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2017-06-08"
 # Verfügbare Versionen
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} stellt alle [aktuell verfügbaren Node.js-Laufzeiten](http://nodejs.org/dist/) bereit. Davon stellt IBM bestimmte Versionen zur Verfügung, die Erweiterungen und Fehlerkorrekturen enthalten. Weitere Informationen zu den unterstützten Versionen finden Sie in [Neueste Aktualisierungen für das Node.js-Buildpack](/docs/runtimes/nodejs/updates.html).
+{{site.data.keyword.Bluemix}} stellt alle [aktuell verfügbaren Node.js-Laufzeiten](http://nodejs.org/dist/) bereit. Davon stellt {{site.data.keyword.IBM_notm}} bestimmte Versionen zur Verfügung, die Erweiterungen und Fehlerkorrekturen enthalten. Weitere Informationen zu den unterstützten Versionen finden Sie in [Neueste Aktualisierungen für das Node.js-Buildpack](/docs/runtimes/nodejs/updates.html).
 {: shortdesc}
 
-Das IBM Node.js-Buildpack stellt die IBM Laufzeitversionen in den Cache. Wenn Sie die IBM SDK for Node.js-Laufzeit in Ihrer Anwendung verwenden, erzielen Sie eine bessere Anwendungsleistung, wenn die Anwendung mit einer Push-Operation an Bluemix übertragen wird.
+Das IBM Node.js-Buildpack stellt die {{site.data.keyword.IBM_notm}} Laufzeitversionen in den Cache. Wenn Sie die {{site.data.keyword.IBM_notm}} SDK for Node.js-Laufzeit in Ihrer Anwendung verwenden, erzielen Sie eine bessere Anwendungsleistung, wenn die Anwendung mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen wird.
 
 ## Version angeben
 

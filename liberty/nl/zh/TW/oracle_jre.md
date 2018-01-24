@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-05-31"
 # 使用 Oracle JRE
 {: #using_oraacle_jre}
 
-您可以選擇使用 Oracle JRE 在 Bluemix 上執行 Liberty 應用程式。若要這麼做，您必須
+您可以選擇使用 Oracle JRE 在 {{site.data.keyword.Bluemix}} 上執行 Liberty 應用程式。若要這麼做，您必須
 * 在可供建置套件下載的位置管理 JRE、
 * 管理 `index.yml` 檔案，該檔案提供所管理 JRE 的位置，並且
 * 將您的應用程式配置為使用該 JRE。
@@ -20,7 +20,7 @@ lastupdated: "2017-05-31"
 ## 管理 JRE 和 index.yml
 {: #hosting_jre}
 
-Oracle JRE 檔案必須在 Web 伺服器上進行管理，而 Liberty 建置套件必須能夠從該伺服器下載此檔案。您可以使用任何可用的伺服器機能在 Bluemix 上管理它，也可以在某個公用的位置上管理它。必須以指定 JRE 檔相關詳細資料的 `index.yml` 檔案來配置伺服器。完成下列步驟，以管理 JRE 及 `index.yml` 檔案：
+Oracle JRE 檔案必須在 Web 伺服器上進行管理，而 Liberty 建置套件必須能夠從該伺服器下載此檔案。您可以使用任何可用的伺服器機能，在 {{site.data.keyword.Bluemix_notm}} 本身上管理它，也可以在某個公用的位置上管理它。必須以指定 JRE 檔相關詳細資料的 `index.yml` 檔案來配置伺服器。完成下列步驟，以管理 JRE 及 `index.yml` 檔案：
   1. 取得 Oracle JRE。請注意，JRE 必須是適用於 Unix 64 位元作業系統的版本，並且必須是 `tar.gz` 檔案。
   2. 在 Liberty 建置套件可下載的位置管理 JRE 檔案。
   3. 確定您在該管理位置提供 `index.yml` 檔案。`index.yml` 檔案必須包含一個項目，其中包含 Oracle JRE 的版本 ID，後面接著一個冒號，以及該 JRE 檔位置的完整 URL。`index.yml` 的格式如下：
@@ -77,4 +77,4 @@ Oracle JRE 檔案必須在 Web 伺服器上進行管理，而 Liberty 建置套�
 ## 一般
 {: #general notoc}
 * [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 設定檔概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

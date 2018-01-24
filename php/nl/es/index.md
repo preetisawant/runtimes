@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -30,7 +30,7 @@ El php_buildpack se utiliza en las condiciones siguientes:
 ## Aplicar HTTPS en todas las páginas de la aplicación
 {: #enforce_https}
 
-Para aplicar el uso de HTTPS en lugar de HTTP en todas las páginas de la aplicación cuando se ejecuta en Bluemix utilizando Apache, es necesario realizar los cambios siguientes en el archivo ".htaccess". Esta regla se aplicará a cualquier solicitud que no se haya hecho mediante HTTPS sólo cuando se ejecute en Bluemix.
+Para aplicar el uso de HTTPS en lugar de HTTP en todas las páginas de la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}} utilizando Apache, es necesario realizar los cambios siguientes en el archivo ".htaccess". Esta regla se aplicará a cualquier solicitud que no se haya hecho mediante HTTPS solo cuando se ejecute en {{site.data.keyword.Bluemix_notm}}.
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]
@@ -53,7 +53,7 @@ Puede especificar la versión de PHP que utilizará la app en el archivo compose
 {: codeblock}
 Para obtener más información, consulte [enlaces de Composer Package![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://getcomposer.org/doc/04-schema.md#package-links).
 
-Cuando no se especifique una versión, se elegirá la versión 5.5.38 de forma predeterminada.
+Cuando no se especifique una versión, se elegirá la versión 5.6.31 de forma predeterminada. 
 
 ### Versiones disponibles:
 {: #available_versions}
@@ -62,14 +62,12 @@ Las siguientes versiones de PHP están disponibles en el
 [paquete de compilación de PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27)
 actualmente instalado en {{site.data.keyword.Bluemix}}:
 
-* 5.5.37
-* 5.5.38
-* 5.6.29
 * 5.6.30
-* 7.0.14
-* 7.0.15
-* 7.1.0
-* 7.1.1
+* 5.6.31
+* 7.0.20
+* 7.0.21
+* 7.1.6
+* 7.1.7
 
 Si la app requiere una versión de PHP que no aparece en la lista,
 puede utilizar el

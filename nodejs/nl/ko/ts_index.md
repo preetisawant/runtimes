@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2017-09-18"
 
 다음은 {{site.data.keyword.Bluemix}}의 SDK for Node.js 사용과 관련된 일반적인 문제점 해결 질문에 대한 답입니다.
 {:shortdesc}
+
+로깅과 추적에 대해 자세히 보려면 [Liberty 및 Node.js 애플리케이션 관리](../../manageapps/app_mng.html)의 [추적](../../manageapps/app_mng.html#trace) 섹션을 참조하십시오.
 
 ## 애플리케이션이 시작에 실패하며 “No space left on device” 오류 발생
 {: #no_space_left_on_device}
@@ -54,7 +56,7 @@ Node.js 애플리케이션이 시작에 실패하며 “No space left on device�
 ## 메모리 제한조건으로 인해 애플리케이션 다시 시작
 {: #oom}
 
-Node.js에서는 애플리케이션에 사용 가능한 메모리의 양을 알 수 없기 때문에 메모리가 모두 사용되기 전에 가비지 콜렉터가 실행되지 않을 수 있습니다. 
+Node.js에서는 애플리케이션에 사용 가능한 메모리의 양을 알 수 없기 때문에 메모리가 모두 사용되기 전에 가비지 콜렉터가 실행되지 않을 수 있습니다.
 
 ```
 2017-09-01T11:00:42.19-0400 [APP/PROC/WEB/0]OUT Exit status 137
@@ -66,7 +68,7 @@ Node.js에서는 애플리케이션에 사용 가능한 메모리의 양을 알 
 ```
 {: codeblock}
 
-가능한 솔루션은 package.json 파일의 애플리케이션의 시작 솔루션에 `--max_old_space_size` 옵션을 설정하는 것입니다. 이 옵션은 애플리케이션 메모리 공간의 부분을 표시하고 애플리케이션에 사용 가능한 전체 메모리 미만으로 값을 설정해야 합니다. 이 주제에 대한 심도 깊은 토론을 보려면 [Large memory spikes and Heroku](https://github.com/nodejs/node/issues/3370)를 읽어 보십시오. 
+가능한 솔루션은 package.json 파일의 애플리케이션의 시작 솔루션에 `--max_old_space_size` 옵션을 설정하는 것입니다. 이 옵션은 애플리케이션 메모리 공간의 부분을 표시하고 애플리케이션에 사용 가능한 전체 메모리 미만으로 값을 설정해야 합니다. 이 주제에 대한 심도 깊은 토론을 보려면 [Large memory spikes and Heroku](https://github.com/nodejs/node/issues/3370)를 읽어 보십시오.
 ```
   "scripts": {
     "start": "node --max_old_space_size=800 server.js"

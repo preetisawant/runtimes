@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-18"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -29,13 +29,11 @@ var port = (process.env.PORT || 3000);
 ## Aplicativo iniciador
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fornece um aplicativo iniciador Node.js.  O aplicativo iniciador Node.js é um app Node.js simples que fornece um modelo que você pode usar para seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
-Bluemix. Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para obter ajuda sobre o uso do
-aplicativo iniciador.
+{{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador Node.js.  O aplicativo iniciador Node.js é um app Node.js simples que fornece um modelo que você pode usar para seu app. É possível experimentar com o aplicativo iniciador e realizar mudanças de push para o ambiente {{site.data.keyword.Bluemix_notm}}. Consulte[Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para ajudar a usar o aplicativo iniciador.
 
 ## App Management
 {: #app_management}
-{{site.data.keyword.Bluemix}} fornece vários utilitários para gerenciar e depurar seu app Node.js.  Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html) para obter detalhes completos.
+{{site.data.keyword.Bluemix_notm}} fornece vários utilitários para gerenciar e depurar seu app Node.js.  Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html) para obter detalhes completos.
 
 # rellinks
 {: #rellinks notoc}

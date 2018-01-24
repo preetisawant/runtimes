@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2017-07-14"
 
 可以使用[安全入门模板应用程序](https://github.com/IBM-Bluemix/java-secure-app)来着手开发新 Liberty 应用程序。首先了解应用程序中的 XSS 防范措施代码，然后将其应用于应用程序 API 的操作。安全入门模板应用程序中的防范措施通过缓解或阻止 XSS 攻击，从而帮助阻止恶意用户输入在服务器和浏览器上对您的应用程序造成损害。
 
-首先，下载此安全入门模板应用程序，然后进行构建，并在 Bluemix 上或本地进行部署，方法与使用 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 样本应用程序一样。转至 [Liberty on Bluemix 入门](getting-started.html)可了解有关在 Bluemix 上构建和部署应用程序的更多信息。首先，可以使用这些步骤来克隆、构建和运行应用程序。
+首先，下载此安全入门模板应用程序，然后进行构建，并在 {{site.data.keyword.Bluemix_notm}} 上或本地进行部署，方法与使用 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 样本应用程序一样。转至 [Liberty on {{site.data.keyword.Bluemix_notm}}](getting-started.html) 入门可了解有关在 {{site.data.keyword.Bluemix_notm}} 上构建和部署应用程序的更多信息。首先，可以使用这些步骤来克隆、构建和运行应用程序。
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app

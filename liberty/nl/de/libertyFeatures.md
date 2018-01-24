@@ -2,22 +2,24 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"---
+lastupdated: "2017-11-08"
+
+---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# In Bluemix unterstützte Liberty-Features
+# In {{site.data.keyword.cloud_notm}} unterstützte Liberty-Features
 {: #liberty_features}
 
-Die Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java umfasst eine Untergruppe von Liberty-Profilfunktionen.  Einige Features, die das Liberty-Profil anbietet, stehen in der Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können.
+Die Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java umfasst eine Untergruppe von Liberty-Features. Einige Features, die Liberty anbietet, stehen in der Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können. 
 
-Die folgenden Funktionen, die für Bluemix spezifisch sind, sind enthalten:
+Die folgenden für {{site.data.keyword.Bluemix_notm}} spezifischen Features sind enthalten:
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-Die folgende Tabelle zeigt die in Bluemix unterstützten Liberty-Features.
+Die folgende Tabelle zeigt die in {{site.data.keyword.Bluemix_notm}} unterstützten Liberty-Features
 
 <table>
 
@@ -209,16 +211,18 @@ Eine Untergruppe verfügbarer Funktionen wird standardmäßig aktiviert, wenn WA
 Die Liberty for Java-Laufzeit stellt ferner einige Funktionen der Liberty-Betaversion zur Verfügung. Diese Funktionen werden nicht in der Tabelle aufgelistet, können jedoch unter [Beta-Features verwenden](/docs/runtimes/liberty/usingBetaFeatures.html) gefunden werden.
 
 Bedenken Sie, dass ein Server keine inkompatiblen Funktionen laden kann. Stellen Sie daher sicher, dass er so konfiguriert ist, dass nur kompatible Funktionen aktiviert werden. Siehe auch den Abschnitt zu unterstützten Kombinationen von Funktionen von Java EE 6 und 7
-    <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>.
+    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>.
 
-Eine vollständige Liste der in Liberty verfügbaren Funktionen mit Java EE-Versionen und anderen Informationen finden Sie im Abschnitt über Liberty-Funktionen [Liberty Features](https://www.ibm.com/support/knowledgecenter/SSCKBL_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)
+Eine vollständige Liste der in Liberty verfügbaren Funktionen mit Java EE-Versionen und anderen Informationen finden Sie im Abschnitt über Liberty-Funktionen [Liberty Features](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)
 im IBM Knowledge Center.
 
-Anwendungen, die ferne EJBs verwenden, können in Bluemix bereitgestellt werden. Es kann jedoch aufgrund von Porteinschränkungen in der Bluemix-Umgebung nicht mit dem CORBA/IIOP-Protokoll auf die fernen EJBs zugegriffen werden.
+Anwendungen, die ferne EJBs verwenden, können in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden.
+Es kann jedoch aufgrund von Porteinschränkungen in der {{site.data.keyword.Bluemix_notm}}-Umgebung nicht mit dem
+CORBA/IIOP-Protokoll auf die fernen EJBs zugegriffen werden. 
 
 # Zugehörige Links
 {: #rellinks notoc}
 ## Allgemein
 {: #general notoc}
 * [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Übersicht über das Liberty-Profil](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

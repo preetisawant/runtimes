@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-09-06"
 
 * {: download} Enhorabuena, ha desplegado una aplicación de ejemplo Hello World en {{site.data.keyword.Bluemix}}.  Para empezar a trabajar, siga los pasos de esta guía. O bien <a class="xref" href="http://bluemix.net" target="_blank" title="(Descargue el código de ejemplo)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Descargue el código de aplicación" />descargue el código de ejemplo</a> y explore por su cuenta.
 
-Si sigue la guía de aprendizaje de iniciación de Tomcat, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix}} en su app.
+Si sigue la guía de aprendizaje de iniciación de Tomcat, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}}, e integrará un servicio de base de datos en la app.
 
 ## Antes de empezar
 {: #prereqs}
@@ -69,7 +69,7 @@ Ejecute la app.
 ```
 <tomcat-install-dir>/bin/startup.bat|.sh
 ```
-{: screen}
+{: pre}
 
 Visualice la app en: http://localhost:8080/GetStartedTomcat/
 
@@ -111,12 +111,14 @@ cf api <API-endpoint>
 
 Sustituya *API-endpoint* en el mandato por un punto final de API de la siguiente lista.
 
-|Región          |Punto final de API                             |
-|:---------------|:-------------------------------|
-| EE.UU. Sur       |https://api.ng.bluemix.net     |
-| Reino Unido | https://api.eu-gb.bluemix.net  |
-| Sidney         | https://api.au-syd.bluemix.net |
-| Frankfurt     | https://api.eu-de.bluemix.net | 
+| **Nombre de la región** | **Ubicación geográfica** | **Punto final de la API** |
+|-----------------|-------------------------|-------------------|
+| Región EE.UU. sur| Dallas, EE.UU.| api.ng.bluemix.net |
+|  Región EE.UU este | Washington, DC, EE.UU | api.us-east.bluemix.net |
+| Región del Reino Unido| Londres, Inglaterra| api.eu-gb.bluemix.net |
+| Región de Sídney| Sídney, Australia | api.au-syd.bluemix.net |
+|  Región de Alemania | Frankfurt, Alemania | api.eu-de.bluemix.net |
+{: caption="Tabla 1. Lista de regiones de {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 Inicie una sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}:
 
@@ -133,7 +135,7 @@ cf push
 ```
 {: pre}
 
-Esto puede tardar un par de minutos. Si hay algún error en el proceso de despliegue puede utilizar el mandato `cf logs <Your-App-Name> --recent` para resolver el problema.
+Esto puede tardar un par de minutos. Si hay algún error en el proceso de despliegue, puede utilizar el mandato `cf logs <Your-App-Name> --recent` para resolver problemas.
 
 Cuando finalice el despliegue, verá un mensaje que indica que la app se está ejecutando.  Visualice la app en el URL que aparece en la salida del mandato push.  También puede emitir el mandato
   ```
@@ -142,75 +144,45 @@ cf apps
   {: pre}
   para ver el estado de su app y ver el URL.
 
-## Paso 5: Desarrollo en Eclipse
-{: #developing_in_eclipse}
-
-IBM® Eclipse Tools for {{site.data.keyword.Bluemix}} proporciona plug-ins que se pueden instalar en un entorno Eclipse existente para ayudarle a integrar el entorno de desarrollo integrado (IDE) con {{site.data.keyword.Bluemix_notm}}.
-
-Descargue e instale [las herramientas IBM Eclipse para Bluemix](https://developer.ibm.com/wasdev/downloads/#asset/tools-IBM_Eclipse_Tools_for_Bluemix).
-
-Importe este ejemplo en Eclipse con la opción `Archivo` -> `Importar` -> `Maven` -> `Proyectos Maven existentes`.
-
-Cree una definición de servidor Tomcat:
-  - En la vista `Servidores`, pulse con el botón derecho en -> `Nuevo` -> `Servidor`.
-  - Seleccione `Apache` -> `Servidor Tomcat v8.0`.
-  - Elija su `tomcat-install-dir`.
-  - Continúe el asistente con las opciones predeterminadas para finalizar.
-
-Ejecute la aplicación localmente en el servidor Apache:
-  - Pulse con el botón derecho en el ejemplo `GetStartedTomcat` y seleccione la opción `Ejecutar como` -> `Ejecutar en servidor`.
-  - Busque y seleccione el servidor Tomcat y pulse Finalizar.
-  - En unos segundos, la aplicación debería ejecutarse en http://localhost:8080/GetStartedTomcat/
-
-Cree una definición de servidor de {{site.data.keyword.Bluemix_notm}}:
-  - En la vista `Servidores`, pulse con el botón derecho en -> `Nuevo` -> `Servidor`.
-  - Seleccione `IBM` -> `IBM Bluemix` y siga los pasos del asistente.
-  - Escriba sus credenciales y pulse `Siguiente`
-  - Seleccione su `organización` y `espacio` y pulse `Finalizar`
-
-Ejecute la aplicación en {{site.data.keyword.Bluemix_notm}}:
-  - Pulse con el botón derecho en el ejemplo `GetStartedTomcat` y seleccione la opción `Ejecutar como` -> `Ejecutar en servidor`.
-  - Busque y seleccione `IBM Bluemix` y pulse Finalizar.
-  - Un asistente le guiará con las opciones de despliegue. Asegúrese de elegir un `Nombre` exclusivo para la aplicación.
-  - En unos minutos, la aplicación debería ejecutarse en el URL elegido.
-
-Ahora ha ejecutado el código localmente y en la nube.
-
-## Paso 6: Añada una base de datos
+## Paso 5: Añada una base de datos
 {: #add_database}
 
-A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en Bluemix.
+A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
-1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} en su navegador. Vaya al `Panel de control`. Seleccione su aplicación pulsando su nombre en la columna `Nombre`.
-2. Pulse `Conexiones` y luego `Conectar nuevo`.
-2. En la sección `Data &  Analytics`, seleccione `BD Cloudant NoSQL` y `Crear` para crear el servicio.
-3. Seleccione `Volver a transferir` cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
+1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione su aplicación pulsando su nombre en la columna **Nombre**.
+2. Pulse **Conexiones** y **Crear conexión**.
+3. En la sección **Data & Analytics**, seleccione **BD Cloudant NoSQL** y cree el servicio.
+4. Vaya a **Apps > Su App > Conexiones** y seleccione **Conectar existente**.
+5. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
 Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente. [Más información...](/docs/manageapps/depapps.html#app_env)
 {: tip}
 
-## Paso 7: Utilice la base de datos
+## Paso 6: Utilice la base de datos
 {: #use_database}
-Ahora vamos a actualizar el código local para que apunte a esta base de datos. Guardaremos las credenciales correspondientes a los servicios en un archivo de propiedades. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno VCAP_SERVICES.
 
-1. Abra Eclipse y abra el archivo src/main/resources/cloudant.properties:
-  ```
-  cloudant_url=
-  ```
-  {: pre}
+Ahora vamos a actualizar el código local para que apunte a esta base de datos. Guardaremos las credenciales correspondientes a los servicios en un archivo de propiedades. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno `VCAP_SERVICES`.
 
-2. En el navegador, abra la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, seleccione App -> Conexiones -> Cloudant -> Ver credenciales
+1. En su navegador, vaya a {{site.data.keyword.Bluemix_notm}} y seleccione **Apps > _su app_ > Conexiones > Cloudant > Ver credenciales**.
 
-3. Copie y pegue sólo el `url` de las credenciales en el campo `url` del archivo `cloudant.properties` y guarde los cambios.  El resultado se parecerá al siguiente:
+2. Copie y pegue sólo el `url` de las credenciales en el campo `url` del archivo `cloudant.properties` y guarde los cambios.
   ```
   cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
+  {:pre}
 
-4. Reinicie el servidor Tomcat en Eclipse desde la vista `Servidores`.
+3. Reinicie el servidor
 
-  Renueve la vista del navegador en http://localhost:8080/GetStartedTomcat/. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
+Renueve la vista del navegador en http://localhost:8080/GetStartedTomcat/. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
 
-  La app local y la app {{site.data.keyword.Bluemix_notm}} comparten la base de datos.  Visualice la app {{site.data.keyword.Bluemix_notm}} en el URL que aparece en la salida del mandato push anterior.  Los nombres que añada desde cualquiera de las apps deberían aparecer cuando renueve los navegadores.
+  La app local y la app {{site.data.keyword.Bluemix_notm}} comparten la base de datos. Los nombres que añada desde cualquiera de las apps aparecerán cuando renueve los navegadores.
 
-Recuerde que si no necesita la app en directo en {{site.data.keyword.Bluemix_notm}}, debe detenerla para no incurrir en cargos inesperados.
+
+Recuerde que si no necesita la app en directo en {{site.data.keyword.Bluemix_notm}}, debe detener la app para no incurrir en cargos inesperados.
 {: tip}  
+
+## Siguientes pasos
+
+* [Guías de aprendizaje](/docs/tutorials/index.html)
+* [Ejemplos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://ibm-cloud.github.io){: new_window}
+* [Centro de arquitectura ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

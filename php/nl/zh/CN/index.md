@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2017-07-17"
 ## 在应用程序的所有页面上强制实施 HTTPS
 {: #enforce_https}
 
-当应用程序使用 Apache 在 Bluemix 上运行时，要在应用程序的所有页面上强制使用 HTTPS 而非 HTTP，需要对“.htaccess”文件进行如下更改。仅当在 Bluemix 中运行时，此规则适用于不是使用 HTTPS 发出的所有请求。
+当应用程序使用 Apache 在 {{site.data.keyword.Bluemix_notm}} 上运行时，要在应用程序的所有页面上强制使用 HTTPS 而非 HTTP，需要对“.htaccess”文件进行如下更改。仅当在 {{site.data.keyword.Bluemix_notm}} 中运行时，此规则适用于不是使用 HTTPS 发出的所有请求。
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]
@@ -51,21 +51,19 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 ```
 {: codeblock}
 有关更多信息，请参阅 [Composer Package links ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://getcomposer.org/doc/04-schema.md#package-links)。
-如果未指定版本，缺省情况下会选择 V5.5.38。
+如果未指定版本，缺省情况下会选择 V5.6.31。
 
 ### 可用版本：
 {: #available_versions}
 
 {{site.data.keyword.Bluemix}} 中当前安装的 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27) 内提供了以下 PHP 版本：
 
-* 5.5.37
-* 5.5.38
-* 5.6.29
 * 5.6.30
-* 7.0.14
-* 7.0.15
-* 7.1.0
-* 7.1.1
+* 5.6.31
+* 7.0.20
+* 7.0.21
+* 7.1.6
+* 7.1.7
 
 如果您应用程序所需的 PHP 版本没有列在上述列表中，那么可以使用外部 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack.git) 来部署应用程序。
 

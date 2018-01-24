@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-06-10"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-06-10"
 # Valeurs par défaut du pack de construction
 {: #buildpack_defauts}
 
-Le pack de construction Liberty est mis à jour régulièrement dans Bluemix. Chaque édition peut contenir des correctifs de sécurité ou des
+Le pack de construction Liberty est mis à jour régulièrement dans {{site.data.keyword.Bluemix}}. Chaque édition peut contenir des correctifs de sécurité ou des
 améliorations de fonction.
 
 Le pack de construction possède des valeurs par défaut pour des paramètres tels que la version Java ou le jeu de fonctions Liberty pour les
@@ -64,4 +64,4 @@ résultats, adoptez Java 8 pour vos applications.
 ## general
 {: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Présentation de Liberty Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

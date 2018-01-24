@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#使用 Dynatrace 在 Bluemix 中監視 Liberty
+#使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Liberty
 {: #using_dynatrace}
 
 Dynatrace 是協力廠商服務，可為您的應用程式提供監視功能。
@@ -24,7 +24,7 @@ Liberty 應用程式配置成使用 Dynatrace 時，預設行為是 Liberty 運�
 
 1. 設定 Dynatrace 收集器。
   * 請參閱 [Dynatrace 社群網站](https://community.dynatrace.com/community/display/EVAL/Step+3+-+Connect+Agent+to+Dynatrace)，以取得下載和設定 Dynatrace 收集器的指示。
-  * 請確定收集器是設定在 Dynatrace 代理程式（它與您的應用程式一起在 Bluemix 中執行）可存取的位置中。
+  * 請確定收集器是設定在 Dynatrace 代理程式（它與您的應用程式一起在 {{site.data.keyword.Bluemix_notm}} 中執行）可存取的位置中。
 2. 建立一個使用者提供的服務來指向執行中的 Dynatrace 收集器。**附註**：使用者所提供服務的名稱必須包含字串 **dynatrace**。忽略大小寫。例如，使用下列指令，其中 **my-dynatrace-collector** 包含 **dynatrace**：
 
         $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
@@ -39,7 +39,7 @@ Liberty 應用程式配置成使用 Dynatrace 時，預設行為是 Liberty 運�
 
     如需可用選項的相關資訊，請參閱 Dynatrace 社群網站 [Agent Configuration 的 Agent Settings 一節](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration)。例如，使用 exclude 選項，您可以排除類別使其不受 Dynatrace 監視。如需配置使用者所提供服務的相關詳細資料，請參閱 [DynaTrace Agent Framework](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md)。
 
-3. 將您的應用程式推送到 Bluemix 之後，請將您建立的使用者所提供服務連結到該應用程式。例如，使用下列指令：
+3. 將您的應用程式推送到 {{site.data.keyword.Bluemix_notm}} 之後，請將您建立的使用者所提供服務連結到該應用程式。例如，使用下列指令：
 
         $ cf bs myApp my-dynatrace-collector
         {: codeblock}
@@ -56,8 +56,8 @@ Liberty 應用程式配置成使用 Dynatrace 時，預設行為是 Liberty 運�
 ### 管理 Dynatrace 代理程式
 {: #hosting_dynatrace_agent}
 Dynatrace 代理程式必須在 Web 伺服器上進行管理，而 Liberty 建置套件必須能夠從該伺服器下載代理程式 Jar。必須以指定代理程式 Jar 相關詳細資料的 `index.yml` 檔案來配置伺服器。請完成下列步驟，以設定 Dynatrace 代理程式：
-  1. 下載 Dynatrace 代理程式 Jar。請參閱 Dynatrace 社群網站的 [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace)，以取得下載 Dynatrace 代理程式 Jar 的指示。適合在 Bluemix 上執行的代理程式 Jar 檔是 **dynatrace-agent-unix.jar** **6.+** 版。
-  2. 在 Liberty 建置套件可從中下載它的位置管理代理程式 Jar 檔。您可以使用任何可用的伺服器機能在 Bluemix 上管理它，也可以在某個公用的位置上管理它。
+  1. 下載 Dynatrace 代理程式 Jar。請參閱 Dynatrace 社群網站的 [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace)，以取得下載 Dynatrace 代理程式 Jar 的指示。適合在 {{site.data.keyword.Bluemix_notm}} 上執行的代理程式 Jar 檔是 **dynatrace-agent-unix.jar** **6.+** 版。
+  2. 在 Liberty 建置套件可從中下載它的位置管理代理程式 Jar 檔。您可以使用任何可用的伺服器機能，在 {{site.data.keyword.Bluemix_notm}} 上管理它，也可以在某個公用的位置上管理它。
      * 確定您在該管理位置提供 `index.yml` 檔案。`index.yml` 檔案必須包含一個項目，其中包含代理程式 Jar 的版本 ID，後面接著一個冒號，以及該代理程式 Jar 位置的完整 URL。例如：
 
             ---

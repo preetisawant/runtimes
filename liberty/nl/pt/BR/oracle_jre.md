@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-05-31"
 # Usar o Oracle JRE
 {: #using_oraacle_jre}
 
-Será possível executar o aplicativo Liberty no Bluemix com o Oracle JRE se você escolher essa opção.  Para isso, deve-se
+É possível executar o aplicativo Liberty no {{site.data.keyword.Bluemix}} com o Oracle JRE, se você quiser.  Para isso, deve-se
 * hospedar o JRE em um local a partir do qual o buildpack possa fazer download dele,
 * hospedar um arquivo `index.yml` que forneça o local do JRE do host e
 * configurar seu aplicativo para usar esse JRE.
@@ -20,8 +20,8 @@ Será possível executar o aplicativo Liberty no Bluemix com o Oracle JRE se voc
 ## Hospedando o JRE e o index.yml
 {: #hosting_jre}
 
-O arquivo do Oracle JRE deve ser hospedado em um servidor da web e o buildpack do Liberty deve estar apto a fazer o download dele a partir desse servidor. É possível hospedá-lo no próprio Bluemix, usando qualquer um dos recursos do servidor disponível ou hospedá-lo em algum local publicamente disponível.  O servidor deve ser configurado com um arquivo `index.yml` que especifique detalhes sobre o arquivo JRE. Conclua as etapas a seguir para hospedar o JRE e o arquivo `index.yml`:
-  1. Adquira o Oracle JRE.  Observe que o JRE deve ser a versão para uso em um OS Unix de 64 bits e deve ser um arquivo `tar.gz`.
+O arquivo do Oracle JRE deve ser hospedado em um servidor da web e o buildpack do Liberty deve estar apto a fazer o download dele a partir desse servidor. É possível hospedá-lo no {{site.data.keyword.Bluemix_notm}} usando as instalações do servidor disponível ou é possível hospedá-lo em alguns locais disponíveis publicamente.  O servidor deve ser configurado com um arquivo `index.yml` que especifique detalhes sobre o arquivo JRE. Conclua as etapas a seguir para hospedar o JRE e o arquivo `index.yml`:
+  1. Adquira o Oracle JRE.  Observe que o JRE deve ser a versão para uso em um S.O. Unix de 64 bits e deve ser um arquivo `tar.gz`.
   2. Hospede o arquivo JRE em um local a partir do qual o buildpack do Liberty possa fazer download dele.
   3. Assegure-se de fornecer um arquivo `index.yml` no local de hosting. O arquivo `index.yml` deve conter uma entrada que consista no ID da versão do Oracle JRE seguido por dois-pontos (:) e a URL completa do local desse arquivo JRE. O formato do `index.yml` é:
 ```
@@ -77,4 +77,4 @@ Para confirmar se o JRE esperado está sendo usado, procure no log de preparaç�
 ## geral
 {: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do perfil Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

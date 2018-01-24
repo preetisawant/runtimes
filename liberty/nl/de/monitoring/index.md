@@ -2,7 +2,9 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-02-08"---
+lastupdated: "2017-02-08"
+
+---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
@@ -14,7 +16,7 @@ lastupdated: "2017-02-08"---
 Liberty for Java-Anwendungen können während der Ausführung unter {{site.data.keyword.Bluemix}} mithilfe verschiedener Einrichtungen und Services überwacht werden.
 {: shortdesc}
 
-Siehe die folgenden Links: 
+Siehe die folgenden Links:
 
 ## JConsole
 {: #jconsole notoc}

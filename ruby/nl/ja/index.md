@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-21"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -17,29 +17,28 @@ lastupdated: "2017-06-21"
 ruby_buildpack は、Ruby アプリケーションのための完全なランタイム環境を提供します。
 {: shortdesc}
 
-ruby_buildpack は、アプリケーションのルート・ディレクトリーに Gemfile がある場合に使用されます。続いて、Bundler を使用して依存関係がインストールされます。
+ruby_buildpack は、アプリケーションのルート・ディレクトリーに Gemfile がある場合に使用されます。 続いて、Bundler を使用して依存関係がインストールされます。
 
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、Ruby スターター・アプリケーションが用意されています。Ruby スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Ruby アプリケーションです。スターター・アプリケーションを試し、{{site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Ruby スターター・アプリケーションが用意されています。  Ruby スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Ruby アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}
 
 アプリケーションで使用する Ruby のバージョンは、以下の例のように、アプリケーションの Gemfile で指定できます。
 
-
 ```
   source 'https://rubygems.org'
-  ruby '2.4.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
 ```
 {: codeblock}
 
-バージョンを指定しない場合は、デフォルトでバージョン 2.3.3 が選択されます。
+バージョンを指定しない場合は、デフォルトでバージョン 2.4.1 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
@@ -48,11 +47,12 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 
 * 2.1.8
 * 2.1.9
-* 2.2.5
 * 2.2.6
-* 2.3.2
+* 2.2.7
 * 2.3.3
+* 2.3.4
 * 2.4.0
+* 2.4.1
 
 アプリケーションが、リストされていないバージョンの Ruby を必要とする場合は、外部の [Ruby ビルドパック](https://github.com/cloudfoundry/ruby-buildpack)を使用してアプリケーションをデプロイできます。
 

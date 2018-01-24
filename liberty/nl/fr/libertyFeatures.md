@@ -2,24 +2,24 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Fonctions Liberty prises en charge dans Bluemix
+# Fonctions Liberty prises en charge dans {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-Le contexte d'exécution instantané Liberty for Java inclut un sous-ensemble de fonctions Liberty Profile.  Certaines fonctions fournies par Liberty Profile ne sont pas disponibles dans le contexte d'exécution instantané Liberty for Java, car elles ne sont pas applicables dans l'environnement de cloud.
+L'environnement d'exécution instantané Liberty for Java inclut un sous-ensemble des fonctions de Liberty. Certaines fonctions fournies par Liberty ne sont pas disponibles dans Liberty for Java, car elles ne s'appliquent pas à l'environnement cloud.
 
-Les fonctions incluses suivantes sont spécifiques à Bluemix :
+Les fonctions incluses suivantes sont spécifiques à {{site.data.keyword.Bluemix_notm}} :
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-Le tableau suivant présente les fonctions Liberty prises en charge dans Bluemix :
+Le tableau suivant présente les fonctions Liberty prises en charge dans {{site.data.keyword.Bluemix_notm}} :
 
 <table>
 
@@ -211,17 +211,17 @@ Un sous-ensemble des fonctions disponibles sont activées par défaut lors du d�
 Le contexte d'exécution Liberty for Java met également à disposition quelques fonctions bêta Liberty, qui ne se trouvent pas dans le tableau ci-dessus mais sont répertoriées dans la rubrique [Utilisation des fonctions bêta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
 Gardez à l'esprit qu'un serveur ne peut pas charger de fonctions incompatibles, assurez-vous donc qu'il est configuré pour n'activer que des fonctions qui sont compatibles. Voir
-    <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinaisons de fonctions Java EE 6 et 7 prises en charge</a>.
+    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinaisons de fonctions Java EE 6 et 7 prises en charge</a>.
 
-Pour afficher une liste complète des fonctions disponibles dans Liberty accompagnée d'informations relatives aux versions Java EE versions et d'autres détails, voir [Fonctions Liberty](https://www.ibm.com/support/knowledgecenter/SSCKBL_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)
+Pour afficher une liste complète des fonctions disponibles dans Liberty accompagnée d'informations relatives aux versions Java EE versions et d'autres détails, voir [Fonctions Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)
 dans IBM Knowledge Center.
 
-Les applications qui utilisent des EJB distants peuvent être déployées dans Bluemix. Toutefois, les EJB distants ne sont pas accessibles à distance avec le
-protocole CORBA/IIOP en raison de restrictions de port dans l'environnement Bluemix.
+Les applications qui utilisent des EJB distants peuvent être déployées dans {{site.data.keyword.Bluemix_notm}}. Toutefois, les EJB distants ne sont pas accessibles à distance avec le
+protocole CORBA/IIOP en raison de restrictions de port dans l'environnement {{site.data.keyword.Bluemix_notm}}.
 
 # rellinks
 {: #rellinks notoc}
 ## general
 {: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Présentation de Liberty Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

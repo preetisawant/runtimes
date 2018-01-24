@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -30,7 +30,7 @@ Le pack php_buildpack est utilisé dans les conditions suivantes :
 ## Imposer l'utilisation de HTTPS sur toutes les pages dans votre application
 {: #enforce_https}
 
-Pour imposer l'utilisation de HTTPS au lieu de HTTP sur toutes les pages dans votre application lorsqu'elle s'exécute dans Bluemix avec Apache, les modifications suivantes doivent être effectuées dans le fichier ".htaccess". Cette règle s'appliquera à toutes les demandes qui n'ont pas été effectuées avec HTTPS uniquement lors d'une exécution dans Bluemix.
+Pour imposer l'utilisation de HTTPS au lieu de HTTP sur toutes les pages dans votre application lorsqu'elle s'exécute dans {{site.data.keyword.Bluemix_notm}} avec Apache, les modifications suivantes doivent être effectuées dans le fichier ".htaccess". Cette règle s'appliquera à toutes les demandes qui n'ont pas été effectuées avec HTTPS uniquement lors d'une exécution dans {{site.data.keyword.Bluemix_notm}}.
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]
@@ -51,23 +51,21 @@ Vous pouvez spécifier la version de PHP que votre application doit utiliser en 
 }
 ```
 {: codeblock}
-Pour plus d'informations, voir les [liens Composer Package![External link icon](../../icons/launch-glyph.svg "External link icon")](https://getcomposer.org/doc/04-schema.md#package-links).
+Pour plus d'informations, voir les [liens Composer Package![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://getcomposer.org/doc/04-schema.md#package-links).
 
-Si aucune version n'est spécifiée, la version 5.5.38 est sélectionnée par défaut.
+Si aucune version n'est spécifiée, la version 5.6.31 est sélectionnée par défaut.
 
 ### Versions disponibles :
 {: #available_versions}
 
 Les versions de PHP suivantes sont disponibles dans le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27) qui est installé dans {{site.data.keyword.Bluemix}} :
 
-* 5.5.37
-* 5.5.38
-* 5.6.29
 * 5.6.30
-* 7.0.14
-* 7.0.15
-* 7.1.0
-* 7.1.1
+* 5.6.31
+* 7.0.20
+* 7.0.21
+* 7.1.6
+* 7.1.7
 
 Si votre application requiert une version de PHP qui n'est pas répertoriée, vous pouvez
 utiliser le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack.git) externe pour

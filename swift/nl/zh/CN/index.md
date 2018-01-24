@@ -2,25 +2,25 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-11-08"
 ---
 
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# IBM Bluemix Runtime for Swift
+# IBM Cloud Runtime for Swift
 {: #swift_runtime}
 
-{{site.data.keyword.Bluemix}} 上的 Runtime for Swift 由 [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)（即 swift_buildpack）提供技术支持。此 buildpack 为 Swift 应用程序提供完整的运行时环境。
+{{site.data.keyword.Bluemix}} 上的 Runtime for Swift 由 [{{site.data.keyword.Bluemix_notm}} buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)（即 swift_buildpack）提供技术支持。此 buildpack 为 Swift 应用程序提供完整的运行时环境。
 {: shortdesc}
 
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了基于 Kitura 的 Swift [入门模板应用程序](https://github.com/IBM-Bluemix/Kitura-Starter)。Kitura 入门模板应用程序是一个简单的 Swift 应用程序，可以用于了解可使用 Swift 编程语言开发的服务器应用程序的类型。此样本应用程序会创建向客户机返回 HTML 内容的基本 Kitura HTTP 服务器。
+{{site.data.keyword.Bluemix_notm}} 提供了基于 Kitura 的 Swift [入门模板应用程序](https://github.com/IBM-Bluemix/Kitura-Starter)。Kitura 入门模板应用程序是一个简单的 Swift 应用程序，可以用于了解可使用 Swift 编程语言开发的服务器应用程序的类型。此样本应用程序会创建向客户机返回 HTML 内容的基本 Kitura HTTP 服务器。
 
-**注：**Kitura 入门模板应用程序旨在用于培训。您可以尝试使用该入门模板应用程序进行改进，并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)。
+**注：**Kitura 入门模板应用程序旨在用于培训。您可以尝试使用该入门模板应用程序进行改进，并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../../cfapps/starter_app_usage.html)。
 
 ## 重命名应用程序
 {: #renaming_your_app}
@@ -38,9 +38,9 @@ lastupdated: "2017-03-23"
 ## 运行时版本
 {: #runtime_versions}
 
-缺省情况下，{{site.data.keyword.Bluemix}} 上托管的 Runtime for Swift (swift_buildpack) 使用 Swift 二进制的最新 GA 版本。这是 IBM 直接支持的唯一 Swift 版本，建议在您的应用程序中使用该版本。您可以通过查看 swift_buildpack 的[最新发行版信息](https://github.com/IBM-Swift/swift-buildpack/releases)来确定这个受支持的版本。buildpack 可能会在其 [manifest.yml](https://github.com/IBM-Swift/swift-buildpack/blob/master/manifest.yml) 文件中列出其他 Swift 版本。buildpack 中预先高速缓存了这些常见但不受支持的 Swift 版本，以减少供应时间。
+缺省情况下，{{site.data.keyword.Bluemix_notm}} 上托管的 Runtime for Swift (swift_buildpack) 使用 Swift 二进制的最新 GA 版本。这是 {{site.data.keyword.IBM_notm}} 直接支持的唯一 Swift 版本，建议在您的应用程序中使用该版本。您可以通过查看 swift_buildpack 的[最新发行版信息](https://github.com/IBM-Swift/swift-buildpack/releases)来确定这个受支持的版本。buildpack 可能会在其 [manifest.yml](https://github.com/IBM-Swift/swift-buildpack/blob/master/manifest.yml) 文件中列出其他 Swift 版本。buildpack 中预先高速缓存了这些常见但不受支持的 Swift 版本，以减少供应时间。
 
-如果希望您的应用程序在 {{site.data.keyword.Bluemix}} 上使用其他 Swift 版本，您可以在存储库根目录中的 `.swift-version` 文件中指定版本。此 `.swift-version` 文件定义 swift_buildpack 要使用的 Swift 版本。
+如果希望您的应用程序在 {{site.data.keyword.Bluemix_notm}} 上使用其他 Swift 版本，您可以在存储库根目录中的 `.swift-version` 文件中指定版本。此 `.swift-version` 文件定义 swift_buildpack 要使用的 Swift 版本。
 
 ```
 $ cat .swift-version
@@ -52,14 +52,14 @@ $ cat .swift-version
 
 请注意，您可以在 `.swift-version` 文件中指定任何有效的 Swift 版本。这些备用版本必须与 [Swift.org ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://swift.org/download/) 的命名匹配，并直接从中拉出。由于使用非高速缓存版本将耗费更长时间才能供应，因此对于 Swift 应用程序而言没有任何运行时性能差异。
 
-如果应用程序的根目录中包含 `Package.swift` 文件，那么将使用 {{site.data.keyword.Bluemix}} 中的缺省 swift_buildpack。如果希望使用备用 buildpack，那么必须将 `buildpack: {buildpackUrl}` 条目添加到应用程序的 manifest.yml 文件中，以指定此版本。或者，您可以在部署时使用 `cf push -b {buildpackUrl}` 命令自变量来定义此项。
+如果应用程序的根目录中包含 `Package.swift` 文件，那么将使用 {{site.data.keyword.Bluemix_notm}} 中的缺省 swift_buildpack。如果希望使用备用 buildpack，那么必须将 `buildpack: {buildpackUrl}` 条目添加到应用程序的 manifest.yml 文件中，以指定此版本。或者，您可以在部署时使用 `cf push -b {buildpackUrl}` 命令自变量来定义此项。
 
 
 ## 开发者环境
 
-开发者在使用 Swift 创建服务器端的应用程序时可进行几种选择。使用 Apple 的 MacOS 设备的开发者可能偏向使用 Xcode IDE，虽然并非必需。{{site.data.keyword.Bluemix}} 上将部署并运行的基于 Swift 的应用程序可以使用任何编程编辑器或 IDE。很多常见的编辑器都可以使用 Swift 的语法突出显示功能。[Swift.org ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://swift.org/) 的二进制文件中包含的 Swift REPL 命令行工具支持在部署到 {{site.data.keyword.Bluemix}} 之前进行本地编译和测试。
+开发者在使用 Swift 创建服务器端的应用程序时可进行几种选择。使用 Apple 的 MacOS 设备的开发者可能偏向使用 Xcode IDE，虽然并非必需。{{site.data.keyword.Bluemix_notm}} 上将部署并运行的基于 Swift 的应用程序可以使用任何编程编辑器或 IDE。很多常见的编辑器都可以使用 Swift 的语法突出显示功能。[Swift.org ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://swift.org/) 的二进制文件中包含的 Swift REPL 命令行工具支持在部署到 {{site.data.keyword.Bluemix_notm}} 之前进行本地编译和测试。
 
-对于 MaxOS 用户，您可以使用 [IBM Cloud Tools for Swift](http://cloudtools.bluemix.net/)，其简化了 {{site.data.keyword.Bluemix}} 上运行的服务器端 Swift 应用程序的创建、部署、管理和控制过程。  
+对于 MaxOS 用户，您可以使用 [IBM Cloud Tools for Swift](http://cloudtools.bluemix.net/)，其简化了 {{site.data.keyword.Bluemix_notm}} 上运行的服务器端 Swift 应用程序的创建、部署、管理和控制过程。  
 
 
 ## 增强的集成

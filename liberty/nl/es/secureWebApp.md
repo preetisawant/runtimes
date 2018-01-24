@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -30,7 +30,7 @@ En lugar de aprender la teoría de los ataques XSS y las técnicas para ponerles
 
 Puede utilizar la [aplicación de iniciación segura](https://github.com/IBM-Bluemix/java-secure-app) como un punto de partida para el desarrollo de una nueva aplicación Liberty. Empiece por aprender el código de medidas de prevención de XSS de la app y luego aplíquelo a las operaciones de la API de la aplicación. Las medidas de prevención de la aplicación de iniciación segura ayudan a evitar que una entrada maliciosa de un usuario ocasione daños en la aplicación y en el servidor y el navegador mediante la mitigación o prevención de ataques XSS.
 
-En primer lugar, descargue esta aplicación de iniciación segura y compílela y despliéguela en Bluemix o localmente del mismo modo que lo haría con la aplicación de ejemplo [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).  Vaya a [Iniciación a Liberty en Bluemix](getting-started.html) para obtener más información sobre cómo compilar y desplegar aplicaciones en Bluemix.  Para empezar, puede seguir estos pasos para clonar, compilar y ejecutar la app.
+En primer lugar, descargue esta aplicación de iniciación segura y compílela y despliéguela en {{site.data.keyword.Bluemix_notm}} o localmente del mismo modo que lo haría con la aplicación de ejemplo [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).  Vaya a [Iniciación a Liberty en {{site.data.keyword.Bluemix_notm}}](getting-started.html) para obtener más información sobre cómo compilar y desplegar aplicaciones en {{site.data.keyword.Bluemix_notm}}.  Para empezar, puede seguir estos pasos para clonar, compilar y ejecutar la app.
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app

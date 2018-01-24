@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -18,6 +18,9 @@ lastupdated: "2017-09-18"
 
 Voici les réponses aux questions fréquemment posées concernant le traitement des incidents liés à l'utilisation de SDK for Node.js sur {{site.data.keyword.Bluemix}}.
 {:shortdesc}
+
+Pour en savoir plus sur la journalisation et le traçage, consultez
+la section [Trace](../../manageapps/app_mng.html#trace) dans [Gestion des applications Liberty et Node.js](../../manageapps/app_mng.html).
 
 ## L'application ne démarre pas et l'erreur “No space left on device” (plus d'espace sur l'appareil) est retournée
 {: #no_space_left_on_device}

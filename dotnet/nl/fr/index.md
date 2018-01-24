@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-19"
+lastupdated: "2017-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,12 +20,15 @@ Elles sont combinées pour activer des applications Web modernes basées sur le 
 
 ## Détection
 {: #detection}
-Le pack de construction Bluemix ASP.NET Core est utilisé si l'application comporte un ou plusieurs dossiers contenant à la fois un fichier project.json et au moins un fichier .cs, ou si l'application est envoyée par push depuis le répertoire de sortie de la commande *dotnet publish*.
+Le pack de construction {{site.data.keyword.Bluemix}} ASP.NET Core est utilisé si
+l'application comporte un ou plusieurs dossiers contenant à la fois un fichier
+project.json et au moins un fichier .cs, ou si l'application est envoyée par push depuis
+le répertoire de sortie de la commande *dotnet publish*.
 
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fournit une application de démarrage ASP.NET Core.  L'application de démarrage ASP.NET Core est une application simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application de démarrage et effectuer des modifications puis les envoyer par commande push vers l'environnement Bluemix.  Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix_notm}} fournit une application de démarrage ASP.NET Core.  L'application de démarrage ASP.NET Core est une application simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}.  Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
 
 # rellinks
 {: #rellinks notoc}

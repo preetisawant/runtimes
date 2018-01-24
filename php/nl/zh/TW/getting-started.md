@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-09-06"
 
 * {: download} 恭喜，您已在 {{site.data.keyword.Bluemix}} 上部署 Hello World 範例應用程式！若要開始使用，請遵循本逐步手冊。或者，<a class="xref" href="http://bluemix.net" target="_blank" title="（下載範例程式碼）"><img class="hidden" src="../../images/btn_starter-code.svg" alt="下載應用程式碼" />下載範例程式碼</a>，並自行探索。
 
-遵循 PHP 入門指導教學，您將設定開發環境、在本端及 {{site.data.keyword.Bluemix}} 上部署應用程式，以及在應用程式中整合 {{site.data.keyword.Bluemix}} 資料庫服務。
+遵循 PHP 入門指導教學，您將設定開發環境、在本端及 {{site.data.keyword.Bluemix}} 上部署應用程式，以及在應用程式中整合資料庫服務。
 
 ## 開始之前
 {: #prereqs}
@@ -93,12 +93,14 @@ cf api <API-endpoint>
 
 將指令中的 *API-endpoint* 取代為下列清單中的 API 端點。
 
-|地區|API 端點|
-|:---------------|:-------------------------------|
-| 美國南部|https://api.ng.bluemix.net|
-| 英國| https://api.eu-gb.bluemix.net|
-| 雪梨| https://api.au-syd.bluemix.net|
-| 法蘭克福| https://api.eu-de.bluemix.net | 
+| **地區名稱** | **地理位置** | **API 端點** |
+|-----------------|-------------------------|-------------------|
+| 美國南部地區 | 美國達拉斯 | api.ng.bluemix.net |
+| 美國東部地區 | 美國華盛頓州特區 | api.us-east.bluemix.net |
+| 英國地區 | 英國倫敦 | api.eu-gb.bluemix.net |
+| 雪梨地區 | 澳洲雪梨 | api.au-syd.bluemix.net |
+| 德國地區 | 德國法蘭克福 | api.eu-de.bluemix.net |
+{: caption="表 1. {{site.data.keyword.cloud_notm}} 地區清單" caption-side="top"}
 
 登入 {{site.data.keyword.Bluemix_notm}} 帳戶
 
@@ -106,7 +108,7 @@ cf api <API-endpoint>
 cf login
 ```
    {: pre}
-   
+
 如果您無法使用 `cf login` 或 `bx login` 指令登入，因為您已有聯合使用者 ID，請使用 `cf login --sso` 或 `bx login --sso` 指令，用您的單一登入 ID 登入。若要進一步瞭解，請參閱[使用聯合 ID 登入](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)。
 
  從 *get-started-php* 目錄中，將應用程式推送至 {{site.data.keyword.Bluemix_notm}}
@@ -130,7 +132,7 @@ cf apps
 接下來，我們會將 NoSQL Database 新增至此應用程式並設定應用程式，因此，它可以在本端及 {{site.data.keyword.Bluemix_notm}} 上執行。
 
 1. 在瀏覽器中，登入 {{site.data.keyword.Bluemix_notm}}。瀏覽至「儀表板」。按一下「名稱」直欄中的應用程式名稱，以選取該應用程式。
-2. 依序按一下「連線」及「連接新服務」。
+2. 依序按一下「連線」及「建立連線」。
 3. 在「資料及分析」區段中，選取 `Cloudant NoSQL DB`，然後建立服務。
 4. 系統提示時，請選取「重新編譯打包」。{{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
 
@@ -169,3 +171,9 @@ php -S localhost:8000
 
 請記住，如果您不需要應用程式維持執行中，請停止它以避免產生任何非預期的費用。
 {: tip}  
+
+## 後續步驟
+
+* [指導教學](/docs/tutorials/index.html)
+* [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://ibm-cloud.github.io){: new_window}
+* [架構中心 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

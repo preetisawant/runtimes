@@ -22,5 +22,5 @@ Ir
 
     {: .navgroup id="help"}
     [Versões disponíveis](index.html#runtime_versions)
-    [Instrução de suporte do buildpack](../../manageapps/buildpackSupport.html)
+[Instrução de suporte do buildpack](../../manageapps/buildpackSupport.html)
     {: .navgroup-end}

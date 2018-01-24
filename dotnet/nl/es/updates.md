@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-25"
-
+lastupdated: "2017-10-06"
 ---
 
 {:new_window: target="_blank"}
@@ -14,6 +13,18 @@ lastupdated: "2017-07-25"
 
 
 Una lista de las últimas actualizaciones del paquete de compilación de aspnet.
+
+## 6 de octubre de 2017: Se ha actualizado el paquete de compilación de ASP.NET Core v1.0.26-20170913-1346
+* Adición de soporte para el tiempo de ejecución de .NET Core 2.0.0
+* Adición de soporte para .NET Core SDK 1.1.0
+* Adición de soporte para .NET Core SDK 2.0.0
+* Retirada del soporte para .NET Core SDK 1.1.0-preview1-005051
+* Retirada del soporte para .NET Core SDK 2.0.0-preview1-005977
+* Retirada del soporte para el tiempo de ejecución de .NET Core 1.0.3
+* Retirada del soporte para el tiempo de ejecución de .NET Core 1.1.0
+* Actualización de la versión de Node a 6.11.2
+* Cambio del valor predeterminado de .NET Core SDK a 2.0.0
+* Cambio del valor predeterminado de .NET Core SDK para proyectos F# a 1.1.0
 
 ## 24 de julio de 2017: Actualización del paquete de compilación de ASP.NET Core v1.0.22-20170724-0813
 

@@ -12,7 +12,7 @@ lastupdated: "2017-05-30"
 # NuGet 패키지 캐시 사용 안함
 {: #disabling_the_nuget_package_cache}
 
-일부 상황에서 애플리케이션의 NuGet 패키지 캐시를 지워야 할 수 있습니다. 이렇게 하면 캐시된 기존 NuGet 패키지가 지워지고 빌드팩이 새 패키지를 캐시하지 않게 됩니다.
+일부 상황에서 애플리케이션의 NuGet 패키지 캐시를 지워야 할 수 있습니다.  이렇게 하면 캐시된 기존 NuGet 패키지가 지워지고 빌드팩이 새 패키지를 캐시하지 않게 됩니다.
 
 CloudFoundry CLI를 통해 `CACHE_NUGET_PACKAGES` 환경 변수를 `false`로 설정하여 이를 수행할 수 있습니다.
 

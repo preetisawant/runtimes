@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2017-09-18"
 
 Aquí encontrará las respuestas a preguntas frecuentes sobre la resolución de problemas sobre el uso de SDK for Node.js en {{site.data.keyword.Bluemix}}.
 {:shortdesc}
+
+Para obtener más información sobre el registro y el rastreo, consulte la sección [Rastreo](../../manageapps/app_mng.html#trace) de [Gestión de aplicaciones de Liberty y Node.js](../../manageapps/app_mng.html).
 
 ## La aplicación no se inicia con el error “No queda espacio en el dispositivo”
 {: #no_space_left_on_device}

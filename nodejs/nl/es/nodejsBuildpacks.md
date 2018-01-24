@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-24"
+lastupdated: "2017-10-27"
 
 ---
 
@@ -12,12 +12,13 @@ lastupdated: "2017-02-24"
 
 # Paquetes de compilación Node.js
 
-Bluemix proporciona varias versiones del paquete de compilación Node.js.
+{{site.data.keyword.Bluemix}} proporciona varias versiones del paquete de compilación Node.js.
 {: shortdesc}
-* El paquete de compilación **sdk-for-nodejs** creado por IBM es el paquete de compilación predeterminado que se utiliza para aplicaciones Node.js en Bluemix.
+
+* {{site.data.keyword.IBM_notm}} ha creado el paquete de compilación**sdk-for-nodejs** que es el paquete de compilación predeterminado que se utiliza para aplicaciones Node.js en {{site.data.keyword.Bluemix_notm}}.
 * **nodejs_buildpack** es un paquete de compilación de comunidad proporcionado por la comunidad de Cloud Foundry.
 
-El paquete de compilación **sdk-for-nodejs** tendrá precedencia sobre el **nodejs_buildpack** en Bluemix. Si desea utilizar **nodejs_buildpack** con la aplicación en lugar del paquete de compilación **sdk-for-nodejs**, debe especificar el paquete de compilación, por ejemplo, utilizando la opción -b con el mandato **cf push**.
+El paquete de compilación **sdk-for-nodejs** tendrá precedencia sobre **nodejs_buildpack** en {{site.data.keyword.Bluemix_notm}}. Si desea utilizar **nodejs_buildpack** con la aplicación en lugar del paquete de compilación **sdk-for-nodejs**, debe especificar el paquete de compilación, por ejemplo, utilizando la opción -b con el mandato **cf push**.
 
 Normalmente, están disponibles el paquete de compilación **sdk-for-nodejs** actual y una versión de nivel anterior.  Para ver todos los paquetes de compilación disponibles, utilice el mandato **cf buildpacks**.  Por ejemplo:
 

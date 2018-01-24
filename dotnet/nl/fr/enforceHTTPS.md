@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,7 +12,7 @@ lastupdated: "2017-07-14"
 # Imposer l'utilisation de HTTPS sur toutes les pages dans votre application
 {: #enforce_https}
 
-Pour imposer l'utilisation de HTTPS au lieu de HTTP sur toutes les pages dans votre application lorsqu'elle s'exécute dans Bluemix, vous devez lui appliquer les modifications suivantes.
+Pour imposer l'utilisation de HTTPS au lieu de HTTP sur toutes les pages dans votre application lorsqu'elle s'exécute dans {{site.data.keyword.Bluemix}}, vous devez lui appliquer les modifications suivantes.
 
 Ajoutez les instructions `using` suivantes dans la classe `Startup` :
 
@@ -24,7 +24,7 @@ Ajoutez les instructions `using` suivantes dans la classe `Startup` :
 Ajoutez le code suivant à la méthode `ConfigureServices` dans la classe `Startup` :
 
 ```
-  // if app is running in Bluemix
+  // si l'app fonctionne dans {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     services.Configure<MvcOptions>(options =>
@@ -37,7 +37,7 @@ Ajoutez le code suivant à la méthode `ConfigureServices` dans la classe `Start
 Ajoutez le code suivant à la méthode `Configure` dans la classe `Startup` :
 
 ```
-  // if app is running in Bluemix
+  // si l'app fonctionne dans {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     app.Use(async (context, next) =>

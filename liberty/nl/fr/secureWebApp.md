@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -43,7 +43,8 @@ dommages que peuvent provoquer les entrées d'un utilisateur malveillant, à la 
 côté serveur et dans le navigateur, en atténuant les effets d'une attaque XSS, voire en
 l'empêchant complètement.
 
-En premier, lieu, téléchargez cette application de démarrage sécurisée, puis compilez-la et déployez-la sur Bluemix ou localement, en procédant comme avec l'application exemple [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).  Allez à la section [Initiation à Liberty sur Bluemix](getting-started.html) pour découvrir comment compiler (ou générer) et déployer des applications sur Bluemix.  Pour démarrer, vous pouvez utiliser les étapes suivantes afin de cloner, compiler et exécuter l'application.
+En premier lieu, téléchargez cette application de démarrage sécurisée, puis compilez-la et déployez-la sur {{site.data.keyword.Bluemix_notm}} ou localement, en procédant comme avec l'application exemple [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).
+Allez à la section [Initiation à Liberty sur {{site.data.keyword.Bluemix_notm}}](getting-started.html) pour découvrir comment compiler (ou générer) et déployer des applications sur {{site.data.keyword.Bluemix_notm}}. Pour démarrer, vous pouvez utiliser les étapes suivantes afin de cloner, compiler et exécuter l'application.
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app
@@ -92,4 +93,4 @@ une configuration d'en-tête HTTP sécurisée et une politique de sécurisation 
 la traversée de répertoires (directory traversal).
 
 Pour en savoir plus sur XSS et ses contre-mesures, référez-vous à
-ce document (en anglais) : [XSS Prevention Cheat Sheet ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.owasp.org/index.php/XSS){: new_window}.
+ce document (en anglais) : [XSS Prevention Cheat Sheet ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.owasp.org/index.php/XSS){: new_window}.

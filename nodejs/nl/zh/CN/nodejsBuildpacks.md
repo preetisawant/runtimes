@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-24"
+lastupdated: "2017-10-27"
 
 ---
 
@@ -12,12 +12,13 @@ lastupdated: "2017-02-24"
 
 # Node.js buildpack
 
-Bluemix 提供多个版本的 Node.js buildpack。
+{{site.data.keyword.Bluemix}} 提供多个版本的 Node.js buildpack。
 {: shortdesc}
-* IBM 创建的 **sdk-for-nodejs** buildpack 是 Bluemix 中用于 Node.js 应用程序的缺省 buildpack。
+
+* {{site.data.keyword.IBM_notm}} 创建的 **sdk-for-nodejs** buildpack 是 {{site.data.keyword.Bluemix_notm}} 中用于 Node.js 应用程序的缺省 buildpack。
 * **nodejs_buildpack** 是 Cloud Foundry 社区提供的社区 buildpack。
 
-在 Bluemix 中，**sdk-for-nodejs** buildpack 优先于 **nodejs_buildpack**。如果想要将 **nodejs_buildpack**（而不是 **sdk-for-nodejs** buildpack）用于应用程序，那么必须指定 buildpack，例如，使用 -b 选项以及 **cf push** 命令。
+在 {{site.data.keyword.Bluemix_notm}} 中，**sdk-for-nodejs** buildpack 优先于 **nodejs_buildpack**。如果想要将 **nodejs_buildpack**（而不是 **sdk-for-nodejs** buildpack）用于应用程序，那么必须指定 buildpack，例如，使用 -b 选项以及 **cf push** 命令。
 
 通常会提供 **sdk-for-nodejs** buildpack 的当前版本和低版本。要查看所有可用的 buildpack，请使用 **cf buildpacks** 命令。例如：
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,9 +13,9 @@ lastupdated: "2017-03-22"
 # 推送 Liberty 應用程式的選項
 {: #options_for_pushing}
 
-Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建置套件可以為特定的應用程式類別提供完整的運行環境。它們對於在雲端之間提供可攜性以及對開放式雲端架構的貢獻而言很關鍵。Liberty 建置套件提供 WebSphere Liberty 容器，可以執行 Java EE 7 及 OSGi 應用程式。它支援例如 Spring 的熱門架構，且包含了 IBM JRE。WebSphere Liberty 讓您能進行適合雲端的快速應用程式開發。Liberty 建置套件支援部署到單一 Liberty 伺服器的多個應用程式。當 Liberty 建置套件整合到 Bluemix 時，建置套件會確保連結服務的環境變數在 Liberty 伺服器中都顯示為配置變數。
+Liberty 伺服器在 {{site.data.keyword.Bluemix}} 中的行為受 Liberty 建置套件所控制。建置套件可以為特定的應用程式類別提供完整的運行環境。它們對於在雲端之間提供可攜性以及對開放式雲端架構的貢獻而言很關鍵。Liberty 建置套件提供 WebSphere Liberty 容器，可以執行 Java EE 7 及 OSGi 應用程式。它支援例如 Spring 的熱門架構，且包含了 IBM JRE。WebSphere Liberty 讓您能進行適合雲端的快速應用程式開發。Liberty 建置套件支援部署到單一 Liberty 伺服器的多個應用程式。當 Liberty 建置套件整合到 {{site.data.keyword.Bluemix_notm}} 時，建置套件會確保連結服務的環境變數在 Liberty 伺服器中都顯示為配置變數。
 
-您可以使用下列方法將 Liberty 應用程式部署至 Bluemix。
+您可以使用下列方法將 Liberty 應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 
 * 推送獨立式應用程式
 * 推送伺服器目錄
@@ -26,7 +26,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 ## 獨立式應用程式
 {: #stand_alone_apps}
 
-獨立式應用程式（例如 WAR 檔或 EAR 檔）可部署至 Bluemix 中的 Liberty。
+獨立式應用程式（例如 WAR 檔或 EAR 檔）可部署至 {{site.data.keyword.Bluemix_notm}} 中的 Liberty。
 
 若要部署獨立式應用程式，請執行 cf push 指令並搭配 -p 參數，以指向您的 WAR 檔或 EAR 檔。例如：
 
@@ -135,7 +135,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 
 在某些情況下，可能會需要與應用程式一起提供自訂 Liberty 伺服器配置。當您部署 WAR 檔或 EAR 檔，且預設 server.xml 檔案沒有您應用程式需要的特定設定時，則可能需要此自訂配置。
 
-如果 Liberty 設定檔已安裝在您的工作站上，而且您已經使用應用程式建立 Liberty 伺服器，就可以將該目錄的內容推送至 Bluemix。例如，如果您的 Liberty 伺服器名稱為 defaultServer，請執行下列指令：
+如果 Liberty 設定檔已安裝在您的工作站上，而且您已經使用應用程式建立 Liberty 伺服器，就可以將該目錄的內容推送至 {{site.data.keyword.Bluemix_notm}}。例如，如果您的 Liberty 伺服器名稱為 defaultServer，請執行下列指令：
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer
@@ -164,7 +164,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 ```
 {: codeblock}
 
-伺服器目錄備妥之後，您可以將它部署至 Bluemix。
+伺服器目錄備妥之後，您可以將它部署至 {{site.data.keyword.Bluemix_notm}}。
 
 ```
     $ cf push <yourappname> -p defaultServer
@@ -181,7 +181,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 ## 包裝伺服器
 {: #packaged_server}
 
-您也可以將包裝伺服器檔案推送至 Bluemix。包裝伺服器檔案是使用 Liberty 的 server package 指令所建立。除了應用程式和配置檔之外，包裝伺服器檔案還可以包含應用程式所需的共用資源和 Liberty 使用者特性。
+您也可以將包裝伺服器檔案推送至 {{site.data.keyword.Bluemix_notm}}。包裝伺服器檔案是使用 Liberty 的 server package 指令所建立。除了應用程式和配置檔之外，包裝伺服器檔案還可以包含應用程式所需的共用資源和 Liberty 使用者特性。
 
 若要包裝 Liberty 伺服器，請從您的 Liberty 安裝目錄使用 `./bin/server package` 指令。指定您的伺服器名稱，並包含 `--include=usr` 選項。例如，如果您的 Liberty 伺服器為 defaultServer，請執行下列指令：
 
@@ -192,7 +192,7 @@ Liberty 伺服器在 Bluemix 中的行為受 Liberty 建置套件所控制。建
 
 這個指令會在伺服器目錄中產生 serverName.zip 檔案。如果您之前是使用 `--archive` 選項來指定不同的保存檔，請確定其副檔名為 `.zip`，而不是 `.jar`。**建置套件不支援以 `.jar` 副檔名建立的包裝伺服器檔案**。
 
-然後您可以使用 `cf push` 指令，將所產生的 `.zip` 檔案推送至 Bluemix。例如：
+然後，您可以使用 `cf push` 指令，將所產生的 `.zip` 檔案推送至 {{site.data.keyword.Bluemix_notm}}。例如：
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip

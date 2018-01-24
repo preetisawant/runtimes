@@ -40,11 +40,11 @@ Este paquete de compilación da soporte a las versiones siguientes; las marcadas
 
 | Versión de .NET Core Runtime | Tipo de release  | Valor pred. |
 |---------------------------|---------------|---------|
-| 1.0.3 (en desuso)         | LTS           |   No    |
-| 1.0.4 (en desuso)         | LTS           |   No    |
+| 1.0.3 (en desuso)        | LTS           |   No    |
+| 1.0.4 (en desuso)        | LTS           |   No    |
 | 1.0.5                     | LTS           |   Sí   |
-| 1.1.0 (en desuso)         | Actual       |   No    |
-| 1.1.1 (en desuso)         | Actual       |   No    |
+| 1.1.0 (en desuso)        | Actual       |   No    |
+| 1.1.1 (en desuso)        | Actual       |   No    |
 | 1.1.2                     | Actual       |   No    |
 | 2.0.0-preview1-002111-00  | LTS (vista previa) |   No    |
 | 2.0.0-preview2-25407-01   | LTS (vista previa) |   No    |

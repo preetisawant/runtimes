@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2016, 2017
-lastupdated: "2017-03-23"
+copyright: years: 2016, 2017 lastupdated: "2017-10-26"
 
 ---
 
@@ -14,9 +12,11 @@ lastupdated: "2017-03-23"
 # Use o modo off-line para o Liberty
 {: #offline_mode}
 
-Quando um aplicativo Liberty é enviado por push para o {{site.data.keyword.Bluemix}}, o buildpack do Liberty pode acessar sites externos ao Bluemix
-para adquirir os artefatos requeridos pelo aplicativo.  Veja a seguir os sites externos que o buildpack do Liberty pode acessar.  Nos ambientes [Bluemix Dedicado](/docs/dedicated/index.html#dedicated) e
-[Bluemix Local](/docs/local/index.html#local), estes sites podem precisar ser *incluídos na lista de desbloqueio*.
+Quando um aplicativo Liberty é enviado por push para {{site.data.keyword.Bluemix}}, o buildpack do Liberty pode acessar
+sites externos ao {{site.data.keyword.Bluemix_notm}} para adquirir os artefatos requeridos pelo aplicativo. Veja a seguir os sites externos que o buildpack do Liberty pode acessar.  
+Em ambientes [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), estes sites podem
+precisar ser *incluídos na lista de desbloqueio*.
 
 * https://download.run.pivotal.io e https://java-buildpack.cloudfoundry.org são usados para acessar componentes para:
   * [Agente AppDynamics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.appdynamics.com/)
@@ -31,8 +31,7 @@ para adquirir os artefatos requeridos pelo aplicativo.  Veja a seguir os sites e
 ## Trabalhando com um proxy
 {: #working_with_proxy}
 
-Em alguns ambientes, como [Bluemix Dedicado](/docs/dedicated/index.html#dedicated) e
-[Bluemix Local](/docs/local/index.html#local), um proxy pode ser configurado. Consulte
+Em alguns ambientes, como [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), um proxy pode ser configurado. Consulte
 [Trabalhando com um proxy](/docs/manageapps/workingWithProxy.html) para obter mais detalhes.
 
 # rellinks

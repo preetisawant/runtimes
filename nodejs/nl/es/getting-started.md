@@ -2,8 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
-
+lastupdated: "2017-12-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,7 +19,7 @@ lastupdated: "2017-09-06"
 
 * {: download} Enhorabuena, ha desplegado una aplicación de ejemplo Hello World en {{site.data.keyword.Bluemix}}.  Para empezar a trabajar, siga los pasos de esta guía. O bien <a class="xref" href="http://bluemix.net" target="_blank" title="(Descargue el código de ejemplo)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Descargue el código de aplicación" />descargue el código de ejemplo</a> y explore por su cuenta.
 
-Si sigue la guía de aprendizaje de Node.js, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix}} en su app.
+Si sigue la guía de aprendizaje de Node.js, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix_notm}} en su app.
 
 ## Antes de empezar
 {: #prereqs}
@@ -100,12 +99,14 @@ cf api <API-endpoint>
    ```
    {: pre}
 
-   |Región          |Punto final de API                             |
-   |:---------------|:-------------------------------|
-   | EE.UU. Sur       |https://api.ng.bluemix.net     |
-   | Reino Unido | https://api.eu-gb.bluemix.net  |
-   | Sidney         | https://api.au-syd.bluemix.net |
-   | Frankfurt     | https://api.eu-de.bluemix.net | 
+   | **Nombre de la región** | **Ubicación geográfica** | **Punto final de la API** |
+   |-----------------|-------------------------|-------------------|
+   | Región EE.UU. sur| Dallas, EE.UU.| api.ng.bluemix.net |
+   |  Región EE.UU este | Washington, DC, EE.UU | api.us-east.bluemix.net |
+   | Región del Reino Unido| Londres, Inglaterra| api.eu-gb.bluemix.net |
+   | Región de Sídney| Sídney, Australia | api.au-syd.bluemix.net |
+   |  Región de Alemania | Frankfurt, Alemania | api.eu-de.bluemix.net |
+   {: caption="Tabla 1. Lista de regiones de {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 Inicie una sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}.
 
@@ -128,7 +129,7 @@ cf apps
   ```
   {: pre}
 
-Puede solucionar errores del proceso de despliegue mediante el mandato `cf logs <Your-App-Name> --recent`.
+Puede resolver errores en el proceso de despliegue mediante el mandato `cf logs <Your-App-Name> --recent`.
 {: tip}
 
 ## Paso 5: Añada una base de datos
@@ -137,7 +138,7 @@ Puede solucionar errores del proceso de despliegue mediante el mandato `cf logs 
 A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
 1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione su aplicación pulsando su nombre en la columna **Nombre**.
-2. Pulse **Conexiones** y luego **Conectar nuevo**.
+2. Pulse **Conexiones** y **Crear conexión**.
 2. En la sección **Data & Analytics**, seleccione `BD Cloudant NoSQL` y cree el servicio.
 3. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
@@ -177,7 +178,15 @@ npm start
 
   Visualice la app local en: http://localhost:3000. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
 
+** Evite problemas**: {{site.data.keyword.Bluemix_notm}} define la variable de entorno PORT cuando la app se ejecuta en la nube. Cuando ejecuta la app localmente, la variable PORT no está definida, de modo que se utiliza 3000 como número de puerto. Consulte [Ejecutar la app localmente](runningLocally.html#hints) para obtener más información.
+
   La app local y la app {{site.data.keyword.Bluemix_notm}} comparten la base de datos. Los nombres que añada desde cualquiera de las apps aparecerán cuando renueve los navegadores.
 
 Recuerde que si no necesita la app en directo en {{site.data.keyword.Bluemix_notm}}, debe detener la app para no incurrir en cargos inesperados.
 {: tip}
+
+## Siguientes pasos
+
+* [Guías de aprendizaje](/docs/tutorials/index.html)
+* [Ejemplos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://ibm-cloud.github.io){: new_window}
+* [Centro de arquitectura ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

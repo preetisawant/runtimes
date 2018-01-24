@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -57,7 +57,7 @@ lastupdated: "2017-07-14"
 ### 指定資料堆記憶體
 {: #specifying_heap_memory}
 
-您可以使用環境變數或變更 `jvm.options` 檔案來設定資料堆記憶體大小。當您使用 `JVM_ARGS` 或 `JBP_CONFIG_IBMJDK` 環境變數時，任何變更都會在將應用程式推送至 Bluemix 時生效。藉由變更 `jvm.options` 檔案，也可以在本端測試資料堆大小配置的效果。
+您可以使用環境變數或變更 `jvm.options` 檔案來設定資料堆記憶體大小。當您使用 `JVM_ARGS` 或 `JBP_CONFIG_IBMJDK` 環境變數時，任何變更都會在將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時生效。藉由變更 `jvm.options` 檔案，也可以在本端測試資料堆大小配置的效果。
 
 * 使用 `JVM_ARGS` 環境變數及 -Xmx 引數。例如，若要將資料堆大小上限設為 512M，請使用下列指令，並重新編譯打包應用程式。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2017-06-08"
 # 可用版本
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 提供所有[目前可用的 Node.js 运行时](http://nodejs.org/dist/)。在可用的运行时中，IBM 提供的特定版本包含增强功能和错误修订。请参阅 [Node.js Buildpack 的最新更新](/docs/runtimes/nodejs/updates.html)，以获取有关受支持版本的更多信息。
+{{site.data.keyword.Bluemix}} 提供所有[目前可用的 Node.js 运行时](http://nodejs.org/dist/)。在可用的运行时中，{{site.data.keyword.IBM_notm}} 提供的特定版本包含增强功能和错误修订。请参阅 [Node.js Buildpack 的最新更新](/docs/runtimes/nodejs/updates.html)，以获取有关受支持版本的更多信息。
 {: shortdesc}
 
-IBM Node.js buildpack 高速缓存 IBM 运行时版本。如果在应用程序中使用 IBM SDK for Node.js 运行时，那么在将应用程序推送到 Bluemix 时应用程序执行速度更快。
+IBM Node.js buildpack 高速缓存 {{site.data.keyword.IBM_notm}} 运行时版本。如果在应用程序中使用 {{site.data.keyword.IBM_notm}} SDK for Node.js 运行时，那么在将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时应用程序执行速度更快。
 
 ## 指定版本
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-12-13"
 
 ---
 
@@ -24,7 +24,7 @@ Beispiel:
 ```
 {: codeblock}
 
-Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist.  Zum Beispiel werden **Knotenmodule fehlschlagen, die [MD5 ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://en.wikipedia.org/wiki/MD5) verwenden,** wie beispielsweise [Express ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://expressjs.com/). Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://expressjs.com/en/api.html) in Ihrer
+Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist.  Zum Beispiel werden **Knotenmodule fehlschlagen, die [MD5 ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://en.wikipedia.org/wiki/MD5) verwenden,** wie beispielsweise [Express ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://expressjs.com/).  Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://expressjs.com/en/api.html) in Ihrer
 Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt bearbeiten:
 ```
     app.set('etag', false);
@@ -36,7 +36,7 @@ Weitere Informationen dazu finden Sie in diesem [stackoverflow-Post ![Symbol 'Ex
 
 Es gibt mehrere Möglichkeiten, den FIPS_MODE-Status zu überprüfen:
 <ul>
-<li> Sie können in den Protokollen zu Ihrer Anwendung nach einer Nachricht ähnlich der folgenden suchen:     
+<li> Sie können in den Protokollen zu Ihrer Anwendung nach einer Nachricht ähnlich der folgenden suchen:    
 
   <pre>
   Installing FIPS-enabled IBM SDK for Node.js (4.4.3) from cache
@@ -72,10 +72,10 @@ Wenn der zurückgegebene Wert '1' ist, wird FIPS verwendet. Beachten Sie, dass c
 
 Die folgende Tabelle erläutert das Verhalten von node.js Version 4 bezüglich FIPS:
 
-|                 | Ergebnis|
+|                 | Ergebnis        |
 | :-------------- | :------------ |
-|FIPS_MODE=true|Erfolg (1)|
-|FIPS_MODE !=true|Erfolg (2)|
+|FIPS_MODE=true   |Erfolg (1)    |
+|FIPS_MODE !=true |Erfolg (2)    |
 
 * Erfolg (1)
   * FIPS wird verwendet.
@@ -86,10 +86,10 @@ Die folgende Tabelle erläutert das Verhalten von node.js Version 4 bezüglich F
   * Die Protokolle enthalten *NICHT* die Nachricht *Installing FIPS-enabled IBM SDK for Node.js*.
   * Der von process.versions.openssl zurückgegebene Wert enthält *NICHT* 'fips'.
 
-## Nodejs Version 6
+## Node.js Version 6 und höher
 {: #nodejs_v6_fips}
 
-Für die Ausführung im FIPS-Modus müssen Sie bei Node.js Version 6 neben der Einstellung von **FIPS_MODE=true** in Ihrem Startbefehl **--enable-fips** angeben, entsprechend dem folgenden Beispiel:
+Für die Ausführung im FIPS-Modus müssen Sie bei Node.js Version 6 und höher neben der Einstellung von **FIPS_MODE=true** in Ihrem Startbefehl **--enable-fips** angeben, entsprechend dem folgenden Beispiel:
 ```
 {
     ...   
@@ -100,12 +100,12 @@ Für die Ausführung im FIPS-Modus müssen Sie bei Node.js Version 6 neben der E
 ```
 {: codeblock}
 
-Die folgende Tabelle erläutert das Verhalten von node.js Version 6 bezüglich FIPS.
+Die folgende Tabelle erläutert das Verhalten von node.js Version 6 und höher bezüglich FIPS.
 
-|                 |--enable-fips|KEIN --enable-fips|
+|                 |--enable-fips  |KEIN --enable-fips |
 | :-------------- | :------------ | :-------------- |
-|FIPS_MODE=true|Erfolg (1)|Erfolg (2)|
-|FIPS_MODE !=true|Fehler (3)|Erfolg (4)|
+|FIPS_MODE=true   |Erfolg (1)    |Erfolg (2)      |
+|FIPS_MODE !=true |Fehler (3)    |Erfolg (4)      |
 
 * Erfolg (1)
   * FIPS wird verwendet.

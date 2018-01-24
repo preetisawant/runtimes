@@ -8,7 +8,6 @@ Liberty for Java
     getting-started.md
     index.md
 
-
     {: .topicgroup}
     Zugehörige Links
         [Liberty overview (Übersicht über Liberty)](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
@@ -17,15 +16,20 @@ Liberty for Java
     {: .navgroup id="howto"}
     secureWebApp.md
     loggingAndTracing.md
-    [Bereitstellung von Apps mit IBM Eclipse Tools for Bluemix](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+
+    {: .topicgroup}
+    IBM Eclipse Tools for IBM Cloud verwenden
+        eclipseDevelop.md
+        [Bereitstellung von Apps mit IBM Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+
     autoConfig.md
     customizingJRE.md
-    oracle_jre.md
+    using_own_jre.md
     usingBetaFeatures.md
     [Gebundene Services ausschließen](autoConfig.html#opting_out)
 
     {: .topicgroup}
-    Liberty in Bluemix überwachen
+    Liberty in IBM Cloud überwachen
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
@@ -49,7 +53,7 @@ Liberty for Java
 
     buildpackDefaults.md
     [Liberty- und Node.js-Apps verwalten](../../manageapps/app_mng.html)
-    [Erste Schritte mit dem Service IBM Monitoring and Analytics for Bluemix](../../services/monana/index.html)
+    [Erste Schritte mit IBM Monitoring and Analytics](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

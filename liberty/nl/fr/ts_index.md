@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -31,7 +31,7 @@ Le démarrage d'une application Liberty échoue avec l'erreur "Failed to start a
 ```
 {: #codeblock}
 
-Bluemix effectue un diagnostic d'intégrité sur l'application pour voir si elle a démarré avec succès. Ce diagnostic d'intégrité réalise un test afin de savoir si l'application écoute le port qui lui est affecté. Le temps alloué par défaut pour ce contrôle est de 60 secondes et certaines applications peuvent mettre plus de 60 secondes à démarrer.  Il peut y avoir plusieurs raisons à cela. Par exemple, la liaison de services tels que [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) ou [New Relic](/docs/runtimes/liberty/newRelic.html), ou encore l'[activation du débogueur](/docs/manageapps/app_mng.html#debug), auront pour effet d'allonger le temps de démarrage. L'application peut aussi passer par des étapes d'initialisation qui prennent du temps.
+{{site.data.keyword.Bluemix_notm}} effectue un diagnostic d'intégrité sur l'application pour voir si elle a démarré avec succès. Ce diagnostic d'intégrité réalise un test afin de savoir si l'application écoute le port qui lui est affecté. Le temps alloué par défaut pour ce contrôle est de 60 secondes et certaines applications peuvent mettre plus de 60 secondes à démarrer.  Il peut y avoir plusieurs raisons à cela. Par exemple, la liaison de services tels que [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) ou [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html), ou encore l'[activation du débogueur](/docs/manageapps/app_mng.html#debug), auront pour effet d'allonger le temps de démarrage. L'application peut aussi passer par des étapes d'initialisation qui prennent du temps.
 {: tsCauses}
 
 Tout d'abord, examinez les journaux en recherchant les erreurs évidentes
@@ -55,7 +55,7 @@ avec l'option "-t". Par exemple :
 
 ### **Désactivez la fonction appstate. **
 
-La fonction appstate est intégrée au processus de diagnostic d'intégrité Bluemix pour vérifier que l'application Liberty est entièrement initialisée de sorte que l'application puisse recevoir des demandes HTTP. Une fois l'application
+La fonction appstate est intégrée au processus de diagnostic d'intégrité {{site.data.keyword.Bluemix_notm}} pour vérifier que l'application Liberty est entièrement initialisée de sorte que l'application puisse recevoir des demandes HTTP. Une fois l'application
 entièrement initialisée, la fonction appstate n'a plus d'effet.  L'effet secondaire de cette fonction est que certaines applications sont susceptibles de mettre plus longtemps à démarrer. Pour désactiver la fonction appstate, définissez la propriété d'environnement suivante sur votre application et reconstituez l'application :
 
 ```

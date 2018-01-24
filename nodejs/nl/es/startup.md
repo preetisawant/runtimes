@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -25,7 +25,7 @@ web: node app.js
 
 1. Guarde **Procfile** en el directorio raíz de la aplicación.
 
-Si un **Procfile** no está presente, el paquete de compilación IBM Bluemix Node.js comprobará si existe una entrada scripts.start en el archivo **package.json**. De nuevo, en el siguiente ejemplo, app.js es el script js de inicio de la aplicación.
+Si un **Procfile** no está presente, el paquete de compilación {{site.data.keyword.Bluemix_notm}} Node.js comprobará si existe una entrada scripts.start en el archivo **package.json**. De nuevo, en el siguiente ejemplo, app.js es el script js de inicio de la aplicación.
 ```
 {
     ...   

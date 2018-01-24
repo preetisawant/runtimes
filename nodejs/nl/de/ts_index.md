@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -19,11 +19,14 @@ lastupdated: "2017-09-18"
 Es folgen die Antworten auf allgemeine Fragen zur Fehlerbehebung bei der Verwendung von SDK for Node.js in {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
+Weitere Informationen zu Protokollierung und Tracing finden Sie im Abschnitt [Trace](../../manageapps/app_mng.html#trace) in [Liberty- und Node.js-Anwendungen verwalten](../../manageapps/app_mng.html).
+
 ## Das Starten der Anwendung schlug mit der Nachricht über fehlenden Speicherplatz auf der Einheit fehl: “No space left on device”.
 {: #no_space_left_on_device}
 
 
-Das Starten einer Node.js-Anwendung schlug mit der Nachricht “No space left on device” fehl. Der Fehler kann in den Protokollen beispielsweise wie folgt aussehen: {: tsSymptoms}
+Das Starten einer Node.js-Anwendung schlug mit der Nachricht “No space left on device” fehl. Der Fehler kann in den Protokollen beispielsweise wie folgt aussehen:
+{: tsSymptoms}
 
 ```
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device

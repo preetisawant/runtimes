@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -57,7 +57,7 @@ Consulte la sección [Renuncia a la configuración automática del servicio](#op
 ## Generación o actualización de stanzas de configuración de server.xml
 {: #generating_or_updating_serverxml}
 
-Cuando envía una aplicación autónoma, el paquete de compilación de Liberty genera la stanza server.xml, tal como se describe en [Opciones para enviar aplicaciones Liberty](optionsForPushing.html#options_for_pushing) a Bluemix. Cuando envía una aplicación autónoma y la enlaza a servicios gestionados por contenedor, el paquete de compilación de Liberty genera las stanzas necesarias de server.xml para los servicios enlazados.
+Cuando envía por push una aplicación autónoma, el paquete de compilación de Liberty genera la stanza de server.xml, como se describe en [Opciones para enviar aplicaciones Liberty por push](optionsForPushing.html#options_for_pushing) a {{site.data.keyword.Bluemix_notm}}. Cuando envía una aplicación autónoma y la enlaza a servicios gestionados por contenedor, el paquete de compilación de Liberty genera las stanzas necesarias de server.xml para los servicios enlazados.
 
 Cuando el usuario especifica un archivo server.xml y lo enlaza a servicios gestionados por contenedor,
 el paquete de compilación de Liberty:

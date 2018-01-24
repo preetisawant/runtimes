@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2017-03-23"
 # Liberty のオフライン・モードの使用
 {: #offline_mode}
 
-Liberty アプリケーションが {{site.data.keyword.Bluemix}} にプッシュされると、Liberty ビルドパックは Bluemix の外部のサイトにアクセスして、アプリケーションに必要な成果物を取得できます。Liberty ビルドパックによるアクセスが可能な外部サイトを以下に示します。[Bluemix Dedicated](/docs/dedicated/index.html#dedicated) および [Bluemix Local](/docs/local/index.html#local) の環境では、これらのサイトは*ホワイトリスト*に登録されていることが必要な場合があります。
+Liberty アプリケーションが {{site.data.keyword.Bluemix}} にプッシュされると、Liberty ビルドパックは {{site.data.keyword.Bluemix_notm}} の外部のサイトにアクセスして、このアプリケーションに必要な成果物を取得できます。Liberty ビルドパックによるアクセスが可能な外部サイトを以下に示します。  [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 環境と [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 環境では、これらのサイトが*ホワイトリスト*に登録されていなければならないことがあります。
 
 * https://download.run.pivotal.io および https://java-buildpack.cloudfoundry.org を使用して、以下を対象とするコンポーネントにアクセスします。
   * [AppDynamics エージェント ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.appdynamics.com/)
@@ -29,7 +29,7 @@ Liberty アプリケーションが {{site.data.keyword.Bluemix}} にプッシ�
 ## プロキシーの処理
 {: #working_with_proxy}
 
-[Bluemix Dedicated](/docs/dedicated/index.html#dedicated) および [Bluemix Local](/docs/local/index.html#local) などの一部の環境では、プロキシーの構成が可能です。詳しくは、[『プロキシーの処理』](/docs/manageapps/workingWithProxy.html)を参照してください。
+[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) や [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) などの一部の環境では、プロキシーを構成できます。詳しくは、[『プロキシーの処理』](/docs/manageapps/workingWithProxy.html)を参照してください。
 
 # 関連リンク
 {: #rellinks notoc}

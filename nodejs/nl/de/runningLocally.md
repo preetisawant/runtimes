@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,13 +14,14 @@ lastupdated: "2017-05-30"
 # Node.js-Anwendung lokal ausführen
 {: #hints}
 
-Mithilfe dieser Informationen können Sie die Ausführung Ihrer Node.js-Anwendung lokal oder in {{site.data.keyword.Bluemix}} vereinfachen.
+Legen Sie eine Portnummer fest, damit Sie Ihre Node.js-Anwendung lokal ausführen können, ohne dass Konflikte bei der Ausführung in {{site.data.keyword.Bluemix}} auftreten.
 {: shortdesc}
 
-Im folgenden Beispiel wird ein Teil der Quelle für eine **js**-Datei gezeigt:
+Wenn die Anwendung in {{site.data.keyword.Bluemix_notm}} ausgeführt wird, wird die Umgebungsvariable PORT von Cloud Foundry zugeordnet. Bei lokaler Ausführung der Anwendung ist die Umgebungsvariablen PORT jedoch nicht definiert, sodass Sie den Port für Ihre Anwendung definieren können. Zum Vermeiden von Konflikten können Sie den Port, auf dem Ihre App lokal empfangsbereit ist, so definieren, dass er sich von dem von {{site.data.keyword.Bluemix_notm}} verwendeten Port etwas unterscheidet.
+
+Im folgenden Beispiel für eine **js**-Datei wird **3000** als Portnummer verwendet. Bei der Verwendung von **3000** können Sie die Anwendung sowohl lokal für Testzwecke als auch in {{site.data.keyword.Bluemix_notm}} ausführen, ohne Änderungen vornehmen zu müssen.
+
 ```
 var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
-
-Wenn die Anwendung bei diesem Code in Bluemix ausgeführt wird, enthält die Umgebungsvariable PORT den internen Portwert von Bluemix, auf dem die App für eingehende Verbindungen empfangsbereit ist. Bei lokaler Ausführung der Anwendung ist die Umgebungsvariablen PORT nicht definiert, sodass **3000** als Portnummer verwendet wird. Durch diese Schreibung können Sie die Anwendung sowohl lokal für Testzwecke als auch in Bluemix ausführen, ohne Änderungen vornehmen zu müssen.

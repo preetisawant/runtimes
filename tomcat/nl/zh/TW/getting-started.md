@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-09-06"
 
 * {: download} 恭喜，您已在 {{site.data.keyword.Bluemix}} 上部署 Hello World 範例應用程式！若要開始使用，請遵循本逐步手冊。或者，<a class="xref" href="http://bluemix.net" target="_blank" title="（下載範例程式碼）"><img class="hidden" src="../../images/btn_starter-code.svg" alt="下載應用程式碼" />下載範例程式碼</a>，並自行探索。
 
-遵循 Tomcat 入門指導教學，您將設定開發環境、在本端及 {{site.data.keyword.Bluemix}} 上部署應用程式，以及在應用程式中整合 {{site.data.keyword.Bluemix}} 資料庫服務。
+遵循 Tomcat 入門指導教學，您將設定開發環境、在本端及 {{site.data.keyword.Bluemix}} 上部署應用程式，以及在應用程式中整合資料庫服務。
 
 ## 開始之前
 {: #prereqs}
@@ -69,7 +69,7 @@ mvn clean install
 ```
 <tomcat-install-dir>/bin/startup.bat|.sh
 ```
-{: screen}
+{: pre}
 
 在下列網址檢視您的應用程式：http://localhost:8080/GetStartedTomcat/
 
@@ -111,12 +111,14 @@ cf api <API-endpoint>
 
 將指令中的 *API-endpoint* 取代為下列清單中的 API 端點。
 
-|地區|API 端點|
-|:---------------|:-------------------------------|
-| 美國南部|https://api.ng.bluemix.net|
-| 英國| https://api.eu-gb.bluemix.net|
-| 雪梨| https://api.au-syd.bluemix.net|
-| 法蘭克福| https://api.eu-de.bluemix.net | 
+| **地區名稱** | **地理位置** | **API 端點** |
+|-----------------|-------------------------|-------------------|
+| 美國南部地區 | 美國達拉斯 | api.ng.bluemix.net |
+| 美國東部地區 | 美國華盛頓州特區 | api.us-east.bluemix.net |
+| 英國地區 | 英國倫敦 | api.eu-gb.bluemix.net |
+| 雪梨地區 | 澳洲雪梨 | api.au-syd.bluemix.net |
+| 德國地區 | 德國法蘭克福 | api.eu-de.bluemix.net |
+{: caption="表 1. {{site.data.keyword.cloud_notm}} 地區清單" caption-side="top"}
 
 登入 {{site.data.keyword.Bluemix_notm}} 帳戶：
 
@@ -142,75 +144,45 @@ cf apps
   {: pre}
   指令來檢視應用程式狀態，並且查看 URL。
 
-## 步驟 5：使用 Eclipse 進行開發
-{: #developing_in_eclipse}
-
-IBM® Eclipse Tools for {{site.data.keyword.Bluemix}} 提供可安裝至現有 Eclipse 環境的外掛程式，以協助將開發人員的整合開發環境 (IDE) 與 {{site.data.keyword.Bluemix_notm}} 整合。
-
-下載及安裝 [IBM Eclipse Tools for Bluemix](https://developer.ibm.com/wasdev/downloads/#asset/tools-IBM_Eclipse_Tools_for_Bluemix)。
-
-使用「檔案」->「匯入」-> `Maven` ->「現有 Maven 專案」選項，以將此範例匯入至 Eclipse。
-
-建立 Tomcat 伺服器定義：
-  - 在「伺服器」視圖中按一下滑鼠右鍵 ->「新建」->「伺服器」。
-  - 選取 `Apache` -> `Tomcat v8.0 Server`。
-  - 選擇 `tomcat-install-dir`。
-  - 繼續使用預設選項來執行精靈，直到完成。
-
-在 Apache 伺服器本端執行應用程式：
-  - 在 `GetStartedTomcat` 範例上按一下滑鼠右鍵，然後選取「執行身分」->「在伺服器中執行」選項。
-  - 尋找並選取 localhost Tomcat 伺服器，然後按「完成」。
-  - 只要幾秒鐘，應用程式應該就會在 http://localhost:8080/GetStartedTomcat/ 執行
-
-建立 {{site.data.keyword.Bluemix_notm}} 伺服器定義：
-  - 在「伺服器」視圖中按一下滑鼠右鍵 ->「新建」->「伺服器」。
-  - 選取 `IBM` -> `IBM Bluemix`，然後遵循精靈中的步驟。
-  - 輸入認證，然後按「下一步」。
-  - 選取您的組織及空間，然後按一下「完成」。
-
-在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式：
-  - 在 `GetStartedTomcat` 範例上按一下滑鼠右鍵，然後選取「執行身分」->「在伺服器中執行」選項。
-  - 尋找並選取 `IBM Bluemix`，然後按「完成」。
-  - 精靈將引導您進行部署選項。請務必選擇應用程式的唯一名稱。
-  - 只要幾分鐘，應用程式應該就會在您選擇的 URL 執行。
-
-現在，您已在本端及雲端上執行程式碼！
-
-## 步驟 6：新增資料庫
+## 步驟 5：新增資料庫
 {: #add_database}
 
-接下來，我們會將 NoSQL Database 新增至此應用程式並設定應用程式，因此，它可以在本端及 Bluemix 上執行。
+接下來，我們會將 NoSQL Database 新增至此應用程式並設定應用程式，因此，它可以在本端及 {{site.data.keyword.Bluemix_notm}} 上執行。
 
-1. 在瀏覽器中，登入 {{site.data.keyword.Bluemix_notm}}。瀏覽至「儀表板」。按一下「名稱」直欄中的應用程式名稱，以選取該應用程式。
-2. 依序按一下「連線」及「連接新服務」。
-2. 在「資料及分析」區段中，選取 `Cloudant NoSQL DB`，然後建立服務。
-3. 系統提示時，請選取「重新編譯打包」。{{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
+1. 在瀏覽器中，登入 {{site.data.keyword.Bluemix_notm}}，並移至「儀表板」。按一下**名稱**直欄中的應用程式名稱，以選取該應用程式。
+2. 依序按一下**連線**及**建立連線**。
+3. 在**資料及分析**區段中，選取 **Cloudant NoSQL DB**，然後建立服務。
+4. 移至**應用程式 > 您的應用程式 > 連線**，然後選擇**連接現有服務**。
+5. 系統提示時，請選取**重新編譯打包**。{{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
 
 環境變數可讓您分開部署設定與原始碼。例如，您可以將資料庫密碼儲存在原始碼中所參考的環境變數內，而不要將資料庫密碼寫在程式中。[進一步瞭解...](/docs/manageapps/depapps.html#app_env)
 {: tip}
 
-## 步驟 7：使用資料庫
+## 步驟 6：使用資料庫
 {: #use_database}
-我們現在即將更新本端程式碼，使其指向此資料庫。我們會將服務的認證儲存在內容檔中。只有在應用程式於本端執行時，才會使用此檔案。在 {{site.data.keyword.Bluemix_notm}} 中執行時，將會從 VCAP_SERVICES 環境變數中讀取認證。
 
-1. 開啟 Eclipse，並開啟 src/main/resources/cloudant.properties 檔案：
-  ```
-  cloudant_url=
-  ```
-  {: pre}
+我們現在即將更新本端程式碼，使其指向此資料庫。我們會將服務的認證儲存在內容檔中。只有在應用程式於本端執行時，才會使用此檔案。在 {{site.data.keyword.Bluemix_notm}} 中執行時，將會從 `VCAP_SERVICES` 環境變數中讀取認證。
 
-2. 在瀏覽器中，開啟 {{site.data.keyword.Bluemix_notm}} 使用者介面，然後選取您的應用程式 ->「連線」-> Cloudant ->「檢視認證」
+1. 在瀏覽器中，移至 {{site.data.keyword.Bluemix_notm}}，然後選取**應用程式 > _您的應用程式_ > 連線 > Cloudant > 檢視認證**。
 
-3. 只要將 `url` 從認證複製並貼入 `cloudant.properties` 檔案的 `url` 欄位中，並儲存變更。結果將如下：
+2. 只要將 `url` 從認證複製並貼入 `cloudant.properties` 檔案的 `url` 欄位中，並儲存變更。
   ```
   cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
+  {:pre}
 
-4. 在 Eclipse 中，從「伺服器」視圖重新啟動 Tomcat 伺服器。
+3. 重新啟動伺服器
 
-  重新整理瀏覽器視圖：http://localhost:8080/GetStartedTomcat/ 您輸入至應用程式的任何名稱，現在都會新增至資料庫。
+重新整理瀏覽器視圖：http://localhost:8080/GetStartedTomcat/ 您輸入至應用程式的任何名稱，現在都會新增至資料庫。
 
-  本端應用程式及 {{site.data.keyword.Bluemix_notm}} 應用程式將會共用資料庫。在上述 push 指令輸出中所列的 URL 檢視 {{site.data.keyword.Bluemix_notm}} 應用程式。當您重新整理瀏覽器時，從任一應用程式新增的名稱應該會出現在這兩個應用程式中。
+  本端應用程式及 {{site.data.keyword.Bluemix_notm}} 應用程式將會共用資料庫。當您重新整理瀏覽器時，從任一應用程式新增的名稱就會出現在這兩個應用程式中。
 
-請記住，如果您不需要應用程式在 {{site.data.keyword.Bluemix_notm}} 上維持執行中，請停止它以避免產生任何非預期的費用。
+
+請記住，如果您不需要應用程式在 {{site.data.keyword.Bluemix_notm}} 上維持執行中，請停止應用程式以避免產生任何非預期的費用。
 {: tip}  
+
+## 後續步驟
+
+* [指導教學](/docs/tutorials/index.html)
+* [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://ibm-cloud.github.io){: new_window}
+* [架構中心 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

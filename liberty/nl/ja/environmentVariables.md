@@ -59,16 +59,17 @@ Liberty for Java によってサポートされる環境変数。
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>[OpenJDK バージョン](customizingJRE.html)を構成します。</td></tr>
+<td>[OpenJDK バージョン](customizingJRE.html)を構成します。</td>
+</tr>
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>Spring Auto-Reconfiguration フレームワークを使用不可にします。使用不可にするには、値を enabled: false に設定します。</td>
+<td>Spring Auto-Reconfiguration フレームワークを使用不可にします。 使用不可にするには、値を enabled: false に設定します。 </td>
 </tr>
 
 <tr>
 <td>JBP_LOG_LEVEL</td>
-<td>ビルドパックのロギング・レベルを設定します。可能な値: <b>DEBUG</b>、<b>INFO</b> (デフォルト)、<b>WARN</b>、<b>ERROR</b>、または <b>FATAL</b></td>
+<td>ビルドパックのロギング・レベルを設定します。 可能な値: <b>DEBUG</b>、<b>INFO</b> (デフォルト)、<b>WARN</b>、<b>ERROR</b>、または <b>FATAL</b></td>
 </tr>
 
 <tr>

@@ -40,11 +40,11 @@ Esse buildpack suporta as versões a seguir; aquelas marcadas como descontinuada
 
 | Versão do runtime do .NET Core | Tipo de Release  | Padrão |
 |---------------------------|---------------|---------|
-| 1.0.3 (descontinuado)     | LTS           |   Não    |
-| 1.0.4 (descontinuado)     | LTS           |   Não    |
+| 1.0.3 (descontinuado)        | LTS           |   Não    |
+| 1.0.4 (descontinuado)        | LTS           |   Não    |
 | 1.0.5                     | LTS           |   Sim   |
-| 1.1.0 (descontinuado)     | Atual       |   Não    |
-| 1.1.1 (descontinuado)     | Atual       |   Não    |
+| 1.1.0 (descontinuado)        | Atual       |   Não    |
+| 1.1.1 (descontinuado)        | Atual       |   Não    |
 | 1.1.2                     | Atual       |   Não    |
 | 2.0.0-preview1-002111-00  | LTS (visualização) |   Não    |
 | 2.0.0-preview2-25407-01   | LTS (visualização) |   Não    |
@@ -61,4 +61,4 @@ Controle a versão .NET SDK com um global.json opcional no diretório raiz do ap
 ```
 {: codeblock}
 
-Se não especificado, o conjunto de ferramentas MSBuild para o tempo de execução do Long-term-support (LTS) GA mais recente será usado. Para usar o conjunto de ferramentas project.json, é possível especificar uma das versões project.json listadas acima, mas também será necessário lembrar-se de que essas versões serão removidas no futuro.
+Se não especificado, o conjunto de ferramentas MSBuild para o tempo de execução do Long-term-support (LTS) GA mais recente será usado.  Para usar o conjunto de ferramentas project.json, é possível especificar uma das versões project.json listadas acima, mas também será necessário lembrar-se de que essas versões serão removidas no futuro.

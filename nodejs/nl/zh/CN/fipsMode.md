@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-12-13"
 
 ---
 
@@ -86,10 +86,10 @@ console.log('ssl version is [' +process.versions.openssl +']');
   * 该日志中将*不会*包含消息 *Installing FIPS-enabled IBM SDK for Node.js*。
   * process.versions.openssl 返回的值将*不*包含“fips”。
 
-## Nodejs V6
+## Node.js V6 及更高版本
 {: #nodejs_v6_fips}
 
-要在 Node.js V6 中以 FIPS 方式运行，除了设置 **FIPS_MODE=true** 以外，您还必须在启动命令中包含 **--enable-fips**，如以下示例所示：
+要在 Node.js V6 及更高版本中以 FIPS 方式运行，除了设置 **FIPS_MODE=true** 以外，您还必须在启动命令中包含 **--enable-fips**，如以下示例所示：
 ```
 {
     ...   
@@ -100,7 +100,7 @@ console.log('ssl version is [' +process.versions.openssl +']');
 ```
 {: codeblock}
 
-下表说明了使用 FIPS 的 node.js V6 的行为：
+下表说明了使用 FIPS 的 node.js V6 及更高版本的行为。
 
 |                 |--enable-fips|NO --enable-fips|
 | :-------------- | :------------ | :-------------- |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -23,7 +23,7 @@ Das Buildpack 'go_buildpack' wird verwendet, wenn Ihre Anwendung eine Datei mit 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Go-Starteranwendung bereit.  Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Go-Starteranwendung bereit.  Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -33,26 +33,26 @@ Sie können die Version von Go, die von Ihrer App verwendet werden soll, durch F
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.6.1",
+	"GoVersion": "go1.8.3",
 	"Deps": []
 }
 ```
 {: codeblock}
 Weitere Informationen finden Sie in [godep](https://github.com/tools/godep){: new_window}.
 
-Wenn keine Version angegeben ist, wird standardmäßig Version 1.7.5 ausgewählt.
+Wenn keine Version angegeben ist, wird standardmäßig Version 1.8.3 ausgewählt.
 
 ### Verfügbare Versionen:
 {: #available_versions}
 
-Folgende Go-Versionen stehen im [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.18){: new_window} zur Verfügung, das derzeit in {{site.data.keyword.Bluemix}} installiert ist:
+Folgende Go-Versionen stehen im [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.6){: new_window} zur Verfügung, das derzeit in {{site.data.keyword.Bluemix_notm}} installiert ist:
 
-* 1.5.3
-* 1.5.4
 * 1.6.3
 * 1.6.4
-* 1.7.4
 * 1.7.5
+* 1.7.6
+* 1.8.1
+* 1.8.3
 
 Wenn für Ihre App eine Go-Version erforderlich ist, die nicht aufgelistet ist, können Sie die Anwendung mit dem externen [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} implementieren.
 

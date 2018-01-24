@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -25,7 +25,7 @@ web: node app.js
 
 1. 将 **Procfile** 保存在应用程序的根目录中。
 
-如果未提供 **Procfile**，那么 IBM Bluemix Node.js buildpack 会检查 **package.json** 文件中是否有 scripts.start 条目。同样，在下面的示例中，app.js 是应用程序的启动 js 脚本。
+如果未提供 **Procfile**，那么 {{site.data.keyword.Bluemix_notm}} Node.js buildpack 会检查 **package.json** 文件中是否有 scripts.start 条目。同样，在下面的示例中，app.js 是应用程序的启动 js 脚本。
 ```
 {
     ...   

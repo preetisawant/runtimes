@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,7 +12,7 @@ lastupdated: "2017-07-14"
 # 在應用程式的所有頁面上施行 HTTPS
 {: #enforce_https}
 
-當您的應用程式在 Bluemix 中執行時，若要在所有頁面上施行 HTTPS 而非 HTTP，您需要對應用程式進行下列變更。
+當您的應用程式在 {{site.data.keyword.Bluemix}} 中執行時，若要在所有頁面上施行 HTTPS 而非 HTTP，您需要對應用程式進行下列變更。
 
 在 `Startup` 類別中新增下列 `using` 陳述式：
 
@@ -24,7 +24,7 @@ lastupdated: "2017-07-14"
 在 `Startup` 類別中新增下列內容至 `ConfigureServices` 方法：
 
 ```
-  // if app is running in Bluemix
+  // if app is running in {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     services.Configure<MvcOptions>(options =>
@@ -37,7 +37,7 @@ lastupdated: "2017-07-14"
 在 `Startup` 類別中新增下列內容至 `Configure` 方法：
 
 ```
-  // if app is running in Bluemix
+  // if app is running in {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     app.Use(async (context, next) =>

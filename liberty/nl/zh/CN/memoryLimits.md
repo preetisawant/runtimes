@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -57,7 +57,7 @@ lastupdated: "2017-07-14"
 ### 指定堆内存
 {: #specifying_heap_memory}
 
-设置堆内存大小的方式是使用环境变量或更改 `jvm.options` 文件。在使用 `JVM_ARGS` 或 `JBP_CONFIG_IBMJDK` 环境变量时，将应用程序推送到 Bluemix 会让所有更改生效。通过更改 `jvm.options` 文件，也可以对堆大小配置的影响进行本地测试。
+设置堆内存大小的方式是使用环境变量或更改 `jvm.options` 文件。在使用 `JVM_ARGS` 或 `JBP_CONFIG_IBMJDK` 环境变量时，将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 会让所有更改生效。通过更改 `jvm.options` 文件，也可以对堆大小配置的影响进行本地测试。
 
 * 使用 `JVM_ARGS` 环境变量和 -Xmx 自变量。例如，要将最大堆大小设置为 512M，请使用以下命令，然后重新编译打包应用程序。
 

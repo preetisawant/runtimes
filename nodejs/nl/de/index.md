@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-18"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -29,11 +29,11 @@ var port = (process.env.PORT || 3000);
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Node.js-Starteranwendung bereit.  Die Node.js-Starteranwendung ist eine einfache Node.js-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der Bluemix-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Node.js-Starteranwendung bereit.  Die Node.js-Starteranwendung ist eine einfache Node.js-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung der Starteranwendung [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
 
 ## App-Management
 {: #app_management}
-{{site.data.keyword.Bluemix}} stellt eine Anzahl Dienstprogramme für das Management und das Debugging Ihrer Node.js-App zur Verfügung.  Vollständige Details finden Sie in [App-Management](/docs/manageapps/app_mng.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Anzahl Dienstprogramme für das Management und das Debugging Ihrer Node.js-App zur Verfügung.  Vollständige Details finden Sie in [App-Management](/docs/manageapps/app_mng.html).
 
 # Zugehörige Links
 {: #rellinks notoc}

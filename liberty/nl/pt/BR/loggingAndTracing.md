@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-31"
 ## Arquivos de log
 {: #log_files}
 
-Os logs padrão do Liberty, como `messages.log` ou o diretório `ffdc`, estão disponíveis no IBM Bluemix no diretório `logs` de cada instância do aplicativo. Esses logs podem ser acessados por meio do console do IBM Bluemix ou usando o CF CLI. Por exemplo:
+Os logs padrão do Liberty, tais como `messages.log` ou o diretório `ffdc`, estão disponíveis no {{site.data.keyword.Bluemix}} no diretório `logs` de cada instância do aplicativo. Esses logs podem ser acessados do console do {{site.data.keyword.Bluemix_notm}} ou por meio da CLI do Cloud Foundry. Por exemplo:
 
 * Para acessar os logs recentes de um app, execute o comando a seguir:
 
@@ -39,13 +39,13 @@ Os logs padrão do Liberty, como `messages.log` ou o diretório `ffdc`, estão d
   ```
   {: codeblock}
 
-O nível de
-log e outras opções de rastreio podem ser configurados por meio do arquivo de configuração do Liberty. Para obter mais informações, consulte [Perfil do Liberty: rastreio e criação de log](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). O rastreio também pode ser ajustado em uma instância do aplicativo em execução usando o console do IBM Bluemix.
+O nível de log e outras opções de rastreio podem ser configurados por meio do arquivo de configuração do Liberty. Para obter mais informações, consulte [Resolução de problemas do Liberty: criação de log e rastreio](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). O rastreio também pode ser ajustado em uma instância do aplicativo em execução usando o console do {{site.data.keyword.Bluemix_notm}}.
 
 ## Usando os recursos de rastreio e de dump
 {: #using_trace_and_dump}
 
-A configuração de rastreio do Liberty pode ser ajustada para um aplicativo em execução diretamente do console do IBM Bluemix. O console também fornece capacidade para solicitar e fazer download de dumps de encadeamento e de heap. Para ajustar a configuração de rastreio ou solicitar um dump, selecione um aplicativo Liberty no console do Bluemix e escolha o menu `Tempo de execução` na navegação. Na visualização `Tempo de execução`, selecione uma instância e pressione o botão *RASTREIO* ou *DUMP*. Se estiver ajustando o nível de rastreio, veja [Perfil do Liberty: rastreio e criação de log](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) para obter os detalhes da sintaxe da especificação de rastreio.
+A configuração de rastreio do Liberty pode ser ajustada para um aplicativo em execução diretamente do console do {{site.data.keyword.Bluemix_notm}}. O console também fornece capacidade para solicitar e fazer download de dumps de encadeamento e de heap. Para ajustar a configuração de rastreio ou solicitar um dump, selecione um aplicativo Liberty no console do {{site.data.keyword.Bluemix_notm}} e escolha o menu `Runtime` na navegação. Na visualização `Tempo de execução`, selecione uma instância e pressione o botão *RASTREIO* ou *DUMP*. 
+Se estiver ajustando o nível de rastreio, consulte [Resolução de problemas do Liberty: criação de log e rastreio](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) para os detalhes da sintaxe da especificação de rastreio.
 
 ### Mudando a configuração de rastreio por meio de SSH no Diego
 
@@ -53,9 +53,9 @@ Para um aplicativo Liberty em execução em uma célula do Diego, é possível m
 
 O aplicativo enviado por push deve incluir um server.xml que contenha **updateTrigger** com o valor **polled**, então as mudanças na especificação de rastreio no server.xml serão detectadas e aplicadas por ambiente de tempo de execução.
 
-Veja [Enviar por push os apps Liberty com o server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) para opções para enviar por push os apps Liberty com um sever.xml customizado
+Consulte [Enviar por push aplicativos Liberty com server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) para opções para enviar por push os aplicativos Liberty com um sever.xml customizado
 
-Veja [Controlando atualizações dinâmicas![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para saber como configurar uma atualização dinâmica no server.xml.
+Consulte [Controlando atualizações dinâmicas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para como configurar atualização dinâmica no server.xml.
 
 Para mudar a configuração de rastreio, siga estas etapas:
 
@@ -75,7 +75,7 @@ $ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 Nota: a mudança do server.xml será perdida em uma remontagem ou reinicialização e será válida somente para a instância na qual você usar ssh.
 
-Veja [Perfil Liberty: rastreio e criação de log ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} para obter os detalhes da sintaxe da especificação de rastreio.
+Consulte [Resolução de problemas do Liberty: criação de log e rastreio](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} para os detalhes da sintaxe da especificação de rastreio.
 
 ### Acionando dumps via SSH no Diego
 
@@ -145,4 +145,4 @@ Também é possível usar `scp` e outras ferramentas semelhantes para visualizar
 ## geral
 {: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

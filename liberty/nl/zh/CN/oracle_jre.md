@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-05-31"
 # 使用 Oracle JRE
 {: #using_oraacle_jre}
 
-您可以选择使用 Oracle JRE 在 Bluemix 上运行 Liberty 应用程序。为此，必须执行以下操作：
+您可以选择使用 Oracle JRE 在 Bluemix 上运行 {{site.data.keyword.Bluemix}} 应用程序。为此，必须执行以下操作：
 * 在 buildpack 可以下载该 JRE 的位置托管该 JRE。
 * 托管一个 `index.yml` 文件，该文件用于提供主机 JRE 的位置。
 * 配置应用程序，以使用该 JRE。
@@ -20,7 +20,7 @@ lastupdated: "2017-05-31"
 ## 托管 JRE 和 index.yml
 {: #hosting_jre}
 
-Oracle JRE 文件必须在 Web 服务器上进行托管，并且 Liberty buildpack 必须能够从该服务器下载该文件。可以使用任一可用的服务器工具在 Bluemix 本身上托管该 jar 文件，也可以在某些公共可用的位置进行托管。该服务器必须配置有一个 `index.yml` 文件，该文件用于指定有关 JRE 文件的详细信息。要托管 JRE 和 `index.yml` 文件，请完成以下步骤：
+Oracle JRE 文件必须在 Web 服务器上进行托管，并且 Liberty buildpack 必须能够从该服务器下载该文件。可以使用任一可用的服务器工具在 {{site.data.keyword.Bluemix_notm}} 本身上托管该 jar 文件，也可以在某些公共可用的位置进行托管。该服务器必须配置有一个 `index.yml` 文件，该文件用于指定有关 JRE 文件的详细信息。要托管 JRE 和 `index.yml` 文件，请完成以下步骤：
   1. 获取 Oracle JRE。请注意，JRE 必须是能够在 Unix 64 位操作系统上使用的版本，并且必须是 `tar.gz` 文件。
   2. 在 Liberty buildpack 可以下载该 JRE 文件的位置中托管该文件。
   3. 确保在托管位置提供 `index.yml` 文件。`index.yml` 文件中必须包含由以下各项组成的一个条目：Oracle JRE 的版本标识，后跟一个冒号和该 JRE 文件所在位置的完整 URL。`index.yml` 的格式如下所示：
@@ -77,4 +77,4 @@ Oracle JRE 文件必须在 Web 服务器上进行托管，并且 Liberty buildpa
 ## 常规
 {: #general notoc}
 * [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 概要文件概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

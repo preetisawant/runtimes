@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-06-10"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-06-10"
 # Valores predeterminados de paquete de compilación
 {: #buildpack_defauts}
 
-El paquete de compilación Liberty se actualiza con frecuencia en Bluemix. Cada release podría incluir arreglos de seguridad o mejoras de características.
+El paquete de compilación Liberty se actualiza con frecuencia en {{site.data.keyword.Bluemix}}. Cada release podría incluir arreglos de seguridad o mejoras de características.
 
 El paquete de compilación tiene valores predeterminados para el establecimiento de valores,
 como la versión de Java o el conjunto de características de Liberty para aplicaciones WAR o EAR. Algunos de los valores predeterminados podrían cambiar entre releases del paquete de compilación,
@@ -71,4 +71,4 @@ Para asegurarse de que la aplicación no se vea afectada por el cambio de versi�
 ## general
 {: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visión general del perfil de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

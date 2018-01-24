@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -32,7 +32,7 @@ Liberty 애플리케이션 시작에 실패하고 “연결 수락에 실패함�
 ```
 {: #codeblock}
 
-Bluemix는 애플리케이션이 정상적으로 시작되었는지 확인하기 위해 애플리케이션에 대한 상태 검사를 수행합니다. 상태 검사에서는 애플리케이션이 애플리케이션에 지정된 포트에서 청취 중인지 여부를 테스트합니다. 이 검사의 기본 제한시간은 60초이며 일부 애플리케이션은 시작하는 데 60초 넘게 걸릴 수 있습니다. 애플리케이션을 시작하는 데 오래 걸리는 이유는 여러 가지가 있습니다. 예를 들어, [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) 또는 [New Relic](/docs/runtimes/liberty/newRelic.html)과 같은 서비스를 바인딩하거나 [디버거를 사용](/docs/manageapps/app_mng.html#debug)하는 경우 시작 시간이 늘어납니다. 또한 애플리케이션에서 완료하는 데 시간이 오래 걸리는 초기화 단계를 수행할 수도 있습니다.
+{{site.data.keyword.Bluemix_notm}}에서는 애플리케이션이 정상적으로 시작되었는지 확인하기 위해 애플리케이션에 대한 상태 검사를 수행합니다. 상태 검사에서는 애플리케이션이 애플리케이션에 지정된 포트에서 청취 중인지 여부를 테스트합니다. 이 검사의 기본 제한시간은 60초이며 일부 애플리케이션은 시작하는 데 60초 넘게 걸릴 수 있습니다.  애플리케이션을 시작하는 데 오래 걸리는 이유는 여러 가지가 있습니다. 예를 들어, [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) 또는 [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)과 같은 서비스를 바인딩하거나 [디버거를 사용](/docs/manageapps/app_mng.html#debug)하는 경우 시작 시간이 늘어납니다. 또한 애플리케이션에서 완료하는 데 시간이 오래 걸리는 초기화 단계를 수행할 수도 있습니다.
 {: tsCauses}
 
 먼저 로그를 조사하여 Liberty 애플리케이션 실패를 일으킨 명백한 오류가 있는지 확인하십시오. 명백한 오류를 찾을 수 없는 경우에는 다음을 시도하십시오.
@@ -54,7 +54,7 @@ Bluemix는 애플리케이션이 정상적으로 시작되었는지 확인하기
 
 ### **appstate 기능을 사용 안함으로 설정하십시오. **
 
-appstate 기능은 Bluemix 상태 검사 프로세스와 통합되어 Liberty 애플리케이션이 완전히 초기화되어야 HTTP 요청을 수신할 수 있도록 합니다. 애플리케이션이 완전히 초기화되면 appstate 기능이 적용되지 않습니다. 이 기능에는 일부 애플리케이션을 시작하는 데 시간이 오래 걸린다는 부작용이 있습니다. appstate 기능을 사용 안함으로 설정하려면 애플리케이션에서 다음 환경 특성을 설정하고 애플리케이션을 다시 스테이징하십시오. 
+appstate 기능은 {{site.data.keyword.Bluemix_notm}} 상태 검사 프로세스와 통합되어 Liberty 애플리케이션이 완전히 초기화되어야 HTTP 요청을 수신할 수 있도록 합니다. 애플리케이션이 완전히 초기화되면 appstate 기능이 적용되지 않습니다.  이 기능에는 일부 애플리케이션을 시작하는 데 시간이 오래 걸린다는 부작용이 있습니다. appstate 기능을 사용 안함으로 설정하려면 애플리케이션에서 다음 환경 특성을 설정하고 애플리케이션을 다시 스테이징하십시오.
 
 ```
 $ cf set-env myApp JBP_CONFIG_LIBERTY “app_state: false”
@@ -63,7 +63,7 @@ $ cf set-env myApp JBP_CONFIG_LIBERTY “app_state: false”
 
 ### **애플리케이션을 리팩토링하십시오. **
 
-애플리케이션을 초기화하는 데 시간이 오래 걸리는 경우 애플리케이션을 리팩토링하여 지연 및/또는 비동기 초기화를 수행해야 합니다. 
+애플리케이션을 초기화하는 데 시간이 오래 걸리는 경우 애플리케이션을 리팩토링하여 지연 및/또는 비동기 초기화를 수행해야 합니다.
 
 ### **“no-route” 옵션을 지정하여 배치하십시오.**
 
@@ -95,12 +95,12 @@ $ cf set-env myApp JBP_CONFIG_LIBERTY “app_state: false”
 Monitoring & Analytics 서비스가 Liberty 애플리케이션에 바인드되고 Liberty 애플리케이션이 Liberty ssl-1.0 기능을 구성하는 server.xml을 포함하는 패키지된 서버 또는 서버 디렉토리로 배치된 경우 오류가 생성될 수 있습니다. Monitoring & Analytics 서비스를 Liberty 애플리케이션에 바인드하면 런타임이 보안 연결을 통해 서비스에 연결합니다. 해당 보안 연결은 기본 SSL 설정을 사용해 설정됩니다. 기본 SSL 설정은 Liberty의 server.xml에서 지정되므로 구성된 신뢰 저장소에서 Monitoring & Analytics 서비스에 사용되는 인증서를 신뢰하지 않을 수 있습니다.
 {: tsCauses}
 
-다음 옵션 중 하나를 지정하여 JVM의 신뢰 저장소를 사용하도록 구성을 수정하십시오. 변경 후 애플리케이션을 다시 스테이징해야 합니다.
+다음 옵션 중 하나를 지정하여 JVM의 신뢰 저장소를 사용하도록 구성을 수정하십시오.  변경 후 애플리케이션을 다시 스테이징해야 합니다.
 {: tsResolve}
 
 ### Liberty의 server.xml 업데이트
 
-JVM의 cacerts 파일을 신뢰 저장소로 사용하도록 server.xml을 업데이트하십시오. 다음을 server.xml에 추가하십시오. 
+JVM의 cacerts 파일을 신뢰 저장소로 사용하도록 server.xml을 업데이트하십시오. 다음을 server.xml에 추가하십시오.
 
         <ssl id="defaultSSLConfig" trustStoreRef="defaultTrustStore"/>
         <keyStore id="defaultTrustStoretore" location="${java.home}/lib/security/cacerts"/>

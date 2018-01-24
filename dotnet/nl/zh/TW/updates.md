@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-25"
-
+lastupdated: "2017-10-06"
 ---
 
 {:new_window: target="_blank"}
@@ -14,6 +13,18 @@ lastupdated: "2017-07-25"
 
 
 aspnet 建置套件中的最新更新項目清單。
+
+## 2017 年 10 月 6 日：已更新 ASP.NET Core 建置套件 v1.0.26-20170913-1346
+* 新增 .NET Core 運行環境 2.0.0 支援
+* 新增 .NET Core SDK 1.1.0 支援
+* 新增 .NET Core SDK 2.0.0 支援
+* 移除 .NET Core SDK 1.1.0-preview1-005051 支援
+* 移除 .NET Core SDK 2.0.0-preview1-005977 支援
+* 移除 .NET Core 運行環境 1.0.3 支援
+* 移除 .NET Core 運行環境 1.1.0 支援
+* 將 Node 版本更新為 6.11.2
+* 將預設 .NET Core SDK 變更為 2.0.0
+* 將預設 .NET Core SDK for F# 專案變更為 1.1.0
 
 ## 2017 年 7 月 24 日：已更新 ASP.NET Core 建置套件 v1.0.22-20170724-0813
 

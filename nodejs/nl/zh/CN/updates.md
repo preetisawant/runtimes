@@ -2,22 +2,31 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-31"
+lastupdated: "2017-12-12"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# SDK for Nodejs buildpack 的最新更新
+# SDK for Node.js buildpack 的最新更新
 {: #latest_updates}
 
 sdk-for-nodejs buildpack 中最新更新的列表。
 
+## 2017 年 12 月 11 日：更新了 Node.js buildpack V3.16
+SDK for Node.js buildpack V3.16 提供了 IBM SDK for Node.js V4.8.4、V4.8.5、V6.11.4、V6.12.0、V8.6.0 和 V8.9.0。缺省值是最新的 6.x，所以目前是 6.12.0。请注意，其修订了如下 PSIRT：建议标识：10237，产品记录标识：104487，标题：Node.js zlib DOS 安全漏洞，2017 年 10 月 (CVE-2017-14919)。建议升级至 V3.16，以获取影响 8.6.0.0 及更早版本（6.10.2.0 到 6.11.4.0，以及 4.8.2.0 到 4.8.4.0）性能的安全漏洞修订。
+
+## 2017 年 11 月 1 日：更新了 Node.js buildpack V3.15
+SDK for Node.js buildpack V3.15 提供了 IBM SDK for Node.js V4.8.3、4.8.4、6.11.3、6.11.4、8.3.0 和 8.6.0。缺省值是最新的 6.x，所以目前是 6.11.4。
+
+## 2017 年 9 月 20 日：更新了 Node.js buildpack V3.14
+SDK for Node.js buildpack V3.14 提供了 IBM SDK for Node.js V4.8.3、4.8.4、6.11.2、6.11.3、8.1.4 和 8.3.0。缺省值是最新的 6.x，所以目前是 6.11.3。本发行版已修复导致 Node.js 应用程序无法[正常关闭](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown)的 buildpack 错误。
+
 ## 2017 年 7 月 26 日：更新了 Node.js buildpack V3.13
 SDK for Node.js buildpack V3.13 提供了 IBM SDK for Node.js V4.8.3、4.8.4、6.11.0、6.11.1、8.1.2、8.1.4。缺省值是最新的 6.x，所以目前是 6.11.1。请注意，V8 可用于测试，但不建议用于生产。  
 
-此 buildpack 中包含更新的 Node.js 版本，这些版本解决了近期在 Node.js 中发现的安全漏洞。请更新应用程序以使用最新可用版本，然后在 Bluemix 中重新编译打包应用程序。请参阅<a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">此链接</a>以了解有关 Node.js 漏洞的详细信息。
+此 buildpack 中包含更新的 Node.js 版本，这些版本解决了近期在 Node.js 中发现的安全漏洞。用户应更新其应用程序以使用最新可用版本，然后在 {{site.data.keyword.Bluemix_notm}} 中重新编译打包应用程序。请参阅<a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">此链接</a>以了解有关 Node.js 漏洞的详细信息。
 
 ## 2017 年 5 月 5 日：更新了 Node.js buildpack V3.12
 SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18、4.8.0、4.8.2、6.10.0、6.10.2。缺省值最新的 4.x 现在已经更改为最新的 6.x，所以目前是 6.10.2。这是一项主要版本更改，可能会影响依赖该缺省值的应用程序。请参阅 [Node.js 版本长期支持和 SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) 以了解有关如何避免问题的更多信息。
@@ -51,7 +60,7 @@ SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18
 
 此发行版包含错误修订，包括 [Cloud Foundry Node.js buildpack 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18) 中的那些错误修订。
 
-该发行版不再支持 strongpm 应用程序管理处理程序，如 [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/) 中所声明。
+该发行版不再支持 strongpm 应用程序管理处理程序，如 [{{site.data.keyword.Bluemix_notm}} Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/) 中所声明。
 
 请注意，使用 Node.js 6.x 和[开发方式](/docs/manageapps/app_mng.html#devmode)时存在一个已知问题。要解决该问题，您将需要在启用“开发方式”之后重新编译打包应用程序，然后才能开始使用。
 
@@ -67,7 +76,7 @@ SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18
 
 此 buildpack 发行版添加了 IBM SDK for Node.js 运行时 V4.4.5 和 6.2.0。缺省版本变为 4.4.5。
 
-该发行版不再支持较旧版本的运行时，如 [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/) 中所声明。该 buildpack 现在支持 0.10.44、0.10.45、0.12.13、0.12.14、4.4.4、4.4.5、6.1.0 和 6.2.0。
+该发行版不再支持较旧版本的运行时，如 [{{site.data.keyword.Bluemix_notm}} Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/) 中所声明。该 buildpack 现在支持 0.10.44、0.10.45、0.12.13、0.12.14、4.4.4、4.4.5、6.1.0 和 6.2.0。
 
 此发行版包含 [Cloud Foundry’s Node.js buildpack 1.5.14](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.14) 中的错误修订。
 
@@ -110,7 +119,7 @@ SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18
 
 * Buildpack 更新
 
-  * Node.js V4.2.4 (IBM SDK for Node.js V4) 现在替代 V0.12.9 成为 Bluemix 上的缺省运行时。如果没有为应用程序指定特定版本，那么此更改可能会导致应用程序行为不同。要了解如何为 Bluemix 应用程序指定 Node.js 版本，请参阅 [Node.js 运行时](index.html)文档。
+  * Node.js V4.2.4 (IBM SDK for Node.js V4) 现在替代 V0.12.9 成为 {{site.data.keyword.Bluemix_notm}} 上的缺省运行时。如果没有为应用程序指定特定版本，那么此更改可能会导致应用程序行为不同。要了解如何为 {{site.data.keyword.Bluemix_notm}} 应用程序指定 Node.js 版本，请参阅 [Node.js 运行时](index.html)文档。
 
   * 现在，缺省情况下，NODE_ENV 设置为 *production*。此更改将造成某些节点依赖项的行为不同。例如，对于发生故障的端点，Express 框架不会再在 Web 浏览器中返回堆栈跟踪，而是改为显示*内部服务器错误*。当 NPM_CONFIG_PRODUCTION 设置为 *true* 时，只有在 npm 安装阶段，NPM 会将子 shell 脚本的 NODE_ENV 设置为 *production*。此功能使用户可以将应用程序运行时的 NODE_ENV 设置为其他值，例如 *development*。为了清晰明确，npm 脚本将看到消息 **NODE_ENV=production**。
 
@@ -128,7 +137,7 @@ SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18
 
   * 检测脚本已使用 buildpack 版本信息进行更新。
 
-  * 除去了社区初始引入的集群建议 (WEB_CONCURRENCY)，因为在 Bluemix 上无法准确地确定内存。
+  * 除去了社区初始引入的集群建议 (WEB_CONCURRENCY)，因为在 {{site.data.keyword.Bluemix_notm}} 上无法准确地确定内存。
 
 
 ## 2015 年 12 月 16 日：更新了 Node.js buildpack V2.8-20151209-1403 和 V3.0beta-20151211-2041
@@ -138,7 +147,7 @@ SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18
 针对 Monitoring and Analytics 服务的错误修订
 包含 IBM SDK for Node.js V4.2.3.0、V4.2.2.0、V1.2.0.8 和 V1.2.0.7（分别基于社区 Node.js V4.2.3、V4.2.2、V0.12.9 和 V0.12.8）的高速缓存运行时。此外，在 V3.0beta 中，缺省 Node.js 运行时更改为 V4.2.3。
 
-现在，IBM Node.js buildpack V3.0beta 在 Bluemix 上作为非缺省 buildpack 发布，而 Node.js V4.2.3 作为缺省运行时。要确保应用程序和服务继续在 Bluemix 上工作，请使用 beta 版本的 buildpack 推送应用程序。30 天或更长时间后，V3 将成为缺省 buildpack。
+现在，IBM Node.js buildpack V3.0beta 在 {{site.data.keyword.Bluemix_notm}} 上作为非缺省 buildpack 发布，而 Node.js V4.2.3 作为缺省运行时。要确保应用程序和服务继续在 {{site.data.keyword.Bluemix_notm}} 上工作，请使用 Beta 版本的 buildpack 推送应用程序。30 天或更长时间后，V3 将成为缺省 buildpack。
 
 要使用 V3.0beta 推送应用程序：
 
@@ -171,12 +180,12 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 
 ## 2015 年 10 月 15 日：更新了 Node.js buildpack V2.6-20151006-1309
 
-此发行版的 Node.js buildpack 的特点是将 [StrongLoop Process Manager ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://strong-pm.io) 集成到“应用程序管理”功能部件中。有关更多信息，请参阅博客帖子 [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/)。
+此发行版的 Node.js buildpack 的特点是将 [StrongLoop Process Manager ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://strong-pm.io) 集成到“应用程序管理”功能部件中。有关更多信息，请参阅博客帖子 [StrongLoop DevOps for Node.js Applications on {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/)。
 
 ## 2015 年 6 月 15 日：更新了 Node.js buildpack V2.0-20150608-1503
 
 在此发行版中，我们已将 Node.js buildpack 与最新的 [CF 社区 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 同步，这带来大量来自该社区的新功能。
-此外，我们改进了 Node.js buildpack 中的“应用程序管理”功能，该功能启用 shell、node-inspector、Bluemix Live Sync 等实用程序。请参阅[应用程序管理](/docs/manageapps/app_mng.html)，以获取详细信息。
+此外，我们改进了 Node.js buildpack 中的“应用程序管理”功能，该功能启用 shell、node-inspector、{{site.data.keyword.Bluemix_notm}} Live Sync 等实用程序。请参阅[应用程序管理](/docs/manageapps/app_mng.html)，以获取详细信息。
 
 ## 2015 年 5 月 5 日：更新了 Node.js buildpack V1.17-20150429-1033
 
@@ -191,7 +200,7 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 {: codeblock}
 
 * V0.12.1 的已知问题：
-   * 使用 Bluemix Live Sync 提供的“调试工具”功能时，“暂挂”功能会中断。
+   * 使用 {{site.data.keyword.Bluemix_notm}} Live Sync 提供的“调试工具”功能时，“暂挂”功能会中断。
    * V0.12.x 上不支持用于 MQ Light 服务的 mqlight 模块
 
 * 解决了各种安全漏洞：
@@ -200,9 +209,9 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 
 ##  2015 年 4 月 2 日：更新了 Node.js buildpack V1.15-20150331-2231
 
-* 该 Node.js buildpack 现在包含三个新功能，可帮助您在 Bluemix 上快速进行开发，就像在桌面上操作一样，而无需重新部署
+* 该 Node.js buildpack 现在包含三个新功能，可帮助您在 {{site.data.keyword.Bluemix_notm}} 上快速进行开发，就像在桌面上操作一样，而无需重新部署
   * 桌面同步：将任何 (Windows) 桌面树同步到基于云的项目工作空间
-  * 实时编辑：使您可以对在 Bluemix 中运行的 Node.js 应用程序执行更改，并立即在浏览器中对更改进行测试。
+  * 实时编辑：使您可以对在 {{site.data.keyword.Bluemix_notm}} 中运行的 Node.js 应用程序执行更改，并立即在浏览器中对更改进行测试。
   * 调试：在环境中执行 Shell 并进行调试！您可以使用 Node Inspector 调试器来动态编辑代码、插入断点、单步执行代码、重新启动运行时等
   * 请参阅[应用程序管理](/docs/manageapps/app_mng.html#Utilities)，以获取更多信息。
 * 我们已从 [Cloud Foundry 的 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 中拉入最新的更改。此更改带来该社区进行的大量错误修订和改进。
@@ -210,7 +219,7 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 
 ## 2015 年 1 月 5 日：更新了 Node.js buildpack V1.9.1-20141208-1221
 
-* 该 Node.js buildpack 现在包含动态日志设置支持。通过此支持，如果开发者的应用程序是使用 log4js、bunyan 或 ibmbluemix 模块进行日志记录，那么开发者可以动态更改其应用程序的日志级别。
+* 该 Node.js buildpack 现在包含动态日志设置支持。通过此支持，如果开发者的应用程序是使用 log4js、bunyan 或 ibm {{site.data.keyword.Bluemix_notm}} 模块进行日志记录，那么开发者可以动态更改其应用程序的日志级别。
 * 该 Node.js buildpack 现在随 [IBM SDK for Node.js V0.10.33](https://developer.ibm.com/node/sdk/) 一起提供。此更新包含对 POODLE 问题的修订。
 
 ## 2014 年 10 月 23 日：更新了 Node.js buildpack V1.6-20141013-1736

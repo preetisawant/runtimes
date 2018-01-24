@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -15,12 +15,13 @@ lastupdated: "2017-04-11"
 {: #offline_mode}
 
 Quand une application node.js est envoyée par push vers {{site.data.keyword.Bluemix}}, le kit SDK pour le pack de construction Node.js télécharge des artefacts depuis des ressources externes (modules de noeuds depuis NPM, par exemple).  Dans certaines
-situations, comme avec [Bluemix dédié](/docs/dedicated/index.html#dedicated) et
-[Bluemix local](/docs/local/index.html#local), vous pouvez vouloir ne pas accéder à des sites externes à Bluemix, ou préférer avoir un contrôle plus explicite sur ces derniers.  
+situations, comme avec [site.data.keyword.Bluemix_dedicated_notm](/docs/dedicated/index.html#dedicated) et
+[Bluemix_local_notm](/docs/local/index.html#local), vous pouvez vouloir ne pas accéder à des sites externes à {{site.data.keyword.Bluemix_notm}}, ou préférer avoir un contrôle plus explicite sur ces derniers.  
 {: shortdesc}
 
-Les sites externes accessibles au pack de construction node.js sont répertoriés ci-dessous.  Dans les environnements [Bluemix dédié](/docs/dedicated/index.html#dedicated) et
-[Bluemix local](/docs/local/index.html#local), ces sites peuvent avoir besoin d'être mis en *liste blanche*.
+Les sites externes accessibles au pack de construction node.js sont répertoriés ci-dessous.  Dans les environnements
+[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) {{site.data.keyword.Bluemix_notm}}, ces sites peuvent avoir besoin d'être mis en *liste blanche*.
 
 * http://nodejs.org/ peut être utilisé pour déterminer les versions du moteur de noeud disponibles.
 * https://s3pository.heroku.com sert à extraire les versions du moteur de noeud non incluses dans le pack de construction.
@@ -49,6 +50,6 @@ Dès que vous effectuez un changement dans les dépendances du fichier *package.
 ## Utilisation d'un proxy
 {: #working_with_proxy}
 
-Dans certains environnements, comme [Bluemix dédié](/docs/dedicated/index.html#dedicated) et
-[Bluemix local](/docs/local/index.html#local), un proxy peut être configuré. Voir
+Dans certains environnements, comme [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), un proxy peut être configuré. Voir
 [Utilisation d'un proxy](/docs/manageapps/workingWithProxy.html) pour plus de détails.

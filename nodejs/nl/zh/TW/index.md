@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-18"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -29,11 +29,11 @@ var port = (process.env.PORT || 3000);
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 Node.js 入門範本應用程式。Node.js 入門範本應用程式是簡單的 Node.js 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供 Node.js 入門範本應用程式。Node.js 入門範本應用程式是簡單的 Node.js 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
 
 ## 應用程式管理
 {: #app_management}
-{{site.data.keyword.Bluemix}} 提供若干公用程式來管理 Node.js 應用程式及進行除錯。如需完整的詳細資料，請參閱[應用程式管理](/docs/manageapps/app_mng.html)。
+{{site.data.keyword.Bluemix_notm}} 提供若干公用程式來管理 Node.js 應用程式及進行除錯。如需完整的詳細資料，請參閱[應用程式管理](/docs/manageapps/app_mng.html)。
 
 # 相關鏈結
 {: #rellinks notoc}

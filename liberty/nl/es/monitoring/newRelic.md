@@ -2,20 +2,20 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Utilizar New Relic para supervisar Liberty en Bluemix
+# Utilice New Relic para supervisar Liberty en {{site.data.keyword.cloud_notm}}
 {: #new_relic}
 
 New Relic es un servicio de otro proveedor que proporciona métricas de supervisión de la aplicación. Para obtener más información sobre lo que ofrece el servicio New Relic, consulte [New
 Relic](http://newrelic.com/java).
 
-Según la [documentación sobre instalación manual del agente Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), las aplicaciones Java que vaya a supervisar el servicio New Relic deben estar empaquetadas y configuradas con un agente New Relic y una clave de licencia de la cuenta. En el entorno de IBM Bluemix, se puede obtener una cuenta y un acuerdo de licencia de New Relic creando una instancia de servicio en IBM Bluemix. Las aplicaciones Java se pueden enlazar a la instancia
+Según la [documentación sobre instalación manual del agente Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), las aplicaciones Java que vaya a supervisar el servicio New Relic deben estar empaquetadas y configuradas con un agente New Relic y una clave de licencia de la cuenta. En el entorno de {{site.data.keyword.Bluemix}}, se puede obtener una cuenta y un acuerdo de licencia de New Relic creando una instancia de servicio en {{site.data.keyword.Bluemix_notm}}. Las aplicaciones Java se pueden enlazar a la instancia
 de servicio de New Relic y el paquete de compilación de Liberty configura la de forma automática la aplicación que está lista para que la supervise el servicio
 New Relic.
 En concreto, el paquete de compilación:
@@ -39,15 +39,15 @@ Liberty para la aplicación:
 ## Añada un servicio New Relic
 {: #add_new_relic}
 
-En el caso de una aplicación Java existente que se vaya a supervisar con New Relic en IBM Bluemix, siga estos pasos:
-1. Cree una instancia de servicio New Relic en IBM Bluemix.
+Para una aplicación Java existente que se vaya a supervisar con New Relic en {{site.data.keyword.Bluemix_notm}}, siga los pasos siguientes.
+1. Cree una instancia de servicio de New Relic en {{site.data.keyword.Bluemix_notm}}.
 
   <pre>
     $ cf create-service newrelic standard mynewrelic
   </pre>
   {: codeblock}
 
-2. Despliegue la aplicación en IBM Bluemix con el servicio New Relic.  Consulte el siguiente manifiesto de aplicación de ejemplo:
+2. Despliegue la aplicación en {{site.data.keyword.Bluemix_notm}} con el servicio de New Relic. Consulte el siguiente manifiesto de aplicación de ejemplo:
 
   <pre>
         &dash;&dash;&dash;
@@ -63,7 +63,7 @@ En el caso de una aplicación Java existente que se vaya a supervisar con New Re
   </pre>
   {: codeblock}
 
-3. Acceda al panel de control de New Relic correspondiente a la aplicación directamente desde el panel de control de IBM Bluemix de la aplicación.
+3. Acceda al panel de control de New Relic correspondiente a la aplicación directamente desde el panel de control de {{site.data.keyword.Bluemix_notm}} de la aplicación.
 
 ### Añada un servicio New Relic proporcionado por el usuario
 {: #add_user_provided_new_relic}
@@ -78,7 +78,7 @@ New Relic existente a la aplicación mediante un "servicio proporcionado por el 
   ```
   {: codeblock}
 
-2. Despliegue la aplicación en IBM Bluemix con la instancia de servicio New Relic proporcionada por el usuario.  A continuación encontrará un manifiesto de ejemplo que utiliza una instancia de servicio New Relic proporcionada por el usuario:
+2. Despliegue la aplicación en {{site.data.keyword.Bluemix_notm}} con la instancia de servicio New Relic proporcionada por el usuario. A continuación encontrará un manifiesto de ejemplo que utiliza una instancia de servicio New Relic proporcionada por el usuario:
   <pre>
         &dash;&dash;&dash;
         applications:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,9 +14,9 @@ lastupdated: "2017-03-23"
 # Utilizar el modo fuera de línea para Liberty
 {: #offline_mode}
 
-Cuando se envía por push una aplicación Liberty a {{site.data.keyword.Bluemix}}, el paquete de compilación de Liberty puede acceder a sitios externos a Bluemix
-para adquirir artefactos que necesita la aplicación.  A continuación se muestran los sitios externos a los que puede acceder el paquete de compilación de Liberty.  En los entornos [Bluemix dedicado](/docs/dedicated/index.html#dedicated) y
-[Bluemix local](/docs/local/index.html#local), es posible que estos sitios necesiten incluirse en una *lista blanca*.
+Cuando una aplicación de Liberty se envía por push a {{site.data.keyword.Bluemix}}, el paquete de compilación de Liberty puede acceder a sitios externos a {{site.data.keyword.Bluemix_notm}} para adquirir artefactos que la aplicación necesita.
+A continuación se muestran los sitios externos a los que puede acceder el paquete de compilación de Liberty.  En entornos [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) y
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) es posible que los sitios necesiten incluirse en una *lista blanca*.
 
 * https://download.run.pivotal.io y https://java-buildpack.cloudfoundry.org se utilizan para acceder a componentes para:
   * [Agente AppDynamics ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.appdynamics.com/)
@@ -31,8 +31,8 @@ para adquirir artefactos que necesita la aplicación.  A continuación se muestr
 ## Cómo trabajar con un proxy
 {: #working_with_proxy}
 
-En algunos entornos como por ejemplo [Bluemix dedicado](/docs/dedicated/index.html#dedicated) y
-[Bluemix local](/docs/local/index.html#local), se puede configurar un proxy. Consulte [Cómo trabajar con un proxy](/docs/manageapps/workingWithProxy.html) para obtener más detalles.
+En algunos entornos, como [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) y
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) se puede configurar un proxy. Consulte [Cómo trabajar con un proxy](/docs/manageapps/workingWithProxy.html) para obtener más detalles.
 
 # rellinks
 {: #rellinks notoc}

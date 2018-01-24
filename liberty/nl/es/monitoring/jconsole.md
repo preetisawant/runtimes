@@ -2,17 +2,17 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Utilizar JConsole para supervisar Liberty en Bluemix
+# Utilice JConsole para supervisar Liberty en {{site.data.keyword.cloud_notm}}
 {: #jconsole}
 
-## A continuación se muestran los pasos para supervisar el tiempo de ejecución de Bluemix Liberty con JConsole:
+## Supervise el tiempo de ejecución de Liberty con JConsole:
 {: #steps_to_monitor}
 
 1. Envíe la app dentro de un paquete de servidor que contenga un archivo server.xml adecuado.

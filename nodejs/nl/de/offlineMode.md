@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-04-11"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,12 +14,13 @@ lastupdated: "2017-04-11"
 # Im Offlinemodus für node.js arbeiten
 {: #offline_mode}
 
-Wenn eine node.js-Anwendung mit einer Push-Operation an {{site.data.keyword.Bluemix}} übertragen wird, lädt das Buildpack SDK for Node.js in der Regel Artefakte von externen Ressourcen herunter, wie z. B. Knotenmodule von NPM.  In einigen Situationen, wie z. B. bei [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) und
-[Bluemix Local](/docs/local/index.html#local) möchten Sie sich ggf. nicht auf externe Sites in Bluemix verlassen
-oder eine explizite Kontrolle haben.  
+Wenn eine node.js-Anwendung mit einer Push-Operation an {{site.data.keyword.Bluemix}} übertragen wird, lädt das Buildpack SDK for Node.js in der Regel Artefakte von externen Ressourcen herunter, wie z. B. Knotenmodule von NPM.  In einigen Situationen, wie z. B. bei [{[site.data.keyword.Bluemix_dedicated_notm](/docs/dedicated/index.html#dedicated) und
+[Bluemix_local_notm](/docs/local/index.html#local) möchten Sie sich ggf. nicht auf externe Sites in {{site.data.keyword.Bluemix_notm}} verlassen
+oder Sie möchten mehr explizite Kontrolle haben.  
 {: shortdesc}
 
-Das node.js-Buildpack kann auf folgende externe Sites zugreifen. In den Bluemix-Umgebungen [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) und [Bluemix Local](/docs/local/index.html#local) müssen diese Sites *in Whitelist aufgeführt* sein.
+Das node.js-Buildpack kann auf folgende externe Sites zugreifen.  In den Umgebungen von [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) {{site.data.keyword.Bluemix_notm}} müssen diese Sites *in Whitelist aufgeführt* sein.
 
 * http://nodejs.org/ kann verwendet werden, um verfügbare Knotenengine-Versionen zu ermitteln.
 * https://s3pository.heroku.com wird verwendet, um Knotenengine-Versionen abzurufen, die im Buildpack nicht enthalten sind.
@@ -48,4 +49,5 @@ Wenn Sie die Abhängigkeiten in der Datei *package.json* ändern, wiederholen Si
 ## Mit einem Proxy arbeiten
 {: #working_with_proxy}
 
-In einigen Umgebungen, wie beispielsweise [Bluemix Dedicated](/docs/dedicated/index.html#dedicated) und [Bluemix Local](/docs/local/index.html#local), kann ein Proxy konfiguriert werden. Weitere Informationen finden Sie unter [Mit einem Proxy arbeiten](/docs/manageapps/workingWithProxy.html).
+In einigen Umgebungen, wie beispielsweise [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) kann ein Proxy konfiguriert werden. Weitere Informationen finden Sie unter [Mit einem Proxy arbeiten](/docs/manageapps/workingWithProxy.html).

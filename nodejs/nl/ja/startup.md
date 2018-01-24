@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-05-30"
 {{site.data.keyword.Bluemix}} Node.js アプリケーションの開始コマンドを指定する方法として推奨されるのは、**Procfile** ファイルまたは **package.json** ファイルのいずれかを使用することです。
 {: shortdesc}
 
-1. 下記の形式で、**Procfile** に開始コマンドを指定します。ここで、_app.js_ は、アプリケーションの開始 js スクリプトです。
+1. 下記の形式で、**Procfile** に開始コマンドを指定します。 ここで、_app.js_ は、アプリケーションの開始 js スクリプトです。
 ```
 web: node app.js
 ```
@@ -25,8 +25,7 @@ web: node app.js
 
 1. **Procfile** をアプリケーションのルート・ディレクトリーに保存します。
 
-**Procfile** がない場合、IBM Bluemix Node.js ビルドパックは **package.json** ファイルの scripts.start 項目を検査します。下の例でも、app.js はアプリケーション用の開始 js スクリプトです。
-
+**Procfile** が存在しない場合、{{site.data.keyword.Bluemix_notm}} Node.js ビルドパックによって、**package.json** ファイルに scripts.start エントリーがあるかどうかが検査されます。下の例でも、app.js はアプリケーション用の開始 js スクリプトです。
 ```
 {
     ...   
@@ -37,8 +36,7 @@ web: node app.js
 ```
 {: codeblock}
 
-開始スクリプト項目が **package.json** にある場合は、**Procfile** が自動的に生成されます。自動生成された **Procfile** の内容は次のようになります。
-
+開始スクリプト項目が **package.json** にある場合は、**Procfile** が自動的に生成されます。 自動生成された **Procfile** の内容は次のようになります。
 ```
     web: npm start
 ```

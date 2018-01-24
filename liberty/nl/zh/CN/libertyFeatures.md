@@ -2,24 +2,24 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Bluemix 中支持的 Liberty 功能
+# {{site.data.keyword.cloud_notm}} 中支持的 Liberty 功能
 {: #liberty_features}
 
-Liberty for Java 即时运行时包含 Liberty 概要文件功能的子集。Liberty 概要文件提供的某些功能在 Liberty for Java 即时运行时中不可用，因为这些功能在云环境中不适用。
+Liberty for Java 即时运行时包含 Liberty 功能的子集。Liberty 提供的某些功能在 Liberty for Java 即时运行时中不可用，因为这些功能在云环境中不适用。
 
-其中包含特定于 Bluemix 的以下功能：
+其中包含特定于 {{site.data.keyword.Bluemix_notm}} 的以下功能：
 * appstate-2.0
 * cloudAutowiring-1.0 
 * logAnalysis-1.0
 
-下表显示了 Bluemix 中支持的 Liberty 功能
+下表显示了 {{site.data.keyword.Bluemix_notm}} 中支持的 Liberty 功能
 
 <table>
 
@@ -211,16 +211,16 @@ Liberty for Java 即时运行时包含 Liberty 概要文件功能的子集。Lib
 Liberty for Java 运行时还提供了某些 Liberty Beta 功能。这些功能未在表中列出，但可在[使用 Beta 功能](/docs/runtimes/liberty/usingBetaFeatures.html)中找到。
 
 请记住，服务器无法装入不兼容的功能，因此请确保将其配置为仅启用兼容的功能。请参阅
-    <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>。
+    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>。
 
 要查看 Liberty 中可用的完整功能列表以及 Java EE 版本和其他信息，请参阅
-IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowledgecenter/SSCKBL_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)。
+IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)。
 
-可以将使用远程 EJB 的应用程序部署到 Bluemix；但是，由于 Bluemix 环境中的端口限制，因此不能通过 CORBA/IIOP 协议来远程访问远程 EJB。
+使用远程 EJB 的应用程序可以部署到 {{site.data.keyword.Bluemix_notm}}，但是，由于 {{site.data.keyword.Bluemix_notm}} 环境中的端口限制，不可通过 CORBA/IIOP 协议来远程访问远程 EJB。
 
 # 相关链接
 {: #rellinks notoc}
 ## 常规
 {: #general notoc}
 * [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 概要文件概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

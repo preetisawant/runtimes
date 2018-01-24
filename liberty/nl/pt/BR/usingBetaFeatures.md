@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,13 +14,14 @@ lastupdated: "2017-05-31"
 
 Os recursos beta do Liberty fornecem um acesso antecipado aos novos
 modelos de programação e de funcionalidade que podem ser incluídos em uma liberação futura
-do Liberty. A maioria dos recursos beta também podem ser usados em aplicativos implementados no Bluemix.
+do Liberty. A maioria dos recursos beta também podem ser usados em aplicativos
+implementados no {{site.data.keyword.Bluemix}}.
 
 **Importante**: os recursos beta são somente para propósitos de teste e desenvolvimento e não podem ser usados em produção. Para obter os termos de
 uso completos, consulte o [
 contrato de licença beta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
 
-Recursos beta do Liberty disponíveis no Bluemix
+Recursos beta do Liberty disponíveis no {{site.data.keyword.Bluemix_notm}}
 <table>
 <tr>
 <th align="left">Recurso</th>
@@ -37,7 +38,7 @@ Recursos beta do Liberty disponíveis no Bluemix
 </tr>
 </table>
 
-Para usar os recursos beta do Liberty no Bluemix, será necessário fazer o seguinte:
+Para usar os recursos beta do Liberty no {{site.data.keyword.Bluemix_notm}} você precisará fazer o seguinte:
 
 1. [Implemente um diretório do servidor ou um servidor em pacote](optionsForPushing.html) com um ou mais recursos beta ativados no arquivo server.xml como no exemplo a seguir:
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-31"
 ## Archivos de registro
 {: #log_files}
 
-Los registros estándares de Liberty, como `messages.log` o el directorio `ffdc`, están disponibles en IBM Bluemix en el directorio `logs` de cada instancia de aplicación. Se puede acceder a estos registros desde la consola de IBM Bluemix o mediante la CLI CF. Por ejemplo:
+Los registros estándares de Liberty, como `messages.log` o el directorio `ffdc`, están disponibles en {{site.data.keyword.Bluemix}} en el directorio `logs` de cada instancia de aplicación. Se puede acceder a estos registros desde la consola de {{site.data.keyword.Bluemix_notm}} o mediante CLI de Cloud Foundry. Por ejemplo:
 
 * Para acceder a registros recientes para una app, ejecute el mandato siguiente:
 
@@ -39,12 +39,12 @@ Los registros estándares de Liberty, como `messages.log` o el directorio `ffdc`
   ```
   {: codeblock}
 
-El nivel de registro y otras opciones de rastreo se pueden establecer mediante el archivo de configuración de Liberty. Para obtener más información, consulte el tema sobre [Perfil de Liberty: rastreo y registro](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). El rastreo también se puede ajustar en una instancia de aplicación en ejecución mediante la consola de IBM Bluemix.
+El nivel de registro y otras opciones de rastreo se pueden establecer mediante el archivo de configuración de Liberty. Para obtener más información, consulte [Resolución de problemas de Liberty: registro y rastreo](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). El rastreo también se puede ajustar en una instancia de aplicación en ejecución utilizando la consola de {{site.data.keyword.Bluemix_notm}}.
 
 ## Utilización de las funciones de rastreo y volcado
 {: #using_trace_and_dump}
 
-La configuración de rastreo de Liberty se puede ajustar para una aplicación en ejecución directamente desde la consola de IBM Bluemix. La consola también proporciona la posibilidad de solicitar y descargar volcados de hebras y de almacenamiento dinámico. Para ajustar la configuración de rastreo o solicitar un volcado, seleccione una aplicación Liberty en la consola de Bluemix y elija el menú `Tiempo de ejecución` en la navegación En la vista `Tiempo de ejecución`, seleccione una instancia y pulse el botón *RASTREO* o *VOLCADO*. Si el ajuste se realiza a nivel de rastreo, consulte [Perfil de Liberty: Rastreo y registro](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) para ver la sintaxis de la especificación de rastreo.
+La configuración de rastreo de Liberty se puede ajustar para una aplicación en ejecución directamente desde la consola de {{site.data.keyword.Bluemix_notm}}. La consola también proporciona la posibilidad de solicitar y descargar volcados de hebras y de almacenamiento dinámico. Para ajustar la configuración de rastreo o solicitar un volcado, seleccione una aplicación Liberty en la consola de {{site.data.keyword.Bluemix_notm}} y elija el menú `Runtime` de la navegación. En la vista `Tiempo de ejecución`, seleccione una instancia y pulse el botón *RASTREO* o *VOLCADO*. Si el ajuste se realiza a nivel de rastreo, consulte [Resolución de problemas de Liberty: registro y rastreo](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) para obtener detalles de la sintaxis de la especificación de rastreo.
 
 ### Cambiar configuración de rastreo a través de SSH en Diego
 
@@ -52,9 +52,9 @@ Para una aplicación Liberty que se ejecuta en una célula de Diego, puede cambi
 
 La aplicación push debe incluir un archivo server.xml que contenga **updateTrigger** con el valor **polled**, así el entorno de ejecución detectará y aplicará los cambios en la especificación de rastreo en el archivo server.xml.
 
-Consulte en [enviar por push apps de Liberty con server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) opciones para enviar por push apps de Liberty con un archivo server.xml personalizado
+Consulte en [Enviar por push apps de Liberty con server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) opciones para impulsar apps de Liberty con server.xml
 
-Consulte [Control de actualizaciones dinámicas![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para obtener información sobre cómo establecer la actualización dinámica en el archivo server.xml.
+Consulte [Control de actualizaciones dinámicas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para obtener información sobre cómo configurar la actualización dinámica en el archivo server.xml.
 
 Para cambiar la configuración de rastreo, siga estos pasos:
 
@@ -74,7 +74,7 @@ $ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 Nota: el cambio en server.xml se perderá al volver a transferir o reiniciar, y sólo es válido para la instancia en la que hace ssh.
 
-Consulte [Perfil de Liberty: rastreo y registro ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} para obtener detalles sobre la sintaxis de la especificación de rastreo.
+Consulte [Resolución de problemas de Liberty: registro y rastreo](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} para obtener detalles sobre la sintaxis de la especificación de rastreo.
 
 ### Activación de volcados mediante SSH en Diego
 
@@ -144,4 +144,4 @@ También se puede utilizar `scp` y otras herramientas similares para ver y desca
 ## general
 {: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visión general de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

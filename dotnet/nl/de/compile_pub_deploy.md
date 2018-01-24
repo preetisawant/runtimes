@@ -16,16 +16,16 @@ lastupdated: "2017-05-31"
 ## Anwendung in der Releasekonfiguration kompilieren (nur MSBuild)
 {: #compiling_in_release_configuration}
 
-Auf MSBuild basierende Projekte werden jetzt während des Stagings mithilfe des Befehls `dotnet publish` veröffentlicht. Standardmäßig veröffentlicht das Buildpack Ihre Anwendung in der `Debug`-Konfiguration.
+Auf MSBuild basierende Projekte werden jetzt während des Stagings mithilfe des Befehls `dotnet publish` veröffentlicht.  Standardmäßig veröffentlicht das Buildpack Ihre Anwendung in der `Debug`-Konfiguration.
 Um Ihre Anwendung in der `Release`-Konfiguration zu veröffentlichen, legen Sie für die Umgebungsvariable `PUBLISH_RELEASE_CONFIG` den Wert `true` fest.
 
-Sie können dies über die CloudFoundry-CLI mit folgendem Befehl tun: 
+Sie können dies über die CloudFoundry-CLI mit folgendem Befehl tun:
 
 ```shell
   cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
-Alternativ können Sie die Variable in der Datei 'manifest.yml' Ihrer Anwendung festlegen: 
+Alternativ können Sie die Variable in der Datei 'manifest.yml' Ihrer Anwendung festlegen:
 
 ```yml
 ---
@@ -45,18 +45,18 @@ externen Binärdateien herunterlädt, können Sie eine veröffentlichte *eigenst
 
 Geben Sie zum Veröffentlichen einer Anwendung einen Befehl wie den folgenden ein:
 ```
-  dotnet publish -r ubuntu.14.04-x64 
+  dotnet publish -r ubuntu.14.04-x64
 ```
 {: codeblock}
 
-Bei eigenständigen Anwendungen kann die App mit einer Push-Operation aus dem Verzeichnis 
+Bei eigenständigen Anwendungen kann die App mit einer Push-Operation aus dem Verzeichnis
 ```
   bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
 übertragen werden.
 
-Bei portierbaren Anwendungen kann die App mit einer Push-Operation aus dem Verzeichnis 
+Bei portierbaren Anwendungen kann die App mit einer Push-Operation aus dem Verzeichnis
 ```
   bin/<Debug|Release>/<framework>/publish
 ```
@@ -77,4 +77,4 @@ Wenn beispielsweise eine Lösung die drei Projekte *MyApp.DAL*, *MyApp.Services*
 ```
 {: codeblock}
 
-In diesem Beispiel würde das Buildpack automatisch die Projekte *MyApp.DAL* und *MyApp.Services* kompilieren, wenn sie in der Datei 'project.json' für *MyApp.Web* als Abhängigkeiten aufgelistet sind, aber das Buildpack würde nur versuchen, das Hauptprojekt, *MyApp.Web*, mit dotnet run -p src/MyApp.Web auszuführen. 
+In diesem Beispiel würde das Buildpack automatisch die Projekte *MyApp.DAL* und *MyApp.Services* kompilieren, wenn sie in der Datei 'project.json' für *MyApp.Web* als Abhängigkeiten aufgelistet sind, aber das Buildpack würde nur versuchen, das Hauptprojekt, *MyApp.Web*, mit dotnet run -p src/MyApp.Web auszuführen.

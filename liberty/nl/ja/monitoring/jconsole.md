@@ -2,17 +2,17 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# JConsole を使用した Bluemix 内の Liberty のモニター
+# JConsole を使用した {{site.data.keyword.cloud_notm}} 内の Liberty のモニター
 {: #jconsole}
 
-## JConsole を使用して Bluemix Liberty ランタイムをモニターする手順は以下のとおりです。
+## 以下のようにして、JConsole を使用して Liberty ランタイムをモニターします。
 {: #steps_to_monitor}
 
 1. 適切な server.xml を含むサーバー・パッケージ内のアプリケーションをプッシュします。
@@ -22,7 +22,7 @@ lastupdated: "2017-05-31"
 ### サーバー・パッケージのプッシュ
 {: #push_server_package}
 
-アプリケーションを含んでいるサーバー・パッケージを、単一インスタンスに制限してプッシュします。server.xml ファイルには `monitor-1.0` フィーチャーおよび `restConnector-1.0` フィーチャーが含まれている必要があります。また、basicRegistry エレメントおよび administrator-role エレメントも含まれている必要があります。
+アプリケーションを含んでいるサーバー・パッケージを、単一インスタンスに制限してプッシュします。 server.xml ファイルには `monitor-1.0` フィーチャーおよび `restConnector-1.0` フィーチャーが含まれている必要があります。 また、basicRegistry エレメントおよび administrator-role エレメントも含まれている必要があります。
 ```xml
        <featureManager>
            <feature>jsp-2.2</feature>
@@ -45,15 +45,13 @@ lastupdated: "2017-05-31"
 ### JConsole アプリケーションの開始
 {: start_jconsole_app}
 
-JConsole は Java インストール済み環境に含まれています。JConsole アプリケーションを開始するには、&lt;java-home&gt;/bin に移動し、次のコマンドを実行します。
-
+JConsole は Java インストール済み環境に含まれています。  JConsole アプリケーションを開始するには、&lt;java-home&gt;/bin に移動し、次のコマンドを実行します。
 ```
     $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 
-Java trustStore を構成するために追加のパラメーターを渡さなければならない場合があります。次のパラメーターはほとんどの場合に機能します。
-
+Java trustStore を構成するために追加のパラメーターを渡さなければならない場合があります。 次のパラメーターはほとんどの場合に機能します。
 ```
     -J-Djavax.net.ssl.trustStore=<java-home>/jre/lib/security/cacerts -J-Djavax.net.ssl.trustStorePassword=changeit -J-Djavax.net.ssl.trustStoreType=jks
 ```
@@ -68,8 +66,8 @@ Java trustStore を構成するために追加のパラメーターを渡さな�
 
 接続が成功すると、JConsole はモニターを開始します。
 
-接続が失敗する場合、問題の診断に役立てるためにログを生成できます。
-最初に、jconsole コマンドに **-J-Djava.util.logging.config.file=c:/tmp/logging.properties** を追加することによって、クライアント・サイドのトレースを収集してみてください。ロギング・プロパティー・ファイルのサンプルを以下に示します。
+接続が失敗する場合、問題の診断に役立てるためにログを生成できます。  最初に、jconsole コマンドに **-J-Djava.util.logging.config.file=c:/tmp/logging.properties** を追加することによって、クライアント・サイドのトレースを収集してみてください。
+ロギング・プロパティー・ファイルのサンプルを以下に示します。
 ```
     handlers= java.util.logging.FileHandler
     .level=INFO java.util.logging.FileHandler.pattern = /tmp/jmxtrace.log
@@ -82,7 +80,7 @@ Java trustStore を構成するために追加のパラメーターを渡さな�
 ```
 {: codeblock}
 
-jconsole コマンドに <b>&dash;J&dash;Djavax.net.debug=ssl</b> を追加することもできます。そうすると、別の JConsole 出力ウィンドウに SSL 診断トレースが生成されます。最後に、以下を server.xml ファイルに追加することにより、サーバー・サイドでトレースを有効にすることができます。
+jconsole コマンドに <b>&dash;J&dash;Djavax.net.debug=ssl</b> を追加することもできます。 そうすると、別の JConsole 出力ウィンドウに SSL 診断トレースが生成されます。  最後に、以下を server.xml ファイルに追加することにより、サーバー・サイドでトレースを有効にすることができます。
 ```
     <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -17,9 +17,9 @@ lastupdated: "2017-09-06"
 
 # 시작하기 튜토리얼
 
-* {: download} 축하합니다. {{site.data.keyword.Bluemix}}에 Hello World 샘플 애플리케이션을 배치했습니다. 시작하려면 이 단계별 안내서를 따르십시오. 또는 <a class="xref" href="http://bluemix.net" target="_blank" title="(샘플 코드 다운로드)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="애플리케이션 코드 다운로드" />샘플 코드를 다운로드</a>하고 직접 탐색하십시오.
+* {: download} 축하합니다. {{site.data.keyword.Bluemix}}에 Hello World 샘플 애플리케이션을 배치했습니다.  시작하려면 이 단계별 안내서를 따르십시오. 또는 <a class="xref" href="http://bluemix.net" target="_blank" title="(샘플 코드 다운로드)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="애플리케이션 코드 다운로드" />샘플 코드를 다운로드</a>하고 직접 탐색하십시오.
 
-Go 시작하기 튜토리얼에 따라 개발 환경을 설정하고, 앱을 로컬 및 {{site.data.keyword.Bluemix}}에 배치하고, 앱에 {{site.data.keyword.Bluemix}} 데이터베이스 서비스를 통합합니다.
+Go 시작하기 튜토리얼에 따라 개발 환경을 설정하고, 앱을 로컬 및 {{site.data.keyword.Bluemix}}에 배치하고, 앱에 {{site.data.keyword.Bluemix_notm}} 데이터베이스 서비스를 통합합니다.
 
 ## 시작하기 전에
 {: #prereqs}
@@ -30,10 +30,10 @@ Go 시작하기 튜토리얼에 따라 개발 환경을 설정하고, 앱을 로
 * [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}
 * [Go ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://golang.org/dl/){: new_window}
 
-## 1단계: 로컬 환경 설정 및 샘플 앱 복제
+## 1단계: 샘플 앱 복제
 {: #clone}
 
-먼저 모든 GO 환경 변수가 올바르게 설정되어 있는지 확인하여 로컬 환경을 설정합니다. 예: 
+먼저 모든 GO 환경 변수가 올바르게 설정되어 있는지 확인하여 로컬 환경을 설정합니다. 예:
 ```
 mkdir $HOME/work
 export GOPATH=$HOME/work
@@ -96,12 +96,12 @@ manifest.yml 파일을 열고 `name`을 `GetStartedGo`에서 앱 이름 <var cla
   ```
   {: codeblock}
 
-이 manifest.yml 파일에서 **random-route: true**는 사용자 라우트가 다른 라우트와 충돌하지 않도록 앱을 위한 임의 라우트를 생성합니다. 원하는 경우, **random-route: true**를 **host: myChosenHostName**으로 바꾸고 사용하려는 호스트 이름을 제공할 수 있습니다. [자세히 보기...](/docs/manageapps/depapps.html#appmanifest)
+이 manifest.yml 파일에서 **random-route: true**는 사용자 라우트가 다른 라우트와 충돌하지 않도록 앱을 위한 임의 라우트를 생성합니다.  원하는 경우, **random-route: true**를 **host: myChosenHostName**으로 바꾸고 사용하려는 호스트 이름을 제공할 수 있습니다. [자세히 보기...](/docs/manageapps/depapps.html#appmanifest)
 {: tip}
 
 ## 4단계: 앱 배치
 {: #deploy}
-Cloud Foundry CLI를 사용하여 앱을 배치할 수 있습니다. 
+Cloud Foundry CLI를 사용하여 앱을 배치할 수 있습니다.
 
 API 엔드포인트를 선택하십시오.
    ```
@@ -111,14 +111,16 @@ cf api <API-endpoint>
 
 명령의 *API-endpoint*를 다음 목록의 API 엔드포인트로 바꾸십시오.
 
-|URL|지역|
-|:-------------------------------|:---------------|
-|  https://api.ng.bluemix.net| 미국 남부|
-| https://api.eu-gb.bluemix.net| 영국|
-| https://api.au-syd.bluemix.net| 시드니|
-| https://api.eu-de.bluemix.net | 프랑크푸르트|
+| **지역 이름** | **지리적 위치** | **API 엔드포인트** |
+|-----------------|-------------------------|-------------------|
+| 미국 남부 지역 | 댈러스, 미국 | api.ng.bluemix.net |
+| 미국 동부 지역 | 워싱턴, DC, 미국 | api.us-east.bluemix.net |
+| 영국 지역 | 런던, 영국 | api.eu-gb.bluemix.net |
+| 시드니 지역 | 시드니, 오스트레일리아 | api.au-syd.bluemix.net |
+| 독일 지역 | 프랑크푸르트, 독일 | api.eu-de.bluemix.net |
+{: caption="표 1. {{site.data.keyword.cloud_notm}} 지역 목록" caption-side="top"}
 
-{{site.data.keyword.Bluemix_notm}} 계정에 로그인
+{{site.data.keyword.Bluemix_notm}} 계정에 로그인하십시오.
 
   ```
 cf login
@@ -133,9 +135,9 @@ cf push
   ```
   {: pre}
 
-이를 수행하는 데 시간이 좀 걸릴 수 있습니다. 배치 프로세스에 오류가 있는 경우 `cf logs <Your-App-Name> --recent` 명령을 사용하여 문제점을 해결할 수 있습니다. 
+이를 수행하는 데 시간이 좀 걸릴 수 있습니다. 배치 프로세스에 오류가 있는 경우 `cf logs <Your-App-Name> --recent` 명령을 사용하여 문제점을 해결할 수 있습니다.
 
-배치가 완료되면 앱이 실행 중이라는 메시지가 표시됩니다. push 명령의 출력에 나열된 URL에서 앱을 확인하십시오. 또한
+배치가 완료되면 앱이 실행 중이라는 메시지가 표시됩니다.  push 명령의 출력에 나열된 URL에서 앱을 확인하십시오. 또한
 
    ```
 cf apps
@@ -149,7 +151,7 @@ cf apps
 다음으로, 이 애플리케이션에 NoSQL 데이터베이스를 추가하고 애플리케이션을 설정하여 로컬 및 {{site.data.keyword.Bluemix_notm}}에서 이를 실행할 수 있도록 합니다.
 
 1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. `대시보드`로 이동하십시오. `이름` 열에서 해당 이름을 클릭하여 애플리케이션을 선택하십시오.
-2. `연결`을 클릭한 다음 `새로 연결`을 클릭하십시오.
+2. `연결`을 클릭한 다음 `연결 작성`을 클릭하십시오.
 3. `데이터 및 분석` 섹션에서 `Cloudant NoSQL DB`를 선택한 다음 서비스를 `작성`하십시오.
 4. 프롬프트가 표시되면 `다시 스테이징`을 선택하십시오. {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 신임 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
 
@@ -168,7 +170,7 @@ cf apps
 
 2. {{site.data.keyword.Bluemix_notm}} UI에서 앱 -> 연결 -> Cloudant -> 신임 정보 보기를 선택하십시오.
 
-3. 신임 정보의 `url`을 복사하여 `.env` 파일의 `CLOUDANT_URL` 필드에 붙여넣고 변경사항을 저장하십시오. 결과는 다음과 비슷합니다.
+3. 신임 정보의 `url`을 복사하여 `.env` 파일의 `CLOUDANT_URL` 필드에 붙여넣고 변경사항을 저장하십시오.  결과는 다음과 비슷합니다.
   ```
   CLOUDANT_URL=https://123456789 ... bluemix.cloudant.com
   ```
@@ -181,8 +183,14 @@ go run main.go
 
   http://localhost:8080에서 앱을 보십시오. 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
 
-  로컬 앱과 {{site.data.keyword.Bluemix_notm}} 앱은 데이터베이스를 공유합니다. 위에서 push 명령의 출력에 나열된 URL을 통해 {{site.data.keyword.Bluemix_notm}} 앱을 확인하십시오. 이 중 하나의 앱에서 추가하는 이름은 브라우저를 새로 고치면 두 앱에 모두 표시됩니다.
+  로컬 앱과 {{site.data.keyword.Bluemix_notm}} 앱은 데이터베이스를 공유합니다.  위에서 push 명령의 출력에 나열된 URL을 통해 {{site.data.keyword.Bluemix_notm}} 앱을 확인하십시오.  이 중 하나의 앱에서 추가하는 이름은 브라우저를 새로 고치면 두 앱에 모두 표시됩니다.
 
 
 앱을 지속할 필요가 없는 경우 예상치 않은 비용이 발생하지 않도록 앱을 중지하십시오.
 {: tip}
+
+## 다음 단계
+
+* [튜토리얼](/docs/tutorials/index.html)
+* [샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://ibm-cloud.github.io){: new_window}
+* [아키텍처 센터 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

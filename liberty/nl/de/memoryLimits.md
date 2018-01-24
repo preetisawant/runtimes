@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -41,9 +41,9 @@ Sie eine Anwendung implementieren, wird die Speicherbelegung des gesamten Prozes
  Wenn die Speicherbegrenzung während der Anwendungsbereitstellung überschritten wird, empfangen Sie eine Nachricht mit dem Hinweis, dass ein Fehler aufgetreten ist und es tritt möglicherweise eine der folgenden Möglichkeiten ein.
 
   * Es könnte zu einem Flapping
-der Anwendung kommen. 
+der Anwendung kommen.
   * Oder Sie stellen fest, dass die Anwendung mehrere erfolglose Startversuche
-unternommen hat. 
+unternommen hat.
   * Sie empfangen möglicherweise eine Nachricht mit dem Hinweis, dass die Anwendungsbereitstellung fehlgeschlagen ist.
 
 Wenn die Speicherbegrenzung überschritten wird, während die Anwendung aktiv ist, wird der Prozess gestoppt und Cloud Foundry versucht, die Anwendung erneut zu starten. Der Neustart der Anwendung kann erfolgen, die Anwendung ist aber für eine gewisse Zeit nicht verfügbar.
@@ -65,17 +65,17 @@ Wenn Sie den Heapspeicher mithilfe von Umgebungsvariablen angeben, setzen Sie di
 ### Heapspeicher angeben
 {: #specifying_heap_memory}
 
-Sie können die Größe des Heapspeichers mithilfe von Umgebungsvariablen oder durch Ändern der Datei `jvm.options` festlegen. Wenn Sie die Umgebungsvariable `JVM_ARGS` oder `JBP_CONFIG_IBMJDK` verwenden, werden sämtliche Änderungen wirksam, wenn Ihre Anwendung mit Push-Operation nach Bluemix übertragen wird. Beim Ändern der Datei `jvm.options` kann die Auswirkung auf die Konfiguration der Heapspeichergröße auch lokal getestet werden.
+Sie können die Größe des Heapspeichers mithilfe von Umgebungsvariablen oder durch Ändern der Datei `jvm.options` festlegen. Wenn Sie die Umgebungsvariable `JVM_ARGS` oder `JBP_CONFIG_IBMJDK` verwenden, werden sämtliche Änderungen wirksam, wenn Ihre Anwendung mit Push-Operation nach {{site.data.keyword.Bluemix_notm}} übertragen wird. Beim Ändern der Datei `jvm.options` kann die Auswirkung auf die Konfiguration der Heapspeichergröße auch lokal getestet werden.
 
 * Verwenden Sie die Umgebungsvariable `JVM_ARGS` und das Argument -Xmx. Um beispielsweise die maximale Größe des Heapspeichers auf 512M zu setzen, geben Sie den folgenden Befehl ein und
-führen anschließend ein erneutes Staging Ihrer App durch. 
+führen anschließend ein erneutes Staging Ihrer App durch.
 
 ```
     $ cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
-* Geben Sie den Faktor für die Größe des Heapspeichers mithilfe der Umgebungsvariablen JBP_CONFIG_IBMJDK an. Der Gleitkommawert heap_size_ratio gibt an, wie viel Speicher der Speicherbegrenzung dem Heapspeicher zugeordnet wird. Um beispielsweise die Hälfte des verfügbaren Speichers dem Heapspeicher zuzuordnen (50% oder 0.50), setzen Sie den folgenden Befehl ab und führen anschließend ein erneutes Staging Ihrer App durch.
+* Geben Sie den Faktor für die Größe des Heapspeichers mithilfe der Umgebungsvariablen JBP_CONFIG_IBMJDK an.  Der Gleitkommawert heap_size_ratio gibt an, wie viel Speicher der Speicherbegrenzung dem Heapspeicher zugeordnet wird.  Um beispielsweise die Hälfte des verfügbaren Speichers dem Heapspeicher zuzuordnen (50% oder 0.50), setzen Sie den folgenden Befehl ab und führen anschließend ein erneutes Staging Ihrer App durch.
 
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"

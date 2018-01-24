@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-06-10"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-06-10"
 # 建置套件預設值
 {: #buildpack_defauts}
 
-Liberty 建置套件在 Bluemix 中經常更新。每個版本都可能包含安全修正程式或特性加強功能。
+Liberty 建置套件在 {{site.data.keyword.Bluemix}} 中經常更新。每個版本都可能包含安全修正程式或特性加強功能。
 
 建置套件針對 WAR 或 EAR 應用程式的 Java 版本或 Liberty 特性集等設定具有預設值。部分預設值可能視建置套件版本不同而變更，這可能會對應用程式有不利的影響。為了避免應用程式受到建置套件預設值變更的影響，請採取步驟來配置您的應用程式，避免依賴建置套件預設值。
 
@@ -55,4 +55,4 @@ Liberty 建置套件在 Bluemix 中經常更新。每個版本都可能包含安
 ## 一般
 {: #general notoc}
 * [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 設定檔概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

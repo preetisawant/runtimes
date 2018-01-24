@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-19"
+lastupdated: "2017-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,12 +20,12 @@ lastupdated: "2017-05-19"
 
 ## 偵測
 {: #detection}
-如果應用程式中的任何位置有一個以上的資料夾同時包含 project.json 檔案以及至少一個 .cs 檔案，或是從 *dotnet publish* 指令的輸出目錄推送應用程式，就會使用 Bluemix ASP.NET Core 建置套件。
+如果應用程式中的任何位置有一個以上的資料夾同時包含 project.json 檔案以及至少一個 .cs 檔案，或是從 *dotnet publish* 指令的輸出目錄推送應用程式，就會使用 {{site.data.keyword.Bluemix}} ASP.NET Core 建置套件。
 
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 ASP.NET Core 入門範本應用程式。ASP.NET Core 入門範本應用程式是簡單的應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 Bluemix 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供 ASP.NET Core 入門範本應用程式。ASP.NET Core 入門範本應用程式是簡單的應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
 
 # 相關鏈結
 {: #rellinks notoc}

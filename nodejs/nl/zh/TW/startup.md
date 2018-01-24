@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -25,7 +25,7 @@ web: node app.js
 
 1. 將 **Procfile** 儲存在應用程式的根目錄中。
 
-如果 **Procfile** 不存在，IBM Bluemix Node.js 建置套件會檢查 **package.json** 檔案中是否有 scripts.start 項目。同樣地，在以下範例中，app.js 是應用程式的 startup JS Script。
+如果 **Procfile** 不存在，{{site.data.keyword.Bluemix_notm}} Node.js 建置套件會檢查 **package.json** 檔案中是否有 scripts.start 項目。同樣地，在以下範例中，app.js 是應用程式的 startup JS Script。
 
 ```
 {

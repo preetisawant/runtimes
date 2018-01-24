@@ -1,28 +1,25 @@
 ---
 
-copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+copyright: years: 2015, 2017 lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Recursos do Liberty suportados no Bluemix
+# Recursos do Liberty suportados no {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-O tempo de execução instantâneo do Liberty for Java inclui um subconjunto dos
-recursos do perfil Liberty.  Alguns recursos que o perfil Liberty fornece não estão
-disponíveis no tempo de execução instantâneo do Liberty for Java porque não são
-aplicáveis no ambiente de nuvem.
+O tempo de execução instantâneo do Liberty for Java inclui um subconjunto de recursos do Liberty. Alguns recursos que o
+Liberty fornece não estão disponíveis no tempo de execução instantâneo do Liberty for Java porque não são aplicáveis no ambiente de
+nuvem.
 
-Os recursos a seguir incluídos são específicos do Bluemix:
+Os recursos a seguir estão incluídos que são específicos para {{site.data.keyword.Bluemix_notm}}:
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-A tabela a seguir mostra os recursos do Liberty suportados no Bluemix
+A tabela a seguir mostra os recursos do Liberty suportados em {{site.data.keyword.Bluemix_notm}}
 
 <table>
 
@@ -221,21 +218,20 @@ os recursos beta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
 Lembre-se de que um servidor não pode carregar recursos incompatíveis; por isso,
 certifique-se de que ele esteja configurado para permitir somente recursos compatíveis. Consulte
-    <a href="http://www-01.ibm.com/support/knowledgecenter/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinações
+    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinações
 de recursos Java EE 6 e 7 suportados</a>.
 
 Para ver uma lista completa dos recursos disponíveis no Liberty com as versões do
 Java EE e outras informações, consulte
 [Recursos
-do Liberty](https://www.ibm.com/support/knowledgecenter/SSCKBL_8.5.5/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html) no IBM Knowledge Center.
+do Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html) no IBM Knowledge Center.
 
-Os aplicativos que usam EJBs remotos podem ser implementados no Bluemix,
-no entanto, os EJBs remotos não são acessíveis remotamente com o protocolo
-CORBA/IIOP devido a restrições de porta no ambiente do Bluemix.
+Os aplicativos que usam EJBs remotos podem ser implementados no {{site.data.keyword.Bluemix_notm}} no entanto, os EJBs
+remotos não são acessíveis remotamente com o protocolo CORBA/IIOP devido a restrições de porta no ambiente do {{site.data.keyword.Bluemix_notm}}.
 
 # rellinks
 {: #rellinks notoc}
 ## geral
 {: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do perfil Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

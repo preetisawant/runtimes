@@ -7,7 +7,6 @@ Liberty for Java
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    
 
     {: .topicgroup}
     관련 링크
@@ -17,15 +16,20 @@ Liberty for Java
     {: .navgroup id="howto"}
     secureWebApp.md
     loggingAndTracing.md
-    [IBM Eclipse Tools for Bluemix를 사용하여 앱 배치](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-    autoConfig.md
-    customizingJRE.md
-    oracle_jre.md
-    usingBetaFeatures.md
-    [바인드된 서비스 옵트 아웃](autoConfig.html#opting_out)
 
     {: .topicgroup}
-    Bluemix의 Liberty 모니터링
+    IBM Eclipse Tools for IBM Cloud 사용
+        eclipseDevelop.md
+        [IBM Eclipse Tools for IBM Cloud를 사용하여 앱 배치](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+
+    autoConfig.md
+    customizingJRE.md
+    using_own_jre.md
+    usingBetaFeatures.md
+    [바인딩된 서비스 사용하지 않음](autoConfig.html#opting_out)
+
+    {: .topicgroup}
+    IBM Cloud의 Liberty 모니터링
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
@@ -49,7 +53,7 @@ Liberty for Java
 
     buildpackDefaults.md
     [Liberty 및 Node.js 앱 관리](../../manageapps/app_mng.html)
-    [IBM Monitoring and Analytics for Bluemix 서비스 시작하기](../../services/monana/index.html)
+    [IBM Monitoring and Analytics 시작하기](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

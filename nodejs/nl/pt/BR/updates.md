@@ -2,22 +2,41 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-31"
+lastupdated: "2017-12-12"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Atualizações mais recentes para o buildpack do SDK for Nodejs
+# Atualizações mais recentes para o buildpack do SDK for Node.js
 {: #latest_updates}
 
 Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
 
+## 11 de dezembro de 2017: atualizado o buildpack do Node.js v3.16
+O buildpack do SDK for Node.js v3.16 fornece o IBM SDK for Node.js versões v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. O
+padrão é 6.x mais recente, portanto é atualmente a 6.12.0.
+Observe que isso corrige PSIRTs: ID consultivo: 10237 ID do registro de produto: 104487 Título: vulnerabilidade de segurança Node.js
+zlib DOS, outubro de 2017 (CVE-2017-14919). É recomendável fazer upgrade para v3.16 para obter correções para vulnerabilidades
+de segurança que afetam a 8.6.0.0 e anterior, 6.10.2.0 para 6.11.4.0 e 4.8.2.0 para 4.8.4.0.
+
+## 1 de novembro de 2017: atualizado o buildpack do Node.js v3.15
+O buildpack do SDK for Node.js v3.15 fornece o IBM SDK for Node.js versões 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 e 8.6.0. O
+padrão é 6.x mais recente, portanto é atualmente a 6.11.4.
+
+## 20 de setembro de 2017: atualizado o buildpack do Node.js v3.14
+O buildpack do SDK for Node.js v3.14 fornece o IBM SDK for Node.js versões 4.8.3, 4.8.4, 6.11.2, 6.11.3, 8.1.4 e 8.3.0. O
+padrão é 6.x mais recente, portanto é atualmente a 6.11.3. Um erro do buildpack que evitava que os aplicativos Node.js
+[fossem encerrados normalmente](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown) foi
+corrigido nesta liberação.
+
 ## 26 de julho de 2017: atualizado o buildpack do Node.js v3.13
 O buildpack do SDK for Node.js v3.13 fornece o IBM SDK for Node.js versões 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 e 8.1.4. O padrão é a 6.x mais recente, portanto é atualmente a 6.11.1. Observe que a versão 8 está disponível para teste, mas ainda não é recomendada para produção.  
 
-Esse buildpack contém versões atualizadas do Node.js que direcionam vulnerabilidades recentes de segurança localizadas no Node.js. Atualize seus aplicativos para usar as versões mais recentes disponíveis e, em seguida, remonte os aplicativos no Bluemix. Veja <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este link</a> para obter detalhes sobre as vulnerabilidades do Node.js.
+Esse buildpack contém versões atualizadas do Node.js que tratam das vulnerabilidades de segurança recentes localizadas no Node.js.  
+Os usuários devem atualizar seus aplicativos para usar as versões mais recentes disponíveis e, em seguida, remontar os aplicativos no
+{{site.data.keyword.Bluemix_notm}}. Veja <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este link</a> para obter detalhes sobre as vulnerabilidades do Node.js.
 
 ## 5 de maio de 2017: atualizado o buildpack do Node.js v3.12
 O buildpack v3.12 do SDK for Node.js fornece as versões 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 e 6.10.2 do IBM SDK for Node.js. O padrão foi mudado da 4.x mais recente para a 6.x mais recente, portanto é atualmente a 6.10.2. Sendo uma mudança de versão principal, isso poderia afetar apps que estão contando com o padrão. Veja [Suporte de longo prazo da versão do Node.js e o buildpack do SDK for Node.js](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) para obter mais informações sobre como evitar quaisquer problemas.
@@ -57,9 +76,9 @@ Esta liberação inclui correções de erro, inclusive aquelas do
 [buildpack
 1.5.18 do Node.js do Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
 
-A liberação remove o suporte do manipulador de gerenciamento de app strongpm conforme anunciado em
-[Bluemix
-Node.js Buildpack v3.3 – modo FIPS e mais](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+A liberação remove o suporte para o manipulador de gerenciamento de aplicativo strongpm conforme anunciado em
+[{{site.data.keyword.Bluemix_notm}}
+Buildpack do Node.js v3.3 - modo FIPS e mais](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
 Observe que há um problema conhecido ao usar o Node.js 6.x e o
 [Modo de desenvolvimento](/docs/manageapps/app_mng.html#devmode). Como
@@ -79,8 +98,8 @@ Estão incluídas correções para as vulnerabilidades de segurança a seguir:
 Esta liberação do buildpack inclui as versões de runtime 4.4.5 e 6.2.0 do IBM SDK for Node.js. O valor se torna 4.4.5.
 
 A liberação remove o suporte para versões de runtime mais antigas, conforme anunciado em
-[Bluemix
-Node.js Buildpack v3.3 – modo FIPS e muito mais](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). O buildpack agora suporta
+[{{site.data.keyword.Bluemix_notm}}
+Buildpack do Node.js v3.3 - modo FIPS e mais](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). O buildpack agora suporta
 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 e 6.2.0.
 
 Esta liberação inclui correções de erro do [buildpack 1.5.14 do Node.js do Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.14).
@@ -133,8 +152,10 @@ Gerenciamento de app.
 
 * Atualizações do buildpack:
 
-  * O Node.js v4.2.4 (IBM SDK for Node.js Versão 4) agora é o tempo de execução padrão no Bluemix, substituindo o v0.12.9. Essa mudança poderá fazer com que seu aplicativo se comporte de maneira diferente se uma
-determinada versão não for especificada para ele. Para saber como especificar uma versão do Node.js para seu aplicativo Bluemix, veja a documentação [Tempo de execução do Node.js](index.html).
+  * Node.js v4.2.4 (IBM SDK for Node.js Versão 4) agora é o tempo de execução padrão no
+{{site.data.keyword.Bluemix_notm}}, substituindo a v0.12.9. Essa mudança poderá fazer com que seu aplicativo se comporte de maneira diferente se uma
+determinada versão não for especificada para ele. Para saber como especificar uma versão do Node.js para seu aplicativo
+{{site.data.keyword.Bluemix_notm}}, consulte a documentação do [Tempo de execução do Node.js](index.html).
 
   * NODE_ENV está agora configurado como *production* por padrão. Essa mudança fará com que algumas dependências de nó se comportem de maneira diferente. Por exemplo, a estrutura Express não retornará mais rastreios de pilha no navegador da web para terminais com falha; em vez disso, exibirá *Erro interno do servidor*. Quando NPM_CONFIG_PRODUCTION for configurado como *true*, o NPM configurará NODE_ENV como *production* para scripts subshell somente na fase de instalação do npm. Essa
 função permite que os usuários configurem NODE_ENV para outro valor como
@@ -154,7 +175,8 @@ função permite que os usuários configurem NODE_ENV para outro valor como
 
   * O script de detecção é atualizado com as informações da versão do buildpack.
 
-  * A recomendação de armazenamento em cluster (WEB_CONCURRENCY) introduzida inicialmente pela comunidade foi removida porque a determinação de memória era inexata no Bluemix.
+  * A recomendação de armazenamento em cluster (WEB_CONCURRENCY) introduzida inicialmente pela comunidade foi removida porque
+a determinação de memória era inexata no {{site.data.keyword.Bluemix_notm}}.
 
 
 ## 16 de dezembro de 2015: atualizado o buildpack do Node.js v2.8-20151209-1403 e v3.0beta-20151211-2041
@@ -167,10 +189,9 @@ v4.2.3.0, v4.2.2.0, v1.2.0.8 e v1.2.0.7, com base nas versões da comunidade Nod
 v4.2.3, v4.2.2, v0.12.9 e v0.12.8.
 Além disso, no v3.0beta, o tempo de execução do Node.js padrão mudou para v4.2.3.
 
-O IBM Node.js buildpack v3.0beta agora é liberado como um buildpack não padrão no
-Bluemix com Node.js v4.2.3 como tempo de execução padrão. Para assegurar que seus apps e
-serviços continuarão funcionando no Bluemix, envie por push seu aplicativo com a versão
-beta do buildpack. Após 30 dias ou mais, v3 se tornará o buildpack padrão.
+O IBM Node.js buildpack v3.0beta agora é liberado como um buildpack não padrão no {{site.data.keyword.Bluemix_notm}}
+com Node.js v4.2.3 como o tempo de execução padrão. Para assegurar que seus aplicativos e serviços continuarão funcionando no
+{{site.data.keyword.Bluemix_notm}}, envie por push seu aplicativo com a versão beta do buildpack. Após 30 dias ou mais, v3 se tornará o buildpack padrão.
 
 Para enviar por push seu aplicativo com v3.0beta:
 * Use a opção "-b" em seu comando 'cf push':
@@ -208,15 +229,18 @@ O Node.js v2.6.1 apresenta uma correção de bug para o [Manipulador de gerencia
 
 ## 15 de outubro de 2015: atualizado o buildpack do Node.js v2.6-20151006-1309
 
-Essa liberação do buildpack do Node.js apresenta a integração do [Gerenciador de processos StrongLoop ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://strong-pm.io) para o recurso App Management. Para obter mais informações, consulte a postagem do blog [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
+Essa liberação do buildpack do Node.js apresenta a integração do [Gerenciador de processos StrongLoop ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://strong-pm.io) para o recurso App Management. 
+Para obter mais informações, consulte a postagem do blog
+[StrongLoop DevOps for Node.js
+Applications no {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 
 ## 15 de junho de 2015: atualizado o buildpack do Node.js v2.0-20150608-1503
 
 Nesta liberação, nós sincronizamos nosso buildpack do Node.js com o mais recente
 [Buildpack do Node.js da
 comunidade CF](https://github.com/cloudfoundry/nodejs-buildpack), que é fornecido com inúmeros novos recursos da comunidade.
-Além disso, reforçamos o recurso Gerenciamento de app no buildpack do Node.js, que
-permite utilitários como shell, node-inspector, Bluemix Live Sync e muito mais. Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html) para obter detalhes.
+Além disso, renovamos o recurso de gerenciamento de aplicativo no buildpack Node.js, o que permite utilitários como
+shell, inspetor de nó, {{site.data.keyword.Bluemix_notm}} Live Sync e mais. Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html) para obter detalhes.
 
 ## 5 de maio de 2015: atualizado o buildpack do Node.js v1.17-20150429-1033
 
@@ -234,7 +258,8 @@ mostrado.
 {: codeblock}
 
 * Problemas conhecidos com a v0.12.1:
-   * O recurso “Suspender” é interrompido quando você usa o recurso Ferramenta de depuração fornecido pelo Bluemix Live Sync.
+   * O recurso "Suspender" é interrompido quando você usa o recurso Debug Tools fornecido pelo
+{{site.data.keyword.Bluemix_notm}} Live Sync.
    * O módulo mqlight usado para o serviço MQ Light não é suportado na v0.12.x
 
 * Foram resolvidas várias vulnerabilidades de segurança:
@@ -243,9 +268,11 @@ mostrado.
 
 ##  2 de abril de 2015: atualizado o buildpack do Node.js v1.15-20150331-2231
 
-* O buildpack Node.js agora inclui três novos recursos para ajudar a desenvolver rapidamente no Bluemix como faria na área de trabalho, sem reimplementação
+* O buildpack Node.js agora inclui três novos recursos para ajudar a desenvolver rapidamente no
+{{site.data.keyword.Bluemix_notm}} como você faria na área de trabalho, sem reimplementação
   * Sincronização da Área de Trabalho: Sincronize qualquer árvore da área de trabalho (Windows) para uma área de trabalho do projeto baseado em nuvem
-  * Edição em tempo real: permite que você faça mudanças em um aplicativo Node.js que é executado no Bluemix e teste-as imediatamente em seu navegador.
+  * Edição em tempo real: permite que você faça mudanças em um aplicativo Node.js que é executado no
+{{site.data.keyword.Bluemix_notm}} e as teste imediatamente em seu navegador.
   * Depuração: Execute shell em seu ambiente e depure! É possível editar o código dinamicamente, inserir pontos de interrupção, percorrer o código, reiniciar o tempo de execução e muito mais, usando o depurador Node Inspector
   * Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html#Utilities) para obter mais informações.
 * Nós obtivemos as mudanças mais recentes do [buildpack do Node.js do Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Essa mudança vem com várias correções de erro e melhorias feitas pela comunidade.
@@ -253,7 +280,9 @@ mostrado.
 
 ## 5 de janeiro de 2015: atualizado o buildpack do Node.js v1.9.1-20141208-1221
 
-* O buildpack Node.js agora inclui suporte de configuração de log dinâmico. Com esse suporte, os desenvolvedores poderão mudar o nível de log de seus aplicativos dinamicamente se o aplicativo estiver usando os módulos log4js, bunyan ou ibmbluemix para criação de log.
+* O buildpack Node.js agora inclui suporte de configuração de log dinâmico. Com esse suporte, os desenvolvedores poderão
+mudar o nível de log de seus aplicativos dinamicamente se o aplicativo estiver usando módulos log4js, bunyan ou
+ibm {{site.data.keyword.Bluemix_notm}} para criação de log.
 * Agora, o buildpack Node.js vem com o [IBM SDK for Node.js v0.10.33](https://developer.ibm.com/node/sdk/). Essa atualização inclui correções para o problema POODLE.
 
 ## 23 de outubro de 2014: atualizado o buildpack do Node.js v1.6-20141013-1736

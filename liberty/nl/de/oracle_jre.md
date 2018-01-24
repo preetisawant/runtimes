@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-05-31"
 # Oracle JRE verwenden
 {: #using_oraacle_jre}
 
-Sie können Ihre Liberty-Anwendung in Bluemix mit Oracle JRE ausführen. Dazu müssen Sie:
+Sie können Ihre Liberty-Anwendung in {{site.data.keyword.Bluemix}} mit Oracle JRE ausführen. Dazu müssen Sie:
 * JRE an einer Position hosten, von der es vom Buildpack heruntergeladen werden kann,
 * die Datei `index.yml` hosten, die die Position des Host-JRE bereitstellt, und
 * Ihre Anwendung für die Verwendung von JRE konfigurieren.
@@ -20,8 +20,8 @@ Sie können Ihre Liberty-Anwendung in Bluemix mit Oracle JRE ausführen. Dazu m�
 ## JRE und index.yml hosten
 {: #hosting_jre}
 
-Die Oracle JRE-Datei muss als Host einen Web-Server haben und das Liberty-Buildpack muss diese Datei von diesem Server herunterladen können. Sie können sie mithilfe einer beliebigen verfügbaren Serverfunktion in Bluemix selbst hosten oder Sie können sie an einer öffentlich verfügbaren Position hosten. Der Server muss mit der Datei `index.yml` konfiguriert werden, die Details zu der JRE-Datei angibt. Führen Sie die Schritte aus, die im Folgenden für das Hosten des der JRE-Datei und der Datei `index.yml` angegeben sind:
-  1. Fordern Sie Oracle JRE an. Beachten Sie, dass die JRE-Version unter einem Unix-64-Bit-Betriebssystem und eine `tar.gz`-Datei sein muss.
+Die Oracle JRE-Datei muss als Host einen Web-Server haben und das Liberty-Buildpack muss diese Datei von diesem Server herunterladen können. Sie können die Datei mithilfe einer beliebigen verfügbaren Serverfunktion in {{site.data.keyword.Bluemix_notm}} selbst hosten oder Sie können sie an einer öffentlich verfügbaren Position hosten. Der Server muss mit der Datei `index.yml` konfiguriert werden, die Details zu der JRE-Datei angibt. Führen Sie die Schritte aus, die im Folgenden für das Hosten der JRE-Datei und der Datei `index.yml` angegeben sind:
+  1. Fordern Sie Oracle JRE an. Beachten Sie, dass es sich dabei um eine JRE-Version für ein UNIX-64-Bit-Betriebssystem handelt, die als `tar.gz`-Datei vorliegt.
   2. Hosten Sie die JRE-Datei an einer Position, von der das Liberty-Buildpack sie herunterladen kann.
   3. Stellen Sie sicher, dass Sie an der Hostingposition die Datei `index.yml` bereitstellen. Die Datei `index.yml`  muss einen Eintrag enthalten, der aus der Versions-ID der Oracle JRE-Datei besteht, auf die ein Doppelpunkt und die vollständige URL der Position folgt, an der sich diese JRE-Datei befindet. Das Format der Datei `index.yml` ist wie folgt:
 ```
@@ -66,7 +66,7 @@ Um die JVM-Umgebungsvariable festzulegen, können Sie einen ähnlichen Befehl wi
 ## Bestätigung
 {: #confirmation}
 
-Um zu bestätigen, dass die erwartete JRE verwendet wird, überprüfen Sie das Stagingprotokoll und suchen nach einer Nachricht wie der folgenden: 
+Um zu bestätigen, dass die erwartete JRE verwendet wird, überprüfen Sie das Stagingprotokoll und suchen nach einer Nachricht wie der folgenden:
 ```
    -----> Downloading OpenJdk 1.8.0_91 from https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz (6.2s)
 ```
@@ -77,4 +77,4 @@ Um zu bestätigen, dass die erwartete JRE verwendet wird, überprüfen Sie das S
 ## Allgemein
 {: #general notoc}
 * [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Übersicht über das Liberty-Profil](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,11 +13,11 @@ lastupdated: "2017-03-22"
 # Options pour l'envoi par commande push d'applications Liberty
 {: #options_for_pushing}
 
-Le comportement du serveur Liberty dans Bluemix est contrôlé par le pack de construction Liberty. Les packs de construction peuvent fournir un environnement d'exécution complet pour une classe d'applications spécifique. Ils sont cruciaux pour assurer la portabilité entre les clouds et une contribution à une architecture de cloud ouverte. Le
+Le comportement du serveur Liberty dans {{site.data.keyword.Bluemix}} est contrôlé par le pack de construction Liberty. Les packs de construction peuvent fournir un environnement d'exécution complet pour une classe d'applications spécifique. Ils sont cruciaux pour assurer la portabilité entre les clouds et une contribution à une architecture de cloud ouverte. Le
 pack de construction Liberty fournit un conteneur WebSphere Liberty capable d'exécuter des applications Java EE 7 et OSGi. Il prend en charge les
-infrastructures populaires telles que Spring et inclut l'environnement d'exécution Java IBM JRE. WebSphere Liberty permet un développement d'application rapide qui est adapté au cloud. Le pack de construction Liberty prend en charge plusieurs applications déployées sur un même serveur Liberty. Dans le cadre de l'intégration du pack de construction Liberty  dans Bluemix, celui-ci fait en sorte que les variables d'environnement pour la liaison de services soient indiquées sous forme de variables de configuration sur le serveur Liberty.
+infrastructures populaires telles que Spring et inclut l'environnement d'exécution Java IBM JRE. WebSphere Liberty permet un développement d'application rapide qui est adapté au cloud. Le pack de construction Liberty prend en charge plusieurs applications déployées sur un même serveur Liberty. Dans le cadre de l'intégration du pack de construction Liberty dans {{site.data.keyword.Bluemix_notm}}, celui-ci fait en sorte que les variables d'environnement pour la liaison de services soient représentées comme des variables de configuration dans le serveur Liberty.
 
-Vous pouvez utiliser les méthodes suivantes pour déployer vos applications Liberty sur Bluemix :
+Vous pouvez utiliser les méthodes suivantes pour déployer vos applications Liberty sur {{site.data.keyword.Bluemix_notm}} :
 
 * Envoi par commande push d'une application autonome
 * Envoi par commande push d'un répertoire de serveur
@@ -28,7 +28,7 @@ Important : quand vous déployez une application avec le pack de construction Li
 ## Applications autonomes
 {: #stand_alone_apps}
 
-Les applications autonomes, par exemple, des fichiers WAR ou EAR, peuvent être déployées sur Liberty dans Bluemix.
+Les applications autonomes, par exemple, des fichiers WAR ou EAR, peuvent être déployées sur Liberty dans {{site.data.keyword.Bluemix_notm}}.
 
 Pour déployer une application autonome, exécutez la commande cf push avec le paramètre -p qui indique le fichier WAR ou EAR.
 Par exemple :
@@ -149,7 +149,7 @@ application :
 
 Dans certains cas, vous devez fournir une configuration de serveur Liberty personnalisée avec votre application. Cette configuration personnalisée peut s'avérer nécessaire lorsque vous déployez un fichier EAR ou WAR et que le fichier server.xml par défaut ne comporte pas certains des paramètres requis par votre application.
 
-Si vous avez installé le profil Liberty sur votre poste de travail et que vous avez déjà créé un serveur Liberty avec votre application, vous pouvez envoyer par commande push le contenu de ce répertoire à Bluemix.
+Si vous avez installé le profil Liberty sur votre poste de travail et que vous avez déjà créé un serveur Liberty avec votre application, vous pouvez pousser le contenu de ce répertoire vers {{site.data.keyword.Bluemix_notm}}.
 Par exemple, si votre serveur Liberty se nomme defaultServer, exécutez la commande suivante :
 
 ```
@@ -182,7 +182,7 @@ votre application.
 ```
 {: codeblock}
 
-Lorsque le répertoire de serveur est prêt, vous pouvez le déployer sur Bluemix.
+Lorsque le répertoire de serveur est prêt, vous pouvez le déployer sur {{site.data.keyword.Bluemix_notm}}.
 
 ```
     $ cf push <yourappname> -p defaultServer
@@ -200,7 +200,7 @@ applications Web déployées avec le répertoire de serveur sont accessibles sou
 ## Package de serveur
 {: #packaged_server}
 
-Vous pouvez également envoyer par commande push un fichier de package de serveur à Bluemix. Pour créer le fichier de package de serveur, utilisez la commande server
+Vous pouvez aussi pousser un un fichier de package de serveur vers {{site.data.keyword.Bluemix_notm}}. Pour créer le fichier de package de serveur, utilisez la commande server
 package de Liberty. Outre les fichiers de l'application et de configuration, le
 fichier de package de serveur peut contenir des ressources partagées et les
 fonctions utilisateur Liberty requises par l'application.
@@ -217,7 +217,7 @@ Par exemple, si le serveur Liberty se nomme defaultServer, exécutez la commande
 
 Cette commande génère un fichier serverName.zip dans le répertoire du serveur. Si vous avez utilisé l'option `--archive` pour spécifier un fichier d'archive différent, assurez-vous qu'il a l'extension `.zip` au lieu de `.jar`. **Le pack de construction ne prend pas en charge les fichiers de package de serveur créés avec l'extension `.jar`**.
 
-Vous pouvez ensuite envoyer par push vers Bluemix le fichier `.zip` généré avec la commande `cf push`.
+Vous pouvez ensuite pousser le fichier `.zip` généré vers {{site.data.keyword.Bluemix_notm}} avec la commande `cf push`.
 Par exemple :
 
 ```
@@ -258,7 +258,7 @@ depuis un fichier `server.xml` envoyé par commande push. Toutes les variables s
 ### Accès aux informations des services liés
 {: #accessing_info_of_bound_services}
 
-Si vous voulez lier un service à votre application, des informations sur le service, notamment les données d'identification de connexion, sont incluses dans la [variable d'environnement VCAP_SERVICES ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que Cloud Foundry définit pour l'application. Pour les [services configurés automatiquement](autoConfig.html), le pack de construction Liberty génère ou met à jour des entrées de liaison de service dans le fichier server.xml. Le contenu des entrées de liaison de service peuvent être dans l'un des formats suivants :
+Si vous voulez lier un service à votre application, des informations sur le service, notamment les données d'identification de connexion, sont incluses dans la [variable d'environnement VCAP_SERVICES ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que Cloud Foundry définit pour l'application. Pour les [services configurés automatiquement](autoConfig.html), le pack de construction Liberty génère ou met à jour des entrées de liaison de service dans le fichier server.xml. Le contenu des entrées de liaison de service peuvent être dans l'un des formats suivants :
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;, qui décrit les informations telles que le nom, le type et le plan du service.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, qui décrit les informations de connexion du service.

@@ -2,22 +2,34 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-31"
+lastupdated: "2017-12-12"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Últimas actualizaciones para el paquete de compilación de SDK for Nodejs
+# Últimas actualizaciones en el paquete de compilación de SDK para Node.js 
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
 
+## 11 de diciembre de 2017: Se ha actualizado el paquete de compilación Node.js v3.16
+El paquete de compilación de SDK para Node.js v3.16 proporciona las versiones de IBM SDK para Node.js v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.12.0.
+Tenga en cuenta que corrige PSIRT: ID de advertencia: 10237 ID de registro de producto: 104487 Título: vulnerabilidad de seguridad DOS de zlib de Node.js, octubre de 2017 (CVE-2017-14919). Se recomienda actualizar a v3.16 para obtener las correcciones de las vulnerabilidades de seguridad que afectan a 8.6.0.0 y anterior, 6.10.2.0 a 6.11.4.0 y 4.8.2.0 a 4.8.4.0. 
+
+## 1 de noviembre de 2017: Se ha actualizado el paquete de compilación de Node.js v3.15
+El SDK para el paquete de compilación de Node.js v3.15 proporciona las versiones de IBM SDK para Node.js 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 y 8.6.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.11.4.
+
+
+## 20 de septiembre de 2017: Se ha actualizado el paquete de compilación de Node.js v3.14
+El SDK para el paquete de compilación de Node.js v3.14 proporciona las versiones de IBM SDK para Node.js 4.8.3, 4.8.4, 6.11.2, 6.11.3, 8.1.4 y 8.3.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.11.3.
+En esta versión se ha solucionado un error del paquete de compilación que impedía que las apps de Node.js [se cerrasen correctamente](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown).
+
 ## 26 de julio de 2017: Actualización del paquete de compilación Node.js v3.13
 El paquete de compilación SDK for Node.js v3.13 proporciona las versiones de IBM SDK for Node.js 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 y 8.1.4. El valor predeterminado es la 6.x más reciente, de modo que actualmente es 6.11.1. Tenga en cuenta que la versión 8 está disponible para pruebas, pero aún no está recomendada para producción.  
 
-Este paquete de compilación contiene versiones actualizadas de Node.js que abordan vulnerabilidades de seguridad recientes encontradas en Node.js. Actualice las aplicaciones para utilizar las últimas versiones disponibles y luego transferir la aplicación en Bluemix. Consulte <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este enlace</a> para obtener detalles sobre las vulnerabilidades de Node.js.
+Este paquete de compilación contiene las versiones de Node.js actualizadas, que abordan vulnerabilidades de seguridad recientes encontradas en Node.js. Los usuarios deberían actualizar sus aplicaciones para utilizar las últimas versiones disponibles y luego volver a transferir las aplicaciones a {{site.data.keyword.Bluemix_notm}}.  Consulte <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este enlace</a> para obtener detalles sobre las vulnerabilidades de Node.js.
 
 ## 5 de mayo de 2017: se ha actualizado el paquete de compilación Node.js v3.12
 El paquete de compilación SDK for Node.js v3.12 proporciona las versiones de IBM SDK for Node.js 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 y 6.10.2. El valor predeterminado ha cambiado de la 4.x más reciente a la 6.x más reciente, de modo que actualmente es 6.10.2. Puesto que es un cambio de versión principal, esto podría afectar a las apps que dependen del valor predeterminado. Consulte [Soporte a largo plazo de versiones de Node.js y el paquete de compilación de SDK para Node.js](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) para obtener más información acerca de cómo evitar problemas.
@@ -51,7 +63,7 @@ Este release del paquete de compilación da soporte a las versiones de tiempo de
 
 Este release incluye arreglos de errores, incluidos los del [paquete de compilación Node.js de Cloud Foundry 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
 
-El release elimina soporte para el manejador de gestión de app strongpm tal como se ha publicado en [Paquete de compilación Bluemix Node.js v3.3 – modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+Esta versión elimina el soporte para el manejador de gestión de app strongpm, tal como se ha publicado en [{{site.data.keyword.Bluemix_notm}} Paquete de compilación de Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
 Tenga en cuenta que es un problema conocido cuando se utiliza Node.js 6.x y la [modalidad de desarrollo](/docs/manageapps/app_mng.html#devmode). Como una solución provisional será necesario volver a transferir la aplicación después de habilitar la modalidad de desarrollo antes de poder empezar a utilizarla.
 
@@ -67,7 +79,7 @@ Se incluyen arreglos para las siguientes vulnerabilidades de seguridad:
 
 Este release del paquete de compilación añade el tiempo de ejecución de IBM SDK for Node.js versiones 4.4.5 y 6.2.0. El valor predeterminado es 4.4.5.
 
-El release elimina soporte para versiones de tiempo de ejecución anteriores tal como se ha publicado en [Paquete de compilación Bluemix Node.js v3.3 – modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). El paquete de compilación ahora da soporte a 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 y 6.2.0.
+Esta versión elimina el soporte para versiones de tiempo de ejecución anteriores, tal y como se ha publicado en [{{site.data.keyword.Bluemix_notm}} Paquete de compilación Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). El paquete de compilación ahora da soporte a 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 y 6.2.0.
 
 Este release incluye correcciones de errores del [paquete de compilación Node.js de Cloud Foundry 1.5.14](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.14).
 
@@ -110,7 +122,7 @@ Este release está totalmente sincronizado con el paquete de compilación de [Cl
 
 * Actualizaciones del paquete de compilación:
 
-  * Node.js v4.2.4 (IBM SDK for Node.js Versión 4) es ahora el tiempo de ejecución predeterminado en Bluemix, que sustituye a v0.12.9. Este cambio puede provocar que su aplicación se comporte de forma distinta si no se especifica una versión concreta para la aplicación. Para obtener más información sobre cómo especificar una versión de Node.js para su aplicación Bluemix, consulte la documentación de [tiempo de ejecución de Node.js](index.html).
+  * Node.js v4.2.4 (IBM SDK para la versión de Node.js 4) es ahora el tiempo de ejecución predeterminado en {{site.data.keyword.Bluemix_notm}}, que sustituye a v0.12.9. Este cambio puede provocar que su aplicación se comporte de forma distinta si no se especifica una versión concreta para la aplicación. Para obtener más información sobre cómo especificar una versión de Node.js para la aplicación {{site.data.keyword.Bluemix_notm}}, consulte la documentación de [tiempo de ejecución de Node.js](index.html).
 
   * NODE_ENV ahora está establecido en *producción* de forma predeterminada. Este cambio hará que algunas dependencias de nodos se comporten de forma distinta. Por ejemplo, la infraestructura de Express ya no devolverá stacktraces en el navegador web para puntos finales defectuosos, pero en lugar de ello, mostrará *Error de servidor interno*. Cuando NPM_CONFIG_PRODUCTION se establece en *true*, NPM establecerá NODE_ENV en *producción* para scripts de subshell solo en la fase de instalación de npm. Esta función permitirá a los usuarios establecer NODE_ENV en otro valor como por ejemplo *desarrollo* para el tiempo de ejecución de la aplicación. Por razones de claridad, los scripts de npm verán el mensaje **NODE_ENV=production**.
 
@@ -128,7 +140,7 @@ Este release está totalmente sincronizado con el paquete de compilación de [Cl
 
   * El script de detección se actualiza con la información de la versión del paquete de compilación.
 
-  * La recomendación de agrupación en clúster (WEB_CONCURRENCY) introducida inicialmente por la comunidad se eliminará, ya que la determinación de la memoria no era precisa en Bluemix.
+  * La recomendación de agrupación en clúster (WEB_CONCURRENCY) introducida inicialmente por la comunidad se eliminará, ya que la determinación la memoria no era precisa en {{site.data.keyword.Bluemix_notm}}.
 
 
 ## 16 de diciembre de 2015: se ha actualizado el paquete de compilación Node.js v2.8-20151209-1403 y v3.0beta-20151211-2041
@@ -138,7 +150,7 @@ Este release del paquete de compilación de Node.js incluye dos versiones, v2.8 
 Una corrección de errores para el servicio Monitoring and Analytics. La inclusión de un tiempo de ejecución almacenado en memoria caché para IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8 y v1.2.0.7, que se basan en las versiones de comunidad Node.js v4.2.3, v4.2.2, v0.12.9 y v0.12.8.
 Además, en v3.0beta el tiempo de ejecución predeterminado de Node.js se cambia por v4.2.3.
 
-El paquete de compilación de IBM Node.js v3.0beta se ha publicado como paquete de compilación no predeterminado en Bluemix con Node.js v4.2.3 como tiempo de ejecución predeterminado. Para asegurarse de que las apps y servicios sigan funcionando en Bluemix, envíe su aplicación por push con la versión beta del paquete de compilación. Después de 30 días o más, v3 se convertirá en el paquete de compilación predeterminado.
+El paquete de compilación de IBM Node.js v3.0beta se ha publicado como paquete de compilación no predeterminado en {{site.data.keyword.Bluemix_notm}} con Node.js v4.2.3 como tiempo de ejecución predeterminado. Para asegurarse de que las apps y servicios sigan funcionando en {{site.data.keyword.Bluemix_notm}}, envíe su aplicación por push con la versión beta del paquete de compilación. Después de 30 días o más, v3 se convertirá en el paquete de compilación predeterminado.
 
 Para enviar por push su aplicación con v3.0beta:
 * Utilice la opción "-b" en el mandato 'cf push':
@@ -169,12 +181,12 @@ Node.js v2.6.1 presenta una corrección de errores para el [manejador de gestió
 
 ## 15 de octubre de 2015: se ha actualizado el paquete de compilación Node.js v2.6-20151006-1309
 
-Este release del paquete de compilación de Node.js incluye la integración del [Gestor de procesos de StrongLoop![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://strong-pm.io) en la característica de App Management. Para obtener más información, consulte el artículo del blog [StrongLoop DevOps para aplicaciones de Node.js en Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
+Este release del paquete de compilación de Node.js incluye la integración del [Gestor de procesos de StrongLoop![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://strong-pm.io) en la característica de App Management. Para obtener más información, consulte la publicación del blog [StrongLoop DevOps para aplicaciones de Node.js en {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 
 ## 15 de junio de 2015: se ha actualizado el paquete de compilación Node.js v2.0-20150608-1503
 
 En esta versión, hemos sincronizado nuestro paquete de compilación Node.js con el último [paquete de compilación Node.js de CF community](https://github.com/cloudfoundry/nodejs-buildpack), que incluye varias características nuevas de la comunidad.
-Además, hemos reformado la característica de gestión de apps del paquete de compilación Node.js, que habilita funciones tales como el shell, node-inspector y Bluemix Live Sync, entre otras. Consulte [App Management](/docs/manageapps/app_mng.html) para obtener más detalles.
+Además, hemos reformado la característica de gestión de app en el paquete de compilación de Node.js, que habilita funciones tales como el shell, node-inspector, {{site.data.keyword.Bluemix_notm}} Live Sync, y más. Consulte [App Management](/docs/manageapps/app_mng.html) para obtener más detalles.
 
 ## 5 de mayo de 2015: se ha actualizado el paquete de compilación Node.js v1.17-20150429-1033
 
@@ -189,7 +201,7 @@ Además, hemos reformado la característica de gestión de apps del paquete de c
 {: codeblock}
 
 * Problemas conocidos con v0.12.1:
-   * La función “Suspender” se bloquea cuando se utiliza la función de Herramientas de depuración que proporciona Bluemix Live Sync.
+   * La función "Suspender" se bloquea cuando se utiliza la función de herramientas de depuración que proporciona {{site.data.keyword.Bluemix_notm}} Live Sync.
    * El módulo mqlight que se utiliza para el servicio MQ Light no recibe soporte en la versión v0.12.x
 
 * Se han resuelto varias vulnerabilidades de seguridad:
@@ -198,9 +210,9 @@ Además, hemos reformado la característica de gestión de apps del paquete de c
 
 ##  2 de abril de 2015: se ha actualizado el paquete de compilación Node.js v1.15-20150331-2231
 
-* El paquete de compilación Node.js ahora incluye tres nuevas funciones para ayudar a desarrollar en Bluemix con la misma rapidez con la que desarrollaría en el escritorio, sin necesidad de volver a implementar.
+* El paquete de compilación de Node.js ahora incluye tres nuevas funciones para ayudar a desarrollar en {{site.data.keyword.Bluemix_notm}} de la misma forma que en el escritorio, sin necesidad de volver a implementar
   * Sincronización del escritorio: sincronice cualquier árbol de escritorio (Windows) en un espacio de trabajo de proyectos basado en la nube
-  * Edición en directo: le permite realizar cambios en una aplicación Node.js que se ejecute en Bluemix y probarlos directamente en el navegador.
+  * Edición en directo: le permite realizar cambios en una aplicación Node.js que se ejecute en {{site.data.keyword.Bluemix_notm}} y probarlos directamente en el navegador.
   * Depuración: conéctese mediante shell a su entorno e inicie la depuración. Puede editar dinámicamente código, insertar puntos de interrupción, examinar el código, reiniciar el tiempo de ejecución y más utilizando el depurador del inspector de nodos
   * Consulte [App Management](/docs/manageapps/app_mng.html#Utilities) para obtener más información.
 * Hemos integrado los últimos cambios del [paquete de compilación Node.jgs de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Este cambio incluye varias correcciones y mejoras realizadas por la comunidad.
@@ -208,7 +220,7 @@ Además, hemos reformado la característica de gestión de apps del paquete de c
 
 ## 5 de enero de 2015: se ha actualizado el paquete de compilación Node.js v1.9.1-20141208-1221
 
-* El paquete de compilación Node.js ahora incluye soporte para la configuración dinámica de registros. Con este soporte, los desarrolladores pueden cambiar dinámicamente el nivel de registro de su aplicación si dicha aplicación utiliza módulos log4js, bunyan o ibmbluemix para el registro.
+* El paquete de compilación Node.js ahora incluye soporte para la configuración dinámica de registros. Con este soporte, los desarrolladores pueden cambiar dinámicamente el nivel de registro de su aplicación si dicha aplicación utiliza módulos log4js, bunyan o ibm{{site.data.keyword.Bluemix_notm}} para el registro.
 * El paquete de compilación Node.js se suministra ahora con [IBM SDK for Node.js v0.10.33](https://developer.ibm.com/node/sdk/). Esta actualización incluye arreglos para el problema de POODLE.
 
 ## 23 de octubre de 2014: Se ha actualizado el paquete de compilación de Node.js v1.6-20141013-1736

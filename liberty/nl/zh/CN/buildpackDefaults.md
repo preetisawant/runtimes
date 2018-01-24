@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-06-10"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-06-10"
 # buildpack 缺省值
 {: #buildpack_defauts}
 
-Liberty buildpack 在 Bluemix 中会频繁更新。每个发行版都可能包含安全修订或增强功能。
+Liberty buildpack 在 {{site.data.keyword.Bluemix}} 中会频繁更新。每个发行版都可能包含安全修订或增强功能。
 
 对于 WAR 或 EAR 应用程序的 Java 版本或 Liberty 功能集等设置，buildpack 具有缺省值。其中一些缺省值可能会在不同 buildpack 发行版中有所更改，这可能会对应用程序产生不利影响。要阻止应用程序受 buildpack 缺省值更改的影响，可对应用程序执行一些配置步骤，以避免其依赖 buildpack 缺省值。
 
@@ -54,4 +54,4 @@ buildpack 为应用程序提供了缺省 JRE。JRE 的主版本或次版本可�
 ## 常规
 {: #general notoc}
 * [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 概要文件概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

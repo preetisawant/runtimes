@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-31"
 ## Fichiers journaux
 {: #log_files}
 
-Les journaux Liberty standard, tels que le fichier `messages.log` ou le répertoire `ffdc`, sont disponibles dans IBM Bluemix, dans le répertoire `logs` de chaque instance d'application. Vous pouvez accéder à ces journaux à partir de la console IBM Bluemix ou à via le client de ligne de commande pour Cloud Foundry. Par exemple :
+Les journaux Liberty standard, tels que le fichier `messages.log` ou le répertoire `ffdc`, sont disponibles dans {{site.data.keyword.Bluemix}}, dans le répertoire `logs` de chaque instance d'application. Vous pouvez accéder à ces journaux à partir de la console {{site.data.keyword.Bluemix_notm}} ou à via le client de ligne de commande pour Cloud Foundry. Par exemple :
 
 * Pour accéder aux journaux récents d'une application, exécutez la commande suivante :
 
@@ -41,14 +41,12 @@ Les journaux Liberty standard, tels que le fichier `messages.log` ou le réperto
 
 Vous
 pouvez définir le niveau de journalisation et d'autres options de trace dans
-le fichier de configuration de Liberty. Pour plus d'informations, voir
-[Profil
-Liberty : trace et journalisation](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). Vous pouvez également ajuster le traçage sur une instance d'application en cours d'exécution à l'aide de la console IBM Bluemix.
+le fichier de configuration de Liberty. Pour plus d'informations, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). Vous pouvez également ajuster le traçage sur une instance d'application en cours d'exécution à l'aide de la console {{site.data.keyword.Bluemix_notm}}.
 
 ## Utilisation des fonctions de trace et de vidage
 {: #using_trace_and_dump}
 
-Vous pouvez ajuster la configuration de traçage Liberty pour une application en cours d'exécution en procédant directement à partir de la console IBM Bluemix. La console offre aussi la possibilité de demander un vidage des unités d'exécution (threads) ou du segment de mémoire (heap). Pour ajuster la configuration de traçage ou demander un vidage, sélectionnez une application Liberty dans la console Bluemix et choisissez le menu `Exécution` dans la navigation. Dans la vue `Exécution`, sélectionnez une instance et cliquez sur le bouton *TRACE* ou *VIDAGE*. Si vous ajustez le niveau de trace, consultez [Profil Liberty : trace et journalisation](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) pour les détails concernant la syntaxe de la spécification de trace.
+Vous pouvez ajuster la configuration de traçage Liberty pour une application en cours d'exécution en procédant directement à partir de la console {{site.data.keyword.Bluemix_notm}}. La console offre aussi la possibilité de demander un vidage des unités d'exécution (threads) ou du segment de mémoire (heap). Pour ajuster la configuration de traçage ou demander un vidage, sélectionnez une application Liberty dans la console {{site.data.keyword.Bluemix_notm}} et choisissez le menu `Exécution` dans la navigation. Dans la vue `Exécution`, sélectionnez une instance et cliquez sur le bouton *TRACE* ou *VIDAGE*. Si vous ajustez le niveau de trace, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) pour les détails concernant la syntaxe de la spécification de trace.
 
 ### Modification de la configuration de la fonction de trace via SSH dans Diego
 
@@ -56,9 +54,9 @@ Dans le cas d'une application Liberty s'exécutant dans une cellule Diego, vous 
 
 L'application envoyée par push doit inclure un fichier server.xml qui contient **updateTrigger** avec la valeur **polled**, les modifications de la spécification de traçage dans le fichier server.xml seront ensuite détectées et appliquées par l'environnement d'exécution.
 
-Voir [Options pour l'envoi par commande push d'applications Liberty avec server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) pour connaître les options permettant d'envoyer les applications Liberty par commande push avec un fichier server.xml personnalisé.
+Consultez [Options pour l'envoi par commande push d'applications Liberty avec server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) pour connaître les options permettant d'envoyer les applications Liberty par commande push avec un fichier server.xml personnalisé.
 
-Voir [Contrôle des mises à jour dynamiques![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} pour savoir comment configurer des mises à jour dynamiques dans le fichier server.xml.
+Consultez [Contrôle des mises à jour dynamiques](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} pour savoir comment configurer des mises à jour dynamiques dans le fichier server.xml.
 
 Pour modifier la configuration de traçage, procédez comme suit :
 
@@ -78,7 +76,7 @@ $ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 Remarque : Les modifications du fichier server.xml seront perdues lors d'une reconstitution ou d'un redémarrage et ne seront valides que pour l'instance à laquelle vous vous êtes connecté avec ssh.
 
-Voir [Profil Liberty : Journalisation et trace ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} pour obtenir des détails sur la syntaxe de la spécification de trace.
+Consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} pour les détails concernant la syntaxe de la spécification de trace.
 
 ### Déclenchement de vidage via SSL dans Diego
 
@@ -142,11 +140,11 @@ Dans le cas d'une application lancée dans une cellule Diego, utilisez la foncti
   ```
   {: codeblock}
 
-Il est aussi possible d'utiliser `scp` et d'autres outils similaires pour voir et télécharger les fichiers de vidage. Pour plus d'informations, consultez [Accessing Apps with SSH![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html).
+Il est aussi possible d'utiliser `scp` et d'autres outils similaires pour voir et télécharger les fichiers de vidage. Pour plus d'informations, consultez [Accessing Apps with SSH![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html).
 
 # rellinks
 {: #rellinks notoc}
 ## general
 {: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Présentation de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

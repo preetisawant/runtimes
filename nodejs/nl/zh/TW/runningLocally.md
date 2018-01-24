@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,13 +14,14 @@ lastupdated: "2017-05-30"
 # 在本端執行 Node.js 應用程式
 {: #hints}
 
-使用此資訊，以協助在本端和 {{site.data.keyword.Bluemix}} 上執行 Node.js 應用程式。
+設定要在本端執行 Node.js 應用程式的埠號，以致當您在 {{site.data.keyword.Bluemix}} 執行它時，不會產生衝突。
 {: shortdesc}
 
-下列範例顯示 **js** 檔案的部分原始碼：
+當應用程式在 {{site.data.keyword.Bluemix_notm}} 上執行，PORT 環境變數是由 Cloud Foundry 配置。不過，當應用程式在本端執行時，不會定義 PORT，因此您可以針對應用程式定義埠。若要避免衝突，請定義應用程式在本端接聽的埠，不同於 {{site.data.keyword.Bluemix_notm}} 所使用的埠。
+
+在 **js** 檔案的下列範例中，會使用 **3000** 作為埠號。藉由使用 **3000**，您可以在本端（若是進行測試）以及在 {{site.data.keyword.Bluemix_notm}} 上執行應用程式，而不必做進一步的變更。
+
 ```
 var port = (process.env.PORT || 3000);
 ```
 {: codeblock}
-
-使用此程式碼，當應用程式在 Bluemix 上執行時，PORT 環境變數包含的埠值是 Bluemix 的內部值，應用程式藉此來接聽送入的連線。當應用程式在本端執行時，不會定義 PORT，因此會使用 **3000** 作為埠號。透過此撰寫方式，您可以在本端（若是進行測試）以及在 Bluemix 上執行應用程式，而不必做進一步的變更。

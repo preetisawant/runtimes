@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -55,7 +55,7 @@ Weitere Informationen zu den gebundenen Servicetypen finden Sie in [Automatische
 ## Konfigurationszeilengruppen der Datei 'server.xml' generieren oder aktualisieren
 {: #generating_or_updating_serverxml}
 
-Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen, generiert das Liberty-Buildpack die Stanza 'server.xml' für Bluemix wie in [Options for Pushing Liberty Applications](optionsForPushing.html#options_for_pushing) beschrieben. Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen und an containerverwaltete Services binden, generiert das Liberty-Buildpack die erforderlichen Zeilengruppen der Datei 'server.xml' für die gebundenen Services.
+Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen, generiert das Liberty-Buildpack die Stanza 'server.xml' für {{site.data.keyword.Bluemix_notm}} wie in [Options for Pushing Liberty Applications](optionsForPushing.html#options_for_pushing) beschrieben. Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen und an containerverwaltete Services binden, generiert das Liberty-Buildpack die erforderlichen Zeilengruppen der Datei 'server.xml' für die gebundenen Services.
 
 Bei Angabe einer Datei 'server.xml' und der Bindung an containerverwaltete Services führt das Liberty-Buildpack die folgenden Aktionen aus:
 
@@ -124,15 +124,14 @@ Beispiele für die Konfiguration der Umgebungsvariablen 'services_autoconfig_exc
 {: #override_service_config}
 
 In einigen Fällen ist es möglicherweise wünschenswert, die Standardkonfiguration für einen Service, die von der automatischen Konfiguration erstellt wurde, zu überschreiben.
-Dies kann mithilfe der Umgebungsvariablen **LBP_SERVICE_CONFIG_xxxx** erfolgen, wobei 'xxxx' der Name des Service in Großbuchstaben ist.
-Um beispielsweise die Standardversion des Service *mysql* zu überschreiben und diesen auf Version 1.4.+ festzulegen, geben Sie einen Befehl wie den folgenden aus: 
+Dies kann mithilfe der Umgebungsvariablen **LBP_SERVICE_CONFIG_xxxx** erfolgen, wobei 'xxxx' der Name des Service in Großbuchstaben ist.  Um beispielsweise die Standardversion des Service *mysql* zu überschreiben und diesen auf Version 1.4.+ festzulegen, geben Sie einen Befehl wie den folgenden aus:
 
 ```
     $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
 ```
 {: codeblock}
 
-Die folgende Tabelle zeigt die Syntax für das Überschreiben einiger Servicekonfigurationsoptionen: 
+Die folgende Tabelle zeigt die Syntax für das Überschreiben einiger Servicekonfigurationsoptionen:
 
 <table>
 <tr>

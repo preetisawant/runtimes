@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,11 +14,11 @@ lastupdated: "2017-05-31"
 
 应用程序在 Liberty buildpack 提供和配置的 Java 运行时环境 (JRE) 中运行。通过 Liberty buildpack，还可以配置 JRE 版本或类型，定制 JVM 选项或覆盖 JRE 功能。
 
-## IBM JRE
+## {{site.data.keyword.IBM_notm}} JRE
 
-缺省情况下，应用程序配置为使用 IBM JRE 的轻量级版本运行。此轻量级 JRE 已精简为只提供必要的核心功能，使用的磁盘和内存占用量都大幅减少。有关轻量级 JRE 内容的更多信息，请参阅 [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
+缺省情况下，应用程序配置为使用 {{site.data.keyword.IBM}} JRE 的轻量级版本运行。此轻量级 JRE 已精简为只提供必要的核心功能，使用的磁盘和内存占用量都大幅减少。有关轻量级 JRE 内容的更多信息，请参阅 [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
 
-缺省情况下，将使用 IBM JRE V8。使用 JBP_CONFIG_IBMJDK 环境变量可指定 IBM JRE 的替代版本。例如，要使用最新版本的 IBM JRE 7.1，请设置以下环境变量：
+ 缺省情况下，将使用 {{site.data.keyword.IBM_notm}} JRE V8。使用 JBP_CONFIG_IBMJDK 环境变量可指定 {{site.data.keyword.IBM_notm}} JRE 的替代版本。例如，要使用最新版本的 {{site.data.keyword.IBM_notm}} JRE 7.1，请设置以下环境变量：
 
 ```
 $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
@@ -63,16 +63,16 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
   * 应用程序的内存限制，如[内存限制和 Liberty buildpack](memoryLimits.html#memory_limits) 中所述
   * JRE 类型（因为 JVM 的堆相关选项随 JRE 支持的选项不同而不同）。
 
-* [Bluemix 中支持的 Liberty 功能](libertyFeatures.html#libertyfeatures)。
-  * Bluemix 中不支持两阶段落实全局数据库事务，因此已通过设置 -Dcom.ibm.tx.jta.disable2PC=true 禁用该功能。
+* [{{site.data.keyword.Bluemix_notm}} 中支持的 Liberty 功能](libertyFeatures.html#libertyfeatures)。
+  * {{site.data.keyword.Bluemix_notm}} 中不支持两阶段落实全局数据库事务，因此已通过设置 -Dcom.ibm.tx.jta.disable2PC=true 禁用该功能。
 
-* Bluemix 环境。
+* {{site.data.keyword.Bluemix_notm}} 环境。
 
-  配置 JVM 选项的目的是优化 Bluemix 环境并协助诊断与内存相关的错误状况。
+    配置 JVM 选项的目的是优化 {{site.data.keyword.Bluemix_notm}} 环境和协助诊断内存相关的错误状况。
   * 通过在应用程序内存耗尽时禁用 JVM 转储选项和终止进程来配置应用程序的快速故障恢复。
-  * 虚拟化调整（仅限 IBM JRE）。
+  * 虚拟化调整（仅限 {{site.data.keyword.IBM_notm}} JRE）。
   * 将发生故障时应用程序的可用内存资源相关信息路由到 Loggregator。
-  * 如果应用程序已配置为启用 JVM 内存转储，那么会禁用 Java 进程终止功能，并会将 JVM 内存转储路由到通用应用程序“dumps”目录。然后，可以从 Bluemix 仪表板或 CF CLI 来查看这些转储。
+  * 如果应用程序已配置为启用 JVM 内存转储，那么会禁用 Java 进程终止功能，并会将 JVM 内存转储路由到通用应用程序“dumps”目录。然后，可以从 {{site.data.keyword.Bluemix_notm}} 仪表板或 Cloud Foundry CLI 来查看这些转储。
 
 下面是缺省 JVM 配置的示例，它是由 buildpack 为使用 512M 内存限制部署的应用程序生成的：
 
@@ -101,7 +101,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 </tr>
 
 <tr>
-<td>IBM JRE</td>
+<td> {{site.data.keyword.IBM_notm}} JRE</td>
 <td>包含运行时选项（前缀为 -X），任何 Java 系统属性（前缀为 -D），不建议随意使用 -XX（这些选项可能会更改）
 </td>
 <td>[V8 命令行选项](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html)，[V7 命令行选项](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
@@ -115,7 +115,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 </tr>
 </table>
 
-需要定制 JVM 选项的应用程序可以将该选项设置为 Bluemix 中的环境变量 IBM_JAVA_OPTIONS、JAVA_OPTS 或 JVM_ARGS 其中某一个的值。有关如何设置应用程序的环境变量的信息，请参阅“环境变量”部分。打包服务器或服务器目录还可以包含含有命令行选项的 jvm.options 文件，而不设置环境变量。
+需要定制 JVM 选项的应用程序可以将该选项设置为 {{site.data.keyword.Bluemix_notm}} 中的环境变量 IBM_JAVA_OPTIONS、JAVA_OPTS 或 JVM_ARGS 其中某一个的值。有关如何设置应用程序的环境变量的信息，请参阅“环境变量”部分。打包服务器或服务器目录还可以包含含有命令行选项的 jvm.options 文件，而不设置环境变量。
 
 将 JVM 选项应用到 JRE 时，会先应用 Liberty buildpack 的缺省选项，然后应用定制选项。以特定顺序附加定制选项，即表中列出的顺序。各 Java 选项的应用顺序将决定其优先顺序。最后应用的选项的优先顺序高于之前应用的选项。
 
@@ -134,7 +134,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 <tr>
 <td>1</td>
 <td>IBM_JAVA_OPTIONS</td>
-<td>IBM JRE 支持的环境变量</td>
+<td>{{site.data.keyword.IBM_notm}} JRE 支持的环境变量</td>
 <td>所有</td>
 <td>重新启动或重新编译打包应用程序</td>
 <td>否</td>
@@ -171,7 +171,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 ### 确定运行中应用程序的已应用 JVM 选项
 {: #determining_applied_jvm_options}
 
-除了使用 JVM_ARGS 环境变量指定的应用程序定义选项之外，生成的选项会作为命令行选项（独立 Java 应用程序）或在 `jvm.options` 文件中（非独立 Java 应用程序）持久存储在运行时环境中。针对应用程序应用的 JVM 选项可以通过 IBM Bluemix 仪表板或 CF CLI 进行查看。
+除了使用 JVM_ARGS 环境变量指定的应用程序定义选项之外，生成的选项会作为命令行选项（独立 Java 应用程序）或在 `jvm.options` 文件中（非独立 Java 应用程序）持久存储在运行时环境中。针对应用程序应用的 JVM 选项可以从 {{site.data.keyword.Bluemix_notm}} 控制台或 Cloud Foundry CLI 进行查看。
 
 独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。这些选项可在 `staging_info.yml` 文件中进行查看。
 
@@ -209,7 +209,7 @@ $ cf files myapp staging_info.yml
 #### 用法示例
 {: #example_usage}
 
-使用定制 JVM 选项部署应用程序以启用 IBM JRE 详细垃圾回收日志记录：
+使用定制 JVM 选项部署应用程序以启用 {{site.data.keyword.IBM_notm}} JRE 详细垃圾回收日志记录：
 * 应用程序的 `manifest.yml` 文件中包含的 JVM 选项：
 
 ```
@@ -232,7 +232,7 @@ $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-* 要更新已部署应用程序的 IBM JRE 选项以在发生 OutOfMemory（内存不足）状况时触发 heap、snap 和 javacore，请使用 JVM 选项设置应用程序的环境变量，然后重新启动应用程序：
+* 要更新已部署应用程序的 {{site.data.keyword.IBM_notm}} JRE 选项以在发生 OutOfMemory（内存不足）状况时触发 heap、snap 和 javacore，请使用 JVM 选项设置应用程序的环境变量，然后重新启动应用程序：
 
 ```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'

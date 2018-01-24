@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2017-05-31"
 # Utilizar las características beta
 {: #using_beta_features}
 
-Las funciones beta de Liberty proporcionan un acceso previo a las nuevas funciones y modelos de programación que quizás se incluyan en un futuro release de Liberty. La mayoría de las funciones beta también se pueden utilizar en las aplicaciones desplegadas en Bluemix.
+Las funciones beta de Liberty proporcionan un acceso previo a las nuevas funciones y modelos de programación que quizás se incluyan en un futuro release de Liberty. La mayoría de las funciones beta también se pueden utilizar en las aplicaciones desplegadas en {{site.data.keyword.Bluemix}}.
 
 **Importante**: Las funciones beta están pensadas para entornos de desarrollo y prueba y no se deben utilizar en producción. Para ver las condiciones de uso completas, consulte el [ acuerdo de licencia beta ](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
 
-Características beta de Liberty disponibles en Bluemix
+Características beta de Liberty disponibles en {{site.data.keyword.Bluemix_notm}}
 <table>
 <tr>
 <th align="left">Característica</th>
@@ -33,7 +33,7 @@ Características beta de Liberty disponibles en Bluemix
 </tr>
 </table>
 
-Para poder utilizar las funciones beta de Liberty en Bluemix, debe hacer lo siguiente:
+Para poder utilizar las funciones beta de Liberty en {{site.data.keyword.Bluemix_notm}}, debe hacer lo siguiente:
 
 1. [Desplegar un directorio del servidor o un servidor empaquetado](optionsForPushing.html) con una o varias funciones beta habilitadas en el archivo server.xml como en el ejemplo siguiente:
 ```

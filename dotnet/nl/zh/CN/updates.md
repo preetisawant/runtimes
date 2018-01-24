@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-25"
-
+lastupdated: "2017-10-06"
 ---
 
 {:new_window: target="_blank"}
@@ -14,6 +13,18 @@ lastupdated: "2017-07-25"
 
 
 aspnet buildpack 中最新更新的列表。
+
+## 2017 年 10 月 6 日：更新了 ASP.NET 核心 buildpack V1.0.26-20170913-1346
+* 添加对 .NET 核心运行时 2.0.0 的支持
+* 添加对 .NET 核心 SDK 1.1.0 的支持
+* 添加对 .NET 核心 SDK 2.0.0 的支持
+* 除去对 .NET 核心 SDK 1.1.0-preview1-005051 的支持
+* 除去对 .NET 核心 SDK 2.0.0-preview1-005977 的支持
+* 除去对 .NET 核心运行时 1.0.3 的支持
+* 除去对 .NET 核心运行时 1.1.0 的支持
+* 将 Node 版本更新为 6.11.2
+* 将缺省 .NET 核心 SDK 更改为 2.0.0
+* 将 F# 项目的缺省 .NET 核心 SDK 更改为 1.1.0
 
 ## 2017 年 7 月 24 日：更新了 ASP.NET 核心 buildpack V1.0.22-20170724-0813 
 

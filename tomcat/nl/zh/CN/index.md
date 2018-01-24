@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-06-20"
 {{site.data.keyword.Bluemix}} 上的 Tomcat 运行时由 java_buildpack 提供技术支持。
 {: shortdesc}
 
-要在 {{site.data.keyword.Bluemix}} 上使用 Tomcat 运行时，必须使用 -b 选项指定 java_buildpack。例如：
+要在 {{site.data.keyword.Bluemix_notm}} 上使用 Tomcat 运行时，必须使用 -b 选项指定 java_buildpack。例如：
 <pre>
     cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
 </pre>
@@ -28,7 +28,7 @@ lastupdated: "2017-06-20"
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了 Tomcat 入门模板应用程序。Tomcat 入门模板应用程序是一个简单的 Tomcat 应用程序，它提供了一个可供您使用的模板。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 Bluemix 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供了 Tomcat 入门模板应用程序。Tomcat 入门模板应用程序是一个简单的 Tomcat 应用程序，它提供了一个可供您使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)。
 
 ## 运行时版本
 {: #runtime_versions}
@@ -39,18 +39,18 @@ lastupdated: "2017-06-20"
 ```
 env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
-        JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
+        JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-当前的 java_buildpack 版本为 V3.13，其中包含缺省 Tomcat V8.0.41 和缺省 Java V1.8.0_121。有关更多信息，请参阅 [java-buildpack 发行版](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13)。
+当前的 java_buildpack 版本为 V3.19，其中包含缺省 Tomcat V8.0.45 和缺省 Java V1.8.0_141。有关更多信息，请参阅 [java-buildpack 发行版](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13)。
 
 ## HTTPS 重定向
 {: #https_redirect}
 
-Tomcat 运行时可以配置为信任 Bluemix 内部代理，并允许将 HTTP 流量重定向为 HTTPS (SSL)。
+Tomcat 运行时可以配置为信任 {{site.data.keyword.Bluemix_notm}} 内部代理，并允许将 HTTP 流量重定向为 HTTPS (SSL)。
 要执行该操作，请修改 server.xml 文件，使用 internalProxies 和 protocolHeader 选项设置 RemoteIpValve Valve 元素。
 
-该 buildpack 中包含的 Tomcat 运行时 [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml)在缺省情况下，仅设置 RemoteIpValve Valve 元素的 protocolHeader。要在 Bluemix 中将 HTTP 流量重定向为 HTTPS，请在定制 server.xml 中如下配置 RemoteIpValve 元素：
+该 buildpack 中包含的 Tomcat 运行时 [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml)在缺省情况下，仅设置 RemoteIpValve Valve 元素的 protocolHeader。要在 {{site.data.keyword.Bluemix_notm}} 中将 HTTP 流量重定向为 HTTPS，请在定制 server.xml 中如下配置 RemoteIpValve 元素：
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />

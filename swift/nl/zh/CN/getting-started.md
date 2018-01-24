@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2017-09-06"
 
 * {: download} 恭喜您，您已在 {{site.data.keyword.Bluemix}} 上部署了 Hello World 样本应用程序！要开始使用，请按照本逐步指南进行操作。或者，<a class="xref" href="http://bluemix.net" target="_blank" title="（下载样本代码）"><img class="hidden" src="../../images/btn_starter-code.svg" alt="下载应用程序代码" />下载样本代码</a>并自行探究。
 
-按照本教程，设置开发环境，在本地以及在 {{site.data.keyword.Bluemix}} 上部署应用程序，在应用程序中集成 {{site.data.keyword.Bluemix}} 数据库服务。
+按照本教程，设置开发环境，在本地以及在 {{site.data.keyword.Bluemix}} 上部署应用程序，在应用程序中集成 {{site.data.keyword.Bluemix_notm}} 数据库服务。
 
 ## 在开始之前
 {: #prereqs}
@@ -65,7 +65,7 @@ swift build
 ```
 Server is listening on port: 8080
 ```
-{: screen}
+{: codeblock}
 
 在 http://localhost:8080 中查看您的应用程序
 
@@ -103,12 +103,14 @@ cf api <API-endpoint>
 
 将命令中的 *API-endpoint* 替换为以下列表中的 API 端点。
 
-|区域          |API 端点|
-|:---------------|:-------------------------------|
-| 美国南部| https://api.ng.bluemix.net|
-| 英国          | https://api.eu-gb.bluemix.net|
-| 悉尼  | https://api.au-syd.bluemix.net|
-| 法兰克福| https://api.eu-de.bluemix.net | 
+| **区域名称** | **地理位置** | **API 端点** |
+|-----------------|-------------------------|-------------------|
+| 美国南部区域 | 美国达拉斯 | api.ng.bluemix.net |
+| 美国东部区域 | 美国华盛顿特区 | api.us-east.bluemix.net |
+| 英国区域 | 英国伦敦 | api.eu-gb.bluemix.net |
+| 悉尼区域 | 澳大利亚悉尼 | api.au-syd.bluemix.net |
+| 德国区域 | 德国法兰克福 | api.eu-de.bluemix.net |
+{: caption="表 1. {{site.data.keyword.cloud_notm}} 区域列表" caption-side="top"}
 
 登录到您的 {{site.data.keyword.Bluemix_notm}} 帐户
 
@@ -116,7 +118,7 @@ cf api <API-endpoint>
 cf login
 ```
    {: pre}
-   
+
 如果因为是联合用户标识而无法使用 `cf login` 或 `bx login` 命令登录，请使用 `cf login --sso` 或 `bx login --sso` 命令用单点登录标识登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
 
 从 *get-started-swift* 目录中，将应用程序推送到 {{site.data.keyword.Bluemix_notm}}
@@ -135,9 +137,9 @@ cf push
 接下来，我们要将 NoSQL 数据库添加到此应用程序并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
 1. 在浏览器中登录到 {{site.data.keyword.Bluemix_notm}}。浏览至`仪表板`。通过在`名称`列中单击应用程序的名称以选择该应用程序。
-2. 单击`连接`，然后单击`连接新项`。
+2. 单击`连接`，然后单击`创建连接`。
 3. 在`数据和分析`部分中，选择 `Cloudant NoSQL DB`
-4. 选择定价套餐。Bluemix 提供了免费的 `Lite` 套餐，其中包含精选的一组云服务，并提供了入门所需的足够容量
+4. 选择定价套餐。{{site.data.keyword.Bluemix_notm}} 提供了免费的 `Lite` 套餐，其中包含精选的一组云服务，并提供了入门所需的足够容量
 5. 出现提示时，选择`重新编译打包`。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
 
 通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。[了解更多...](/docs/manageapps/depapps.html#app_env)
@@ -148,31 +150,34 @@ cf push
 
 现在，我们将更新本地代码以指向此数据库。创建 JSON 文件，以用于存储应用程序将使用的服务的凭证。仅当应用程序在本地运行时，才会使用此文件。在 {{site.data.keyword.Bluemix_notm}} 中运行时，将从 VCAP_SERVICES 环境变量中读取凭证。
 
-在 `Sources` 目录中，创建名为 `config.json` 的文件并包含以下内容（请参阅 config.json.example）：
+在 `config` 目录中，创建名为 `my-cloudant-credentials.json` 的文件并包含以下内容（请参阅 `config/my-cloudant-credentials.json.example` 作为参考）：
+
  ```
  {
-    "vcap":{
-       "services":{
-          "cloudantNoSQLDB":[
-             {
-                "credentials":{
-                   "host":"<host>",
-                   "password":"<password>",
-                   "port":443,
-                   "url":"<url>",
-                   "username":"<username>"
-                },
-                "label":"cloudantNoSQLDB",
-                "name": "CloudantService"
-             }
-          ]
-       }
-    }
+   "password": "<password>",
+   "url": "<url>",
+   "username": "<username>"
  }
  ```
-{: pre}
 
-此样本应用程序使用 Swift-cfenv 软件包与 Bluemix 进行交互，以解析环境变量。[了解更多...](https://packagecatalog.com/package/IBM-Swift/Swift-cfenv)
+更新 `config` 目录中的 `mappings.json` 文件，方法是将 `cloudant` 占位符替换为数据库实例的 **name**：
+
+```
+{
+  "MyCloudantDB": {
+    "searchPatterns": [
+      "cloudfoundry:cloudant",
+      "env:kube-cloudant-credentials",
+      "file:config/my-cloudant-credentials.json"
+    ]
+  }
+}
+```
+
+此样本应用程序使用 `CloudEnvironment` 软件包与 {{site.data.keyword.Bluemix_notm}} 进行交互，以解析环境变量。[了解更多...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+
+使用 `cloudfoundry:cloudant` 配置中的 `cloudant` 占位符，可以更轻松地将用户提供的 Cloudant 服务绑定到应用程序。使用 `cloudfoundry:cloudant` 配置，可创建在服务名称中包含字符串 `cloudant` 的 Cloudant 服务，而无需编辑 `config.json` 文件。如果修改此配置，并在稍后想要使用用户提供的 Cloudant 服务，您需要编辑 `cloudfoundry:cloudant` 的配置或使用用户提供的服务名称定义 `cloudfoundry:`。
+{: tip}
 
 返回到 {{site.data.keyword.Bluemix_notm}} UI，选择“应用程序”->“连接”-> Cloudant ->“查看凭证”
 
@@ -190,7 +195,18 @@ swift build
  {: pre}
 
 查看应用程序：http://localhost:8080。现在，输入到应用程序中的所有名称都已添加到数据库。此样本应用程序使用 Kitura-CouchDB 软件包与 Cloudant 进行交互。[了解更多...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
-{: tip}
+执行所需的任何更改，然后重新部署到 {{site.data.keyword.Bluemix_notm}}！
 
-本地应用程序和 {{site.data.keyword.Bluemix_notm}} 应用程序共享该数据库。通过上面 push 命令输出中列出的 URL 查看 {{site.data.keyword.Bluemix_notm}} 应用程序。在刷新浏览器后，从任一应用程序添加的名称都应该会同时出现在这两个应用程序中。请记住，如果无需应用程序继续运行，请将其停止，这样就不会发生任何意外的费用。
+ ```
+ cf app push
+ ```
+
+ 通过 push 命令输出中列出的 URL 查看应用程序，例如，*myUrl.mybluemix.net*。
+
+请记住，如果无需应用程序继续运行，请将其停止，这样就不会发生任何意外的费用。
 {: tip}
+## Next Steps
+
+* [Tutorials](/docs/tutorials/index.html)
+* [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

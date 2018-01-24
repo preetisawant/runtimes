@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -57,7 +57,7 @@ Cuando especifica la memoria de almacenamiento dinámico utilizando variables de
 ### Especificación de la memoria de almacenamiento dinámico
 {: #specifying_heap_memory}
 
-Puede establecer el tamaño de la memoria de almacenamiento dinámico utilizando variables de entorno o cambiando el archivo `jvm.options`. Si utiliza las variables de entorno `JVM_ARGS` o `JBP_CONFIG_IBMJDK`, los cambios entrarán en vigor cuando envíe por push la aplicación a Bluemix. Al cambiar el archivo `jvm.options`, el efecto en la configuración del tamaño de almacenamiento dinámico también se puede probar localmente.
+Puede establecer el tamaño de la memoria de almacenamiento dinámico utilizando variables de entorno o cambiando el archivo `jvm.options`. Si utiliza las variables de entorno `JVM_ARGS` o `JBP_CONFIG_IBMJDK`, los cambios entrarán en vigor cuando envíe por push la aplicación a {{site.data.keyword.Bluemix_notm}}. Al cambiar el archivo `jvm.options`, el efecto en la configuración del tamaño de almacenamiento dinámico también se puede probar localmente.
 
 * Utilice la variable de entorno `JVM_ARGS` y el argumento -Xmx. Por ejemplo, para establecer el tamaño máximo de memoria de almacenamiento dinámico en 512 M utilice el mandato siguiente y luego vuelva a transferir la app.
 

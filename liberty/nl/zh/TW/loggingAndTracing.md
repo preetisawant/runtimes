@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-31"
 ## 日誌檔
 {: #log_files}
 
-IBM Bluemix 中提供標準 Liberty 日誌，例如 `messages.log` 或 `ffdc` 目錄，它們位於每一個應用程式實例的 `logs` 目錄中。這些日誌可以從 IBM Bluemix 主控台或透過 CF CLI 進行存取。例如：
+{{site.data.keyword.Bluemix}} 中提供標準 Liberty 日誌，例如 `messages.log` 或 `ffdc` 目錄，它們位於每一個應用程式實例的 `logs` 目錄中。這些日誌可以從 {{site.data.keyword.Bluemix_notm}} 主控台或透過 Cloud Foundry CLI 進行存取。例如：
 
 * 若要存取應用程式的最新日誌，請執行下列指令：
 
@@ -39,12 +39,12 @@ IBM Bluemix 中提供標準 Liberty 日誌，例如 `messages.log` 或 `ffdc` �
   ```
   {: codeblock}
 
-您可以透過 Liberty 配置檔來設定記載層次和其他追蹤選項。如需相關資訊，請參閱 [Liberty 設定檔：記載和追蹤](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html)。也可以使用 IBM Bluemix 主控台，在執行中的應用程式實例調整追蹤。
+您可以透過 Liberty 配置檔來設定記載層次和其他追蹤選項。如需相關資訊，請參閱[疑難排解 Liberty：記載和追蹤](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html)。也可以使用 {{site.data.keyword.Bluemix_notm}} 主控台，在執行中的應用程式實例調整追蹤。
 
 ## 使用追蹤及傾出功能
 {: #using_trace_and_dump}
 
-您可以直接從 IBM Bluemix 主控台調整執行中應用程式的 Liberty 追蹤配置。此主控台也會提供要求與下載執行緒及資料堆傾出的功能。若要調整追蹤配置或要求傾出，請在 Bluemix 主控台中選取 Liberty 應用程式，然後選擇導覽中的「運行環境」功能表。在「運行環境」視圖中，選取實例，然後按*追蹤* 或*傾出* 按鈕。若要調整追蹤層次，請參閱 [Liberty 設定檔：記載和追蹤](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html)，以取得追蹤規格語法的詳細資料。
+您可以直接從 {{site.data.keyword.Bluemix_notm}} 主控台調整執行中應用程式的 Liberty 追蹤配置。此主控台也會提供要求與下載執行緒及資料堆傾出的功能。若要調整追蹤配置或要求傾出，請在 {{site.data.keyword.Bluemix_notm}} 主控台中選取 Liberty 應用程式，然後選擇導覽中的「運行環境」功能表。在「運行環境」視圖中，選取實例，然後按*追蹤* 或*傾出* 按鈕。若要調整追蹤層次，請參閱[疑難排解 Liberty：記載和追蹤](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html)，以取得追蹤規格語法的詳細資料。
 
 ### 在 Diego 中透過 SSH 變更追蹤配置
 
@@ -54,7 +54,7 @@ IBM Bluemix 中提供標準 Liberty 日誌，例如 `messages.log` 或 `ffdc` �
 
 如需使用自訂 server.xml 推送 Liberty 應用程式的選項，請參閱[使用 server.xml 推送 Liberty 應用程式](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)。
 
-如需如何在 server.xml 設定動態更新，請參閱[控制動態更新![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}。
+如需如何在 server.xml 設定動態更新，請參閱[控制動態更新](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}。
 
 若要變更追蹤配置，請遵循下列步驟：
 
@@ -65,7 +65,7 @@ $ cf ssh <appname> [-i instance_index]
   ```
   {: pre}
 
-2. 編輯 server.xml 中的 ```<logging traceSpecification="xxxx"/>```，以設定您想要的追蹤規格，例如使用 *vi*：
+2. 編輯 server.xml 中的 `<logging traceSpecification="xxxx"/>`，以設定您想要的追蹤規格，例如使用 *vi*：
 
   ```
 $ vi /app/wlp/usr/servers/defaultServer/server.xml
@@ -74,7 +74,7 @@ $ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 附註：server.xml 變更會在重新編譯打包或重新啟動時遺失，且只對您使用 ssh 進入的實例有效。
 
-如需追蹤規格語法的詳細資料，請參閱 [Liberty profile: Trace and logging ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}。
+如需追蹤規格語法的詳細資料，請參閱[疑難排解 Liberty：記載和追蹤](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}。
 
 ### 在 Diego 中透過 SSH 觸發傾出
 
@@ -144,4 +144,4 @@ $ cf ssh <appname> -c "pkill -3 java"
 ## 一般
 {: #general notoc}
 * [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

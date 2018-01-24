@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-09-06"
 
 * {: download} 恭喜您，您已在 {{site.data.keyword.Bluemix}} 上部署了 Hello World 样本应用程序！要开始使用，请按照本逐步指南进行操作。或者，<a class="xref" href="http://bluemix.net" target="_blank" title="（下载样本代码）"><img class="hidden" src="../../images/btn_starter-code.svg" alt="下载应用程序代码" />下载样本代码</a>并自行探究。
 
-按照 Python 入门教程，设置开发环境，在本地以及在 {{site.data.keyword.Bluemix}} 上部署应用程序，在应用程序中集成 {{site.data.keyword.Bluemix}} 数据库服务。
+按照 Python 入门教程，设置开发环境，在本地以及在 {{site.data.keyword.Bluemix}} 上部署应用程序，并在应用程序中集成数据库服务。
 
 ## 在开始之前
 {: #prereqs}
@@ -110,14 +110,16 @@ cf api <API-endpoint>
 
 将命令中的 *API-endpoint* 替换为以下列表中的 API 端点。
 
-|URL|区域          |
-|:-------------------------------|:---------------|
-|  https://api.ng.bluemix.net| 美国南部|
-| https://api.eu-gb.bluemix.net| 英国          |
-| https://api.au-syd.bluemix.net| 悉尼  |
-| https://api.eu-de.bluemix.net | 法兰克福|
+| **区域名称** | **地理位置** | **API 端点** |
+|-----------------|-------------------------|-------------------|
+| 美国南部区域 | 美国达拉斯 | api.ng.bluemix.net |
+| 美国东部区域 | 美国华盛顿特区 | api.us-east.bluemix.net |
+| 英国区域 | 英国伦敦 | api.eu-gb.bluemix.net |
+| 悉尼区域 | 澳大利亚悉尼 | api.au-syd.bluemix.net |
+| 德国区域 | 德国法兰克福 | api.eu-de.bluemix.net |
+{: caption="表 1. {{site.data.keyword.cloud_notm}} 区域列表" caption-side="top"}
 
-登录到您的 {{site.data.keyword.Bluemix_notm}} 帐户
+登录到 {{site.data.keyword.Bluemix_notm}} 帐户
 
   ```
 cf login
@@ -147,7 +149,7 @@ cf apps
 接下来，我们要将 NoSQL 数据库添加到此应用程序并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
 1. 在浏览器中登录到 {{site.data.keyword.Bluemix_notm}}。浏览至`仪表板`。通过在`名称`列中单击应用程序的名称以选择该应用程序。
-2. 单击`连接`，然后单击`连接新项`。
+2. 单击`连接`，然后单击`创建连接`。
 2. 在`数据和分析`部分中，选择 `Cloudant NoSQL DB`，然后`创建`该服务。
 3. 出现提示时，选择`重新编译打包`。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
 
@@ -193,3 +195,9 @@ python hello.py
 
 请记住，如果无需应用程序继续运行，请将其停止，这样就不会发生任何意外的费用。
 {: tip}
+
+## 后续步骤
+
+* [教程](/docs/tutorials/index.html)
+* [样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

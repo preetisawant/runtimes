@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -31,8 +31,8 @@ Liberty 应用程序无法启动，发生“无法开始接受连接”错误。
 ```
 {: #codeblock}
 
-Bluemix 在应用程序上执行运行状况检查，以查看其是否已成功启动。运行状况检查会测试应用程序是否在分配给应用程序的端口上进行侦听。此检查的缺省超时是 60 秒，一些应用程序可能超过 60 秒才能启动。
-应用程序可能需要更长时间才能启动的原因有多种。例如，绑定服务（如 [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) 或 [New Relic](/docs/runtimes/liberty/newRelic.html)）或者[启用调试器](/docs/manageapps/app_mng.html#debug)将增加启动时间。应用程序还可能会执行初始化步骤，这可能需要较长时间才能完成。
+{{site.data.keyword.Bluemix_notm}} 在应用程序上执行运行状况检查，以查看其是否已成功启动。运行状况检查会测试应用程序是否在分配给应用程序的端口上进行侦听。此检查的缺省超时是 60 秒，一些应用程序可能超过 60 秒才能启动。
+应用程序可能需要更长时间才能启动的原因有多种。例如，绑定服务（如 [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) 或 [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)）或者[启用调试器](/docs/manageapps/app_mng.html#debug)将增加启动时间。应用程序还可能会执行初始化步骤，这可能需要较长时间才能完成。
 {: tsCauses}
 
 首先，检查日志以查看是否存在任何明显的错误可能导致 Liberty 应用程序失败。如果找不到明显错误，请尝试以下内容：
@@ -54,7 +54,7 @@ Bluemix 在应用程序上执行运行状况检查，以查看其是否已成功
 
 ### **禁用 appstate 功能。**
 
-appstate 功能与 Bluemix 运行状况检查进程集成在一起，可确保 Liberty 应用程序经过完全初始化后，才能接收 HTTP 请求。一旦应用程序完全初始化后，appstate 功能即不再起作用。此功能的副作用是一些应用程序可能花费较长时间才能启动。要禁用 appstate 功能，可在应用程序上设置以下环境属性，并重新编译打包该应用程序：
+appstate 功能与 {{site.data.keyword.Bluemix_notm}} 运行状况检查进程集成在一起，可确保 Liberty 应用程序经过完全初始化后，才能接收 HTTP 请求。一旦应用程序完全初始化后，appstate 功能即不再起作用。此功能的副作用是一些应用程序可能花费较长时间才能启动。要禁用 appstate 功能，可在应用程序上设置以下环境属性，并重新编译打包该应用程序：
 
 ```
    $ cf set-env myApp JBP_CONFIG_LIBERTY “app_state: false”

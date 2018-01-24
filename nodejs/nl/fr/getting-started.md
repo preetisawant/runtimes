@@ -2,8 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
-
+lastupdated: "2017-12-15"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,16 +19,16 @@ lastupdated: "2017-09-06"
 
 * {: download} Félicitations, vous avez déployé une application exemple Hello World sur {{site.data.keyword.Bluemix}} !  Pour commencer, suivez ce guide pas à pas. Ou <a class="xref" href="http://bluemix.net" target="_blank" title="(Télécharger l'exemple de code)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Télécharger le code de l'application" />téléchargez l'exemple de code</a> et découvrez-le par vous-même.
 
-En suivant ce tutoriel d'initiation Node.js, vous allez configurer un environnement de développement, déployer une application en local et sur {{site.data.keyword.Bluemix}}, puis intégrer un service de base de données {{site.data.keyword.Bluemix}} dans votre application.
+En suivant ce tutoriel d'initiation Node.js, vous allez configurer un environnement de développement, déployer une application en local et sur {{site.data.keyword.Bluemix}}, puis intégrer un service de base de données {{site.data.keyword.Bluemix_notm}} dans votre application.
 
 ## Avant de commencer
 {: #prereqs}
 
 Vous aurez besoin des comptes et outils suivants :
 * [Compte {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI (client de ligne de commande pour Cloud Foundry) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}
-* [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
-* [Node ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://nodejs.org/en/){: new_window}
+* [Cloud Foundry CLI (client de ligne de commande pour Cloud Foundry) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}
+* [Node ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://nodejs.org/en/){: new_window}
 
 
 ## Etape 1 : Cloner l'application exemple
@@ -52,7 +51,7 @@ cd get-started-node
   ```
   {: pre}
 
-1. Installez les dépendances listées dans le fichier [package.json ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.npmjs.com/files/package.json) afin de pouvoir exécuter l'application localement.  
+1. Installez les dépendances listées dans le fichier [package.json ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.npmjs.com/files/package.json) afin de pouvoir exécuter l'application localement.  
   ```
 npm install
   ```
@@ -100,12 +99,14 @@ cf api <API-endpoint>
    ```
    {: pre}
 
-   |Région          |Point d'extrémité d'API                             |
-   |:---------------|:-------------------------------|
-   | Sud des Etats-Unis|https://api.ng.bluemix.net   |
-   | Royaume-Uni    | https://api.eu-gb.bluemix.net  |
-   | Sydney         | https://api.au-syd.bluemix.net |
-   | Francfort      | https://api.eu-de.bluemix.net  | 
+   | **Nom de région** | **Emplacement géographique** | **Point d'extrémité d'API** |
+   |-----------------|-------------------------|-------------------|
+   | Région Sud des Etats-Unis | Dallas, US | api.ng.bluemix.net |
+   | Région Est des Etats-Unis | Washington, DC, US | api.us-east.bluemix.net |
+   | Région Royaume-Uni | Londres, Angleterre | api.eu-gb.bluemix.net |
+   | Région Sydney | Sydney, Australie | api.au-syd.bluemix.net |
+   | Région Allemagne | Francfort, Allemagne | api.eu-de.bluemix.net |
+   {: caption="Tableau 1. Liste des régions {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 Connectez-vous à votre compte {{site.data.keyword.Bluemix_notm}}.
 
@@ -137,7 +138,7 @@ Vous pouvez identifier et résoudre les erreurs du processus de déploiement en 
 Nous allons à présent ajouter une base de données NoSQL à l'application et configurer cette dernière pour qu'elle puisse être exécutée localement et sur {{site.data.keyword.Bluemix_notm}}.
 
 1. Dans votre navigateur, connectez-vous à {{site.data.keyword.Bluemix_notm}} et allez au Tableau de bord. Sélectionnez votre application en cliquant sur son nom dans la colonne **Nom**.
-2. Cliquez sur **Connexions**, puis sur **Connecter un nouveau**.
+2. Cliquez sur **Connexions**, puis sur **Créer une connexion**.
 2. Dans la section **Données & analyse**, sélectionnez `Cloudant NoSQL DB`, puis créez le service.
 3. Sélectionnez **Reconstituer** lorsque vous y êtes invité. {{site.data.keyword.Bluemix_notm}} redémarre votre application et lui fournit les données d'identification pour l'accès à la base de données en utilisant la variable d'environnement `VCAP_SERVICES`. L'application n'a accès à cette variable d'environnement que lorsqu'elle fonctionne sur {{site.data.keyword.Bluemix_notm}}.
 
@@ -177,7 +178,15 @@ npm start
 
   Affichez votre application locale sur : http://localhost:3000. Chaque nom que vous entrez dans l'application sera ajouté à la base de données.
 
+**Évitez les problèmes **: {{site.data.keyword.Bluemix_notm}} définit la variable d'environnement PORT lorsque votre application fonctionne sur le cloud. En revanche, lorsque l'application est exécutée localement, cette variable n'est pas définie et le numéro de port 3000 est utilisé. Pour plus d'informations, consultez [Exécuter votre application localement](runningLocally.html#hints).
+
   Votre application locale et son instance {{site.data.keyword.Bluemix_notm}} partagent la même base de données. Les noms que vous ajoutez depuis l'une ou l'autre version de l'application doivent apparaître dans les deux lorsque vous actualisez les navigateurs.
 
 Si vous n'avez pas besoin de votre application live sur {{site.data.keyword.Bluemix_notm}}, arrêtez-la. Vous éviterez des frais imprévus.
 {: tip}
+
+## Etapes suivantes
+
+* [Tutoriels](/docs/tutorials/index.html)
+* [Exemples ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,7 +12,7 @@ lastupdated: "2017-07-14"
 # アプリケーションのすべてのページでの HTTPS の適用
 {: #enforce_https}
 
-アプリケーションを Bluemix で実行する場合に、アプリケーションのすべてのページに HTTP の代わりに HTTPS を適用するには、アプリケーションに対して以下の変更を行う必要があります。
+アプリケーションを {{site.data.keyword.Bluemix}} で実行する場合に、アプリケーションのすべてのページで HTTP の代わりに HTTPS を適用するには、アプリケーションに以下の変更を行う必要があります。
 
 `Startup` クラスに以下の `using` ステートメントを追加します。
 
@@ -24,7 +24,7 @@ lastupdated: "2017-07-14"
 `Startup` クラスの `ConfigureServices` メソッドに以下を追加します。
 
 ```
-  // if app is running in Bluemix
+  // if app is running in {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     services.Configure<MvcOptions>(options =>
@@ -37,7 +37,7 @@ lastupdated: "2017-07-14"
 `Startup` クラスの `Configure` メソッドに以下を追加します。
 
 ```
-  // if app is running in Bluemix
+  // if app is running in {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     app.Use(async (context, next) =>

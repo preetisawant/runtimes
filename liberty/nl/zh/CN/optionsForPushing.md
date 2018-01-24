@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2017-03-22"
 # 用于推送 Liberty 应用程序的选项
 {: #options_for_pushing}
 
-Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。buildpack 可以为特定类的应用程序提供完整运行时环境。这些 buildpack 是在云中提供可移植性并构成开放式云体系结构的关键所在。Liberty buildpack 提供了能够运行 Java EE 7 和 OSGi 应用程序的 WebSphere Liberty 容器。
-它支持 Spring 等流行框架，并包含 IBM JRE。WebSphere Liberty 支持适合云的快速应用程序开发。Liberty buildpack 支持多个部署到单个 Liberty 服务器的应用程序。作为 Liberty buildpack 集成到 Bluemix 的一部分，该 buildpack 会确保用于绑定服务的环境变量在 Liberty 服务器中显示为配置变量。
+{{site.data.keyword.Bluemix}} 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。buildpack 可以为特定类的应用程序提供完整运行时环境。这些 buildpack 是在云中提供可移植性并构成开放式云体系结构的关键所在。Liberty buildpack 提供了能够运行 Java EE 7 和 OSGi 应用程序的 WebSphere Liberty 容器。
+它支持 Spring 等流行框架，并包含 IBM JRE。WebSphere Liberty 支持适合云的快速应用程序开发。Liberty buildpack 支持多个部署到单个 Liberty 服务器的应用程序。在 Liberty buildpack 集成到 {{site.data.keyword.Bluemix_notm}} 的过程中，buildpack 会确保用于绑定服务的环境变量在 Liberty 服务器中显示为配置变量。
 
-您可以使用以下方法将 Liberty 应用程序部署到 Bluemix。
+您可以使用以下方法将 Liberty 应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
 
 * 推送独立应用程序
 * 推送服务器目录
@@ -27,7 +27,7 @@ Bluemix 中 Liberty 服务器的行为由 Liberty buildpack 进行控制。build
 ## 独立应用程序
 {: #stand_alone_apps}
 
-独立应用程序（例如 WAR 或 EAR 文件）可部署到 Bluemix 中的 Liberty。
+独立应用程序（例如 WAR 或 EAR 文件）可部署到 {{site.data.keyword.Bluemix_notm}} 中的 Liberty。
 
 要部署独立应用程序，请运行带有 -p 参数（指向您的 WAR 或 EAR 文件）的 cf push 命令。
 例如：
@@ -139,7 +139,7 @@ $ cf restage myapp
 
 在某些情况下，可能需要为您的应用程序提供定制 Liberty 服务器配置。部署 WAR 或 EAR 文件时，如果缺省 server.xml 文件不包含应用程序所需的特定设置，那么可能需要此定制配置。
 
-如果 Liberty 概要文件已安装在工作站上，且已经为应用程序创建 Liberty 服务器，那么可以将该目录的内容推送到 Bluemix。例如，如果 Liberty 服务器名称为 defaultServer，请运行以下命令：
+如果 Liberty 概要文件已安装在工作站上，且已经为应用程序创建 Liberty 服务器，那么可以将该目录的内容推送到 {{site.data.keyword.Bluemix_notm}}。例如，如果 Liberty 服务器名称为 defaultServer，请运行以下命令：
 
 ```
 $ cf push <yourappname> -p wlp/usr/servers/defaultServer
@@ -168,7 +168,7 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
-准备好服务器目录后，可以将其部署到 Bluemix。
+准备好服务器目录后，可以将其部署到 {{site.data.keyword.Bluemix_notm}}。
 
 ```
 $ cf push <yourappname> -p defaultServer
@@ -185,7 +185,7 @@ http://<yourappname>.mybluemix.net/acme/
 ## 打包服务器
 {: #packaged_server}
 
-您还可以将打包服务器文件推送到 Bluemix。打包服务器文件是使用 Liberty 服务器软件包命令创建的。除了应用程序和配置文件之外，打包服务器文件中还包含应用程序所需的共享资源和 Liberty 用户功能。
+您还可以将打包服务器文件推送到 {{site.data.keyword.Bluemix_notm}}。打包服务器文件是使用 Liberty 服务器软件包命令创建的。除了应用程序和配置文件之外，打包服务器文件中还包含应用程序所需的共享资源和 Liberty 用户功能。
 
 要打包 Liberty 服务器，请从 Liberty 安装目录使用 `./bin/server package` 命令。指定服务器名称，并包含 `--include=usr` 选项。例如，如果 Liberty 服务器为 defaultServer，请运行以下命令：
 
@@ -196,7 +196,7 @@ $ wlp/bin/server package defaultServer --include=usr
 
 此命令会在服务器目录中生成 serverName.zip 文件。如果使用了 `--archive` 选项来指定其他归档文件，请确保该文件的扩展名为 `.zip`，而不是 `.jar`。**该 buildpack 不支持使用 `.jar` 扩展名创建的打包服务器文件**。
 
-然后，可以使用 `cf push` 命令将生成的 `.zip` 文件推送到 Bluemix。例如：
+然后，可以使用 `cf push` 命令将生成的 `.zip` 文件推送到 {{site.data.keyword.Bluemix_notm}}。例如：
 
 ```
 $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip

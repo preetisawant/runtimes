@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,9 +14,19 @@ lastupdated: "2017-08-14"
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
 
+### 17 de octubre de 2017: se ha actualizado el paquete de compilación de Liberty v3.14-20171013-1023
+* La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado a 17.0.0.3.
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2017.9.0.1.
+* La versión de IBM JRE se ha actualizado a 8 SR5. 
+
+### 5 de octubre 2017: se ha actualizado el paquete de compilación de Liberty v3.13-20170919-1721
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2017.9.0.0.
+* La versión de IBM JRE se ha actualizado a 8 SR4 FP11. 
+* Se ha actualizado el agente de escalado automático. 
+
 ### 14 de agosto de 2017: Actualización del paquete de compilación Liberty v3.12-20170814-1322
 * La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2017.8.0.0](https://developer.ibm.com/wasdev/blog/2017/08/04/beta-websphere-liberty-tools-august-2017/).
-* El paquete de compilación también contiene IBM JRE actualizados: versión 8 SR4 FP10 y versión 7.1 SR4 FP10. 
+* El paquete de compilación también contiene IBM JRE actualizados: versión 8 SR4 FP10 y versión 7.1 SR4 FP10.
 * JRE 8 incluye Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files.
 * Se ha solucionado un error del paquete de compilación que impedía que las apps de Liberty [se cerrasen adecuadamente](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown).
 
@@ -90,7 +100,7 @@ como directorio de servidor o como un servidor empaquetado con los archivos de a
 * IBM JRE 8.0 y 7.1 se han configurado para habilitar [todos los protocolos TLS cuando se llama a `SSLContext.getContext("TLS")`](https://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.security.component.80.doc/security-component/jsse2Docs/matchsslcontext_tls.html) para comparar el comportamiento de JRE de Oracle. IBM JRE 7.1 también se ha configurado para habilitar [todos los protocolos TLS cuando se llama a `SSLContext.getDefault()`](https://www.ibm.com/support/knowledgecenter/SSYKE2_7.1.0/com.ibm.java.security.component.71.doc/security-component/jsse2Docs/overrideSSLprotocol.html) para comparar el comportamiento de IBM JRE 8.0.
 * El paquete de compilación proporciona un recopilador de datos actualizado para el [servicio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview).
 * El paquete de compilación se ha vuelto a cambiar para descargar el [conector MariaDB/controlador J JDBC ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.5.x más reciente al realizar la [configuración automática para el tipo de servicios MySQL](autoConfig.html).
-* El paquete de compilación incorpora soporte para personalizar el comportamiento del configurador automático del servicio mediante la variable de entorno `LBP_SERVICE_CONFIG_<serviceType><serviceType>`. Por ejemplo, se puede utilizar para cambiar la ubicación o la versión de un controlador JDBC a descargar el servicio MySQL. Consulte la documentación de los [servicios que dan soporte a la configuración automática](autoConfig.html) para obtener más información.
+* El paquete de compilación incorpora soporte para personalizar el comportamiento del configurador automático del servicio mediante la variable de entorno `LBP_SERVICE_CONFIG_<serviceType>`. Por ejemplo, se puede utilizar para cambiar la ubicación o la versión de un controlador JDBC a descargar el servicio MySQL. Consulte la documentación de los [servicios que dan soporte a la configuración automática](autoConfig.html) para obtener más información.
 * El paquete de compilación también contiene varias mejoras de [Diego![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) relacionadas con la comprobación del estado de la aplicación y con la función de [gestión de la app](/docs/manageapps/app_mng.html).
 
 ### 16 de septiembre de 2016: se ha actualizado el paquete de compilación de Liberty v3.3-20160912-1729
@@ -116,10 +126,10 @@ como directorio de servidor o como un servidor empaquetado con los archivos de a
 * El paquete de compilación también contiene arreglos de seguridad para la [Vulnerabilidad de Apache Standard Taglibs](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### 25 de mayo de 2016: se ha actualizado el paquete de compilación de Liberty v2.9-20160519-1249
-* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de mayo](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La versión actualizada de Liberty hace que las funciones beta *bluemixLogCollector-1.1* y *logstashCollector-1.1* disponibles en Bluemix.
+* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de mayo](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La versión actualizada de Liberty hace que las funciones beta *bluemixLogCollector-1.1* y *logstashCollector-1.1* disponibles en {{site.data.keyword.Bluemix_notm}}.
 
 ### 5 de mayo de 2016: se ha actualizado el paquete de compilación de Liberty v2.8-20160430-1011
-* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de abril](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La versión actualizada de Liberty hace que la función GA *logstashCollector-1.0* y la función beta de *logmetCollector-1.0* esté disponible en Bluemix.
+* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de abril](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La versión actualizada de Liberty hace que la función GA *logstashCollector-1.0* y la función beta de *logmetCollector-1.0* esté disponible en {{site.data.keyword.Bluemix_notm}}.
 * El paquete de compilación también contiene versiones de IBM JRE: 8 SR3 y 7.1 SR3 FP40.
 * El paquete de compilación añade soporte inicial para el agente de supervisión de aplicación de [AppDynamics![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.appdynamics.com/) .
 * Se ha mejorado el soporte de [Dynatrace](dynatrace.html) para simplificar la instalación del agente.
@@ -127,7 +137,7 @@ como directorio de servidor o como un servidor empaquetado con los archivos de a
 * El tiempo de ejecución de Node.js utilizado por los [programas de utilidad devconsole y shell App Management](/docs/manageapps/app_mng.html#app_management) se ha actualizado a la última versión 0.12.13.
 
 ### 25 de marzo de 2016: se ha actualizado el paquete de compilación de Liberty v2.7-20160321-1358
-* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de marzo](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La versión actualizada de Liberty hace que la función beta cloudant-1.0 esté disponible en Bluemix.
+* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de marzo](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La versión actualizada de Liberty hace que la función beta cloudant-1.0 esté disponible en {{site.data.keyword.Bluemix_notm}}
 * El paquete de compilación también contiene versiones actualizadas de IBM JRE: 8 SR2 FP12 y 7.1 SR3 FP32.
 * El paquete de compilación proporciona una versión actualizada del agente para el [servicio de Auto-Scaling](/docs/services/Auto-Scaling/index.html).
 * Ahora el paquete de compilación se suministra con un nuevo recopilador de datos para el [servicio de Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). El nuevo recopilador permite la configuración de umbrales de supervisión y contiene un número de correcciones de errores.
@@ -139,15 +149,15 @@ como directorio de servidor o como un servidor empaquetado con los archivos de a
 * El paquete de compilación añade soporte para [DynamicPULSE](www.fujitsu.com/jp/group/fsweb/products/dynamic-pulse/).
 
 ### 10 de febrero de 2016: se ha actualizado el paquete de compilación de Liberty v2.5-20160209-1336
-* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de febrero](https://developer.ibm.com/wasdev/blog/2016/02/12/beta-websphere-liberty-and-tools-february/). La versión actualizada del perfil de Liberty hace la función GA apiDiscovery-1.0 disponible en Bluemix.
+* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión [beta de febrero](https://developer.ibm.com/wasdev/blog/2016/02/12/beta-websphere-liberty-and-tools-february/). La versión actualizada del perfil de Liberty hace la función GA apiDiscovery-1.0 disponible en {{site.data.keyword.Bluemix_notm}}.
 
 ### 4 de febrero de 2016: se ha actualizado el paquete de compilación de Liberty v2.4-20160127-1437
-* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión beta de enero. Con esta actualización, la característica scim-1.0 de Liberty, anteriormente disponible como una característica de versión beta, pasa a estar disponible como una característica disponible en producción. La versión actualizada de Liberty también hace que la función beta de passwordUtilities-1.0 esté disponible en Bluemix.
+* El paquete de compilación contiene una versión actualizada de WebSphere Liberty basada en la versión beta de enero. Con esta actualización, la característica scim-1.0 de Liberty, anteriormente disponible como una característica de versión beta, pasa a estar disponible como una característica disponible en producción. La versión actualizada de Liberty también hace que la función beta de passwordUtilities-1.0 esté disponible en {{site.data.keyword.Bluemix_notm}}.
 * El paquete de compilación también contiene una versión actualizada de IBM JRE 7.1 SF3 FP20 e IBM JRE 8 SR2 FP10.
 * El paquete de compilación se ha actualizado para descargar el [conector MariaDB/controlador J JDBC ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.x más reciente al realizar la [configuración automática para el tipo de servicios MySQL](autoConfig.html).
 
 ### 16 de diciembre de 2015: se ha actualizado el paquete de compilación de Liberty v2.3-20151208-1311
-* El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de diciembre](https://developer.ibm.com/wasdev/blog/2015/11/20/beta-was-liberty-beta-with-tools-december-2015/). La versión actualizada del perfil de Liberty hace que las funciones spnego-1.0 y GA wsSecuritySaml-1.1 y la función beta scim-1.0 esté disponible en Bluemix.
+* El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de diciembre](https://developer.ibm.com/wasdev/blog/2015/11/20/beta-was-liberty-beta-with-tools-december-2015/). La versión actualizada del perfil de Liberty hace que las funciones spnego-1.0 y GA wsSecuritySaml-1.1 y la función beta scim-1.0 esté disponible en {{site.data.keyword.Bluemix_notm}}.
 * El paquete de compilación también contiene una versión actualizada de IBM JRE 8 SR2.
 * El paquete de compilación también se ha actualizado para descargar el [controlador 9.4.x PostgreSQL JDBC![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://jdbc.postgresql.org/) y el [controlador MariaDB Connector/J JDBC![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.2.x más reciente al realizar la [configuración automática](autoConfig.html) de los tipos de servicios PostgreSQL o MySQL.
 
@@ -162,7 +172,7 @@ como directorio de servidor o como un servidor empaquetado con los archivos de a
 * El paquete de compilación también proporciona un número de mejoras y optimizaciones del rendimiento:
   * La característica de exploración del archivador de beans implícito de [CDI 1.2](optionsForPushing.html) está inhabilitada de forma predeterminada al desplegar archivos WAR o EAR.
   * Para reducir el tamaño de gotas, los [Programas de utilidad de gestión de apps](/docs/manageapps/app_mng.html) devconsole y shell, requieren una operación de volver a transferir en lugar de un reinicio.
-  * La memoria caché de clases compartidas de IBM JRE está inhabilitada ya que no se estaba reutilizando en el entorno de Bluemix.
+  * La memoria caché de clases compartidas de IBM JRE está inhabilitada ya que no se estaba reutilizando en el entorno de {{site.data.keyword.Bluemix_notm}}.
 
 ### 18 de septiembre de 2015: se ha actualizado el paquete de compilación de Liberty v2.0-20150914-1535
 * El paquete de compilación introduce dos cambios importantes:
@@ -179,7 +189,7 @@ completamente para que la aplicación pueda recibir solicitudes HTTP. Para inhab
 HTTPS_PROXY](environmentVariables.html). Si se establece, el paquete de compilación utiliza el servidor proxy especificado por estas variables de entorno cuando descarga diversos componentes del paquete de compilación.
 
 ### 19 de agosto de 2015: se ha actualizado el paquete de compilación de Liberty v1.21-20150811-1342
-* El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de agosto](https://developer.ibm.com/wasdev/blog/2015/07/30/beta-was-liberty-beta-with-tools-august-2015/). La versión actualizada de los perfiles de Liberty convierte en disponibles las siguientes [características beta](usingBetaFeatures.html) nuevas en Bluemix: bells-1.0, rtcommGateway-1.0, samlWebSso-2.0.
+* El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de agosto](https://developer.ibm.com/wasdev/blog/2015/07/30/beta-was-liberty-beta-with-tools-august-2015/). La versión actualizada del perfil de Liberty hace que las [funciones beta](usingBetaFeatures.html) siguientes estén disponibles en {{site.data.keyword.Bluemix_notm}}: bells-1.0, rtcommGateway-1.0, samlWebSso-2.0.
 
 ### 31 de julio de 2015: se ha actualizado el paquete de compilación de Liberty v1.20.1-20150729-1255
 * El paquete de compilación contiene versiones actualizadas de IBM JRE: 7.1 SR1 FP10 y 8 SR1 FP10.
@@ -190,7 +200,7 @@ contienen [mejoras de seguridad más recientes](http://www-01.ibm.com/support/do
 ### 21 de julio de 2015: se ha actualizado el paquete de compilación de Liberty v1.20-20150713-1450
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [release 8.5.5.6](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/). Con
 este release, todas las características de Java EE 7 Liberty anteriormente disponibles como versiones beta, pasan a
-estar disponibles como características disponibles en producción. Debido a las restricciones de puerto y otras más en Bluemix,
+estar disponibles como características disponibles en producción. Debido a las restricciones de puerto y otras más en {{site.data.keyword.Bluemix_notm}},
 algunas características como por ejemplo los EJB remotos no se admiten totalmente en esta plataforma.
 * El paquete de compilación reconoce y ejecuta aplicaciones empaquetadas en el [distZip-style![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.gradle.org/current/userguide/application_plugin.html)
 * El paquete de compilación contiene un recopilador de datos actualizado para el servicio
@@ -238,7 +248,7 @@ contexto de la aplicación. Con este cambio, las aplicaciones que antes se despl
 se podrá desplegar bajo un contexto distinto, en base al archivo **ibm-web-ext.xml**.
 
 ### 3 de abril de 2015: se ha actualizado el paquete de compilación de Liberty v1.15-20150402-1422
-* El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de marzo](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). La versión actualizada de los perfiles de Liberty hace que la función beta jsf-2.2 esté disponible en Bluemix.
+* El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de marzo](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). La versión actualizada de los perfiles de Liberty hace que la función beta jsf-2.2 esté disponible en {{site.data.keyword.Bluemix_notm}}.
 * El paquete de compilación también contiene una versión actualizada del recopilador de datos para el
 [servicio Monitoring and Analytics](/docs/services/monana/index.html).
 
@@ -257,9 +267,9 @@ casos ha generado configuración de **server.xml** no válida.
 ### 10 de febrero de 2015: se ha actualizado el paquete de compilación de Liberty v1.13-20150209-1122
 * El paquete de compilación contiene arreglos de seguridad para [componentes de Apache Http y vulnerabilidades de la característica de superposición de Java](https://www-304.ibm.com/connections/blogs/PSIRT/entry/ibm_security_bulletin_multiple_vulnerabilities_fixed_in_liberty_for_java_for_ibm_bluemix_cve_2012_6153_cve_2014_3577_cve_2015_0178?lang=en_us).
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de febrero](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/). La versión actualizada del perfil de Liberty proporciona una versión actualizada de la característica websocket-1.1 de WebSocket GA. También hace que las funciones beta de Java EE
-7 estén disponibles en Bluemix:
+7 estén disponibles en {{site.data.keyword.Bluemix_notm}}:
   * cdi-1.2, el-3.0, jsp-2.3, jca-1.7, jacc-1.5 y jaspic-1.1
-* El paquete de compilación proporciona integración con la [herramienta ZeroTrunaround's JRebel![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://zeroturnaround.com/software/jrebel/). La integración facilita el uso de JRebel con aplicaciones Bluemix
+* El paquete de compilación proporciona integración con la [herramienta ZeroTrunaround's JRebel![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://zeroturnaround.com/software/jrebel/). La integración facilita el uso de JRebel con aplicaciones {{site.data.keyword.Bluemix_notm}}
 y realiza actualizaciones de aplicación sin volver a desplegar o transferir la aplicación. Solo se admiten las aplicaciones web autónomas.
 
 ### 6 de febrero de 2015: se ha actualizado el paquete de compilación de Liberty v1.12-20150130-1016
@@ -276,7 +286,7 @@ Scale Client v8.6.0.6 y el agente actualizado para el servicio Auto-Scaling.
 perfil de Liberty e IBM JRE.
 
 ### 19 de diciembre de 2014: se ha actualizado el paquete de compilación de Liberty v1.10-20141218-0103
-* El paquete de compilación proporciona una modalidad de desarrollo de aplicaciones. La modalidad de desarrollo es una modalidad especial que permite a los desarrolladores realizar muchas actividades para una instancia de aplicación que antes no era posible realizar. Con esta característica, esta versión de IBM Eclipse Tools for Bluemix da soporte a la depuración remota con actualizaciones incrementales de archivo sobre una aplicación Liberty que se ejecuta en Bluemix. Por eso resulta cómodo para el desarrollador que utiliza Eclipse para depurar una aplicación en la nube y aplicar los cambios a dicha aplicación de forma instantánea.
+* El paquete de compilación proporciona una modalidad de desarrollo de aplicaciones. La modalidad de desarrollo es una modalidad especial que permite a los desarrolladores realizar muchas actividades para una instancia de aplicación que antes no era posible realizar. Con esta característica, esta versión de {{site.data.keyword.eclipsetoolsfull}} da soporte a la depuración remota con actualizaciones incrementales de archivo sobre una aplicación Liberty que se ejecuta en {{site.data.keyword.Bluemix_notm}}. Por eso resulta cómodo para el desarrollador que utiliza Eclipse para depurar una aplicación en la nube y aplicar los cambios a dicha aplicación de forma instantánea.
 * El paquete de compilación también contiene una versión actualizada del perfil de Liberty basado en la versión [beta de diciembre](https://developer.ibm.com/wasdev/blog/2014/12/10/announcing-liberty-beta-december/).
 * Además, las cuatro siguientes características de Liberty que antes estaban disponibles como funciones beta ahora están listas para producción:
   * concurrent-1.0
@@ -321,7 +331,7 @@ v1.4-20140908-1803
 MySQL Database. El soporte de configuración automática también funciona con los servicios experimentales
 posgresql y mysql. Con un nuevo total de
 13 servicios, el soporte de configuración automática del paquete de compilación de Liberty
-agiliza y facilita el consumo de servicios Bluemix en aplicaciones Liberty.
+agiliza y facilita el consumo de servicios {{site.data.keyword.Bluemix_notm}} en aplicaciones Liberty.
 * Durante la transferencia de la aplicación, el paquete de compilación muestra mensajes de registro mejorados sobre la configuración automática y otras acciones que emprende.
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty con arreglos y mejoras.
 * También contiene una versión actualizada de IBM JRE versión 7.1 con mejoras en el rendimiento. Consulte también la página [Novedades](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.71.doc/diag/preface/changes_71/changes.html) para ver el conjunto de cambios detallado.
@@ -331,12 +341,12 @@ v1.3-20140818-1538
 * El paquete de compilación contiene una versión actualizada del [perfil de Liberty](https://developer.ibm.com/wasdev/) con los últimos arreglos y mejoras.
 * Esta versión del paquete de compilación arregla el soporte de la variable de entorno JAVA_OPTS para pasar opciones de JVM adicionales al tiempo de ejecución de la aplicación.
 * También soluciona un problema que impedía el despliegue de aplicaciones Jar autónomas basadas en Spring.
-* Ahora se puede generar y descargar rastreos snap JVM de IBM mediante la interfaz de usuario de Bluemix. Consulte el [tema sobre resolución de problemas](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html) de la documentación de JVM de IBM para obtener más información sobre los rastreos snap y otra información de diagnóstico que genera JVM.
+* Ahora se puede generar y descargar rastreos snap JVM de IBM mediante la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}. Consulte el [tema sobre resolución de problemas](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html) de la documentación de JVM de IBM para obtener más información sobre los rastreos snap y otra información de diagnóstico que genera JVM.
 
 ### 29 de julio de 2014: se ha actualizado el paquete de compilación de Liberty
 v1.1-20140725-1341
-* Ya ha llegado la nueva versión de Bluemix Edition de Liberty.
-  * Con esta versión de Liberty, hay arreglos además de nuevas características que le permiten consumir los servicios Bluemix de forma más eficiente.
+* Ya ha llegado la nueva versión de {{site.data.keyword.Bluemix_notm}} Edition de Liberty.
+  * Con esta versión de Liberty, hay arreglos además de nuevas características que le permiten consumir los servicios {{site.data.keyword.Bluemix_notm}} de forma más eficiente.
   * Con la nueva característica CouchDB, ahora el servicio Cloudant® puede configurarla automáticamente para que un objeto de conector esté disponible de inmediato. Ya no es necesario analizar mediante
 VCAP_SERVICES ni proporcionar los archivos jar del cliente de ektorp.
 * La versión nueva de IBM SDK para Java ya ha llegado.

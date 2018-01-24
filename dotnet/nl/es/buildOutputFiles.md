@@ -48,7 +48,7 @@ Estos cambios deben permitir que .NET CLI encuentre las `Vistas` de la aplicaci√
 
 ## Utilizar herramientas MSBuild
 
-A√±ada un elemento `<Content>` al elemento `<ItemGroup>` del archivo .csproj:
+Agregue un elemento `<Content>` al elemento `<ItemGroup>` del archivo .csproj:
 ```
   <ItemGroup>
     <Content Include="wwwroot/**/*;Areas/**/Views/*;Views/*;appsettings.json">

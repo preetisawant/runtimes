@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -17,9 +17,9 @@ lastupdated: "2017-09-06"
 
 # 시작하기 튜토리얼
 
-* {: download} 축하합니다. {{site.data.keyword.Bluemix}}에 Hello World 샘플 애플리케이션을 배치했습니다. 시작하려면 이 단계별 안내서를 따르십시오. 또는 <a class="xref" href="http://bluemix.net" target="_blank" title="(샘플 코드 다운로드)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="애플리케이션 코드 다운로드" />샘플 코드를 다운로드</a>하고 직접 탐색하십시오.
+* {: download} 축하합니다. {{site.data.keyword.Bluemix}}에 Hello World 샘플 애플리케이션을 배치했습니다.  시작하려면 이 단계별 안내서를 따르십시오. 또는 <a class="xref" href="http://bluemix.net" target="_blank" title="(샘플 코드 다운로드)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="애플리케이션 코드 다운로드" />샘플 코드를 다운로드</a>하고 직접 탐색하십시오.
 
-이 튜토리얼에 따라 개발 환경을 설정하고, 앱을 로컬 및 {{site.data.keyword.Bluemix}}에 배치하고, 앱에 {{site.data.keyword.Bluemix}} 데이터베이스 서비스를 통합합니다.
+이 튜토리얼에 따라 개발 환경을 설정하고, 앱을 로컬 및 {{site.data.keyword.Bluemix}}에 배치하고, 앱에 {{site.data.keyword.Bluemix_notm}} 데이터베이스 서비스를 통합합니다.
 
 ## 시작하기 전에
 {: #prereqs}
@@ -65,7 +65,7 @@ swift build
 ```
 Server is listening on port: 8080
 ```
-{: screen}
+{: codeblock}
 
 다음에서 앱을 보십시오. http://localhost:8080
 
@@ -87,13 +87,13 @@ manifest.yml 파일을 열고 `name`을 `GetStartedSwift`에서 앱 이름 <var 
   ```
   {: codeblock}
 
-이 manifest.yml 파일에서 **random-route: true**는 사용자 라우트가 다른 라우트와 충돌하지 않도록 앱을 위한 임의 라우트를 생성합니다. 원하는 경우, **random-route: true**를 **host: myChosenHostName**으로 바꾸고 사용하려는 호스트 이름을 제공할 수 있습니다. [자세히 보기...](/docs/manageapps/depapps.html#appmanifest)
+이 manifest.yml 파일에서 **random-route: true**는 사용자 라우트가 다른 라우트와 충돌하지 않도록 앱을 위한 임의 라우트를 생성합니다.  원하는 경우, **random-route: true**를 **host: myChosenHostName**으로 바꾸고 사용하려는 호스트 이름을 제공할 수 있습니다. [자세히 보기...](/docs/manageapps/depapps.html#appmanifest)
 {: tip}
 
 ## 4단계: 앱 배치
 {: #deploy}
 
-Cloud Foundry CLI를 사용하여 앱을 배치할 수 있습니다. 
+Cloud Foundry CLI를 사용하여 앱을 배치할 수 있습니다.
 
 API 엔드포인트를 선택하십시오.
   ```
@@ -103,12 +103,14 @@ cf api <API-endpoint>
 
 명령의 *API-endpoint*를 다음 목록의 API 엔드포인트로 바꾸십시오.
 
-|지역|API 엔드포인트|
-|:---------------|:-------------------------------|
-| 미국 남부| https://api.ng.bluemix.net|
-| 영국| https://api.eu-gb.bluemix.net|
-| 시드니| https://api.au-syd.bluemix.net|
-| 프랑크푸르트| https://api.eu-de.bluemix.net | 
+| **지역 이름** | **지리적 위치** | **API 엔드포인트** |
+|-----------------|-------------------------|-------------------|
+| 미국 남부 지역 | 댈러스, 미국 | api.ng.bluemix.net |
+| 미국 동부 지역 | 워싱턴, DC, 미국 | api.us-east.bluemix.net |
+| 영국 지역 | 런던, 영국 | api.eu-gb.bluemix.net |
+| 시드니 지역 | 시드니, 오스트레일리아 | api.au-syd.bluemix.net |
+| 독일 지역 | 프랑크푸르트, 독일 | api.eu-de.bluemix.net |
+{: caption="표 1. {{site.data.keyword.cloud_notm}} 지역 목록" caption-side="top"}
 
 {{site.data.keyword.Bluemix_notm}} 계정에 로그인
 
@@ -116,7 +118,7 @@ cf api <API-endpoint>
  cf login
    ```
    {: pre}
-   
+
 연합 사용자 ID가 있기 때문에 `cf login` 또는 `bx login` 명령을 사용하여 로그인할 수 없는 경우 `cf login --sso` 또는 `bx login --sso` 명령을 사용하여 싱글 사인온 ID로 로그인할 수 있습니다. 자세한 정보는 [연합 ID로 로그인](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)을 참조하십시오.
 
 *get-started-swift* 디렉토리에서 {{site.data.keyword.Bluemix_notm}}에 앱 푸시
@@ -125,9 +127,9 @@ cf api <API-endpoint>
    ```
    {: pre}
 
-이를 수행하는 데 시간이 좀 걸릴 수 있습니다. 배치 프로세스에 오류가 있는 경우 `cf logs <Your-App-Name> --recent` 명령을 사용하여 문제점을 해결할 수 있습니다. 
+이를 수행하는 데 시간이 좀 걸릴 수 있습니다. 배치 프로세스에 오류가 있는 경우 `cf logs <Your-App-Name> --recent` 명령을 사용하여 문제점을 해결할 수 있습니다.
 
-배치가 완료되면 앱이 실행 중이라는 메시지가 표시됩니다. push 명령의 출력에 나열된 URL에서 앱을 확인하십시오. `cf apps` 명령을 실행하여 앱 상태를 보고 URL을 확인할 수 있습니다.
+배치가 완료되면 앱이 실행 중이라는 메시지가 표시됩니다.  push 명령의 출력에 나열된 URL에서 앱을 확인하십시오.  `cf apps` 명령을 실행하여 앱 상태를 보고 URL을 확인할 수 있습니다.
 
 ## 5단계: 데이터베이스 추가
 {: #add_database}
@@ -135,9 +137,9 @@ cf api <API-endpoint>
 다음으로, 이 애플리케이션에 NoSQL 데이터베이스를 추가하고 애플리케이션을 설정하여 로컬 및 {{site.data.keyword.Bluemix_notm}}에서 이를 실행할 수 있도록 합니다.
 
 1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. `대시보드`로 이동하십시오. `이름` 열에서 해당 이름을 클릭하여 애플리케이션을 선택하십시오.
-2. `연결`을 클릭한 다음 `새로 연결`을 클릭하십시오.
+2. `연결`을 클릭한 다음 `연결 작성`을 클릭하십시오.
 3. `데이터 및 분석` 섹션에서 `Cloudant NoSQL DB`를 선택하십시오.
-4. 가격 책정 플랜을 선택하십시오. Bluemix는 무료 `라이트` 플랜을 통해 일부 클라우드 서비스를 충분한 용량과 함께 제공합니다.
+4. 가격 책정 플랜을 선택하십시오. {{site.data.keyword.Bluemix_notm}}에서는 무료 `라이트` 플랜을 통해 일부 클라우드 서비스를 충분한 용량과 함께 제공합니다.
 5. 프롬프트가 표시되면 `다시 스테이징`을 선택하십시오. {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 신임 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
 
 환경 변수를 사용하면 배치 설정을 소스 코드와 구분할 수 있습니다. 예를 들어, 데이터베이스 비밀번호를 하드 코딩하는 대신 소스 코드에서 참조하는 환경 변수에 이 비밀번호를 저장할 수 있습니다. [자세히 보기...](/docs/manageapps/depapps.html#app_env)
@@ -148,31 +150,34 @@ cf api <API-endpoint>
 
 이제 이 데이터베이스를 가리키도록 로컬 코드를 업데이트합니다. 애플리케이션이 사용할 서비스의 신임 정보를 저장할 JSON 파일을 작성하십시오. 이 파일은 애플리케이션이 로컬로 실행 중인 경우에만 사용됩니다. {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우 신임 정보는 VCAP_SERVICES 환경 변수에서 읽습니다.
 
-다음 컨텐츠를 포함한 `Sources` 디렉토리의 `config/jsoncon.env` 파일을 작성하십시오(config.json.example 참조).
+다음 컨텐츠를 포함한 `config` 디렉토리에 `my-cloudant-credentials.json`라는 파일을 작성하십시오(`config/my-cloudant-credentials.json.example` 참조).
+
  ```
  {
-    "vcap":{
-       "services":{
-          "cloudantNoSQLDB":[
-             {
-                "credentials":{
-                   "host":"<host>",
-                   "password":"<password>",
-                   "port":443,
-                   "url":"<url>",
-                   "username":"<username>"
-                },
-                "label":"cloudantNoSQLDB",
-                "name": "CloudantService"
-             }
-          ]
-       }
-    }
+   "password": "<password>",
+   "url": "<url>",
+   "username": "<username>"
  }
  ```
-{: pre}
 
-이 샘플 애플리케이션은 Swift-cfenv 패키지를 사용하여 Bluemix와 상호작용하며 환경 변수를 구문 분석합니다. [자세히 보기...](https://packagecatalog.com/package/IBM-Swift/Swift-cfenv)
+`cloudant` 플레이스홀더를 DB 인스턴스의 **name**으로 바꾸어 `config` 디렉토리에서 `mappings.json` 파일을 업데이트하십시오.
+
+```
+{
+  "MyCloudantDB": {
+    "searchPatterns": [
+      "cloudfoundry:cloudant",
+      "env:kube-cloudant-credentials",
+      "file:config/my-cloudant-credentials.json"
+    ]
+  }
+}
+```
+
+이 샘플 애플리케이션에서는 환경 변수를 구문 분석하기 위해 `CloudEnvironment` 패키지를 사용하여 {{site.data.keyword.Bluemix_notm}}와 상호 작용합니다. [자세히 보기...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+
+`cloudfoundry:cloudant` 구성의 `cloudant` 플레이스홀더를 사용하면 사용자 제공 Cloudant 서비스를 더 쉽게 애플리케이션에 바인드할 수 있습니다. `cloudfoundry:cloudant` 구성을 사용하여 서비스 이름에 `cloudant` 문자열이 포함된 Cloudant 서비스를 작성한 다음 `config.json` 파일을 편집하지 않고 애플리케이션에 바인드할 수 있습니다. 이 구성을 수정하고 나중에 사용자 제공 Cloudant 서비스를 사용하려는 경우 구성을 `cloudfoundry:cloudant`로 편집하거나 사용자 제공 서비스의 이름을 사용하여 `cloudfoundry:`를 정의해야 합니다.
+{: tip}
 
 {{site.data.keyword.Bluemix_notm}} UI에서 앱 -> 연결 -> Cloudant -> 신임 정보 보기를 선택하십시오.
 
@@ -189,8 +194,23 @@ swift build
  ```
  {: pre}
 
-http://localhost:8080에서 앱을 보십시오. 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.이 샘플 애플리케이션은 Kitura-CouchDB 패키지를 사용하여 Cloudant와 상호작용합니다. [자세히 보기...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+http://localhost:8080에서 앱을 보십시오. 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
+
+ 이 샘플 애플리케이션에서는 `Kitura-CouchDB` 패키지를 사용하여 Cloudant와 상호 작용합니다. [자세히 보기...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+
+ 원하는 내용을 변경하고 {{site.data.keyword.Bluemix_notm}}에 재배치하십시오.
+
+ ```
+ cf app push
+ ```
+
+ push 명령의 출력에 나열된 URL에서 앱을 확인하십시오(예: *myUrl.mybluemix.net*).
+
+앱을 지속할 필요가 없는 경우 예상치 않은 비용이 발생하지 않도록 앱을 중지하십시오.
 {: tip}
 
-로컬 앱과 {{site.data.keyword.Bluemix_notm}} 앱은 데이터베이스를 공유합니다. 위에서 push 명령의 출력에 나열된 URL을 통해 {{site.data.keyword.Bluemix_notm}} 앱을 확인하십시오. 이 중 하나의 앱에서 추가하는 이름은 브라우저를 새로 고치면 두 앱에 모두 표시됩니다.앱을 지속할 필요가 없는 경우 예상치 않은 비용이 발생하지 않도록 앱을 중지하십시오.
-{: tip}
+## Next Steps
+
+* [Tutorials](/docs/tutorials/index.html)
+* [Samples ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

@@ -13,7 +13,7 @@ ASP.NET 核心
     disablingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    [Work with a proxy](../../manageapps/workingWithProxy.html)
+    [使用代理](../../manageapps/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

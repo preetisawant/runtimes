@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2017-09-18"
 
 以下是有關在 {{site.data.keyword.Bluemix}} 上使用 SDK for Node.js 的常見疑難排解問題的答案。
 {:shortdesc}
+
+若要進一步瞭解記載和追蹤，請參閱[管理 Liberty 及 Node.js 應用程式](../../manageapps/app_mng.html)中的[追蹤](../../manageapps/app_mng.html#trace)一節。
 
 ## 應用程式無法啟動，錯誤為「裝置上沒有可用的空間」
 {: #no_space_left_on_device}

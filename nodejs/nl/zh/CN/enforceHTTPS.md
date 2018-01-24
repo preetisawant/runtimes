@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-07-17"
 # 在应用程序的所有页面上强制实施 HTTPS
 {: #enforce_https}
 
-当使用 Express 框架在 Bluemix 中运行应用程序时，需要做以下更改以在应用程序的所有页面上强制实施 HTTPS 而不是 HTTP。
+当使用 Express 框架在 {{site.data.keyword.Bluemix}} 中运行应用程序时，需要做以下更改以在应用程序的所有页面上强制实施 HTTPS 而不是 HTTP。
 
 ```
 var express = require("express");

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,11 +14,11 @@ lastupdated: "2017-05-31"
 
 Anwendungen werden in einer vom Liberty-Buildpack bereitgestellten und konfigurierten JRE (Java Runtime Environment) ausgeführt. Ferner bietet das Liberty-Buildpack die Möglichkeit, die JRE-Version bzw. den JRE-Typ zu konfigurieren, die JVM-Optionen anzupassen oder die JRE-Funktionen zu überschreiben.
 
-## IBM JRE
+## {{site.data.keyword.IBM_notm}} JRE
 
-Standardmäßig werden Anwendungen für die Ausführung mit einer einfachen IBM JRE-Version konfiguriert. Diese einfache JRE wurde verschlankt, um die Kernfunktionalität mit einem deutlich geringeren Platten- und Speicherbedarf bereitzustellen. Weitere Informationen zum Inhalt der einfachen JRE finden Sie im Abschnitt zum Thema [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
+Standardmäßig werden Anwendungen für die Ausführung mit einer einfachen {{site.data.keyword.IBM}} JRE-Version konfiguriert. Diese einfache JRE wurde verschlankt, um die Kernfunktionalität mit einem deutlich geringeren Platten- und Speicherbedarf bereitzustellen. Weitere Informationen zum Inhalt der einfachen JRE finden Sie im Abschnitt zum Thema [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
-Standardmäßig wird IBM JRE Version 8 verwendet. Mit der Umgebungsvariablen JBP_CONFIG_IBMJDK können Sie eine alternative Version der IBM JRE angeben. Legen Sie beispielsweise die folgende Umgebungsvariable fest, um die neueste Version von IBM JRE 7.1 zu verwenden:
+ Standardmäßig wird {{site.data.keyword.IBM_notm}} JRE Version 8 verwendet. Mit der Umgebungsvariablen JBP_CONFIG_IBMJDK können Sie eine alternative Version der {{site.data.keyword.IBM_notm}} JRE angeben. Legen Sie beispielsweise die folgende Umgebungsvariable fest, um die neueste Version von {{site.data.keyword.IBM_notm}} JRE 7.1 zu verwenden:
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
@@ -60,16 +60,16 @@ Das Liberty-Buildpack konfiguriert die JVM-Standardoptionen unter Berücksichtig
   * Speicherbegrenzung einer Anwendung, wie in [Speicherbegrenzungen und das Liberty-Buildpack](memoryLimits.html#memory_limits) erläutert.
   * JRE-Typ, da die auf den Heapspeicher bezogenen Optionen für die JVM in Abhängigkeit von den unterstützten JRE-Optionen variieren.
 
-* [In Bluemix unterstützte Liberty-Features](libertyFeatures.html#libertyfeatures).
-  * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in Bluemix nicht unterstützt und deshalb durch die Einstellung '-Dcom.ibm.tx.jta.disable2PC=true' inaktiviert.
+* Die in {{site.data.keyword.Bluemix_notm}} unterstützten [Liberty-Features](libertyFeatures.html#libertyfeatures).
+  * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in {{site.data.keyword.Bluemix_notm}} nicht unterstützt und deshalb durch die Einstellung '-Dcom.ibm.tx.jta.disable2PC=true' inaktiviert.
 
-* Bluemix-Umgebung.
+* Die {{site.data.keyword.Bluemix_notm}}-Umgebung.
 
-    Die Konfiguration der JVM-Optionen sorgt für Optimierung in einer Bluemix-Umgebung und unterstützt die Diagnose von speicherbezogenen Fehlerbedingungen.
+    Die Konfiguration der JVM-Optionen sorgt für Optimierung in einer {{site.data.keyword.Bluemix_notm}}-Umgebung und unterstützt die Diagnose von speicherbezogenen Fehlerbedingungen.
   * Schnelle Fehlerdiagnose und -behebung für eine Anwendung wird durch Inaktivierung der JVM-Speicherauszugsoptionen und Beenden der Prozesse bei erschöpfter Speicherkapazität der Anwendung konfiguriert.
-  * Virtualisierungsoptimierung (nur IBM JRE).
+  * Virtualisierungsoptimierung (nur {{site.data.keyword.IBM_notm}} JRE).
   * Weiterleitung von Informationen zu den verfügbaren Speicherressourcen der Anwendung im Fehlerfall an Loggregator.
-  * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis 'dumps' weitergeleitet. Diese Speicherauszüge können dann über das Bluemix-Dashboard oder die CF-CLI angezeigt werden.
+  * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis 'dumps' weitergeleitet. Diese Speicherauszüge können dann über das {{site.data.keyword.Bluemix_notm}}-Dashboard oder die Cloud Foundry-CLI angezeigt werden.
 
 Es folgt eine Beispielkonfiguration einer Standard-JVM, die vom Buildpack für eine Anwendung generiert wurde, die mit einer Speicherbegrenzung von 512M bereitgestellt wurde:
 
@@ -98,7 +98,7 @@ Anwendungen können die JVM-Optionen mit den Spezifikationen anpassen, die von d
 </tr>
 
 <tr>
-<td>IBM JRE</td>
+<td> {{site.data.keyword.IBM_notm}} JRE</td>
 <td>Enthält Laufzeitoptionen (Präfix '-X') und Java-Systemeigenschaften (Präfix '-D'). Die Angabe von '-XX' bei gelegentlicher Nutzung wird nicht empfohlen (Änderungen an diesen Optionen vorbehalten).
 </td>
 <td>[Befehlszeilenoptionen für Version 8](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html), [Befehlszeilenoptionen für Version 7](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
@@ -112,7 +112,7 @@ Anwendungen können die JVM-Optionen mit den Spezifikationen anpassen, die von d
 </tr>
 </table>
 
-Eine Anwendung, die angepasste JVM-Optionen erfordert, kann die Option als Wert für die Umgebungsvariable IBM_JAVA_OPTIONS, JAVA_OPTS oder JVM_ARGS in Bluemix definieren. Informationen zum Definieren von Umgebungsvariablen für eine Anwendung finden Sie in 'Umgebungsvariablen'. Anstatt eine Umgebungsvariable zu definieren, kann ein paketierter Server oder ein Serververzeichnis auch die Datei 'jvm.options' mit den Befehlszeilenoptionen enthalten.
+Eine Anwendung, die angepasste JVM-Optionen erfordert, kann die Option als Wert für die Umgebungsvariable IBM_JAVA_OPTIONS, JAVA_OPTS oder JVM_ARGS in {{site.data.keyword.Bluemix_notm}} definieren. Informationen zum Definieren von Umgebungsvariablen für eine Anwendung finden Sie in 'Umgebungsvariablen'. Anstatt eine Umgebungsvariable zu definieren, kann ein paketierter Server oder ein Serververzeichnis auch die Datei 'jvm.options' mit den Befehlszeilenoptionen enthalten.
 
 Wenn die JVM-Optionen auf die JRE angewendet werden, erfolgt zuerst die Anwendung der Standardoptionen des Liberty-Buildpacks gefolgt von den angepassten Optionen. Die angepassten Optionen werden in einer bestimmten Reihenfolge angehängt (siehe Tabelle). Die Reihenfolge der angewendeten Java-Optionen gibt an, welche Optionen Vorrang haben. Optionen, die zuletzt angewendet werden, haben Vorrang vor Optionen, die zuvor angewendet wurden.
 
@@ -131,7 +131,7 @@ Hinweis: Einige Optionen werden nur wirksam, wenn die Option durch einen Agenten
 <tr>
 <td>1</td>
 <td>IBM_JAVA_OPTIONS</td>
-<td>Von der IBM JRE unterstützte Umgebungsvariable</td>
+<td>Von der {{site.data.keyword.IBM_notm}} JRE unterstützte Umgebungsvariable</td>
 <td>Alle</td>
 <td>Anwendung erneut starten oder erneutes Staging für Anwendung</td>
 <td>Nein</td>
@@ -168,18 +168,18 @@ Hinweis: Einige Optionen werden nur wirksam, wenn die Option durch einen Agenten
 ### Angewendete JVM-Optionen einer aktiven Anwendung bestimmen
 {: #determining_applied_jvm_options}
 
-Mit Ausnahme von anwendungsdefinierten Optionen, die mit der Umgebungsvariable JVM_ARGS angegeben sind, bleiben die Ergebnisoptionen in der Laufzeitumgebung entweder als Befehlszeilenoption (eigenständige Java-Anwendungen) oder in der Datei `jvm.options` (keine eigenständige Java-Anwendungen) erhalten. Die angewendeten JVM-Optionen für die Anwendung können entweder über die Konsole von IBM Bluemix oder die CF-CLI angezeigt werden.
+Mit Ausnahme von anwendungsdefinierten Optionen, die mit der Umgebungsvariable JVM_ARGS angegeben sind, bleiben die Ergebnisoptionen in der Laufzeitumgebung entweder als Befehlszeilenoption (eigenständige Java-Anwendungen) oder in der Datei `jvm.options` (keine eigenständige Java-Anwendungen) erhalten. Die angewendeten JVM-Optionen für die Anwendung können entweder über die Konsole von {{site.data.keyword.Bluemix_notm}} oder die Cloud Foundry-CLI angezeigt werden.
 
-Die JVM-Optionen für eigenständige Java-Anwendungen werden als Befehlszeilenoptionen gespeichert. Sie können über die Datei `staging_info.yml` angezeigt werden. 
+Die JVM-Optionen für eigenständige Java-Anwendungen werden als Befehlszeilenoptionen gespeichert. Sie können über die Datei `staging_info.yml` angezeigt werden.
 
-Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein: 
+Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein:
 
 ```
     $ cf files myapp staging_info.yml
 ```
 {: codeblock}
 
-Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie den folgenden Befehl ein: 
+Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie den folgenden Befehl ein:
 
 ```
     $ cf ssh myapp -c "cat staging_info.yml"
@@ -188,14 +188,14 @@ Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die in einer Diego
 
 Die JVM-Optionen für WAR-, EAR- und Serververzeichnisbereitstellungen sowie Bereitstellungen für paketierte Server sind in der Datei `jvm.options` gespeichert. Die Datei `jvm.options` befindet sich im Verzeichnis `app/wlp/usr/servers/<serverName>/`. In den meisten Fällen wird für ```<serverName>``` die Einstellung `defaultServer` festgelegt. Es sei denn, ein paketierter Server wurde mit einem anderen Servernamen implementiert. Beispiel:
 
-Um die Datei `jvm.options` in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein: 
+Um die Datei `jvm.options` in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein:
 
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
-Um die Datei `jvm.options` in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie den folgenden Befehl ein: 
+Um die Datei `jvm.options` in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie den folgenden Befehl ein:
 
 ```
     $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
@@ -206,8 +206,8 @@ Um die Datei `jvm.options` in einer Anwendung anzusehen, die in einer Diego-Zell
 #### Beispielsyntax
 {: #example_usage}
 
-Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche IBM JVM-Garbage-Collection-Protokollierung zu aktivieren: 
-* Die in der Datei `manifest.yml` einer Anwendung enthaltenen JVM-Optionen: 
+Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche {{site.data.keyword.IBM_notm}} JRE-Garbage-Collection-Protokollierung zu aktivieren:
+* Die in der Datei `manifest.yml` einer Anwendung enthaltenen JVM-Optionen:
 
 ```
     env:
@@ -215,21 +215,21 @@ Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche IBM JVM-G
 ```
 {: codeblock}
 
-* Um die ausführliche JVM-Garbage-Collection-Protokolldatei in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein: 
+* Um die ausführliche JVM-Garbage-Collection-Protokolldatei in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein:
 
 ```
     $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
-* Um die ausführliche JVM-Garbage-Collection-Protokolldatei in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie folgenden Befehl ein: 
+* Um die ausführliche JVM-Garbage-Collection-Protokolldatei in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie folgenden Befehl ein:
 
 ```
     $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
 ```
 {: codeblock}
 
-* Wenn Sie die IBM JRE-Option einer bereitgestellten Anwendung aktualisieren möchten, um 'heap', 'snap' und 'javacore' für eine OutOfMemory-Bedingung auszulösen, definieren Sie die Umgebungsvariable der Anwendung mit der JVM-Option und führen Sie einen Neustart der Anwendung durch:
+* Wenn Sie die {{site.data.keyword.IBM_notm}} JRE-Option einer bereitgestellten Anwendung aktualisieren möchten, um 'heap', 'snap' und 'javacore' für eine OutOfMemory-Bedingung auszulösen, definieren Sie die Umgebungsvariable der Anwendung mit der JVM-Option und führen Sie einen Neustart der Anwendung durch:
 
 ```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
@@ -237,7 +237,7 @@ Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche IBM JVM-G
 ```
 {: codeblock}
 
- Details zum Anzeigen und Herunterladen der generierten Speicherauszugsdateien finden Sie in der Dokumentation über [Protokollierung und Tracing](loggingAndTracing.html#download_dumps). 
+ Details zum Anzeigen und Herunterladen der generierten Speicherauszugsdateien finden Sie in der Dokumentation über [Protokollierung und Tracing](loggingAndTracing.html#download_dumps).
 
 ### JRE überschreiben
 {: #overlaying_jre}

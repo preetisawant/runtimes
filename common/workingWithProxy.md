@@ -19,9 +19,9 @@ In some environments such as [{{site.data.keyword.Bluemix_notm}} Dedicated](/doc
 behavior of your application during staging and runtime.
 
 You can configure your application to work with the proxy by using the following environment variables:
-  * [http_proxy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
-  * [https_proxy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
-  * [no_proxy ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.gnu.org/software/wget/manual/html_node/Proxies.html){: new_window}
+  * [http_proxy ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
+  * [https_proxy ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
+  * [no_proxy ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.gnu.org/software/wget/manual/html_node/Proxies.html){: new_window}
 
 You can set these environment variables using *bluemix app env-set* or via the *manifest.yml* file.  Depending on how you configure your proxy environment variables, if your application downloads resources from the internet during staging, your resources might download using the proxy. For example, if you have a Nodejs application in an environment with `http_proxy` set to `yourProxyURL` and you want to allow `npm` to download modules from the internet **but not the proxy**.  To download without using the proxy, set `no_proxy` to `npmjs.org`.
 

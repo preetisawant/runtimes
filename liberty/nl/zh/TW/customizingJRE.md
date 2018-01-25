@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2017-05-31"
 # 自訂 JRE
 {: #customizing_jre}
 
-應用程式是在 Liberty 建置套件所提供及配置的 Java 運行環境 (JRE) 中執行。Liberty 建置套件也可以配置 JRE 版本或類型、自訂 JVM 選項，或重疊 JRE 功能。
+應用程式在 Liberty 建置套件所提供及配置的 Java 運行環境 (JRE) 中執行。Liberty 建置套件也可以配置 JRE 版本或類型、自訂 JVM 選項，或重疊 JRE 功能。
 
-## IBM JRE
+## {{site.data.keyword.IBM_notm}} JRE
 
-依預設，應用程式會配置成使用輕量型版本的 IBM JRE 來執行。這個輕量型 JRE 經過拆解以提供核心的重要功能，並且大量減少磁碟和記憶體佔用量。如需輕量型 JRE 內容的相關資訊，請參閱[佔用量較少的 JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
+依預設，應用程式會配置成使用輕量型版本的 {{site.data.keyword.IBM}} JRE 來執行。這個輕量型 JRE 經過拆解以提供核心的重要功能，並且大量減少磁碟和記憶體佔用量。如需輕量型 JRE 內容的相關資訊，請參閱[佔用量較少的 JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
 
-依預設會使用 IBM JRE 第 8 版。請使用 JBP_CONFIG_IBMJDK 環境變數來指定 IBM JRE 的替代版本。例如，若要使用最新的 IBM JRE 7.1，請設定下列環境變數：
+ 依預設會使用 {{site.data.keyword.IBM_notm}} JRE 第 8 版。請使用 JBP_CONFIG_IBMJDK 環境變數來指定 {{site.data.keyword.IBM_notm}} JRE 的替代版本。例如，若要使用最新的 {{site.data.keyword.IBM_notm}} JRE 7.1，請設定下列環境變數：
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
@@ -60,16 +60,16 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
   * 應用程式的記憶體限制，如[記憶體限制與 Liberty 建置套件](memoryLimits.html#memory_limits)中所述。
   * JRE 類型，因為 JVM 的資料堆相關選項會根據 JRE 的支援選項而不同。
 
-* [Bluemix 中支援的 Liberty 特性](libertyFeatures.html#libertyfeatures)。
-  * Bluemix 中不支援兩段式確定廣域資料庫交易，因此，透過設定 -Dcom.ibm.tx.jta.disable2PC=true 予以停用。
+* [{{site.data.keyword.Bluemix_notm}} 中支援的 Liberty 特性](libertyFeatures.html#libertyfeatures)。
+  * {{site.data.keyword.Bluemix_notm}} 中不支援兩段式確定廣域資料庫交易，因此，透過設定 -Dcom.ibm.tx.jta.disable2PC=true 予以停用。
 
-* Bluemix 環境。
+* {{site.data.keyword.Bluemix_notm}} 環境。
 
-    JVM 選項的配置是為了提供 Bluemix 環境中的最佳化，以及輔助記憶體相關錯誤狀況的診斷。
+    JVM 選項的配置是為了提供 {{site.data.keyword.Bluemix_notm}} 環境中的最佳化，以及輔助記憶體相關錯誤狀況的診斷。
   * 透過停用 JVM 傾出選項，並在應用程式的記憶體耗盡時結束 (kill) 處理程序，以配置應用程式的快速失敗及回復。
-  * 虛擬化調整（僅限 IBM JRE）。
+  * 虛擬化調整（僅限 {{site.data.keyword.IBM_notm}} JRE）。
   * 將失敗時的應用程式可用記憶體資源資訊遞送至 Loggregator。
-  * 如果應用程式是配置為啟用 JVM 記憶體傾出，則會停用 Java 處理程序的結束 (kill) 功能，且 JVM 記憶體傾出會遞送至一個共同的應用程式 "dumps" 目錄。然後，即可從 Bluemix 儀表板或 CF CLI 檢視這些傾出。
+  * 如果應用程式是配置為啟用 JVM 記憶體傾出，則會停用 Java 處理程序的結束 (kill) 功能，且 JVM 記憶體傾出會遞送至一個共同的應用程式 "dumps" 目錄。然後，即可從 {{site.data.keyword.Bluemix_notm}} 儀表板或 Cloud Foundry CLI 檢視這些傾出。
 
 下列範例是建置套件針對記憶體限制為 512M 的已部署應用程式所產生的預設 JVM 配置：
 
@@ -98,7 +98,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 </tr>
 
 <tr>
-<td>IBM JRE</td>
+<td> {{site.data.keyword.IBM_notm}}JRE</td>
 <td>包括運行環境選項（字首為 -X）、任何 Java 系統內容（字首為 -D），而且不建議將 -XX 用於非正式用法（這些選項可能隨時變更）
 </td>
 <td>[第 8 版指令行選項](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html)、[第 7 版指令行選項](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)</td>
@@ -111,7 +111,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 </tr>
 </table>
 
-需要自訂 JVM 選項的應用程式可以將此選項設為 Bluemix 中 IBM_JAVA_OPTIONS、JAVA_OPTS 或 JVM_ARGS 環境變數其中之一的值。請參閱「環境變數」小節，以瞭解如何設定應用程式的環境變數。包裝伺服器或伺服器目錄也可以包括含有指令行選項的 jvm.options 檔案，而不設定環境變數。
+需要自訂 JVM 選項的應用程式可以將此選項設為 {{site.data.keyword.Bluemix_notm}} 中 IBM_JAVA_OPTIONS、JAVA_OPTS 或 JVM_ARGS 環境變數其中之一的值。請參閱「環境變數」小節，以瞭解如何設定應用程式的環境變數。包裝伺服器或伺服器目錄也可以包括含有指令行選項的 jvm.options 檔案，而不設定環境變數。
 
 將 JVM 選項套用至 JRE 時，會先套用 Liberty 建置套件的預設選項，接著再套用自訂選項。自訂選項是依表格中所列的特定順序予以附加。已套用的 Java 選項的順序定義了哪些選項優先。最後套用之選項的優先順序高於先前套用的選項。
 
@@ -130,7 +130,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 <tr>
 <td>1</td>
 <td>IBM_JAVA_OPTIONS</td>
-<td>IBM JRE 所支援的環境變數</td>
+<td>{{site.data.keyword.IBM_notm}} JRE 所支援的環境變數</td>
 <td>全部</td>
 <td>重新啟動或重新編譯打包應用程式</td>
 <td>否</td>
@@ -167,7 +167,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 ### 決定執行中應用程式的已套用 JVM 選項
 {: #determining_applied_jvm_options}
 
-使用 JVM_ARGS 環境變數所指定的應用程式定義選項除外，其他產生的選項會以指令行選項形式（獨立式 Java 應用程式）或以 `jvm.options` 檔案（非獨立式 Java 應用程式）持續保存在運行環境中。您可以從 IBM Bluemix 主控台或 CF CLI 檢視應用程式的已套用 JVM 選項。
+使用 JVM_ARGS 環境變數所指定的應用程式定義選項除外，其他產生的選項會以指令行選項形式（獨立式 Java 應用程式）或以 `jvm.options` 檔案（非獨立式 Java 應用程式）持續保存在運行環境中。您可以從 {{site.data.keyword.Bluemix_notm}} 主控台或 Cloud Foundry CLI 檢視針對應用程式所套用的 JVM 選項。
 
 獨立式 Java 應用程式的 JVM 選項會持續保存為指令行選項。您可以從 `staging_info.yml` 檔案中檢視它們。
 
@@ -185,7 +185,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 ```
 {: codeblock}
 
-WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存在 `jvm.options` 檔案中。`jvm.options` 檔案位於 `app/wlp/usr/servers/<serverName>/` 目錄中。在大部分情況下，```<serverName>``` 會設為 `defaultServer`，除非包裝伺服器已用不同的伺服器名稱部署。例如：
+WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存在 `jvm.options` 檔案中。`jvm.options` 檔案位於 `app/wlp/usr/servers/<serverName>/` 目錄中。在大部分情況下，`<serverName>` 會設為 `defaultServer`，除非包裝伺服器已用不同的伺服器名稱部署。例如：
 
 若要在執行於 DEA 節點中的應用程式上檢視 `jvm.options` 檔案，請執行下列指令：
 
@@ -205,7 +205,7 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 #### 用法範例
 {: #example_usage}
 
-使用自訂的 JVM 選項部署應用程式，以啟用 IBM JRE 詳細記憶體回收記載：
+使用自訂的 JVM 選項部署應用程式，以啟用 {{site.data.keyword.IBM_notm}} JRE 詳細記憶體回收記載：
 * 應用程式的 `manifest.yml` 檔案中內含的 JVM 選項：
 
 ```
@@ -217,7 +217,7 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 * 若要在執行於 DEA 節點中的應用程式上檢視 JVM 所產生的詳細記憶體回收日誌檔，請執行下列指令：
 
 ```
-$ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
@@ -228,7 +228,7 @@ $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
-* 若要更新已部署應用程式的 IBM JRE 選項，以在記憶體不足 (OutOfMemory) 的狀況下觸發 heap、snap 及 javacore，請使用 JVM 選項來設定應用程式的環境變數，並重新啟動應用程式：
+* 若要更新已部署應用程式的 {{site.data.keyword.IBM_notm}} JRE 選項，以在記憶體不足 (OutOfMemory) 的狀況下觸發 heap、snap 及 javacore，請使用 JVM 選項來設定應用程式的環境變數，並重新啟動應用程式：
 
 ```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'

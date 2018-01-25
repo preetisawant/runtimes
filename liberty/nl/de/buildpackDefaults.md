@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-06-10"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-06-10"
 # Buildpack-Standardwerte
 {: #buildpack_defauts}
 
-Das Liberty-Buildpack wird in Bluemix häufig aktualisiert. Jedes Release kann Sicherheitskorrekturen oder Feature-Erweiterungen enthalten.
+Das Liberty-Buildpack wird in {{site.data.keyword.Bluemix}} häufig aktualisiert. Jedes Release kann Sicherheitskorrekturen oder Feature-Erweiterungen enthalten.
 
 Das Buildpack besitzt die Standardwerte für Einstellungen wie z. B. die Java-Version
 oder das Liberty-Feature-Set für WAR- oder EAR-Anwendungen. Einige der Standardwerte können von einem Buildpack-Release zum nächsten geändert werden, wodurch die
@@ -68,4 +68,4 @@ Damit sichergestellt ist, dass die Anwendung nicht durch Änderungen an der übe
 ## Allgemein
 {: #general notoc}
 * [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Übersicht über das Liberty-Profil](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

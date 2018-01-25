@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -54,7 +54,7 @@ lastupdated: "2017-06-01"
 ## 生成或更新 server.xml 配置节
 {: #generating_or_updating_serverxml}
 
-向 Bluemix 推送独立应用程序时，Liberty buildpack 会生成 server.xml 节，如[用于推送 Liberty 应用程序的选项](optionsForPushing.html#options_for_pushing)中所述。推送独立应用程序并绑定到容器管理的服务时，Liberty buildpack 会为绑定服务生成必要的 server.xml 节。
+向 {{site.data.keyword.Bluemix_notm}} 推送独立应用程序时，Liberty buildpack 会生成 server.xml 节，如[用于推送 Liberty 应用程序的选项](optionsForPushing.html#options_for_pushing)中所述。推送独立应用程序并绑定到容器管理的服务时，Liberty buildpack 会为绑定服务生成必要的 server.xml 节。
 
 提供 server.xml 文件并绑定到容器管理的服务时，Liberty buildpack 将执行以下操作：
 
@@ -93,7 +93,7 @@ lastupdated: "2017-06-01"
 {: codeblock}
 
 **重要信息**：您指定的服务类型必须与 VCAP_SERVICES 环境变量中所示的服务标签相匹配。不允许使用空格。
-**重要信息**：```<service_type_specification>``` 中不允许使用空格。空格只允许用于分隔多个 ```<service_type_specification>``` 实例。
+**重要信息**：```<service_type_specification>```. 空格只允许用于分隔多个 ```<service_type_specification>``` 实例。
 
 使用“all”选项可选择退出服务的所有自动配置操作，如上面的 Mongo 场景。使用“config”选项可仅选择退出配置更新操作，如上面的 SQLDB 场景。
 

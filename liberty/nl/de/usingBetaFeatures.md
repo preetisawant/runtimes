@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,12 +12,12 @@ lastupdated: "2017-05-31"
 # Beta-Features verwenden
 {: #using_beta_features}
 
-Die Beta-Features von Liberty ermöglichen den vorzeitigen Zugriff auf die neuen Funktionen und Programmiermodelle, die in einem zukünftigen Liberty-Release enthalten sein können. Die meisten Beta-Features können auch in Anwendungen verwendet werden, die in Bluemix implementiert sind.
+Die Beta-Features von Liberty ermöglichen den vorzeitigen Zugriff auf die neuen Funktionen und Programmiermodelle, die in einem zukünftigen Liberty-Release enthalten sein können. Die meisten Beta-Features können auch in Anwendungen verwendet werden, die in {{site.data.keyword.Bluemix}} implementiert sind.
 
 **Wichtig**: Die Beta-Features dienen nur zu Entwicklungs- und Testzwecken und dürfen in Produktionsumgebungen nicht verwendet werden. Umfassende Nutzungsbedingungen finden Sie in der
 [ Lizenzvereinbarung für Betaversionen](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
 
-In Bluemix verfügbare Liberty-Beta-Features
+In {{site.data.keyword.Bluemix_notm}} verfügbare Liberty-Beta-Features
 <table>
 <tr>
 <th align="left">Feature</th>
@@ -34,7 +34,7 @@ In Bluemix verfügbare Liberty-Beta-Features
 </tr>
 </table>
 
-Führen Sie die folgenden Schritte aus, um die Liberty-Beta-Features in Bluemix verwenden zu können:
+Führen Sie die folgenden Schritte aus, um die Liberty-Beta-Features in {{site.data.keyword.Bluemix_notm}} verwenden zu können:
 
 1. [Implementieren Sie ein Serververzeichnis oder einen paketierten Server](optionsForPushing.html) mit mindestens einem in der Datei 'server.xml' aktivierten Beta-Feature, wie im folgenden Beispiel gezeigt:
 ```

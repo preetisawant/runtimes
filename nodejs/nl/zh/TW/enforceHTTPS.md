@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-07-17"
 # 在應用程式的所有頁面上施行 HTTPS
 {: #enforce_https}
 
-當您在 Bluemix 中執行應用程式，搭配快速架構時，需要進行下列變更以在應用程式的所有頁面上施行 HTTPS 而非 HTTP。
+當您在 {{site.data.keyword.Bluemix}} 中執行應用程式，搭配快速架構時，需要進行下列變更以在應用程式的所有頁面上施行 HTTPS 而非 HTTP。
 
 ```
 var express = require("express");

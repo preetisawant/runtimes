@@ -2,17 +2,17 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# JConsole zur Überwachung von Liberty in Bluemix verwenden
+# JConsole zur Überwachung von Liberty in {{site.data.keyword.cloud_notm}} verwenden
 {: #jconsole}
 
-## Die folgenden Schritte sind für die Überwachung der Bluemix-Liberty-Laufzeit mit JConsole erforderlich:
+## Liberty-Laufzeit mit JConsole überwachen:
 {: #steps_to_monitor}
 
 1. Führen Sie in einem Serverpaket, das die entsprechende Datei 'server.xml' enthält, eine Push-Operation für die App durch.

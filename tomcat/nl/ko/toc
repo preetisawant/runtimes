@@ -10,6 +10,7 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    eclipseTomcat.md
     [프록시 작업](../../manageapps/workingWithProxy.html)
     {: .navgroup-end}
 

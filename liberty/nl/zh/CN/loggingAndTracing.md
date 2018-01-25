@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-12-11"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-05-31"
 ## 日志文件
 {: #log_files}
 
-标准 Liberty 日志（例如 `messages.log` 或 `ffdc` directory）位于 IBM Bluemix 中每个应用程序实例的 `logs` 目录下。这些日志可以从 IBM Bluemix 控制台进行访问，也可以通过 CF CLI 进行访问。例如：
+标准 Liberty 日志（例如 `messages.log` 或 `ffdc` 目录）位于 {{site.data.keyword.Bluemix}} 中每个应用程序实例的 `logs` 目录下。这些日志可以从 {{site.data.keyword.Bluemix_notm}} 控制台进行访问，也可以通过 Cloud Foundry CLI 进行访问。例如：
 
 * 要访问应用程序最近的日志，请运行以下命令：
 
@@ -39,12 +39,12 @@ lastupdated: "2017-05-31"
   ```
   {: codeblock}
 
-日志级别及其他跟踪选项可以通过 Liberty 配置文件进行设置。有关更多信息，请参阅 [Liberty 概要文件：跟踪和日志记录](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html)。还可以使用 IBM Bluemix 控制台调整对运行中应用程序实例的跟踪。
+日志级别及其他跟踪选项可以通过 Liberty 配置文件进行设置。有关更多信息，请参阅[对 Liberty 进行故障诊断：日志记录和跟踪](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html)。还可以使用 {{site.data.keyword.Bluemix_notm}} 控制台调整对运行中应用程序实例的跟踪。
 
 ## 使用跟踪和转储功能
 {: #using_trace_and_dump}
 
-可以直接从 Bluemix 控制台针对正在运行的应用程序调整 Liberty 跟踪配置。控制台还提供了请求并下载线程和堆转储的功能。为了调整跟踪配置或请求转储，请在 Bluemix 控制台中选择 Liberty 应用程序，然后在导航中选择`运行时`菜单。在`运行时`视图中，选择实例，然后按*跟踪*或*转储*按钮。如果要调整跟踪级别，请参阅 [Liberty 概要文件：跟踪和日志记录](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html)，以获取有关跟踪规范语法的详细信息。
+可以直接从 {{site.data.keyword.Bluemix_notm}} 控制台针对正在运行的应用程序调整 Liberty 跟踪配置。控制台还提供了请求并下载线程和堆转储的功能。为了调整跟踪配置或请求转储，请在 {{site.data.keyword.Bluemix_notm}} 控制台中选择 Liberty 应用程序，然后在导航中选择`运行时`菜单。在`运行时`视图中，选择实例，然后按*跟踪*或*转储*按钮。如果要调整跟踪级别，请参阅 [对 Liberty 进行故障诊断：日志记录和跟踪](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html)，以获取有关跟踪规范语法的详细信息。
 
 ### 在 Diego 中通过 SSH 更改跟踪配置
 
@@ -52,9 +52,9 @@ lastupdated: "2017-05-31"
 
 推送的应用程序必须包含 server.xml，该文件中包含 **updateTrigger**，值为 **polled**，然后运行时环境就会检测到在 server.xml 中对跟踪规范所做的更改并应用这些更改。
 
-请参阅[用 server.xml 推送 Liberty 应用程序](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)以了解有关使用定制 sever.xml 推送 Liberty 应用程序的选项
+请参阅[使用 server.xml 推送 Liberty 应用程序](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)以了解有关使用定制 sever.xml 推送 Liberty 应用程序的选项
 
-请参阅[控制动态更新 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} 以了解如何在 server.xml 中设置动态更新。
+请参阅[控制动态更新](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} 以了解如何在 server.xml 中设置动态更新。
 
 要更改跟踪配置，请执行下列步骤：
 
@@ -74,7 +74,7 @@ $ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 注：在重新编译打包或重新启动时，server.xml 更改会丢失，而且此更改仅对 ssh 进入的实例有效。
 
-请参阅 [Liberty 概要文件：跟踪和日志记录 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} 以了解跟踪规范语法的详细信息。
+请参阅 [对 Liberty 进行故障诊断：日志记录和跟踪](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window}，以获取有关跟踪规范语法的详细信息。
 
 ### 在 Diego 中通过 SSH 触发转储
 
@@ -144,4 +144,4 @@ $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_nam
 ## 常规
 {: #general notoc}
 * [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-12-13"
 
 ---
 
@@ -85,10 +85,10 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS ![外�
   * 日誌*不* 會包含 *Installing FIPS-enabled IBM SDK for Node.js* 訊息。
   * process.versions.openssl 所傳回的值*不* 會包含 "fips"。
 
-## Nodejs 第 6 版
+## Node.js v6 及更新版本
 {: #nodejs_v6_fips}
 
-若要以 FIPS 模式與 Node.js 第 6 版搭配執行，則除了設定 **FIPS_MODE=true** 之外，您還必須在 start 指令中包括 **--enable-fips**，如下列範例中所示：
+若要以 FIPS 模式與 Node.js 第 6 版及更新版本搭配執行，則除了設定 **FIPS_MODE=true** 之外，您還必須在 start 指令中包括 **--enable-fips**，如下列範例中所示：
 ```
 {
     ...   
@@ -99,7 +99,7 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS ![外�
 ```
 {: codeblock}
 
-下表說明 node.js 第 6 版在使用 FIPS 時的行為。
+下表說明 node.js 第 6 版及更新版本在使用 FIPS 時的行為。
 
 |                 |--enable-fips|無 --enable-fips|
 | :-------------- | :------------ | :-------------- |

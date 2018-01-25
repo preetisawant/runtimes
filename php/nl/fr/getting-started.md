@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -20,17 +20,17 @@ lastupdated: "2017-09-06"
 
 * {: download} Félicitations, vous avez déployé une application exemple Hello World sur {{site.data.keyword.Bluemix}} !  Pour commencer, suivez ce guide pas à pas. Ou <a class="xref" href="http://bluemix.net" target="_blank" title="(Télécharger l'exemple de code)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Télécharger le code de l'application" />téléchargez l'exemple de code</a> et découvrez-le par vous-même.
 
-En suivant ce tutoriel d'initiation PHP, vous allez configurer un environnement de développement, déployer une application en local et sur {{site.data.keyword.Bluemix}}, puis intégrer un service de base de données {{site.data.keyword.Bluemix}} dans votre application.
+En suivant ce tutoriel d'initiation PHP, vous allez configurer un environnement de développement, déployer une application localement et sur {{site.data.keyword.Bluemix}}, puis intégrer un service de base de données dans votre application.
 
 ## Avant de commencer
 {: #prereqs}
 
 Vous aurez besoin des éléments suivants :
 * [Compte {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI (client de ligne de commande pour Cloud Foundry) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}
-* [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
-* [PHP ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://php.net/downloads.php){: new_window}
-* [Composer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://getcomposer.org/download/){: new_window}
+* [Cloud Foundry CLI (client de ligne de commande pour Cloud Foundry) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}
+* [PHP ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://php.net/downloads.php){: new_window}
+* [Composer ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://getcomposer.org/download/){: new_window}
 
 ## Etape 1 : Cloner l'application exemple
 {: #clone}
@@ -93,20 +93,22 @@ cf api <API-endpoint>
 
 Dans cette commande, remplacez *API-endpoint* par un point d'extrémité d'API parmi les suivants.
 
-|Région          |Point d'extrémité d'API                             |
-|:---------------|:-------------------------------|
-| Sud des Etats-Unis |https://api.ng.bluemix.net  |
-| Royaume-Uni    | https://api.eu-gb.bluemix.net  |
-| Sydney         | https://api.au-syd.bluemix.net |
-| Francfort      | https://api.eu-de.bluemix.net  | 
+| **Nom de région** | **Emplacement géographique** | **Point d'extrémité d'API** |
+|-----------------|-------------------------|-------------------|
+| Région Sud des Etats-Unis | Dallas, US | api.ng.bluemix.net |
+| Région Est des Etats-Unis | Washington, DC, US | api.us-east.bluemix.net |
+| Région Royaume-Uni | Londres, Angleterre | api.eu-gb.bluemix.net |
+| Région Sydney | Sydney, Australie | api.au-syd.bluemix.net |
+| Région Allemagne | Francfort, Allemagne | api.eu-de.bluemix.net |
+{: caption="Tableau 1. Liste des régions {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
-Connectez-vous à votre compte {{site.data.keyword.Bluemix_notm}}
+Connectez-vous à votre compte {{site.data.keyword.Bluemix_notm}}.
 
    ```
 cf login
    ```
    {: pre}
-   
+
 Si vous ne pouvez pas vous connecter à l'aide des commandes `cf login` ou `bx login` car vous disposez d'un ID utilisateur fédéré, utilisez la commande `cf login --sso` ou la commande `bx login --sso` pour vous connecter avec votre ID de connexion unique (SSO). Voir [Connexion à l'aide d'un ID fédéré](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) pour en savoir plus.
 
  Depuis le répertoire *get-started-php*, poussez votre application vers {{site.data.keyword.Bluemix_notm}}
@@ -130,7 +132,7 @@ cf apps
 Nous allons à présent ajouter une base de données NoSQL à l'application et configurer cette dernière pour qu'elle puisse être exécutée localement et sur {{site.data.keyword.Bluemix_notm}}.
 
 1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} dans votre navigateur. Accédez au `Tableau de bord`. Sélectionnez votre application en cliquant sur son nom dans la colonne `Nom`.
-2. Cliquez sur `Connexions`, puis sur `Connecter un nouveau`.
+2. Cliquez sur `Connexions`, puis sur `Créer une connexion`.
 3. Dans la section `Données &  analyse`, sélectionnez `Cloudant NoSQL DB` et `Créer` pour créer le service.
 4. Sélectionnez `Reconstituer` lorsque vous y êtes invité. {{site.data.keyword.Bluemix_notm}} redémarre votre application et lui fournit les données d'identification pour l'accès à la base de données en utilisant la variable d'environnement `VCAP_SERVICES`. L'application n'a accès à cette variable d'environnement que lorsqu'elle fonctionne sur {{site.data.keyword.Bluemix_notm}}.
 
@@ -169,3 +171,9 @@ php -S localhost:8000
 
 Si vous n'avez pas besoin de votre application live, arrêtez-la. Vous éviterez des frais imprévus.
 {: tip}  
+
+## Etapes suivantes
+
+* [Tutoriels](/docs/tutorials/index.html)
+* [Exemples ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

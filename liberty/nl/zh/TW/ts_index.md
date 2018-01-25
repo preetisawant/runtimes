@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -32,7 +32,7 @@ Liberty 應用程式無法啟動，錯誤為「無法開始接受連線」。例
 ```
 {: #codeblock}
 
-Bluemix 會對應用程式執行性能檢查，以查看它是否已順利啟動。性能檢查會測試應用程式是否正在指派給應用程式的埠上接聽。此檢查的預設逾時是 60 秒，而部分應用程式可能需要 60 秒以上的時間才能啟動。應用程式需要較長時間才能啟動的原因有許多。例如，連結服務（例如 [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) 或 [New Relic](/docs/runtimes/liberty/newRelic.html)）或[啟用除錯器](/docs/manageapps/app_mng.html#debug)都會增加啟動時間。應用程式也可能執行需要較長時間才能完成的起始設定步驟。
+{{site.data.keyword.Bluemix_notm}} 會對應用程式執行性能檢查，以查看它是否已順利啟動。性能檢查會測試應用程式是否正在指派給應用程式的埠上接聽。此檢查的預設逾時是 60 秒，而部分應用程式可能需要 60 秒以上的時間才能啟動。應用程式需要較長時間才能啟動的原因有許多。例如，連結服務（例如 [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) 或 [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)）或[啟用除錯器](/docs/manageapps/app_mng.html#debug)都會增加啟動時間。應用程式也可能執行需要較長時間才能完成的起始設定步驟。
 {: tsCauses}
 
 請先檢查日誌，以尋找任何可能導致 Liberty 應用程式失敗的明顯錯誤。如果未發現任何明顯錯誤，請嘗試下列動作：
@@ -54,7 +54,7 @@ Bluemix 會對應用程式執行性能檢查，以查看它是否已順利啟動
 
 ### **停用 appstate 特性。**
 
-appstate 特性會與 Bluemix 性能檢查處理程序整合，以確定 Liberty 應用程式已完整起始設定，然後應用程式才能收到 HTTP 要求。應用程式完整起始設定之後，appstate 特性就不會再有任何效果。此特性的負面影響是部分應用程式可能需要較長的時間才能啟動。若要停用 appstate 特性，請在應用程式上設定下列環境內容，並重新編譯打包應用程式：
+appstate 特性會與 {{site.data.keyword.Bluemix_notm}} 性能檢查處理程序整合，以確定 Liberty 應用程式已完整起始設定，然後應用程式才能收到 HTTP 要求。應用程式完整起始設定之後，appstate 特性就不會再有任何效果。此特性的負面影響是部分應用程式可能需要較長的時間才能啟動。若要停用 appstate 特性，請在應用程式上設定下列環境內容，並重新編譯打包應用程式：
 
 ```
    $ cf set-env myApp JBP_CONFIG_LIBERTY "app_state: false"

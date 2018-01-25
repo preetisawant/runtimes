@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2017-07-14"
 
 您可以使用[安全入門範本應用程式](https://github.com/IBM-Bluemix/java-secure-app)作為進行新 Liberty 應用程式開發的起點。請從學習應用程式中的 XSS 對策程式碼開始，然後將它套用至應用程式 API 的作業。安全入門範本應用程式中的對策可透過降低或防止 XSS 攻擊，來協助防止惡意使用者輸入損壞伺服器及瀏覽器上的應用程式。
 
-首先，請下載此安全入門範本應用程式，然後透過處理 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 範例應用程式的相同方式，在 Bluemix 或本端上進行建置並部署。移至[在 Bluemix 上開始使用 Liberty](getting-started.html)，以進一步瞭解如何在 Bluemix 上建置及部署應用程式。若要開始使用，您可以使用下列步驟來複製、建置及執行應用程式。
+首先，請下載此安全入門範本應用程式，然後透過處理 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 範例應用程式的相同方式，在 {{site.data.keyword.Bluemix_notm}} 或本端上進行建置並部署。移至[在 {{site.data.keyword.Bluemix_notm}} 上開始使用 Liberty](getting-started.html)，以進一步瞭解如何在 {{site.data.keyword.Bluemix_notm}} 上建置及部署應用程式。若要開始使用，您可以使用下列步驟來複製、建置及執行應用程式。
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app

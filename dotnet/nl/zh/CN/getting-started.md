@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2017-09-06"
 * [{{site.data.keyword.Bluemix_notm}} 帐户](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/cli#downloads){: new_window}
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
-* 根据 [dot.net Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.microsoft.com/net/download/core) 的指示信息，安装 .NET 核心 SDK V1.0.4。
+* 根据 [dot.net Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.microsoft.com/net/download/core) 的指示信息，安装 .NET 核心 1.1 SDK 1.0.4。
 
 ## 步骤 1：克隆样本应用程序
 {: #clone}
@@ -92,7 +92,7 @@ dotnet run
 cf login
 ```
   {: pre}
-  
+
   如果因为是联合用户标识而无法使用 `cf login` 或 `bx login` 命令登录，请使用 `cf login --sso` 或 `bx login --sso` 命令用单点登录标识登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
 
 选择 API 端点
@@ -103,12 +103,14 @@ cf api <API-endpoint>
 
 将命令中的 *API-endpoint* 替换为以下列表中的 API 端点。
 
-|URL|区域          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net| 美国南部|
-| https://api.eu-de.bluemix.net  | 德国   |
-| https://api.eu-gb.bluemix.net| 英国          |
-| https://api.au-syd.bluemix.net| 悉尼  |
+| **区域名称** | **地理位置** | **API 端点** |
+|-----------------|-------------------------|-------------------|
+| 美国南部区域 | 美国达拉斯 | api.ng.bluemix.net |
+| 美国东部区域 | 美国华盛顿特区 | api.us-east.bluemix.net |
+| 英国区域 | 英国伦敦 | api.eu-gb.bluemix.net |
+| 悉尼区域 | 澳大利亚悉尼 | api.au-syd.bluemix.net |
+| 德国区域 | 德国法兰克福 | api.eu-de.bluemix.net |
+{: caption="表 1. {{site.data.keyword.cloud_notm}} 区域列表" caption-side="top"}
 
 **确保您位于应用程序的主目录 `get-started-aspnet-core` 中，**然后将应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
   ```
@@ -128,11 +130,11 @@ cf apps
 ## 步骤 5：连接 MySQL 数据库
 {: connect_mysql}
 
-接下来，我们要将 NoSClearDB MySQL 数据库添加到此应用程序并设置此应用程序，使其可以在本地以及在 Bluemix 上运行。
+接下来，我们要将 ClearDB MySQL 数据库添加到此应用程序并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
 1. 在浏览器中登录到 {{site.data.keyword.Bluemix_notm}}。浏览至`仪表板`。通过在`名称`列中单击应用程序的名称以选择该应用程序。
-2. 单击`连接`，然后单击`连接新项`。
-2. 在`数据和分析`部分中，选择 `ClearDB MySQL Database`，然后`创建`该服务。
+2. 单击`连接`，然后单击`创建连接`。
+2. 在`数据和分析`部分中，选择 `ClearDB 受管 MySQL 数据库`，然后`创建`该服务。
 3. 出现提示时，选择`重新编译打包`。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
 
 通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。[了解更多...](/docs/manageapps/depapps.html#app_env)
@@ -145,7 +147,7 @@ cf apps
 
 1. 创建文件 src/GetStartedDotnet/vcap-local.json
 
-2. 在浏览器中，打开 {{site.data.keyword.Bluemix_notm}} UI，选择“应用程序”->“连接”-> ClearDB MySQL Database ->“查看凭证”
+2. 在浏览器中，打开 {{site.data.keyword.Bluemix_notm}} UI，选择“应用程序”->“连接”-> ClearDB 受管 MySQL 数据库 ->“查看凭证”
 
 3. 将凭证中的整个 JSON 对象复制并粘贴到 `vcap-local.json` 文件，然后保存更改。结果将类似于以下内容：
   ```
@@ -173,3 +175,9 @@ cf apps
 
 请记住，如果无需应用程序继续运行，请将其停止，这样就不会发生任何意外的费用。
 {: tip}
+
+## 后续步骤
+
+* [教程](/docs/tutorials/index.html)
+* [样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

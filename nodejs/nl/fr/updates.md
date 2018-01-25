@@ -2,22 +2,42 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-31"
+lastupdated: "2017-12-12"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Dernières mises à jour apportées au pack de construction sdk-for-nodejs
+# Dernières mises à jour apportées au pack de construction SDK for Node.js
 {: #latest_updates}
 
 Liste des dernières mises à jour apportées au pack de construction sdk-for-nodejs.
 
+## 11 décembre 2017 : Mise à jour du pack de construction Node.js v3.16
+Le pack de construction SDK for Node.js v3.16 fournit les versions v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0 et v8.9.0
+d'IBM SDK Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.12.0 actuellement.
+Notez qu'elle remédie à la vulnérabilité suivante du PSIRT (Product Security Incident Response Team) :
+Advisory ID: 10237 Product Record ID: 104487 Title: Node.js zlib DOS security vulnerability, October 2017 (CVE-2017-14919). Il
+est conseillé de passer à la v3.16 afin d'obtenir les correctifs des vulnérabilités de sécurité affectant les
+versions 8.6.0.0 et antérieures, 6.10.2.0 à 6.11.4.0 et 4.8.2.0 à 4.8.4.0.
+
+## 1 novembre 2017 : Mise à jour du pack de construction Node.js v3.15
+Le pack de construction SDK for Node.js v3.15 fournit les versions 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 et 8.6.0 d'IBM SDK for Node.js.
+La valeur par défaut est la version 6.x la plus récente, soit la 6.11.4 actuellement.
+
+
+## 20 septembre 2017 : Mise à jour du pack de construction Node.js v3.14
+Le pack de construction SDK for Node.js v3.14 fournit les versions 4.8.3, 4.8.4, 6.11.2, 6.11.3, 8.1.4 et 8.3.0 d'IBM SDK for Node.js.
+La valeur par défaut est la version 6.x la plus récente, soit la 6.11.3 actuellement.
+Un bogue du pack de construction qui empêchait les applications Node.js de [s'arrêter proprement](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown) a été corrigé dans cette édition.
+
 ## 26 juillet 2017 : Mise à jour du pack de construction Node.js v3.13
 Le pack de construction SDK for Node.js v3.13 fournit les versions 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 et 8.1.4 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente,  soit 6.11.1 actuellement. Notez que la version 8 est disponible à des fins de test mais n'est pas encore recommandée en production.  
 
-Ce pack de construction contient les versions mises à jour de Node.js qui traitent les vulnérabilités récentes en matière de sécurité détectées dans Node.js. Mettez à jour vos applications pour utiliser les dernières versions disponibles, puis reconstituez les applications dans Bluemix. Consultez <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">ce lien</a> pour obtenir des détails sur les vulnérabilités de Node.js.
+Ce pack de construction contient les versions mises à jour de Node.js qui traitent les vulnérabilités de sécurité récentes détectées dans Node.js. Les utilisateurs doivent
+mettre à jour leurs applications pour utiliser les dernières versions disponibles, puis les reconstituer dans {{site.data.keyword.Bluemix_notm}}.
+Consultez <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">ce lien</a> pour obtenir des détails sur les vulnérabilités de Node.js.
 
 ## 5 Mai 2017 : Mise à jour du pack de construction Node.js v3.12
 Le pack de construction SDK for Node.js v3.12 fournit les versions 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 et 6.10.2 d'IBM SDK Node.js. La valeur par défaut est passée de la version 4.x la plus récente à la version 6.x la plus récente, soit 6.10.2 actuellement. S'agissant d'un changement de version principale, cela peut affecter les applications qui dépendent de la valeur par défaut. Voir [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) pour savoir comment éviter les problèmes.
@@ -51,7 +71,7 @@ Cette édition du pack de construction prend en charge les versions d'exécution
 
 Cette édition inclut des correctifs de bogue, dont ceux du [pack de construction Node.js 1.5.18 de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
 
-L'édition retire la prise en charge pour le gestionnaire StrongPM d'App Management, comme annoncé dans [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+Cette édition retire la prise en charge pour le gestionnaire StrongPM d'App Management, comme annoncé dans [{{site.data.keyword.Bluemix_notm}} Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
 Notez qu'un problème a été identifié lors de l'utilisation de Node.js 6.x et du [mode de développement](/docs/manageapps/app_mng.html#devmode). Pour contourner le problème, vous devez reconstituer votre application après activation du mode de développement avant de commencer à l'utiliser.
 
@@ -67,7 +87,7 @@ Des correctifs sont inclus pour les vulnérabilités en matière de sécurité s
 
 Cette édition du pack de construction ajoute l'environnement d'exécution IBM SDK for Node.js, versions 4.4.5 et 6.2.0. La valeur par défaut devient 4.4.5.
 
-L'édition retire la prise en charge des anciennes versions de l'environnement d'exécution, comme annoncé dans [Bluemix Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). L'environnement d'exécution prend désormais en charge les versions 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 et 6.2.0.
+Cette édition retire la prise en charge des anciennes versions de l'environnement d'exécution, comme annoncé dans [{{site.data.keyword.Bluemix_notm}} Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). L'environnement d'exécution prend désormais en charge les versions 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 et 6.2.0.
 
 Cette édition inclut les correctifs de bogue provenant du [pack de construction Node.js 1.5.14 de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.14).
 
@@ -77,7 +97,7 @@ Cette édition du pack de construction ajoute l'environnement d'exécution IBM S
 
 Des correctifs sont inclus pour les vulnérabilités en matière de sécurité suivantes :
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
-* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openssl.org/news/secadv/20160503.txt)
+* [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.openssl.org/news/secadv/20160503.txt)
 
 Notez qu'il s'agit d'un problème connu lié à npm v3 et à l'utilitaire App Management Inspector. npm 3.8.6 est la version par défaut avec les environnements d'exécution 6.0.0 et 6.1.0. Si vous souhaitez utiliser l'un des environnements d'exécution 6.x et l'utilitaire Inspector, vous devez spécifier une version npm 2.x dans votre fichier package.json comme solution temporaire.
 
@@ -110,7 +130,7 @@ Cette édition est totalement synchronisée avec le pack de construction [Cloud 
 
 * Mises à jour du pack de construction :
 
-  * Node.js v4.2.4 (IBM SDK for Node.js version 4) est désormais l'environnement d'exécution par défaut sur Bluemix ; il remplace la version v0.12.9. Par conséquent, il se peut que votre application se comporte différemment si vous n'avez pas indiqué une version spécifique pour celle-ci. Pour savoir comment spécifier une version de Node.js pour votre application Bluemix, voir la documentation de l'[environnement d'exécution Node.js](index.html).
+  * Node.js v4.2.4 (IBM SDK for Node.js version 4) est désormais l'environnement d'exécution par défaut sur {{site.data.keyword.Bluemix_notm}} ; il remplace la version 0.12.9. Par conséquent, il se peut que votre application se comporte différemment si vous n'avez pas indiqué une version spécifique pour celle-ci. Pour savoir comment spécifier une version de Node.js pour votre application {{site.data.keyword.Bluemix_notm}}, consultez la documentation de l'[environnement d'exécution Node.js](index.html).
 
   * Désormais, NODE_ENV prend la valeur par défaut *production*. Cela va modifier le comportement de certaines dépendances de noeud. Par exemple, l'infrastructure Express ne renverra plus de traces de piles dans le navigateur web pour les points d'extrémité défectueux, mais affichera à la place un message signalant une *erreur de serveur interne*. Lorsque NPM_CONFIG_PRODUCTION aura pour valeur *true*, NPM affectera à NODE_ENV la valeur *production* pour les scripts de sous-interpréteur de commandes lors de la phase d'installation de npm uniquement. Cela permettra aux utilisateurs d'affecter une autre valeur à NODE_ENV, par exemple, *development*, pour l'environnement d'exécution d'application. Pour plus de clarté, les scripts npm visualiseront le message **NODE_ENV=production**.
 
@@ -128,7 +148,7 @@ Cette édition est totalement synchronisée avec le pack de construction [Cloud 
 
   * La détection de scripts est mise à jour avec les informations de version du pack de construction.
 
-  * La recommandation relative au groupement (WEB_CONCURRENCY) initialement présentée par la communauté a été retirée, car la détermination de la mémoire était inexacte sur Bluemix.
+  * La recommandation relative au groupement (WEB_CONCURRENCY) initialement présentée par la communauté a été retirée, car la détermination de la mémoire était imprécise sur {{site.data.keyword.Bluemix_notm}}.
 
 
 ## 16 décembre 2015 : Mise à jour du pack de construction Node.js v2.8-20151209-1403 et v3.0beta-20151211-2041
@@ -140,9 +160,9 @@ Correctif de bogue pour le service Monitoring and Analytics. Inclusion d'un envi
 En outre, dans la version 3.0 bêta, l'environnement d'exécution Node.js par défaut est passé à v4.2.3.
 
 Le pack de construction IBM Node.js version 3.0 bêta est désormais publié en tant que pack de construction autre que le pack de construction par défaut dans
-Bluemix, avec Node.js
-version 4.2.3 comme environnement d'exécution par défaut. Pour garantir le fonctionnement de vos applications et de vos services dans Bluemix, envoyez par
-commande push votre application avec la version bêta du pack de construction. Après 30 jours ou plus, la version 3 deviendra le pack de construction par
+{{site.data.keyword.Bluemix_notm}}, avec Node.js
+version 4.2.3 comme environnement d'exécution par défaut. Pour garantir le fonctionnement de vos applications et de vos services dans {{site.data.keyword.Bluemix_notm}},
+poussez votre application avec la version bêta du pack de construction. Après 30 jours ou plus, la version 3 deviendra le pack de construction par
 défaut.
 
 Pour envoyer par commande push votre application avec la version 3.0 bêta :
@@ -178,7 +198,8 @@ d'App Management](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops
 
 ## 15 octobre 2015 : Mise à jour du pack de construction Node.js v2.6-20151006-1309
 
-Cette édition du pack de construction Node.js contient l'intégration de [StrongLoop Process Manager ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://strong-pm.io) à la fonction App Management. Pour plus d'informations, voir l'article de blogue [StrongLoop DevOps for Node.js Applications on Bluemix](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
+Cette édition du pack de construction Node.js contient l'intégration de [StrongLoop Process Manager ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://strong-pm.io) à la fonction App Management. Pour plus d'informations, consultez l'article de blogue
+[StrongLoop DevOps for Node.js Applications on {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 
 ## 15 juin 2015 : Mise à jour du pack de construction Node.js v2.0-20150608-1503
 
@@ -186,7 +207,7 @@ Dans cette édition, nous avons synchronisé notre pack de construction Node.js 
 [pack de construction Node.js de la communauté CF](https://github.com/cloudfoundry/nodejs-buildpack) le
 plus récent, qui est livré avec plusieurs nouvelles fonctions apportées par la communauté.
 De plus, nous avons réorganisé la fonction App Management du pack de construction Node.js, qui active des utilitaires tels que le shell,
-node-inspector, Bluemix Live Sync, etc. Voir [App Management](/docs/manageapps/app_mng.html) pour plus de détails.
+node-inspector, {{site.data.keyword.Bluemix_notm}} Live Sync, etc. Voir [App Management](/docs/manageapps/app_mng.html) pour plus de détails.
 
 ## 5 mai 2015 : Mise à jour du pack de construction Node.js v1.17-20150429-1033
 
@@ -205,7 +226,7 @@ de la façon suivante :
 {: codeblock}
 
 * Problèmes connus liés à la version 0.12.1 :
-   * La fonction "Suspend" ne fonctionne pas lorsque vous utilisez la fonction Debug Tools mise à disposition par Bluemix Live Sync.
+   * La fonction "Suspend" est inopérante lorsque vous utilisez la fonction Debug Tools fournie par {{site.data.keyword.Bluemix_notm}} Live Sync.
    * Le module mqlight utilisé pour le service MQ Light n'est pas pris en charge dans la version 0.12.x.
 
 * Diverses vulnérabilités de sécurité ont été résolues :
@@ -215,9 +236,9 @@ de la façon suivante :
 
 ##  2 avril 2015 : Mise à jour du pack de construction Node.js v1.15-20150331-2231
 
-* Désormais, le pack de construction Node.js inclut trois nouvelles fonctions qui permettent de développer des applications rapidement dans Bluemix, comme vous le feriez sur le bureau, sans avoir à les redéployer.
+* Désormais, le pack de construction Node.js inclut trois nouvelles fonctions qui permettent de développer des applications rapidement sur {{site.data.keyword.Bluemix_notm}}, comme vous le feriez sur le bureau, sans avoir à les redéployer.
   * Desktop Sync : synchronisez une arborescence de bureau (Windows) avec un espace de travail de projet reposant sur un cloud.
-  * Live Edit : vous pouvez apporter des modifications à une application Node.js qui s'exécute dans Bluemix et les tester immédiatement dans votre navigateur.
+  * Live Edit : vous pouvez apporter des modifications à une application Node.js qui s'exécute dans {{site.data.keyword.Bluemix_notm}} et les tester immédiatement dans votre navigateur.
   * Debug : ouvrez un shell dans votre environnement et procédez au débogage. Vous pouvez éditer le code dynamiquement, insérer des points d'arrêt, parcourir le code, redémarrer l'environnement d'exécution et effectuer d'autres opérations à l'aide du débogueur Node Inspector.
   * Voir [App Management](/docs/manageapps/app_mng.html#Utilities) pour plus d'informations.
 * Nous avons extrait les modifications les plus récentes du [pack de construction Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Ces modifications sont fournies avec plusieurs correctifs de bogue et améliorations apportés par la communauté.
@@ -225,7 +246,7 @@ de la façon suivante :
 
 ## 5 janvier 2015 : Mise à jour du pack de construction Node.js v1.9.1-20141208-1221
 
-* Désormais, le pack de construction Node.js prend en charge le paramétrage dynamique des journaux. Ainsi, les développeurs peuvent changer le niveau de journalisation de leur application de manière dynamique si l'application utilise le module log4js, bunyan ou ibmbluemix pour la journalisation.
+* Désormais, le pack de construction Node.js prend en charge le paramétrage dynamique des journaux. Ainsi, les développeurs peuvent changer le niveau de journalisation de leur application de manière dynamique si l'application utilise le module log4js, bunyan ou ibm{{site.data.keyword.Bluemix_notm}} pour la journalisation.
 * Désormais, le pack de construction Node.js est livré avec [IBM SDK for Node.js version 0.10.33](https://developer.ibm.com/node/sdk/). Cette mise à jour inclut des correctifs pour le problème POODLE.
 
 ## 23 octobre 2014 : Mise à jour du pack de construction Node.js v1.6-20141013-1736
@@ -244,7 +265,7 @@ pour votre application, à savoir la version 0.10.31. Avec un environnement d'ex
 ## 28 août 2014 : Mise à jour du pack de construction Node.js v1.3-20140821-1143
 
 * Le pack de construction Node.js le plus récent est livré avec IBM SDK for Node.js version 1.1.0.6. Cette mise à jour signifie
-que vous disposez d'un environnement d'exécution IBM Node.js entièrement pris en charge lorsque vous spécifiez l'environnement d'exécution Node.js stable le plus récent, à savoir la version 0.10.30, pour votre application. Cet environnement d'exécution corrige la [vulnérabilité à l'altération de la mémoire dans la version 8 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow).
+que vous disposez d'un environnement d'exécution IBM Node.js entièrement pris en charge lorsque vous spécifiez l'environnement d'exécution Node.js stable le plus récent, à savoir la version 0.10.30, pour votre application. Cet environnement d'exécution corrige la [vulnérabilité à l'altération de la mémoire dans la version 8 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://blog.nodejs.org/2014/07/31/v8-memory-corruption-stack-overflow).
 * Ce pack de construction comprend également des améliorations et des correctifs de bogue concernant l'extension de service Monitoring and Analytics, et vous permet d'effectuer un diagnostic des performances et des conditions d'erreur via le service.
 
 ## 29 juillet 2014 : Mise à jour du pack de construction Node.js v1.1-20140717-1447

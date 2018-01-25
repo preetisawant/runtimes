@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2017
-lastupdated: "2017-09-06"
+copyright: years: 2017 lastupdated: "2017-12-15"
 
 ---
 
@@ -19,7 +17,9 @@ lastupdated: "2017-09-06"
 
 * {: download} Parabéns, você implementou um aplicativo de amostra Hello World no {{site.data.keyword.Bluemix}}!  Para iniciar, siga este guia passo a passo. Ou <a class="xref" href="http://bluemix.net" target="_blank" title="(Fazer download de código de amostra)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Fazer download de código do aplicativo" />faça download do código de amostra</a> e explore você mesmo.
 
-Seguindo o tutorial de introdução do Go, você configurará um ambiente de desenvolvimento, implementará um app localmente e no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados {{site.data.keyword.Bluemix}} em seu app.
+Seguindo o tutorial de introdução, você irá configurar um ambiente de desenvolvimento, implementará um app localmente e no
+{{site.data.keyword.Bluemix}} e integrar um serviço de banco de dados {{site.data.keyword.Bluemix_notm}} em seu
+aplicativo.
 
 ## Antes de Começar
 {: #prereqs}
@@ -30,7 +30,7 @@ Você precisará do seguinte:
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [Go ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://golang.org/dl/){: new_window}
 
-## Etapa 1: configurar o ambiente local e clonar o aplicativo de amostra
+## Etapa 1: clonar o aplicativo de amostra
 {: #clone}
 
 Primeiro vamos configurar o ambiente local, assegurando que todas as variáveis de ambiente GO sejam configuradas adequadamente. Por exemplo:
@@ -111,14 +111,16 @@ cf api <API-endpoint>
 
 Substitua o *API-endpoint* no comando por um terminal de API da lista a seguir.
 
-|URL                             |Região          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | SUL dos EUA       |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
-| https://api.eu-de.bluemix.net | Frankfurt     |
+| **Nome da região** | **Local geográfico** | **Endpoint da API** |
+|-----------------|-------------------------|-------------------|
+| Região Sul dos EUA | Dallas, EUA | api.ng.bluemix.net |
+| Região Leste dos EUA | Washington, DC, EUA | api.us-east.bluemix.net |
+| Região do Reino Unido | Londres, Inglaterra | api.eu-gb.bluemix.net |
+| Região de Sydney | Sydney, Austrália | api.au-syd.bluemix.net |
+| Região da Alemanha | Frankfurt, Alemanha | api.eu-de.bluemix.net |
+{: caption="Tabela 1.  {{site.data.keyword.cloud_notm}} lista de região" caption-side="top"}
 
-Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}}
+Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}}.
 
   ```
 cf login
@@ -149,7 +151,7 @@ para visualizar o status dos apps e ver a URL.
 Em seguida, vamos incluir um banco de dados NoSQL nesse aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
 1. Efetue login no {{site.data.keyword.Bluemix_notm}} em seu navegador. Procure o `Painel`. Selecione seu aplicativo clicando em seu nome na coluna `Nome`.
-2. Clique em `Conexões` e, em seguida, em `Conectar novo`.
+2. Clique em `Conexões` e, em seguida, `Criar conexão`.
 3. Na seção `Data & Analytics`, selecione `Cloudant NoSQL DB` e `Criar` o serviço.
 4. Selecione `Remontar` quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
@@ -186,3 +188,9 @@ go run main.go
 
 Lembre-se, se você não precisar do app em tempo real, pare-o para não incorrer em encargos inesperados.
 {: tip}
+
+## Próximas Etapas
+
+* [Tutorials (Tutoriais)](/docs/tutorials/index.html)
+* [Amostras ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

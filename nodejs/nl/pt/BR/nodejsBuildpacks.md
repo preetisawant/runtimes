@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-02-24"
+lastupdated: "2017-10-27"
 
 ---
 
@@ -12,12 +12,15 @@ lastupdated: "2017-02-24"
 
 # Buildpacks Node.js
 
-O Bluemix fornece várias versões do buildpack Node.js.
+O {{site.data.keyword.Bluemix}} fornece várias versões do buildpack Node.js.
 {: shortdesc}
-* O buildpack **sdk-for-nodejs** criado pela IBM é o buildpack padrão usado para aplicativos Node.js no Bluemix.
+
+* O buildpack **sdk-for-nodejs** do {{site.data.keyword.IBM_notm}} criado é o buildpack padrão
+usado para aplicativos Node.js no {{site.data.keyword.Bluemix_notm}}.
 * O **nodejs_buildpack** é um buildpack de comunidade fornecido pela comunidade do Cloud Foundry.
 
-O buildpack **sdk-for-nodejs** tem precedência sobre o **nodejs_buildpack** no Bluemix. Se desejar usar o **nodejs_buildpack** com seu aplicativo em vez do buildpack **sdk-for-nodejs**, você deverá especificar seu buildpack, por exemplo, usando a opção -b com o comando **cf push**.
+O buildpack **sdk-for-nodejs** tem precedência sobre o **nodejs_buildpack** em
+{{site.data.keyword.Bluemix_notm}}. Se desejar usar o **nodejs_buildpack** com seu aplicativo em vez do buildpack **sdk-for-nodejs**, você deverá especificar seu buildpack, por exemplo, usando a opção -b com o comando **cf push**.
 
 Geralmente, o buildpack **sdk-for-nodejs** atual e uma versão anterior estão disponíveis.  Para ver todos os buildpacks disponíveis, use o comando **cf buildpacks**.  Por exemplo:
 

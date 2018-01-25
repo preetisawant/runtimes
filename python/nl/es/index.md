@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -22,7 +22,7 @@ El python_buildpack se utilizará si el directorio raíz de la app contiene un a
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Python.  La aplicación de inicio Python es una sencilla app Python que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix}}.  Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Python.  La aplicación de inicio Python es una sencilla app Python que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -30,7 +30,7 @@ El python_buildpack se utilizará si el directorio raíz de la app contiene un a
 Puede especificar la versión de Python que va a utilizar la app estableciendo python-versionnumber en el archivo runtime.txt en la raíz de la aplicación. Por ejemplo:
 
 ```
-python-3.6.0
+python-3.6.1
 ```
 {: codeblock}
 
@@ -41,7 +41,7 @@ Cuando no se especifique una versión, se elegirá la versión 2.7.13 de forma p
 
 Las siguientes versiones de Python están disponibles en el
 [paquete de compilación de Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15)
-actualmente instalado en {{site.data.keyword.Bluemix}}:
+actualmente instalado en {{site.data.keyword.Bluemix_notm}}:
 
 * 2.7.12
 * 2.7.13
@@ -51,7 +51,8 @@ actualmente instalado en {{site.data.keyword.Bluemix}}:
 * 3.4.6
 * 3.5.2
 * 3.5.3
-* 3.6.0
+* 3.6.1
+* 3.6.2
 
 Si la aplicación requiere una versión de Python que no aparece en la lista,
 puede utilizar el

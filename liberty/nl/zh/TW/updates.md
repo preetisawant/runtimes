@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -14,9 +14,19 @@ lastupdated: "2017-08-14"
 
 ## Liberty 建置套件中的最新更新項目清單。
 
+### 2017 年 10 月 17 日：已更新 Liberty 建置套件 v3.14-20171013-1023
+* 預設 Liberty 運行環境版本已更新至 17.0.0.3 版。
+* 每月 Liberty 運行環境版本已更新至 2017.9.0.1。
+* IBM JRE 版本已更新至 8 SR5。
+
+### 2017 年 10 月 5 日：已更新 Liberty 建置套件 v3.13-20170919-1721
+* 每月 Liberty 運行環境版本已更新至 2017.9.0.0。
+* IBM JRE 版本已更新至 8 SR4 FP11。
+* 已更新自動擴充代理程式。
+
 ### 2017 年 8 月 14 日：已更新 Liberty 建置套件 v3.12-20170814-1322
 * 每月 Liberty 運行環境版本已更新至 [2017.8.0.0](https://developer.ibm.com/wasdev/blog/2017/08/04/beta-websphere-liberty-tools-august-2017/) 版。
-* 建置套件也包含已更新的 IBM JRE：第 8 版 SR4 FP10 及 7.1 版 SR4 FP10。 
+* 建置套件也包含已更新的 IBM JRE：第 8 版 SR4 FP10 及 7.1 版 SR4 FP10。
 * JRE 8 包含 Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files。
 * 使 Liberty 應用程式無法[溫和關閉](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown)的建置套件錯誤已修正。
 
@@ -115,10 +125,10 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * 建置套件也有包含 [Apache Standard Taglibs 漏洞](http://www-01.ibm.com/support/docview.wss?uid=swg21985531)的安全修正程式。
 
 ### 2016 年 5 月 25 日：已更新 Liberty 建置套件 v2.9-20160519-1249
-* 建置套件包含根據 [5 月的測試版](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 *bluemixLogCollector-1.1* 和 *logstashCollector-1.1* 測試版特性可在 Bluemix 中使用。
+* 建置套件包含根據 [5 月的測試版](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 *bluemixLogCollector-1.1* 和 *logstashCollector-1.1* 測試版特性可在 {{site.data.keyword.Bluemix_notm}} 中使用。
 
 ### 2016 年 5 月 5 日：已更新 Liberty 建置套件 v2.8-20160430-1011
-* 建置套件包含根據 [4 月的測試版](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 *logstashCollector-1.0* GA 特性和 *logmetCollector-1.0* 測試版特性可在 Bluemix 中使用。
+* 建置套件包含根據 [4 月的測試版](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 *logstashCollector-1.0* GA 特性和 *logmetCollector-1.0* 測試版特性可在 {{site.data.keyword.Bluemix_notm}} 中使用。
 * 建置套件也包含 IBM JRE 的更新版本：8 SR3 和 7.1 SR3 FP40。
 * 建置套件新增 [AppDynamics ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.appdynamics.com/) 應用程式監視代理程式的起始支援。
 * [Dynatrace](dynatrace.html) 支援已進行改良，可簡化代理程式的安裝。
@@ -126,7 +136,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * [devconsole 和 shell 應用程式管理公用程式](/docs/manageapps/app_mng.html#app_management)所使用的 Node.js 運行環境已經更新至最新的 0.12.13 版。
 
 ### 2016 年 3 月 25 日：已更新 Liberty 建置套件 v2.7-20160321-1358
-* 建置套件包含根據 [3 月的測試版](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 cloudant-1.0 測試版特性可在 Bluemix 中使用。
+* 建置套件包含根據 [3 月的測試版](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/)之 WebSphere Liberty 的更新版本。Liberty 的更新版本讓 cloudant-1.0 測試版特性可在 {{site.data.keyword.Bluemix_notm}} 中使用。
 * 建置套件也包含 IBM JRE 的更新版本：8 SR2 FP12 及 7.1 SR3 FP32。
 * 建置套件提供用於 [Auto-Scaling 服務](/docs/services/Auto-Scaling/index.html)之代理程式的更新版本。
 * 現在，建置套件隨附了 [Monitoring and Analytics 服務](/docs/services/monana/index.html#monana_oview)的新資料收集器。新的收集器可讓您配置監視臨界值，且包含許多錯誤修正程式。
@@ -138,15 +148,15 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * 建置套件新增了對 [DynamicPULSE](www.fujitsu.com/jp/group/fsweb/products/dynamic-pulse/) 的支援。
 
 ### 2016 年 2 月 10 日：已更新 Liberty 建置套件 v2.5-20160209-1336
-* 建置套件包含根據 [2 月的測試版](https://developer.ibm.com/wasdev/blog/2016/02/12/beta-websphere-liberty-and-tools-february/)之 WebSphere Liberty 的更新版本。Liberty 設定檔的更新版本讓 apiDiscovery-1.0 GA 特性可在 Bluemix 中使用。
+* 建置套件包含根據 [2 月的測試版](https://developer.ibm.com/wasdev/blog/2016/02/12/beta-websphere-liberty-and-tools-february/)之 WebSphere Liberty 的更新版本。Liberty 設定檔的更新版本讓 apiDiscovery-1.0 GA 特性可在 {{site.data.keyword.Bluemix_notm}} 中使用。
 
 ### 2016 年 2 月 4 日：已更新 Liberty 建置套件 v2.4-20160127-1437
-* 建置套件包含根據 1 月的測試版之 WebSphere Liberty 的更新版本。在此更新中，先前以測試版特性提供的 scim-1.0 Liberty 特性，現在提供為可用於正式作業的特性。Liberty 的更新版本也讓 passwordUtilities-1.0 測試版特性可在 Bluemix 中使用。
+* 建置套件包含根據 1 月的測試版之 WebSphere Liberty 的更新版本。在此更新中，先前以測試版特性提供的 scim-1.0 Liberty 特性，現在提供為可用於正式作業的特性。Liberty 的更新版本也讓 passwordUtilities-1.0 測試版特性可在 {{site.data.keyword.Bluemix_notm}} 中使用。
 * 建置套件也包含已更新的 IBM JRE 7.1 SF3 FP20 和 IBM JRE 8 SR2 FP10。
 * 建置套件已更新，會在執行[自動配置 MySQL 類型服務](autoConfig.html)時，下載最新的 1.x [MariaDB Connector/J JDBC 驅動程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
 
 ### 2015 年 12 月 16 日：已更新 Liberty 建置套件 v2.3-20151208-1311
-* 建置套件包含根據 [12 月的測試版](https://developer.ibm.com/wasdev/blog/2015/11/20/beta-was-liberty-beta-with-tools-december-2015/)之 Liberty 設定檔的更新版本。Liberty 設定檔的更新版本讓 spnego-1.0 和 wsSecuritySaml-1.1 GA 特性以及 scim-1.0 測試版特性可在 Bluemix 中使用。
+* 建置套件包含根據 [12 月的測試版](https://developer.ibm.com/wasdev/blog/2015/11/20/beta-was-liberty-beta-with-tools-december-2015/)之 Liberty 設定檔的更新版本。Liberty 設定檔的更新版本讓 spnego-1.0 和 wsSecuritySaml-1.1 GA 特性以及 scim-1.0 測試版特性可在 {{site.data.keyword.Bluemix_notm}} 中使用。
 * 建置套件也包含已更新的 IBM JRE 8 SR2。
 * 建置套件也已更新，會在執行[自動配置](autoConfig.html) PostgreSQL 或 MySQL 類型服務時，下載最新的 [9.4.x PostgreSQL JDBC 驅動程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://jdbc.postgresql.org/) 及 1.2.x [MariaDB Connector/J JDBC 驅動程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
 
@@ -164,7 +174,7 @@ Scale Client，以及 [Apache Commons Collection 漏洞](http://www-01.ibm.com/s
   * 部署 WAR 或 EAR 檔時，依預設已停用 [CDI 1.2](optionsForPushing.html)
 隱含 Bean 保存檔掃描特性。
   * 若要減少 Droplet 大小，[應用程式管理公用程式](/docs/manageapps/app_mng.html) devconsole 和 shell 需要重新編譯打包作業，而非重新啟動。
-  * IBM JRE 的共用類別快取已停用，因為它未重複用於 Bluemix 環境。
+  * IBM JRE 的共用類別快取已停用，因為它未重複用於 {{site.data.keyword.Bluemix_notm}} 環境。
 
 ### 2015 年 9 月 18 日：已更新 Liberty 建置套件 v2.0-20150914-1535
 * 建置套件引進了兩項重大變更：
@@ -178,14 +188,14 @@ Scale Client，以及 [Apache Commons Collection 漏洞](http://www-01.ibm.com/s
 
 
 ### 2015 年 8 月 19 日：已更新 Liberty 建置套件 v1.21-20150811-1342
-* 建置套件包含根據 [8 月的測試版](https://developer.ibm.com/wasdev/blog/2015/07/30/beta-was-liberty-beta-with-tools-august-2015/)之 Liberty 設定檔的更新版本。Liberty 設定檔的更新版本讓下列新的[測試版特性](usingBetaFeatures.html)可在 Bluemix 中使用：bells-1.0、rtcommGateway-1.0、samlWebSso-2.0。
+* 建置套件包含根據 [8 月的測試版](https://developer.ibm.com/wasdev/blog/2015/07/30/beta-was-liberty-beta-with-tools-august-2015/)之 Liberty 設定檔的更新版本。Liberty 設定檔的更新版本讓下列新的[測試版特性](usingBetaFeatures.html)可在 {{site.data.keyword.Bluemix_notm}} 中使用：bells-1.0、rtcommGateway-1.0、samlWebSso-2.0。
 
 ### 2015 年 7 月 31 日：已更新 Liberty 建置套件 v1.20.1-20150729-1255
 * 建置套件包含更新版本的 IBM JRE：7.1 SR1 FP10 及 8 SR1 FP10。已更新的 JRE 包含[最新的安全修正程式](http://www-01.ibm.com/support/docview.wss?uid=swg21964161)及其他改良功能。
 * 對 [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant) 服務提供[自動配置支援](autoConfig.html)的服務外掛程式已更新，可確保該服務的連線是透過安全通道建立。
 
 ### 2015 年 7 月 21 日：已更新 Liberty 建置套件 v1.20-20150713-1450
-* 建置套件包含根據 [8.5.5.6 版](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/)之 Liberty 設定檔的更新版本。在此版本中，先前以測試版特性提供的所有 Java EE 7 Liberty 特性，現在提供為可用於正式作業的特性。由於 Bluemix 中的埠及其他限制，部分特性（例如遠端 EJB）在平台中未完全受到支援。
+* 建置套件包含根據 [8.5.5.6 版](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/)之 Liberty 設定檔的更新版本。在此版本中，先前以測試版特性提供的所有 Java EE 7 Liberty 特性，現在提供為可用於正式作業的特性。由於 {{site.data.keyword.Bluemix_notm}} 中的埠及其他限制，部分特性（例如遠端 EJB）在平台中未完全受到支援。
 * 建置套件會辨識並執行包裝成 [distZip 樣式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.gradle.org/current/userguide/application_plugin.html) 的應用程式。
 * 建置套件包含 [Monitoring and Analytics 服務](/docs/services/monana/index.html)和
 WebSphere eXtreme Scale Client 的已更新資料收集器，它們可支援新的 Liberty 運行環境版本。
@@ -215,7 +225,7 @@ Liberty 設定檔運行環境的改良整合。
 * 部署獨立式 WAR 檔時，如果提供的話，建置套件現在使用內嵌 **ibm-web-ext.xml** 檔中指定的環境定義根目錄，來作為應用程式的環境定義根目錄。在此變更中，先前部署在根環境定義下的應用程式，可能會部署到不同的環境定義下，視 **ibm-web-ext.xml** 檔中的設定而定。
 
 ### 2015 年 4 月 3 日：已更新 Liberty 建置套件 v1.15-20150402-1422
-* 建置套件包含根據 [3 月的測試版](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/)之 Liberty 設定檔的更新版本。Liberty 設定檔的更新版本讓 jsf-2.2 測試版特性可在 Bluemix 中使用。
+* 建置套件包含根據 [3 月的測試版](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/)之 Liberty 設定檔的更新版本。Liberty 設定檔的更新版本讓 jsf-2.2 測試版特性可在 {{site.data.keyword.Bluemix_notm}} 中使用。
 * 建置套件也包含用於 [Monitoring and Analytics 服務](/docs/services/monana/index.html)之資料收集器的更新版本。
 
 ### 2015 年 3 月 20 日：已更新 Liberty 建置套件 v1.14-20150319-1159
@@ -227,9 +237,9 @@ Liberty 設定檔運行環境的改良整合。
 
 ### 2015 年 2 月 10 日：已更新 Liberty 建置套件 v1.13-20150209-1122
 * 建置套件包含 [Apache HttpComponents 和 Java 重疊特性漏洞](https://www-304.ibm.com/connections/blogs/PSIRT/entry/ibm_security_bulletin_multiple_vulnerabilities_fixed_in_liberty_for_java_for_ibm_bluemix_cve_2012_6153_cve_2014_3577_cve_2015_0178?lang=en_us)的安全修正程式。
-* 建置套件包含根據 [2 月的測試版](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/)之 Liberty 設定檔的更新版本。Liberty 設定檔的更新版本提供 WebSocket GA 特性 websocket-1.1 的更新版本。它也讓下列 Java EE 7 測試版特性可在 Bluemix 中使用：
+* 建置套件包含根據 [2 月的測試版](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/)之 Liberty 設定檔的更新版本。Liberty 設定檔的更新版本提供 WebSocket GA 特性 websocket-1.1 的更新版本。它也讓下列 Java EE 7 測試版特性可在 {{site.data.keyword.Bluemix_notm}} 中使用：
   * cdi-1.2、el-3.0、jsp-2.3、jca-1.7、jacc-1.5 及 jaspic-1.1 
-* 建置套件提供與 [ZeroTrunaround 的 JRebel 工具 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://zeroturnaround.com/software/jrebel/) 的整合。此整合可讓您輕鬆使用 JRebel 搭配 Bluemix 應用程式，以及執行立即的應用程式更新，而不必重新部署或重新編譯打包應用程式。只支援獨立式 Web 應用程式。
+* 建置套件提供與 [ZeroTrunaround 的 JRebel 工具 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://zeroturnaround.com/software/jrebel/) 的整合。此整合可讓您輕鬆使用 JRebel 搭配 {{site.data.keyword.Bluemix_notm}} 應用程式，以及執行立即的應用程式更新，而不必重新部署或重新編譯打包應用程式。只支援獨立式 Web 應用程式。
 
 ### 2015 年 2 月 6 日：已更新 Liberty 建置套件 v1.12-20150130-1016
 * 建置套件包含根據 [1 月的測試版](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/)之 Liberty 設定檔的更新版本。
@@ -242,7 +252,7 @@ Liberty 設定檔運行環境的改良整合。
 * 建置套件已改良，可報告 Liberty 設定檔及 IBM JRE 的詳細版本。
 
 ### 2014 年 12 月 19 日：已更新 Liberty 建置套件 v1.10-20141218-0103
-* 建置套件提供應用程式的開發模式。開發模式是一種特殊模式，可讓開發人員為應用程式實例進行許多以前無法進行的活動。利用這個特性，此版本的 IBM Eclipse Tools for Bluemix 現在可以透過對 Bluemix 中所執行之 Liberty 應用程式的遞增式檔案更新，來支援遠端除錯。這讓使用 Eclipse 的開發人員可以方便在雲端對應用程式進行除錯，並即時套用變更至該應用程式。
+* 建置套件提供應用程式的開發模式。開發模式是一種特殊模式，可讓開發人員為應用程式實例進行許多以前無法進行的活動。利用這個特性，此版本的 {{site.data.keyword.eclipsetoolsfull}} 現在可以透過對 {{site.data.keyword.Bluemix_notm}} 中所執行之 Liberty 應用程式的遞增式檔案更新，來支援遠端除錯。這讓使用 Eclipse 的開發人員可以方便在雲端對應用程式進行除錯，並即時套用變更至該應用程式。
 * 建置套件也包含根據 [12 月的測試版](https://developer.ibm.com/wasdev/blog/2014/12/10/announcing-liberty-beta-december/)之 Liberty 設定檔的更新版本。
 * 此外，先前以測試版特性提供的下列四項 Liberty 特性，現在已可用於正式作業：
   * concurrent-1.0
@@ -277,7 +287,7 @@ Liberty 設定檔運行環境的改良整合。
 * 使用已更新的建置套件後，應用程式現在可以使用 Liberty 測試版特性，包括 WebSocket 1.0、Servlet 3.1 或 JAX-RS 2.0。如需相關資訊，請參閱[使用測試版特性](usingBetaFeatures.html)。
 
 ### 2014 年 9 月 30 日：已更新 Liberty 建置套件 v1.4-20140908-1803
-* 建置套件現在提供 ElephantSQL 及 ClearDB MySQL Database 協力廠商服務的支援。自動配置支援也適用於 posgresql 及 mysql 實驗性服務。總計新增 13 種服務，因此 Liberty 建置套件中的自動配置支援，能夠讓您在 Liberty 應用程式中取用 Bluemix 服務時更加快速且更為輕鬆。
+* 建置套件現在提供 ElephantSQL 及 ClearDB MySQL Database 協力廠商服務的支援。自動配置支援也適用於 posgresql 及 mysql 實驗性服務。總計新增 13 種服務，因此 Liberty 建置套件中的自動配置支援，能夠讓您在 Liberty 應用程式中取用 {{site.data.keyword.Bluemix_notm}} 服務時更加快速且更為輕鬆。
 * 在應用程式編譯打包期間，建置套件會顯示有關自動配置及其採取之其他動作的已改良日誌訊息。
 * 建置套件包含更新版本的 Liberty 設定檔，內含修正程式和改良功能。
 * 它也包含 IBM JRE 7.1 版的更新版本，其中含有效能改良功能。如需詳細的變更集，請參閱[新增功能](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.71.doc/diag/preface/changes_71/changes.html)頁面。
@@ -286,11 +296,11 @@ Liberty 設定檔運行環境的改良整合。
 * 建置套件包含更新版本的 [Liberty 設定檔](https://developer.ibm.com/wasdev/)，內含最新修正程式及改良功能。
 * 這個版本的建置套件會修正 JAVA_OPTS 環境變數的支援，將其他的 JVM 選項傳給應用程式運行環境。
 * 它也修正了導致無法部署獨立式、以 Spring 為基礎之 Jar 應用程式的問題。
-* 現在可以使用 Bluemix 使用者介面來產生及下載 IBM JVM SNAP 追蹤。請參閱 IBM JVM 文件中的[疑難排解主題](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html)，以進一步瞭解 JVM 所產生的 SNAP 追蹤或其他診斷資訊。
+* 現在可以使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來產生及下載 IBM JVM SNAP 追蹤。請參閱 IBM JVM 文件中的[疑難排解主題](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html)，以進一步瞭解 JVM 所產生的 SNAP 追蹤或其他診斷資訊。
 
 ### 2014 年 7 月 29 日：已更新 Liberty 建置套件 v1.1-20140725-1341
-* 現在 Liberty 的 Bluemix Edition 已有新版本！
-  * 使用這個版本的 Liberty，除了新特性之外還有修正程式，讓您能夠更有效率地取用 Bluemix 服務！
+* 現在 Liberty 的 {{site.data.keyword.Bluemix_notm}} Edition 已有新版本！
+  * 使用這個版本的 Liberty，除了新特性之外還有修正程式，讓您能夠更有效率地取用 {{site.data.keyword.Bluemix_notm}} 服務！
   * 有了新的 CouchDB 特性之後，Cloudant® 服務現在可以自動配置它，讓連接器物件變得垂手可得！不再需要剖析 VCAP_SERVICES 及提供 ektorp 用戶端 jar。
 * 現在 IBM SDK for Java 已有新版本！
   * 重新推送您的應用程式時，它們會使用 IBM SDK for Java 7.1-1.0 版。這具有顯著的效能升級。您的應用程式產量會變更好，且使用更少的記憶體。如需進一步瞭解 IBM Java SDK，請查看[這裡](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -30,7 +30,7 @@ Das Buildpack 'php_buildpack' wird unter folgenden Bedingungen verwendet:
 ## HTTPS auf allen Seiten in Ihrer Anwendung erzwingen
 {: #enforce_https}
 
-Wenn bei der Ausführung Ihrer Anwendung in Bluemix mithilfe von Apache auf allen Seiten HTTPS anstatt HTTP erzwungen werden soll, müssen Sie an der ".htaccess"-Datei die folgenden Änderungen vornehmen. Diese Regel gilt für jede Anforderung, die nicht mithilfe von HTTPS abgesetzt wurde und nur bei Ausführung in Bluemix.
+Wenn bei der Ausführung Ihrer Anwendung in {{site.data.keyword.Bluemix_notm}} mithilfe von Apache auf allen Seiten HTTPS anstatt HTTP erzwungen werden soll, müssen Sie an der ".htaccess"-Datei die folgenden Änderungen vornehmen. Diese Regel gilt für jede Anforderung, die nicht mithilfe von HTTPS abgesetzt wurde und nur bei Ausführung in {{site.data.keyword.Bluemix_notm}}.
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]
@@ -53,21 +53,19 @@ Sie können die Version von PHP, die von Ihrer App verwendet werden soll, in der
 {: codeblock}
 Weitere Informationen finden Sie unter [Composer-Paketlinks ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://getcomposer.org/doc/04-schema.md#package-links).
 
-Wenn keine Version angegeben ist, wird standardmäßig Version 5.5.38 ausgewählt.
+Wenn keine Version angegeben ist, wird standardmäßig Version 5.6.31 ausgewählt.
 
 ### Verfügbare Versionen:
 {: #available_versions}
 
 Folgende PHP-Versionen stehen im [PHP-Buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27) zur Verfügung, das zurzeit in {{site.data.keyword.Bluemix}} installiert ist:
 
-* 5.5.37
-* 5.5.38
-* 5.6.29
 * 5.6.30
-* 7.0.14
-* 7.0.15
-* 7.1.0
-* 7.1.1
+* 5.6.31
+* 7.0.20
+* 7.0.21
+* 7.1.6
+* 7.1.7
 
 Wenn für Ihre App eine PHP-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [PHP-Buildpack](https://github.com/cloudfoundry/php-buildpack.git) implementieren.
 

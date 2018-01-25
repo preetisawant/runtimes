@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-08"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2017-06-08"
 # 使用可能なバージョン
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} では、[現在使用可能な Node.js ランタイム](http://nodejs.org/dist/)のすべてが提供されます。使用可能なランタイムのうち、IBM では機能拡張およびバグ修正を含む特定のバージョンを提供しています。サポート対象のバージョンについて詳しくは、[『Node.js ビルドパックに対する最新の更新』](/docs/runtimes/nodejs/updates.html)を参照してください。
+{{site.data.keyword.Bluemix}} では、[現在使用可能な Node.js ランタイム](http://nodejs.org/dist/)のすべてが提供されます。 使用可能なランタイムのうち、{{site.data.keyword.IBM_notm}} では機能拡張およびバグ修正を含む特定のバージョンを提供しています。サポート対象のバージョンについて詳しくは、[『Node.js ビルドパックに対する最新の更新』](/docs/runtimes/nodejs/updates.html)を参照してください。
 {: shortdesc}
 
-IBM Node.js ビルドパックは、IBM ランタイム・バージョンをキャッシュに入れます。アプリケーションで IBM SDK for Node.js ランタイムを使用している場合は、アプリケーションを Bluemix にプッシュすると、アプリケーションのパフォーマンスが向上します。
+IBM Node.js ビルドパックは、{{site.data.keyword.IBM_notm}} ランタイム・バージョンをキャッシュに入れます。アプリケーションで {{site.data.keyword.IBM_notm}} SDK for Node.js ランタイムを使用している場合は、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュすると、アプリケーションのパフォーマンスが向上します。
 
 ## バージョンの指定
 
@@ -31,11 +31,12 @@ IBM Node.js ビルドパックは、IBM ランタイム・バージョンをキ�
   "name": "myapp",
   "description": "this is my app",
   "version": "0.1",
-  "engines": {"node": "4.2.4",
+  "engines": {
+     "node": "4.2.4",
      "npm": "3.10.10"
   }
 }
 ```
 {: codeblock}
 
-**注:** ノード・バージョンは、常に **package.json** ファイルで指定する必要があります。指定されていない場合は、最新のノード・バージョンが使用されます。
+**注:** ノード・バージョンは、常に **package.json** ファイルで指定する必要があります。 指定されていない場合は、最新のノード・バージョンが使用されます。

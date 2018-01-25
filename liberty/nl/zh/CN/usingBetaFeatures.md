@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2017-05-31"
 # 使用 Beta 功能
 {: #using_beta_features}
 
-Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会包含的新功能和编程模型。大部分 Beta 功能还可以在部署到 Bluemix 的应用程序中使用。
+Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会包含的新功能和编程模型。大部分 Beta 功能还可以在部署到 {{site.data.keyword.Bluemix}} 的应用程序中使用。
 
 **重要信息**：Beta 功能仅用于开发和测试，而不可用于生产。有关完整的使用条款，请参阅 [Beta 许可协议](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html)。
 
-Bluemix 中可用的 Liberty Beta 功能
+{{site.data.keyword.Bluemix_notm}} 中可用的 Liberty Beta 功能
 <table>
 <tr>
 <th align="left">功能</th>
@@ -33,7 +33,7 @@ Bluemix 中可用的 Liberty Beta 功能
 </tr>
 </table>
 
-要在 Bluemix 中使用 Liberty Beta 功能，您需要执行以下操作：
+要在 {{site.data.keyword.Bluemix_notm}} 中使用 Liberty Beta 功能，您将需要执行以下操作：
 
 1. [部署服务器目录或打包服务器](optionsForPushing.html)，并在 server.xml 文件中启用一个或多个 Beta 功能，如以下示例中所示：
 ```

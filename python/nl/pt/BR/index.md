@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2015, 2017
-lastupdated: "2017-06-20"
+copyright: years: 2015, 2017 lastupdated: "2017-12-15"
 
 ---
 
@@ -22,9 +20,9 @@ O python_buildpack será usado se o diretório-raiz de seu app contiver um arqui
 ## Aplicativo iniciador
 {: #starter_application}
 
-O {{site.data.keyword.Bluemix}} fornece um aplicativo iniciador do Python.  O aplicativo iniciador do Python é um app Python simples que fornece um modelo
+O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do Python.  O aplicativo iniciador do Python é um app Python simples que fornece um modelo
 que pode ser usado por seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
-{{site.data.keyword.Bluemix}}.  Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para obter ajuda sobre o uso
+{{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
 ## Versões de tempo de execução
@@ -34,7 +32,7 @@ do aplicativo iniciador.
 na raiz de seu aplicativo. Por exemplo:
 
 ```
-python-3.6.0
+python-3.6.1
 ```
 {: codeblock}
 
@@ -44,7 +42,7 @@ Quando uma versão não é especificada, a versão 2.7.13 é escolhida por padr�
 {: #available_versions}
 
 As seguintes versões do Python estão disponíveis no
-[buildpack Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) atualmente instalado no {{site.data.keyword.Bluemix}}:
+[buildpack Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) atualmente instalado no {{site.data.keyword.Bluemix_notm}}:
 
 * 2.7.12
 * 2.7.13
@@ -54,7 +52,8 @@ As seguintes versões do Python estão disponíveis no
 * 3.4.6
 * 3.5.2
 * 3.5.3
-* 3.6.0
+* 3.6.1
+* 3.6.2
 
 Se seu aplicativo requerer uma versão do Python não listada, é possível usar o
 [buildback Python](https://github.com/cloudfoundry/python-buildpack) externo para implementar o app.

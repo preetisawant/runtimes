@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2017
-lastupdated: "2017-09-06"
+copyright: years: 2017 lastupdated: "2017-12-15"
 
 ---
 
@@ -19,7 +17,9 @@ lastupdated: "2017-09-06"
 
 * {: download} Parabéns, você implementou um aplicativo de amostra Hello World no {{site.data.keyword.Bluemix}}!  Para iniciar, siga este guia passo a passo. Ou <a class="xref" href="http://bluemix.net" target="_blank" title="(Fazer download de código de amostra)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Fazer download de código do aplicativo" />faça download do código de amostra</a> e explore você mesmo.
 
-Seguindo este tutorial, você configurará um ambiente de desenvolvimento, implementará um app localmente e no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados {{site.data.keyword.Bluemix}} em seu app.
+Seguindo este tutorial, você irá configurar um ambiente de desenvolvimento, implementará um aplicativo localmente e no
+{{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados do {{site.data.keyword.Bluemix_notm}} em seu
+aplicativo.
 
 ## Antes de Começar
 {: #prereqs}
@@ -65,7 +65,7 @@ Você deve ver uma saída semelhante à seguinte:
 ```
 Server is listening on port: 8080
 ```
-{: screen}
+{: codeblock}
 
 Visualize seu app em: http://localhost:8080
 
@@ -103,12 +103,14 @@ cf api <API-endpoint>
 
 Substitua o *API-endpoint* no comando por um terminal de API da lista a seguir.
 
-|Região          |Terminal de API                             |
-|:---------------|:-------------------------------|
-| SUL dos EUA       |https://api.ng.bluemix.net     |
-| United Kingdom | https://api.eu-gb.bluemix.net  |
-| Sydney         | https://api.au-syd.bluemix.net |
-| Frankfurt     | https://api.eu-de.bluemix.net | 
+| **Nome da região** | **Local geográfico** | **Endpoint da API** |
+|-----------------|-------------------------|-------------------|
+| Região Sul dos EUA | Dallas, EUA | api.ng.bluemix.net |
+| Região Leste dos EUA | Washington, DC, EUA | api.us-east.bluemix.net |
+| Região do Reino Unido | Londres, Inglaterra | api.eu-gb.bluemix.net |
+| Região de Sydney | Sydney, Austrália | api.au-syd.bluemix.net |
+| Região da Alemanha | Frankfurt, Alemanha | api.eu-de.bluemix.net |
+{: caption="Tabela 1.  {{site.data.keyword.cloud_notm}} lista de região" caption-side="top"}
 
 Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}}
 
@@ -116,7 +118,7 @@ Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}}
  cf login
    ```
    {: pre}
-   
+
 Se não for possível efetuar login usando os comandos `cf login` ou `bx login` porque você tem um ID de usuário federado, use os comandos `cf login --sso` ou `bx login --sso` para efetuar login com seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
 
 No diretório *get-started-swift*, envie seu app por push para o {{site.data.keyword.Bluemix_notm}}
@@ -135,9 +137,10 @@ Quando a implementação for concluída, você deverá ver uma mensagem indicand
 Em seguida, vamos incluir um banco de dados NoSQL nesse aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
 1. Efetue login no {{site.data.keyword.Bluemix_notm}} em seu navegador. Procure o `Painel`. Selecione seu aplicativo clicando em seu nome na coluna `Nome`.
-2. Clique em `Conexões` e, em seguida, em `Conectar novo`.
+2. Clique em `Conexões` e, em seguida, `Criar conexão`.
 3. Na seção `Data & Analytics`, selecione `Cloudant NoSQL DB`
-4. Selecione um plano de precificação. O Bluemix oferece planos `Lite` gratuitos para uma coleção selecionada de seus serviços de nuvem com capacidade suficiente para você começar
+4. Selecione um plano de precificação. O {{site.data.keyword.Bluemix_notm}} oferece planos `Lite`
+gratuitos para uma coleção selecionada de seus serviços de nuvem com capacidade suficiente para você começar
 5. Selecione `Remontar` quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
 As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte. [Saiba mais...](/docs/manageapps/depapps.html#app_env)
@@ -148,31 +151,43 @@ As variáveis de ambiente permitem separar as configurações de implementação
 
 Vamos agora atualizar seu código local para apontar para esse banco de dados. Crie um arquivo json que armazenará as credenciais dos serviços que o aplicativo usará. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente VCAP_SERVICES.
 
-Crie um arquivo chamado `config.json` no diretório `Sources` com o conteúdo a seguir (veja config.json.example):
+Crie um arquivo chamado `my-cloudant-credentials.json` no diretório `config` com o
+conteúdo a seguir (como referência, consulte `config/my-cloudant-credentials.json.example`):
+
  ```
  {
-    "vcap":{
-       "services":{
-          "cloudantNoSQLDB":[
-             {
-                "credentials":{
-                   "host":"<host>",
-                   "password":"<password>",
-                   "port":443,
-                   "url":"<url>",
-                   "username":"<username>"
-                },
-                "label":"cloudantNoSQLDB",
-                "name": "CloudantService"
-             }
-          ]
-       }
-    }
+   "password": "<password>",
+   "url": "<url>",
+   "username": "<username>"
  }
  ```
-{: pre}
 
-Esse aplicativo de amostra usa o pacote Swift-cfenv para interagir com o Bluemix para analisar as variáveis de ambiente. [Saiba mais...](https://packagecatalog.com/package/IBM-Swift/Swift-cfenv)
+Atualize o arquivo `mappings.json` no diretório `config` substituindo o
+item temporário `cloudant` pelo **nome** de sua instância do banco de dados:
+
+```
+{
+  "MyCloudantDB": {
+    "searchPatterns": [
+      "cloudfoundry:cloudant",
+      "env:kube-cloudant-credentials",
+      "file:config/my-cloudant-credentials.json"
+    ]
+  }
+}
+```
+
+Esse aplicativo de amostra usa o pacote `CloudEnvironment` para interagir com o {{site.data.keyword.Bluemix_notm}}
+para analisar as variáveis de ambiente. [Saiba mais...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+
+O item temporário `cloudant` na configuração `cloudfoundry:cloudant` torna mais
+fácil ligar um serviço Cloudant fornecido pelo usuário ao seu aplicativo. Com a configuração
+`cloudfoundry:cloudant`, é possível criar um serviço Cloudant que inclui a sequência,
+`cloudant` em algum lugar no nome do serviço e liga-o ao seu aplicativo, sem editar o arquivo `config.json`. 
+Se você modificar essa configuração e depois quiser usar um serviço Cloudant fornecido pelo usuário, será necessário editar a
+configuração para `cloudfoundry:cloudant` ou definir `cloudfoundry:` com o nome do seu
+serviço fornecido pelo usuário.
+{: tip}
 
 De volta na UI do {{site.data.keyword.Bluemix_notm}}, selecione seu App -> Conexões -> Cloudant -> Visualizar credenciais
 
@@ -191,11 +206,19 @@ swift build
 
 Visualize seu app em: http://localhost:8080. Os nomes que você inserir no app serão agora incluídos no banco de dados.
 
-Esse aplicativo de amostra usa o pacote Kitura-CouchDB para interagir com o Cloudant. [Saiba mais...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
-{: tip}
+ Esse aplicativo de amostra usa o pacote Kitura-CouchDB para interagir com o Cloudant. [Saiba mais...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
 
-Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados. Visualize o app {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando push acima.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
+ Faça quaisquer mudanças desejadas e reimplemente para {{site.data.keyword.Bluemix_notm}}!
+ ```
+ cf app push
+ ```
 
-
+ Visualize o aplicativo na URL listada na saída do comando push, por exemplo, *myUrl.mybluemix.net*.
 Lembre-se, se você não precisar do app em tempo real, pare-o para não incorrer em encargos inesperados.
 {: tip}
+
+## Próximas etapas
+
+* [Tutoriais](/docs/tutorials/index.html)
+* [Amostras ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://ibm-cloud.github.io){: new_window}
+* [Centro de arquitetura ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

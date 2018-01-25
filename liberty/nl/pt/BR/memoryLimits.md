@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -57,13 +57,16 @@ variável de ambiente `JVM_ARGS`, com a mudança do arquivo `jvm.options` ou com
 Para evitar erros que resultam de exceder os limites de memória, o buildpack do Liberty for Java configura uma razão de tamanho de heap padrão dependendo do limite de memória que você especifica quando implementa seu aplicativo.
 
 * Aplicativos com limites de memória menores que 512 M têm uma razão de tamanho de heap de 50%
-* Aplicativos que têm limites de memória maiores ou iguais a 512 M têm uma razão de tamanho de heap de 75% 
+* Aplicativos que têm limites de memória maiores ou iguais a 512 M têm uma razão de tamanho de heap de 75%
+
 Ao especificar a memória heap usando variáveis de ambiente, você substitui as razões de tamanho de heap padrão.
 
 ### Especificando memória heap
 {: #specifying_heap_memory}
 
-É possível configurar o tamanho de memória heap usando variáveis de ambiente ou mudando o arquivo `jvm.options`. Ao usar as variáveis de ambiente `JVM_ARGS` ou `JBP_CONFIG_IBMJDK`, quaisquer mudanças entrarão em vigor quando você enviar por push seu aplicativo para o Bluemix. Mudando o arquivo `jvm.options`, o efeito para a configuração de tamanho de heap também pode ser testado localmente.
+É possível configurar o tamanho de memória heap usando variáveis de ambiente ou mudando o arquivo `jvm.options`. 
+Ao usar as variáveis de ambiente `JVM_ARGS` ou `JBP_CONFIG_IBMJDK`, quaisquer mudanças entrarão em
+vigor quando enviar seu aplicativo por push para {{site.data.keyword.Bluemix_notm}}. Mudando o arquivo `jvm.options`, o efeito para a configuração de tamanho de heap também pode ser testado localmente.
 
 * Use a variável de ambiente `JVM_ARGS` e o argumento -Xmx. Por exemplo, para configurar o tamanho máximo de heap como 512 M,
 use o comando a seguir e, em seguida, remonte seu app.
@@ -73,7 +76,7 @@ use o comando a seguir e, em seguida, remonte seu app.
 ```
 {: codeblock}
 
-* Especifique a razão de tamanho de heap usando a variável de ambiente JBP_CONFIG_IBMJDK. O heap_size_ratio é um valor de vírgula flutuante que especifica a quantidade de limite de memória para alocar para o heap. Por exemplo, para alocar metade da memória disponível para o heap (50% ou 0,50), emita o comando a seguir e remonte seu app.
+* Especifique a razão de tamanho de heap usando a variável de ambiente JBP_CONFIG_IBMJDK.  O heap_size_ratio é um valor de vírgula flutuante que especifica a quantidade de limite de memória para alocar para o heap.  Por exemplo, para alocar metade da memória disponível para o heap (50% ou 0,50), emita o comando a seguir e remonte seu app.
 
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"

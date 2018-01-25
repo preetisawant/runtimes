@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2017
-lastupdated: "2017-09-06"
+copyright: years: 2017 lastupdated: "2017-12-15"
 
 ---
 
@@ -29,7 +27,9 @@ Você precisará do seguinte:
 * [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
-* Instale o .NET Core SDK v1.0.4 por meio das instruções do [website dot.net ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.microsoft.com/net/download/core).
+* Instale o .NET Core 1.1 SDK 1.0.4 de acordo com as instruções
+do [website do dot.net
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.microsoft.com/net/download/core).
 
 ## Etapa 1: clonar o aplicativo de amostra
 {: #clone}
@@ -92,7 +92,7 @@ Para iniciar, efetue login na sua conta do {{site.data.keyword.Bluemix_notm}}:
 cf login
   ```
   {: pre}
-  
+
   Se não for possível efetuar login usando os comandos `cf login` ou `bx login` porque você tem um ID de usuário federado, use os comandos `cf login --sso` ou `bx login --sso` para efetuar login com seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
 
 Escolha seu terminal de API
@@ -103,12 +103,14 @@ cf api <API-endpoint>
 
 Substitua o *API-endpoint* no comando por um terminal de API da lista a seguir.
 
-|URL                             |Região          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | SUL dos EUA       |
-| https://api.eu-de.bluemix.net  | Alemanha        |
-| https://api.eu-gb.bluemix.net  | United Kingdom |
-| https://api.au-syd.bluemix.net | Sydney         |
+| **Nome da região** | **Local geográfico** | **Endpoint da API** |
+|-----------------|-------------------------|-------------------|
+| Região Sul dos EUA | Dallas, EUA | api.ng.bluemix.net |
+| Região Leste dos EUA | Washington, DC, EUA | api.us-east.bluemix.net |
+| Região do Reino Unido | Londres, Inglaterra | api.eu-gb.bluemix.net |
+| Região de Sydney | Sydney, Austrália | api.au-syd.bluemix.net |
+| Região da Alemanha | Frankfurt, Alemanha | api.eu-de.bluemix.net |
+{: caption="Tabela 1.  {{site.data.keyword.cloud_notm}} lista de região" caption-side="top"}
 
 **Certifique-se de que você esteja no diretório principal, `get-started-aspnet-core`, para seu aplicativo**, em seguida, envie por push seu aplicativo para o {{site.data.keyword.Bluemix_notm}}
   ```
@@ -128,11 +130,13 @@ cf apps
 ## Etapa 5: conectar um banco de dados MySQL
 {: connect_mysql}
 
-Em seguida, vamos incluir um banco de dados ClearDB MySQL nesse aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no Bluemix.
+Em seguida, vamos incluir um banco de dados ClearDB MySQL para este aplicativo e configurar o aplicativo para que ele possa
+ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
 1. Efetue login no {{site.data.keyword.Bluemix_notm}} em seu navegador. Procure o `Painel`. Selecione seu aplicativo clicando em seu nome na coluna `Nome`.
-2. Clique em `Conexões` e, em seguida, em `Conectar novo`.
-2. Na seção `Data & Analytics`, selecione `Banco de dados ClearDB MySQL` e `Criar` o serviço.
+2. Clique em `Conexões` e, em seguida, `Criar conexão`.
+2. Na seção `Data e Analytics`, selecione `Banco de dados ClearDB Managed MySQL` e
+`Crie` o serviço.
 3. Selecione `Remontar` quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
 As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte. [Saiba mais...](/docs/manageapps/depapps.html#app_env)
@@ -145,7 +149,8 @@ Vamos agora atualizar seu código local para apontar para esse banco de dados. V
 
 1. Crie o arquivo src/GetStartedDotnet/vcap-local.json
 
-2. Em seu navegador, abra a UI do {{site.data.keyword.Bluemix_notm}}, selecione seu App -> Conexões -> ClearDB MySQL Database -> Visualizar credenciais
+2. Em seu navegador, abra a UI do {{site.data.keyword.Bluemix_notm}}, selecione seu Aplicativo-> Conexões->
+Banco de dados ClearDB Managed MySQL-> Visualizar credenciais
 
 3. Copie e cole o objeto json inteiro das credenciais no arquivo `vcap-local.json` e salve as mudanças.  O resultado será algo como:
   ```
@@ -173,3 +178,9 @@ Vamos agora atualizar seu código local para apontar para esse banco de dados. V
 
 Lembre-se, se você não precisar do app em tempo real, pare-o para não incorrer em encargos inesperados.
 {: tip}
+
+## Próximas Etapas
+
+* [Tutorials (Tutoriais)](/docs/tutorials/index.html)
+* [Amostras ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

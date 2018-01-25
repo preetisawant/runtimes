@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -25,8 +25,8 @@ web: node app.js
 
 1. Sauvegardez le fichier **Procfile** dans le répertoire racine de votre application.
 
-S'il n'existe pas de fichier **Procfile**, le pack de construction Node.js d'IBM
-Bluemix recherche une entrée scripts.start dans le fichier **package.json**. Dans l'exemple ci-dessous, app.js est le script js de démarrage de votre application.
+S'il n'existe pas de fichier **Procfile**, le pack de construction Node.js
+de {{site.data.keyword.Bluemix_notm}} recherche une entrée scripts.start dans le fichier **package.json**. Dans l'exemple ci-dessous, app.js est le script js de démarrage de votre application.
 ```
 {
     ...   
@@ -44,4 +44,4 @@ automatiquement. Le contenu du fichier **Procfile** généré automatiquement es
 ```
 {: codeblock}
 
-Pour plus d'informations sur les fichiers **Procfile** et **package.json**, consultez [Tips for Node.js Applications ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).
+Pour plus d'informations sur les fichiers **Procfile** et **package.json**, consultez [Tips for Node.js Applications ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).

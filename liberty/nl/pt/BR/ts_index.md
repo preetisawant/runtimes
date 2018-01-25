@@ -1,8 +1,6 @@
 ---
 
-copyright:
-  years: 2016, 2017
-lastupdated: "2017-02-07"
+copyright: years: 2016, 2017 lastupdated: "2017-10-26"
 
 ---
 
@@ -33,7 +31,7 @@ erro nos logs pode ser semelhante ao seguinte:
 ```
 {: #codeblock}
 
-O Bluemix executa uma verificação de funcionamento no aplicativo para ver se ele iniciou com sucesso. A verificação de funcionamento testa se o aplicativo está atendendo na porta designada ao aplicativo. O tempo limite padrão para essa verificação é de 60 segundos e alguns aplicativos podem demorar mais de 60 segundos para iniciar.  Há vários motivos pelos quais o aplicativo pode levar mais tempo para iniciar. Por exemplo, a ligação de serviços como o [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) ou o [New Relic](/docs/runtimes/liberty/newRelic.html) ou [ativar o depurador](/docs/manageapps/app_mng.html#debug) aumentará o tempo de inicialização. O aplicativo também pode executar etapas de inicialização que podem levar muito tempo para serem concluídas.
+O {{site.data.keyword.Bluemix_notm}} executa uma verificação de funcionamento no aplicativo para ver se ele foi iniciado com êxito. A verificação de funcionamento testa se o aplicativo está atendendo na porta designada ao aplicativo. O tempo limite padrão para essa verificação é de 60 segundos e alguns aplicativos podem demorar mais de 60 segundos para iniciar.  Há vários motivos pelos quais o aplicativo pode levar mais tempo para iniciar. Por exemplo, a ligação de serviços como o [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) ou o [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html) ou [ativar o depurador](/docs/manageapps/app_mng.html#debug) aumentará o tempo de inicialização. O aplicativo também pode executar etapas de inicialização que podem levar muito tempo para serem concluídas.
 {: tsCauses}
 
 Primeiro, examine nos logs se há quaisquer erros óbvios que possam causar falha do aplicativo
@@ -57,9 +55,8 @@ Liberty. Se não forem encontrados erros óbvios, tente o seguinte:
 
 ### **Desative o recurso appstate. **
 
-O recurso appstate é integrado com o processo de verificação de
-funcionamento do Bluemix para assegurar que o aplicativo Liberty seja totalmente inicializado antes que o
-aplicativo possa receber as solicitações de HTTP. Quando o aplicativo estiver totalmente inicializado, o recurso appstate não terá mais efeito.  O efeito colateral deste recurso é que alguns aplicativos
+O recurso appstate é integrado ao processo de verificação de funcionamento do {{site.data.keyword.Bluemix_notm}} para
+assegurar que o aplicativo Liberty seja totalmente inicializado antes que o aplicativo possa receber solicitações de HTTP. Quando o aplicativo estiver totalmente inicializado, o recurso appstate não terá mais efeito.  O efeito colateral deste recurso é que alguns aplicativos
 podem levar mais tempo para inicializar. Para desativar o recurso appstate, configure a propriedade de
 ambiente a seguir em seu aplicativo e remonte o aplicativo:
 

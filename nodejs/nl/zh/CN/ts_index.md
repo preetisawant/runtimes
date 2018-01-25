@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-18"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -18,6 +18,8 @@ lastupdated: "2017-09-18"
 
 以下是对在 {{site.data.keyword.Bluemix}} 上使用 SDK for Node.js 的常见故障诊断问题的回答。
 {:shortdesc}
+
+要了解有关日志记录和跟踪的更多信息，请参阅[管理 Liberty 和 Node.js 应用程序](../../manageapps/app_mng.html)中的[跟踪](../../manageapps/app_mng.html#trace)部分。
 
 ## 应用程序未能启动，错误为“No space left on device”
 {: #no_space_left_on_device}

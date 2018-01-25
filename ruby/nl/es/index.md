@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-21"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -22,24 +22,23 @@ El ruby_buildpack se utiliza si la app tiene un Gemfile en el directorio raíz. 
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio Ruby.  La aplicación de inicio Ruby es una sencilla app Ruby que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix}}.  Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Ruby.  La aplicación de inicio Ruby es una sencilla app Ruby que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
 
 Puede especificar la versión de Ruby que utilizará la app en el Gemfile de la aplicación, por ejemplo:
 
-
 ```
   source 'https://rubygems.org'
-  ruby '2.4.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
 ```
 {: codeblock}
 
-Cuando no se especifique una versión, se elegirá la versión 2.3.3 de forma predeterminada.
+Cuando no se especifique una versión, se elegirá la versión 2.4.1 de forma predeterminada. 
 
 ### Versiones disponibles:
 {: #available_versions}
@@ -50,11 +49,12 @@ actualmente instalado en {{site.data.keyword.Bluemix}}:
 
 * 2.1.8
 * 2.1.9
-* 2.2.5
 * 2.2.6
-* 2.3.2
+* 2.2.7
 * 2.3.3
+* 2.3.4
 * 2.4.0
+* 2.4.1
 
 Si la app requiere una versión de Ruby que no aparece en la lista,
 puede utilizar el

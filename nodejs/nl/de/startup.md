@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -25,7 +25,7 @@ web: node app.js
 
 1. Speichern Sie die **Procfile** im Stammverzeichnis Ihrer Anwendung.
 
-Wenn keine **Procfile**-Datei vorhanden ist, prüft das IBM Bluemix-Node.js-Buildpack, ob der Eintrag 'scripts.start' in der Datei **package.json** vorhanden ist. Im unten stehenden Beispiel ist 'app.js' wieder das js-Startscript für Ihre Anwendung.
+Wenn keine **Procfile**-Datei vorhanden ist, prüft das {{site.data.keyword.Bluemix_notm}}-Node.js-Buildpack, ob der Eintrag 'scripts.start' in der Datei **package.json** vorhanden ist. Im unten stehenden Beispiel ist 'app.js' wieder das js-Startscript für Ihre Anwendung.
 ```
 {
     ...   

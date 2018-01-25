@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -22,7 +22,7 @@ Das Buildpack 'python_buildpack' wird verwendet, wenn das Stammverzeichnis Ihrer
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine Python-Starteranwendung bereit.  Die Python-Starteranwendung ist eine einfache Python-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Python-Starteranwendung bereit.  Die Python-Starteranwendung ist eine einfache Python-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -30,7 +30,7 @@ Das Buildpack 'python_buildpack' wird verwendet, wenn das Stammverzeichnis Ihrer
 Sie können die Version von Python, die von Ihrer App verwendet werden soll, durch Festlegen von 'python-versionnumber' in der Datei 'runtime.txt' im Stammverzeichnis Ihrer Anwendung angeben. Beispiel:
 
 ```
-python-3.6.0
+python-3.6.1
 ```
 {: codeblock}
 
@@ -39,7 +39,7 @@ Wenn keine Version angegeben ist, wird standardmäßig Version 2.7.13 ausgewähl
 ### Verfügbare Versionen:
 {: #available_versions}
 
-Folgende Python-Versionen stehen im [Python-Buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) zur Verfügung, das zurzeit in {{site.data.keyword.Bluemix}} installiert ist:
+Folgende Python-Versionen stehen im [Python-Buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) zur Verfügung, das zurzeit in {{site.data.keyword.Bluemix_notm}} installiert ist:
 
 * 2.7.12
 * 2.7.13
@@ -49,7 +49,8 @@ Folgende Python-Versionen stehen im [Python-Buildpack](https://github.com/cloudf
 * 3.4.6
 * 3.5.2
 * 3.5.3
-* 3.6.0
+* 3.6.1
+* 3.6.2
 
 Wenn für Ihre Anwendung eine Python-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Python-Buildpack](https://github.com/cloudfoundry/python-buildpack) implementieren.
 

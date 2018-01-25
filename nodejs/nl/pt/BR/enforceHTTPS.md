@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,8 @@ lastupdated: "2017-07-17"
 # Impingir HTTPS em todas as páginas em seu aplicativo
 {: #enforce_https}
 
-Quando você executa seu aplicativo no Bluemix com a estrutura expressa, as mudanças a seguir precisam ser feitas para impingir HTTPS em vez de HTTP em todas as páginas em seu aplicativo.
+Ao executar seu aplicativo no {{site.data.keyword.Bluemix}} com a estrutura expressa, as mudanças a seguir
+precisam ser feitas para impor HTTPS em vez de HTTP em todas as páginas em seu aplicativo.
 
 ```
 var express = require("express");

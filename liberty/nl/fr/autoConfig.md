@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -26,7 +26,7 @@ Un service géré par le conteneur désigne un service qui est géré par l'envi
 Ce processus est dénommé configuration automatique.
 Le pack de construction Liberty se charge de la configuration automatique des types de service suivants :
 
-* [Base de données ClearDB MySQL ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.cleardb.com/developers)
+* [Base de données ClearDB MySQL ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.cleardb.com/developers)
 * [MySQL](/docs/services/MySQL/index.html#MySQL)
 * [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
@@ -56,7 +56,7 @@ Voir la section [Résiliation de la configuration automatique des services](#opt
 ## Génération ou mise à jour des sections de configuration dans le fichier server.xml
 {: #generating_or_updating_serverxml}
 
-Lorsque vous poussez une application autonome, le pack de construction Liberty génère la section de fichier server.xml, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing), sur Bluemix. Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections server.xml requises pour les services liés.
+Lorsque vous poussez une application autonome, le pack de construction Liberty génère la section de fichier server.xml, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing), sur {{site.data.keyword.Bluemix_notm}}. Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections server.xml requises pour les services liés.
 
 Lorsque vous fournissez un fichier server.xml et que vous créez une liaison avec des services gérés par conteneur, le pack de construction Liberty effectue les opérations suivantes :
 

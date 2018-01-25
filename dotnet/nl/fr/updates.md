@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-25"
-
+lastupdated: "2017-10-06"
 ---
 
 {:new_window: target="_blank"}
@@ -14,6 +13,18 @@ lastupdated: "2017-07-25"
 
 
 Liste des dernières mises à jour apportées au pack de construction aspnet.
+
+## 6 octobre 2017 : Pack de construction ASP.NET Core v1.0.26-20170913-1346 mis à jour
+* Ajout de la prise en charge de .NET Core runtime 2.0.0
+* Ajout de la prise en charge de .NET Core SDK 1.1.0
+* Ajout de la prise en charge de .NET Core SDK 2.0.0
+* Retrait de la prise en charge de .NET Core SDK 1.1.0-preview1-005051
+* Retrait de la prise en charge de .NET Core SDK 2.0.0-preview1-005977
+* Retrait de la prise en charge de .NET Core runtime version 1.0.3
+* Retrait de la prise en charge de .NET Core runtime version 1.1.0
+* Mise à jour de Node à la version 6.11.2
+* La version par défaut du .NET Core SDK devient la 2.0.0
+* La version par défaut du .NET Core SDK pour les projets F# devient la 1.1.0
 
 ## 24 juillet 2017 : Pack de construction ASP.NET Core v1.0.22-20170724-0813 mis à jour
 

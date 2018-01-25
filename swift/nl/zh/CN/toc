@@ -9,12 +9,18 @@ Swift
     index.md
     {: .navgroup-end}
 
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    入门模板应用程序和社区 buildpack
+        [使用入门模板应用程序](../../cfapps/starter_app_usage.html)
+        [使用社区 buildpack](../../cfapps/byob.html)
+    {: .navgroup-end}
+
     {: .navgroup id="howto"}
-    [使用入门模板应用程序](../../cfapps/starter_app_usage.html)
     [使用代理](../../manageapps/workingWithProxy.html)
-    [使用社区 buildpack](../../cfapps/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    runtimeVersions.md
     [Buildpack 支持语句](../../manageapps/buildpackSupport.html)
     {: .navgroup-end}

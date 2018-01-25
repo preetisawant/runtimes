@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-09-06"
 
 * {: download} Enhorabuena, ha desplegado una aplicación de ejemplo Hello World en {{site.data.keyword.Bluemix}}.  Para empezar a trabajar, siga los pasos de esta guía. O bien <a class="xref" href="http://bluemix.net" target="_blank" title="(Descargue el código de ejemplo)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Descargue el código de aplicación" />descargue el código de ejemplo</a> y explore por su cuenta.
 
-Si sigue la guía de aprendizaje de iniciación de Python, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix}} en su app.
+Si sigue la guía de aprendizaje de iniciación de Python, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}}, e integrará un servicio de base de datos en la app.
 
 ## Antes de empezar
 {: #prereqs}
@@ -109,14 +109,16 @@ cf api <API-endpoint>
 
 Sustituya *API-endpoint* en el mandato por un punto final de API de la siguiente lista.
 
-|URL                             |Región          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | EE.UU. Sur       |
-| https://api.eu-gb.bluemix.net  | Reino Unido |
-| https://api.au-syd.bluemix.net | Sidney         |
-| https://api.eu-de.bluemix.net | Frankfurt |
+| **Nombre de la región** | **Ubicación geográfica** | **Punto final de la API** |
+|-----------------|-------------------------|-------------------|
+| Región EE.UU. sur| Dallas, EE.UU.| api.ng.bluemix.net |
+|  Región EE.UU este | Washington, DC, EE.UU | api.us-east.bluemix.net |
+| Región del Reino Unido| Londres, Inglaterra| api.eu-gb.bluemix.net |
+| Región de Sídney| Sídney, Australia | api.au-syd.bluemix.net |
+|  Región de Alemania | Frankfurt, Alemania | api.eu-de.bluemix.net |
+{: caption="Tabla 1. Lista de regiones de {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
-Inicie una sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}
+Inicie sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}
 
   ```
 cf login
@@ -131,7 +133,7 @@ cf push
   ```
   {: pre}
 
-Esto puede tardar un minuto. Si hay algún error en el proceso de despliegue puede utilizar el mandato `cf logs <Your-App-Name> --recent` para resolver el problema.
+Esto puede tardar un minuto. Si hay algún error en el proceso de despliegue, puede utilizar el mandato `cf logs <Your-App-Name> --recent` para resolver problemas.
 
 Cuando finalice el despliegue, verá un mensaje que indica que la app se está ejecutando.  Visualice la app en el URL que aparece en la salida del mandato push.  También puede emitir el mandato
   ```
@@ -146,7 +148,7 @@ cf apps
 A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
 1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} en su navegador. Vaya al `Panel de control`. Seleccione su aplicación pulsando su nombre en la columna `Nombre`.
-2. Pulse `Conexiones` y luego `Conectar nuevo`.
+2. Pulse `Conexiones` y, a continuación, `Crear conexión`.
 2. En la sección `Data &  Analytics`, seleccione `BD Cloudant NoSQL` y `Crear` para crear el servicio.
 3. Seleccione `Volver a transferir` cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
@@ -192,3 +194,9 @@ python hello.py
 
 Recuerde que, si no necesita la app en directo, debe detenerla para no incurrir en cargos inesperado.
 {: tip}
+
+## Siguientes pasos
+
+* [Guías de aprendizaje](/docs/tutorials/index.html)
+* [Ejemplos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://ibm-cloud.github.io){: new_window}
+* [Centro de arquitectura ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

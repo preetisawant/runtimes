@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2017-07-14"
 
 [보안 스타터 애플리케이션](https://github.com/IBM-Bluemix/java-secure-app)을 새 Liberty 애플리케이션 개발을 위한 시작점으로 사용할 수 있습니다. 앱에서 XSS 대책 코드를 학습한 다음 애플리케이션 API의 오퍼레이션에 적용하십시오. 보안 스타터 애플리케이션의 대책을 사용하면 XSS 공격을 줄이거나 방지하여 서버와 브라우저에서 애플리케이션이 손상되지 않도록 악의적인 사용자 입력을 막을 수 있습니다.
 
-먼저 이 보안 스타터 애플리케이션을 다운로드한 다음 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 샘플 애플리케이션에서 수행하는 방식과 동일하게 Bluemix 또는 로컬에 이 애플리케이션을 빌드하고 배치하십시오. [Bluemix에서 Liberty 시작하기](getting-started.html)로 이동하여 Bluemix에 애플리케이션을 빌드하고 배치하는 방법을 자세히 보십시오. 시작하기 위해 이러한 단계를 사용하여 앱을 복제하고 빌드하고 실행할 수 있습니다.
+먼저 이 보안 스타터 애플리케이션을 다운로드한 다음 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 샘플 애플리케이션에서 수행하는 방식과 동일하게 {{site.data.keyword.Bluemix_notm}} 또는 로컬에 이 애플리케이션을 빌드하고 배치하십시오. [{{site.data.keyword.Bluemix_notm}}에서 Liberty 시작하기](getting-started.html)로 이동하여 {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 빌드하고 배치하는 방법을 자세히 보십시오. 시작하기 위해 이러한 단계를 사용하여 앱을 복제하고 빌드하고 실행할 수 있습니다.
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app
@@ -42,9 +42,9 @@ http://localhost:9080/GetStartedSecureJava/에서 앱 보기
 ## 애플리케이션의 모든 페이지에서 HTTPS 강제 실행
 {: #enforce_https}
 
-애플리케이션의 모든 페이지에서 HTTP 대신 HTTPS를 강제 실행하려면 다음과 같이 변경해야 합니다. 
+애플리케이션의 모든 페이지에서 HTTP 대신 HTTPS를 강제 실행하려면 다음과 같이 변경해야 합니다.
 
-`appSecurity-2.0` 기능을 사용할 수 있도록 server.xml을 수정하십시오. 
+`appSecurity-2.0` 기능을 사용할 수 있도록 server.xml을 수정하십시오.
 
 ```
   <featureManager>
@@ -52,7 +52,7 @@ http://localhost:9080/GetStartedSecureJava/에서 앱 보기
   </featureManager>
 ```
 
-다음 보안 제한조건을 포함하도록 web.xml 파일을 수정하십시오. 
+다음 보안 제한조건을 포함하도록 web.xml 파일을 수정하십시오.
 
 ```
   <security-constraint>
@@ -66,7 +66,7 @@ http://localhost:9080/GetStartedSecureJava/에서 앱 보기
   </security-constraint>
 ```
 
-이를 통해 애플리케이션은 모든 연결에서 자동으로 HTTPS를 사용하도록 강제 실행하지만, HTTP 연결은 허용되지 않습니다. 
+이를 통해 애플리케이션은 모든 연결에서 자동으로 HTTPS를 사용하도록 강제 실행하지만, HTTP 연결은 허용되지 않습니다.
 
 ## 자세한 정보
 {: more}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-05-31"
 # Oracle JRE の使用
 {: #using_oraacle_jre}
 
-必要に応じて、Oracle JRE を使用して Bluemix 上で Liberty アプリケーションを実行できます。実行するには、以下の条件を満たす必要があります。
+必要に応じて、Oracle JRE を使用して {{site.data.keyword.Bluemix}} 上で Liberty アプリケーションを実行できます。実行するには、以下の条件を満たす必要があります。
 * ビルドパックによるダウンロードが可能なロケーションで JRE をホストする。
 * ホスト JRE のロケーションが指定されている `index.yml` ファイルをホストする。
 * その JRE を使用するようにアプリケーションを構成する。
@@ -20,10 +20,10 @@ lastupdated: "2017-05-31"
 ## JRE および index.yml のホスティング
 {: #hosting_jre}
 
-Oracle JRE ファイルは Web サーバー上でホストされる必要があり、Liberty ビルドパックはそのサーバーから Oracle JRE ファイルをダウンロード可能でなければなりません。このファイルは、使用可能ないずれかのサーバー機能を使用して Bluemix 自体の上でホストするか、パブリックに使用可能なロケーションでホストすることができます。サーバーは、JRE ファイルに関する詳細を指定する `index.yml` ファイルを使用して構成されている必要があります。JRE および `index.yml` ファイルをホストするには、以下の手順を実行します。
-  1. Oracle JRE を取得します。JRE は、Unix 64 ビット OS で使用するバージョンである必要があり、`tar.gz` ファイルでなければなりません。
+Oracle JRE ファイルは Web サーバー上でホストされる必要があり、Liberty ビルドパックはそのサーバーから Oracle JRE ファイルをダウンロード可能でなければなりません。 このファイルは、使用可能ないずれかのサーバー機能を使用して {{site.data.keyword.Bluemix_notm}} 自体の上でホストすることも、パブリックに使用可能なロケーションでホストすることもできます。サーバーは、JRE ファイルに関する詳細を指定する `index.yml` ファイルを使用して構成されている必要があります。 JRE および `index.yml` ファイルをホストするには、以下の手順を実行します。
+  1. Oracle JRE を取得します。  JRE は、UNIX 64 ビット OS で使用するためのバージョンである必要があり、`tar.gz` ファイルでなければならないことに注意してください。
   2. Liberty ビルドパックによるダウンロードが可能なロケーションで JRE ファイルをホストします。
-  3. ホストするロケーションに必ず `index.yml` ファイルを配置します。`index.yml` ファイルには、Oracle JRE のバージョン ID その直後のコロン、および JRE ファイルのロケーションの完全な URL からなる項目が含まれていなければなりません。`index.yml` のフォーマットは次のとおりです。
+  3. ホストするロケーションに必ず `index.yml` ファイルを配置します。 `index.yml` ファイルには、Oracle JRE のバージョン ID その直後のコロン、および JRE ファイルのロケーションの完全な URL からなる項目が含まれていなければなりません。 `index.yml` のフォーマットは次のとおりです。
 ```
    ---
    jre_version: https://hostingLocation/jreName.tar.gz
@@ -39,7 +39,7 @@ Oracle JRE ファイルは Web サーバー上でホストされる必要があ�
 ## アプリケーションの構成
 {: #configure_app}
 
-Liberty アプリケーションでは、2 つの環境変数を設定する必要があります。*JBP_CONFIG_OPENJDK* は `index.yml` ファイルのロケーションを指定するように設定し、*JVM* 環境変数は、代替 JRE を使用するようにビルドパックを構成するために *openjdk* に設定する必要があります。
+Liberty アプリケーションでは、2 つの環境変数を設定する必要があります。 *JBP_CONFIG_OPENJDK* は `index.yml` ファイルのロケーションを指定するように設定し、*JVM* 環境変数は、代替 JRE を使用するようにビルドパックを構成するために *openjdk* に設定する必要があります。
 
 JBP_CONFIG_OPENJDK 変数の場合、値は次のようになります。
 ```
@@ -77,4 +77,4 @@ JVM 環境変数を設定するには、次のようなコマンドを発行し�
 ## 一般
 {: #general notoc}
 * [Liberty ランタイム](index.html)
-* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty プロファイル概要](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

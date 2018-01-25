@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-02-07"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -31,7 +31,7 @@ Una aplicación Liberty no se inicia con el error “No se ha podido empezar a a
 ```
 {: #codeblock}
 
-Bluemix realiza una comprobación del estado de la aplicación para ver si se ha iniciado correctamente. La comprobación de estado prueba si la aplicación está escuchando en el puerto que se le ha asignado. El tiempo de espera predeterminado de esta comprobación es de 60 segundos y algunas aplicaciones pueden tardar más de 60 segundos en iniciarse.  Existen varias razones por las que la aplicación puede tardar más en iniciarse. Por ejemplo, el enlace de servicios como [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) o [New Relic](/docs/runtimes/liberty/newRelic.html) o [la habilitación del depurador](/docs/manageapps/app_mng.html#debug) puede incrementar el tiempo de inicio. También es posible que la aplicación realice pasos de inicialización que tarden en finalizar.
+{{site.data.keyword.Bluemix_notm}} realiza una comprobación del estado de la aplicación para ver si se ha iniciado correctamente. La comprobación de estado prueba si la aplicación está escuchando en el puerto que se le ha asignado. El tiempo de espera predeterminado de esta comprobación es de 60 segundos y algunas aplicaciones pueden tardar más de 60 segundos en iniciarse.  Existen varias razones por las que la aplicación puede tardar más en iniciarse. Por ejemplo, el enlace de servicios como [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) o [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html) o [la habilitación del depurador](/docs/manageapps/app_mng.html#debug) puede incrementar el tiempo de inicio. También es posible que la aplicación realice pasos de inicialización que tarden en finalizar.
 {: tsCauses}
 
 En primer lugar, examine los registros en busca de errores obvios que puedan haber hecho que la aplicación Liberty falle. Si no se encuentran errores evidentes, intente lo siguiente:
@@ -54,7 +54,7 @@ En primer lugar, examine los registros en busca de errores obvios que puedan hab
 ### **Inhabilite la característica appstate. **
 
 La característica appstate
-se integra con el proceso de comprobación de estado de Bluemix para asegurarse de que la aplicación Liberty se inicialice
+se integra con el proceso de comprobación de estado de {{site.data.keyword.Bluemix_notm}} para asegurarse de que la aplicación Liberty se inicialice
 completamente para que la aplicación pueda recibir solicitudes HTTP. Una vez que la aplicación se haya inicializado por completo, la característica appstate deja de tener efecto.  El efecto secundario de esta característica es que algunas aplicaciones pueden tardar más en iniciarse. Para inhabilitar la característica appstate, establezca la siguiente propiedad del entorno en la aplicación y vuelva a transferir la aplicación:
 
 ```

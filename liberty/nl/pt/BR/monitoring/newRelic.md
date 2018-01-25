@@ -1,15 +1,13 @@
 ---
 
-copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+copyright: years: 2015, 2017 lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Usar o New Relic para monitorar o Liberty no Bluemix
+# Use o New Relic para monitorar o Liberty no {{site.data.keyword.cloud_notm}}
 {: #new_relic}
 
 New Relic é um serviço de terceiro que fornece
@@ -17,7 +15,8 @@ métricas de monitoramento para o seu aplicativo. Para obter mais
 informações sobre o serviço que o New Relic oferece, consulte [New
 Relic](http://newrelic.com/java).
 
-De acordo com a [documentação de instalação manual do agente Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), os aplicativos Java que devem ser monitorados usando o serviço New Relic geralmente precisam ser empacotados e configurados com um agente New Relic e uma chave de licença da conta. No ambiente do IBM Bluemix, um contrato de licença e uma conta do New Relic podem ser obtidos criando uma instância de serviço no IBM Bluemix. Os aplicativos Java podem então ser ligados à instância do serviço New Relic e o buildpack do Liberty configura automaticamente o aplicativo que está pronto para ser monitorado pelo serviço New Relic.
+De acordo com a [documentação de instalação manual do agente Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), os aplicativos Java que devem ser monitorados usando o serviço New Relic geralmente precisam ser empacotados e configurados com um agente New Relic e uma chave de licença da conta. No ambiente do {{site.data.keyword.Bluemix}},
+um acordo de licença e uma conta do New Relic podem ser obtidos criando-se uma instância de serviço em {{site.data.keyword.Bluemix_notm}}. Os aplicativos Java podem então ser ligados à instância do serviço New Relic e o buildpack do Liberty configura automaticamente o aplicativo que está pronto para ser monitorado pelo serviço New Relic.
 Especificamente,
 o buildpack:
 
@@ -41,15 +40,16 @@ do Liberty para o aplicativo:
 ## Incluir um novo serviço New Relic
 {: #add_new_relic}
 
-Para que um aplicativo Java existente seja monitorado com o New Relic no IBM Bluemix, siga estas etapas.
-1. Crie uma instância do serviço New Relic no IBM Bluemix.
+Para que um aplicativo Java existente seja monitorado com o New Relic em {{site.data.keyword.Bluemix_notm}}, siga estas
+etapas.
+1. Crie uma instância do serviço New Relic em  {{site.data.keyword.Bluemix_notm}}.
 
   <pre>
     $ cf create-service newrelic standard mynewrelic
   </pre>
   {: codeblock}
 
-2. Implemente seu aplicativo no IBM Bluemix com o serviço New Relic.  Veja o manifest do aplicativo
+2. Implemente seu aplicativo no {{site.data.keyword.Bluemix_notm}} com o serviço New Relic.  Veja o manifest do aplicativo
 de amostra a seguir:
 
   <pre>
@@ -66,7 +66,9 @@ de amostra a seguir:
   </pre>
   {: codeblock}
 
-3. Acesse o painel do New Relic para seu aplicativo diretamente a partir do painel do IBM Bluemix de seu aplicativo.
+3. Acesse o painel do New Relic do seu aplicativo diretamente do painel
+{{site.data.keyword.Bluemix_notm}}
+do seu aplicativo.
 
 ### Incluir um serviço New Relic fornecido pelo usuário
 {: #add_user_provided_new_relic}
@@ -82,7 +84,7 @@ existente.  Por exemplo, se a sua chave de licença existente for 1234567, será
   ```
   {: codeblock}
 
-2. Implemente seu aplicativo no IBM Bluemix com a instância do serviço New Relic fornecida pelo usuário.  A seguir
+2. Implemente seu aplicativo no {{site.data.keyword.Bluemix_notm}} com a instância de serviço New Relic fornecida pelo usuário.  A seguir
 está um manifest do aplicativo de amostra que usa uma instância do serviço New Relic
 fornecida pelo usuário:
   <pre>

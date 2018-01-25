@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -23,36 +23,36 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、Go スターター・アプリケーションが用意されています。Go スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Go アプリケーションです。スターター・アプリケーションを試し、Bluemix 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Go スターター・アプリケーションが用意されています。  Go スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Go アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}
 
-アプリケーションのルートにある Godeps/Godeps.json ファイルで GoVersion プロパティーを設定することにより、アプリケーションで使用する Go のバージョンを指定できます。例えば、次のように指定します。
+アプリケーションのルートにある Godeps/Godeps.json ファイルで GoVersion プロパティーを設定することにより、アプリケーションで使用する Go のバージョンを指定できます。 例えば、次のように指定します。
 
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.6.1",
+	"GoVersion": "go1.8.3",
 	"Deps": []
 }
 ```
 {: codeblock}
 詳しくは、[『godep』](https://github.com/tools/godep){: new_window}を参照してください。
 
-バージョンを指定しない場合は、デフォルトでバージョン 1.7.5 が選択されます。
+バージョンを指定しない場合は、デフォルトでバージョン 1.8.3 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
 
-現在 {{site.data.keyword.Bluemix}} にインストールされている [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.7.18){: new_window}では、以下のバージョンの Go が使用できます。
+現在 {{site.data.keyword.Bluemix_notm}} にインストールされている [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.6){: new_window}では、以下のバージョンの Go が使用できます。
 
-* 1.5.3
-* 1.5.4
 * 1.6.3
 * 1.6.4
-* 1.7.4
 * 1.7.5
+* 1.7.6
+* 1.8.1
+* 1.8.3
 
 アプリケーションが、リストされていないバージョンの Go を必要とする場合は、外部の [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack.git){: new_window}を使用してアプリケーションをデプロイできます。
 

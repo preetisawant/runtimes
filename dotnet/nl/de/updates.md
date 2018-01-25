@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-25"
-
+lastupdated: "2017-10-06"
 ---
 
 {:new_window: target="_blank"}
@@ -14,6 +13,18 @@ lastupdated: "2017-07-25"
 
 
 Eine Liste mit den neuesten Aktualisierungen im aspnet-Buildpack.
+
+## 6. Oktober 2017: ASP.NET Core-Buildpack v1.0.26-20170913-1346 aktualisiert
+* Unterstützung für .NET Core-Laufzeit 2.0.0 hinzugefügt
+* Unterstützung für .NET Core SDK 1.1.0 hinzugefügt
+* Unterstützung für .NET Core SDK 2.0.0 hinzugefügt
+* Unterstützung für .NET Core SDK 1.1.0-preview1-005051 entfernt
+* Unterstützung für .NET Core SDK 2.0.0-preview1-005977 entfernt
+* Unterstützung für .NET Core-Laufzeit Version 1.0.3 entfernt
+* Unterstützung für .NET Core-Laufzeit Version 1.1.0 entfernt
+* Knotenversion auf 6.11.2 aktualisiert
+* Standardversion von .NET Core SDK in 2.0.0 geändert
+* Standardversion von .NET Core SDK für F#-Projekte in 1.1.0 geändert
 
 ## 24. Juli 2017: ASP.NET Core Buildpack v1.0.22-20170724-0813 aktualisiert
 
@@ -70,7 +81,7 @@ Eine Liste mit den neuesten Aktualisierungen im aspnet-Buildpack.
 ## 10. Oktober 2016: Buildpack 'ASP.NET Core' v1.0.1-20161005-1225 aktualisiert.
 
 * Unterstützung für .NET Core 1.0.1 hinzufügen
-* Sporadisch auftretender Fehler, der beim Caching von NuGet-Packages zum Fehlschlagen der Bereitstellung führt 
+* Sporadisch auftretender Fehler, der beim Caching von NuGet-Packages zum Fehlschlagen der Bereitstellung führt
 
 ## 31. August 2016: Buildpack 'ASP.NET Core' v1.0-20160826-1345 aktualisiert.
 

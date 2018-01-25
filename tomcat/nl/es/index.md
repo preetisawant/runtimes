@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-06-20"
 El tiempo de ejecución de Tomcat en {{site.data.keyword.Bluemix}} está basado en el java_buildpack.
 {: shortdesc}
 
-Para utilizar el tiempo de ejecución de Tomcat en {{site.data.keyword.Bluemix}}, debe especificar el java_buildpack con la opción -b. Por ejemplo:
+Para utilizar el tiempo de ejecución de Tomcat en {{site.data.keyword.Bluemix_notm}}, debe especificar el java_buildpack con la opción -b. Por ejemplo:
 <pre>
     cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
 </pre>
@@ -28,7 +28,7 @@ Para obtener más información sobre el tiempo de ejecución de Tomcat, consulte
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una aplicación de inicio de Tomcat.  La aplicación de inicio de Tomcat es una app de Tomcat sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de inicio, y realizar y enviar los cambios por push al entorno de Bluemix. Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Tomcat.  La aplicación de inicio de Tomcat es una app de Tomcat sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -39,19 +39,19 @@ Ambos se pueden especificar en el archivo de manifiesto de la aplicación.  Por 
 ```
     env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
-        JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
+        JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-La versión actual de java_buildpack es v3.13, que contiene la versión de Tomcat predeterminada 8.0.41 y la versión de Java predeterminada 1.8.0_121.
+La versión actual de java_buildpack es v3.19, que contiene la versión de Tomcat predeterminada 8.0.45 y la versión de Java predeterminada 1.8.0_141.
 Para obtener más información, consulte [releases de java-buildpack](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13).
 
 ## Redirección de HTTPS
 {: #https_redirect}
 
-El tiempo de Tomcat se puede configurar de modo que confíe en los proxies internos de Bluemix y permita la redirección del tráfico de HTTP a HTTPS (SSL).
+El tiempo de ejecución de Tomcat se puede configurar de modo que confíe en los proxies internos de {{site.data.keyword.Bluemix_notm}} y permita la redirección del tráfico HTTP a HTTPS (SSL).
 Para ello, modifique el archivo server.xml estableciendo el elemento RemoteIpValve Valve con las opciones internalProxies y protocolHeader.
 
-El tiempo de ejecución de Tomcat [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) que se incluye en el paquete de compilación solo establece la opción protocolHeader del elemento RemoteIpValve Valve de forma predeterminada.  Para redirigir el tráfico de HTTP a HTTPS en Bluemix configure el elemento RemoteIpValve en el archivo server.xml personalizado del siguiente modo:
+El tiempo de ejecución de Tomcat [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) que se incluye en el paquete de compilación solo establece la opción protocolHeader del elemento RemoteIpValve Valve de forma predeterminada.  Para redirigir el tráfico de HTTP o HTTPS en {{site.data.keyword.Bluemix_notm}} configure el elemento RemoteIpValve en el archivo server.xml personalizado del siguiente modo:
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />

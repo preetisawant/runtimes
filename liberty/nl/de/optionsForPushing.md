@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,9 +13,9 @@ lastupdated: "2017-03-22"
 # Optionen zur Durchführung von Push-Operationen für Liberty-Apps
 {: #options_for_pushing}
 
-Das Verhalten des Liberty-Servers in Bluemix wird durch das Liberty-Buildpack gesteuert. Buildpacks können eine vollständige Laufzeitumgebung für bestimmte Anwendungsklassen bereitstellen. Sie sind der Schlüssel für die Portierbarkeit in Clouds und die Bereitstellung einer offenen Cloudarchitektur. Mit dem Liberty-Buildpack wird ein WebSphere Liberty-Container bereitgestellt, mit dem Java EE 7- und OSGi-Anwendungen ausgeführt werden können. Es unterstützt gängige Frameworks wie Spring und umfasst die IBM JRE. WebSphere Liberty ermöglicht eine zeiteffiziente, an die Cloud angepasste Anwendungsentwicklung. Das Liberty-Buildpack unterstützt mehrere Anwendungen, die in einem einzigen Liberty-Server implementiert werden. Im Rahmen der Integration des Liberty-Buildpacks in Bluemix stellt das Buildpack sicher, dass die Umgebungsvariablen zum Binden von Services im Liberty-Server als Konfigurationsvariablen dargestellt werden.
+Das Verhalten des Liberty-Servers in {{site.data.keyword.Bluemix}} wird durch das Liberty-Buildpack gesteuert. Buildpacks können eine vollständige Laufzeitumgebung für bestimmte Anwendungsklassen bereitstellen. Sie sind der Schlüssel für die Portierbarkeit in Clouds und die Bereitstellung einer offenen Cloudarchitektur. Mit dem Liberty-Buildpack wird ein WebSphere Liberty-Container bereitgestellt, mit dem Java EE 7- und OSGi-Anwendungen ausgeführt werden können. Es unterstützt gängige Frameworks wie Spring und umfasst die IBM JRE. WebSphere Liberty ermöglicht eine zeiteffiziente, an die Cloud angepasste Anwendungsentwicklung. Das Liberty-Buildpack unterstützt mehrere Anwendungen, die in einem einzigen Liberty-Server implementiert werden. Im Rahmen der Integration des Liberty-Buildpacks in {{site.data.keyword.Bluemix_notm}} stellt das Buildpack sicher, dass die Umgebungsvariablen zum Binden von Services im Liberty-Server als Konfigurationsvariablen dargestellt werden.
 
-Zur Implementierung Ihrer Liberty-Anwendungen in Bluemix können Sie die folgenden Methoden verwenden:
+Zur Implementierung Ihrer Liberty-Anwendungen in {{site.data.keyword.Bluemix_notm}} können Sie die folgenden Methoden verwenden:
 
 * Eigenständige Anwendung mit einer Push-Operation übertragen
 * Serververzeichnis mit einer Push-Operation übertragen
@@ -26,7 +26,7 @@ Wichtig: Wenn Sie eine Anwendung mit dem Liberty-Buildpack bereitstellen, müsse
 ## Eigenständige Apps
 {: #stand_alone_apps}
 
-Eigenständige Anwendungen wie z. B. die in WAR- oder EAR-Dateien enthaltenen Anwendungen, können in Bluemix für Liberty implementiert werden.
+Eigenständige Anwendungen, wie z. B. die in WAR- oder EAR-Dateien enthaltenen Anwendungen, können in {{site.data.keyword.Bluemix_notm}} für Liberty implementiert werden.
 
 Zur Implementierung einer eigenständigen Anwendung müssen Sie den Befehl 'cf push' mit dem Parameter '-p' ausführen, der auf Ihre WAR- oder EAR-Datei verweist.
 Beispiel:
@@ -144,7 +144,7 @@ Wichtig: Damit Ihre Änderungen an der Umgebungsvariablen wirksam werden, müsse
 
 In einigen Fällen müssen Sie möglicherweise eine angepasste Liberty-Serverkonfiguration mit Ihrer Anwendung bereitstellen. Diese angepasste Konfiguration kann erforderlich sein, wenn Sie eine WAR- oder EAR-Datei bereitstellen und die Standarddatei 'server.xml' bestimmte Einstellungen nicht enthält, die für Ihre Anwendung benötigt werden.
 
-Wenn Sie das Liberty-Profil auf Ihrer Workstation installiert haben und bereits einen Liberty-Server mit Ihrer Anwendung erstellt haben, können Sie den Inhalt dieses Verzeichnisses mit einer Push-Operation an Bluemix übertragen.
+Wenn Sie das Liberty-Profil auf Ihrer Workstation installiert und bereits einen Liberty-Server mit Ihrer Anwendung erstellt haben, können Sie den Inhalt dieses Verzeichnisses mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen.
 Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie den folgenden Befehl aus:
 
 ```
@@ -175,7 +175,7 @@ können Sie die folgenden Schritte befolgen, um ein Serververzeichnis mit Ihrer 
 ```
 {: codeblock}
 
-Nach Vorbereitung des Serververzeichnisses können Sie es in Bluemix implementieren.
+Nach Vorbereitung des Serververzeichnisses können Sie es in {{site.data.keyword.Bluemix_notm}} implementieren.
 
 ```
     $ cf push <yourappname> -p defaultServer
@@ -192,9 +192,9 @@ Hinweis: Auf die Webanwendungen, die als Teil des Serververzeichnisses implement
 ## Paketierter Server
 {: #packaged_server}
 
-Sie können auch eine Datei für einen paketierten Server mit einer Push-Operation an Bluemix übertragen. Die Datei für den paketierten Server wird mithilfe des Liberty-Befehls zum Erstellen von Serverpaketen erstellt. Zusätzlich zu den Anwendungs- und Konfigurationsdateien kann die Datei des paketierten Servers gemeinsam genutzte Ressourcen und Liberty-Benutzerfeatures enthalten, die von der Anwendung benötigt werden.
+Sie können auch eine Datei für einen paketierten Server mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen. Die Datei für den paketierten Server wird mithilfe des Liberty-Befehls zum Erstellen von Serverpaketen erstellt. Zusätzlich zu den Anwendungs- und Konfigurationsdateien kann die Datei des paketierten Servers gemeinsam genutzte Ressourcen und Liberty-Benutzerfeatures enthalten, die von der Anwendung benötigt werden.
 
-Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl `./bin/server package` aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option `--include=usr`. 
+Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl `./bin/server package` aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option `--include=usr`.
 Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie folgenden Befehl aus:
 
 ```
@@ -204,7 +204,7 @@ Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Si
 
 Dieser Befehl generiert die Datei 'serverName.zip' im Serververzeichnis. Wenn Sie mit der Option `--archive` eine andere Archivdatei angegeben haben, stellen Sie sicher, dass die Erweiterung `.zip` anstelle von `.jar` verwendet wird. **Das Buildpack unterstützt keine paketierten Serverdateien mit der Erweiterung `.jar`**.
 
-Anschließend können Sie die generierte `.zip`-Datei mithilfe des Befehls `cf push` mit einer Push-Operation an Bluemix übertragen.
+Anschließend können Sie die generierte `.zip`-Datei mithilfe des Befehls `cf push` mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen.
 Beispiel:
 
 ```
@@ -230,12 +230,12 @@ Bei der Übertragung eines paketierten Servers oder eines Liberty-Serververzeich
 Die folgenden Variablen sind in der Datei `runtime-vars.xml` definiert und werden von der mit einer Push-Operation übertragenen Datei `server.xml` referenziert. Bei allen Variablen muss die Groß-/Kleinschreibung beachtet werden.
 
 * ${port}: Der HTTP-Port, an dem der Liberty-Server empfangsbereit ist.
-* ${vcap_app_port}: Identisch mit ${port}. Wird bei der Ausführung unter Diego nicht definiert. 
+* ${vcap_app_port}: Identisch mit ${port}. Wird bei der Ausführung unter Diego nicht definiert.
 * ${application_name}: Der Name der Anwendung wie mithilfe der Optionen im Befehl 'cf push' definiert.
 * ${application_version}: Die Version dieser Anwendungsinstanz in Form einer UUID wie beispielsweise `b687ea75-49f0-456e-b69d-e36e8a854caa`. Diese Variable ändert sich bei jeder weiteren Push-Operation für die Anwendung, die neuen Code oder Änderungen an den Anwendungsartefakten enthält.
-* ${host}: Die IP-Adresse der Anwendungsinstanz. 
+* ${host}: Die IP-Adresse der Anwendungsinstanz.
 * ${application_uris}: Ein JSON-Array der Endpunkte, die für den Zugriff auf diese Anwendung verwendet werden können, zum Beispiel: 'myapp.mydomain.com'.
-* ${start}: Der Zeitpunkt (Uhrzeit und Datum), an dem die Anwendung gestartet wurde, in einem Format ähnlich wie `2013-08-22 10:10:18 -0400`. Wird bei der Ausführung unter Diego nicht definiert. 
+* ${start}: Der Zeitpunkt (Uhrzeit und Datum), an dem die Anwendung gestartet wurde, in einem Format ähnlich wie `2013-08-22 10:10:18 -0400`. Wird bei der Ausführung unter Diego nicht definiert.
 
 ### Auf Informationen gebundener Services zugreifen
 {: #accessing_info_of_bound_services}

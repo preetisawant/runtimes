@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,11 +12,11 @@ lastupdated: "2017-05-31"
 # 使用測試版特性
 {: #using_beta_features}
 
-Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含的新功能及程式設計模型。大部分的測試版特性也可以用於已部署至 Bluemix 的應用程式。
+Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含的新功能及程式設計模型。大部分的測試版特性也可以用於已部署至 {{site.data.keyword.Bluemix}} 的應用程式。
 
 **重要事項**：測試版特性僅針對開發及測試用途，可能無法用於正式作業。如需完整的使用條款，請參閱[測試版授權合約](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html)。
 
-Bluemix 中可用的 Liberty 測試版特性
+{{site.data.keyword.Bluemix_notm}} 中可用的 Liberty 測試版特性
 <table>
 <tr>
 <th align="left">特性</th>
@@ -33,7 +33,7 @@ Bluemix 中可用的 Liberty 測試版特性
 </tr>
 </table>
 
-若要在 Bluemix 中使用 Liberty 測試版特性，您需要執行下列動作：
+若要在 {{site.data.keyword.Bluemix_notm}} 中使用 Liberty 測試版特性，您需要執行下列動作：
 
 1. 在 server.xml 檔案中啟用一個以上的測試版特性，以[部署伺服器目錄或包裝伺服器](optionsForPushing.html)，如下列範例所示：
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-01"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -43,8 +43,7 @@ lastupdated: "2017-06-01"
 * [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
 * [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html)（目前只有每月 Liberty 運行環境才提供）。
 
-如前所述，部分服務可以由應用程式管理，也可以由容器管理。Mongo 和 SQLDB 便是此類服務的範例。依預設，Liberty 建置套件會假設這些服務是由容器管理，並自動加以配置。
-如果您要讓應用程式管理服務，則可以設定 services_autoconfig_excludes 環境變數，拒絕自動配置服務。如需相關資訊，請參閱[拒絕服務自動配置](autoConfig.html#opting_out)。
+如前所述，部分服務可以由應用程式管理，也可以由容器管理。Mongo 和 SQLDB 便是此類服務的範例。依預設，Liberty 建置套件會假設這些服務是由容器管理，並自動加以配置。如果您要讓應用程式管理服務，則可以設定 services_autoconfig_excludes 環境變數，拒絕自動配置服務。如需相關資訊，請參閱[拒絕服務自動配置](autoConfig.html#opting_out)。
 
 ## 安裝 Liberty 特性及用戶端存取程式碼
 {: #installation_of_liberty_features}
@@ -56,7 +55,7 @@ lastupdated: "2017-06-01"
 ## 產生或更新 server.xml 配置段落
 {: #generating_or_updating_serverxml}
 
-當您推送獨立式應用程式時，Liberty 建置套件會如[推送 Liberty 應用程式的選項](optionsForPushing.html#options_for_pushing)中所述，將 server.xml 段落產生到 Bluemix。當您推送獨立式應用程式並連結至容器管理的服務時，Liberty 建置套件會為已連結的服務產生必要的 server.xml 段落。
+當您推送獨立式應用程式時，Liberty 建置套件會如[推送 Liberty 應用程式的選項](optionsForPushing.html#options_for_pushing)中所述，將 server.xml 段落產生到 {{site.data.keyword.Bluemix_notm}}。當您推送獨立式應用程式並連結至容器管理的服務時，Liberty 建置套件會為已連結的服務產生必要的 server.xml 段落。
 
 當您提供 server.xml 檔案並連結至容器管理的服務時，Liberty 建置套件會執行下列動作：
 
@@ -94,8 +93,7 @@ lastupdated: "2017-06-01"
 ```
 {: codeblock}
 
-**重要事項**：您指定的服務類型必須符合出現在 VCAP_SERVICES 環境變數中的服務標籤。不接受空格。
-**重要事項**：在 ```<service_type_specification>``` 內不接受空格。唯一接受使用空格的情況是要隔開多個 ```<service_type_specification>``` 實例。
+**重要事項**：您指定的服務類型必須符合出現在 VCAP_SERVICES 環境變數中的服務標籤。不接受空格。**重要事項**：在 `<service_type_specification>` 內不接受空格。唯一接受使用空格的情況是要隔開多個 `<service_type_specification>` 實例。
 
 使用 "all" 選項可拒絕服務的所有自動配置動作，如同上述的 Mongo 情境。使用 "config" 選項只拒絕配置更新動作，如同上述的 SQLDB 情境。
 
@@ -124,9 +122,7 @@ lastupdated: "2017-06-01"
 ## 置換服務配置
 {: #override_service_config}
 
-在某些情況下，可能要置換自動配置所產生的服務的預設配置。
-這可以使用 **LBP_SERVICE_CONFIG_xxxx** 環境變數完成，其中 "xxxx"
-是全大寫的服務名稱。例如，若要置換 *mysql* 服務的預設版本，並將它設為 1.4.+ 版，請發出與下面類似的指令：
+在某些情況下，可能要置換自動配置所產生的服務的預設配置。這可以使用 **LBP_SERVICE_CONFIG_xxxx** 環境變數完成，其中 "xxxx" 是全大寫的服務名稱。例如，若要置換 *mysql* 服務的預設版本，並將它設為 1.4.+ 版，請發出與下面類似的指令：
 
 ```
     $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"

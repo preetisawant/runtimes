@@ -2,17 +2,17 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# 使用 JConsole 在 Bluemix 中監視 Liberty
+# 使用 JConsole 在 {{site.data.keyword.cloud_notm}} 中監視 Liberty
 {: #jconsole}
 
-## 使用 JConsole 監視 Bluemix Liberty 運行環境的步驟如下：
+## 使用 JConsole 監視 Liberty 運行環境：
 {: #steps_to_monitor}
 
 1. 在包含適當 server.xml 的伺服器套件內推送您的應用程式。

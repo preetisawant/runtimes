@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2017-06-20"
 {{site.data.keyword.Bluemix}} の Tomcat ランタイムには java_buildpack が採用されています。
 {: shortdesc}
 
-{{site.data.keyword.Bluemix}} で Tomcat ランタイムを使用するには、-b オプションを使用して java_buildpack を指定する必要があります。例えば、次のように指定します。
+{{site.data.keyword.Bluemix_notm}} で Tomcat ランタイムを使用するには、-b オプションを使用して java_buildpack を指定する必要があります。 例えば、次のように指定します。
 <pre>
     cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
 </pre>
@@ -27,29 +27,29 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、Tomcat スターター・アプリケーションが用意されています。Tomcat スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルな Tomcat アプリケーションです。スターター・アプリケーションを試し、Bluemix 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Tomcat スターター・アプリケーションが用意されています。  Tomcat スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルな Tomcat アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}
 
 アプリケーションで使用する Tomcat のバージョンは、JBP_CONFIG_TOMCAT 環境変数を使用して変更できます。
 アプリケーションで使用する Java のバージョンは、JBP_CONFIG_OPEN_JDK_JRE 環境変数を使用して変更できます。
-これらはいずれも、アプリケーションのマニフェスト・ファイルで指定できます。例えば、次のように指定します。
+これらはいずれも、アプリケーションのマニフェスト・ファイルで指定できます。  例えば、次のように指定します。
 ```
     env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
-        JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.7.0_+ }}'
+        JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-現在の java_buildpack バージョンは v3.13 です。これには、デフォルトの Tomcat バージョン 8.0.41 とデフォルトの Java バージョン 1.8.0_121 が含まれています。詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13) を参照してください。
+現在の java_buildpack バージョンは v3.19 です。これには、デフォルトの Tomcat バージョン 8.0.45 とデフォルトの Java バージョン 1.8.0_141 が含まれています。詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13) を参照してください。
 
 ## HTTPS リダイレクト
 {: #https_redirect}
 
-Tomcat ランタイムは、Bluemix 内部プロキシーを信頼し、HTTP トラフィックの HTTPS (SSL) へのリダイレクトを許可するように構成できます。
+Tomcat ランタイムは、{{site.data.keyword.Bluemix_notm}} 内部プロキシーを信頼し、HTTP トラフィックの HTTPS (SSL) へのリダイレクトを許可するように構成できます。
 これを行うには、server.xml ファイルを変更して、RemoteIpValve バルブ・エレメントを internalProxies オプションおよび protocolHeader オプションを使用して設定します。
 
-ビルドパックに含まれている Tomcat ランタイム [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) は、デフォルトでは RemoteIpValve バルブ・エレメントの protocolHeader のみが設定されます。HTTP トラフィックを Bluemix 内の HTTPS にリダイレクトするには、カスタム server.xml で  RemoteIpValve エレメントを次のように構成します。
+ビルドパックに含まれている Tomcat ランタイム [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) は、デフォルトでは RemoteIpValve バルブ・エレメントの protocolHeader のみが設定されます。  {{site.data.keyword.Bluemix_notm}} で HTTP トラフィックを HTTPS にリダイレクトするには、カスタム server.xml で RemoteIpValve エレメントを次のように構成します。
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />

@@ -2,19 +2,19 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# 使用 New Relic 在 Bluemix 中監視 Liberty
+# 使用 New Relic 在 {{site.data.keyword.cloud_notm}} 中監視 Liberty
 {: #new_relic}
 
 New Relic 是協力廠商服務，可為您的應用程式提供監視度量值。如需 New Relic 服務提供項目的相關資訊，請參閱 [New Relic](http://newrelic.com/java)。
 
-根據 [Java agent manual installation](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation) 文件，要使用 New Relic 服務監視的 Java 應用程式通常需要進行組合，並配置 New Relic 代理程式和帳戶授權碼。在 IBM Bluemix 環境中，透過在 IBM Bluemix 中建立服務實例，即可取得 New Relic 授權合約和帳戶。然後，Java 應用程式就可以連結至 New Relic 服務實例，且 Liberty 建置套件會自動配置已準備好讓 New Relic 服務監視的應用程式。具體而言，建置套件會：
+根據 [Java agent manual installation](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation) 文件，要使用 New Relic 服務監視的 Java 應用程式通常需要進行組合，並配置 New Relic 代理程式和帳戶授權碼。在 {{site.data.keyword.Bluemix}} 環境中，透過在 {{site.data.keyword.Bluemix_notm}} 中建立服務實例，即可取得 New Relic 授權合約和帳戶。然後，Java 應用程式就可以連結至 New Relic 服務實例，且 Liberty 建置套件會自動配置已準備好讓 New Relic 服務監視的應用程式。具體而言，建置套件會：
 
 * 提供應用程式與 New Relic 代理程式。
 * 從 VCAP_APPLICATION 和 VCAP_SERVICES 應用程式環境變數取得應用程式名稱和授權碼。
@@ -34,15 +34,15 @@ New Relic 是協力廠商服務，可為您的應用程式提供監視度量值�
 ## 新增 New Relic 服務
 {: #add_new_relic}
 
-對於要在 IBM Bluemix 中使用 New Relic 監視的現有 Java 應用程式，請遵循下列步驟。
-1. 在 IBM Bluemix 中建立 New Relic 服務實例。
+對於要在 {{site.data.keyword.Bluemix_notm}} 中使用 New Relic 監視的現有 Java 應用程式，請遵循下列步驟。
+1. 在 {{site.data.keyword.Bluemix_notm}} 中建立 New Relic 服務實例。
 
   <pre>
     $ cf create-service newrelic standard mynewrelic
   </pre>
   {: codeblock}
 
-2. 使用 New Relic 服務，將您的應用程式部署至 IBM Bluemix。請參閱下列範例應用程式資訊清單：
+2. 使用 New Relic 服務，將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。請參閱下列範例應用程式資訊清單：
 
   <pre>
         &dash;&dash;&dash;
@@ -58,7 +58,7 @@ New Relic 是協力廠商服務，可為您的應用程式提供監視度量值�
   </pre>
   {: codeblock}
 
-3. 直接從您應用程式的 IBM Bluemix 儀表板，存取應用程式的 New Relic 儀表板。
+3. 直接從您應用程式的 {{site.data.keyword.Bluemix_notm}} 儀表板，存取應用程式的 New Relic 儀表板。
 
 ### 新增使用者提供的 New Relic 服務
 {: #add_user_provided_new_relic}
@@ -73,7 +73,7 @@ New Relic 是協力廠商服務，可為您的應用程式提供監視度量值�
   ```
   {: codeblock}
 
-2. 利用使用者提供的 New Relic 服務實例，將您的應用程式部署至 IBM Bluemix。以下是利用使用者提供的 New Relic 服務實例的範例應用程式資訊清單：
+2. 利用使用者提供的 New Relic 服務實例，將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。以下是利用使用者提供的 New Relic 服務實例的範例應用程式資訊清單：
   <pre>
         &dash;&dash;&dash;
         applications:

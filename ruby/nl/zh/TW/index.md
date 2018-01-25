@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-21"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -22,24 +22,23 @@ ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 Ruby 入門範本應用程式。Ruby 入門範本應用程式是簡單的 Ruby 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供 Ruby 入門範本應用程式。Ruby 入門範本應用程式是簡單的 Ruby 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
 
 ## 運行環境版本
 {: #runtime_versions}
 
 您可以在應用程式的 Gemfile 中指定應用程式要使用的 Ruby 版本，例如：
 
-
 ```
   source 'https://rubygems.org'
-  ruby '2.4.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
 ```
 {: codeblock}
 
-如果未指定版本，依預設會選擇 2.3.3 版。
+如果未指定版本，依預設會選擇 2.4.1 版。
 
 ### 可用的版本：
 {: #available_versions}
@@ -48,11 +47,12 @@ ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
 
 * 2.1.8
 * 2.1.9
-* 2.2.5
 * 2.2.6
-* 2.3.2
+* 2.2.7
 * 2.3.3
+* 2.3.4
 * 2.4.0
+* 2.4.1
 
 如果您的應用程式需要未列出的 Ruby 版本，可以使用外部 [Ruby 建置套件](https://github.com/cloudfoundry/ruby-buildpack)來部署該應用程式。
 

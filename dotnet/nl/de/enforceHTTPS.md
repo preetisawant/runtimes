@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,7 +12,7 @@ lastupdated: "2017-07-14"
 # HTTPS auf allen Seiten in der Anwendung erzwingen
 {: #enforce_https}
 
-Wenn beim Ausführen Ihrer Anwendung in Bluemix auf allen Seiten HTTPS anstatt HTTP erzwungen werden soll, müssen Sie an Ihrer Anwendung die folgenden Änderungen vornehmen.
+Wenn beim Ausführen Ihrer Anwendung in {{site.data.keyword.Bluemix}} auf allen Seiten HTTPS anstatt HTTP erzwungen werden soll, müssen Sie an Ihrer Anwendung die folgenden Änderungen vornehmen.
 
 Fügen Sie die folgenden `using`-Anweisungen in der `Startup`-Klasse hinzu:
 
@@ -24,7 +24,7 @@ Fügen Sie die folgenden `using`-Anweisungen in der `Startup`-Klasse hinzu:
 Fügen Sie der Methode `ConfigureServices` in der `Startup`-Klasse Folgendes hinzu:
 
 ```
-  // if app is running in Bluemix
+  // if app is running in {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     services.Configure<MvcOptions>(options =>
@@ -37,7 +37,7 @@ Fügen Sie der Methode `ConfigureServices` in der `Startup`-Klasse Folgendes hin
 Fügen Sie der Methode `Configure` in der `Startup`-Klasse Folgendes hinzu:
 
 ```
-  // if app is running in Bluemix
+  // if app is running in {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     app.Use(async (context, next) =>

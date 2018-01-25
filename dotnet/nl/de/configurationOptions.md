@@ -71,4 +71,5 @@ Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs:
 ```
 {: codeblock}
 
-Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet publish` ausgeführt wird. Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese durch Semikolons getrennt zur Eigenschaft `Include` des Elements `Content` in der .csproj-Datei Ihres Projekts hinzufügen.
+Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet publish` ausgeführt wird.  Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese durch Semikolons getrennt zur Eigenschaft `Include` des Elements `Content` in der .csproj-Datei Ihres Projekts hinzufügen.
+

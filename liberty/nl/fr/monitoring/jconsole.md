@@ -2,17 +2,17 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Utiliser JConsole pour surveiller Liberty dans Bluemix
+# Utiliser JConsole pour surveiller Liberty dans {{site.data.keyword.cloud_notm}}
 {: #jconsole}
 
-## La procédure de surveillance de l'environnement d'exécution Bluemix Liberty à l'aide de JConsole est la suivante :
+## Surveillance de l'environnement d'exécution Liberty avec JConsole :
 {: #steps_to_monitor}
 
 1. Envoyez votre application dans un package serveur contenant un fichier server.xml approprié.

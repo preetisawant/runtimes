@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-05-31"
 # Utiliser l'environnement JRE Oracle
 {: #using_oraacle_jre}
 
-Vous pouvez exécuter votre application Liberty sur Bluemix avec l'environnement JRE Oracle, si vous le voulez.  Pour ce faire, vous devez :
+Vous pouvez exécuter votre application Liberty sur {{site.data.keyword.Bluemix}} avec l'environnement JRE Oracle, si vous le voulez.  Pour ce faire, vous devez :
 * héberger l'environnement JRE dans un emplacement à partir duquel le pack de construction peut le télécharger,
 * héberger un fichier `index.yml` qui fournit l'emplacement de l'environnement d'exécution hôte, et
 * configurer votre application pour utiliser cet environnement JRE.
@@ -20,7 +20,7 @@ Vous pouvez exécuter votre application Liberty sur Bluemix avec l'environnement
 ## Hébergement de l'environnement JRE et du fichier index.yml
 {: #hosting_jre}
 
-Le fichier JRE Oracle doit être hébergé sur un serveur Web et le pack de construction Liberty doit être en mesure de le télécharger depuis ce serveur. Vous pouvez l'héberger directement sur Bluemix à l'aide des fonctions disponibles sur le serveur, ou vous pouvez l'héberger sur un emplacement disponible publiquement.  Le serveur doit être configuré avec un fichier `index.yml` qui spécifie les détails relatifs au fichier JRE. Procédez comme suit pour héberger l'environnement JRE et le fichier `index.yml` :
+Le fichier JRE Oracle doit être hébergé sur un serveur Web et le pack de construction Liberty doit être en mesure de le télécharger depuis ce serveur. Vous pouvez l'héberger directement sur {{site.data.keyword.Bluemix_notm}} à l'aide des fonctions disponibles sur le serveur, ou vous pouvez l'héberger dans un endroit disponible publiquement. Le serveur doit être configuré avec un fichier `index.yml` qui spécifie les détails relatifs au fichier JRE. Procédez comme suit pour héberger l'environnement JRE et le fichier `index.yml` :
   1. Procurez-vous l'environnement JRE Oracle.  Notez que ce dernier doit être la version à utiliser sur un système d'exploitation Unix 64 bits, et être un fichier `tar.gz`.
   2. Hébergez le fichier JRE dans un emplacement à partir duquel le pack de construction Liberty peut le télécharger.
   3. Prenez soin de fournir un fichier `index.yml` à l'emplacement d'hébergement. Le fichier `index.yml` doit contenir une entrée composée de l'ID de version de l'environnement JRE Oracle suivi d'un signe deux-points et de l'URL complète de l'emplacement de ce fichier JRE. Le format du fichier `index.yml` est :
@@ -77,4 +77,4 @@ Pour confirmer que l'environnement JRE prévu est utilisé, cherchez dans le fic
 ## general
 {: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Présentation de Liberty Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

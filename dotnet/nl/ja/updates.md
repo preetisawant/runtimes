@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-25"
-
+lastupdated: "2017-10-06"
 ---
 
 {:new_window: target="_blank"}
@@ -14,6 +13,18 @@ lastupdated: "2017-07-25"
 
 
 aspnet ビルドパックの最新更新のリスト。
+
+## 2017 年 10 月 6 日: ASP.NET Core ビルドパック v1.0.26-20170913-1346 の更新
+* .NET Core ランタイム 2.0.0 のサポートを追加
+* .NET Core SDK 1.1.0 のサポートを追加
+* .NET Core SDK 2.0.0 のサポートを追加
+* .NET Core SDK 1.1.0-preview1-005051 のサポートを削除
+* .NET Core SDK SDK 2.0.0-preview1-005977 のサポートを削除
+* .NET Core ランタイム 1.0.3 のサポートを削除
+* .NET Core ランタイム 1.1.0 のサポートを削除
+* Node バージョンを 6.11.2 に更新
+* デフォルトの .NET Core SDK を 2.0.0 に変更
+* F# プロジェクトのデフォルトの .NET Core SDK を 1.1.0 に変更
 
 ## 2017 年 7 月 24 日: 更新された ASP.NET Core ビルドパック v1.0.22-20170724-0813
 

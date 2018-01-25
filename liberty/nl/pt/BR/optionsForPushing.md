@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,9 +13,12 @@ lastupdated: "2017-03-22"
 # Opções para enviar por push os apps Liberty
 {: #options_for_pushing}
 
-O comportamento do servidor Liberty no Bluemix é controlado pelo buildpack do Liberty. Os buildpacks podem fornecer um ambiente de tempo de execução completo para uma classe específica de aplicativos. Eles são a chave para fornecer a portabilidade nas nuvens e para contribuir com uma arquitetura de nuvem aberta. O buildpack do Liberty fornece um contêiner do WebSphere Liberty capaz de executar os aplicativos Java EE 7 e OSGi. Ele suporta estruturas populares como Spring e inclui o IBM JRE. O WebSphere Liberty permite o desenvolvimento rápido de aplicativo que é adequado para a nuvem. O buildpack do Liberty suporta diversos aplicativos que são implementados em um único servidor do Liberty. Como parte da integração do buildpack do Liberty no Bluemix, o buildpack assegura que as variáveis de ambiente para os serviços de ligação sejam mostradas como variáveis de configuração no servidor Liberty.
+O comportamento do servidor Liberty no {{site.data.keyword.Bluemix}}
+é controlado pelo buildpack do Liberty. Os buildpacks podem fornecer um ambiente de tempo de execução completo para uma classe específica de aplicativos. Eles são a chave para fornecer a portabilidade nas nuvens e para contribuir com uma arquitetura de nuvem aberta. O buildpack do Liberty fornece um contêiner do WebSphere Liberty capaz de executar os aplicativos Java EE 7 e OSGi. Ele suporta estruturas populares como Spring e inclui o IBM JRE. O WebSphere Liberty permite o desenvolvimento rápido de aplicativo que é adequado para a nuvem. O buildpack do Liberty suporta diversos aplicativos que são implementados em um único servidor do Liberty. Como parte da integração do buildpack do Liberty no {{site.data.keyword.Bluemix_notm}},
+o buildpack assegura que as variáveis de ambiente dos serviços de ligação sejam mostrados como variáveis de configuração no servidor do Liberty.
 
-É possível usar os métodos a seguir para implementar seus aplicativos Liberty no Bluemix.
+É
+possível usar os métodos a seguir para implementar seus aplicativos Liberty no {{site.data.keyword.Bluemix_notm}}.
 
 * Enviando um aplicativo independente por push
 * Enviando um diretório de servidor por push
@@ -26,7 +29,8 @@ Importante: quando você implementa um aplicativo com o buildpack do Liberty, es
 ## Apps independentes
 {: #stand_alone_apps}
 
-Os aplicativos independentes como os arquivos WAR ou EAR podem ser implementados no Liberty no Bluemix.
+Aplicativos independentes como os arquivos
+WAR ou EAR podem ser implementados no Liberty em {{site.data.keyword.Bluemix_notm}}.
 
 Para implementar um aplicativo independente, execute o comando cf push com o parâmetro -p que aponta para seu arquivo WAR ou EAR.
 Por exemplo:
@@ -137,7 +141,8 @@ Importante: para que as mudanças da variável de ambiente entrem em vigor, deve
 
 Em alguns casos, pode ser necessário fornecer uma configuração do servidor Liberty customizada com seu aplicativo. Essa configuração customizada pode ser necessária quando você implementa um arquivo WAR ou EAR e o arquivo server.xml padrão não tem certas configurações necessárias para seu aplicativo.
 
-Se você instalou o perfil Liberty em sua estação de trabalho e já criou um servidor Liberty com seu aplicativo, é possível enviar o conteúdo desse diretório para o Bluemix.
+Se você instalou o perfil Liberty em sua estação de trabalho e já criou um servidor Liberty com seu aplicativo,
+é possível enviar por push o conteúdo desse diretório para {{site.data.keyword.Bluemix_notm}}.
 Por exemplo, se o seu servidor Liberty for nomeado defaultServer, execute o comando:
 
 ```
@@ -167,7 +172,8 @@ Se um perfil Liberty não estiver instalado em sua estação de trabalho, será 
 ```
 {: codeblock}
 
-Depois que o diretório do servidor estiver pronto, será possível implementá-lo no Bluemix.
+Depois que o diretório de servidor estiver pronto, será
+possível implementá-lo no {{site.data.keyword.Bluemix_notm}}.
 
 ```
     $ cf push <yourappname> -p defaultServer
@@ -184,7 +190,8 @@ Nota: os aplicativos da Web que são implementados como parte do diretório do s
 ## Servidor em pacote
 {: #packaged_server}
 
-Também é possível enviar por push um arquivo do servidor em pacote para o Bluemix. O arquivo de servidor em pacote é criado usando o comando de pacote do servidor Liberty. Além do aplicativo e dos arquivos de configuração, o arquivo do servidor em pacote pode conter recursos compartilhados e recursos do usuário do Liberty necessários pelo aplicativo.
+Também é possível enviar
+por push um arquivo de servidor em pacote para o {{site.data.keyword.Bluemix_notm}}. O arquivo de servidor em pacote é criado usando o comando de pacote do servidor Liberty. Além do aplicativo e dos arquivos de configuração, o arquivo do servidor em pacote pode conter recursos compartilhados e recursos do usuário do Liberty necessários pelo aplicativo.
 
 Para colocar em pacote um servidor do Liberty, use o comando
 `./bin/server package` a partir do seu diretório de instalação do
@@ -198,7 +205,8 @@ Por exemplo, se o servidor Liberty for defaultServer, execute o comando:
 
 Esse comando gera um arquivo serverName.zip no diretório do servidor. Se você tiver usado a opção `--archive` para especificar um archive diferente, certifique-se de que ele tenha a extensão `.zip` em vez de `.jar`. **O buildpack não suporta arquivos do servidor em pacote criados com a extensão `.jar`**.
 
-É possível então enviar por push o arquivo `.zip` gerado para o Bluemix com o comando `cf push`.
+É possível, então, enviar por push o arquivo `.zip` gerado para
+{{site.data.keyword.Bluemix_notm}} com o comando `cf push`.
 Por exemplo:
 
 ```

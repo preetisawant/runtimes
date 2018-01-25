@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#在 Bluemix 中使用 Dynatrace 监视 Liberty
+#在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Liberty
 {: #using_dynatrace}
 
 Dynatrace 是第三方服务，它提供对应用程序的监视。
@@ -24,7 +24,7 @@ Dynatrace 是第三方服务，它提供对应用程序的监视。
 
 1. 设置 Dynatrace 收集器。
   * 有关下载和设置 Dynatrace 收集器的指示信息，请参阅 [Dynatrace 社区 Web 站点](https://community.dynatrace.com/community/display/EVAL/Step+3+-+Connect+Agent+to+Dynatrace)。
-  * 确保从设置收集器的位置可以访问随 Bluemix 中应用程序运行的 Dynatrace 代理程序。
+  * 确保从设置收集器的位置可以访问随 {{site.data.keyword.Bluemix_notm}} 中应用程序运行的 Dynatrace 代理程序。
 2. 创建指向运行中 Dynatrace 收集器的用户提供服务。**注**：用户提供的服务的名称必须包含字符串 **dynatrace**。将忽略大小写。例如，使用以下命令，其中 **my-dynatrace-collector** 包含 **dynatrace**：
 
         $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
@@ -41,7 +41,7 @@ Dynatrace 是第三方服务，它提供对应用程序的监视。
     有关可用选项的更多信息，请参阅 Dynatrace 社区 Web 站点上 [Agent Configuration 的 Agent Setting 部分](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration)。例如，使用 exclude 选项，可以排除某些类使之不受 Dynatrace 监视。有关配置用户提供的服务的更多详细信息，请参阅 [DynaTrace Agent Framework](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md)。
 
 
-3. 将应用程序推送到 Bluemix 后，请将创建的用户提供服务绑定到该应用程序。例如，使用以下命令：
+3. 将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 后，请将创建的用户提供服务绑定到该应用程序。例如，使用以下命令：
 
         $ cf bs myApp my-dynatrace-collector
         {: codeblock}
@@ -59,8 +59,8 @@ Dynatrace 是第三方服务，它提供对应用程序的监视。
 ### 托管 Dynatrace 代理程序
 {: #hosting_dynatrace_agent}
 Dynatrace 代理程序必须在 Web 服务器上进行托管，并且 Liberty buildpack 必须能够从该服务器下载代理程序 jar。该服务器必须配置有一个 `index.yml` 文件，该文件用于指定有关代理程序 jar 的详细信息。完成下面的步骤以设置 Dynatrace 代理程序：
-  1. 下载 Dynatrace 代理程序 jar。有关下载 Dynatrace 代理程序 jar 的指示信息，请参阅 Dynatrace 社区 Web 站点上的 [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace)。用于在 Bluemix 上运行的相应代理程序 jar 文件为 **dynatrace-agent-unix.jar** V**6.+**。
-  2. 在 Liberty buildpack 可以下载代理程序 jar 文件的位置托管该 jar 文件。可以使用任一可用的服务器工具在 Bluemix 本身上托管该 jar 文件，也可以在某些公共可用的位置进行托管。
+  1. 下载 Dynatrace 代理程序 jar。有关下载 Dynatrace 代理程序 jar 的指示信息，请参阅 Dynatrace 社区 Web 站点上的 [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace)。用于在 {{site.data.keyword.Bluemix_notm}} 上运行的相应代理程序 jar 文件为 **dynatrace-agent-unix.jar** V**6.+**。
+  2. 在 Liberty buildpack 可以下载代理程序 jar 文件的位置托管该 jar 文件。可以使用任一可用的服务器工具在 {{site.data.keyword.Bluemix_notm}} 本身上托管该 jar 文件，也可以在某些公共可用的位置进行托管。
      * 确保在托管位置提供 `index.yml` 文件。`index.yml` 文件必须包含由以下各项组成的一个条目：代理程序 jar 的版本标识，后跟一个冒号和该代理程序 jar 所在位置的完整 URL。例如：
 
             ---

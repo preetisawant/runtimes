@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-09-06"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -27,9 +27,9 @@ En suivant ce tutoriel d'initiation Dotnet, vous allez configurer un environneme
 
 Vous aurez besoin des éléments suivants :
 * [Compte {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI (client de ligne de commande pour Cloud Foundry) ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}
-* [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
-* Installez SDK .NET Core v1.0.4 à partir des instructions du [site Web dot.net![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core).
+* [Cloud Foundry CLI (client de ligne de commande pour Cloud Foundry) ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}
+* Installez .NET Core 1.1 SDK 1.0.4 à partir des instructions du [site Web dot.net![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.microsoft.com/net/download/core).
 
 ## Etape 1 : Cloner l'application exemple
 {: #clone}
@@ -92,7 +92,7 @@ Pour commencer, connectez-vous à votre compte  {{site.data.keyword.Bluemix_notm
 cf login
   ```
   {: pre}
-  
+
   Si vous ne pouvez pas vous connecter à l'aide des commandes `cf login` ou `bx login` car vous disposez d'un ID utilisateur fédéré, utilisez la commande `cf login --sso` ou la commande `bx login --sso` pour vous connecter avec votre ID de connexion unique (SSO). Voir [Connexion à l'aide d'un ID fédéré](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) pour en savoir plus.
 
 Choisissez votre point d'extrémité d'API
@@ -103,12 +103,14 @@ cf api <API-endpoint>
 
 Dans cette commande, remplacez *API-endpoint* par un point d'extrémité d'API parmi les suivants.
 
-|URL                             |Région             |
-|:-------------------------------|:------------------|
-| https://api.ng.bluemix.net     | Sud des Etats-Unis|
-| https://api.eu-de.bluemix.net  | Allemagne         |
-| https://api.eu-gb.bluemix.net  | Royaume-Uni       |
-| https://api.au-syd.bluemix.net | Sydney            |
+| **Nom de région** | **Emplacement géographique** | **Point d'extrémité d'API** |
+|-----------------|-------------------------|-------------------|
+| Région Sud des Etats-Unis | Dallas, US | api.ng.bluemix.net |
+| Région Est des Etats-Unis | Washington, DC, US | api.us-east.bluemix.net |
+| Région Royaume-Uni | Londres, Angleterre | api.eu-gb.bluemix.net |
+| Région Sydney | Sydney, Australie | api.au-syd.bluemix.net |
+| Région Allemagne | Francfort, Allemagne | api.eu-de.bluemix.net |
+{: caption="Tableau 1. Liste des régions {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 **Assurez-vous d'être dans le répertoire principal de votre application, `get-started-aspnet-core`**, puis envoyez votre application par commande push vers {{site.data.keyword.Bluemix_notm}}
   ```
@@ -128,10 +130,10 @@ cf apps
 ## Etape 5 : Connecter une base de données MySQL
 {: connect_mysql}
 
-Nous allons à présent ajouter une base de données ClearDB MySQL à l'application et configurer cette dernière pour qu'elle puisse être exécutée localement et sur Bluemix.
+Nous allons à présent ajouter une base de données ClearDB MySQL à l'application et configurer cette dernière pour qu'elle puisse être exécutée localement et sur {{site.data.keyword.Bluemix_notm}}.
 
 1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} dans votre navigateur. Accédez au `Tableau de bord`. Sélectionnez votre application en cliquant sur son nom dans la colonne `Nom`.
-2. Cliquez sur `Connexions`, puis sur `Connecter un nouveau`.
+2. Cliquez sur `Connexions`, puis sur `Créer une connexion`.
 2. Dans la section `Données &  analyse`, sélectionnez `Base de données ClearDB MySQL` et `Créer` pour créer le service.
 3. Sélectionnez `Reconstituer` lorsque vous y êtes invité. {{site.data.keyword.Bluemix_notm}} redémarre votre application et lui fournit les données d'identification pour l'accès à la base de données en utilisant la variable d'environnement `VCAP_SERVICES`. L'application n'a accès à cette variable d'environnement que lorsqu'elle fonctionne sur {{site.data.keyword.Bluemix_notm}}.
 
@@ -173,3 +175,9 @@ Nous allons à présent mettre à jour votre code local pour le faire pointer su
 
 Si vous n'avez pas besoin de votre application live, arrêtez-la. Vous éviterez des frais imprévus.
 {: tip}
+
+## Etapes suivantes
+
+* [Tutoriels](/docs/tutorials/index.html)
+* [Exemples ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

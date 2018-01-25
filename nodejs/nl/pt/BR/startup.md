@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -26,7 +26,8 @@ web: node app.js
 1. Salve o
 **Procfile** no diretório-raiz de seu aplicativo.
 
-Se um **Procfile** não estiver presente, o buildpack IBM Bluemix Node.js verificará uma entrada scripts.start no arquivo **package.json**. Novamente,
+Se um **Procfile** não estiver presente, o buildpack {{site.data.keyword.Bluemix_notm}} Node.js
+verificará uma entrada scripts.start no arquivo **package.json**. Novamente,
 no exemplo abaixo, app.js é o script js de inicialização para seu aplicativo.
 ```
 {

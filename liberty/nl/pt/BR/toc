@@ -20,8 +20,7 @@ Liberty for Java
     {: .topicgroup}
     Use o IBM Eclipse Tools for IBM Cloud
         eclipseDevelop.md
-        [Implementar aplicativos com o IBM
-Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+        [Implementar aplicativos com o IBM Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
 
     autoConfig.md
     customizingJRE.md

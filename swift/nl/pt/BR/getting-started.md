@@ -1,6 +1,8 @@
 ---
 
-copyright: years: 2017 lastupdated: "2017-12-15"
+copyright:
+  years: 2017
+lastupdated: "2017-12-15"
 
 ---
 
@@ -183,7 +185,7 @@ para analisar as variáveis de ambiente. [Saiba mais...](https://packagecatalog.
 O item temporário `cloudant` na configuração `cloudfoundry:cloudant` torna mais
 fácil ligar um serviço Cloudant fornecido pelo usuário ao seu aplicativo. Com a configuração
 `cloudfoundry:cloudant`, é possível criar um serviço Cloudant que inclui a sequência,
-`cloudant` em algum lugar no nome do serviço e liga-o ao seu aplicativo, sem editar o arquivo `config.json`. 
+`cloudant` em algum lugar no nome do serviço e liga-o ao seu aplicativo, sem editar o arquivo `config.json`.
 Se você modificar essa configuração e depois quiser usar um serviço Cloudant fornecido pelo usuário, será necessário editar a
 configuração para `cloudfoundry:cloudant` ou definir `cloudfoundry:` com o nome do seu
 serviço fornecido pelo usuário.

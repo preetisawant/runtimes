@@ -36,4 +36,4 @@ For [Liberty for Java](/docs/runtimes/liberty/index.html) and the [java_buildpac
 ```
 {: codeblock}
 
-Your application then uses the specified proxy settings at runtime. See [Java Networking and Proxies ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html){: new_window} for more information about the Java proxy options.
+Your application then uses the specified proxy settings at runtime. See [Java Networking and Proxies ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.oracle.com/javase/8/docs/technotes/guides/net/proxies.html){: new_window} for more information about the Java proxy options.

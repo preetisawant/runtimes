@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-01-26"
 
 ---
 
@@ -20,16 +20,10 @@ Liberty beta features available in {{site.data.keyword.Bluemix_notm}}
 <table>
 <tr>
 <th align="left">Feature</th>
-<th align="left">Feature</th>
-<th align="left">Feature</th>
-<th align="left">Feature</th>
 </tr>
 
 <tr>
-<td>bluemixLogCollector-1.1</td>
-<td>httpWhiteboard-1.0</td>
-<td>logstashCollector-1.1</td>
-<td>osgiBundle-1.0</td>
+<td>mpOpenAPI-1.0</td>
 </tr>
 </table>
 
@@ -40,7 +34,7 @@ In order to use the Liberty beta features in {{site.data.keyword.Bluemix_notm}} 
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>bluemixLogCollector-1.1</feature>
+            <feature>mpOpenAPI-1.0</feature>
         </featureManager>
     </server>
 ```

@@ -57,14 +57,14 @@ Follow these steps to change tracing configuration:
   ```
  cf ssh <appname> [-i instance_index]
   ```
-  {: pre}
+  {: codeblock}
 
 2. Edit ```<logging traceSpecification="xxxx"/>``` in the server.xml to set your desired trace specification,  for example using *vi*:
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml
   ```
-  {: pre}
+  {: codeblock}
 
 Note: The server.xml change will be lost on a restage or restart and is only valid for the instance you ssh into.
 
@@ -77,7 +77,7 @@ Use the command below to trigger a thread and heap dump via CF CLI using the SSH
   ```
  cf ssh <appname> -c "pkill -3 java"
   ```
-  {: pre}
+  {: codeblock}
 
 See the documentation below for details on downloading the generated dump files.
 

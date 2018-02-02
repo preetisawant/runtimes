@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-26"
+lastupdated: "2018-02-01"
 
 ---
 
@@ -14,7 +14,11 @@ lastupdated: "2018-01-26"
 
 ## A list of the latest updates in the Liberty buildpack.
 
-### January 26, 2018: Updated Liberty buildpack v3.17-20180122-1037.
+
+### January 31, 2018: Updated Liberty buildpack v3.17.1.
+* The buildpack was updated to include Liberty feature microProfile-1.2. 
+
+### January 26, 2018: Updated Liberty buildpack v3.17.
 * The buildpack was updated to add the ability to dynamically set tracing on the Liberty server. 
 * The monthly Liberty runtime version was updated to 2018.1.0.0.
 * The IBM JRE version was updated to 8 SR5 FP7.
@@ -24,7 +28,8 @@ lastupdated: "2018-01-26"
 * The monthly Liberty runtime version was updated to 2017.12.0.0.
 * The IBM JRE version was updated to 8 SR5 FP6.
 
-### October 31, 2017: Updated Liberty buildpack v3.15-20171031-1347.
+
+### October 31, 2017: Updated Liberty buildpack v3.15.
 * The monthly Liberty runtime version was updated to 2017.10.0.0.
 
 ### October 17, 2017: Updated Liberty buildpack v3.14-20171013-1023

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-01-31"
 
 ---
 
@@ -17,7 +17,7 @@ You can bind various services to your Liberty application. Services can be conta
 
 An application managed service is a service that is managed entirely by the application, without any assistance from Liberty. The application typically reads VCAP_SERVICES to obtain information about the bound service and accesses the service directly. The application provides all necessary client access code. There is no dependency on Liberty features or the server.xml file configuration. The Liberty buildpack automatic configuration does not apply to services of this type.
 
-A container managed service is a service that is managed by the Liberty run time. In some cases, the application might look up the bound service in JNDI, while in others the service is used directly by Liberty itself. The Liberty buildpack reads VCAP_SERVICES to obtain information about the bound services. For each container managed service, the buildpack performs three functions.
+A container managed service is a service that is managed by the Liberty runtime. In some cases, the application might look up the bound service in JNDI, while in others the service is used directly by Liberty itself. The Liberty buildpack reads VCAP_SERVICES to obtain information about the bound services. For each container managed service, the buildpack performs three functions.
 
 * Generates [cloud variables](optionsForPushing.html#accessing_info_of_bound_services) for the bound service.
 * Installs Liberty features and client access code that is required to access the bound service.
@@ -38,8 +38,8 @@ The Liberty buildpack provides automatic configuration for the following service
 * [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
 * [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
-* [New Relic](newRelic.html)
-* [Dynatrace](dynatrace.html)
+* [New Relic](monitoring/newRelic.html)
+* [Dynatrace](monitoring/dynatrace.html)
 * [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
 * [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Currently only available with the monthly Liberty runtime).
 
@@ -115,8 +115,8 @@ Here are sample opt-out specifications in a manifest.yml file for the Mongo and 
 Here are examples of how to set the services_autoconfig_excludes environment variable for the application myapp by using the command-line interface.
 
 ```
-    $ cf set-env myapp services_autoconfig_excludes sqldb=config
-    $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
+    cf set-env myapp services_autoconfig_excludes sqldb=config
+    cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
 ```
 {: codeblock}
 
@@ -128,7 +128,7 @@ This can be done using the **LBP_SERVICE_CONFIG_xxxx** environment variable, whe
 all capitals.  For example, to override the default version of the *mysql* service and set it to version 1.4.+ issue a command similar to:
 
 ```
-    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+    cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
 ```
 {: codeblock}
 
@@ -158,4 +158,4 @@ The table that follows shows syntax for overriding some service configuration op
 ## general
 {: #general notoc}
 * [Liberty runtime](index.html)
-* [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty Profile Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

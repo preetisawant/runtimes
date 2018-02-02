@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-1-31"
 
 ---
 
@@ -97,6 +97,7 @@ Users can restart, stop, or suspend their applications with the (*devconsole*) d
 ```
   https://<yourappname>.mybluemix.net/bluemix-debug/manage
 ```
+{: codeblock}
 
 For Node version 6.3.0 or greater, the development console provides a restart button for your application and access to the *shell* utility.  See the *inspector* discussion for more information.
 
@@ -118,6 +119,7 @@ The *hc* utility can be used in conjunction with *noproxy*. To use Health Center
 ```
 cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
+{: codeblock}
 
 Next, to connect with the Health Center client, use an [MQTT connection ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} and specify the host as `127.0.0.1` and port as `1883`.
 
@@ -129,6 +131,7 @@ The *shell* utility enables a web-based shell.  You can access the *shell* from 
 ```
   https://<yourappname>.mybluemix.net/bluemix-debug/shell
 ```
+{: codeblock}
 
 After you access the *shell* utility, a terminal window is displayed with shell access into your application. You can do everything that is supported in a regular shell, such as editing files, checking memory usage, or running diagnostic commands.
 
@@ -163,6 +166,7 @@ The following code snippet shows an example of the `cf ssh` command format:
 ```
 cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 ```
+{: codeblock}
 
 Next, to connect in Eclipse, use *Remote Java Configuration* and specify the host as `127.0.0.1` and port as `7777`.
 
@@ -170,6 +174,13 @@ Next, to connect in Eclipse, use *Remote Java Configuration* and specify the hos
 {: #jmx}
 
 The *jmx* utility enables the JMX REST Connector to allow a remote JMX client to manage the application by using {{site.data.keyword.Bluemix_notm}} user credentials.
+
+You can monitor multiple instances of an application by using JMX, but it requires a separate JMX connection for each instance. The default is to monitor instance 0. To monitor instance 1, you can use the following code snip:
+
+```
+cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
+```
+{: codeblock}
 
 For more information on configuring a JMX connector, see [Configuring secure JMX connection to the Liberty profile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/knowledgecenter/was_beta_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_admin_restconnector.html){:new_window}.
 
@@ -188,6 +199,7 @@ The *localjmx* utility is only applicable to applications running on a Diego cel
 ```
 cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
+{: codeblock}
 
 Next, to connect with JConsole, choose **Remote Process**, specify `127.0.0.1:5000`, and use an insecure connection.
 
@@ -239,7 +251,7 @@ cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
 
 Then, access the inspector from the URL, `http://127.0.0.1:8790`.
 
-#### trace
+#### trace (deprecated)
 {: #trace}
 
 The trace utility allows you to dynamically sets trace levels if your application is using log4js, ibmbluemix, or bunyan logging modules.

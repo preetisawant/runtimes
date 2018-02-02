@@ -158,4 +158,4 @@ The table that follows shows syntax for overriding some service configuration op
 ## general
 {: #general notoc}
 * [Liberty runtime](index.html)
-* [Liberty Profile Overview](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Liberty Profile Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

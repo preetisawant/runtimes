@@ -36,7 +36,7 @@ protocol due to port restrictions in the {{site.data.keyword.Bluemix_notm}} envi
 
 ## Liberty features index
 {: #libertyfeat_index}
-Skip to the section of the feature list by using the following index, or you can look through the comprehensive [features list](#libertyfeat_list).
+Skip to the section of the feature list by using the following index, or you can look through the [Liberty features list](#libertyfeat_list).
 
 ### A-E
 * [A](#libertyfeat_A)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-26"
+lastupdated: "2018-02-14"
 
 ---
 
@@ -19,11 +19,37 @@ The Liberty beta features provide early access to new functionality and programm
 Liberty beta features available in {{site.data.keyword.Bluemix_notm}}
 <table>
 <tr>
-<th align="left">Feature</th>
+<th align="left">Features</th>
 </tr>
 
 <tr>
-<td>mpOpenAPI-1.0</td>
+	<tr><td>appSecurity-3.0</tr></td>
+	<tr><td>audit-1.0</tr></td>
+	<tr><td>bluemixLogCollector-1.1</tr></td>
+  <tr><td>beanValidation-2.0</tr></td>
+  <tr><td>cdi-2.0</tr></td>
+  <tr><td>javaee-8.0</tr></td>
+  <tr><td>javaeeClient-8.0</tr></td>
+  <tr><td>jaxrs-2.1</tr></td>
+  <tr><td>jpa-2.2</tr></td>
+	<tr><td>jpaContainer-2.2</tr></td>
+  <tr><td>jsf-2.3</tr></td>
+  <tr><td>jsfContainer-2.2</tr></td>
+	<tr><td>jsonb-1.0</tr></td>
+	<tr><td>jsonbContainer-1.0</tr></td>
+	<tr><td>jsonp-1.1</tr></td>
+	<tr><td>jsonpContainer-1.1</tr></td>
+  <tr><td>logstashCollector-1.1</tr></td>
+  <tr><td>mpOpenAPI-1.0</tr></td>
+  <tr><td>mpRestClient-1.0</tr></td>
+<tr><td>mpConfig-1.2</tr></td>
+  <tr><td>opentracing-1.0</tr></td>
+  <tr><td>servlet-4.0</tr></td>
+	<tr><td>validator-1.0</tr></td>
+  <tr><td>webProfile-8.0</tr></td>
+
+
+
 </tr>
 </table>
 
@@ -74,5 +100,5 @@ If you are enabling the beta features on an existing application, don't forget t
 {: #rellinks notoc}
 ## general
 {: #general notoc}
-* [Liberty runtime](index.html)
-* [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty for Java runtime](index.html)
+* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html)

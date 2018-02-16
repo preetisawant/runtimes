@@ -21,6 +21,7 @@ Swift
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     runtimeVersions.md
     [Buildpack support statement](../common/buildpackSupport.html)
     {: .navgroup-end}

@@ -21,5 +21,6 @@ Python
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    [Troubleshooting for runtimes](../common/ts_runtimes.html#ts_python)
     [Buildpack support statement](../common/buildpackSupport.html)
     {: .navgroup-end}

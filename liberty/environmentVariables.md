@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-16"
+lastupdated: "2018-02-21"
 
 ---
 
@@ -34,7 +34,7 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>Enable [Liberty beta features/](usingBetaFeatures.html)</td>
+<td>Enable [Liberty beta features](usingBetaFeatures.html)</td>
 </tr>
 
 <tr>

@@ -34,7 +34,7 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>Enable [Liberty beta features/](usingBetaFeatures.html)</td>
+<td>Enable [Liberty beta features](usingBetaFeatures.html)</td>
 </tr>
 
 <tr>

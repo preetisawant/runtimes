@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-02-21"
 
 ---
 
@@ -14,5 +14,5 @@ lastupdated: "2018-02-14"
 
 Troubleshoot your Python applications and buildpacks with the following resources:
 
-* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html)
-* [Troubleshooting for runtimes: Node.js](../../troubleshoot/ts_runtimes.html#ts_python)
+* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html#runtimes)
+* [Troubleshooting for runtimes: Python](../../troubleshoot/ts_runtimes.html#ts_python)

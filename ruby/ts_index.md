@@ -14,4 +14,4 @@ lastupdated: "2018-02-14"
 
 Troubleshoot your Ruby applications and buildpacks with the following resource:
 
-* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html)
+* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html#runtimes)

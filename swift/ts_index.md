@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-02-21"
 
 ---
 
@@ -14,4 +14,4 @@ lastupdated: "2018-02-14"
 
 Troubleshoot your Swift applications and buildpacks with the following resource:
 
-* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html)
+* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html#runtimes)

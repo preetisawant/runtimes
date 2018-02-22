@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -12,6 +12,6 @@ lastupdated: "2018-02-14"
 # Troubleshooting resources
 {: #ts_tomcat}
 
-Troubleshoot your Swift applications and buildpacks with the following resource:
+Troubleshoot your Tomcat applications and buildpacks with the following resource:
 
-* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html)
+* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html#runtimes)

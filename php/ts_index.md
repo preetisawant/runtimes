@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-02-22"
 
 ---
 
@@ -14,5 +14,5 @@ lastupdated: "2018-02-14"
 
 Troubleshoot your PHP applications and buildpacks with the following resources:
 
-* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html)
-* [Troubleshooting for runtimes: Node.js](../../troubleshoot/ts_runtimes.html#ts_php)
+* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html#runtimes)
+* [Troubleshooting for runtimes: PHP](../../troubleshoot/ts_runtimes.html#ts_php)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-02-13"
+lastupdated: "2018-02-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,4 +14,4 @@ lastupdated: "2018-02-13"
 
 Troubleshoot your Go applications and buildpacks with the following resource:
 
-* [Troubleshooting for runtimes: Go](../../troubleshoot/ts_runtimes.html#ts_go)
+* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html#runtimes)

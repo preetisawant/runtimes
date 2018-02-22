@@ -21,6 +21,7 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     [Available versions](index.html#runtime_versions)
     [Buildpack support statement](../common/buildpackSupport.html)
     {: .navgroup-end}

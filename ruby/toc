@@ -21,6 +21,7 @@ Ruby
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     [Runtime Versions](index.html#runtime_versions)
     [Buildpack support statement](../common/buildpackSupport.html)
     {: .navgroup-end}

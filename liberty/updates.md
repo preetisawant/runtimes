@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-01"
+lastupdated: "2018-02-13"
 
 ---
 
@@ -14,6 +14,10 @@ lastupdated: "2018-02-01"
 
 ## A list of the latest updates in the Liberty buildpack.
 
+
+### February 13, 2018: Updated Liberty buildpack v3.18.
+* The monthly Liberty runtime version was updated to 2018.2.0.0.
+* The default Liberty runtime also includes the PI90804 Apache Commons iFix.
 
 ### January 31, 2018: Updated Liberty buildpack v3.17.1.
 * The buildpack was updated to include Liberty feature microProfile-1.2. 

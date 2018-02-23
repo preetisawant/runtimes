@@ -22,5 +22,6 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     [Buildpack support statement](../common/buildpackSupport.html)
     {: .navgroup-end}

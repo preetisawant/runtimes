@@ -17,7 +17,7 @@ lastupdated: "2018-02-13"
 
 ### February 13, 2018: Updated Liberty buildpack v3.18.
 * The monthly Liberty runtime version was updated to 2018.2.0.0.
-* The default Liberty runtime also includes the PI90804 Apache Commons iFix.
+* The default Liberty runtime also includes the [PI90804 Apache Commons iFix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428).
 
 ### January 31, 2018: Updated Liberty buildpack v3.17.1.
 * The buildpack was updated to include Liberty feature microProfile-1.2. 

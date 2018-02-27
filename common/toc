@@ -14,5 +14,6 @@ Buildpacks
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html)
     buildpackSupport.md
     {: .navgroup-end}

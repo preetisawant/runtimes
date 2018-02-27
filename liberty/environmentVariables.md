@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -64,7 +64,7 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>Disable the Spring Auto-Reconfiguration framework. To disable, set value to enabled: false. </td>
+<td>Disable the [Spring Auto-Reconfiguration framework](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-spring_auto_reconfiguration.md). To disable, set value to enabled: false. </td>
 </tr>
 
 <tr>

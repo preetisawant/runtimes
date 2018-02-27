@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-02-23"
 
 ---
 
@@ -23,32 +23,30 @@ Liberty beta features available in {{site.data.keyword.Bluemix_notm}}
 </tr>
 
 <tr>
-	<tr><td>appSecurity-3.0</tr></td>
-	<tr><td>audit-1.0</tr></td>
-	<tr><td>bluemixLogCollector-1.1</tr></td>
-  <tr><td>beanValidation-2.0</tr></td>
-  <tr><td>cdi-2.0</tr></td>
-  <tr><td>javaee-8.0</tr></td>
-  <tr><td>javaeeClient-8.0</tr></td>
-  <tr><td>jaxrs-2.1</tr></td>
-  <tr><td>jpa-2.2</tr></td>
-	<tr><td>jpaContainer-2.2</tr></td>
-  <tr><td>jsf-2.3</tr></td>
-  <tr><td>jsfContainer-2.2</tr></td>
-	<tr><td>jsonb-1.0</tr></td>
-	<tr><td>jsonbContainer-1.0</tr></td>
-	<tr><td>jsonp-1.1</tr></td>
-	<tr><td>jsonpContainer-1.1</tr></td>
-  <tr><td>logstashCollector-1.1</tr></td>
-  <tr><td>mpOpenAPI-1.0</tr></td>
-  <tr><td>mpRestClient-1.0</tr></td>
-<tr><td>mpConfig-1.2</tr></td>
-  <tr><td>opentracing-1.0</tr></td>
-  <tr><td>servlet-4.0</tr></td>
-	<tr><td>validator-1.0</tr></td>
-  <tr><td>webProfile-8.0</tr></td>
-
-
+    <tr><td>appSecurity-3.0</tr></td>
+    <tr><td>audit-1.0</tr></td>
+    <tr><td>beanValidation-2.0</tr></td>
+    <tr><td>bluemixLogCollector-1.1</tr></td>
+    <tr><td>cdi-2.0</tr></td>
+    <tr><td>javaee-8.0</tr></td>
+    <tr><td>javaeeClient-8.0</tr></td>
+    <tr><td>jaxrs-2.1</tr></td>
+    <tr><td>jpa-2.2</tr></td>
+    <tr><td>jpaContainer-2.2</tr></td>
+    <tr><td>jsf-2.3</tr></td>
+    <tr><td>jsfContainer-2.2</tr></td>
+    <tr><td>jsonb-1.0</tr></td>
+    <tr><td>jsonbContainer-1.0</tr></td>
+    <tr><td>jsonp-1.1</tr></td>
+    <tr><td>jsonpContainer-1.1</tr></td>
+    <tr><td>logstashCollector-1.1</tr></td>
+    <tr><td>mpConfig-1.2</tr></td>
+    <tr><td>mpOpenAPI-1.0</tr></td>
+    <tr><td>mpRestClient-1.0</tr></td>
+    <tr><td>opentracing-1.0</tr></td>
+    <tr><td>servlet-4.0</tr></td>
+    <tr><td>validator-1.0</tr></td>
+    <tr><td>webProfile-8.0</tr></td>
 
 </tr>
 </table>

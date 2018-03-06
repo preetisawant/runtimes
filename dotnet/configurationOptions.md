@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-07-13"
 ---
 
@@ -72,4 +72,3 @@ In Program.cs `Main` method, remove the following line:
 {: codeblock}
 
 These changes should allow the .NET CLI to find your application's `Views` as they will now be copied to the build output when the `dotnet publish` command executes.  If your application has any other files, such as json configuration files, which are required at runtime then you should also add those to the `Include` property of the `Content` element in the .csproj file for your project, separated by semi-colons.
-

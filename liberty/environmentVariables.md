@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-01"
 
 ---
 
@@ -18,7 +18,7 @@ Environment variables supported by Liberty for Java.
 
 <table>
 <tr>
-<th align="left">Name</th>
+<th align="left">Environment Variable Name</th>
 <th align="left">Description</th>
 </tr>
 
@@ -34,7 +34,7 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>Enable [Liberty beta features](usingBetaFeatures.html)</td>
+<td>Enable [Liberty beta features/](usingBetaFeatures.html)</td>
 </tr>
 
 <tr>
@@ -102,10 +102,60 @@ Environment variables supported by Liberty for Java.
 <td>Disable service [auto-configuration.](autoConfig.html#opting_out)</td>
 </tr>
 </table>
+{: caption="Table 1. Environment variables available for Liberty for Java" caption-side="top"}
+
+## Disabled attributes in the Liberty for Java buildpack
+
+There are some attributes that are automatically disabled by the Liberty buildpack, that you cannot override. The following environment variables and attributes are disabled.
+
+### Disabled attribute table
+
+<table>
+<tr>
+<th>Disabled attribute </th>
+<th>Element</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="Table 1. Attributes disabled by Liberty for Java" caption-side="top"}
 
 # rellinks
 {: #rellinks notoc}
 ## general
 {: #general notoc}
 * [Liberty runtime](index.html)
-* [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

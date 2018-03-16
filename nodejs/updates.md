@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -13,11 +13,13 @@ lastupdated: "2018-02-14"
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## March 16, 2018: Updated Node.js buildpack v3.19
+The SDK for Node.js buildpack v3.18 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 and 8.9.4. The default is latest 6.x, so it is currently 6.13.0.
 
-## February 6, 2018: Updated Nodejs buildpack v3.18
+## February 6, 2018: Updated Node.js buildpack v3.18
 The SDK for Node.js buildpack v3.18 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 and 8.9.4. The default is latest 6.x, so it is currently 6.12.3.
 
-## January 8, 2018: Updated Nodejs buildpack v3.17
+## January 8, 2018: Updated Node.js buildpack v3.17
 The SDK for Node.js buildpack v3.17 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 and 8.9.3. The default is latest 6.x, so it is currently 6.12.2.
 
 ## December 11, 2017: Updated Node.js buildpack v3.16.1

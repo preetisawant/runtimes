@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -36,7 +36,7 @@ protocol due to port restrictions in the {{site.data.keyword.Bluemix_notm}} envi
 
 ## Liberty features index
 {: #libertyfeat_index}
-Skip to the section of the feature list by using the following index, or you can look through the [Liberty features list](#libertyfeat_list).
+Skip to the section of the feature list by using the following index, or you can look through the [Liberty for Java features list](#libertyfeat_list).
 
 ### A-E
 * [A](#libertyfeat_A)
@@ -46,6 +46,7 @@ Skip to the section of the feature list by using the following index, or you can
 
 ### F-J
 * [F](#libertyfeat_F)
+* [H](#libertyfeat_H)
 * [J](#libertyfeat_J)
 
 ### K-O
@@ -92,6 +93,7 @@ Skip to the section of the feature list by using the following index, or you can
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
+* constrainedDelegation-1.0
 * couchdb-1.0
 
 ### E
@@ -107,6 +109,11 @@ Skip to the section of the feature list by using the following index, or you can
 {: #libertyfeat_f}
 
 * federatedRegistry-1.0
+
+### H
+{: #libertyfeat_h}
+
+* httpWhiteboard-1.0
 
 ### J
 {: #libertyfeat_J}
@@ -124,6 +131,7 @@ Skip to the section of the feature list by using the following index, or you can
 * jcaInboundSecurity-1.0
 * jdbc-4.0
 * jdbc-4.1
+* jdbc-4.2
 * jms-1.1
 * jms-2.0
 * jmsMdb-3.1
@@ -133,6 +141,7 @@ Skip to the section of the feature list by using the following index, or you can
 * jpa-2.1
 * jsf-2.0
 * jsf-2.2
+* jsfContainer-2.2
 * json-1.0
 * jsonp-1.0
 * jsp-2.2
@@ -153,10 +162,16 @@ Skip to the section of the feature list by using the following index, or you can
 * mdb-3.1
 * mdb-3.2
 * mediaServerControl-1.0     
-* microprofile-1.0
-* microprofile-1.2
+* microProfile-1.0
+* microProfile-1.2
+* microProfile-1.3
 * mongodb-2.0
 * monitor-1.0
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
@@ -165,8 +180,10 @@ Skip to the section of the feature list by using the following index, or you can
 * openid-2.0
 * openidConnectClient-1.0
 * openidConnectServer-1.0
+* opentracing-1.0
 * osgi.jpa-1.0
 * osgiAppIntegration-1.0
+* osgiBundle-1.0
 * osgiConsole-1.0
 
 ### P
@@ -222,4 +239,4 @@ Skip to the section of the feature list by using the following index, or you can
 ## general
 {: #general notoc}
 * [Liberty runtime](index.html)
-* [Liberty Profile Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

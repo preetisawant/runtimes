@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-03-16"
 
 ---
 
@@ -24,7 +24,7 @@ By default, applications are configured to run with a lightweight version of the
 ```
 {: codeblock}
 
-The version property can be set to a version range. There are two supported version ranges: 1.7.+ and 1.8.+. For best results, use Java 8.
+The version property can be set to a version range. There are two supported version ranges: 1.7.+ and 1.8.+. For best results, use Java 8.  Java 7 was removed from the Liberty buildpack in version 3.19.  
 
 ## OpenJDK
 {: #openjdk}

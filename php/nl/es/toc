@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="PHP" audience="runtime"}
+{: .toc subcollection="PHP" audience="runtime" href="/docs/runtimes/php/getting-started.html"}}
 PHP
 
     {: .navgroup id="learn"}
@@ -10,12 +10,11 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Trabajar con un proxy](../../manageapps/workingWithProxy.html)
+    [Trabajar con un proxy](../common/workingWithProxy.html)
     [Aplicar HTTPS en todas las páginas](index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-
     {: .topicgroup}
     Aplicaciones de inicio y compilaciones
         [Usar las aplicaciones de inicio](../../cfapps/starter_app_usage.html)
@@ -23,5 +22,6 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Declaración de soporte de paquete de compilación](../../manageapps/buildpackSupport.html)
+    ts_index.md
+    [Declaración de soporte del paquete de compilación](../common/buildpackSupport.html)
     {: .navgroup-end}

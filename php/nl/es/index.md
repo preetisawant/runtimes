@@ -53,6 +53,8 @@ Puede especificar la versión de PHP que utilizará la app en el archivo compose
 {: codeblock}
 Para obtener más información, consulte [enlaces de Composer Package![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://getcomposer.org/doc/04-schema.md#package-links).
 
+
+
 Cuando no se especifique una versión, se elegirá la versión 5.6.31 de forma predeterminada. 
 
 ### Versiones disponibles:

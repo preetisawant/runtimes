@@ -30,7 +30,7 @@ php_buildpack は、以下のいずれかの条件下で使用されます。
 ## アプリケーションのすべてのページでの HTTPS の適用
 {: #enforce_https}
 
-Apache を使用して {{site.data.keyword.Bluemix_notm}} でアプリケーションを実行する場合、アプリケーションのすべてのページで HTTP の代わりに HTTPS を強制的に使用するには、「.htaccess」ファイルに対して以下の変更を行う必要があります。このルールは、{{site.data.keyword.Bluemix_notm}} で実行されている場合にのみ、HTTPS を使用して行われなかった要求に対して適用されます。
+Apache を使用して {{site.data.keyword.Bluemix_notm}} でアプリケーションを実行する場合、アプリケーションのすべてのページで HTTP の代わりに HTTPS を強制的に使用するには、「.htaccess」ファイルに対して以下の変更を行う必要があります。  このルールは、{{site.data.keyword.Bluemix_notm}} で実行されている場合にのみ、HTTPS を使用して行われなかった要求に対して適用されます。
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]

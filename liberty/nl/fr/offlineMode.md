@@ -15,7 +15,7 @@ lastupdated: "2017-10-26"
 {: #offline_mode}
 
 Quand une application Liberty est poussée vers {{site.data.keyword.Bluemix}}, le pack de construction Liberty peut accéder à des sites externes à
-{{site.data.keyword.Bluemix_notm}} afin d'obtenir les artefacts requis par l'application. Les sites externes accessibles au pack de construction Liberty sont répertoriés ci-dessous.  Dans les environnements
+{{site.data.keyword.Bluemix_notm}} afin d'obtenir les artefacts requis par l'application.  Les sites externes accessibles au pack de construction Liberty sont répertoriés ci-dessous.  Dans les environnements
 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), ces sites peuvent avoir besoin d'être mis en *liste blanche*.
 
@@ -34,7 +34,7 @@ Quand une application Liberty est poussée vers {{site.data.keyword.Bluemix}}, l
 
 Dans certains environnements, comme [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), un proxy peut être configuré. Voir
-[Utilisation d'un proxy](/docs/manageapps/workingWithProxy.html) pour plus de détails.
+[Utilisation d'un proxy](/docs/runtimes/common/workingWithProxy.html) pour plus de détails.
 
 # rellinks
 {: #rellinks notoc}

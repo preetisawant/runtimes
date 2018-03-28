@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-15"
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -56,7 +56,7 @@ swift build
 
 一旦成功编译了应用程序，就可以运行 Swift 编译器生成的可执行文件：
 ```
-.build/debug/kitura-helloworld
+.build/debug/get-started-swift
 ```
 {: pre}
 
@@ -136,11 +136,10 @@ cf push
 
 接下来，我们要将 NoSQL 数据库添加到此应用程序并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
-1. 在浏览器中登录到 {{site.data.keyword.Bluemix_notm}}。浏览至`仪表板`。通过在`名称`列中单击应用程序的名称以选择该应用程序。
-2. 单击`连接`，然后单击`创建连接`。
-3. 在`数据和分析`部分中，选择 `Cloudant NoSQL DB`
-4. 选择定价套餐。{{site.data.keyword.Bluemix_notm}} 提供了免费的 `Lite` 套餐，其中包含精选的一组云服务，并提供了入门所需的足够容量
-5. 出现提示时，选择`重新编译打包`。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
+1. 在浏览器中，登录到 {{site.data.keyword.Bluemix_notm}}，然后转至“仪表板”。选择**创建资源**。
+2. 选择**数据和分析**部分，选择 **Cloudant NoSQL DB**，然后创建该服务。
+3. 转至**连接**视图，选择应用程序，然后选择**创建连接**。
+4. 出现提示时，选择**重新编译打包**。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
 
 通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。[了解更多...](/docs/manageapps/depapps.html#app_env)
 {: tip}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -90,9 +90,9 @@ Dans ce fichier manifest.yml, l'effet de **random-route: true** est de générer
 
 Déployez votre application dans l'une des régions Bluemix suivantes. Pour une latence aussi faible que possible, choisissez la région la plus proche de vos utilisateurs.
 
-|Région          |Point d'extrémité d'API                  |
+|Région          |Point d'extrémité d'API                             |
 |:---------------|:-------------------------------|
-| Sud des Etats-Unis |https://api.ng.bluemix.net     |
+| Sud des Etats-Unis       |https://api.ng.bluemix.net     |
 | Royaume-Uni | https://api.eu-gb.bluemix.net  |
 | Sydney         | https://api.au-syd.bluemix.net |
 | Francfort     | https://api.eu-de.bluemix.net |
@@ -142,10 +142,10 @@ Et voilà ! Vous venez de lancer votre code à la fois localement et sur le clou
 
 Nous allons à présent ajouter une base de données {{site.data.keyword.cloudantfull}} à l'application et configurer cette dernière pour qu'elle puisse être exécutée localement et sur {{site.data.keyword.Bluemix_notm}}.
 
-1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} dans votre navigateur. Accédez au `Tableau de bord`. Sélectionnez votre application en cliquant sur son nom dans la colonne `Nom`.
-2. Cliquez sur `Connexions`, puis sur `Connecter un nouveau`.
-2. Dans la section `Données &  analyse`, sélectionnez `{{site.data.keyword.cloudant_short_notm}}` et `Créer` pour créer le service.
-3. Sélectionnez `Reconstituer` lorsque vous y êtes invité. {{site.data.keyword.Bluemix_notm}} redémarre votre application et lui fournit les données d'identification pour l'accès à la base de données en utilisant la variable d'environnement `VCAP_SERVICES`. L'application n'a accès à cette variable d'environnement que lorsqu'elle fonctionne sur {{site.data.keyword.Bluemix_notm}}.
+1. Dans votre navigateur, connectez-vous à {{site.data.keyword.Bluemix_notm}} et allez au Tableau de bord. Sélectionnez **Créer une ressource**.
+2. Choisissez la section **Données et analyse**, puis sélectionnez **Cloudant NoSQL DB** et créez votre service.
+3. Accédez à la vue **Connexions** et sélectionnez votre application, puis **Créer une connexion**.
+4. Sélectionnez **Reconstituer** lorsque vous y êtes invité. {{site.data.keyword.Bluemix_notm}} redémarre votre application et lui fournit les données d'identification pour l'accès à la base de données en utilisant la variable d'environnement `VCAP_SERVICES`. L'application n'a accès à cette variable d'environnement que lorsqu'elle fonctionne sur {{site.data.keyword.Bluemix_notm}}.
 
 Les variables d'environnement vous permettent de séparer les paramètres de déploiement de votre code source. Par exemple, plutôt que de coder en dur le mot de passe d'accès à la base de données, vous pouvez le stocker dans une variable d'environnement et inclure une référence à celle-ci dans votre code source. [En savoir plus...](/docs/manageapps/depapps.html#app_env)
 {: tip}

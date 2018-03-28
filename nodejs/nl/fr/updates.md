@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-12"
+  years: 2015, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -14,30 +14,31 @@ lastupdated: "2017-12-12"
 
 Liste des dernières mises à jour apportées au pack de construction sdk-for-nodejs.
 
-## 11 décembre 2017 : Mise à jour du pack de construction Node.js v3.16
-Le pack de construction SDK for Node.js v3.16 fournit les versions v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0 et v8.9.0
-d'IBM SDK Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.12.0 actuellement.
+## 6 février 2018 : Mise à jour du pack de construction Nodejs v3.18
+Le pack de construction SDK for Node.js v3.18 fournit les versions 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 et 8.9.4 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.13.3 actuellement.
+
+## 8 janvier 2018 : Mise à jour du pack de construction Nodejs v3.17
+Le pack de construction SDK for Node.js v3.17 fournit les versions 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 et 8.9.3 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.12.2 actuellement.
+
+## 11 décembre 2017 : Mise à jour du pack de construction Node.js v3.16.1
+Le pack de construction SDK for Node.js v3.16.1 fournit les versions v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0 et v8.9.0
+d'IBM SDK Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.12.0 actuellement. 
 Notez qu'elle remédie à la vulnérabilité suivante du PSIRT (Product Security Incident Response Team) :
 Advisory ID: 10237 Product Record ID: 104487 Title: Node.js zlib DOS security vulnerability, October 2017 (CVE-2017-14919). Il
-est conseillé de passer à la v3.16 afin d'obtenir les correctifs des vulnérabilités de sécurité affectant les
+est conseillé de passer à la v3.16.1 afin d'obtenir les correctifs des vulnérabilités de sécurité affectant les
 versions 8.6.0.0 et antérieures, 6.10.2.0 à 6.11.4.0 et 4.8.2.0 à 4.8.4.0.
 
 ## 1 novembre 2017 : Mise à jour du pack de construction Node.js v3.15
-Le pack de construction SDK for Node.js v3.15 fournit les versions 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 et 8.6.0 d'IBM SDK for Node.js.
-La valeur par défaut est la version 6.x la plus récente, soit la 6.11.4 actuellement.
-
+Le pack de construction SDK for Node.js v3.15 fournit les versions 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 et 8.6.0 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.11.4 actuellement.
 
 ## 20 septembre 2017 : Mise à jour du pack de construction Node.js v3.14
-Le pack de construction SDK for Node.js v3.14 fournit les versions 4.8.3, 4.8.4, 6.11.2, 6.11.3, 8.1.4 et 8.3.0 d'IBM SDK for Node.js.
-La valeur par défaut est la version 6.x la plus récente, soit la 6.11.3 actuellement.
-Un bogue du pack de construction qui empêchait les applications Node.js de [s'arrêter proprement](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown) a été corrigé dans cette édition.
+Le pack de construction SDK for Node.js v3.14 fournit les versions 4.8.3, 4.8.4, 6.11.2, 6.11.3, 8.1.4 et 8.3.0 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.11.3 actuellement. Un bogue du pack de construction qui empêchait les applications Node.js de [s'arrêter proprement](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown) a été corrigé dans cette édition.
 
 ## 26 juillet 2017 : Mise à jour du pack de construction Node.js v3.13
 Le pack de construction SDK for Node.js v3.13 fournit les versions 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 et 8.1.4 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente,  soit 6.11.1 actuellement. Notez que la version 8 est disponible à des fins de test mais n'est pas encore recommandée en production.  
 
-Ce pack de construction contient les versions mises à jour de Node.js qui traitent les vulnérabilités de sécurité récentes détectées dans Node.js. Les utilisateurs doivent
-mettre à jour leurs applications pour utiliser les dernières versions disponibles, puis les reconstituer dans {{site.data.keyword.Bluemix_notm}}.
-Consultez <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">ce lien</a> pour obtenir des détails sur les vulnérabilités de Node.js.
+Ce pack de construction contient les versions mises à jour de Node.js qui traitent les vulnérabilités de sécurité récentes détectées dans Node.js.  Les utilisateurs doivent
+mettre à jour leurs applications pour utiliser les dernières versions disponibles, puis les reconstituer dans {{site.data.keyword.Bluemix_notm}}.  Consultez <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">ce lien</a> pour obtenir des détails sur les vulnérabilités de Node.js.
 
 ## 5 Mai 2017 : Mise à jour du pack de construction Node.js v3.12
 Le pack de construction SDK for Node.js v3.12 fournit les versions 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 et 6.10.2 d'IBM SDK Node.js. La valeur par défaut est passée de la version 4.x la plus récente à la version 6.x la plus récente, soit 6.10.2 actuellement. S'agissant d'un changement de version principale, cela peut affecter les applications qui dépendent de la valeur par défaut. Voir [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) pour savoir comment éviter les problèmes.

@@ -42,6 +42,8 @@ lastupdated: "2017-12-15"
 {: codeblock}
 最新的 java_buildpack 版本為 3.19 版，其中包含預設的 Tomcat 8.0.45 版和預設的 Java 1.8.0_141 版。如需相關資訊，請參閱 [java-buildpack 版本](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13)。
 
+
+
 ## HTTPS 重新導向
 {: #https_redirect}
 

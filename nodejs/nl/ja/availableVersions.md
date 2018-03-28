@@ -13,10 +13,10 @@ lastupdated: "2017-10-26"
 # 使用可能なバージョン
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} では、[現在使用可能な Node.js ランタイム](http://nodejs.org/dist/)のすべてが提供されます。 使用可能なランタイムのうち、{{site.data.keyword.IBM_notm}} では機能拡張およびバグ修正を含む特定のバージョンを提供しています。サポート対象のバージョンについて詳しくは、[『Node.js ビルドパックに対する最新の更新』](/docs/runtimes/nodejs/updates.html)を参照してください。
+{{site.data.keyword.Bluemix}} では、[現在使用可能な Node.js ランタイム](http://nodejs.org/dist/)のすべてが提供されます。 使用可能なランタイムのうち、{{site.data.keyword.IBM_notm}} では機能拡張およびバグ修正を含む特定のバージョンを提供しています。 サポート対象のバージョンについて詳しくは、[『Node.js ビルドパックに対する最新の更新』](/docs/runtimes/nodejs/updates.html)を参照してください。
 {: shortdesc}
 
-IBM Node.js ビルドパックは、{{site.data.keyword.IBM_notm}} ランタイム・バージョンをキャッシュに入れます。アプリケーションで {{site.data.keyword.IBM_notm}} SDK for Node.js ランタイムを使用している場合は、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュすると、アプリケーションのパフォーマンスが向上します。
+IBM Node.js ビルドパックは、{{site.data.keyword.IBM_notm}} ランタイム・バージョンをキャッシュに入れます。 アプリケーションで {{site.data.keyword.IBM_notm}} SDK for Node.js ランタイムを使用している場合は、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュすると、アプリケーションのパフォーマンスが向上します。
 
 ## バージョンの指定
 

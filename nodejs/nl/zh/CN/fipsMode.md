@@ -32,6 +32,8 @@ app.set('etag', false);
 {: codeblock}
 有关更多信息，请参阅此 [stackoverflow 帖子 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)。
 
+
+
 **注**：*无法*同时支持[应用程序管理](/docs/manageapps/app_mng.html)和 FIPS_MODE。如果设置了 BLUEMIX_APP_MGMT_ENABLE 环境变量，并且 FIPS_MODE 环境变量设置为 true，那么应用程序将无法编译打包。
 
 可用于检查 FIPS_MODE 状态的方法很多：
@@ -57,6 +59,8 @@ console.log('ssl version is [' +process.versions.openssl +']');
 </li>
 
 <li> 对于 node.js V6 及更高版本，您可以使用类似如下代码检查 crypto.fips 返回的值：
+
+  
 
   <pre>
   console.log('crypto.fips== [' +crypto.fips +']');

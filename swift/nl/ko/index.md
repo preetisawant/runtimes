@@ -9,7 +9,7 @@ lastupdated: "2017-11-08"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Swift용 IBM Cloud 런타임
+# IBM Cloud Runtime for Swift
 {: #swift_runtime}
 
 {{site.data.keyword.Bluemix}}의 Swift용 런타임은 [{{site.data.keyword.Bluemix_notm}}Swift용 빌드팩](https://github.com/IBM-Swift/swift-buildpack)(즉, swift_buildpack)으로 구현됩니다.
@@ -84,9 +84,9 @@ Swift 개발자가 사용할 수 있는 IBM의 다른 온라인 도구도 있습
 - [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/) - 이 사이트에서는 다양한 버전의 Swift에 대해, 그리고 서로 다른 Swift 런타임 플랫폼에서 Swift 코드 단편을 빠르고 쉽게 시험해 볼 수 있는 환경을 제공합니다. 또한 코드 샘플을 저장하고 다른 사용자와 공유할 수 있으며, 다른 사용자가 제공한 인기있는 예를 탐색할 수도 있습니다.
 
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [IBM Swift DevCenter](https://developer.ibm.com/swift/)
 * [IBM Cloud Tools for Swift](http://cloudtools.bluemix.net/)

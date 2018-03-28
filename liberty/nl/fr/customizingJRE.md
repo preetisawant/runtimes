@@ -17,7 +17,7 @@ pack de construction Liberty. Ce dernier permet la configuration de la version o
 des fonctions de
 l'environnement d'exécution Java (JRE).
 
-## {{site.data.keyword.IBM_notm}} JRE
+## {{site.data.keyword.IBM_notm}}JRE
 
 Par défaut, les applications sont configurées pour s'exécuter avec une version simple d'{{site.data.keyword.IBM}} JRE. Cette dernière est
 simplifiée pour fournir la fonction essentielle de base avec une empreinte mémoire et disque nettement réduite. Pour plus d'informations sur le contenu de l'environnement JRE allégé, voir [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).

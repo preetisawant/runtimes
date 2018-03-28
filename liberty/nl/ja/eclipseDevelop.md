@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -17,9 +17,9 @@ lastupdated: "2017-11-09"
 
 # IBM Eclipse Tools for {{site.data.keyword.cloud_notm}} を使用したアプリケーションの開発
 
-代わりの方法として {{site.data.keyword.eclipsetoolsfull}} を使用して、アプリケーションを開発して {{site.data.keyword.Bluemix}} にデプロイすることもできます。{{site.data.keyword.eclipsetoolsfull}} では、ご使用の統合開発環境 (IDE) と {{site.data.keyword.Bluemix_notm}} とを統合する上で役立つプラグインが用意されています。このプラグインは、既存の Eclipse 環境にインストールできます。
+代わりの方法として {{site.data.keyword.eclipsetoolsfull}} を使用して、アプリケーションを開発して {{site.data.keyword.Bluemix}} にデプロイすることもできます。 {{site.data.keyword.eclipsetoolsfull}} では、ご使用の統合開発環境 (IDE) と {{site.data.keyword.Bluemix_notm}} とを統合する上で役立つプラグインが用意されています。このプラグインは、既存の Eclipse 環境にインストールできます。
 
-この手順では、Liberty の[『入門チュートリアル』](getting-started.html)と同じ一般的なステップに従います。Eclipse を使用して、開発環境のセットアップ、ローカルおよびクラウドでのアプリケーションのデプロイ、および {{site.data.keyword.Bluemix_notm}} データベース・サービスのアプリケーションへの統合を行います。
+この手順では、Liberty の[『入門チュートリアル』](getting-started.html)と同じ一般的なステップに従います。 Eclipse を使用して、開発環境のセットアップ、ローカルおよびクラウドでのアプリケーションのデプロイ、および {{site.data.keyword.Bluemix_notm}} データベース・サービスのアプリケーションへの統合を行います。
 
 ## 始める前に
 {: #prereqs}
@@ -28,7 +28,7 @@ lastupdated: "2017-11-09"
 * [IBM Eclipse Tools for IBM Cloud ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/wasdev/downloads/#asset/tools-IBM_Eclipse_Tools_for_Bluemix){: new_window}
 * [Eclipse IDE for Java EE Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
-[『入門チュートリアル』](getting-started.md)を完了した場合は、これらのツールとアカウントを既にお持ちである可能性があります。また、開始前に、以下のものを必ずインストールおよび登録しておいてください。
+[『入門チュートリアル』](getting-started.md)を完了した場合は、これらのツールとアカウントを既にお持ちである可能性があります。 また、開始前に、以下のものを必ずインストールおよび登録しておいてください。
 * [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/cli#downloads){: new_window}
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
@@ -86,7 +86,7 @@ manifest.yml ファイルを開き、`name` の `GetStartedJava` を、ご使用
 ## ステップ 4: {{site.data.keyword.Bluemix_notm}} にデプロイする
 {: #deploy}
 
-以下のいずれかの {{site.data.keyword.Bluemix_notm}} 地域にアプリケーションをデプロイします。待ち時間をできるだけ短くするため、ユーザーに最も近い地域を選択してください。
+以下のいずれかの {{site.data.keyword.Bluemix_notm}} 地域にアプリケーションをデプロイします。 待ち時間をできるだけ短くするため、ユーザーに最も近い地域を選択してください。
 
 |地域          |API エンドポイント                             |
 |:---------------|:-------------------------------|
@@ -156,11 +156,10 @@ cf push
 
 次に、NoSQL データベースをこのアプリケーションに追加して、ローカルおよび {{site.data.keyword.Bluemix_notm}} 上で実行できるようにアプリケーションをセットアップします。
 
-1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「名前」**列でアプリケーションの名前をクリックして選択します。
-2. **「接続」**をクリックし、次に**「新規に接続」**をクリックします。
-3. **「データおよび分析」**セクションで**「Cloudant NoSQL DB」**を選択し、その後、サービスを作成します。
-4. **「アプリ」>「アプリ」>「接続」**に移動し、**「既存に接続」**を選択します。
-5. プロンプトが出されたら**「再ステージ」**を選択します。 {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
+1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
+2. **「データおよび分析」**セクションを選択し、**Cloudant NoSQL DB** を選択してサービスを作成します。
+3. **「接続」**ビューに移動し、アプリケーションを選択してから**「接続の作成」**を選択します。
+4. プロンプトが出されたら**「再ステージ」**を選択します。 {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
 
 環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。 例えば、データベース・パスワードをハードコーディングする代わりに、環境変数にそれを保管して、ソース・コードではその環境変数を参照するようにできます。 [詳細はこちら...](/docs/manageapps/depapps.html#app_env)
 {: tip}

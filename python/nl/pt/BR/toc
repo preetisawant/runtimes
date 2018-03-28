@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Python" audience="runtime"}
+{: .toc subcollection="Python" audience="runtime" href="/docs/runtimes/python/getting-started.html"}}
 Python
 
     {: .navgroup id="learn"}
@@ -17,9 +17,10 @@ Python
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Trabalhar com um proxy](../../manageapps/workingWithProxy.html)
+    [Trabalho com um proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Instrução de suporte do buildpack](../../manageapps/buildpackSupport.html)
+    ts_index.md
+    [Instrução de suporte do buildpack](../common/buildpackSupport.html)
     {: .navgroup-end}

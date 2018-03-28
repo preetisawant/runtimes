@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime"}
+{: .toc subcollection="liberty" audience="runtime" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -35,9 +35,9 @@ Liberty for Java
         monitoring/newRelic.md
 
     {: .topicgroup}
-    オフラインまたはプロキシーの処理
+    オフラインの処理またはプロキシーの処理
         offlineMode.md
-        [プロキシーの処理](../../manageapps/workingWithProxy.html)
+        [プロキシーの処理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -52,12 +52,12 @@ Liberty for Java
         [コミュニティー・ビルドパックの使用](../../cfapps/byob.html)
 
     buildpackDefaults.md
-    [Liberty アプリおよび Node.js アプリの管理](../../manageapps/app_mng.html)
+    [Liberty アプリおよび Node.js アプリの管理](../common/app_mng.html)
     [IBM Monitoring and Analytics 入門](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
-    [ビルドパックのサポート・ステートメント](../../manageapps/buildpackSupport.html)
+    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
     {: .navgroup-end}

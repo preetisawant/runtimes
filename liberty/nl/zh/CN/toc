@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime"}
+{: .toc subcollection="liberty" audience="runtime" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -37,7 +37,7 @@ Liberty for Java
     {: .topicgroup}
     脱机工作或使用代理
         offlineMode.md
-        [使用代理](../../manageapps/workingWithProxy.html)
+        [使用代理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -52,12 +52,12 @@ Liberty for Java
         [使用社区 buildpack](../../cfapps/byob.html)
 
     buildpackDefaults.md
-    [管理 Liberty 和 Node.js 应用程序](../../manageapps/app_mng.html)
+    [管理 Liberty 和 Node.js 应用程序](../common/app_mng.html)
     [IBM Monitoring and Analytics 入门](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
-    [Buildpack 支持语句](../../manageapps/buildpackSupport.html)
+    [Buildpack 支持语句](../common/buildpackSupport.html)
     {: .navgroup-end}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-1-31"
 
 ---
 
@@ -21,108 +21,72 @@ Os logs padrão do Liberty, tais como `messages.log` ou o diretório `ffdc`, est
 * Para acessar os logs recentes de um app, execute o comando a seguir:
 
   ```
-  $ cf logs --recent <appname>
+  cf logs --recent <appname>
   ```
   {: codeblock}
 
-* Para ver o arquivo `messages.log` de um app em execução em um nó DEA, execute o comando a seguir:
+
+* Para ver o arquivo `messages.log` de um aplicativo, execute o comando a seguir:
 
   ```
-  $ cf files <appname> logs/messages.log
-  ```
-  {: codeblock}
-
-* Para ver o arquivo `messages.log` de um app em execução em uma célula do Diego, execute o comando a seguir:
-
-  ```
-  $ cf ssh <appname> -c "cat logs/messages.log"
+  cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
-O nível de log e outras opções de rastreio podem ser configurados por meio do arquivo de configuração do Liberty. Para obter mais informações, consulte [Resolução de problemas do Liberty: criação de log e rastreio](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). O rastreio também pode ser ajustado em uma instância do aplicativo em execução usando o console do {{site.data.keyword.Bluemix_notm}}.
+O nível de log e outras opções de rastreio podem ser configurados por meio do arquivo de configuração do Liberty. Para obter mais informações, consulte [Resolução de problemas do Liberty: criação de log e rastreio](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html).
 
 ## Usando os recursos de rastreio e de dump
 {: #using_trace_and_dump}
 
-A configuração de rastreio do Liberty pode ser ajustada para um aplicativo em execução diretamente do console do {{site.data.keyword.Bluemix_notm}}. O console também fornece capacidade para solicitar e fazer download de dumps de encadeamento e de heap. Para ajustar a configuração de rastreio ou solicitar um dump, selecione um aplicativo Liberty no console do {{site.data.keyword.Bluemix_notm}} e escolha o menu `Runtime` na navegação. Na visualização `Tempo de execução`, selecione uma instância e pressione o botão *RASTREIO* ou *DUMP*. 
-Se estiver ajustando o nível de rastreio, consulte [Resolução de problemas do Liberty: criação de log e rastreio](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) para os detalhes da sintaxe da especificação de rastreio.
+### Usando rastreio e dump no console do {{site.data.keyword.Bluemix_notm}} (descontinuado)
 
-### Mudando a configuração de rastreio por meio de SSH no Diego
+A configuração de rastreio do Liberty pode ser ajustada para um aplicativo em execução diretamente do console do {{site.data.keyword.Bluemix_notm}}. O console também fornece capacidade para solicitar e fazer download de dumps de encadeamento e de heap. Para ajustar a configuração de rastreio ou solicitar um dump, selecione um aplicativo Liberty no console do {{site.data.keyword.Bluemix_notm}} e escolha o menu `Runtime` na navegação. Na visualização `Tempo de execução`, selecione uma instância e pressione o botão *RASTREIO* ou *DUMP*. Se estiver ajustando o nível de rastreio, consulte [Resolução de problemas do Liberty: criação de log e rastreio](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) para os detalhes da sintaxe da especificação de rastreio.
 
-Para um aplicativo Liberty em execução em uma célula do Diego, é possível mudar a configuração de rastreio por meio da CLI do Cloud Foundy usando o recurso SSH.
+### Mudando a configuração de rastreio por meio de SSH
 
-O aplicativo enviado por push deve incluir um server.xml que contenha **updateTrigger** com o valor **polled**, então as mudanças na especificação de rastreio no server.xml serão detectadas e aplicadas por ambiente de tempo de execução.
+Ao enviar o aplicativo por push, o arquivo server.xml inclui as propriedades padrão
+**updateTrigger** configuradas para **pesquisadas** e **monitorInterval** configurado como 1 minuto. 
+O servidor Liberty é automaticamente configurado para verificar atualizações para o server.xml a cada minuto.
 
 Consulte [Enviar por push aplicativos Liberty com server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) para opções para enviar por push os aplicativos Liberty com um sever.xml customizado
 
 Consulte [Controlando atualizações dinâmicas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para como configurar atualização dinâmica no server.xml.
 
-Para mudar a configuração de rastreio, siga estas etapas:
+Siga estas etapas para mudar a configuração de rastreio:
 
 1. SSH para o seu app
 
   ```
-$ cf ssh <appname> [-i instance_index]
+ cf ssh <appname> [-i instance_index]
   ```
-  {: pre}
+  {: codeblock}
 
 2. Edite ```<logging traceSpecification="xxxx"/>``` no server.xml para configurar sua especificação desejada, por exemplo, usando *vi*:
 
   ```
-$ vi /app/wlp/usr/servers/defaultServer/server.xml
+vi /app/wlp/usr/servers/defaultServer/server.xml
   ```
-  {: pre}
+  {: codeblock}
 
 Nota: a mudança do server.xml será perdida em uma remontagem ou reinicialização e será válida somente para a instância na qual você usar ssh.
 
 Consulte [Resolução de problemas do Liberty: criação de log e rastreio](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} para os detalhes da sintaxe da especificação de rastreio.
 
-### Acionando dumps via SSH no Diego
+### Acionamento de dumps via SSH
 
-Para um aplicativo em execução em uma célula do Diego, é possível acionar um dump de encadeamento e de heap por meio da CLI do CF usando o recurso SSH. Por exemplo:
+Use o comando a seguir para acionar um dump de encadeamento e do heap por meio da CLI do CF usando o recurso SSH:
 
   ```
-$ cf ssh <appname> -c "pkill -3 java"
+ cf ssh <appname> -c "pkill -3 java"
   ```
-  {: pre}
+  {: codeblock}
 
 Veja a documentação abaixo para obter detalhes sobre o download dos arquivos de dump gerados.
 
 ## Fazer download de arquivos de dump
 {: #download_dumps}
 
-Por padrão, os vários arquivos de dump são colocados no diretório `dumps` do contêiner de aplicativo.
-
-### Aplicativo DEA
-
-Para um aplicativo em execução em um nó DEA, use a funcionalidade "cf files" para visualizar e fazer download dos arquivos de dump.
-
-* Para ver os dumps gerados, execute o comando a seguir:
-
-  ```
-  $ cf files <appname> dumps
-  ```
-  {: codeblock}
-
-* Para fazer download de um arquivo de dump, execute os comandos a seguir:
-
-    1. Obter o GUID do aplicativo
-
-      ```
-      $ cf app <appname> --guid
-      ```
-      {: codeblock}
-
-    2. Fazer download do arquivo de dump
-
-      ```
-      $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
-      ```
-      {: codeblock}
-
-### Aplicativo Diego
-
-Para um aplicativo em execução em uma célula do Diego, use a funcionalidade "cf ssh" para visualizar e fazer download dos arquivos de dump.
+Por padrão, os vários arquivos de dump são colocados no diretório `dumps` do contêiner de aplicativo. Use a CLI do Cloud Foundry `cf ssh` para visualizar e fazer download dos arquivos dump.
 
 * Para ver os dumps gerados, execute o comando a seguir:
 
@@ -134,7 +98,7 @@ Para um aplicativo em execução em uma célula do Diego, use a funcionalidade "
 * Para fazer download de um arquivo de dump, execute o comando a seguir:
 
   ```
-  $ cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

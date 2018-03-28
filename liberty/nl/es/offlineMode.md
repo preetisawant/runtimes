@@ -32,7 +32,7 @@ A continuación se muestran los sitios externos a los que puede acceder el paque
 {: #working_with_proxy}
 
 En algunos entornos, como [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) y
-[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) se puede configurar un proxy. Consulte [Cómo trabajar con un proxy](/docs/manageapps/workingWithProxy.html) para obtener más detalles.
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) se puede configurar un proxy. Consulte [Cómo trabajar con un proxy](/docs/runtimes/common/workingWithProxy.html) para obtener más detalles.
 
 # rellinks
 {: #rellinks notoc}

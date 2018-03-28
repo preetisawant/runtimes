@@ -45,6 +45,8 @@ Ambos se pueden especificar en el archivo de manifiesto de la aplicación.  Por 
 La versión actual de java_buildpack es v3.19, que contiene la versión de Tomcat predeterminada 8.0.45 y la versión de Java predeterminada 1.8.0_141.
 Para obtener más información, consulte [releases de java-buildpack](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13).
 
+
+
 ## Redirección de HTTPS
 {: #https_redirect}
 

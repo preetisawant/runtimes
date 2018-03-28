@@ -30,7 +30,7 @@ XSS 攻撃の理論や修復技法を学んでから Web アプリケーショ�
 
 [セキュアなスターター・アプリケーション](https://github.com/IBM-Bluemix/java-secure-app)を、新規 Liberty アプリケーション開発の開始点として使用できます。 まず、このアプリケーションに含まれている XSS 対策コードを理解し、それをアプリケーション API のオペレーションに適用します。 このセキュアなスターター・アプリケーションに含まれている対策は、XSS 攻撃を軽減または防止することによって、サーバーとブラウザーの両方でアプリケーションが悪意のあるユーザー入力によって損傷されるのを防ぐのに役立ちます。
 
-[getting-started-java](https://github.com/IBM-Bluemix/get-started-java) サンプル・アプリケーションの場合と同じように、最初にこのセキュアなスターター・アプリケーションをダウンロードしてから、ビルドして {{site.data.keyword.Bluemix_notm}} またはローカルにデプロイします。{{site.data.keyword.Bluemix_notm}} でのアプリケーションのビルドとデプロイについて詳しくは、[『{{site.data.keyword.Bluemix_notm}} での Liberty 入門』](getting-started.html)を参照してください。入門として、以下のステップを使用して、アプリケーションの複製、ビルド、および実行を行うことができます。
+[getting-started-java](https://github.com/IBM-Bluemix/get-started-java) サンプル・アプリケーションの場合と同じように、最初にこのセキュアなスターター・アプリケーションをダウンロードしてから、ビルドして {{site.data.keyword.Bluemix_notm}} またはローカルにデプロイします。  {{site.data.keyword.Bluemix_notm}} でのアプリケーションのビルドとデプロイについて詳しくは、[『{{site.data.keyword.Bluemix_notm}} での Liberty 入門』](getting-started.html)を参照してください。  入門として、以下のステップを使用して、アプリケーションの複製、ビルド、および実行を行うことができます。
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-27"
 
 ---
 
@@ -13,39 +13,31 @@ lastupdated: "2017-10-26"
 # Configurar servicios enlazados
 {: #auto_config}
 
-Puede enlazar diversos servicios a su aplicación Liberty. Los servicios se pueden gestionar mediante contenedor, mediante aplicación o ambos, en función de lo que desee el desarrollador.
+Puede enlazar diversos servicios a su aplicación Liberty for Java. Los servicios se pueden gestionar mediante contenedor, mediante aplicación o ambos, en función de lo que desee el desarrollador.
 
 Un servicio gestionado por la aplicación es un servicio que gestionan por completo la aplicación, sin ayuda de Liberty. La aplicación normalmente lee VCAP_SERVICES para obtener información sobre el servicio enlazado y accede directamente al servicio. La aplicación proporciona todo el código de acceso de cliente necesario. No hay dependencia de las características de Liberty ni de la configuración del archivo server.xml. La configuración automática del paquete de compilación de Liberty no se aplica a los servicios de este tipo.
 
-Un servicio gestionado por contenedor es un servicio que gestionan por completo el tiempo de ejecución de Liberty. En algunos casos, es posible que la aplicación busque el servicio enlazado en JNDI, mientras que en otros el propio Liberty utiliza directamente el servicio. El paquete de compilación de Liberty lee VCAP_SERVICES para obtener información sobre los servicios enlazados. Para cada servicio gestionados por contenedor, el paquete de compilación lleva a cabo tres funciones.
+Un servicio gestionado por contenedor es un servicio que está gestionado por el tiempo de ejecución de Liberty. En algunos casos, es posible que la aplicación busque el servicio enlazado en JNDI, mientras que en otros el propio Liberty utiliza directamente el servicio. El paquete de compilación de Liberty lee VCAP_SERVICES para obtener información sobre los servicios enlazados. Para cada servicio gestionados por contenedor, el paquete de compilación lleva a cabo tres funciones.
 
 * Genera [variables de nube](optionsForPushing.html#accessing_info_of_bound_services) para el servicio enlazado.
-* Instala las características de Liberty y el código de acceso de cliente necesario para acceder al servicio enlazado.
+* Instala las características de Liberty y el acceso de cliente códigos que son necesarios para acceder al servicio enlazado.
 * Genera o actualiza las stanzas del archivo server.xml que requiere el servicio.
 
 Este proceso se conoce como configuración automática.
+
 El paquete de compilación de Liberty proporciona configuración automática para los siguientes tipos de servicio:
 
-* [ClearDB MySQL Database ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.cleardb.com/developers)
-* [ MySQL](/docs/services/MySQL/index.html#MySQL)
-* [ElephantSQL](docs/services/ElephantSQL/index.html)
-* [ PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
-* [Base de datos Cloudant NoSQL](/docs/services/Cloudant/index.html#Cloudant)
-* [dashDB](/docs/services/dashDB/index.html#dashDB)
-* [ Data
-Cache](/docs/services/DataCache/index.html#data_cache)
-* [ Session Cache](/docs/services/SessionCache/index.html#session_cache)
-* [ MQ
-Light](/docs/services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
 * [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
-* [New Relic](newRelic.html)
-* [Dynatrace](dynatrace.html)
+* [ClearDB MySQL Database ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.cleardb.com/developers)
+* [Base de datos Cloudant NoSQL](/docs/services/Cloudant/index.html#Cloudant)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html)
+* [Compose for MySQL](/docs/services/ComposeForMySQL/index.html)
 * [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
-* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Actualmente solo está disponible con el tiempo de ejecución Liberty mensual).
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Tal como se ha indicado, algunos servicios se pueden gestionar mediante aplicación o mediante contenedor. Mongo y SQLDB son ejemplos de dichos servicios. De forma predeterminada, el paquete de compilación de Liberty da por supuesto que estos servicios se gestionan mediante contenedor y los configura de forma automática. Si desea que la aplicación gestione el servicio, puede renunciar a la configuración automática del servicio estableciendo la variable de entorno services_autoconfig_excludes. Para obtener más información, consulte [Renuncia a la configuración automática del servicio](autoConfig.html#opting_out).
+Los servicios Compose pueden ser gestionados por contenedor o por aplicación. De forma predeterminada, el paquete de compilación de Liberty da por supuesto que estos servicios se gestionan mediante contenedor, y los configura automáticamente. Si desea que la aplicación gestione el servicio, puede renunciar a la configuración automática del servicio estableciendo la variable de entorno. `services_autoconfig_excludes`. Para obtener más información, consulte [Renuncia a la configuración automática del servicio](autoConfig.html#opting_out).
 
 ## Instalación de las características de Liberty y del código de acceso de cliente
 {: #installation_of_liberty_features}
@@ -57,13 +49,16 @@ Consulte la sección [Renuncia a la configuración automática del servicio](#op
 ## Generación o actualización de stanzas de configuración de server.xml
 {: #generating_or_updating_serverxml}
 
-Cuando envía por push una aplicación autónoma, el paquete de compilación de Liberty genera la stanza de server.xml, como se describe en [Opciones para enviar aplicaciones Liberty por push](optionsForPushing.html#options_for_pushing) a {{site.data.keyword.Bluemix_notm}}. Cuando envía una aplicación autónoma y la enlaza a servicios gestionados por contenedor, el paquete de compilación de Liberty genera las stanzas necesarias de server.xml para los servicios enlazados.
+El paquete de compilación de Liberty puede generar o actualizar automáticamente las stanzas de configuración en el archivo server.xml cuando se envía una aplicación autónoma, dependiendo de cómo se enlace la aplicación a los servicios y si ya tiene un archivo server.xml.
 
-Cuando el usuario especifica un archivo server.xml y lo enlaza a servicios gestionados por contenedor,
-el paquete de compilación de Liberty:
+Cuando envía una aplicación autónoma, el paquete de compilación de Liberty genera la stanza de configuración de server.xml, tal como se describe en [Opciones para enviar aplicaciones Liberty](optionsForPushing.html#options_for_pushing), {{site.data.keyword.Bluemix_notm}}.
 
-* Genera la configuración correspondiente a los servicios enlazados si el archivo server.xml proporcionado no contiene stanzas de configuración para los servicios enlazados.
-* Actualiza Genera la configuración correspondiente a los servicios enlazados si el archivo server.xml proporcionado contiene una stanza de configuración para los servicios enlazados.
+Cuando envía una aplicación autónoma y la enlaza a servicios gestionados por contenedor, el paquete de compilación de Liberty genera las stanzas necesarias de server.xml para los servicios enlazados.
+
+Cuando se proporciona un archivo server.xml y lo enlaza a servicios gestionados por contenedor, el paquete de compilación de Liberty generará o actualizará las stanzas de configuración.
+
+* Si el archivo server.xml proporcionado no contiene stanzas de configuración para los servicios en lazados,  Liberty genera la configuración para los servicios enlazados.
+* Si el archivo server.xml proporcionado contiene stanzas de configuración para los servicios enlazados, Liberty actualiza la configuración para los servicios enlazados.
 
 Consulte la documentación del tipo de servicio enlazado para ver más detalles.
 
@@ -72,12 +67,12 @@ Consulte la documentación del tipo de servicio enlazado para ver más detalles.
 
 En algunos casos, puede que no desee que el paquete de compilación de Liberty configure automáticamente los servicios ha enlazado. Vamos a examinar los casos de ejemplo.
 
-* Mi aplicación utiliza MongoDB, pero deseo que la aplicación gestione directamente la conexión con la base de datos. La aplicación contiene el archivo jar de controlador de cliente necesario. No quiero que el paquete de compilación de Liberty configure automáticamente el servicio Mongo.
-* Proporciono un archivo server.xml y he proporcionado las stanzas de configuración para la instancia de SQLDB porque necesito una configuración de fuente de datos no estándar. No quiero que el paquete de compilación de Liberty actualice mi archivo server.xml, pero necesito de todas formas el paquete de compilación de Liberty para asegurarme de que se instala el software de soporte adecuado.
+* Mi aplicación utiliza *dashDB*, pero deseo que la aplicación gestione directamente la conexión con la base de datos. La aplicación contiene el archivo jar de controlador de cliente necesario. No quiero que el paquete de compilación de Liberty configure automáticamente el servicio *dashDB* .
+* Estoy proporcionando un archivo server.xml y he proporcionado las stanzas de configuración para la instancia  *cloudant* porque necesito una configuración de fuente de datos no estándar. No quiero que el paquete de compilación de Liberty actualice mi archivo server.xml, pero necesito de todas formas el paquete de compilación de Liberty para asegurarme de que se instala el software de soporte adecuado.
 
 Para renunciar a la configuración automática del servicio, utilice la variable de entorno services_autoconfig_excludes. Puede incluir esta variable de entorno en un archivo manifest.yml o la puede establecer mediante el cliente cf.
 
-Puede renunciar a la configuración automática de servicios uno por uno. Puede renunciar a la configuración automática completa (como en el caso de ejemplo de Mongo) o sólo a las actualizaciones en la configuración del archivo server.xml (como en el caso de ejemplo de SQLDB). El valor que especifique para la variable de entorno services_autoconfig_excludes debe ser una serie, tal como se muestra a continuación.
+Puede renunciar a la configuración automática de servicios uno por uno. Puede optar por excluir completamente (como en el caso de ejemplo *dashDB*) o renunciar únicamente de las actualizaciones en la configuración del archivo server.xml (como en el el caso de ejemplo *cloudant*). El valor que especifique para la variable de entorno services_autoconfig_excludes es una serie como se muestra a continuación.
 
 * La serie puede contener especificaciones opt-out para uno o varios servicios.
 * La especificación opt out para un servicio específico es service_type=option, donde:
@@ -87,7 +82,7 @@ VCAP_SERVICES.
 * Si la serie contiene una especificación opt-out para más de un servicio,
 las especificaciones opt out individuales deben ir separadas por un solo carácter de espacio en blanco.
 
-Es decir, la gramática de la serie es la siguiente:
+Consulte el ejemplo siguiente de la gramática de la serie services_autoconfig_excludes:
 
 ```
     Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
@@ -99,21 +94,21 @@ Es decir, la gramática de la serie es la siguiente:
 {: codeblock}
 
 **Importante**: El tipo de servicio que especifique debe coincidir con la etiqueta de servicio que aparece en la variable de entorno VCAP_SERVICES. No se permiten espacios en blanco.
-**Importante**: No se permiten espacios en blanco en ```<service_type_specification>```. Sólo se permiten espacios en blanco para separar varias instancias de ```<service_type_specification>``` .
+**Importante**: No se permiten espacios en blanco en ```<service_type_specification>```. Solo se permite el uso de espacios en blanco para separar varias ```<service_type_specification>``` .
 
-Utilice la opción "all" para renunciar a todas las acciones de configuración automática para un servicio, como en el caso de ejemplo de Mongo anterior. Utilice la opción "config" para renunciar únicamente a las acciones de actualización de la configuración, como en el caso de ejemplo de SQLDB anterior.
+Utilice la opción **all** para renunciar a todas las acciones de configuración automática para un servicio, como en el caso de ejemplo anterior de *dashDB*. Utilice la opción **configuración** para renunciar únicamente a las acciones de actualización de la configuración como en el caso de ejemplo *cloudant* anterior.
 
-A continuación se muestra un ejemplo de especificaciones opt-out en un archivo manifest.yml para los casos de ejemplo de Mongo y de SQLDB.
+A continuación se muestra un ejemplo de especificaciones opt-out en un archivo manifest.yml para los casos de ejemplo  *dashDB* y *cloudant*. 
 
 ```
     env:
-      services_autoconfig_excludes: mongodb-2.2=all
+      services_autoconfig_excludes: dashDB=all
 
     env:
-      services_autoconfig_excludes: sqldb=config
+      services_autoconfig_excludes: cloudant=config
 
     env:
-      services_autoconfig_excludes: sqldb=config mongodb-2.2=all
+      services_autoconfig_excludes: cloudant=config dashDB=all
 ```
 {: codeblock}
 
@@ -122,21 +117,91 @@ de entorno services_autoconfig_excludes para la aplicación
 myapp mediante la interfaz de línea de mandatos.
 
 ```
-    $ cf set-env myapp services_autoconfig_excludes sqldb=config
-    $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
+    cf set-env myapp services_autoconfig_excludes cloudant=config
+    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+```
+{: codeblock}
+
+Para encontrar la *etiqueta* para un servicio en VCAP_SERVICES emita un mandato como en el siguiente ejemplo:
+
+```
+    cf env myapp
+```
+{: codeblock}
+
+El resultado incluye un texto similar al siguiente, en el que puede ver el campo de **etiqueta** con el valor **elephantsql**:
+
+```
+   "elephantsql": [
+   {
+      "credentials": {
+            "max_conns": "5",
+      "uri":      "..."
+   },
+   "label": "elephantsql",
+
 ```
 {: codeblock}
 
 ## Sustitución de la configuración de servicio
 {: #override_service_config}
 
-En algunos casos puede resultar recomendable sustituir la configuración predeterminada para un servicio generado por la configuración automática.
-Esto se puede hacer mediante la variable de entorno **LBP_SERVICE_CONFIG_xxxx**, donde "xxxx" es el nombre del servicio en mayúsculas.  Por ejemplo, para sustituir la versión predeterminada del servicio *mysql* y establecerla en la versión 1.4.+, emita un mandato parecido al siguiente:
+En algunos casos, es posible que desee alterar temporalmente la configuración predeterminada para un servicio generado por la configuración automática.Puede utilizar la variable de entorno**LBP_SERVICE_CONFIG_xxxx** para alterar temporalmente una configuración de servicio. Consulte las siguientes tablas para obtener las  sintaxis de ejemplo y nombres de variable de entorno completos para sustituirlos.  Por ejemplo, para sustituir la versión predeterminada del servicio *elephantSQL* y establecerla en la version 8.3.4. + emita un mandato como por ejemplo:
 
 ```
-    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
+
+Esta tabla muestra la correlación de **tipo_servicio** con los nombres de variables de entorno  **LBP_SERVICE_CONFIG_xxxx**.
+
+<table>
+<tr>
+<th align="left">service_type</th>
+<th align="left">Nombre de la variable de entorno</th>
+</tr>
+
+<tr>
+<td>Auto-Scaling</td>
+<td>LBP_SERVICE_CONFIG_AUTO-SCALING</td>
+</tr>
+
+<tr>
+<td>cleardb</td>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+</tr>
+
+<tr>
+<td>cloudantNoSQLDB</td>
+<td>LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB</td>
+</tr>
+
+<tr>
+<td>compose-for-mongodb</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MONGO</td>
+</tr>
+
+<tr>
+<td>compose-for-mysql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MYSQL</td>
+</tr>
+
+<tr>
+<td>compose-for-postgresql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+</tr>
+
+<tr>
+<td>elephantsql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+</tr>
+
+<tr>
+<td>SingleSignOn</td>
+<td>LBP_SERVICE_CONFIG_SINGLESIGNON</td>
+</tr>
+</table>
+
 
 En la tabla siguiente se muestra la sintaxis para sustituir algunas opciones de configuración de servicio:
 
@@ -152,6 +217,16 @@ En la tabla siguiente se muestra la sintaxis para sustituir algunas opciones de 
 </tr>
 
 <tr>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+
+<tr>
 <td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 <td>"{driver: { version: x.y.z }}"</td>
 </tr>
@@ -164,4 +239,4 @@ En la tabla siguiente se muestra la sintaxis para sustituir algunas opciones de 
 ## general
 {: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visión general del perfil de Liberty](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

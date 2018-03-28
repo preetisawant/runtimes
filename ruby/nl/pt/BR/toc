@@ -1,16 +1,16 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Ruby" audience="runtime"}
+{: .toc subcollection="Ruby" audience="runtime" href="/docs/runtimes/ruby/getting-started.html"}}
 Ruby
 
     {: .navgroup id="learn"}
     getting-started.md
     index.md
     {: .navgroup-end}
-    
+
     {: .navgroup id="howto"}
-    [Trabalhar com um proxy](../../manageapps/workingWithProxy.html)
+    [Trabalho com um proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -21,6 +21,7 @@ Ruby
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     [Versões de runtime](index.html#runtime_versions)
-    [Instrução de suporte de buildpack](../../manageapps/buildpackSupport.html)
+    [Instrução de suporte do buildpack](../common/buildpackSupport.html)
     {: .navgroup-end}

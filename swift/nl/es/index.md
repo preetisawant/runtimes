@@ -51,7 +51,7 @@ $ cat .swift-version
 
 Puesto que hay frecuentes actualizaciones en el idioma de Swift, siempre debe incluir un archivo `.swift-version` para que la app se "ancle" a la versión de Swift con la que normalmente funciona la aplicación.
 
-Tenga en cuenta que puede especificar cualquier versión válida de Swift en el archivo `.swift-version`. These alternate versions must match the naming of and are pulled directly from [Swift.org![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/download/) Aunque al utilizar una versión no almacenada en memoria caché se tardará más en el suministro, no hay diferencia de rendimiento del tiempo de ejecución de la app Swift.
+Tenga en cuenta que puede especificar cualquier versión válida de Swift en el archivo `.swift-version`. Estas versiones alternativas deben coincidir con la denominación y se obtienen directamente de [Swift.org![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/download/) Aunque al utilizar una versión no almacenada en memoria caché se tardará más en el suministro, no hay diferencia de rendimiento del tiempo de ejecución de la app Swift.
 
 Se utiliza el swift_buildpack predeterminado en {{site.data.keyword.Bluemix_notm}} si el directorio raíz de la app contiene un archivo `Package.swift`.  Si desea utilizar un paquete de compilación alternativo, debe especificarlo añadiendo una entrada `buildpack: {buildpackUrl}` en el archivo manifest.yml de la app. De forma alternativa, puede definirlo en el momento del despliegue utilizando el argumento de mandatos `cf push -b {buildpackUrl}`.
 

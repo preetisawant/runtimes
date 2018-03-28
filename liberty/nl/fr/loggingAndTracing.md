@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-11"
+  years: 2015, 2018
+lastupdated: "2018-1-31"
 
 ---
 
@@ -21,110 +21,81 @@ Les journaux Liberty standard, tels que le fichier `messages.log` ou le réperto
 * Pour accéder aux journaux récents d'une application, exécutez la commande suivante :
 
   ```
-  $ cf logs --recent <appname>
+  cf logs --recent <appname>
   ```
   {: codeblock}
 
-* Pour voir le fichier `messages.log` d'une application lancée sur un noeud DEA, exécutez la commande suivante :
+
+* Pour voir le fichier `messages.log` d'une application, exécutez la commande suivante :
 
   ```
-  $ cf files <appname> logs/messages.log
-  ```
-  {: codeblock}
-
-* Pour voir le fichier `messages.log` d'une application lancée sur une cellule Diego, exécutez la commande suivante :
-
-  ```
-  $ cf ssh <appname> -c "cat logs/messages.log"
+  cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
 Vous
 pouvez définir le niveau de journalisation et d'autres options de trace dans
-le fichier de configuration de Liberty. Pour plus d'informations, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). Vous pouvez également ajuster le traçage sur une instance d'application en cours d'exécution à l'aide de la console {{site.data.keyword.Bluemix_notm}}.
+le fichier de configuration de Liberty. Pour plus d'informations, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html).
 
 ## Utilisation des fonctions de trace et de vidage
 {: #using_trace_and_dump}
 
-Vous pouvez ajuster la configuration de traçage Liberty pour une application en cours d'exécution en procédant directement à partir de la console {{site.data.keyword.Bluemix_notm}}. La console offre aussi la possibilité de demander un vidage des unités d'exécution (threads) ou du segment de mémoire (heap). Pour ajuster la configuration de traçage ou demander un vidage, sélectionnez une application Liberty dans la console {{site.data.keyword.Bluemix_notm}} et choisissez le menu `Exécution` dans la navigation. Dans la vue `Exécution`, sélectionnez une instance et cliquez sur le bouton *TRACE* ou *VIDAGE*. Si vous ajustez le niveau de trace, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) pour les détails concernant la syntaxe de la spécification de trace.
+### Utilisation des fonctions de trace et de vidage dans la console {{site.data.keyword.Bluemix_notm}} (déprécié)
 
-### Modification de la configuration de la fonction de trace via SSH dans Diego
+Vous pouvez ajuster la configuration de traçage Liberty pour une application en cours d'exécution en procédant directement à partir de la console {{site.data.keyword.Bluemix_notm}}. La console offre aussi la possibilité de demander un vidage des unités d'exécution (threads) ou du tas Java (heap).
+Pour ajuster la configuration de traçage ou demander un vidage, sélectionnez une application Liberty dans la console {{site.data.keyword.Bluemix_notm}} et choisissez le menu `Exécution` dans la navigation. Dans la vue `Exécution`, sélectionnez une instance et cliquez sur le bouton *TRACE* ou *VIDAGE*. Si vous ajustez le niveau de trace, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) pour les détails concernant la syntaxe de la spécification de trace.
 
-Dans le cas d'une application Liberty s'exécutant dans une cellule Diego, vous pouvez modifier la configuration de traçage via l'interface de ligne de commande Cloud Foundry à l'aide de la fonction SSH.
+### Changement de la configuration de trace via SSH
 
-L'application envoyée par push doit inclure un fichier server.xml qui contient **updateTrigger** avec la valeur **polled**, les modifications de la spécification de traçage dans le fichier server.xml seront ensuite détectées et appliquées par l'environnement d'exécution.
+Lorsque vou poussez l'application, le fichier server.xml inclut la propriété **updateTrigger** réglée sur **polled** par défaut
+et la propriété **monitorInterval** réglée à 1 minute par défaut.
+Cela signifie que le serveur Liberty est automatiquement configuré pour vérifier, chaque minute, si de nouvelles mises à jour ont été apportées au fichier server.xml.
 
 Consultez [Options pour l'envoi par commande push d'applications Liberty avec server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) pour connaître les options permettant d'envoyer les applications Liberty par commande push avec un fichier server.xml personnalisé.
 
 Consultez [Contrôle des mises à jour dynamiques](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} pour savoir comment configurer des mises à jour dynamiques dans le fichier server.xml.
 
-Pour modifier la configuration de traçage, procédez comme suit :
+Suivez ces étapes pour changer la configuration de traçage :
+
 
 1. Connectez-vous à votre application avec SSH
 
   ```
-$ cf ssh <appname> [-i instance_index]
+ cf ssh <appname> [-i instance_index]
   ```
-  {: pre}
+  {: codeblock}
 
 2. Editez ```<logging traceSpecification="xxxx"/>``` dans le fichier server.xml pour définir votre spécification de trace, par exemple en utilisant *vi* :
 
   ```
-$ vi /app/wlp/usr/servers/defaultServer/server.xml
+vi /app/wlp/usr/servers/defaultServer/server.xml
   ```
-  {: pre}
+  {: codeblock}
 
 Remarque : Les modifications du fichier server.xml seront perdues lors d'une reconstitution ou d'un redémarrage et ne seront valides que pour l'instance à laquelle vous vous êtes connecté avec ssh.
 
 Consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} pour les détails concernant la syntaxe de la spécification de trace.
 
-### Déclenchement de vidage via SSL dans Diego
+### Déclenchement des vidages via SSL
 
-Dans le cas d'une application s'exécutant dans une cellule Diego, vous pouvez déclencher un vidage d'unité d'exécution ou de segment de mémoire via l'interface de ligne
-de commande CF en utilisant la fonction SSH. Par exemple :
+Pour provoquer un vidage des unités d'exécution et du tas Java via l'interface de ligne
+de commande CF en utilisant la fonction SSH, utilisez la commande suivante :
+
 
   ```
-$ cf ssh <appname> -c "pkill -3 java"
+ cf ssh <appname> -c "pkill -3 java"
   ```
-  {: pre}
+  {: codeblock}
 
 Consultez la documentation ci-dessous pour les détails concernant le téléchargement des fichiers de vidage générés.
 
 ## Téléchargement des fichiers de vidage
 {: #download_dumps}
 
-Par défaut, les différents fichiers de vidage sont placés dans le répertoire `dumps` du conteneur de l'application.
+Par défaut, les différents fichiers de vidage sont placés dans le répertoire `dumps` du conteneur de l'application. Utilisez
+l'interface de ligne de commande
+de Cloud Foundry `cf ssh` pour voir et télécharger les fichiers de vidage.
 
-### Application DEA
-
-Dans le cas d'une application lancée sur un noeud DEA, utilisez la fonctionnalité "cf files" pour voir et télécharger les fichiers de vidage.
-
-* Pour voir les vidages générés, exécutez la commande suivante :
-
-  ```
-  $ cf files <appname> dumps
-  ```
-  {: codeblock}
-
-* Pour télécharger un fichier de vidage, exécutez les commandes suivantes :
-
-    1. Obtenir l'identificateur global unique (GUID) de l'application
-
-      ```
-      $ cf app <appname> --guid
-      ```
-      {: codeblock}
-
-    2. Télécharger le fichier de vidage
-
-      ```
-      $ cf curl /v2/apps/<app_guid>/instances/<instance_id>/files/dumps/<dump_file_name> --output <local_dump_file_name>
-      ```
-      {: codeblock}
-
-### Application Diego
-
-Dans le cas d'une application lancée dans une cellule Diego, utilisez la fonctionnalité "cf ssh" pour voir et télécharger les fichiers de vidage.
 
 * Pour voir les vidages générés, exécutez la commande suivante :
 
@@ -136,7 +107,7 @@ Dans le cas d'une application lancée dans une cellule Diego, utilisez la foncti
 * Pour télécharger un fichier de vidage, exécutez la commande suivante :
 
   ```
-  $ cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

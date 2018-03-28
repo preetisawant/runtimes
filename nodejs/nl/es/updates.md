@@ -1,22 +1,28 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-12"
+  years: 2015, 2018
+lastupdated: "2018-02-14"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Últimas actualizaciones en el paquete de compilación de SDK para Node.js 
+# Últimas actualizaciones en el paquete de compilación de SDK for Node.js 
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
 
-## 11 de diciembre de 2017: Se ha actualizado el paquete de compilación Node.js v3.16
-El paquete de compilación de SDK para Node.js v3.16 proporciona las versiones de IBM SDK para Node.js v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.12.0.
-Tenga en cuenta que corrige PSIRT: ID de advertencia: 10237 ID de registro de producto: 104487 Título: vulnerabilidad de seguridad DOS de zlib de Node.js, octubre de 2017 (CVE-2017-14919). Se recomienda actualizar a v3.16 para obtener las correcciones de las vulnerabilidades de seguridad que afectan a 8.6.0.0 y anterior, 6.10.2.0 a 6.11.4.0 y 4.8.2.0 a 4.8.4.0. 
+## 6 de febrero de 2018: se ha actualizado el paquete de compilación de Nodejs v3.18
+El paquete de compilación de SDK for Node.js v3.18 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 y 8.9.4. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.12.3.
+
+## 8 de enero de 2018: se ha actualizado el paquete de compilación de v3.17 Nodejs
+El paquete de compilación de SDK for Node.js v3.17 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 y 8.9.3. El valor predeterminado más reciente es  6.x, de modo que actualmente es 6.12.2.
+
+## 11 de diciembre de 2017: se ha actualizado el paquete de compilación Node.js v3.16.1
+El paquete de compilación SDK for Node.js v3.16.1 proporciona las versiones de IBM SDK for Node.js v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.12.0.
+Tenga en cuenta que corrige PSIRT: ID de advertencia: 10237 ID de registro de producto: 104487 Título: vulnerabilidad de seguridad DOS de zlib de Node.js, octubre de 2017 (CVE-2017-14919). Se recomienda actualizar a v3.16.1 para obtener arreglos para vulnerabilidades de seguridad que afectan a 8.6.0.0 y anterior, 6.10.2.0 a 6.11.4.0 y 4.8.2.0 a 4.8.4.0.
 
 ## 1 de noviembre de 2017: Se ha actualizado el paquete de compilación de Node.js v3.15
 El SDK para el paquete de compilación de Node.js v3.15 proporciona las versiones de IBM SDK para Node.js 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 y 8.6.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.11.4.
@@ -205,7 +211,7 @@ Además, hemos reformado la característica de gestión de app en el paquete de 
    * El módulo mqlight que se utiliza para el servicio MQ Light no recibe soporte en la versión v0.12.x
 
 * Se han resuelto varias vulnerabilidades de seguridad:
-  * Vulnerabilidades corregidas en OpenSSL que afectan a IBM SDK para Node.js. Hay disponibles más detalles en el [boletín de seguridad](http://www-01.ibm.com/support/docview.wss?uid=swg21701494).
+  * Vulnerabilidades corregidas en OpenSSL que afectan a IBM SDK for Node.js. Hay disponibles más detalles en el [boletín de seguridad](http://www-01.ibm.com/support/docview.wss?uid=swg21701494).
   * Vulnerabilidad corregida en el cifrado de secuencia RC4 que afecta a IBM SDK para Node.js. Hay disponibles más detalles en el [boletín de seguridad](http://www-01.ibm.com/support/docview.wss?uid=swg21882778).
 
 ##  2 de abril de 2015: se ha actualizado el paquete de compilación Node.js v1.15-20150331-2231

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -64,7 +64,7 @@ Liberty for Java 支援的環境變數。
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>停用 Spring Auto-Reconfiguration 架構。若要停用，請將值設為 enabled: false。</td>
+<td>停用 [Spring Auto-Reconfiguration 架構](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-spring_auto_reconfiguration.md)。若要停用，請將值設為 enabled: false。</td>
 </tr>
 
 <tr>

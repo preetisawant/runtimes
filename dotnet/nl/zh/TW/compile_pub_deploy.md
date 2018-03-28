@@ -54,12 +54,16 @@ dotnet publish -r ubuntu.14.04-x64
 {: codeblock}
 目錄推送應用程式。
 
+
+
 針對可攜式應用程式，可以從
 ```
   bin/<Debug|Release>/<framework>/publish
 ```
 {:codeblock}
 目錄推送應用程式。
+
+
 
 也請注意，如果您是在應用程式中使用 manifest.yml 檔案，則可以在 manifest.yml 中指定發佈輸出資料夾的路徑。因此，推送應用程式時，就不需要位在該資料夾中。
 

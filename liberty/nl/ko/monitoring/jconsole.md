@@ -86,9 +86,9 @@ Java trustStore를 구성하려면 추가 매개변수를 전달해야 할 수 �
 ```
 {: codeblock}
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -57,11 +57,9 @@ Lorsque vous spécifiez le segment de mémoire à l'aide de variables d'environn
 ### Spécification de segment de mémoire
 {: #specifying_heap_memory}
 
-Vous pouvez définir la taille de segment de mémoire à l'aide de variables d'environnement ou en modifiant le fichier `jvm.options`. 
-Lorsque vous utilisez les variables d'environnement `JVM_ARGS` ou
+Vous pouvez définir la taille de segment de mémoire à l'aide de variables d'environnement ou en modifiant le fichier `jvm.options`. Lorsque vous utilisez les variables d'environnement `JVM_ARGS` ou
 `JBP_CONFIG_IBMJDK`, les modifications sont appliquées lorsque vous
-intégrez votre application dans {{site.data.keyword.Bluemix_notm}}.
-En modifiant le fichier `jvm.options`, l'effet sur la configuration de la taille de segment de mémoire peut également être testé localement.
+intégrez votre application dans {{site.data.keyword.Bluemix_notm}}. En modifiant le fichier `jvm.options`, l'effet sur la configuration de la taille de segment de mémoire peut également être testé localement.
 
 * Utilisez la variable d'environnement `JVM_ARGS` et l'argument -Xmx. Par exemple, pour fixer à 512M la taille maximum du segment de mémoire, utilisez la commande suivante, puis reconstituez votre application.
 

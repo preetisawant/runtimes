@@ -33,7 +33,7 @@ Node 빌드팩이 이전 빌드의 캐시를 사용할지 또는 무시할지를
 
 애플리케이션에 포함된 node_modules는 캐시되지 않음을 참고하십시오.
 
-최상위 레벨 **package.json**에서 **cacheDirectories** 배열(array)을 사용하여 캐시되는 모듈에 대해 세분화된 제어를 수행할 수 있습니다.  **cacheDirectories** 요소가 **package.json**에 표시된 경우 **cacheDirectories** 배열에 있는 해당 모듈만 캐시됩니다.  다음 예에서는 node_modules와 bower_components만 캐시됩니다.
+최상위 레벨 **package.json**에서 **cacheDirectories** 배열을 사용하여 캐시되는 모듈에 대해 세분화된 제어를 수행할 수 있습니다.  **cacheDirectories** 요소가 **package.json**에 표시된 경우 **cacheDirectories** 배열에 있는 해당 모듈만 캐시됩니다.  다음 예에서는 node_modules와 bower_components만 캐시됩니다.
 ```
 {
   "cacheDirectories": ["node_modules","bower_components"],

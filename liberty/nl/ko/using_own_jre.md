@@ -34,7 +34,7 @@ Liberty 빌드팩이 다운로드할 수 있는 웹 서버에서 JRE 파일을 �
     ```
     {: codeblock}
 
-    * JRE 버전 ID와 전체 JRE 파일 위치를 포함하십시오. 예:
+    * JRE 버전 ID와 전체 JRE 파일 위치를 포함하십시오.  예를 들어, 다음과 같습니다.
 
     ```
        ---
@@ -46,7 +46,7 @@ Liberty 빌드팩이 다운로드할 수 있는 웹 서버에서 JRE 파일을 �
 {: #configure_app}
 
 대체 JRE를 사용하도록 빌드팩을 구성하려면 Liberty 애플리케이션에서 두 개의 환경 변수를 설정해야 합니다. **JBP_CONFIG_OPENJDK**를 설정하여 `index.yml` 파일의 위치를 식별하고 **JVM** 환경 변수를 *openjdk*로 설정하십시오. 
-버전-값 문자열의 형식에 대한 자세한 정보는 [버전 구문과 순서 지정 및 와일드카드![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/util-repositories.md){: new_window}에서 Cloud Foundry 문서를 참조하십시오.
+버전-값 문자열의 형식에 대한 자세한 정보는 [버전 구문과 순서 지정 및 와일드카드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/util-repositories.md){: new_window}에서 Cloud Foundry 문서를 참조하십시오.
 
 **JBP_CONFIG_OPENJDK** 변수의 값은 `index.yml` 파일 위치 및 index.yml 파일에서 선택할 JRE 버전입니다.
 

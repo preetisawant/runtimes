@@ -20,8 +20,8 @@ lastupdated: "2017-10-27"
 
 Le pack de construction **sdk-for-nodejs** a
 priorité sur le pack de construction **nodejs_buildpack** dans {{site.data.keyword.Bluemix_notm}}. Si vous
-voulez utiliser le pack de construction **nodejs_buildpack** avec votre application au lieu du pack de construction **sdk-for-nodejs**, vous devez indiquer votre pack de construction, par exemple à l'aide de la commande **cf push**
-et de l'option -b.
+voulez utiliser le pack de construction **nodejs_buildpack** avec votre application au lieu du pack de construction **sdk-for-nodejs**,
+vous devez spécifier votre pack de construction, par exemple en utilisant l'option `-b` avec la commande **cf push**.
 
 Généralement, le pack de construction **sdk-for-nodejs** en cours et une version antérieure sont disponibles.  Pour voir l'ensemble des packs de construction disponibles, utilisez la commande**cf buildpacks**.  Par exemple :
 

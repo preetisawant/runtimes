@@ -121,8 +121,8 @@ aspnet 빌드팩의 최신 업데이트 목록
 
 * Nowin 웹 서버의 사용이 이 빌드팩에서 제거되었으며 그 대신 [Kestrel]{https://github.com/aspnet/KestrelHttpServer} 웹 서버가 사용됩니다.
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Dotnet Core 런타임](index.html)

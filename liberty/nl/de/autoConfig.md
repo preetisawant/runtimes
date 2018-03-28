@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-27"
 
 ---
 
@@ -13,54 +13,52 @@ lastupdated: "2017-10-26"
 # Gebundene Services konfigurieren
 {: #auto_config}
 
-An die Liberty-Anwendung können verschiedene Services gebunden werden. Abhängig von den Vorgaben des Entwicklers können Services containerverwaltet und/oder anwendungsverwaltet sein.
+Sie können verschiedene Services an Ihre Liberty for Java-Anwendung binden. Abhängig von den Vorgaben des Entwicklers können Services containerverwaltet oder anwendungsverwaltet oder beides sein.
 
-Ein anwendungsverwalteter Service ist ein Service, der ohne Unterstützung von Liberty vollständig von der Anwendung verwaltet wird. Die Anwendung liest in der Regel VCAP_SERVICES, um Informationen zu dem gebundenen Service abzurufen, und greift direkt auf den Service zu. Die Anwendung stellt den gesamten erforderlichen Clientzugriffscode bereit. Es besteht keine Abhängigkeit von Liberty-Features oder der Konfiguration der Datei 'server.xml'. Die automatische Konfiguration des Liberty-Buildpacks wird auf Services dieses Typs nicht angewendet.
+Ein anwendungsverwalteter Service ist ein Service, der ohne Unterstützung von Liberty vollständig von der Anwendung verwaltet wird. Die Anwendung liest in der Regel VCAP_SERVICES, um Informationen zu dem gebundenen Service abzurufen, und greift direkt auf den Service zu. Die Anwendung stellt den gesamten erforderlichen Clientzugriffscode bereit. Es besteht keine Abhängigkeit von Liberty-Features oder der Konfiguration der Datei server.xml. Die automatische Konfiguration des Liberty-Buildpacks wird auf Services dieses Typs nicht angewendet.
 
-Ein containerverwalteter Service ist ein Service, der von der Liberty-Laufzeit verwaltet wird. In manchen Fällen kann es vorkommen, dass die Anwendung den gebundenen Service in JNDI sucht, während der Service in anderen Fällen direkt von Liberty selbst genutzt wird. Das Liberty-Buildpack liest VCAP_SERVICES, um Informationen zu den gebundenen Services zu erhalten. Für jeden containerverwalteten Service führt das Buildpack die folgenden drei Funktionen aus:
+Ein containerverwalteter Service ist ein Service, der von der Liberty-Laufzeit verwaltet wird. In manchen Fällen kann es vorkommen, dass die Anwendung den gebundenen Service in JNDI sucht, während der Service in anderen Fällen direkt von Liberty selbst genutzt wird. Das Liberty-Buildpack liest VCAP_SERVICES, um Informationen zu den gebundenen Services zu erhalten. Für jeden containerverwalteten Service führt das Buildpack drei Funktionen aus.
 
 * Generieren von [Cloudvariablen](optionsForPushing.html#accessing_info_of_bound_services) für den gebundenen Service.
-* Installieren der Liberty-Features und des Clientzugriffscodes, die für den Zugriff auf den gebundenen Service erforderlich sind.
-* Generieren oder Aktualisieren der Zeilengruppen der Datei 'server.xml', die für den Service erforderlich sind.
+* Installieren der Liberty-Features und Clientzugriffscodes, die für den Zugriff auf den gebundenen Service erforderlich sind.
+* Generieren oder Aktualisieren der Zeilengruppen der Datei server.xml, die für den Service erforderlich sind.
 
 Dieser Prozess wird als automatische Konfiguration bezeichnet.
+
 Das Liberty-Buildpack bietet automatische Konfiguration für die folgenden Servicetypen:
 
-* [ClearDB MySQL Database ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://www.cleardb.com/developers)
-* [MySQL](/docs/services/MySQL/index.html#MySQL)
-* [ElephantSQL](docs/services/ElephantSQL/index.html)
-* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* [dashDB](/docs/services/dashDB/index.html#dashDB)
-* [Data Cache](/docs/services/DataCache/index.html#data_cache)
-* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
-* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
 * [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
-* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
-* [New Relic](newRelic.html)
-* [Dynatrace](dynatrace.html)
+* [ClearDB MySQL Database ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.cleardb.com/developers)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html)
+* [Compose for MySQL](/docs/services/ComposeForMySQL/index.html)
 * [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
-* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Aktuell nur über die monatliche Liberty-Laufzeit verfügbar).
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
+* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Wie bereits erwähnt können manche Services anwendungsverwaltet oder containerverwaltet sein. Mongo und SQLDB sind Beispiele für solche Services. Das Liberty-Buildpack geht standardmäßig davon aus, dass diese Services containerverwaltet sind und konfiguriert sie automatisch. Wenn die Anwendung den Service verwalten soll, können Sie die automatische Konfiguration für den Service ausschließen (Opt-out), indem Sie die Umgebungsvariable 'services_autoconfig_excludes' definieren. Weitere Informationen finden Sie in [Automatische Konfiguration von Services ausschließen](autoConfig.html#opting_out).
+Die Compose-Services können entweder containerverwaltet oder anwendungsverwaltet sein. Das Liberty-Buildpack geht standardmäßig davon aus, dass diese Services containerverwaltet sind, und konfiguriert sie automatisch. Wenn die Anwendung den Service verwalten soll, können Sie die automatische Konfiguration für den Service ausschließen (Opt-out), indem Sie die Umgebungsvariable `services_autoconfig_excludes` definieren. Weitere Informationen finden Sie in [Automatische Konfiguration von Services ausschließen](autoConfig.html#opting_out).
 
 ## Installation von Liberty-Features und Clientzugriffscode
 {: #installation_of_liberty_features}
 
-Bei der Bindung an einen containerverwalteten Service müssen möglicherweise Liberty-Features in der Zeilengruppe 'featureManager' der Datei 'server.xml' konfiguriert werden. Das Liberty-Buildpack nimmt eine entsprechende Aktualisierung der Zeilengruppe 'featureManager' vor und installiert die erforderlichen unterstützenden Binärdateien. Wenn der Service Clienttreiber-JAR-Dateien benötigt, werden die JAR-Dateien an eine bekannte Position in der Liberty-Installation heruntergeladen.
+Bei der Bindung an einen containerverwalteten Service müssen möglicherweise Liberty-Features in der Zeilengruppe featureManager der Datei server.xml konfiguriert werden. Das Liberty-Buildpack nimmt eine entsprechende Aktualisierung der Zeilengruppe featureManager vor und installiert die erforderlichen unterstützenden Binärdateien. Wenn der Service Clienttreiber-JAR-Dateien benötigt, werden die JAR-Dateien an eine bekannte Position in der Liberty-Installation heruntergeladen.
 
 Weitere Informationen zu den gebundenen Servicetypen finden Sie in [Automatische Konfiguration von Services ausschließen](#opting_out).
 
-## Konfigurationszeilengruppen der Datei 'server.xml' generieren oder aktualisieren
+## Konfigurationszeilengruppen der Datei server.xml generieren oder aktualisieren
 {: #generating_or_updating_serverxml}
 
-Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen, generiert das Liberty-Buildpack die Stanza 'server.xml' für {{site.data.keyword.Bluemix_notm}} wie in [Options for Pushing Liberty Applications](optionsForPushing.html#options_for_pushing) beschrieben. Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen und an containerverwaltete Services binden, generiert das Liberty-Buildpack die erforderlichen Zeilengruppen der Datei 'server.xml' für die gebundenen Services.
+Das Liberty-Buildpack kann Konfigurationszeilengruppen in Ihrer Datei server.xml automatisch generieren oder aktualisieren, wenn Sie eine Push-Operation für eine eigenständige Anwendung durchführen. Dieses Verhalten ist davon abhängig, wie Ihre Anwendung an Services gebunden ist und ob eine Datei server.xml vorhanden ist.
 
-Bei Angabe einer Datei 'server.xml' und der Bindung an containerverwaltete Services führt das Liberty-Buildpack die folgenden Aktionen aus:
+Wenn Sie eine eine Push-Operation für eine eigenständige Anwendung durchführen, generiert das Liberty-Buildpack die Konfigurationszeilengruppe in der Datei server.xml gemäß der Beschreibung in [Optionen zur Durchführung von Push-Operationen für Liberty-Anwendungen](optionsForPushing.html#options_for_pushing) zur Übertragung in {{site.data.keyword.Bluemix_notm}}.
 
-* Es generiert die Konfiguration für die gebundenen Services, wenn die angegebene Datei 'server.xml' keine Konfigurationszeilengruppen für die gebundenen Services enthält.
-* Es aktualisiert die Konfiguration für die gebundenen Services, wenn die angegebene Datei 'server.xml' Konfigurationszeilengruppen für die gebundenen Services enthält.
+Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen und an containerverwaltete Services binden, generiert das Liberty-Buildpack die erforderlichen Zeilengruppen der Datei server.xml für die gebundenen Services.
+
+Wenn Sie eine Datei server.xml bereitstellen und an containerverwaltete Services binden, generiert oder aktualisiert das Liberty-Buildpack die Konfigurationszeilengruppen.
+
+* Wenn die bereitgestellte Datei server.xml keine Konfigurationszeilengruppen für die gebundenen Services enthält, generiert Liberty die Konfiguration für die gebundenen Services.
+* Wenn die bereitgestellte Datei server.xml Konfigurationszeilengruppen für die gebundenen Services enthält, aktualisiert Liberty die Konfiguration für die gebundenen Services.
 
 Weitere Einzelheiten finden Sie in der Dokumentation zum gebundenen Servicetyp.
 
@@ -69,67 +67,138 @@ Weitere Einzelheiten finden Sie in der Dokumentation zum gebundenen Servicetyp.
 
 In manchen Fällen soll das Liberty-Buildpack die gebundenen Services vielleicht nicht automatisch konfigurieren. Betrachten Sie die folgenden Szenarios:
 
-* Eine Anwendung verwendet MongoDB, die Verbindung zur Datenbank soll aber von der Anwendung direkt verwaltet werden. Die Anwendung enthält die erforderliche Clienttreiber-JAR-Datei. Das Liberty-Buildpack soll den Mongo-Service nicht automatisch konfigurieren.
-* Der Benutzer gibt die Datei 'server.xml' und die Konfigurationszeilengruppen für die SQLDB-Instanz an, da eine vom Standard abweichende Datenquellenkonfiguration erforderlich ist. Das Liberty-Buildpack soll die Datei 'server.xml' zwar nicht aktualisieren, aber dennoch sicherstellen, dass die entsprechende unterstützende Software installiert wird.
+* Meine Anwendung verwendet *dashDB*, die Verbindung zur Datenbank soll aber von der Anwendung direkt verwaltet werden. Die Anwendung enthält die erforderliche Clienttreiber-JAR-Datei. Das Liberty-Buildpack soll den *dashDB*-Service nicht automatisch konfigurieren.
+* Ich stelle eine Datei server.xml bereit und habe die Konfigurationszeilengruppen für die *cloudant*-Instanz bereitgestellt, da ich eine vom Standard abweichende Datenquellenkonfiguration benötige. Das Liberty-Buildpack soll die Datei server.xml zwar nicht aktualisieren, aber dennoch sicherstellen, dass die entsprechende unterstützende Software installiert wird.
 
-Sie können die automatische Servicekonfiguration über die Umgebungsvariable 'services_autoconfig_excludes' ausschließen. Diese Umgebungsvariable kann in eine Datei 'manifest.yml' eingefügt oder mit dem cf-Client definiert werden.
+Sie können die automatische Servicekonfiguration über die Umgebungsvariable services_autoconfig_excludes ausschließen. Diese Umgebungsvariable kann in eine Datei manifest.yml eingefügt oder mit dem cf-Client definiert werden.
 
-Das Ausschließen der automatischen Konfiguration kann pro Servicetyp erfolgen. Sie können die Konfiguration entweder vollständig (siehe Mongo-Szenario) oder nur die Konfigurationsaktualisierungen für die Datei 'server.xml' (siehe SQLDB-Szenario) ausschließen. Der Wert, den Sie für die Umgebungsvariable 'services_autoconfig_excludes' angeben, ist eine Zeichenfolge, für die Folgendes gilt:
+Das Ausschließen der automatischen Konfiguration kann pro Servicetyp erfolgen. Sie können die Konfiguration vollständig ausschließen (wie im *dashDB*-Szenario) oder nur die Konfigurationsaktualisierungen in der Datei server.xml ausschließen (wie im *cloudant*-Szenario). Der Wert, den Sie für die Umgebungsvariable services_autoconfig_excludes angeben, ist eine Zeichenfolge, für die Folgendes gilt:
 
 * Die Zeichenfolge kann Opt-out-Spezifikationen für einen oder mehrere Services enthalten.
-* Die Opt-out-Spezifikation für einen bestimmten Service lautet 'service_type=option'. Dabei gilt Folgendes:
-  * 'service_type' ist die Bezeichnung für den Service gemäß VCAP_SERVICES.
-  * Die Option lautet entweder 'all' oder 'config'.
+* Die Opt-out-Spezifikation für einen bestimmten Service lautet service_type=option'. Dabei gilt Folgendes:
+  * 'service_type ist die Bezeichnung für den Service gemäß VCAP_SERVICES.
+  * Die Option lautet entweder all oder config'.
 * Wenn die Zeichenfolge eine Opt-out-Spezifikation für mehrere Services enthält, müssen die einzelnen Opt-out-Spezifikationen durch ein einzelnes Leerzeichen voneinander getrennt werden.
 
-Formal sieht die Syntax der Zeichenfolge wie folgt aus.
+Im Folgenden ist ein Beispiel für die Grammatik der Zeichenfolge services_autoconfig_excludes aufgeführt:
 
 ```
-    Opt-out-Zeichenfolge :: <Spezifikation_des_Servicetyps[<Begrenzer>Spezifikation_des_Servicetyps]*
-    <Spezifikation_des_Servicetyps> :: <Servicetyp>=<option>
-    <Servicetyp> :: Servicetyp (Servicebezeichnung gemäß VCAP_SERVICES)
+    Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
+    <service_type_specification> :: <service_type>=<option>
+    <service_type> :: service type (service label as it appears in VCAP_SERVICES)
     <option> :: all | config
-    <Begrenzer> :: ein Leerzeichen
+    <delimiter> :: one white space character
 ```
 {: codeblock}
 
 **Wichtig**: Der angegebene Servicetyp muss mit der in der Umgebungsvariablen VCAP_SERVICES enthaltenen Servicebezeichnung übereinstimmen. Leerzeichen sind nicht zulässig.
-**Wichtig**: Innerhalb von ```<Spezifikation_des_Servicetyps>``` ist kein Leerzeichen zulässig. Leerzeichen dürfen nur verwendet werden, um mehrere Vorkommen von ```<Spezifikation_des_Servicetyps>``` voneinander zu trennen.
+**Wichtig**: Innerhalb von ```<service_type_specification>``` ist kein Leerzeichen zulässig. Leerzeichen dürfen nur verwendet werden, um mehrere ```<service_type_specification>```-Instanzen voneinander zu trennen.
 
-Über die Option 'all' können alle automatischen Konfigurationsaktionen für einen Service ausgeschlossen werden (siehe Mongo-Szenario oben). Über die Option 'config' können Sie angeben, dass nur die Konfigurationsaktualisierungsaktionen ausgeschlossen werden sollen (siehe SQLDB-Szenario oben).
+Verwenden Sie die Option **all**, um alle automatischen Konfigurationsaktionen für einen Service auszuschließen, wie im obigen *dashDB*-Szenario. Verwenden Sie die Option **config**, um nur die Konfigurationsaktualisierungsaktionen auszuschließen, wie im obigen *cloudant*-Szenario.
 
-Beispiele für Opt-out-Spezifikationen in der Datei 'manifest.yml' für das Mongo- und das SQLDB-Szenario.
+Im Folgenden einige Opt-out-Beispielspezifikationen in einer Datei manifest.yml für das *dashDB*- und *cloudant*-Szenario.
 
 ```
     env:
-      services_autoconfig_excludes: mongodb-2.2=all
+      services_autoconfig_excludes: dashDB=all
 
     env:
-      services_autoconfig_excludes: sqldb=config
+      services_autoconfig_excludes: cloudant=config
 
     env:
-      services_autoconfig_excludes: sqldb=config mongodb-2.2=all
+      services_autoconfig_excludes: cloudant=config dashDB=all
 ```
 {: codeblock}
 
-Beispiele für die Konfiguration der Umgebungsvariablen 'services_autoconfig_excludes' für die Anwendung 'myapp' über die Befehlszeilenschnittstelle:
+Beispiele für die Konfiguration der Umgebungsvariablen services_autoconfig_excludes für die Anwendung myapp über die Befehlszeilenschnittstelle:
 
 ```
-    $ cf set-env myapp services_autoconfig_excludes sqldb=config
-    $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
+    cf set-env myapp services_autoconfig_excludes cloudant=config
+    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+```
+{: codeblock}
+
+Zum Suchen von *label* für einen Service in VCAP_SERVICES setzen Sie einen Befehl wie im folgenden Beispiel ab:
+
+```
+    cf env myapp
+```
+{: codeblock}
+
+Die Ausgabe enthält Text wie den folgenden, bei dem das Feld **label** den Wert **elephantsql** enthält:
+
+```
+   "elephantsql": [
+   {
+      "credentials": {
+      "max_conns": "5",
+      "uri":      "..."
+   },
+   "label": "elephantsql",
+
 ```
 {: codeblock}
 
 ## Servicekonfiguration überschreiben
 {: #override_service_config}
 
-In einigen Fällen ist es möglicherweise wünschenswert, die Standardkonfiguration für einen Service, die von der automatischen Konfiguration erstellt wurde, zu überschreiben.
-Dies kann mithilfe der Umgebungsvariablen **LBP_SERVICE_CONFIG_xxxx** erfolgen, wobei 'xxxx' der Name des Service in Großbuchstaben ist.  Um beispielsweise die Standardversion des Service *mysql* zu überschreiben und diesen auf Version 1.4.+ festzulegen, geben Sie einen Befehl wie den folgenden aus:
+In einigen Fällen ist es möglicherweise sinnvoll, die Standardkonfiguration für einen Service, die von der automatischen Konfiguration erstellt wurde, zu überschreiben.
+Sie können die Umgebungsvariable **LBP_SERVICE_CONFIG_xxxx** verwenden, um eine Servicekonfiguration zu überschreiben. In den folgenden Tabellen sind die vollständigen Namen der Umgebungsvariablen und eine Beispielsyntax für ihre Überschreibung aufgeführt. Soll beispielsweise die Standardversion des Service *elephantSQL* überschrieben und auf die Version 8.3.4.+ gesetzt werden, setzen Sie einen Befehl wie den folgenden ab:
 
 ```
-    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
+
+Diese Tabelle zeigt die Zuordnung von **service_type** zu den Namen der Umgebungsvariablen **LBP_SERVICE_CONFIG_xxxx**.
+
+<table>
+<tr>
+<th align="left">service_type</th>
+<th align="left">Umgebungsvariablenname</th>
+</tr>
+
+<tr>
+<td>Auto-Scaling</td>
+<td>LBP_SERVICE_CONFIG_AUTO-SCALING</td>
+</tr>
+
+<tr>
+<td>cleardb</td>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+</tr>
+
+<tr>
+<td>cloudantNoSQLDB</td>
+<td>LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB</td>
+</tr>
+
+<tr>
+<td>compose-for-mongodb</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MONGO</td>
+</tr>
+
+<tr>
+<td>compose-for-mysql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MYSQL</td>
+</tr>
+
+<tr>
+<td>compose-for-postgresql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+</tr>
+
+<tr>
+<td>elephantsql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+</tr>
+
+<tr>
+<td>SingleSignOn</td>
+<td>LBP_SERVICE_CONFIG_SINGLESIGNON</td>
+</tr>
+</table>
+
 
 Die folgende Tabelle zeigt die Syntax für das Überschreiben einiger Servicekonfigurationsoptionen:
 
@@ -145,6 +214,16 @@ Die folgende Tabelle zeigt die Syntax für das Überschreiben einiger Servicekon
 </tr>
 
 <tr>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+
+<tr>
 <td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 <td>"{driver: { version: x.y.z }}"</td>
 </tr>
@@ -157,4 +236,4 @@ Die folgende Tabelle zeigt die Syntax für das Überschreiben einiger Servicekon
 ## Allgemein
 {: #general notoc}
 * [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Übersicht über das Liberty-Profil](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

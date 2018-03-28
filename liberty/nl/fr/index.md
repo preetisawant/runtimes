@@ -28,7 +28,7 @@ Le pack de construction Liberty est utilisé lorsque les types d'applications su
 
 ## Application de démarrage
 {: #starter_application}
-{{site.data.keyword.Bluemix_notm}} fournit plusieurs applications de démarrage Liberty.  Les applications de démarrage Liberty sont des applications Liberty simples qui fournissent un modèle que vous pouvez utiliser. Vous pouvez expérimenter ces applications de démarrage, puis effectuer des changements et les pousser vers l'environnement {{site.data.keyword.Bluemix_notm}}. Pour obtenir de l'aide sur l'utilisation des applications de démarrage, voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} fournit plusieurs applications de démarrage Liberty.  Les applications de démarrage Liberty sont des applications Liberty simples qui fournissent un modèle que vous pouvez utiliser. Vous pouvez expérimenter ces applications de démarrage, puis effectuer des changements et les pousser vers l'environnement {{site.data.keyword.Bluemix_notm}}.  Pour obtenir de l'aide sur l'utilisation des applications de démarrage, voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html).
 
 # rellinks
 {: #rellinks notoc}

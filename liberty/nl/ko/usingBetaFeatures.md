@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -21,16 +21,34 @@ Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로
 <table>
 <tr>
 <th align="left">기능</th>
-<th align="left">기능</th>
-<th align="left">기능</th>
-<th align="left">기능</th>
 </tr>
 
 <tr>
-<td>bluemixLogCollector-1.1</td>
-<td>httpWhiteboard-1.0</td>
-<td>logstashCollector-1.1</td>
-<td>osgiBundle-1.0</td>
+    <tr><td>appSecurity-3.0</tr></td>
+    <tr><td>audit-1.0</tr></td>
+    <tr><td>beanValidation-2.0</tr></td>
+    <tr><td>bluemixLogCollector-1.1</tr></td>
+    <tr><td>cdi-2.0</tr></td>
+    <tr><td>javaee-8.0</tr></td>
+    <tr><td>javaeeClient-8.0</tr></td>
+    <tr><td>jaxrs-2.1</tr></td>
+    <tr><td>jpa-2.2</tr></td>
+    <tr><td>jpaContainer-2.2</tr></td>
+    <tr><td>jsf-2.3</tr></td>
+    <tr><td>jsfContainer-2.2</tr></td>
+    <tr><td>jsonb-1.0</tr></td>
+    <tr><td>jsonbContainer-1.0</tr></td>
+    <tr><td>jsonp-1.1</tr></td>
+    <tr><td>jsonpContainer-1.1</tr></td>
+    <tr><td>logstashCollector-1.1</tr></td>
+    <tr><td>mpConfig-1.2</tr></td>
+    <tr><td>mpOpenAPI-1.0</tr></td>
+    <tr><td>mpRestClient-1.0</tr></td>
+    <tr><td>opentracing-1.0</tr></td>
+    <tr><td>servlet-4.0</tr></td>
+    <tr><td>validator-1.0</tr></td>
+    <tr><td>webProfile-8.0</tr></td>
+
 </tr>
 </table>
 
@@ -41,13 +59,13 @@ Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>bluemixLogCollector-1.1</feature>
+            <feature>mpOpenAPI-1.0</feature>
         </featureManager>
     </server>
 ```
 {: #codeblock}
 
-2.  **IBM_LIBERTY_BETA** 환경 변수를 **true**로 설정하십시오. 이 변수는 애플리케이션의 베타 기능을 설치하고 활성화하도록 Liberty 빌드팩에 지시합니다.  예:
+2.  **IBM_LIBERTY_BETA** 환경 변수를 **true**로 설정하십시오. 이 변수는 애플리케이션의 베타 기능을 설치하고 활성화하도록 Liberty 빌드팩에 지시합니다.  예를 들어, 다음과 같습니다.
   * cf 명령행 도구 사용:
 ```
        $ cf set-env <yourappname> IBM_LIBERTY_BETA true
@@ -60,7 +78,7 @@ Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로
           IBM_LIBERTY_BETA: "true"
 ```
 
-3. **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"**로 설정하십시오. 이 변수는 베타 기능을 지원하는 [Liberty 월별 런타임](buildpackDefaults.html#liberty_versions)을 사용으로 설정합니다. 예:
+3. **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"**로 설정하십시오. 이 변수는 베타 기능을 지원하는 [Liberty 월별 런타임](buildpackDefaults.html#liberty_versions)을 사용으로 설정합니다. 예를 들어, 다음과 같습니다.
   * cf 명령행 도구 사용:
 ```
        $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
@@ -77,9 +95,9 @@ Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로
 
 {: #codeblock}
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
-* [Liberty 런타임](index.html)
-* [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty for Java 런타임](index.html)
+* [Liberty 개요](https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html)

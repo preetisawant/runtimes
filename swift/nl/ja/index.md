@@ -12,7 +12,8 @@ lastupdated: "2017-11-08"
 # IBM Cloud Runtime for Swift
 {: #swift_runtime}
 
-{{site.data.keyword.Bluemix}} 上の Runtime for Swift は、[{{site.data.keyword.Bluemix_notm}} buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack) (つまり swift_buildpack) を採用しています。このビルドパックは、Swift アプリケーションのための完全なランタイム環境を提供します。
+{{site.data.keyword.Bluemix}} 上の Runtime for Swift は、[{{site.data.keyword.Bluemix_notm}} buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack) (つまり swift_buildpack) を採用しています。
+このビルドパックは、Swift アプリケーションのための完全なランタイム環境を提供します。
 {: shortdesc}
 
 ## スターター・アプリケーション
@@ -38,7 +39,7 @@ Kitura スターターから、またはより一般的な方法で、アプリ�
 ## ランタイム・バージョン
 {: #runtime_versions}
 
-デフォルトでは、{{site.data.keyword.Bluemix_notm}} 上でホストされる Runtime for Swift (swift_buildpack) は、最新の GA バージョンの Swift バイナリーを使用します。 これは、{{site.data.keyword.IBM_notm}} によって直接サポートされる唯一のバージョンの Swift であり、アプリケーションで使用するために推奨されるバージョンです。swift_buildpack の[最新のリリース情報](https://github.com/IBM-Swift/swift-buildpack/releases)を確認することで、このサポートされるバージョンを判別することができます。 ビルドパックには、その [manifest.yml](https://github.com/IBM-Swift/swift-buildpack/blob/master/manifest.yml) ファイル内に示されているように、他の Swift バージョンがリストされることがあります。 これらの一般的であるにもかかわらずサポートされていないバージョンの Swift はビルドパック内に事前キャッシュされているので、プロビジョンの時間が短くなります。
+デフォルトでは、{{site.data.keyword.Bluemix_notm}} 上でホストされる Runtime for Swift (swift_buildpack) は、最新の GA バージョンの Swift バイナリーを使用します。 これは、{{site.data.keyword.IBM_notm}} によって直接サポートされる唯一のバージョンの Swift であり、アプリケーションで使用するために推奨されるバージョンです。 swift_buildpack の[最新のリリース情報](https://github.com/IBM-Swift/swift-buildpack/releases)を確認することで、このサポートされるバージョンを判別することができます。 ビルドパックには、その [manifest.yml](https://github.com/IBM-Swift/swift-buildpack/blob/master/manifest.yml) ファイル内に示されているように、他の Swift バージョンがリストされることがあります。 これらの一般的であるにもかかわらずサポートされていないバージョンの Swift はビルドパック内に事前キャッシュされているので、プロビジョンの時間が短くなります。
 
 アプリケーション用に {{site.data.keyword.Bluemix_notm}} 上で別のバージョンの Swift を使用する場合は、リポジトリーのルートにある `.swift-version` ファイルを使用して、バージョンを指定できます。 この `.swift-version` ファイルは、swift_buildpack によって使用される Swift バージョンを定義します。
 

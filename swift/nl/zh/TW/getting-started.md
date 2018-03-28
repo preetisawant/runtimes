@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-15"
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -56,7 +56,7 @@ swift build
 
 順利編譯應用程式之後，即可執行 Swift 編譯器所產生的執行檔：
 ```
-.build/debug/kitura-helloworld
+.build/debug/get-started-swift
 ```
 {: pre}
 
@@ -115,16 +115,16 @@ cf api <API-endpoint>
 登入 {{site.data.keyword.Bluemix_notm}} 帳戶
 
    ```
-cf login
-```
+ cf login
+   ```
    {: pre}
 
 如果您無法使用 `cf login` 或 `bx login` 指令登入，因為您已有聯合使用者 ID，請使用 `cf login --sso` 或 `bx login --sso` 指令，用您的單一登入 ID 登入。若要進一步瞭解，請參閱[使用聯合 ID 登入](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)。
 
 從 *get-started-swift* 目錄中，將應用程式推送至 {{site.data.keyword.Bluemix_notm}}
    ```
-cf push
-```
+ cf push
+   ```
    {: pre}
 
 這可能需要一分鐘。如果部署程序發生錯誤，則您可以使用指令 `cf logs <Your-App-Name> --recent` 進行疑難排解。
@@ -136,11 +136,10 @@ cf push
 
 接下來，我們會將 NoSQL Database 新增至此應用程式並設定應用程式，因此，它可以在本端及 {{site.data.keyword.Bluemix_notm}} 上執行。
 
-1. 在瀏覽器中，登入 {{site.data.keyword.Bluemix_notm}}。瀏覽至「儀表板」。按一下「名稱」直欄中的應用程式名稱，以選取該應用程式。
-2. 依序按一下「連線」及「建立連線」。
-3. 在「資料及分析」區段中，選取 `Cloudant NoSQL DB`。
-4. 選取定價方案。{{site.data.keyword.Bluemix_notm}} 針對雲端服務的精選集合提供了免費的「精簡」方案，容量足以讓您開始使用。
-5. 系統提示時，請選取「重新編譯打包」。{{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
+1. 在瀏覽器中，登入 {{site.data.keyword.Bluemix_notm}}，並移至「儀表板」。選取**建立資源**。
+2. 選擇**資料及分析**區段，然後選取 **Cloudant NoSQL DB** 並建立服務。
+3. 移至**連線**視圖並選取應用程式，然後**建立連線**。
+4. 系統提示時，請選取**重新編譯打包**。{{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
 
 環境變數可讓您分開部署設定與原始碼。例如，您可以將資料庫密碼儲存在原始碼中所參考的環境變數內，而不要將資料庫密碼寫在程式中。[進一步瞭解...](/docs/manageapps/depapps.html#app_env)
 {: tip}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -24,17 +24,17 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>[앱 관리 유틸리티](/docs/manageapps/app_mng.html)를 사용으로 설정합니다.</td>
+<td>[App Management 유틸리티](/docs/manageapps/app_mng.html)를 사용으로 설정합니다.</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>[앱 관리 유틸리티](/docs/manageapps/app_mng.html)를 설치합니다.</td>
+<td>[App Management 유틸리티](/docs/manageapps/app_mng.html)를 설치합니다.</td>
 </tr>
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>[Liberty 베타 기능](usingBetaFeatures.html)을 사용으로 설정합니다.</td>
+<td>[Liberty 베타 기능](usingBetaFeatures.html)을 사용합니다. </td>
 </tr>
 
 <tr>
@@ -64,7 +64,7 @@ Java용 Liberty에서 지원하는 환경 변수
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>Spring Auto-Reconfiguration 프레임워크를 사용하지 않습니다. 사용 안함으로 설정하려면 값을 enabled: false로 설정하십시오. </td>
+<td>[Spring Auto-Reconfiguration 프레임워크](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-spring_auto_reconfiguration.md)를 사용하지 않습니다. 사용 안함으로 설정하려면 값을 enabled: false로 설정하십시오. </td>
 </tr>
 
 <tr>
@@ -103,9 +103,9 @@ Java용 Liberty에서 지원하는 환경 변수
 </tr>
 </table>
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

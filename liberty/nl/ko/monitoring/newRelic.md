@@ -99,14 +99,14 @@ New Relic 계정과 라이센스 키가 이미 있으면 "사용자 제공 서�
 
 3. New Relic 대시보드에 액세스하여 애플리케이션 메트릭을 확인하십시오.
 
-New Relic 서비스의 자동 구성은 빌드팩 프레임워크를 통해 제공되는 컨테이너 관리 서비스이므로 다른 서비스의 자동 구성과 다릅니다.  프레임워크를 통해 제공된다는 점에서, 이 서비스의 자동 구성은 다음 3가지 측면에서 다른 서비스들과 차이가 납니다.
+New Relic 서비스의 자동 구성은 빌드팩 프레임워크를 통해 제공되는 컨테이너 관리 서비스이므로 다른 서비스의 자동 구성과 다릅니다. 프레임워크를 통해 제공된다는 점에서, 이 서비스의 자동 구성은 다음 3가지 측면에서 다른 서비스들과 차이가 납니다.
 * 옵트 아웃이 옵션이 아닙니다.
 * 서비스 통합에 New Relic의 에이전트인 Java 에이전트가 사용됩니다. 따라서, server.xml 파일의 클라우드 변수가 아니라 Java 옵션을 통해 구성됩니다.
 * 구성에 VCAP_SERVICES 및 VCAP_APPLICATION이 사용됩니다.
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

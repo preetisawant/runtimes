@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -64,7 +64,7 @@ Liberty for Java 支持的环境变量。
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION</td>
-<td>禁用 Spring 自动重新配置框架。要禁用，请将值设置为 enabled: false。</td>
+<td>禁用 [Spring 自动重新配置框架](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-spring_auto_reconfiguration.md)。要禁用，请将值设置为 enabled: false。</td>
 </tr>
 
 <tr>

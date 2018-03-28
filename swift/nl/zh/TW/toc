@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Swift" audience="runtime"}
+{: .toc subcollection="Swift" audience="runtime" href="/docs/runtimes/swift/getting-started.html"}}
 Swift
 
     {: .navgroup id="learn"}
@@ -17,10 +17,11 @@ Swift
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [使用 Proxy](../../manageapps/workingWithProxy.html)
+    [使用 Proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     runtimeVersions.md
-    [建置套件支援陳述式](../../manageapps/buildpackSupport.html)
+    [建置套件支援聲明](../common/buildpackSupport.html)
     {: .navgroup-end}

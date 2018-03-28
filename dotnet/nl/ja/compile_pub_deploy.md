@@ -52,11 +52,15 @@ applications:
   bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
+
+
 ポータブル・アプリケーションの場合、以下のディレクトリーからアプリケーションをプッシュできます。
 ```
   bin/<Debug|Release>/<framework>/publish
 ```
 {:codeblock}
+
+
 また、アプリケーションで manifest.yml ファイルを使用している場合は、manifest.yml でパブリッシュ出力フォルダーへのパスを指定できます。  これにより、アプリケーションをプッシュする際に、そのフォルダーに入る必要がなくなります。
 
 ## 複数のプロジェクトを含むアプリケーションのデプロイ

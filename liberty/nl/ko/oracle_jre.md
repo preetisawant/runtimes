@@ -12,7 +12,7 @@ lastupdated: "2017-10-26"
 # Oracle JRE 사용
 {: #using_oraacle_jre}
 
-선택한 경우 Oracle JRE로 {{site.data.keyword.Bluemix}}에서 Liberty 애플리케이션을 실행할 수 있습니다. 해당 작업을 수행하려면 다음을 수행해야 합니다.
+선택한 경우 Oracle JRE로 {{site.data.keyword.Bluemix}}에서 Liberty 애플리케이션을 실행할 수 있습니다.  해당 작업을 수행하려면 다음을 수행해야 합니다.
 * 빌드팩이 다운로드할 수 있는 소스 위치에서 JRE를 호스트합니다.
 * 호스트 JRE의 위치를 제공하는 `index.yml` 파일을 호스팅합니다.
 * 해당 JRE를 사용하도록 사용자의 애플리케이션을 구성합니다.
@@ -20,8 +20,8 @@ lastupdated: "2017-10-26"
 ## JRE 및 index.yml 호스트
 {: #hosting_jre}
 
-Oracle JRE 파일은 웹 서버에서 호스트되어야 하며, Liberty 빌드팩이 해당 서버에서 이를 다운로드할 수 있어야 합니다. 사용 가능한 서버 시설을 사용하여 {{site.data.keyword.Bluemix_notm}} 자체에서 이 파일을 호스팅하거나, 공용으로 사용 가능한 일부 위치에서 호스팅할 수 있습니다. 서버는 JRE 파일에 대한 세부사항을 지정하는 `index.yml` 파일로 구성되어야 합니다. 다음 단계를 완료하여 JRE 및 `index.yml` 파일을 호스팅하십시오.
-  1. Oracle JRE를 가져오십시오.  JRE는 Unix 64비트 OS용 버전이고 `tar.gz` 파일이어야 합니다.
+Oracle JRE 파일은 웹 서버에서 호스트되어야 하며, Liberty 빌드팩이 해당 서버에서 이를 다운로드할 수 있어야 합니다. 사용 가능한 서버 시설을 사용하여 {{site.data.keyword.Bluemix_notm}} 자체에서 이 파일을 호스팅하거나, 공용으로 사용 가능한 일부 위치에서 호스팅할 수 있습니다.  서버는 JRE 파일에 대한 세부사항을 지정하는 `index.yml` 파일로 구성되어야 합니다. 다음 단계를 완료하여 JRE 및 `index.yml` 파일을 호스팅하십시오.
+  1. Oracle JRE를 획득하십시오.  JRE는 Unix 64비트 OS용 버전이고 `tar.gz` 파일이어야 합니다.
   2. Liberty 빌드팩이 다운로드할 수 있는 소스 위치에서 JRE 파일을 호스트하십시오.
   3. 호스팅 위치에 `index.yml` 파일을 제공하는지 확인하십시오. `index.yml` 파일에는 Oracle JRE의 버전 ID(뒤에 콜론이 붙음)와 해당 JRE 파일 위치의 완전한 URL로 구성된 항목이 포함되어야 합니다. `index.yml`의 형식은 다음과 같습니다.
 ```
@@ -30,7 +30,7 @@ Oracle JRE 파일은 웹 서버에서 호스트되어야 하며, Liberty 빌드�
 ```
 {: codeblock}
 
-    * 예:
+    * 예를 들어, 다음과 같습니다.
     ```
        ---
        1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
@@ -72,9 +72,9 @@ JVM 환경 변수를 설정하려면 다음과 같은 명령을 실행합니다.
 ```
 {: codeblock}
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

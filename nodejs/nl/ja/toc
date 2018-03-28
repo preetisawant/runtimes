@@ -15,16 +15,16 @@ SDK for Node.js
     enforceHTTPS.md
 
     {: .topicgroup}
-    オフラインまたはプロキシーの処理
+    オフラインの処理またはプロキシーの処理
         offlineMode.md
-        [プロキシーの処理](../../manageapps/workingWithProxy.html)
+        [プロキシーの処理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
     fipsMode.md
-    [Liberty および Node.js アプリの管理](../../manageapps/app_mng.html)
+    [Liberty アプリケーションおよび Node.js アプリケーションの管理](../common/app_mng.html)
 
     {: .topicgroup}
     スターター・アプリケーションおよびビルドパック
@@ -36,6 +36,6 @@ SDK for Node.js
     ts_index.md
     updates.md
     availableVersions.md
-    [ビルドパックのサポート・ステートメント](../../manageapps/buildpackSupport.html)
+    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
 
     {: .navgroup-end}

@@ -18,7 +18,7 @@ lastupdated: "2017-10-27"
 * {{site.data.keyword.IBM_notm}} ha creado el paquete de compilación**sdk-for-nodejs** que es el paquete de compilación predeterminado que se utiliza para aplicaciones Node.js en {{site.data.keyword.Bluemix_notm}}.
 * **nodejs_buildpack** es un paquete de compilación de comunidad proporcionado por la comunidad de Cloud Foundry.
 
-El paquete de compilación **sdk-for-nodejs** tendrá precedencia sobre **nodejs_buildpack** en {{site.data.keyword.Bluemix_notm}}. Si desea utilizar **nodejs_buildpack** con la aplicación en lugar del paquete de compilación **sdk-for-nodejs**, debe especificar el paquete de compilación, por ejemplo, utilizando la opción -b con el mandato **cf push**.
+El paquete de compilación **sdk-for-nodejs** tendrá precedencia sobre **nodejs_buildpack** en {{site.data.keyword.Bluemix_notm}}. Si desea utilizar **nodejs_buildpack** con la aplicación en lugar del paquete de compilación **sdk-for-nodejs**, debe especificar el paquete de compilación, por ejemplo, utilizando la opción `-b` con el mandato **cf push**.
 
 Normalmente, están disponibles el paquete de compilación **sdk-for-nodejs** actual y una versión de nivel anterior.  Para ver todos los paquetes de compilación disponibles, utilice el mandato **cf buildpacks**.  Por ejemplo:
 

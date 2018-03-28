@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-15"
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -58,7 +58,7 @@ Esse comando pode levar alguns minutos para ser executado.
 
 Quando o aplicativo for compilado com sucesso, será possível executar o executável que foi gerado pelo compilador Swift:
 ```
-.build/debug/kitura-helloworld
+.build/debug/get-started-swift
 ```
 {: pre}
 
@@ -138,12 +138,10 @@ Quando a implementação for concluída, você deverá ver uma mensagem indicand
 
 Em seguida, vamos incluir um banco de dados NoSQL nesse aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
-1. Efetue login no {{site.data.keyword.Bluemix_notm}} em seu navegador. Procure o `Painel`. Selecione seu aplicativo clicando em seu nome na coluna `Nome`.
-2. Clique em `Conexões` e, em seguida, `Criar conexão`.
-3. Na seção `Data & Analytics`, selecione `Cloudant NoSQL DB`
-4. Selecione um plano de precificação. O {{site.data.keyword.Bluemix_notm}} oferece planos `Lite`
-gratuitos para uma coleção selecionada de seus serviços de nuvem com capacidade suficiente para você começar
-5. Selecione `Remontar` quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
+1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
+2. Escolha a seção **Dados e análise de dados**, selecione **Cloudant NoSQL DB** e crie seu serviço.
+3. Acesse a visualização **Conexões**, selecione seu aplicativo e, em seguida, **Criar conexão**.
+4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
 As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte. [Saiba mais...](/docs/manageapps/depapps.html#app_env)
 {: tip}
@@ -185,8 +183,7 @@ para analisar as variáveis de ambiente. [Saiba mais...](https://packagecatalog.
 O item temporário `cloudant` na configuração `cloudfoundry:cloudant` torna mais
 fácil ligar um serviço Cloudant fornecido pelo usuário ao seu aplicativo. Com a configuração
 `cloudfoundry:cloudant`, é possível criar um serviço Cloudant que inclui a sequência,
-`cloudant` em algum lugar no nome do serviço e liga-o ao seu aplicativo, sem editar o arquivo `config.json`.
-Se você modificar essa configuração e depois quiser usar um serviço Cloudant fornecido pelo usuário, será necessário editar a
+`cloudant` em algum lugar no nome do serviço e liga-o ao seu aplicativo, sem editar o arquivo `config.json`. Se você modificar essa configuração e depois quiser usar um serviço Cloudant fornecido pelo usuário, será necessário editar a
 configuração para `cloudfoundry:cloudant` ou definir `cloudfoundry:` com o nome do seu
 serviço fornecido pelo usuário.
 {: tip}
@@ -211,11 +208,13 @@ Visualize seu app em: http://localhost:8080. Os nomes que você inserir no app s
  Esse aplicativo de amostra usa o pacote Kitura-CouchDB para interagir com o Cloudant. [Saiba mais...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
 
  Faça quaisquer mudanças desejadas e reimplemente para {{site.data.keyword.Bluemix_notm}}!
+
  ```
  cf app push
  ```
 
  Visualize o aplicativo na URL listada na saída do comando push, por exemplo, *myUrl.mybluemix.net*.
+
 Lembre-se, se você não precisar do app em tempo real, pare-o para não incorrer em encargos inesperados.
 {: tip}
 

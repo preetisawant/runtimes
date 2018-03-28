@@ -31,6 +31,8 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS ![外�
 {: codeblock}
 如需相關資訊，請參閱這則 [Stack Overflow 貼文 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)。
 
+
+
 **附註**：*未* 同時支援[應用程式管理](/docs/manageapps/app_mng.html)及 FIPS_MODE。如果設定 BLUEMIX_APP_MGMT_ENABLE 環境變數，而且 FIPS_MODE 環境變數設為 true，將無法編譯打包應用程式。
 
 有各種方法可檢查 FIPS_MODE 的狀態：
@@ -56,6 +58,8 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS ![外�
 </li>
 
 <li> 若為 node.js 第 6 版及更高版本，您可以在與下面類似的程式碼中檢查 crypto.fips 所傳回的值：
+
+  
 
   <pre>
   console.log('crypto.fips== [' +crypto.fips +']');

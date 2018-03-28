@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -64,7 +64,9 @@ Variáveis de ambiente suportadas pelo Liberty for Java.
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>Desative a estrutura de Reconfiguração automática Spring. Para desativar, configure o valor para ativado: falso. </td>
+<td>Desative a
+[Estrutura
+de reconfiguração automática Spring](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-spring_auto_reconfiguration.md). Para desativar, configure o valor para ativado: falso. </td>
 </tr>
 
 <tr>

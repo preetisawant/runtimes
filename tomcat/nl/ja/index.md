@@ -27,7 +27,7 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} には、Tomcat スターター・アプリケーションが用意されています。  Tomcat スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルな Tomcat アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Tomcat スターター・アプリケーションが用意されています。  Tomcat スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルな Tomcat アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。 スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}
@@ -41,7 +41,8 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-現在の java_buildpack バージョンは v3.19 です。これには、デフォルトの Tomcat バージョン 8.0.45 とデフォルトの Java バージョン 1.8.0_141 が含まれています。詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13) を参照してください。
+現在の java_buildpack バージョンは v3.19 です。これには、デフォルトの Tomcat バージョン 8.0.45 とデフォルトの Java バージョン 1.8.0_141 が含まれています。
+詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13)を参照してください。
 
 ## HTTPS リダイレクト
 {: #https_redirect}

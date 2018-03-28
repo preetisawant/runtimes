@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Python" audience="runtime"}
+{: .toc subcollection="Python" audience="runtime" href="/docs/runtimes/python/getting-started.html"}}
 Python
 
     {: .navgroup id="learn"}
@@ -17,9 +17,10 @@ Python
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [프록시 작업](../../manageapps/workingWithProxy.html)
+    [프록시 작업](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [빌드팩 지원 설명](../../manageapps/buildpackSupport.html)
+    ts_index.md
+    [빌드팩 지원 구문](../common/buildpackSupport.html)
     {: .navgroup-end}

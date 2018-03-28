@@ -12,7 +12,7 @@ lastupdated: "2017-10-26"
 # 独自の JRE の使用
 {: #using_own_jre}
 
-独自の JRE を使用して {{site.data.keyword.Bluemix}} 上で Liberty アプリケーションを実行できます。JRE をアプリケーションで使用可能にするには、以下のことを実行する必要があります。
+独自の JRE を使用して {{site.data.keyword.Bluemix}} 上で Liberty アプリケーションを実行できます。 JRE をアプリケーションで使用可能にするには、以下のことを実行する必要があります。
 * ビルドパックによるダウンロードが可能なロケーションで JRE をホストする。
 * JRE のロケーションが指定されている `index.yml` ファイルをホストする。
 * JRE を使用するようにアプリケーションを構成する。
@@ -20,12 +20,12 @@ lastupdated: "2017-10-26"
 ## JRE および `index.yml` のホスト
 {: #hosting_jre}
 
-Liberty ビルドパックによるダウンロードが可能な Web サーバー上で JRE ファイルをホストする必要があります。このファイルは、使用可能ないずれかのサーバー機能を使用して {{site.data.keyword.Bluemix_notm}} 上でホストすることも、パブリックに使用可能なロケーションでホストすることもできます。サーバーは、JRE ファイルに関する詳細を指定する `index.yml` ファイルを使用して構成されている必要があります。
+Liberty ビルドパックによるダウンロードが可能な Web サーバー上で JRE ファイルをホストする必要があります。 このファイルは、使用可能ないずれかのサーバー機能を使用して {{site.data.keyword.Bluemix_notm}} 上でホストすることも、パブリックに使用可能なロケーションでホストすることもできます。 サーバーは、JRE ファイルに関する詳細を指定する `index.yml` ファイルを使用して構成されている必要があります。
 
 JRE および `index.yml` ファイルをホストするには、以下の手順を実行します。
   1. JRE を取得します。これは、UNIX 64 ビット OS で使用するためのバージョンである必要があり、`tar.gz` ファイルでなければなりません。
   2. Liberty ビルドパックによるダウンロードが可能なロケーションで JRE ファイルをホストします。
-  3. ホストするロケーションに `index.yml` ファイルを配置します。`index.yml` ファイルには、JRE のバージョン ID、その後にコロンと JRE ファイルのロケーションの完全な URL が入った項目が含まれている必要があります。
+  3. ホストするロケーションに `index.yml` ファイルを配置します。 `index.yml` ファイルには、JRE のバージョン ID、その後にコロンと JRE ファイルのロケーションの完全な URL が入った項目が含まれている必要があります。
     * `index.yml` ファイルで JRE バージョンを定義します。
 
     ```
@@ -34,7 +34,7 @@ JRE および `index.yml` ファイルをホストするには、以下の手順
     ```
     {: codeblock}
 
-    * JRE バージョン ID と JRE ファイルの完全なロケーションを含めます。例えば、次のように指定します。
+    * JRE バージョン ID と JRE ファイルの完全なロケーションを含めます。  例えば、次のように指定します。
 
     ```
     ---
@@ -45,7 +45,7 @@ JRE および `index.yml` ファイルをホストするには、以下の手順
 ## アプリケーションの構成
 {: #configure_app}
 
-代替の JRE を使用するようにビルドパックを構成するには、Liberty アプリケーションで 2 つの環境変数を設定する必要があります。`index.yml` ファイルのロケーションを指定するように **JBP_CONFIG_OPENJDK** を設定して、**JVM** 環境変数を *openjdk* に設定します。version-value ストリングの形式について詳しくは、[『Version Syntax and Ordering and Wildcards』![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/util-repositories.md){: new_window} に関する Cloud Foundry の資料を参照してください。
+代替の JRE を使用するようにビルドパックを構成するには、Liberty アプリケーションで 2 つの環境変数を設定する必要があります。 `index.yml` ファイルのロケーションを指定するように **JBP_CONFIG_OPENJDK** を設定して、**JVM** 環境変数を *openjdk* に設定します。 version-value ストリングの形式について詳しくは、[『Version Syntax and Ordering and Wildcards』![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/util-repositories.md){: new_window} に関する Cloud Foundry の資料を参照してください。
 
 **JBP_CONFIG_OPENJDK** 変数の値は、`index.yml` ファイルのロケーションと、index.yml ファイルから選択する JRE バージョンです。
 
@@ -60,7 +60,7 @@ $ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.blu
 ```
 {: codeblock}
 
-*repository_root* URL には `index.yml` は含まれていません。*repository_root* URL は、`index.yml` ファイル自体ではなく、このファイルを含むディレクトリー・レベルを指します。
+*repository_root* URL には `index.yml` は含まれていません。 *repository_root* URL は、`index.yml` ファイル自体ではなく、このファイルを含むディレクトリー・レベルを指します。
 
 JVM 環境変数を設定するには、次のコマンドを発行します。
 ```
@@ -73,7 +73,7 @@ $ cf se myApp JVM 'openjdk'
 ## 確認
 {: #confirmation}
 
-Liberty が予期した JRE を使用していることを確認するには、ステージング・ログを調べます。`index.yml` ファイルに示されているロケーションからサーバーがビルドパックをダウンロードしたことを示すメッセージを検索します。Liberty が予期した JRE を正常に使用している場合のログ出力の例については、次のスニペットを参照してください。
+Liberty が予期した JRE を使用していることを確認するには、ステージング・ログを調べます。 `index.yml` ファイルに示されているロケーションからサーバーがビルドパックをダウンロードしたことを示すメッセージを検索します。 Liberty が予期した JRE を正常に使用している場合のログ出力の例については、次のスニペットを参照してください。
 ```
  -----> Downloading OpenJdk 1.8.0_91 from
   https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz (6.2s)

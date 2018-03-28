@@ -25,7 +25,7 @@ lastupdated: "2017-10-25"
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} には、ASP.NET Core スターター・アプリケーションが用意されています。  ASP.NET Core スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルなアプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、ASP.NET Core スターター・アプリケーションが用意されています。  ASP.NET Core スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルなアプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
 
 # 関連リンク
 {: #rellinks notoc}

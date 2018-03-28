@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-26"
+  years: 2016, 2017, 2018
+lastupdated: "2018-01-10"
 
 ---
 
@@ -11,45 +11,63 @@ lastupdated: "2017-10-26"
 {:codeblock: .codeblock}
 
 
-# Travailler en mode hors ligne pour node.js
+# Travailler en mode hors ligne pour Node.js
 {: #offline_mode}
 
-Quand une application node.js est envoyée par push vers {{site.data.keyword.Bluemix}}, le kit SDK pour le pack de construction Node.js télécharge des artefacts depuis des ressources externes (modules de noeuds depuis NPM, par exemple).  Dans certaines
-situations, comme avec [site.data.keyword.Bluemix_dedicated_notm](/docs/dedicated/index.html#dedicated) et
-[Bluemix_local_notm](/docs/local/index.html#local), vous pouvez vouloir ne pas accéder à des sites externes à {{site.data.keyword.Bluemix_notm}}, ou préférer avoir un contrôle plus explicite sur ces derniers.  
+Quand une application Node.js est poussée vers {{site.data.keyword.Bluemix}}, le pack de construction
+SDK for Node.js télécharge les artefacts depuis des ressources externes telles que les modules Node de NPM.
+Dans certaines situations, par exemple avec [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), vous pouvez personnaliser l'accès aux sites
+externes à {{site.data.keyword.Bluemix_notm}}.  
 {: shortdesc}
 
-Les sites externes accessibles au pack de construction node.js sont répertoriés ci-dessous.  Dans les environnements
-[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
-[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) {{site.data.keyword.Bluemix_notm}}, ces sites peuvent avoir besoin d'être mis en *liste blanche*.
+Le pack de construction Node.js peut accéder aux sites externes suivants.
+Il est possible que vous deviez *mettre sur liste blanche* ces sites dans les
+environnements [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) {{site.data.keyword.Bluemix_notm}}.
+
 
 * http://nodejs.org/ peut être utilisé pour déterminer les versions du moteur de noeud disponibles.
-* https://s3pository.heroku.com sert à extraire les versions du moteur de noeud non incluses dans le pack de construction.
+* https://s3pository.heroku.com sert à extraire les versions du moteur Node non incluses dans le pack de construction.
 *  https://www.npmjs.com/package/npm et https://semver.herokuapp.com sont utilisés pour extraire les versions de npm non incluses dans le pack de construction.
 * https://iojs.org permet d'extraire une version antérieure d'un noeud qui n'est pas contenue dans le pack de construction ou non disponible sur https://semver.herokuapp.com.
 * https://registry.npmjs.org est utilisé pour extraire des modules de noeud comme express.
 
-Pour réduire l'ensemble des sites mis en liste blanche, configurez vos applications de noeud pour utiliser une version de moteur de noeud qui est incluse  dans le pack de construction du kit SDK pour Node.js.  Voir [Dernières mises à jour](./updates.html) pour connaître l'ensemble des versions de moteur de noeud incluses dans le pack de construction.  Si vous procédez ainsi, seul le site https://registry.npmjs.org sera requis pour télécharger les modules de noeud.
+Pour minimiser l'ensemble de sites mis en liste blanche, configurez vos applications pour utiliser une version du moteur Node qui
+soit incluse dans le pack de construction de SDK for Node.js.
+Consultez [Dernières mises à jour](./updates.html) pour connaître l'ensemble des versions de moteur Node incluses dans le pack de construction.
+Si vous configurez votre application de telle sorte qu'elle utilise ces versions de moteur Node, seul le site https://registry.npmjs.org est nécessaire au téléchargement des modules.
 
-Sachez que quand de nouvelles versions du pack de construction du kit SDK pour Node.js sont installées, l'ensemble des versions de moteur de noeud disponibles est mis au niveau des nouvelles versions,  ce qui risque de rendre nécessaire une reconfiguration de votre application de noeud pour spécifier une nouvelle version du moteur de noeud.
+Sachez que quand de nouvelles versions du pack de construction de SDK for Node.js sont installées, l'ensemble des versions de moteur
+est souvent remplacé par un ensemble de versions plus récentes. Il est possible que vous deviez
+reconfigurer votre application pour spécifier une version plus récente du moteur Node incluse dans le pack de construction.
 
 
 ## Applications hors ligne
 {: #offline_applications}
 
-Pour éliminer le besoin d'accéder à https://registry.npmjs.org, vous pouvez inclure dans votre application tous les modules de noeud dont cette dernière a besoin.  Pour ce faire, exécutez **npm install** pour tous les modules requis par votre application et incluez le répertoire *node_modules* au sein de votre application envoyée par push.
+Pour éliminer le besoin d'accéder à https://registry.npmjs.org, vous pouvez inclure dans votre application tous les modules Node dont cette dernière a besoin.
+Pour ce faire, exécutez `npm install` pour tous les modules requis par
+votre application et incluez le répertoire *node_modules* résultant dans
+votre application poussée.
 
-Notez que vos dépendances peuvent avoir des dépendances qui, elles mêmes, auront des dépendances et ainsi de suite, mais package.json ne contient que les dépendances de niveau supérieur. Si l'une des dépendances utilise une plage de package.json et qu'une nouvelle version de celle-ci est publiée, les modules de votre répertoire node_modules peuvent devenir obsolètes. *Shrinkwrap* vous permet de verrouiller toutes les versions de dépendances afin d'empêcher que cela ne se produise.  Pour utiliser shrinkwrap, démarrez avec un répertoire node_modules propre ou vide puis,  dans le répertoire racine de votre projet, exécutez :
-0. npm install
-1. npm dedupe
-2. npm shrinkwrap
 
-Il est possible que le fichier *package.json* en soit modifié et que le fichier *npm-shrinkwrap.json* soit ajouté à votre répertoire racine.
-Dès que vous effectuez un changement dans les dépendances du fichier *package.json*, répétez les étapes *dedupe* et *shringwrap*.
+Vos dépendances peuvent avoir des dépendances qui, elles mêmes, auront
+des dépendances et ainsi de suite. Cependant, `package.json` ne contient que les dépendances du
+premier niveau.
+Si l'une des dépendances utilise une plage de package.json et qu'une nouvelle version de celle-ci est publiée, les modules de votre répertoire node_modules peuvent devenir obsolètes. *Shrinkwrap* vous permet de verrouiller toutes les versions de dépendances afin d'empêcher que cela ne se produise.  Pour utiliser shrinkwrap, démarrez avec un répertoire `node_modules` propre ou vide. Ensuite, dans le répertoire racine de votre projet, exécutez :
+
+
+1. ```npm install```
+1. ```npm dedupe```
+2. ```npm shrinkwrap```
+
+Il est possible que le fichier `package.json` en soit modifié et que le fichier `npm-shrinkwrap.json` soit ajouté à votre répertoire racine.
+Dès que vous effectuez un changement dans les dépendances du fichier `package.json`, répétez les étapes `npm dedupe` et `shringwrap`.
 
 ## Utilisation d'un proxy
 {: #working_with_proxy}
 
-Dans certains environnements, comme [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
-[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), un proxy peut être configuré. Voir
+Dans certains environnements tels que [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), un proxy peut être configuré. Consultez
 [Utilisation d'un proxy](/docs/manageapps/workingWithProxy.html) pour plus de détails.

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime"}
+{: .toc subcollection="liberty" audience="runtime" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -37,7 +37,7 @@ Liberty for Java
     {: .topicgroup}
     오프라인 작업 또는 프록시 작업
         offlineMode.md
-        [프록시 작업](../../manageapps/workingWithProxy.html)
+        [프록시 작업](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -52,12 +52,12 @@ Liberty for Java
         [커뮤니티 빌드팩 사용](../../cfapps/byob.html)
 
     buildpackDefaults.md
-    [Liberty 및 Node.js 앱 관리](../../manageapps/app_mng.html)
+    [Liberty 및 Node.js 앱 관리](../common/app_mng.html)
     [IBM Monitoring and Analytics 시작하기](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
-    [빌드팩 지원 설명](../../manageapps/buildpackSupport.html)
+    [빌드팩 지원 구문](../common/buildpackSupport.html)
     {: .navgroup-end}

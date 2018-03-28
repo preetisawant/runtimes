@@ -45,8 +45,7 @@ Conclua as etapas a seguir para hospedar o JRE e o arquivo `index.yml`:
 ## Configure o app
 {: #configure_app}
 
-Deve-se configurar as variáveis de ambiente no aplicativo Liberty para configurar o buildpack para usar um JRE alternativo. 
-Configure o **JBP_CONFIG_OPENJDK** para identificar o local do arquivo `index.yml` e configure a variável de ambiente **JVM** para *openjdk*. Para obter mais informações sobre o formato para sequências de valor de versão, consulte a documentação do Cloud Foundry no [Sintaxe da versão e ordenação e curingas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/util-repositories.md){: new_window}.
+Deve-se configurar as variáveis de ambiente no aplicativo Liberty para configurar o buildpack para usar um JRE alternativo. Configure o **JBP_CONFIG_OPENJDK** para identificar o local do arquivo `index.yml` e configure a variável de ambiente **JVM** para *openjdk*. Para obter mais informações sobre o formato para sequências de valor de versão, consulte a documentação do Cloud Foundry no [Sintaxe da versão e ordenação e curingas ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/util-repositories.md){: new_window}.
 
 O valor para a variável **JBP_CONFIG_OPENJDK** é o local do arquivo `index.yml` e a versão do JRE da qual escolher o arquivo index.yml.
 

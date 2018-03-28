@@ -17,14 +17,14 @@ SDK for Node.js
     {: .topicgroup}
     脱机工作或使用代理
         offlineMode.md
-        [使用代理](../../manageapps/workingWithProxy.html)
+        [使用代理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
     fipsMode.md
-    [管理 Liberty 和 Node.js 应用程序](../../manageapps/app_mng.html)
+    [管理 Liberty 和 Node.js 应用程序](../common/app_mng.html)
 
     {: .topicgroup}
     入门模板应用程序和 buildpack
@@ -36,6 +36,6 @@ SDK for Node.js
     ts_index.md
     updates.md
     availableVersions.md
-    [Buildpack 支持语句](../../manageapps/buildpackSupport.html)
+    [Buildpack 支持语句](../common/buildpackSupport.html)
 
     {: .navgroup-end}

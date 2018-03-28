@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -34,7 +34,7 @@ Von Liberty for Java unterstützte Umgebungsvariablen
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>Zum Aktivieren von [Liberty-Beta-Features/](usingBetaFeatures.html).</td>
+<td>Zum Aktivieren von [Liberty-Beta-Features](usingBetaFeatures.html)</td>
 </tr>
 
 <tr>
@@ -64,7 +64,7 @@ Von Liberty for Java unterstützte Umgebungsvariablen
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>Zum Inaktivieren der automatischen Neukonfiguration durch das Framework Spring. Zum Inaktivieren legen Sie den Wert auf 'enabled: false' fest. </td>
+<td>Zum Inaktivieren der [automatischen Neukonfiguration durch das Framework Spring](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-spring_auto_reconfiguration.md). Zum Inaktivieren legen Sie den Wert auf 'enabled: false' fest. </td>
 </tr>
 
 <tr>

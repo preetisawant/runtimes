@@ -13,8 +13,7 @@ lastupdated: "2017-10-26"
 # Versões disponíveis
 {: #available_versions}
 
-O {{site.data.keyword.Bluemix}} fornece todos [os tempos de execução do Node.js atualmente disponíveis](http://nodejs.org/dist/). 
-Dos tempos de execução disponíveis, o {{site.data.keyword.IBM_notm}} fornece versões específicas que contêm aprimoramentos e
+O {{site.data.keyword.Bluemix}} fornece todos [os tempos de execução do Node.js atualmente disponíveis](http://nodejs.org/dist/). Dos tempos de execução disponíveis, o {{site.data.keyword.IBM_notm}} fornece versões específicas que contêm aprimoramentos e
 correções de bug. Veja [Atualizações mais recentes para o buildpack do Node.js](/docs/runtimes/nodejs/updates.html) para obter mais informações sobre as versões suportadas.
 {: shortdesc}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-27"
 
 ---
 
@@ -13,12 +13,12 @@ lastupdated: "2017-10-26"
 # バインドされたサービスの構成
 {: #auto_config}
 
-さまざまなサービスを Liberty アプリケーションにバインドすることができます。 サービスは開発者の希望によって、コンテナー管理、アプリケーション管理、またはその両方にできます。
+さまざまなサービスを Liberty for Java アプリケーションにバインドすることができます。サービスは開発者の希望によって、コンテナー管理、アプリケーション管理、またはその両方にできます。
 
 アプリケーション管理サービスとは、Liberty からの支援は何もなく、完全にアプリケーションによって管理されるサービスのことです。 アプリケーションは、通常、
 VCAP_SERVICES を読み取って、バインドされたサービスについての情報を取得し、サービスに直接アクセスします。 必要なすべてのクライアント・アクセス・コードをアプリケーションが提供します。 Liberty フィーチャーまたは server.xml ファイル構成にはまったく依存しません。 このタイプのサービスには Liberty ビルドパックの自動構成は適用されません。
 
-コンテナー管理サービスとは、Liberty ランタイムによって管理されるサービスのことです。 バインドされたサービスをアプリケーションが JNDI で検索する場合もあり、
+コンテナー管理サービスとは、Liberty ランタイムによって管理されるサービスのことです。バインドされたサービスをアプリケーションが JNDI で検索する場合もあり、
 サービスが Liberty 自体によって直接使用される場合もあります。 Liberty ビルドパックが VCAP_SERVICES を読み取って、
 バインドされたサービスについての情報を取得します。 ビルドパックは、各コンテナー管理サービスに 3 つの機能を実行します。
 
@@ -27,27 +27,20 @@ VCAP_SERVICES を読み取って、バインドされたサービスについて
 * サービスで要求される server.xml ファイル・スタンザを生成または更新する。
 
 このプロセスは自動構成と呼ばれます。
+
 Liberty ビルドパックは、以下のサービス・タイプに対して自動構成を提供します。
 
-* [ClearDB MySQL Database ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.cleardb.com/developers)
-* [MySQL](/docs/services/MySQL/index.html#MySQL)
-* [ElephantSQL](docs/services/ElephantSQL/index.html)
-* [PostgreSQL](/docs/services/PostgreSQL/index.html#PostgreSQL)
-* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* [dashDB](/docs/services/dashDB/index.html#dashDB)
-* [Data Cache](/docs/services/DataCache/index.html#data_cache)
-* [Session Cache](/docs/services/SessionCache/index.html#session_cache)
-* [MQ Light](/docs/services/MQLight/index.html#mqlight010)
-* [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate)
 * [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [ClearDB MySQL Database ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.cleardb.com/developers)
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
+* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html)
+* [Compose for MySQL](/docs/services/ComposeForMySQL/index.html)
+* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
+* [dashDB](/docs/services/dashDB/index.html#dashDB)
+* [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
-* [New Relic](newRelic.html)
-* [Dynatrace](dynatrace.html)
-* [PostgreSQL の作成](/docs/services/ComposeForPostgreSQL/index.html)
-* [MongoDB の作成](/docs/services/ComposeForMongoDB/index.html) (現在は月次 Liberty ランタイムでのみ使用可能)。
 
-前述の通り、一部のサービスは、アプリケーション管理またはコンテナー管理のいずれかにすることができます。 Mongo と SQLDB は、そういったサービスの例です。 デフォルトでは、
-Liberty ビルドパックは、これらのサービスはコンテナー管理であると想定し、これらを自動的に構成します。 アプリケーションがサービスを管理するようにしたい場合、services_autoconfig_excludes 環境変数を設定することで、サービスの自動構成をオプトアウトできます。 詳しくは、[『サービス自動構成のオプトアウト』](autoConfig.html#opting_out)を参照してください。
+Compose サービスには、コンテナー管理またはアプリケーション管理のいずれかが可能です。デフォルトでは、Liberty ビルドパックは、これらのサービスはコンテナー管理であると想定し、これらを自動的に構成します。アプリケーションがサービスを管理するようにしたい場合、`services_autoconfig_excludes` 環境変数を設定することで、サービスの自動構成をオプトアウトできます。詳しくは、[『サービス自動構成のオプトアウト』](autoConfig.html#opting_out)を参照してください。
 
 ## Liberty フィーチャーおよびクライアント・アクセス・コードのインストール
 {: #installation_of_liberty_features}
@@ -61,12 +54,16 @@ jar が Liberty インストール済み環境の既知の場所にダウンロ�
 ## server.xml 構成スタンザの生成または更新
 {: #generating_or_updating_serverxml}
 
-[『Liberty アプリケーションのプッシュのオプション』](optionsForPushing.html#options_for_pushing)に記述されているように、スタンドアロン・アプリケーションをプッシュすると、Liberty ビルドパックによって server.xml スタンザが {{site.data.keyword.Bluemix_notm}} に生成されます。スタンドアロン・アプリケーションをプッシュし、コンテナー管理サービスにバインドすると、それらのバインドされたサービスに必要な server.xml スタンザが Liberty ビルドパックによって生成されます。
+アプリケーションのサービスへのバインド方法と既存の server.xml ファイルの有無によっては、スタンドアロン・アプリケーションをプッシュすると、Liberty ビルドパックが、server.xml ファイル内の構成スタンザを自動的に生成または更新することができます。
 
-server.xml ファイルを用意し、コンテナー管理サービスにバインドすると、Liberty ビルドパックによって以下が行われます。
+[『Liberty アプリケーションのプッシュのオプション』](optionsForPushing.html#options_for_pushing)に記述されているように、スタンドアロン・アプリケーションをプッシュすると、Liberty ビルドパックによって server.xml 構成スタンザが {{site.data.keyword.Bluemix_notm}} に生成されます。
 
-* 用意された server.xml ファイルに、バインドされたサービスの構成スタンザが含まれていない場合、バインドされたサービスの構成を生成します。
-* 用意された server.xml ファイルに、バインドされたサービスの構成スタンザが含まれている場合、バインドされたサービスの構成を更新します。
+スタンドアロン・アプリケーションをプッシュし、コンテナー管理サービスにバインドすると、それらのバインドされたサービスに必要な server.xml スタンザが Liberty ビルドパックによって生成されます。
+
+server.xml ファイルを用意し、コンテナー管理サービスにバインドすると、Liberty ビルドパックによって、構成スタンザが生成または更新されます。
+
+* 用意された server.xml ファイルに、バインドされたサービスの構成スタンザが含まれていない場合、Liberty は、バインドされたサービスの構成を生成します。
+* 用意された server.xml ファイルに、バインドされたサービスの構成スタンザが含まれている場合、Liberty は、バインドされたサービスの構成を更新します。
 
 詳細については、バインドされたサービスのタイプに関する資料を参照してください。
 
@@ -76,14 +73,14 @@ server.xml ファイルを用意し、コンテナー管理サービスにバイ
 場合によっては、
 バインドしたサービスを Liberty ビルドパックが自動的に構成するのが望ましくないことがあります。 次のようなシナリオが考えられます。
 
-* 自分のアプリケーションが MongoDB を使用している場合に、このアプリケーションでデータベースへの接続を直接管理したい。 ア
-プリケーションには、必要なクライアント・ドライバー jar が含まれている。 Liberty ビルドパックによる Mongo サービスの自動構成を望まない。
-* server.xml ファイルを用意しているところであり、非標準データ・ソース構成が必要なため、SQLDB インスタンス用の構成スタンザを作成した。 この server.xml ファイルを、Liberty ビルドパックによって更新されないようにしたいが、Liberty ビルドパックによって、サポートされている適切なソフトウェアが確実にインストールされるようにもしたい。
+* 自分のアプリケーションが *dashDB* を使用している場合に、このアプリケーションでデータベースへの接続を直接管理したい。ア
+プリケーションには、必要なクライアント・ドライバー jar が含まれている。 Liberty ビルドパックによる *dashDB* サービスの自動構成を望まない。
+* server.xml ファイルを用意しているところであり、非標準データ・ソース構成が必要なため、*cloudant* インスタンス用の構成スタンザを作成した。この server.xml ファイルを、Liberty ビルドパックによって更新されないようにしたいが、Liberty ビルドパックによって、サポートされている適切なソフトウェアが確実にインストールされるようにもしたい。
 
 自動サービス構成をオプトアウトするには、
 services_autoconfig_excludes 環境変数を使用します。 この環境変数を manifest.yml に組み込むか、または、cf クライアントを使用してこの環境変数を設定することができます。
 
-サービス・タイプごとにサービスの自動構成をオプトアウトすることができます。 完全にオプトアウトする (上の Mongo シナリオ) か、または server.xml ファイル構成の更新のみをオプトアウトする (上の SQLDB シナリオ) ことを選択できます。 services_autoconfig_excludes 環境変数に指定する値は、以下に示すようにストリングになります。
+サービス・タイプごとにサービスの自動構成をオプトアウトすることができます。 完全にオプトアウトする (上の *dashDB* シナリオ) か、または server.xml ファイル構成の更新のみをオプトアウトする (上の *cloudant* シナリオ) ことを選択できます。services_autoconfig_excludes 環境変数に指定する値は、以下に示すようなストリングになります。
 
 * このストリングは、1 つ以上のサービスのオプトアウト指定を含むことができます。
 * 具体的なサービスのオプトアウト指定は、service_type=option で、それぞれの意味は次のとおりです。
@@ -92,7 +89,7 @@ services_autoconfig_excludes 環境変数を使用します。 この環境変�
 * このストリングが複数のサービスのオプトアウト指定を含む場合、
 個々のオプトアウト指定を 1 個の空白文字で区切る必要があります。
 
-より正式に表すと、このストリングの文法は以下のようになります。
+以下に示す services_autoconfig_excludes ストリングの文法の例を参照してください。
 
 ```
     Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
@@ -104,22 +101,21 @@ services_autoconfig_excludes 環境変数を使用します。 この環境変�
 {: codeblock}
 
 **重要**: 指定するサービス・タイプは、VCAP_SERVICES 環境変数内で表示されるサービス・ラベルと一致しなければなりません。 空白文字は使用できません。
-**重要**: ```<service_type_specification>``` 内に空白文字を含めることはできません。 空白文字の使用が許可されるのは、
-複数の ```<service_type_specification>``` インスタンスを区切る場合のみです。
+**重要**: ```<service_type_specification>``` 内に空白文字を含めることはできません。 空白文字の使用が許可されるのは、複数の ```<service_type_specification>``` インスタンスを区切る場合のみです。
 
-上記の Mongo シナリオのように、特定のサービスに対するすべての自動構成アクションをオプトアウトするには、「all」オプションを使用します。 上記の SQLDB シナリオのように、構成の更新アクションのみをオプトアウトするには、「config」オプションを使用します。
+上記の *dashDB* シナリオのように、特定のサービスに対するすべての自動構成アクションをオプトアウトするには、**all** オプションを使用します。上記の *cloudant* シナリオのように、構成の更新アクションのみをオプトアウトするには、**config** オプションを使用します。
 
-以下に、Mongo シナリオと SQLDB シナリオの manifest.yml ファイル内のオプトアウト指定の例を示します。
+以下に、*dashDB* シナリオと *cloudant* シナリオの manifest.yml ファイル内のオプトアウト指定の例を示します。
 
 ```
     env:
-      services_autoconfig_excludes: mongodb-2.2=all
+      services_autoconfig_excludes: dashDB=all
 
     env:
-      services_autoconfig_excludes: sqldb=config
+      services_autoconfig_excludes: cloudant=config
 
     env:
-      services_autoconfig_excludes: sqldb=config mongodb-2.2=all
+      services_autoconfig_excludes: cloudant=config dashDB=all
 ```
 {: codeblock}
 
@@ -127,21 +123,92 @@ services_autoconfig_excludes 環境変数を使用します。 この環境変�
 コマンド・ライン・インターフェースを使用して、アプリケーションの myapp の services_autoconfig_excludes 環境変数を設定する方法を示します。
 
 ```
-    $ cf set-env myapp services_autoconfig_excludes sqldb=config
-    $ cf set-env myapp services_autoconfig_excludes "sqldb=config mongodb-2.2=all"
+    cf set-env myapp services_autoconfig_excludes cloudant=config
+    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+```
+{: codeblock}
+
+VCAP_SERVICES でサービスの *label* を検索するには、以下の例のようなコマンドを発行します。
+
+```
+    cf env myapp
+```
+{: codeblock}
+
+出力には、以下のようなテキストが含まれています。ここで、**label** フィールドに値 **elephantsql** が示されています。
+
+```
+   "elephantsql": [
+   {
+      "credentials": {
+      "max_conns": "5",
+      "uri":      "..."
+   },
+   "label": "elephantsql",
+
 ```
 {: codeblock}
 
 ## サービス構成のオーバーライド
 {: #override_service_config}
 
-場合によっては、自動構成で生成されたサービスのデフォルト構成をオーバーライドするのが望ましいことがあります。
-これは、**LBP_SERVICE_CONFIG_xxxx** 環境変数を使用して行えます。ここで、「xxxx」は、すべて大文字のサービスの名前です。  例えば、*mysql* サービスのデフォルト・バージョンをオーバーライドしてバージョン 1.4.+ に設定するには、次のようなコマンドを発行します。
+場合によっては、自動構成で生成されたサービスのデフォルト構成をオーバーライドしたいことがあります。
+**LBP_SERVICE_CONFIG_xxxx** 環境変数を使用して、サービスをオーバーライドすることができます。環境変数の完全な名前と、オーバーライドの構文例については、以下の表を参照してください。例えば、*elephantSQL* サービスのデフォルト・バージョンをオーバーライドしてバージョン 8.3.4.+ に設定するには、次のようなコマンドを発行します。
 
 ```
-    $ cf set-env myapp LBP_SERVICE_CONFIG_MYSQL "{driver: { version: 1.4.+ }}"
+    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
+
+次の表は、**service_type** と **LBP_SERVICE_CONFIG_xxxx** 環境変数名の対応を示しています。
+
+<table>
+<tr>
+<th align="left">service_type</th>
+<th align="left">環境変数名</th>
+</tr>
+
+<tr>
+<td>Auto-Scaling</td>
+<td>LBP_SERVICE_CONFIG_AUTO-SCALING</td>
+</tr>
+
+<tr>
+<td>cleardb</td>
+<td>LBP_SERVICE_CONFIG_MYSQL</td>
+</tr>
+
+<tr>
+<td>cloudantNoSQLDB</td>
+<td>LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB</td>
+</tr>
+
+<tr>
+<td>compose-for-mongodb</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MONGO</td>
+</tr>
+
+<tr>
+<td>compose-for-mysql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MYSQL</td>
+</tr>
+
+<tr>
+<td>compose-for-postgresql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+</tr>
+
+<tr>
+<td>elephantsql</td>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+</tr>
+
+<tr>
+<td>SingleSignOn</td>
+<td>LBP_SERVICE_CONFIG_SINGLESIGNON</td>
+</tr>
+</table>
+
 
 いくつかのサービス構成オプションをオーバーライドするための構文を、以下の表に示します。
 
@@ -157,6 +224,16 @@ services_autoconfig_excludes 環境変数を使用します。 この環境変�
 </tr>
 
 <tr>
+<td>LBP_SERVICE_CONFIG_COMPOSE_MYSQL</td>
+<td>"{driver: { version: x.y.z }, connection_pool_size: 15}"</td>
+</tr>
+
+<tr>
+<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>"{driver: { version: x.y.z }}"</td>
+</tr>
+
+<tr>
 <td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 <td>"{driver: { version: x.y.z }}"</td>
 </tr>
@@ -169,4 +246,4 @@ services_autoconfig_excludes 環境変数を使用します。 この環境変�
 ## 一般
 {: #general notoc}
 * [Liberty ランタイム](index.html)
-* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty プロファイル概要](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

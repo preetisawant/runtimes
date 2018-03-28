@@ -13,14 +13,9 @@ lastupdated: "2017-10-26"
 # Liberty 앱 푸시 옵션
 {: #options_for_pushing}
 
-{{site.data.keyword.Bluemix}}에서 Liberty 서버의 동작은
-Liberty 빌드팩을 통해 제어됩니다. 빌드팩은 애플리케이션의 특정 클래스에 맞는 완전한 런타임 환경을 제공할 수 있습니다. 클라우드 이식성을 높이고 개방형 클라우드 아키텍처를 향상시키는 데 있어 핵심 요소입니다. Liberty 빌드팩은 Java EE 7 및 OSGi 애플리케이션의 실행이 가능한 WebSphere Liberty 컨테이너를 제공합니다. 이는 Spring과 같은 인기 있는 프레임워크를 지원하며 IBM JRE를 포함합니다. WebSphere Liberty를 통해 클라우드에 적합한 애플리케이션을 신속하게 개발할 수 있습니다. Liberty 빌드팩은 하나의 Liberty 서버에 배치되는 여러 개의 애플리케이션을 지원합니다. Liberty 빌드팩이 {{site.data.keyword.Bluemix_notm}}에
-통합되는 과정에서 서비스 바인딩을 위한 환경 변수가 Liberty 서버에서
-구성 변수로 표시되는지 확인합니다.
+{{site.data.keyword.Bluemix}}에서 Liberty 서버의 동작은 Liberty 빌드팩을 통해 제어됩니다. 빌드팩은 애플리케이션의 특정 클래스에 맞는 완전한 런타임 환경을 제공할 수 있습니다. 클라우드 이식성을 높이고 개방형 클라우드 아키텍처를 향상시키는 데 있어 핵심 요소입니다. Liberty 빌드팩은 Java EE 7 및 OSGi 애플리케이션의 실행이 가능한 WebSphere Liberty 컨테이너를 제공합니다. 이는 Spring과 같은 유명한 프레임워크를 지원하며 IBM JRE를 포함합니다. WebSphere Liberty를 통해 클라우드에 적합한 애플리케이션을 신속하게 개발할 수 있습니다. Liberty 빌드팩은 하나의 Liberty 서버에 배치되는 여러 개의 애플리케이션을 지원합니다. Liberty 빌드팩이 {{site.data.keyword.Bluemix_notm}}에 통합되는 과정에서 서비스 바인딩을 위한 환경 변수가 Liberty 서버에서 구성 변수로 표시되는지 확인합니다.
 
-Liberty 애플리케이션을
-{{site.data.keyword.Bluemix_notm}}에 배치하려면
-다음 방법을 사용합니다.
+Liberty 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려면 다음 방법을 사용합니다.
 
 * 독립형 애플리케이션 푸시
 * 서버 디렉토리 푸시
@@ -31,14 +26,13 @@ Liberty 애플리케이션을
 ## 독립형 앱
 {: #stand_alone_apps}
 
-{{site.data.keyword.Bluemix_notm}}에서
-WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Liberty에 배치할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}}에서 WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Liberty에 배치할 수 있습니다.
 
 독립형 애플리케이션을 배치하려면 WAR 또는 EAR 파일을 가리키는 -p 매개변수를 포함한 cf push 명령을 실행하십시오.
-예:
+예를 들어, 다음과 같습니다.
 
 ```
-    $ cf push <yourappname> -p myapp.war
+$ cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -64,7 +58,7 @@ WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Liberty에 배�
 이 기능은 Java EE 7 Web Profile 기능에 해당합니다. JBP_CONFIG_LIBERTY 환경 변수를 설정하여 Liberty 기능의 다른 설정을 지정할 수 있습니다. 예를 들어, jsp-2.3 및 websocket-1.1 기능만 사용하려면 명령을 실행하고 애플리케이션을 다시 스테이징하십시오.
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -73,14 +67,14 @@ WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Liberty에 배�
 WAR 파일을 배치한 경우, 웹 애플리케이션은 임베디드 ibm-web-ext.xml 파일에 설정된 대로 컨텍스트 루트에서 액세스 가능합니다. ibm-web-ext.xml 파일이 존재하지 않거나 컨텍스트 루트를 지정하지 않는 경우에는 애플리케이션이 루트 컨텍스트에서 액세스 가능합니다. 예를 들어, 다음과 같습니다.
 
 ```
-    http://<yourappname>.mybluemix.net/
+http://<yourappname>.mybluemix.net/
 ```
 {: codeblock}
 
 EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스트 루트에서 임베디드 웹 애플리케이션에 액세스할 수 있습니다. 예를 들어, 다음과 같습니다.
 
 ```
-    http://<yourappname>.mybluemix.net/acme/
+http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
@@ -123,8 +117,8 @@ EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스�
 ### CDI 1.2
 {: #cdi12}
 
-성능상 이유로 WAR 및 EAR 파일만 배치할 경우 [CDI 1.2 암시적 bean 아카이브 스캔](https://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_cdi_behavior.html)이 기본적으로 사용하지 않도록 설정됩니다. JBP_CONFIG_LIBERTY 환경 변수를 사용하여 암시적 아카이브 아카이브 스캔을 사용하도록 설정할 수 있습니다.
-예:
+성능상 이유로 WAR 및 EAR 파일만 배치할 경우 [CDI 1.2 암시적 bean 아카이브 스캔](https://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_cdi_behavior.html)이 기본적으로 사용 안함으로 설정됩니다. JBP_CONFIG_LIBERTY 환경 변수를 사용하여 암시적 아카이브 아카이브 스캔을 사용하도록 설정할 수 있습니다.
+예를 들어, 다음과 같습니다.
 
 ```
     $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
@@ -143,8 +137,7 @@ EAR 파일을 배치했으면 EAR 배치 디스크립터에 정의된 컨텍스�
 
 경우에 따라 사용자 정의 Liberty 서버 구성을 애플리케이션에 제공해야 할 때가 있습니다. 이러한 사용자 정의 구성은 사용자가 WAR 또는 EAR 파일을 배치하고 기본 server.xml 파일에 애플리케이션이 요구하는 특정 설정이 없는 경우에 필요합니다.
 
-Liberty 프로파일을 워크스테이션에 설치했으며 이미 애플리케이션에서 Liberty 서버를
-작성한 경우에는 해당 디렉토리의 컨텐츠를 {{site.data.keyword.Bluemix_notm}}에 푸시할 수 있습니다.
+Liberty 프로파일을 워크스테이션에 설치했으며 이미 애플리케이션에서 Liberty 서버를 작성한 경우에는 해당 디렉토리의 컨텐츠를 {{site.data.keyword.Bluemix_notm}}에 푸시할 수 있습니다.
 예를 들어, Liberty 서버의 이름이 defaultServer이면 다음 명령을 실행하십시오.
 
 ```
@@ -182,7 +175,7 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 ```
 {: codeblock}
 
-참고: 서버 디렉토리의 일부로 배치되는 웹 애플리케이션은 [Liberty 프로파일에서 판별되는 컨텍스트 루트](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)에서 액세스할 수 있습니다. 예:
+참고: 서버 디렉토리의 일부로 배치되는 웹 애플리케이션은 [Liberty 프로파일에서 판별되는 컨텍스트 루트](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6)에서 액세스할 수 있습니다. 예를 들어, 다음과 같습니다.
 
 ```
     http://<yourappname>.mybluemix.net/acme/
@@ -206,7 +199,7 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 다른 아카이브 파일을 지정하는 데 `--archive` 옵션을 사용한 경우 `.zip` 확장자가 `.jar` 대신 있는지 확인하십시오. **빌드팩은 `.jar` 확장자로 작성된 패키지된 서버 파일을 지원하지 않습니다**.
 
 그러면 사용자가 생성된 `.zip` 파일을 {{site.data.keyword.Bluemix_notm}}에 `cf push` 명령으로 푸시할 수 있습니다.
-예:
+예를 들어, 다음과 같습니다.
 
 ```
     $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
@@ -260,9 +253,9 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 
 Liberty 빌드팩을 통해 자동으로 구성되지 않는 바인드된 서비스의 경우, 애플리케이션에서 자체적으로 백엔드 리소스의 액세스를 관리해야 합니다.
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

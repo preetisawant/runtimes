@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -133,7 +133,7 @@ cf login
   En unos segundos, la aplicación se estará ejecutando en http://localhost:9080/GetStartedJava.
 
 5. Actualice el código:
-  - Abra `src/main/webapp/index.html` y cambie la cabecera `<h1>Welcome.</h1>` por `<h1>Welcome Jane.</h1>`.
+  - Abra `src/main/webapp/index.html` y cambie la cabecera `<h1>Welcome.</h1>` to `<h1>Welcome Jane.</h1>`.
   - Guardar los cambios. Liberty tomará los cambios automáticamente.
   - Renueve el navegador (http://localhost:9080/GetStartedJava) para ver los cambios.
 
@@ -156,11 +156,10 @@ Ahora ha ejecutado el código tanto localmente como en la nube.
 
 A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
-1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione su aplicación pulsando su nombre en la columna **Nombre**.
-2. Pulse **Conexiones** y luego **Conectar nuevo**.
-3. En la sección **Data & Analytics**, seleccione **BD Cloudant NoSQL** y cree el servicio.
-4. Vaya a **Apps > Su App > Conexiones** y seleccione **Conectar existente**.
-5. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
+1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione **Crear recurso**.
+2. Elija la sección **Datos y análisis** y, a continuación, seleccione **BD Cloudant NoSQL** y cree el servicio.
+3. Vaya a la vista de **Conexiones** y seleccione su aplicación y, a continuación a **Crear conexión**.
+4. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
 Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente. [Más información...](/docs/manageapps/depapps.html#app_env)
 {: tip}
@@ -183,7 +182,7 @@ Ahora vamos a actualizar el código local para que apunte a esta base de datos. 
   ```
   {:pre}
 
-4. Reinicie el servidor Liberty en Eclipse desde la vista `Servidores`.
+4. Reinicie el servidor Liberty en Eclipse desde la vista `Servers`.
 
   Renueve la vista del navegador en http://localhost:9080/GetStartedJava/. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
 

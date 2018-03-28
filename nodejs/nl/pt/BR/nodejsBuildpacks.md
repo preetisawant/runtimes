@@ -20,7 +20,8 @@ usado para aplicativos Node.js no {{site.data.keyword.Bluemix_notm}}.
 * O **nodejs_buildpack** é um buildpack de comunidade fornecido pela comunidade do Cloud Foundry.
 
 O buildpack **sdk-for-nodejs** tem precedência sobre o **nodejs_buildpack** em
-{{site.data.keyword.Bluemix_notm}}. Se desejar usar o **nodejs_buildpack** com seu aplicativo em vez do buildpack **sdk-for-nodejs**, você deverá especificar seu buildpack, por exemplo, usando a opção -b com o comando **cf push**.
+{{site.data.keyword.Bluemix_notm}}. Se deseja usar o **nodejs_buildpack** com seu aplicativo em vez
+do buildpack **sdk-for-nodejs**, será necessário especificar seu buildpack, por exemplo, usando a opção `-b` com o comando **cf push**.
 
 Geralmente, o buildpack **sdk-for-nodejs** atual e uma versão anterior estão disponíveis.  Para ver todos os buildpacks disponíveis, use o comando **cf buildpacks**.  Por exemplo:
 

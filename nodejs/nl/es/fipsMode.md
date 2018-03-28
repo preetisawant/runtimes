@@ -33,6 +33,8 @@ Expess puede ayudar a solucionar este problema. Por ejemplo, puede realizar lo s
 Consulte esta [publicación de stackoverflow ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 para obtener más información.
 
+
+
 **NOTA** [App Management](/docs/manageapps/app_mng.html) y FIPS_MODE *NO* están soportados simultáneamente.  Si se ha establecido la variable de entorno BLUEMIX_APP_MGMT_ENABLE y la variable de entorno FIPS_MODE se ha establecido en true, la app no se podrá transferir.
 
 A continuación se muestran varios métodos para comprobar el estado de FIPS_MODE:
@@ -58,6 +60,8 @@ Si la versión SSL contiene "fips", la versión de SSL que está en uso da sopor
 </li>
 
 <li> Para node.js versión 6 y posterior, puede comprobar el valor devuelto por crypto.fips en el código como el siguiente:
+
+  
 
   <pre>
   console.log('crypto.fips== [' +crypto.fips +']');

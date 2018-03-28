@@ -49,9 +49,9 @@ WAR 또는 EAR 파일을 배치하는 경우, 빌드팩은 Liberty 기능의 기
 주 버전 변경사항에 의해 애플리케이션이 영향을 받지 않도록 보장하려면, [JRE 사용자 정의](customizingJRE.html)에 설명된 대로 적합한 JRE 버전으로 환경 변수를 설정하십시오. 최상의 결과를 얻으려면 애플리케이션에 대해 Java 8을 채택하십시오.
 
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -13,6 +13,28 @@ lastupdated: "2017-10-26"
 {: #latest_updates}
 
 ## Liste mit den neuesten Aktualisierungen im Liberty-Buildpack
+
+
+### 13. Februar 2018: Liberty-Buildpack v3.18 aktualisiert
+* Die monatliche Liberty-Laufzeitversion wurde auf 2018.2.0.0 aktualisiert.
+* Die Standardversion der Liberty-Laufzeit umfasst auch das [PI90804 Apache Commons iFix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428).
+
+### 31. Januar 2018: Liberty-Buildpack v3.17.1 aktualisiert
+* Das Buildpack wurde aktualisiert und enthält nun das Liberty-Feature microProfile-1.2.
+
+### 26. Januar 2018: Liberty-Buildpack v3.17 aktualisiert
+* Das Buildpack wurde aktualisiert, um die Funktionalität zum dynamischen Festlegen von Tracing auf dem Liberty-Server hinzuzufügen.
+* Die monatliche Liberty-Laufzeitversion wurde auf 2018.1.0.0 aktualisiert.
+* Die IBM JRE-Version wurde auf 8 SR5 FP7 aktualisiert.
+
+### 5. Januar 2018: Liberty-Buildpack v3.16-20180102-0938 aktualisiert
+* Die Standardversion der Liberty-Laufzeit wurde auf Release 17.0.0.4 aktualisiert.
+* Die monatliche Liberty-Laufzeitversion wurde auf 2017.12.0.0 aktualisiert.
+* Die IBM JRE-Version wurde auf 8 SR5 FP6 aktualisiert.
+
+
+### 31. Oktober 2017: Liberty-Buildpack v3.15 aktualisiert
+* Die monatliche Liberty-Laufzeitversion wurde auf 2017.10.0.0 aktualisiert.
 
 ### 17. Oktober 2017: Liberty-Bildpack v3.14-20171013-1023 aktualisiert
 * Die Standardversion der Liberty-Laufzeit wurde auf Release 17.0.0.3 aktualisiert.

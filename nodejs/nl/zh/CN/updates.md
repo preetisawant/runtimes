@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-12"
+  years: 2015, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -14,8 +14,14 @@ lastupdated: "2017-12-12"
 
 sdk-for-nodejs buildpack 中最新更新的列表。
 
-## 2017 年 12 月 11 日：更新了 Node.js buildpack V3.16
-SDK for Node.js buildpack V3.16 提供了 IBM SDK for Node.js V4.8.4、V4.8.5、V6.11.4、V6.12.0、V8.6.0 和 V8.9.0。缺省值是最新的 6.x，所以目前是 6.12.0。请注意，其修订了如下 PSIRT：建议标识：10237，产品记录标识：104487，标题：Node.js zlib DOS 安全漏洞，2017 年 10 月 (CVE-2017-14919)。建议升级至 V3.16，以获取影响 8.6.0.0 及更早版本（6.10.2.0 到 6.11.4.0，以及 4.8.2.0 到 4.8.4.0）性能的安全漏洞修订。
+## 2018 年 2 月 6 日：更新了 Nodejs buildpack V3.18
+SDK for Node.js buildpack V3.18 提供了 IBM SDK for Node.js V4.8.5、V4.8.7、V6.12.2、V6.12.3、V8.9.3 和 V8.9.4。缺省值是最新的 6.x，所以目前是 6.12.3。
+
+## 2018 年 1 月 8 日：更新了 Nodejs buildpack V3.17
+SDK for Node.js buildpack V3.17 提供了 IBM SDK for Node.js V4.8.5、V4.8.7、V6.12.0、V6.12.2、V8.9.0 和 V8.9.3。缺省值是最新的 6.x，所以目前是 6.12.2。
+
+## 2017 年 12 月 11 日：更新了 Node.js buildpack V3.16.1
+SDK for Node.js buildpack V3.16.1 提供了 IBM SDK for Node.js V4.8.4、V4.8.5、V6.11.4、V6.12.0、V8.6.0 和 V8.9.0。缺省值是最新的 6.x，所以目前是 6.12.0。请注意，其修订了如下 PSIRT：建议标识：10237，产品记录标识：104487，标题：Node.js zlib DOS 安全漏洞，2017 年 10 月 (CVE-2017-14919)。建议升级至 V3.16.1，以针对影响 8.6.0.0 及更早版本（6.10.2.0 到 6.11.4.0，以及 4.8.2.0 到 4.8.4.0）的安全漏洞获取修订。
 
 ## 2017 年 11 月 1 日：更新了 Node.js buildpack V3.15
 SDK for Node.js buildpack V3.15 提供了 IBM SDK for Node.js V4.8.3、4.8.4、6.11.3、6.11.4、8.3.0 和 8.6.0。缺省值是最新的 6.x，所以目前是 6.11.4。

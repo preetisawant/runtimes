@@ -14,7 +14,7 @@ lastupdated: "2017-10-26"
 
 애플리케이션은 Liberty 빌드팩에 의해 제공되고 구성되는 Java 런타임 환경(JRE)에서 실행됩니다. 또한 Liberty 빌드팩은 JRE 버전 또는 유형을 구성하고 JVM 옵션을 사용자 정의하거나 JRE 기능을 오버레이할 수 있도록 합니다.
 
-## {{site.data.keyword.IBM_notm}} JRE
+## {{site.data.keyword.IBM_notm}}JRE
 
 기본적으로 애플리케이션은 {{site.data.keyword.IBM}} JRE의 경량 버전에서 실행되도록 구성되어 있습니다. 이 경량 JRE는 훨씬 줄어든 디스크 및 메모리 공간으로 코어, 핵심 기능을 제공할 수 있도록 불필요한 기능들을 모두 제거했습니다. 경량 JRE의 컨텐츠에 대한 자세한 정보는 [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)를 참조하십시오.
 
@@ -56,18 +56,16 @@ Oracle JRE 사용에 대한 정보는 [Oracle JRE 사용](oracle_jre.html)을 �
 
 Liberty 빌드팩은 다음을 고려하여 기본 JVM 옵션을 구성합니다.
 
-* 애플리케이션의 메모리 한계.  적용되는 JVM 힙 설정은 다음을 기준으로 계산됩니다.
+* 애플리케이션의 메모리 한계. 적용되는 JVM 힙 설정은 다음을 기준으로 계산됩니다.
   * [메모리 한계 및 Liberty 빌드팩](memoryLimits.html#memory_limits)에 설명된 애플리케이션의 메모리 한계
   * JRE 유형. JVM의 힙 관련 옵션은 JRE의 지원 옵션에 따라 다릅니다.
 
 * [{{site.data.keyword.Bluemix_notm}}에서 지원되는 Liberty 기능](libertyFeatures.html#libertyfeatures).
-  * 2단계 커미트 글로벌 데이터베이스 트랜잭션이 {{site.data.keyword.Bluemix_notm}}에서 지원되지 않으므로 -Dcom.ibm.tx.jta.disable2PC=true 설정으로 사용되지 않습니다. 
+  * 2단계 커미트 글로벌 데이터베이스 트랜잭션이 {{site.data.keyword.Bluemix_notm}}에서 지원되지 않으므로 -Dcom.ibm.tx.jta.disable2PC=true 설정으로 사용되지 않습니다.
 
 * {{site.data.keyword.Bluemix_notm}} 환경.
 
-{{site.data.keyword.Bluemix_notm}}
-환경에 최적화를 제공하고 메모리 관련 오류 조건의 진단을 돕기 위해
-JVM 옵션이 구성됩니다.
+{{site.data.keyword.Bluemix_notm}} 환경에 최적화를 제공하고 메모리 관련 오류 조건의 진단을 돕기 위해 JVM 옵션이 구성됩니다.
   * 애플리케이션의 메모리가 전부 소모되었을 때 JVM 덤프 옵션과 프로세스 강제 종료를 비활성화하여 애플리케이션의 긴급 장애 및 복구가 구성됩니다.
   * 가상화 튜닝({{site.data.keyword.IBM_notm}} JRE만 해당).
   * 장애 발생 시 애플리케이션의 사용 가능한 메모리 리소스 정보를 Loggregator로 라우팅.
@@ -188,7 +186,7 @@ Diego 셀에서 실행 중인 애플리케이션에 대한 `staging_info.yml` �
 ```
 {: codeblock}
 
-WAR, EAR, 서버 디렉토리 및 패키지된 서버 배치에 대한 JVM 옵션은 `jvm.options` 파일에서 유지됩니다. `jvm.options` 파일은 `app/wlp/usr/servers/<serverName>/` 디렉토리에 있습니다. 패키지된 서버가 다른 서버 이름을 사용하여 배치된 경우를 제외한 대부분의 경우 ```<serverName>```이 `defaultServer`로 설정됩니다. 예:
+WAR, EAR, 서버 디렉토리 및 패키지된 서버 배치에 대한 JVM 옵션은 `jvm.options` 파일에서 유지됩니다. `jvm.options` 파일은 `app/wlp/usr/servers/<serverName>/` 디렉토리에 있습니다. 패키지된 서버가 다른 서버 이름을 사용하여 배치된 경우를 제외한 대부분의 경우 ```<serverName>```이 `defaultServer`로 설정됩니다. 예를 들어, 다음과 같습니다.
 
 DEA 노드에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일을 보려면 다음을 실행하십시오.
 
@@ -297,9 +295,9 @@ Diego 셀에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일�
 
 애플리케이션을 푸시하면 이 jar이 Java 런타임의 기본 정책 jar을 오버레이합니다. 이 프로세스를 통해 AES 256비트 암호화가 활성화됩니다.
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

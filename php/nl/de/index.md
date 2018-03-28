@@ -30,7 +30,7 @@ Das Buildpack 'php_buildpack' wird unter folgenden Bedingungen verwendet:
 ## HTTPS auf allen Seiten in Ihrer Anwendung erzwingen
 {: #enforce_https}
 
-Wenn bei der Ausführung Ihrer Anwendung in {{site.data.keyword.Bluemix_notm}} mithilfe von Apache auf allen Seiten HTTPS anstatt HTTP erzwungen werden soll, müssen Sie an der ".htaccess"-Datei die folgenden Änderungen vornehmen. Diese Regel gilt für jede Anforderung, die nicht mithilfe von HTTPS abgesetzt wurde und nur bei Ausführung in {{site.data.keyword.Bluemix_notm}}.
+Wenn bei der Ausführung Ihrer Anwendung in {{site.data.keyword.Bluemix_notm}} mithilfe von Apache auf allen Seiten HTTPS anstatt HTTP erzwungen werden soll, müssen Sie an der ".htaccess"-Datei die folgenden Änderungen vornehmen.  Diese Regel gilt für jede Anforderung, die nicht mithilfe von HTTPS abgesetzt wurde und nur bei Ausführung in {{site.data.keyword.Bluemix_notm}}.
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]

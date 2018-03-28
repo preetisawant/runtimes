@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2017-11-09"
 {:download: .download}
 {:app_name: data-hd-keyref="app_name"}
 
-# {{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구를 사용하여 Tomcat 애플리케이션 개발
+# IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 Tomcat 애플리케이션 개발
 
 {{site.data.keyword.eclipsetoolsfull}}를 대체 방법으로 사용하여 애플리케이션을 개발하고 {{site.data.keyword.Bluemix}}에 배치할 수도 있습니다. IBM Eclipse Tool에서는 기존 Eclipse 환경에 설치할 수 있는 플러그인을 제공하며, 이를 통해 사용자의 IDE(Integrated Development Environment)를 {{site.data.keyword.Bluemix_notm}}와 통합할 수 있습니다.
 
@@ -28,7 +28,7 @@ lastupdated: "2017-11-09"
 * [IBM Eclipse Tools for IBM Cloud ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/wasdev/downloads/#asset/tools-IBM_Eclipse_Tools_for_Bluemix){: new_window}
 * [Eclipse IDE for Java EE Developers ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
-[시작하기 튜토리얼](getting-started.md)을 완료한 경우 이러한 도구와 계정을 이미 보유할 수 있습니다. 시작하기 전에 다음 항목도 설치되어 등록되어 있는지 확인하십시오. 
+[시작하기 튜토리얼](getting-started.md)을 완료한 경우 이러한 도구와 계정을 이미 보유할 수 있습니다. 시작하기 전에 다음 항목도 설치되어 등록되어 있는지 확인하십시오.
 * [{{site.data.keyword.Bluemix_notm}} 계정](https://console.ng.bluemix.net/registration/)
 * [Cloud Foundry CLI ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/cloudfoundry/cli#downloads){: new_window}
 * [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}
@@ -87,7 +87,7 @@ manifest.yml 파일을 열고 `name`을 `GetStartedJava`에서 앱 이름 <var c
 ## 4단계: {{site.data.keyword.Bluemix_notm}}에 배치
 {: #deploy}
 
-다음 Bluemix 지역 중 하나에 앱을 배치하십시오. 최적의 대기 시간을 위해 사용자에 가장 가까운 지역을 선택하십시오.
+다음 Bluemix 지역 중 하나에 앱을 배치하십시오. 최적의 대기 시간을 위해 사용자에게 가장 가까운 지역을 선택하십시오.
 
 |지역          |API 엔드포인트                             |
 |:---------------|:-------------------------------|
@@ -126,7 +126,7 @@ cf login
 4. Apache 서버에서 로컬로 애플리케이션 실행:
   - `GetStartedTomcat` 샘플을 마우스 오른쪽 단추로 클릭하고 `실행 도구` -> `서버에서 실행` 옵션을 선택하십시오.
   - 로컬 호스트 Tomcat 서버를 찾아 선택하고 완료를 클릭하십시오.
-  - 몇 초 후에 애플리케이션이 http://localhost:8080/GetStartedTomcat/에서 실행됩니다.
+  - 몇 초 후에 애플리케이션이 다음에서 실행됩니다. http://localhost:8080/GetStartedTomcat/
 
 5. {{site.data.keyword.Bluemix_notm}}에서 애플리케이션 실행:
   - `GetStartedTomcat` 샘플을 마우스 오른쪽 단추로 클릭하고 `실행 도구` -> `서버에서 실행` 옵션을 선택하십시오.
@@ -141,17 +141,17 @@ cf login
 
 다음으로, 이 애플리케이션에 {{site.data.keyword.cloudantfull}} 데이터베이스를 추가하고 애플리케이션을 설정하여 로컬 및 {{site.data.keyword.Bluemix_notm}}에서 이를 실행할 수 있도록 합니다.
 
-1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. `대시보드`로 이동하십시오. `이름` 열에서 해당 이름을 클릭하여 애플리케이션을 선택하십시오.
-2. `연결`을 클릭한 다음 `새로 연결`을 클릭하십시오.
-2. `데이터 및 분석` 섹션에서 `{{site.data.keyword.cloudant_short_notm}}`를 선택한 다음 서비스를 `작성`하십시오.
-3. 프롬프트가 표시되면 `다시 스테이징`을 선택하십시오. {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 신임 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
+1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하고 대시보드로 이동하십시오. **리소스 작성**을 선택하십시오. 
+2. **데이터 및 분석** 섹션을 선택한 후에 **Cloudant NoSQL DB**를 선택하고 서비스를 작성하십시오. 
+3. **연결** 보기로 이동하여 애플리케이션을 선택한 후에 **연결 작성**을 선택하십시오. 
+4. 프롬프트가 표시되면 **다시 스테이징**을 선택하십시오. {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 신임 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
 
 환경 변수를 사용하면 배치 설정을 소스 코드와 구분할 수 있습니다. 예를 들어, 데이터베이스 비밀번호를 하드 코딩하는 대신 소스 코드에서 참조하는 환경 변수에 이 비밀번호를 저장할 수 있습니다. [자세히 보기...](/docs/manageapps/depapps.html#app_env)
 {: tip}
 
 ## 7단계: 데이터베이스 사용
 {: #use_database}
-이제 이 데이터베이스를 가리키도록 로컬 코드를 업데이트합니다. 특성 파일에 서비스의 신임 정보를 저장합니다. 이 파일은 애플리케이션이 로컬로 실행 중인 경우에만 사용됩니다. {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우 신임 정보는 VCAP_SERVICES 환경 변수에서 읽습니다.
+이제 이 데이터베이스를 가리키도록 로컬 코드를 업데이트합니다. 특성 파일에 서비스의 신임 정보를 저장합니다. 이 파일은 애플리케이션이 로컬에서 실행 중인 경우에만 사용됩니다. {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우 신임 정보는 VCAP_SERVICES 환경 변수에서 읽습니다.
 
 1. Eclipse를 열고 파일 src/main/resources/cloudant.properties를 여십시오.
   ```
@@ -168,7 +168,7 @@ cf login
 
 4. `서버` 보기에서 Eclipse의 Tomcat 서버를 다시 시작하십시오.
 
-  http://localhost:8080/GetStartedTomcat/에서 브라우저 보기를 새로 고치십시오. 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
+  다음에서 브라우저 보기를 새로 고치십시오. http://localhost:8080/GetStartedTomcat/ 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
 
   로컬 앱과 {{site.data.keyword.Bluemix_notm}} 앱은 데이터베이스를 공유합니다.  위에서 push 명령의 출력에 나열된 URL을 통해 {{site.data.keyword.Bluemix_notm}} 앱을 확인하십시오.  이 중 하나의 앱에서 추가하는 이름은 브라우저를 새로 고치면 두 앱에 모두 표시됩니다.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -17,8 +17,7 @@ lastupdated: "2017-11-09"
 
 # Desenvolva aplicativos Tomcat usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 
-É possível também usar o {{site.data.keyword.eclipsetoolsfull}} como uma maneira alternativa para desenvolver e implementar aplicativos no {{site.data.keyword.Bluemix}}. 
-O IBM Eclipse Tools fornece plug-ins que podem ser instalados em um ambiente Eclipse existente para ajudar na integração de seu ambiente de desenvolvimento integrado (IDE) com {{site.data.keyword.Bluemix_notm}}.
+É possível também usar o {{site.data.keyword.eclipsetoolsfull}} como uma maneira alternativa para desenvolver e implementar aplicativos no {{site.data.keyword.Bluemix}}. O IBM Eclipse Tools fornece plug-ins que podem ser instalados em um ambiente Eclipse existente para ajudar na integração de seu ambiente de desenvolvimento integrado (IDE) com {{site.data.keyword.Bluemix_notm}}.
 
 Esse procedimento segue as mesmas etapas gerais que o [Tutorial de introdução](getting-started.html) para o Liberty. Usando o Eclipse, você irá configurar um ambiente de desenvolvimento, implementará um aplicativo localmente e na nuvem e integrará um serviço de banco de dados em seu aplicativo.
 
@@ -142,10 +141,10 @@ Agora você executou seu código localmente e na nuvem!
 
 Em seguida, vamos incluir um banco de dados {{site.data.keyword.cloudantfull}} para este aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
-1. Efetue login no {{site.data.keyword.Bluemix_notm}} em seu navegador. Procure o `Painel`. Selecione seu aplicativo clicando em seu nome na coluna `Nome`.
-2. Clique em `Conexões` e, em seguida, em `Conectar novo`.
-2. Na seção `Dados e Analytics`, selecione `{{site.data.keyword.cloudant_short_notm}}` e `Crie` o serviço.
-3. Selecione `Remontar` quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
+1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
+2. Escolha a seção **Dados e análise de dados**, selecione **Cloudant NoSQL DB** e crie seu serviço.
+3. Acesse a visualização **Conexões**, selecione seu aplicativo e, em seguida, **Criar conexão**.
+4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
 As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte. [Saiba mais...](/docs/manageapps/depapps.html#app_env)
 {: tip}

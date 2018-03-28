@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime"}
+{: .toc subcollection="liberty" audience="runtime" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -37,7 +37,7 @@ Liberty for Java
     {: .topicgroup}
     Offline oder mit einem Proxy arbeiten
         offlineMode.md
-        [Mit einem Proxy arbeiten](../../manageapps/workingWithProxy.html)
+        [Mit einem Proxy arbeiten](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -52,12 +52,12 @@ Liberty for Java
         [Community-Buildpacks verwenden](../../cfapps/byob.html)
 
     buildpackDefaults.md
-    [Liberty- und Node.js-Apps verwalten](../../manageapps/app_mng.html)
+    [Liberty- und Node.js-Apps verwalten](../common/app_mng.html)
     [Erste Schritte mit IBM Monitoring and Analytics](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
-    [Buildpack Support Statement](../../manageapps/buildpackSupport.html)
+    [Unterstützung für Buildpacks](../common/buildpackSupport.html)
     {: .navgroup-end}

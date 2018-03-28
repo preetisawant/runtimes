@@ -44,6 +44,8 @@ env:
 {: codeblock}
 当前的 java_buildpack 版本为 V3.19，其中包含缺省 Tomcat V8.0.45 和缺省 Java V1.8.0_141。有关更多信息，请参阅 [java-buildpack 发行版](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13)。
 
+
+
 ## HTTPS 重定向
 {: #https_redirect}
 

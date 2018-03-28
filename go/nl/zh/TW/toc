@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Go" audience="runtime"}
+{: .toc subcollection="Go" audience="runtime" href="/docs/runtimes/go/getting-started.html"}}
 Go
 
     {: .navgroup id="learn"}
@@ -10,7 +10,7 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [使用 Proxy](../../manageapps/workingWithProxy.html)
+    [使用 Proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -21,6 +21,7 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     [可用的版本](index.html#runtime_versions)
-    [建置套件支援聲明](../../manageapps/buildpackSupport.html)
+    [建置套件支援聲明](../common/buildpackSupport.html)
     {: .navgroup-end}

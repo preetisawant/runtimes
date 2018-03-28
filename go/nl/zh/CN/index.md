@@ -39,6 +39,8 @@ lastupdated: "2017-12-15"
 {: codeblock}
 有关更多信息，请参阅 [godep](https://github.com/tools/godep){: new_window}。
 
+
+
 如果未指定版本，缺省情况下会选择 V1.8.3。
 
 ### 可用版本：

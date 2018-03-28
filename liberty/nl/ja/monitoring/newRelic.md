@@ -15,7 +15,7 @@ lastupdated: "2017-11-08"
 New Relic は、アプリケーションのモニタリング・メトリックを提供するサード・パーティーのサービスです。 New Relic サービスが提供する内容について詳しくは、[New
 Relic](http://newrelic.com/java)を参照してください。
 
-[Java agent manual installation documentation](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation) によると、New Relic サービスを使用してモニターされる Java アプリケーションは、通常 New Relic エージェントとアカウントのライセンス・キーを使用してバンドルおよび構成する必要があります。 {{site.data.keyword.Bluemix}} 環境では、New Relic の使用許諾契約書とアカウントは、{{site.data.keyword.Bluemix_notm}} 内にサービス・インスタンスを作成することにより取得できます。その後 Java アプリケーションを New Relic サービス・インスタンスにバインドすると、Liberty ビルドパックがアプリケーションを自動構成して、New Relic サービスでモニターする準備を行います。
+[Java agent manual installation documentation](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation) によると、New Relic サービスを使用してモニターされる Java アプリケーションは、通常 New Relic エージェントとアカウントのライセンス・キーを使用してバンドルおよび構成する必要があります。 {{site.data.keyword.Bluemix}} 環境では、New Relic の使用許諾契約書とアカウントは、{{site.data.keyword.Bluemix_notm}} 内にサービス・インスタンスを作成することにより取得できます。 その後 Java アプリケーションを New Relic サービス・インスタンスにバインドすると、Liberty ビルドパックがアプリケーションを自動構成して、New Relic サービスでモニターする準備を行います。
 具体的にはビルドパックは次のことを行います。
 
 * アプリケーションに New Relic エージェントを提供する。
@@ -44,7 +44,7 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
   </pre>
   {: codeblock}
 
-2. New Relic サービスを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。以下のサンプル・アプリケーション・マニフェストを参照してください。
+2. New Relic サービスを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。  以下のサンプル・アプリケーション・マニフェストを参照してください。
 
   <pre>
         &dash;&dash;&dash;
@@ -74,7 +74,7 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
   ```
   {: codeblock}
 
-2. ユーザー提供の New Relic サービス・インスタンスを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。ユーザー提供の New Relic サービス・インスタンスを使用するサンプル・アプリケーション・マニフェストは以下のようになります。
+2. ユーザー提供の New Relic サービス・インスタンスを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。  ユーザー提供の New Relic サービス・インスタンスを使用するサンプル・アプリケーション・マニフェストは以下のようになります。
   <pre>
         &dash;&dash;&dash;
         applications:

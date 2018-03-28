@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -13,6 +13,28 @@ lastupdated: "2017-10-26"
 {: #latest_updates}
 
 ## Liberty ビルドパックの最新更新のリスト。
+
+
+### 2018 年 2 月 13 日: 更新された Liberty ビルドパック v3.18。
+* 月次 Liberty ランタイム・バージョンが 2018.2.0.0 に更新されました。
+* デフォルトの Liberty ランタイムには [PI90804 Apache Commons iFix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428) も含まれます。
+
+### 2018 年 1 月 31 日: 更新された Liberty ビルドパック v3.17.1。
+* ビルドパックが、Liberty フィーチャー microProfile-1.2 を含むように更新されました。
+
+### 2018 年 1 月 26 日: 更新された Liberty ビルドパック v3.17。
+* ビルドパックが更新され、Liberty サーバーにトレースを動的に設定する機能が追加されました。
+* 月次 Liberty ランタイム・バージョンが 2018.1.0.0 に更新されました。
+* IBM JRE バージョンが 8 SR5 FP7 に更新されました。
+
+### 2018 年 1 月 5 日: 更新された Liberty ビルドパック v3.16-20180102-0938
+* デフォルトの Liberty ランタイム・バージョンが 17.0.0.4 リリースに更新されました
+* 月次 Liberty ランタイム・バージョンが 2017.12.0.0 に更新されました。
+* IBM JRE バージョンが 8 SR5 FP6 に更新されました。
+
+
+### 2017 年 10 月 31 日: 更新された Liberty ビルドパック v3.15。
+* 月次 Liberty ランタイム・バージョンが 2017.10.0.0 に更新されました。
 
 ### 2017 年 10 月 17 日: 更新された Liberty ビルドパック v3.14-20171013-1023
 * デフォルトの Liberty ランタイム・バージョンが 17.0.0.3 リリースに更新されました。
@@ -69,7 +91,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ### 2017 年 1 月 23 日: 更新された Liberty ビルドパック v3.7-20170118-2046
 * 月次 Liberty ランタイム・バージョンが [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) リリースに更新されました。
 * IBM JRE バージョン 8 が SR3 FP22 バージョンに更新されました。
-* [自動構成](autoConfig.html)サポートも [Compose for MongoDB service](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (現在は月次 Liberty ランタイムでのみ使用可能) を処理できるように拡張されました。
+* [自動構成](autoConfig.html)サポートも [Compose for MongoDB サービス](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (現在は月次 Liberty ランタイムでのみ使用可能) を処理できるように拡張されました。
 
 ### 2016 年 12 月 13 日: 更新された Liberty ビルドパック v3.6-20161209-1351
 * デフォルトの Liberty ランタイム・バージョンが [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) リリースに更新されました。
@@ -232,7 +254,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * このビルドパックには、[Apache HttpComponents および Java オーバーレイ機能の脆弱性](https://www-304.ibm.com/connections/blogs/PSIRT/entry/ibm_security_bulletin_multiple_vulnerabilities_fixed_in_liberty_for_java_for_ibm_bluemix_cve_2012_6153_cve_2014_3577_cve_2015_0178?lang=en_us)に対するセキュリティー・フィックスが含まれています。
 * このビルドパックには、[February beta](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/) に基づく更新版 Liberty プロファイルが含まれています。 この更新版 Liberty プロファイルは、更新版の WebSocket GA フィーチャー websocket-1.1 を提供します。 また、以下の Java EE 7 ベータ・フィーチャーが {{site.data.keyword.Bluemix_notm}} で使用可能になります。
   * cdi-1.2、el-3.0、jsp-2.3、jca-1.7、jacc-1.5、および jaspic-1.1
-* このビルドパックは、[ZeroTrunaround の JRebel ツール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://zeroturnaround.com/software/jrebel/) との統合を提供します。 この統合によって、{{site.data.keyword.Bluemix_notm}} アプリケーションでの JRebel の使用、およびアプリケーションの再デプロイまたは再ステージングなしでのアプリケーションの即時更新を簡単に実行できるようになります。スタンドアロン Web アプリケーションのみがサポートされます。
+* このビルドパックは、[ZeroTrunaround の JRebel ツール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://zeroturnaround.com/software/jrebel/) との統合を提供します。 この統合によって、{{site.data.keyword.Bluemix_notm}} アプリケーションでの JRebel の使用、およびアプリケーションの再デプロイまたは再ステージングなしでのアプリケーションの即時更新を簡単に実行できるようになります。 スタンドアロン Web アプリケーションのみがサポートされます。
 
 ### 2015 年 2 月 6 日: 更新された Liberty ビルドパック v1.12-20150130-1016
 * このビルドパックには、[January beta](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/) に基づく更新版 Liberty プロファイルが含まれています。
@@ -245,7 +267,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * このビルドパックは、Liberty プロファイルおよび IBM JRE の詳細なバージョンを報告するように改善されました。
 
 ### 2014 年 12 月 19 日: 更新された Liberty ビルドパック v1.10-20141218-0103
-* このビルドパックはアプリケーションの開発モードを提供します。 開発モードは、以前は実行できなかったアプリケーション・インスタンスに関する多数のアクティビティーを開発者が実行できるようになる特別なモードです。 このフィーチャーを使用することによって、このバージョンの {{site.data.keyword.eclipsetoolsfull}} は、{{site.data.keyword.Bluemix_notm}} で実行中の Liberty アプリケーションに対して増分ファイル更新を行うリモート・デバッグをサポートできるようになりました。これにより、Eclipse を使用する開発者が、クラウド内のアプリケーションのデバッグとそのアプリケーションへの即時の変更適用を行いやすくなりました。
+* このビルドパックはアプリケーションの開発モードを提供します。 開発モードは、以前は実行できなかったアプリケーション・インスタンスに関する多数のアクティビティーを開発者が実行できるようになる特別なモードです。 このフィーチャーを使用することによって、このバージョンの {{site.data.keyword.eclipsetoolsfull}} は、{{site.data.keyword.Bluemix_notm}} で実行中の Liberty アプリケーションに対して増分ファイル更新を行うリモート・デバッグをサポートできるようになりました。 これにより、Eclipse を使用する開発者が、クラウド内のアプリケーションのデバッグとそのアプリケーションへの即時の変更適用を行いやすくなりました。
 * このビルドパックには、
 [December
 beta](https://developer.ibm.com/wasdev/blog/2014/12/10/announcing-liberty-beta-december/) に基づく Liberty プロファイルの更新版が含まれています。
@@ -296,7 +318,7 @@ beta](https://developer.ibm.com/wasdev/blog/2014/11/07/announcing-liberty-profil
 * ビルドパックは、最新のフィックスおよび機能強化が適用された更新版の [Liberty Profile](https://developer.ibm.com/wasdev/) を含みます。
 * このバージョンのビルドパック・フィックスは、追加の JVM オプションをアプリケーション・ランタイムに渡すための JAVA_OPTS 環境変数をサポートします。
 * また、Spring ベースのスタンドアロン Jar アプリケーションのデプロイメントを妨げていた問題を修正します。
-* {{site.data.keyword.Bluemix_notm}} UI を使用して IBM JVM スナップ・トレースを生成およびダウンロードできるようになりました。JVM によって生成されるスナップ・トレースまたは他の診断情報について詳しくは、IBM JVM 資料で[トラブルシューティングのトピック](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html)のトピックを参照してください。
+* {{site.data.keyword.Bluemix_notm}} UI を使用して IBM JVM スナップ・トレースを生成およびダウンロードできるようになりました。 JVM によって生成されるスナップ・トレースまたは他の診断情報について詳しくは、IBM JVM 資料で[トラブルシューティングのトピック](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html)のトピックを参照してください。
 
 ### 2014 年 7 月 29 日: 更新された Liberty ビルドパック v1.1-20140725-1341
 * Liberty の {{site.data.keyword.Bluemix_notm}} Edition の新しいバージョンです。

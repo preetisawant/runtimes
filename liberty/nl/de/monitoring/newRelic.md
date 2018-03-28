@@ -45,7 +45,7 @@ Führen Sie die folgenden Schritte aus, um eine bereits vorhandene Java-Anwendun
   </pre>
   {: codeblock}
 
-2. Stellen Sie Ihre Anwendung mit dem New Relic-Service in {{site.data.keyword.Bluemix_notm}} bereit. Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt:
+2. Stellen Sie Ihre Anwendung mit dem New Relic-Service in {{site.data.keyword.Bluemix_notm}} bereit.  Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt:
 
   <pre>
         &dash;&dash;&dash;
@@ -75,7 +75,7 @@ Wenn Sie über ein vorhandenes New Relic-Konto und den zugehörigen Lizenzschlü
   ```
   {: codeblock}
 
-2. Stellen Sie Ihre Anwendung mit der vom Benutzer bereitgestellten New Relic-Serviceinstanz in {{site.data.keyword.Bluemix_notm}} bereit. Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt, das eine vom Benutzer bereitgestellte New Relic-Serviceinstanz verwendet:
+2. Stellen Sie Ihre Anwendung mit der vom Benutzer bereitgestellten New Relic-Serviceinstanz in {{site.data.keyword.Bluemix_notm}} bereit.  Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt, das eine vom Benutzer bereitgestellte New Relic-Serviceinstanz verwendet:
   <pre>
         &dash;&dash;&dash;
         applications:

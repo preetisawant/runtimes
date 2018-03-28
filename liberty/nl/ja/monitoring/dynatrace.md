@@ -39,7 +39,7 @@ Liberty アプリケーションが Dynatrace を使用するように構成さ�
 
     使用可能なオプションについて詳しくは、Dynatrace コミュニティー Web サイトの[『Agent Configuration』の『Agent Setting』セクション](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration)を参照してください。 例えば、exclude オプションを使用すると、Dynatrace のモニター対象からクラスを除外できます。 ユーザー提供サービスの構成について詳しくは、[『DynaTrace Agent Framework』](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md)を参照してください。
 
-3. アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュした後で、作成したユーザー提供サービスをアプリケーションにバインドします。例えば、次のコマンドを使用します。
+3. アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュした後で、作成したユーザー提供サービスをアプリケーションにバインドします。 例えば、次のコマンドを使用します。
 
         $ cf bs myApp my-dynatrace-collector
         {: codeblock}

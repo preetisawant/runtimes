@@ -49,7 +49,7 @@ Pour une application Java existante à surveiller avec New Relic dans {{site.dat
   </pre>
   {: codeblock}
 
-2. Déployez l'application dans {{site.data.keyword.Bluemix_notm}} avec le service New Relic. Consultez l'exemple de manifeste d'application suivant :
+2. Déployez l'application dans {{site.data.keyword.Bluemix_notm}} avec le service New Relic.  Consultez l'exemple de manifeste d'application suivant :
 
   <pre>
         &dash;&dash;&dash;

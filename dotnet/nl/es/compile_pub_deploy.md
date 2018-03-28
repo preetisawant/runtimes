@@ -54,12 +54,16 @@ Para aplicaciones autocontenidas, la app se podrá enviar por push desde el dire
 {: codeblock}
 .
 
+
+
 Para aplicaciones portables, la app se podrá enviar por push desde el directorio
 ```
   bin/<Debug|Release>/<framework>/publish
 ```
 {:codeblock}
 .
+
+
 
 Tenga en cuenta que si utiliza un archivo manifest.yml en la aplicación, puede especificar la vía de acceso a la carpeta de salida de publicación en manifest.yml.  Después no tendrá que estar en esa carpeta cuando envíe por push la aplicación.
 

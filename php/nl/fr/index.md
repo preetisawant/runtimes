@@ -30,7 +30,7 @@ Le pack php_buildpack est utilisé dans les conditions suivantes :
 ## Imposer l'utilisation de HTTPS sur toutes les pages dans votre application
 {: #enforce_https}
 
-Pour imposer l'utilisation de HTTPS au lieu de HTTP sur toutes les pages dans votre application lorsqu'elle s'exécute dans {{site.data.keyword.Bluemix_notm}} avec Apache, les modifications suivantes doivent être effectuées dans le fichier ".htaccess". Cette règle s'appliquera à toutes les demandes qui n'ont pas été effectuées avec HTTPS uniquement lors d'une exécution dans {{site.data.keyword.Bluemix_notm}}.
+Pour imposer l'utilisation de HTTPS au lieu de HTTP sur toutes les pages dans votre application lorsqu'elle s'exécute dans {{site.data.keyword.Bluemix_notm}} avec Apache, les modifications suivantes doivent être effectuées dans le fichier ".htaccess".  Cette règle s'appliquera à toutes les demandes qui n'ont pas été effectuées avec HTTPS uniquement lors d'une exécution dans {{site.data.keyword.Bluemix_notm}}.
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]

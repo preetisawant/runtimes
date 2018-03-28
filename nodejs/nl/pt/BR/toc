@@ -17,14 +17,14 @@ SDK for Node.js
     {: .topicgroup}
     Trabalhar off-line ou com um proxy
         offlineMode.md
-        [Trabalhar com um proxy](../../manageapps/workingWithProxy.html)
+        [Trabalho com um proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
     fipsMode.md
-    [Gerenciando os apps Liberty e Node.js](../../manageapps/app_mng.html)
+    [Gerenciando os apps Liberty e Node.js](../common/app_mng.html)
 
     {: .topicgroup}
     Aplicativos iniciadores e buildpacks
@@ -36,6 +36,6 @@ SDK for Node.js
     ts_index.md
     updates.md
     availableVersions.md
-    [Instrução de suporte do buildpack](../../manageapps/buildpackSupport.html)
+    [Instrução de suporte do buildpack](../common/buildpackSupport.html)
 
     {: .navgroup-end}

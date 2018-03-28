@@ -29,7 +29,7 @@ Dynatrace를 사용하기 위한 최소 필수 구성은 Dynatrace 콜렉터를 
 
 1. Dynatrace 콜렉터를 설정하십시오.
   * Dynatrace 콜렉터 다운로드 및 설정에 대한 지시사항은 [Dynatrace 커뮤니티 웹 사이트](https://community.dynatrace.com/community/display/EVAL/Step+3+-+Connect+Agent+to+Dynatrace)를 참조하십시오.
-  * {{site.data.keyword.Bluemix_notm}}의 앱에서 실행 중인 Dynatrace 에이전트에 액세스할 수 있는 위치에 콜렉터가 설치되었는지 확인하십시오. 
+  * {{site.data.keyword.Bluemix_notm}}의 앱에서 실행 중인 Dynatrace 에이전트에 액세스할 수 있는 위치에 콜렉터가 설치되었는지 확인하십시오.
 2. 실행 중인 Dynatrace 콜렉터를 가리키는 사용자 제공 서비스를 작성하십시오. **참고** 사용자 제공 서비스의 이름에는 **dynatrace** 문자열이 있어야 합니다. 대소문자는 구분하지 않습니다. 예를 들어, 다음 명령을 사용하십시오. 여기서 **my-dynatrace-collector**에는 **dynatrace**가 포함됩니다.
 
         $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
@@ -63,8 +63,8 @@ Dynatrace 에이전트 jar 파일을 직접 가져오고 호스트할 수 있습
 {: #hosting_dynatrace_agent}
 Dynatrace 에이전트는 웹 서버에 호스트되어야 하며, Liberty 빌드팩이 서버에서 에이전트 jar 파일을 다운로드할 수 있어야 합니다. 서버는 에이전트 jar에 대한 세부사항을 지정하는 `index.yml` 파일로 구성되어야 합니다. Dynatrace 에이전트를 설정하려면 다음 단계를 완료하십시오.
   1. Dynatrace 에이전트 jar를 다운로드하십시오. Dynatrace 에이전트 jar 다운로드에 대한 지시사항은 Dynatrace 커뮤니티 웹 사이트에서 [Dynatrace 서버 플랫폼 설치 프로그램](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace)을 참조하십시오. {{site.data.keyword.Bluemix_notm}}에서 실행하기에 적절한 에이전트 jar 파일은 **dynatrace-agent-unix.jar** 버전 **6.+**입니다.
-  2. Liberty 빌드팩이 다운로드할 수 있는 위치에 에이전트 jar 파일이 호스트되도록 하십시오. 사용 가능한 서버 시설을 사용하여 {{site.data.keyword.Bluemix_notm}} 자체에서 이 파일을 호스팅하거나, 공용으로 사용 가능한 일부 위치에서 호스팅할 수 있습니다. 
-     * 호스팅 위치에 `index.yml` 파일을 제공하는지 확인하십시오. `index.yml` 파일에는 에이전트 jar 파일의 버전 ID(뒤에 콜론이 붙음)와 에이전트 jar 위치의 완전한 URL로 구성된 항목이 포함되어야 합니다. 예:
+  2. Liberty 빌드팩이 다운로드할 수 있는 위치에 에이전트 jar 파일이 호스트되도록 하십시오. 사용 가능한 서버 시설을 사용하여 {{site.data.keyword.Bluemix_notm}} 자체에서 이 파일을 호스팅하거나, 공용으로 사용 가능한 일부 위치에서 호스팅할 수 있습니다.
+     * 호스팅 위치에 `index.yml` 파일을 제공하는지 확인하십시오. `index.yml` 파일에는 에이전트 jar 파일의 버전 ID(뒤에 콜론이 붙음)와 에이전트 jar 위치의 완전한 URL로 구성된 항목이 포함되어야 합니다. 예를 들어, 다음과 같습니다.
 
             ---
                6.3.0: https://my-dynatrace-agent.mybluemix.net/dynatrace-agent-6.3.0-unix.jar
@@ -84,15 +84,15 @@ Dynatrace 에이전트는 웹 서버에 호스트되어야 하며, Liberty 빌�
 
     이 예에서 *my-dynatrace-agent-host.mybluemix.net*은 이전에 구성된 서버에 호스팅된 `index.yml` 파일의 URL입니다.
 
-2. 환경 변수를 설정한 후 앱을 다시 스테이징하십시오. 스테이징 로그를 통해 에이전트 호스팅 서버에서 Dynatrace 에이전트가 제대로 다운로드되는지 확인하십시오. 예:
+2. 환경 변수를 설정한 후 앱을 다시 스테이징하십시오. 스테이징 로그를 통해 에이전트 호스팅 서버에서 Dynatrace 에이전트가 제대로 다운로드되는지 확인하십시오. 예를 들어, 다음과 같습니다.
 ```
     Downloading dynatrace-agent-6.3.0-unix.jar 6.3.0 from https://my-dynatrace-agent-host.mybluemix.net/dynatrace-agent-6.3.0-unix.jar (17.8s)
 ```
 {: codeblock}
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
 * [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

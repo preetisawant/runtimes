@@ -43,8 +43,7 @@ dommages que peuvent provoquer les entrées d'un utilisateur malveillant, à la 
 côté serveur et dans le navigateur, en atténuant les effets d'une attaque XSS, voire en
 l'empêchant complètement.
 
-En premier lieu, téléchargez cette application de démarrage sécurisée, puis compilez-la et déployez-la sur {{site.data.keyword.Bluemix_notm}} ou localement, en procédant comme avec l'application exemple [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).
-Allez à la section [Initiation à Liberty sur {{site.data.keyword.Bluemix_notm}}](getting-started.html) pour découvrir comment compiler (ou générer) et déployer des applications sur {{site.data.keyword.Bluemix_notm}}. Pour démarrer, vous pouvez utiliser les étapes suivantes afin de cloner, compiler et exécuter l'application.
+En premier lieu, téléchargez cette application de démarrage sécurisée, puis compilez-la et déployez-la sur {{site.data.keyword.Bluemix_notm}} ou localement, en procédant comme avec l'application exemple [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).  Allez à la section [Initiation à Liberty sur {{site.data.keyword.Bluemix_notm}}](getting-started.html) pour découvrir comment compiler (ou générer) et déployer des applications sur {{site.data.keyword.Bluemix_notm}}.  Pour démarrer, vous pouvez utiliser les étapes suivantes afin de cloner, compiler et exécuter l'application.
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app

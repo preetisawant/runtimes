@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -14,8 +14,30 @@ lastupdated: "2017-10-26"
 
 ## Liste des dernières mises à jour apportées au pack de construction Liberty.
 
+
+### 13 février 2018 : Mise à jour du pack de construction Liberty v3.18.
+* La version mensuelle de l'exécution Liberty est passée à l'édition 2018.2.0.0.
+* La version par défaut de l'exécution Liberty inclut également le correctif temporaire [PI90804 Apache Commons iFix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428).
+
+### 31 janvier 2018 : Mise à jour du pack de construction Liberty v3.17.1.
+* Le pack de construction a été mis à jour pour inclure la fonctionnalité Liberty microProfile-1.2.
+
+### 26 janvier 2018 : Mise à jour du pack de construction Liberty v3.17.
+* Le pack de construction a été mis à jour pour ajouter la possibilité de définir dynamiquement le traçage sur le serveur Liberty.
+* La version mensuelle de l'exécution Liberty est passée à l'édition 2018.1.0.0.
+* La version de l'IBM JRE est passée au niveau 8 SR5 FP7.
+
+### 5 janvier 2018 : Mise à jour du pack de construction Liberty v3.16-20180102-0938.
+* La version par défaut de l'exécution Liberty est passée à l'édition 17.0.0.4.
+* La version mensuelle de l'exécution Liberty est passée à l'édition 2017.12.0.0.
+* La version de l'IBM JRE est passée au niveau 8 SR5 FP6.
+
+
+### 31 octobre 2017 : Mise à jour du pack de construction Liberty v3.15.
+* La version mensuelle de l'exécution Liberty est passée à l'édition 2017.10.0.0.
+
 ### 17 octobre 2017 : Mise à jour du pack de construction Liberty v3.14-20171013-1023
-* La version par défaut de l'environnement d'exécution Liberty est passée à l'édition 17.0.0.3.
+* La version par défaut de l'exécution Liberty est passée à l'édition 17.0.0.3.
 * La version mensuelle de l'exécution Liberty est passée à l'édition 2017.9.0.1.
 * La version de l'IBM JRE est passée au niveau 8 SR5.
 
@@ -25,14 +47,14 @@ lastupdated: "2017-10-26"
 * L'agent de mise à l'échelle automatique a été mis à jour.
 
 ### 14 août 2017 : Mise à jour du pack de construction Liberty v3.12-20170814-1322
-* La version de l'environnement d'exécution Liberty mensuelle a été mise à jour au niveau d'édition [2017.8.0.0](https://developer.ibm.com/wasdev/blog/2017/08/04/beta-websphere-liberty-tools-august-2017/).
+* La version mensuelle de l'exécution Liberty a été mise à jour au niveau d'édition [2017.8.0.0](https://developer.ibm.com/wasdev/blog/2017/08/04/beta-websphere-liberty-tools-august-2017/).
 * Le pack de construction contient également des environnements d'exécution Java (JRE) IBM mis à jour : version 8 SR4 FP10 et version 7.1 SR4 FP10.
 * L'environnement JRE 8 comprend les fichiers Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy.
 * Correction d'un bogue du pack de construction Liberty qui empêchait les applications Liberty de [s'arrêter de manière appropriée](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown).
 
 ### 14 juillet 2017 : Mise à jour du pack de construction Liberty v3.11-20170710-0312
-* La version de l'environnement d'exécution Liberty par défaut `17.0.0.2` a été mise à jour pour inclure le correctif temporaire (iFix) IFPI83713.
-* La version de l'environnement d'exécution Liberty mensuelle a été mise à jour au niveau d'édition [2017.7.0.0](https://developer.ibm.com/wasdev/blog/2017/07/07/beta-websphere-liberty-tools-july-2017/).
+* La version par défaut de l'exécution Liberty `17.0.0.2` a été mise à jour pour inclure le correctif temporaire (iFix) IFPI83713.
+* La version mensuelle de l'exécution Liberty a été mise à jour au niveau d'édition [2017.7.0.0](https://developer.ibm.com/wasdev/blog/2017/07/07/beta-websphere-liberty-tools-july-2017/).
 * Le pack de construction contient également des environnements d'exécution Java (JRE) IBM mis à jour : version 8 SR4 FP7 et version 7.1 SR4 FP5.
 * La bibliothèque Cloudant par défaut est désormais la bibliothèque officielle [java-cloudant](https://github.com/cloudant/java-cloudant), la [bibliothèque Ektorp](https://github.com/helun/Ektorp) est toujours disponible en option. Pour obtenir des détails sur cette modification, voir l'[article du blogue](https://www.ibm.com/blogs/bluemix/2017/05/default-library-change-cloudant-auto-wiring-liberty-buildpack/).
 * Le rapport de taille de segment de mémoire est désormais 50 % lorsque votre application dispose de moins de 512mb de mémoire, si elle dispose de plus de 512mb, il aura la valeur 75 %.
@@ -41,21 +63,21 @@ lastupdated: "2017-10-26"
 * Le pack de construction fournit également un agent mis à jour pour le [service de mise à l'échelle automatique](/docs/services/Auto-Scaling/index.html).
 
 ### 12 juin 2017 : Mise à jour du pack de construction Liberty v3.10-20170525-1107
-* La version de l'environnement d'exécution Liberty par défaut a été mise à jour au niveau d'édition 17.0.0.2.
-* La version de l'environnement d'exécution Liberty mensuelle a été mise à jour au niveau d'édition [2017.5.0.0](https://developer.ibm.com/wasdev/blog/2017/05/12/beta-websphere-liberty-tools-may-2017/).
+* La version par défaut de l'exécution Liberty a été mise à jour au niveau d'édition 17.0.0.2.
+* La version mensuelle de l'exécution Liberty a été mise à jour au niveau d'édition [2017.5.0.0](https://developer.ibm.com/wasdev/blog/2017/05/12/beta-websphere-liberty-tools-may-2017/).
 * L'environnement d'exécution Node.js utilisé par l'[utilitaire App Management](/docs/manageapps/app_mng.html) a été mis à jour à la version 6.10.0.
 * Le pack de construction fournit également une version mise à jour d'Extreme Scale Client.
 
 ### 27 avril 2017 : Mise à jour du pack de construction Liberty v3.9-20170419-1403
-* La version de l'environnement d'exécution Liberty par défaut `17.0.0.1` a été mise à jour pour inclure les correctifs temporaires [PI77770](http://www-01.ibm.com/support/docview.wss?uid=swg24043596), [PI77605](http://www-01.ibm.com/support/docview.wss?uid=swg1PI77605), [PI79275](http://www-01.ibm.com/support/docview.wss?uid=swg1PI79275) et PI77438.
-* La version de l'environnement d'exécution Liberty mensuelle a été mise à jour au niveau d'édition [2017.3.0.0](https://developer.ibm.com/wasdev/blog/2017/03/14/beta-websphere-liberty-tools-march-2017/).
+* La version par défaut de l'exécution Liberty `17.0.0.1` a été mise à jour pour inclure les correctifs temporaires [PI77770](http://www-01.ibm.com/support/docview.wss?uid=swg24043596), [PI77605](http://www-01.ibm.com/support/docview.wss?uid=swg1PI77605), [PI79275](http://www-01.ibm.com/support/docview.wss?uid=swg1PI79275) et PI77438.
+* La version mensuelle de l'exécution Liberty a été mise à jour au niveau d'édition [2017.3.0.0](https://developer.ibm.com/wasdev/blog/2017/03/14/beta-websphere-liberty-tools-march-2017/).
 * Le calcul de la mémoire est passé de la préproduction au processus de démarrage, facilitant ainsi les changements de segment de mémoire avec le redémarrage d'une application.
 * Le pack de construction fournit également des versions mises à jour de l'agent pour le [service de mise à l'échelle automatique](/docs/services/Auto-Scaling/index.html) et Extreme Scale Client.
 
 ### 14 mars 2017 : Mise à jour du pack de construction Liberty v3.8-20170308-1507
-* La version par défaut de l'environnement d'exécution Liberty est passée à l'édition 17.0.0.1.
-* La version par défaut de l'environnement d'exécution Liberty inclut également le correctif temporaire (iFix) PI75512 pour la fonctionnalité WebSockets.
-* La version mensuelle de l'environnement d'exécution Liberty est passée à l'édition [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/).
+* La version par défaut de l'exécution Liberty est passée à l'édition 17.0.0.1.
+* La version par défaut de l'exécution Liberty inclut également le correctif temporaire (iFix) PI75512 pour la fonctionnalité WebSockets.
+* La version mensuelle de l'exécution Liberty est passée à l'édition [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/).
 * Les versions 8 et 7.1 de l'IBM JRE sont passées au niveau SR4 FP1.
 * Le support de configuration automatique a été étendu pour fonctionner avec [ibm-websphere-extreme-scale (IBM Container)](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
 * Le support de configuration automatique pour [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) a été mis à jour pour permettre l'utilisation de la bibliothèque Cloudant pour Java à la place de org.ektorp. Pour activer l'utilisation de cette bibliothèque, vous devez configurer la variable d'environnement suivante :    
@@ -195,7 +217,7 @@ Les environnements d'exécution Java (JRE) mis à jour contiennent les [correcti
 ### 21 juillet 2015 : Mise à jour du pack de construction Liberty v1.20-20150713-1450
 * Le pack de construction contient une version mise à jour du profil Liberty en fonction de l'[édition 8.5.5.6](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/). Avec cette édition, toutes les fonctions Liberty Java EE 7 disponibles auparavant en tant que fonctions bêta sont désormais disponibles en tant que fonctions prêtes pour la production. En raison des restrictions de port et autres restrictions dans {{site.data.keyword.Bluemix_notm}}, certaines fonctions telles que les EJB distants ne sont pas intégralement prises en charge sur la plateforme.
 * Le pack de construction reconnaît et exécute des packages d'applications avec [distZip-style![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.gradle.org/current/userguide/application_plugin.html).
-* Le pack de construction contient un collecteur de données mis à jour pour le [service Monitoring and Analytics](/docs/services/monana/index.html) ainsi que le client WebSphere eXtreme Scale qui prennent en charge la nouvelle version de l'environnement d'exécution Liberty.
+* Le pack de construction contient un collecteur de données mis à jour pour le [service Monitoring and Analytics](/docs/services/monana/index.html) ainsi que le client WebSphere eXtreme Scale qui prennent en charge la nouvelle version de l'exécution Liberty.
 
 ### 30 juin 2015 : Mise à jour du pack de construction Liberty v1.19.1-20150622-1509
 * Cette version du pack de construction contient un environnement d'exécution Java IBM JRE mis à jour avec un correctif de sécurité pour la [vulnérabilité LogJam](http://www-01.ibm.com/support/docview.wss?uid=swg21961390).

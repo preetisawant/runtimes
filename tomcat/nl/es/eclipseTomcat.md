@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-11-09"
+  years: 2017, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -118,8 +118,8 @@ cf login
 2. Importe el ejemplo `get-started-java` en Eclipse; para ello vaya a **Archivo > Importar > Maven > Proyectos Maven existentes**.
 
 3. Cree una definición de servidor Tomcat:
-  - En la vista `Servidores`, pulse con el botón derecho en -> `Nuevo` -> `Servidor`.
-  - Seleccione `Apache` -> `Servidor Tomcat v8.0`.
+  - En la vista `Servers`, pulse con el botón derecho en -> `Nuevo` -> `Server`.
+  - Seleccione `Apache` -> `Tomcat v8.0 Server`.
   - Elija su `tomcat-install-dir`.
   - Continúe el asistente con las opciones predeterminadas para finalizar.
 
@@ -131,7 +131,7 @@ cf login
 5. Ejecute la aplicación en {{site.data.keyword.Bluemix_notm}}:
   - Pulse con el botón derecho en el ejemplo `GetStartedTomcat` y seleccione la opción `Ejecutar como` -> `Ejecutar en servidor`.
   - Busque y seleccione `{{site.data.keyword.IBM_notm}} {{site.data.keyword.Bluemix_notm}}` y pulse finalizar.
-  - Un asistente le guiará con las opciones de despliegue. Asegúrese de elegir un `Nombre` exclusivo para la aplicación.
+  - Un asistente le guiará con las opciones de despliegue. Asegúrese de elegir un `Name` exclusivo para la aplicación.
   - En unos minutos, la aplicación debería ejecutarse en el URL elegido.
 
 Ahora ha ejecutado el código tanto localmente como en la nube.
@@ -141,10 +141,10 @@ Ahora ha ejecutado el código tanto localmente como en la nube.
 
 A continuación, añadiremos la base de datos de {{site.data.keyword.cloudantfull}} a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
-1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} en su navegador. Vaya al `Panel de control`. Seleccione su aplicación pulsando su nombre en la columna `Nombre`.
-2. Pulse `Conexiones` y luego `Conectar nuevo`.
-2. En la sección `Data & Analytics`, seleccione `{{site.data.keyword.cloudant_short_notm}}` y `Crear` para crear el servicio.
-3. Seleccione `Volver a transferir` cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
+1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione **Crear recurso**.
+2. Elija la sección **Datos y análisis** y, a continuación, seleccione **BD Cloudant NoSQL** y cree el servicio.
+3. Vaya a la vista de **Conexiones** y seleccione su aplicación y, a continuación a **Crear conexión**.
+4. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
 Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente. [Más información...](/docs/manageapps/depapps.html#app_env)
 {: tip}
@@ -166,7 +166,7 @@ Ahora vamos a actualizar el código local para que apunte a esta base de datos. 
   cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
 
-4. Reinicie el servidor Tomcat en Eclipse desde la vista `Servidores`.
+4. Reinicie el servidor Tomcat en Eclipse desde la vista `Servers`.
 
   Renueve la vista del navegador en http://localhost:8080/GetStartedTomcat/. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
 

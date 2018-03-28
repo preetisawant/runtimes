@@ -39,6 +39,8 @@ mvn install liberty:run-server
 ```
 在下列網址檢視應用程式：http://localhost:9080/GetStartedSecureJava/
 
+
+
 ## 在應用程式的所有頁面上施行 HTTPS
 {: #enforce_https}
 

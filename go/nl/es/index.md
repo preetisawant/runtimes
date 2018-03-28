@@ -40,6 +40,8 @@ Puede especificar la versión de Go que utilizará la app estableciendo la propi
 {: codeblock}
 Para obtener más información, consulte [godep](https://github.com/tools/godep){: new_window}.
 
+
+
 Cuando no se especifique una versión, se elegirá la versión 1.8.3 de forma predeterminada. 
 
 ### Versiones disponibles:

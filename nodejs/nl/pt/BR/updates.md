@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-12"
+  years: 2015, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -14,12 +14,20 @@ lastupdated: "2017-12-12"
 
 Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
 
-## 11 de dezembro de 2017: atualizado o buildpack do Node.js v3.16
-O buildpack do SDK for Node.js v3.16 fornece o IBM SDK for Node.js versões v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. O
-padrão é 6.x mais recente, portanto é atualmente a 6.12.0.
+## 6 de fevereiro de 2018: atualizado buildpack do Nodejs v3.18
+O buildpack do SDK for Node.js v3.18 fornece o IBM SDK for Node.js versões 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 e 8.9.4. O
+padrão é a 6.x mais recente, portanto, atualmente é a 6.12.3.
+
+## 8 de janeiro de 2018: atualizado buildpack Nodejs v3.17
+O buildpack do SDK for Node.js v3.17 fornece o IBM SDK for Node.js versões 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 e 8.9.3. O
+padrão é a 6.x mais recente, portanto, atualmente é a 6.12.2.
+
+## 11 de dezembro de 2017: atualizado o buildpack do Node.js v3.16.1
+O buildpack do SDK for Node.js v3.16.1 fornece o IBM SDK for Node.js versões v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. O
+padrão é 6.x mais recente, portanto é atualmente a 6.12.0. 
 Observe que isso corrige PSIRTs: ID consultivo: 10237 ID do registro de produto: 104487 Título: vulnerabilidade de segurança Node.js
-zlib DOS, outubro de 2017 (CVE-2017-14919). É recomendável fazer upgrade para v3.16 para obter correções para vulnerabilidades
-de segurança que afetam a 8.6.0.0 e anterior, 6.10.2.0 para 6.11.4.0 e 4.8.2.0 para 4.8.4.0.
+zlib DOS, outubro de 2017 (CVE-2017-14919). É recomendável fazer upgrade para a v3.16.1 para obter correções para vulnerabilidades
+de segurança que afetam a 8.6.0.0 e anterior, a 6.10.2.0 para a 6.11.4.0 e a 4.8.2.0 para a 4.8.4.0.
 
 ## 1 de novembro de 2017: atualizado o buildpack do Node.js v3.15
 O buildpack do SDK for Node.js v3.15 fornece o IBM SDK for Node.js versões 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 e 8.6.0. O
@@ -34,9 +42,8 @@ corrigido nesta liberação.
 ## 26 de julho de 2017: atualizado o buildpack do Node.js v3.13
 O buildpack do SDK for Node.js v3.13 fornece o IBM SDK for Node.js versões 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 e 8.1.4. O padrão é a 6.x mais recente, portanto é atualmente a 6.11.1. Observe que a versão 8 está disponível para teste, mas ainda não é recomendada para produção.  
 
-Esse buildpack contém versões atualizadas do Node.js que tratam das vulnerabilidades de segurança recentes localizadas no Node.js.  
-Os usuários devem atualizar seus aplicativos para usar as versões mais recentes disponíveis e, em seguida, remontar os aplicativos no
-{{site.data.keyword.Bluemix_notm}}. Veja <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este link</a> para obter detalhes sobre as vulnerabilidades do Node.js.
+Esse buildpack contém versões atualizadas do Node.js que tratam das vulnerabilidades de segurança recentes localizadas no Node.js.  Os usuários devem atualizar seus aplicativos para usar as versões mais recentes disponíveis e, em seguida, remontar os aplicativos no
+{{site.data.keyword.Bluemix_notm}}.  Veja <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este link</a> para obter detalhes sobre as vulnerabilidades do Node.js.
 
 ## 5 de maio de 2017: atualizado o buildpack do Node.js v3.12
 O buildpack v3.12 do SDK for Node.js fornece as versões 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 e 6.10.2 do IBM SDK for Node.js. O padrão foi mudado da 4.x mais recente para a 6.x mais recente, portanto é atualmente a 6.10.2. Sendo uma mudança de versão principal, isso poderia afetar apps que estão contando com o padrão. Veja [Suporte de longo prazo da versão do Node.js e o buildpack do SDK for Node.js](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) para obter mais informações sobre como evitar quaisquer problemas.
@@ -229,8 +236,7 @@ O Node.js v2.6.1 apresenta uma correção de bug para o [Manipulador de gerencia
 
 ## 15 de outubro de 2015: atualizado o buildpack do Node.js v2.6-20151006-1309
 
-Essa liberação do buildpack do Node.js apresenta a integração do [Gerenciador de processos StrongLoop ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://strong-pm.io) para o recurso App Management. 
-Para obter mais informações, consulte a postagem do blog
+Essa liberação do buildpack do Node.js apresenta a integração do [Gerenciador de processos StrongLoop ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://strong-pm.io) para o recurso App Management. Para obter mais informações, consulte a postagem do blog
 [StrongLoop DevOps for Node.js
 Applications no {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -13,6 +13,28 @@ lastupdated: "2017-10-26"
 {: #latest_updates}
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
+
+
+### 13 de febrero de 2018: se ha actualizado el paquete de compilación de Liberty v3.18.
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2018.2.0.0.
+* El tiempo de ejecución predeterminado de Liberty también incluye [Apache Commons iFix PI90804]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428).
+
+### 31 de enero de 2018: se ha actualizado el paquete de compilación de Liberty v3.17.1.
+* Se ha actualizado el paquete de compilación para incluir la característica Liberty microProfile-1.2.
+
+### 26 de enero de 2018: se ha actualizado el paquete de compilación de Liberty v3.17.
+* El paquete de compilación se ha actualizado para añadir la posibilidad de establecer dinámicamente el rastreo en el servidor Liberty.
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2018.1.0.0.
+* La versión de IBM JRE se ha actualizado a 8 SR5 FP7.
+
+### 5 de enero de 2018: se ha actualizado el paquete de compilación de Liberty v3.16-20180102-0938
+* La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release 17.0.0.4
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2017.12.0.0.
+* La versión de IBM JRE se ha actualizado a 8 SR5 FP6.
+
+
+### 31 de octubre de 2017: se ha actualizado el paquete de compilación de Liberty v3.15.
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2017.10.0.0.
 
 ### 17 de octubre de 2017: se ha actualizado el paquete de compilación de Liberty v3.14-20171013-1023
 * La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado a 17.0.0.3.

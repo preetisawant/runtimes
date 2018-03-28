@@ -54,12 +54,16 @@ dotnet publish -r ubuntu.14.04-x64
 {: codeblock}
 目录推送应用程序。
 
+
+
 对于可移植应用程序，可以从 
 ```
   bin/<Debug|Release>/<framework>/publish
 ```
 {:codeblock}
 目录推送应用程序。
+
+
 
 另请注意，如果在应用程序中使用 manifest.yml 文件，您可以在 manifest.ymle 中指定发布输出文件夹的路径。之后在推送应用程序时，您无需位于该文件夹中。
 

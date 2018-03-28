@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Go" audience="runtime"}
+{: .toc subcollection="Go" audience="runtime" href="/docs/runtimes/go/getting-started.html"}}
 Go
 
     {: .navgroup id="learn"}
@@ -10,7 +10,7 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [プロキシーの処理](../../manageapps/workingWithProxy.html)
+    [プロキシーの処理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -21,6 +21,7 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     [使用可能なバージョン](index.html#runtime_versions)
-    [ビルドパックのサポート・ステートメント](../../manageapps/buildpackSupport.html)
+    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
     {: .navgroup-end}

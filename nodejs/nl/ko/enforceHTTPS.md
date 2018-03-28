@@ -13,7 +13,7 @@ lastupdated: "2017-10-26"
 # 애플리케이션의 모든 페이지에서 HTTPS 강제 실행
 {: #enforce_https}
 
-Express 프레임워크를 사용하여 {{site.data.keyword.Bluemix}}에서 애플리케이션을 실행할 때 애플리케이션의 모든 페이지에서 HTTP 대신 HTTPS를 강제 실행하려면 다음과 같이 변경해야 합니다. 
+Express 프레임워크를 사용하여 {{site.data.keyword.Bluemix}}에서 애플리케이션을 실행할 때 애플리케이션의 모든 페이지에서 HTTP 대신 HTTPS를 강제 실행하려면 다음과 같이 변경해야 합니다.
 
 ```
 var express = require("express");

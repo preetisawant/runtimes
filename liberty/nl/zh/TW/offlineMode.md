@@ -29,7 +29,7 @@ lastupdated: "2017-10-26"
 ## 使用 Proxy
 {: #working_with_proxy}
 
-在一些如 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 及 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 這類環境中，可以配置 Proxy。如需詳細資訊，請參閱[使用 Proxy](/docs/manageapps/workingWithProxy.html)。
+在一些如 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 及 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 這類環境中，可以配置 Proxy。如需詳細資訊，請參閱[使用 Proxy](/docs/runtimes/common/workingWithProxy.html)。
 
 # 相關鏈結
 {: #rellinks notoc}

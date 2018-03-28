@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime"}
+{: .toc subcollection="liberty" audience="runtime" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -20,7 +20,8 @@ Liberty for Java
     {: .topicgroup}
     Use o IBM Eclipse Tools for IBM Cloud
         eclipseDevelop.md
-        [Implementar aplicativos com o IBM Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+        [Implementar aplicativos com o IBM
+Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
 
     autoConfig.md
     customizingJRE.md
@@ -37,7 +38,7 @@ Liberty for Java
     {: .topicgroup}
     Trabalhar off-line ou com um proxy
         offlineMode.md
-        [Trabalhar com um proxy](../../manageapps/workingWithProxy.html)
+        [Trabalho com um proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -52,12 +53,12 @@ Liberty for Java
         [Usar buildpacks de comunidade](../../cfapps/byob.html)
 
     buildpackDefaults.md
-    [Gerenciando aplicativos Liberty e Node.js](../../manageapps/app_mng.html)
+    [Gerenciando os aplicativos Liberty e Node.js](../common/app_mng.html)
     [Introdução ao IBM Monitoring and Analytics](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
-    [Instrução de suporte do buildpack](../../manageapps/buildpackSupport.html)
+    [Instrução de suporte do buildpack](../common/buildpackSupport.html)
     {: .navgroup-end}

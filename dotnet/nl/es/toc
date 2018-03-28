@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Dotnet" audience="runtime"}
+{: .toc subcollection="Dotnet" audience="runtime" href="/docs/runtimes/dotnet/getting-started.html"}
 ASP.NET Core
 
     {: .navgroup id="learn"}
@@ -10,10 +10,10 @@ ASP.NET Core
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    disablingNuGet.md
+disablingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    [Trabajar con un proxy](../../manageapps/workingWithProxy.html)
+    [Trabajar con un proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -28,8 +28,8 @@ ASP.NET Core
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
+ts_index.md
     updates.md
     runtimeVersions.md
-    [Declaración de soporte de paquete de compilación](../../manageapps/buildpackSupport.html)
+    [Declaración de soporte de paquete de compilación](../common/buildpackSupport.html)
     {: .navgroup-end}

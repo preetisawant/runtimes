@@ -15,8 +15,7 @@ lastupdated: "2017-10-26"
 {: #offline_mode}
 
 Quando um aplicativo Liberty é enviado por push para {{site.data.keyword.Bluemix}}, o buildpack do Liberty pode acessar
-sites externos ao {{site.data.keyword.Bluemix_notm}} para adquirir os artefatos requeridos pelo aplicativo. Veja a seguir os sites externos que o buildpack do Liberty pode acessar.  
-Em ambientes [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e
+sites externos ao {{site.data.keyword.Bluemix_notm}} para adquirir os artefatos requeridos pelo aplicativo.  Veja a seguir os sites externos que o buildpack do Liberty pode acessar.  Em ambientes [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), estes sites podem
 precisar ser *incluídos na lista de desbloqueio*.
 
@@ -34,7 +33,7 @@ precisar ser *incluídos na lista de desbloqueio*.
 {: #working_with_proxy}
 
 Em alguns ambientes, como [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), um proxy pode ser configurado. Consulte
-[Trabalhando com um proxy](/docs/manageapps/workingWithProxy.html) para obter mais detalhes.
+[Trabalhando com um proxy](/docs/runtimes/common/workingWithProxy.html) para obter mais detalhes.
 
 # rellinks
 {: #rellinks notoc}

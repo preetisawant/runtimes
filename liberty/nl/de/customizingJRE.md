@@ -29,7 +29,7 @@ Die Versionseigenschaft kann auf einen Versionsbereich festgelegt werden. Es wer
 ## OpenJDK
 {: #openjdk}
 
-Optional können Anwendungen für die Ausführung mit OpenJDK als JRE konfiguriert werden. Um die Ausführung einer Anwendung mit OpenJDK zu ermöglichen, geben Sie 'openjdk' für die JVM-Umgebungsvariable an. Führen Sie zum Beispiel mithilfe des Befehlszeilentools 'cf' den folgenden Befehl aus:
+Optional können Anwendungen für die Ausführung mit OpenJDK als JRE konfiguriert werden. Um die Ausführung einer Anwendung mit OpenJDK zu ermöglichen, geben Sie “openjdk” für die JVM-Umgebungsvariable an. Führen Sie zum Beispiel mithilfe des Befehlszeilentools cf den folgenden Befehl aus:
 ```
     $ cf set-env myapp JVM 'openjdk'
 ```
@@ -41,7 +41,7 @@ Standardmäßig wird OpenJDK Version 8 verwendet, sofern aktiviert. Mit der Umge
 ```
 {: codeblock}
 
-Die Versionseigenschaft kann auf einen Versionsbereich wie '1.7.+ ' oder auf eine bestimmte in der [Liste der verfügbaren OpenJDK-Versionen](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml) aufgeführte Version festgelegt werden. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden.
+Die Versionseigenschaft kann auf einen Versionsbereich wie 1.7.+  oder auf eine bestimmte in der [Liste der verfügbaren OpenJDK-Versionen](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml) aufgeführte Version festgelegt werden. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden.
 
 ## Oracle JRE
 {: #oracle_jre}
@@ -61,7 +61,7 @@ Das Liberty-Buildpack konfiguriert die JVM-Standardoptionen unter Berücksichtig
   * JRE-Typ, da die auf den Heapspeicher bezogenen Optionen für die JVM in Abhängigkeit von den unterstützten JRE-Optionen variieren.
 
 * Die in {{site.data.keyword.Bluemix_notm}} unterstützten [Liberty-Features](libertyFeatures.html#libertyfeatures).
-  * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in {{site.data.keyword.Bluemix_notm}} nicht unterstützt und deshalb durch die Einstellung '-Dcom.ibm.tx.jta.disable2PC=true' inaktiviert.
+  * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in {{site.data.keyword.Bluemix_notm}} nicht unterstützt und deshalb durch die Einstellung -Dcom.ibm.tx.jta.disable2PC=true inaktiviert.
 
 * Die {{site.data.keyword.Bluemix_notm}}-Umgebung.
 
@@ -69,7 +69,7 @@ Das Liberty-Buildpack konfiguriert die JVM-Standardoptionen unter Berücksichtig
   * Schnelle Fehlerdiagnose und -behebung für eine Anwendung wird durch Inaktivierung der JVM-Speicherauszugsoptionen und Beenden der Prozesse bei erschöpfter Speicherkapazität der Anwendung konfiguriert.
   * Virtualisierungsoptimierung (nur {{site.data.keyword.IBM_notm}} JRE).
   * Weiterleitung von Informationen zu den verfügbaren Speicherressourcen der Anwendung im Fehlerfall an Loggregator.
-  * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis 'dumps' weitergeleitet. Diese Speicherauszüge können dann über das {{site.data.keyword.Bluemix_notm}}-Dashboard oder die Cloud Foundry-CLI angezeigt werden.
+  * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis "dumps" weitergeleitet. Diese Speicherauszüge können dann über das {{site.data.keyword.Bluemix_notm}}-Dashboard oder die Cloud Foundry-CLI angezeigt werden.
 
 Es folgt eine Beispielkonfiguration einer Standard-JVM, die vom Buildpack für eine Anwendung generiert wurde, die mit einer Speicherbegrenzung von 512M bereitgestellt wurde:
 
@@ -99,7 +99,7 @@ Anwendungen können die JVM-Optionen mit den Spezifikationen anpassen, die von d
 
 <tr>
 <td> {{site.data.keyword.IBM_notm}} JRE</td>
-<td>Enthält Laufzeitoptionen (Präfix '-X') und Java-Systemeigenschaften (Präfix '-D'). Die Angabe von '-XX' bei gelegentlicher Nutzung wird nicht empfohlen (Änderungen an diesen Optionen vorbehalten).
+<td>Enthält Laufzeitoptionen (Präfix -X) und Java-Systemeigenschaften (Präfix -D). Die Angabe von -XX bei gelegentlicher Nutzung wird nicht empfohlen (Änderungen an diesen Optionen vorbehalten).
 </td>
 <td>[Befehlszeilenoptionen für Version 8](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html), [Befehlszeilenoptionen für Version 7](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
 </td>
@@ -108,11 +108,11 @@ Anwendungen können die JVM-Optionen mit den Spezifikationen anpassen, die von d
 <tr>
 <td> OpenJDK </td>
 <td>Basiert auf der HotSpot-Laufzeit; Schreibweise: -X für Nicht-Standardoptionen, -XX für Entwickleroptionen und boolesche Flags zum Aktivieren oder Inaktivieren von Optionen. </td>
-<td>[HotSpot Runtime Overview ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[HotSpot Runtime Overview ![Symbol Externer Link](../../icons/launch-glyph.svg "Symbol Externer Link")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
-Eine Anwendung, die angepasste JVM-Optionen erfordert, kann die Option als Wert für die Umgebungsvariable IBM_JAVA_OPTIONS, JAVA_OPTS oder JVM_ARGS in {{site.data.keyword.Bluemix_notm}} definieren. Informationen zum Definieren von Umgebungsvariablen für eine Anwendung finden Sie in 'Umgebungsvariablen'. Anstatt eine Umgebungsvariable zu definieren, kann ein paketierter Server oder ein Serververzeichnis auch die Datei 'jvm.options' mit den Befehlszeilenoptionen enthalten.
+Eine Anwendung, die angepasste JVM-Optionen erfordert, kann die Option als Wert für die Umgebungsvariable IBM_JAVA_OPTIONS, JAVA_OPTS oder JVM_ARGS in {{site.data.keyword.Bluemix_notm}} definieren. Informationen zum Definieren von Umgebungsvariablen für eine Anwendung finden Sie in Umgebungsvariablen. Anstatt eine Umgebungsvariable zu definieren, kann ein paketierter Server oder ein Serververzeichnis auch die Datei jvm.options mit den Befehlszeilenoptionen enthalten.
 
 Wenn die JVM-Optionen auf die JRE angewendet werden, erfolgt zuerst die Anwendung der Standardoptionen des Liberty-Buildpacks gefolgt von den angepassten Optionen. Die angepassten Optionen werden in einer bestimmten Reihenfolge angehängt (siehe Tabelle). Die Reihenfolge der angewendeten Java-Optionen gibt an, welche Optionen Vorrang haben. Optionen, die zuletzt angewendet werden, haben Vorrang vor Optionen, die zuvor angewendet wurden.
 
@@ -229,7 +229,7 @@ Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche {{site.da
 ```
 {: codeblock}
 
-* Wenn Sie die {{site.data.keyword.IBM_notm}} JRE-Option einer bereitgestellten Anwendung aktualisieren möchten, um 'heap', 'snap' und 'javacore' für eine OutOfMemory-Bedingung auszulösen, definieren Sie die Umgebungsvariable der Anwendung mit der JVM-Option und führen Sie einen Neustart der Anwendung durch:
+* Wenn Sie die {{site.data.keyword.IBM_notm}} JRE-Option einer bereitgestellten Anwendung aktualisieren möchten, um heap, snap und javacore für eine OutOfMemory-Bedingung auszulösen, definieren Sie die Umgebungsvariable der Anwendung mit der JVM-Option und führen Sie einen Neustart der Anwendung durch:
 
 ```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
@@ -244,7 +244,7 @@ Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche {{site.da
 
 In manchen Fällen müssen Dateien mit der JRE gepackt werden, um deren Funktionen bereitzustellen. Der Anwendungsentwickler kann JRE-Dateien für die Anpassung angeben.
 
-Die zu überschreibenden Dateien können mit der WAR-, EAR- oder JAR-Anwendungsdatei in einem Ressourcenordner im Stammverzeichnis des Archivs gepackt werden. Für einen Server (komprimierte Datei oder Serververzeichnis) können die Dateien in einem Ressourcenordner im Serververzeichnis mit der Datei 'server.xml' gepackt werden.
+Die zu überschreibenden Dateien können mit der WAR-, EAR- oder JAR-Anwendungsdatei in einem Ressourcenordner im Stammverzeichnis des Archivs gepackt werden. Für einen Server (komprimierte Datei oder Serververzeichnis) können die Dateien in einem Ressourcenordner im Serververzeichnis mit der Datei server.xml gepackt werden.
 
 * WAR-Datei
   * WEB-INF
@@ -275,7 +275,7 @@ Die zu überschreibenden Dateien können mit der WAR-, EAR- oder JAR-Anwendungsd
     * other files
     * .java-overlay
 
-Das Verzeichnis '.java-overlay' enthält in derselben Dateihierarchie wie die zu überschreibende JRE bestimmte Dateien, die mit '.java/jre' beginnen.
+Das Verzeichnis .java-overlay enthält in derselben Dateihierarchie wie die zu überschreibende JRE bestimmte Dateien, die mit .java/jre beginnen.
 
 Wenn Sie beispielsweise die 256-Bit-AES-Verschlüsselung verwenden möchten, müssen die folgenden Java-Richtliniendateien überschrieben werden:
 

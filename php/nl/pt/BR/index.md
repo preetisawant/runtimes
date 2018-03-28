@@ -1,6 +1,8 @@
 ---
 
-copyright: years: 2015, 2017 lastupdated: "2017-12-15"
+copyright:
+  years: 2015, 2017
+lastupdated: "2017-12-15"
 
 ---
 
@@ -34,8 +36,7 @@ obter ajuda sobre o uso do app iniciador.
 {: #enforce_https}
 
 Para impor o uso de HTTPS em vez de HTTP em todas as páginas em seu aplicativo ao executar no
-{{site.data.keyword.Bluemix_notm}} usando o Apache, as mudanças a seguir precisam ser feitas ao seu arquivo ".htaccess".
-Essa regra se aplicará a qualquer solicitação que não tiver sido feita usando somente HTTPS enquanto estiver executando no {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.Bluemix_notm}} usando o Apache, as mudanças a seguir precisam ser feitas ao seu arquivo ".htaccess".  Essa regra se aplicará a qualquer solicitação que não tiver sido feita usando somente HTTPS enquanto estiver executando no {{site.data.keyword.Bluemix_notm}}.
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]

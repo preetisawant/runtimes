@@ -34,7 +34,7 @@ Führen Sie die Schritte aus, die im Folgenden für das Hosten der JRE-Datei und
     ```
     {: codeblock}
 
-    * Schließen Sie die JRE-Versions-ID sowie die vollständige URL der JRE-Dateiposition ein. Beispiel:
+    * Schließen Sie die JRE-Versions-ID sowie die vollständige URL der JRE-Dateiposition ein.  Beispiel:
 
     ```
     ---
@@ -68,12 +68,12 @@ $ cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 
-**Hinweis**: Führen Sie nach dem Festlegen der Umgebungsvariablen ein erneutes Staging Ihrer Anwendung aus, damit die Änderungen wirksam werden. 
+**Hinweis**: Führen Sie nach dem Festlegen der Umgebungsvariablen ein erneutes Staging Ihrer Anwendung aus, damit die Änderungen wirksam werden.
 
 ## Bestätigen
 {: #confirmation}
 
-Prüfen Sie das Staging-Protokoll zur Bestätigung, dass Liberty die erwartete JRE verwendet. Suchen Sie nach einer Nachricht, die angibt, dass der Server das Buildpack aus der in der Datei `index.yml` angegebenen Position heruntergeladen hat. Das folgende Snippet enthält ein Beispiel der Protokollausgabe, wenn Liberty die erwartete JRE erfolgreich verwendet. 
+Prüfen Sie das Staging-Protokoll zur Bestätigung, dass Liberty die erwartete JRE verwendet. Suchen Sie nach einer Nachricht, die angibt, dass der Server das Buildpack aus der in der Datei `index.yml` angegebenen Position heruntergeladen hat. Das folgende Snippet enthält ein Beispiel der Protokollausgabe, wenn Liberty die erwartete JRE erfolgreich verwendet.
 ```
  -----> Downloading OpenJdk 1.8.0_91 from https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz (6.2s)
 ```

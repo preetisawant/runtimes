@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -34,7 +34,7 @@ Variables de entorno admitidas por Liberty para Java.
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>Habilitar [funciones beta de Liberty/](usingBetaFeatures.html)</td>
+<td>Habilite [funciones beta de Liberty](usingBetaFeatures.html)</td>
 </tr>
 
 <tr>
@@ -64,7 +64,7 @@ Variables de entorno admitidas por Liberty para Java.
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>Inhabilitar la infraestructura Spring Auto-Reconfiguration. Para inhabilitarla, establezca el valor en enabled: false. </td>
+<td>Inhabilite el [marco de Spring Auto-Reconfiguration](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-spring_auto_reconfiguration.md). Para inhabilitarla, establezca el valor en enabled: false. </td>
 </tr>
 
 <tr>

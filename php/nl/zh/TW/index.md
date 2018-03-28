@@ -53,6 +53,8 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 {: codeblock}
 如需相關資訊，請參閱 [Composer 套件鏈結 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://getcomposer.org/doc/04-schema.md#package-links)。
 
+
+
 如果未指定版本，依預設會選擇 5.6.31 版。
 
 ### 可用的版本：

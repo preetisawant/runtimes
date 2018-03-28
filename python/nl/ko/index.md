@@ -28,7 +28,7 @@ python_buildpack은 앱의 루트 디렉토리에 requirements.txt 파일 또는
 ## 런타임 버전
 {: #runtime_versions}
 
-애플리케이션 루트에 있는 runtime.txt 파일에서 python-versionnumber를 설정하여 앱에서 사용할 Python 버전을 지정할 수 있습니다. 예:
+애플리케이션 루트에 있는 runtime.txt 파일에서 python-versionnumber를 설정하여 앱에서 사용할 Python 버전을 지정할 수 있습니다. 예를 들어, 다음과 같습니다.
 
 ```
 python-3.6.1
@@ -60,8 +60,8 @@ python-3.6.1
 [Python 빌드팩](https://github.com/cloudfoundry/python-buildpack)을 사용하여 애플리케이션을 배치할 수
 있습니다.
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [Python에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/python-buildpack)

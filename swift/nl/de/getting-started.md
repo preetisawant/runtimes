@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-15"
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -56,7 +56,7 @@ Die Ausführung dieses Befehls kann einige Minuten dauern.
 
 Sobald die Anwendung erfolgreich kompiliert wurde, können Sie die ausführbare Datei, die vom Swift-Compiler generiert wurde, ausführen.
 ```
-.build/debug/kitura-helloworld
+.build/debug/get-started-swift
 ```
 {: pre}
 
@@ -105,8 +105,8 @@ Ersetzen Sie *API-endpoint* im Befehl durch einen API-Endpunkt aus der folgenden
 
 | **Name der Region** | **Standort** | **API-Endpunkt** |
 |-----------------|-------------------------|-------------------|
-| Region USA (Süden)  | Dallas, USA | api.ng.bluemix.net |
-| Region USA (Osten)  | Washington, DC, USA | api.us-east.bluemix.net |
+| Region USA (Süden) | Dallas, USA | api.ng.bluemix.net |
+| Region USA (Osten) | Washington, DC, USA | api.us-east.bluemix.net |
 | Region Großbritannien | London, England | api.eu-gb.bluemix.net |
 | Region Sydney | Sydney, Australien | api.au-syd.bluemix.net |
 | Region Deutschland | Frankfurt, Deutschland | api.eu-de.bluemix.net |
@@ -136,11 +136,10 @@ Wenn die Bereitstellung abgeschlossen ist, sollten Sie eine Nachricht sehen, die
 
 Als Nächstes werden wir eine NoSQL-Datenbank zu dieser Anwendung hinzufügen und die Anwendung so einrichten, dass sie lokal und unter {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann.
 
-1. Melden Sie sich in Ihrem Browser bei {{site.data.keyword.Bluemix_notm}} an. Navigieren Sie zum `Dashboard`. Wählen Sie Ihre Anwendung durch Klicken auf den zugehörigen Namen in der Spalte `Name` aus.
-2. Klicken Sie auf `Verbindungen` und dann auf `Verbindung erstellen`.
-3. Wählen Sie im Abschnitt `Data &  Analytics` den Eintrag `Cloudant NoSQL DB` aus.
-4. Wählen Sie einen Preistarif aus. {{site.data.keyword.Bluemix_notm}} bietet kostenlose `Lite`-Tarife für eine ausgewählte Gruppe seiner Cloud-Services mit ausreichender Kapazität für den Start.
-5. Wählen Sie `Erneutes Staging` aus, wenn Sie dazu aufgefordert werden. {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und bietet die Datenbankberechtigungsnachweise für Ihre Anwendung unter Verwendung der Umgebungsvariablen `VCAP_SERVICES`. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
+1. Melden Sie sich in Ihrem Browser bei {{site.data.keyword.Bluemix_notm}} an und wechseln Sie in das Dashboard. Wählen Sie **Ressource erstellen** aus.
+2. Wählen Sie den Abschnitt **Data and Analytics** und anschließend **Cloudant NoSQL DB** aus und erstellen Sie Ihren Service.
+3. Rufen Sie die Ansicht **Verbindungen** auf. Wählen Sie Ihre Anwendung und anschließend **Verbindung erstellen** aus.
+4. Wählen Sie **Erneutes Staging** aus, wenn Sie dazu aufgefordert werden. {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und bietet die Datenbankberechtigungsnachweise für Ihre Anwendung unter Verwendung der Umgebungsvariablen `VCAP_SERVICES`. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn Sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
 
 Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Anstelle der festen Codierung eines Datenbankkennworts können Sie dieses in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen. [Weitere Informationen...](/docs/manageapps/depapps.html#app_env)
 {: tip}

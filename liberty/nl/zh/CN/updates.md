@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -13,6 +13,28 @@ lastupdated: "2017-10-26"
 {: #latest_updates}
 
 ## Liberty buildpack 中最新更新的列表。
+
+
+### 2018 年 2 月 13 日：更新了 Liberty buildpack V3.18。
+* 每月 Liberty 运行时版本已更新为 2018.2.0.0。
+* 缺省 Liberty 运行时还包含 [PI90804 Apache Commons iFix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428)。
+
+### 2018 年 1 月 31 日：更新了 Liberty buildpack V3.17.1。
+* 该 buildpack 已更新，包含了 Liberty 功能 microProfile-1.2。
+
+### 2018 年 1 月 26 日：更新了 Liberty buildpack V3.17。
+* 该 buildpack 已更新，添加了在 Liberty 服务器上动态设置跟踪的功能。
+* 每月 Liberty 运行时版本已更新为 2018.1.0.0。
+* IBM JRE 版本已更新为 8 SR5 FP7。
+
+### 2018 年 1 月 5 日：更新了 Liberty buildpack V3.16-20180102-0938
+* 缺省 Liberty 运行时版本已更新为 17.0.0.4 发行版。
+* 每月 Liberty 运行时版本已更新为 2017.12.0.0。
+* IBM JRE 版本已更新为 8 SR5 FP6。
+
+
+### 2017 年 10 月 31 日：更新了 Liberty buildpack V3.15。
+* 每月 Liberty 运行时版本已更新为 2017.10.0.0。
 
 ### 2017 年 10 月 17 日：更新了 Liberty buildpack V3.14-20171013-1023
 * 缺省 Liberty 运行时版本已更新为 17.0.0.3 发行版。

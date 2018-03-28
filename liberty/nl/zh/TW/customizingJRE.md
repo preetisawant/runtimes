@@ -14,13 +14,13 @@ lastupdated: "2017-10-26"
 
 應用程式在 Liberty 建置套件所提供及配置的 Java 運行環境 (JRE) 中執行。Liberty 建置套件也可以配置 JRE 版本或類型、自訂 JVM 選項，或重疊 JRE 功能。
 
-## {{site.data.keyword.IBM_notm}} JRE
+## {{site.data.keyword.IBM_notm}}JRE
 
-依預設，應用程式會配置成使用輕量型版本的 {{site.data.keyword.IBM}} JRE 來執行。這個輕量型 JRE 經過拆解以提供核心的重要功能，並且大量減少磁碟和記憶體佔用量。如需輕量型 JRE 內容的相關資訊，請參閱[佔用量較少的 JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
+依預設，應用程式會配置成使用輕量型版本的 {{site.data.keyword.IBM}} JRE 來執行。這個輕量型 JRE 經過拆解以提供核心的重要功能，並且大量減少磁碟和記憶體佔用量。如需輕量型 JRE 內容的相關資訊，請參閱[小型覆蓋區 JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
 
  依預設會使用 {{site.data.keyword.IBM_notm}} JRE 第 8 版。請使用 JBP_CONFIG_IBMJDK 環境變數來指定 {{site.data.keyword.IBM_notm}} JRE 的替代版本。例如，若要使用最新的 {{site.data.keyword.IBM_notm}} JRE 7.1，請設定下列環境變數：
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+$ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -31,13 +31,13 @@ version 內容可以設成版本範圍。有兩個支援的版本範圍：1.7.+ 
 
 應用程式可以選擇性地配置為使用 OpenJDK 作為 JRE 來執行。為了讓應用程式能使用 OpenJDK 執行，請將 JVM 環境變數設為 "openjdk"。例如，使用 cf 指令行工具，執行下列指令：
 ```
-    $ cf set-env myapp JVM 'openjdk'
+$ cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 如果啟用的話，依預設會使用 OpenJDK 第 8 版。請使用 JBP_CONFIG_OPENJDK 環境變數來指定 OpenJDK 的替代版本。例如，若要使用最新的 OpenJDK 7，請設定下列環境變數：
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+$ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -74,7 +74,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 下列範例是建置套件針對記憶體限制為 512M 的已部署應用程式所產生的預設 JVM 配置：
 
 ```
-    -Xtune:virtualized
+-Xtune:virtualized
     -Xmx384M
     -Xdump:none
     -Xdump:heap:defaults:file=../../../../../dumps/heapdump.%Y%m%d.%H%M%S.%pid.%seq.phd
@@ -114,6 +114,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 需要自訂 JVM 選項的應用程式可以將此選項設為 {{site.data.keyword.Bluemix_notm}} 中 IBM_JAVA_OPTIONS、JAVA_OPTS 或 JVM_ARGS 環境變數其中之一的值。請參閱「環境變數」小節，以瞭解如何設定應用程式的環境變數。包裝伺服器或伺服器目錄也可以包括含有指令行選項的 jvm.options 檔案，而不設定環境變數。
 
 將 JVM 選項套用至 JRE 時，會先套用 Liberty 建置套件的預設選項，接著再套用自訂選項。自訂選項是依表格中所列的特定順序予以附加。已套用的 Java 選項的順序定義了哪些選項優先。最後套用之選項的優先順序高於先前套用的選項。
+
 
 附註：部分選項可能不會生效，除非有代理程式觸發該選項。
 
@@ -178,7 +179,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 ```
 {: codeblock}
 
-若要在執行於 Diego cell 中的應用程式上檢視 `staging_info.yml` 檔案，請執行下列指令：
+若要在執行於 Diego Cell 中的應用程式上檢視 `staging_info.yml` 檔案，請執行下列指令：
 
 ```
     $ cf ssh myapp -c "cat staging_info.yml"
@@ -194,7 +195,7 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 ```
 {: codeblock}
 
-若要在執行於 Diego cell 中的應用程式上檢視 `jvm.options` 檔案，請執行下列指令：
+若要在執行於 Diego Cell 中的應用程式上檢視 `jvm.options` 檔案，請執行下列指令：
 
 ```
     $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
@@ -221,7 +222,7 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 ```
 {: codeblock}
 
-* 若要在執行於 Diego cell 中的應用程式上檢視 JVM 所產生的詳細記憶體回收日誌檔，請執行下列指令：
+* 若要在執行於 Diego Cell 中的應用程式上檢視 JVM 所產生的詳細記憶體回收日誌檔，請執行下列指令：
 
 ```
     $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"

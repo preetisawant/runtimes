@@ -65,8 +65,7 @@ Dynatrace.  Nesse caso, são necessárias as etapas adicionais de configuração
 ### Hospedando o agente Dynatrace
 {: #hosting_dynatrace_agent}
 O agente Dynatrace deve ser hospedado em um servidor da web e o buildpack do Liberty deve ser capaz de fazer download do jar do agente a partir desse servidor. O servidor deve ser configurado com um arquivo `index.yml` que especifique detalhes sobre o jar. agente. Conclua as etapas a seguir para configurar o agente Dynatrace:
-  1. Faça download do jar do agente Dynatrace. Veja [Instaladores da plataforma do servidor Dynatrace](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) no website da comunidade do Dynatrace para obter instruções sobre como fazer download do jar do agente Dynatrace. 
-O arquivo jar do agente apropriado para execução no {{site.data.keyword.Bluemix_notm}} é o
+  1. Faça download do jar do agente Dynatrace. Veja [Instaladores da plataforma do servidor Dynatrace](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) no website da comunidade do Dynatrace para obter instruções sobre como fazer download do jar do agente Dynatrace. O arquivo jar do agente apropriado para execução no {{site.data.keyword.Bluemix_notm}} é o
 **dynatrace-agent-unix.jar** versão **6.+**.
   2. Hospede o arquivo jar do agente em um local a partir do qual o buildpack do Liberty possa fazer download dele. É possível hospedá-lo no {{site.data.keyword.Bluemix_notm}} usando as instalações do servidor disponível ou é possível hospedá-lo em alguns locais disponíveis publicamente.
      * Assegure-se de fornecer um arquivo `index.yml` no local de hosting. O arquivo `index.yml` deve conter uma entrada que consista no ID da versão do jar agente, seguido por dois-pontos (:) e pela URL completa do local desse jar agente. Por exemplo:

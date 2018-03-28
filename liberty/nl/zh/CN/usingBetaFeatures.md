@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -20,16 +20,34 @@ Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会�
 <table>
 <tr>
 <th align="left">功能</th>
-<th align="left">功能</th>
-<th align="left">功能</th>
-<th align="left">功能</th>
 </tr>
 
 <tr>
-<td>bluemixLogCollector-1.1</td>
-<td>httpWhiteboard-1.0</td>
-<td>logstashCollector-1.1</td>
-<td>osgiBundle-1.0</td>
+    <tr><td>appSecurity-3.0</tr></td>
+    <tr><td>audit-1.0</tr></td>
+    <tr><td>beanValidation-2.0</tr></td>
+    <tr><td>bluemixLogCollector-1.1</tr></td>
+    <tr><td>cdi-2.0</tr></td>
+    <tr><td>javaee-8.0</tr></td>
+    <tr><td>javaeeClient-8.0</tr></td>
+    <tr><td>jaxrs-2.1</tr></td>
+    <tr><td>jpa-2.2</tr></td>
+    <tr><td>jpaContainer-2.2</tr></td>
+    <tr><td>jsf-2.3</tr></td>
+    <tr><td>jsfContainer-2.2</tr></td>
+    <tr><td>jsonb-1.0</tr></td>
+    <tr><td>jsonbContainer-1.0</tr></td>
+    <tr><td>jsonp-1.1</tr></td>
+    <tr><td>jsonpContainer-1.1</tr></td>
+    <tr><td>logstashCollector-1.1</tr></td>
+    <tr><td>mpConfig-1.2</tr></td>
+    <tr><td>mpOpenAPI-1.0</tr></td>
+    <tr><td>mpRestClient-1.0</tr></td>
+    <tr><td>opentracing-1.0</tr></td>
+    <tr><td>servlet-4.0</tr></td>
+    <tr><td>validator-1.0</tr></td>
+    <tr><td>webProfile-8.0</tr></td>
+
 </tr>
 </table>
 
@@ -40,7 +58,7 @@ Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会�
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>bluemixLogCollector-1.1</feature>
+            <feature>mpOpenAPI-1.0</feature>
         </featureManager>
     </server>
 ```
@@ -80,5 +98,5 @@ env:
 {: #rellinks notoc}
 ## 常规
 {: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty for Java 运行时](index.html)
+* [Liberty 概述](https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-15"
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -56,7 +56,7 @@ swift build
 
 アプリケーションが正常にコンパイルされたら、Swift コンパイラーによって生成された実行可能ファイルを実行できます。
 ```
-.build/debug/kitura-helloworld
+.build/debug/get-started-swift
 ```
 {: pre}
 
@@ -105,11 +105,11 @@ cf api <API-endpoint>
 
 | **地域名** | **地理的位置** | **API エンドポイント** |
 |-----------------|-------------------------|-------------------|
-| 米国南部地域 | ダラス、米国| api.ng.bluemix.net |
-| 米国東部地域 | ワシントン DC、米国| api.us-east.bluemix.net |
-| 英国地域 | ロンドン、イングランド| api.eu-gb.bluemix.net |
-| シドニー地域| シドニー、オーストラリア| api.au-syd.bluemix.net |
-| ドイツ地域| フランクフルト、ドイツ| api.eu-de.bluemix.net |
+| 米国南部地域 | ダラス、米国 | api.ng.bluemix.net |
+| 米国東部地域 | ワシントン DC、米国 | api.us-east.bluemix.net |
+| 英国地域 | ロンドン、イングランド | api.eu-gb.bluemix.net |
+| シドニー地域 | シドニー、オーストラリア | api.au-syd.bluemix.net |
+| ドイツ地域 | フランクフルト、ドイツ | api.eu-de.bluemix.net |
 {: caption="表 1. {{site.data.keyword.cloud_notm}} 地域リスト" caption-side="top"}
 
 {{site.data.keyword.Bluemix_notm}} アカウントにログインします。
@@ -136,11 +136,10 @@ cf api <API-endpoint>
 
 次に、NoSQL データベースをこのアプリケーションに追加して、ローカルおよび {{site.data.keyword.Bluemix_notm}} 上で実行できるようにアプリケーションをセットアップします。
 
-1. ご使用のブラウザーで {{site.data.keyword.Bluemix_notm}} にログインします。 `「ダッシュボード」`を参照します。 `「名前」`列でアプリケーションの名前をクリックして選択します。
-2. `「接続」`、`「接続の作成」`の順にクリックします。
-3. `「データおよび分析」`セクションで、`「Cloudant NoSQL DB」`を選択します。
-4. 料金プランを選択します。 {{site.data.keyword.Bluemix_notm}} は、開始するために十分な容量を持ったクラウド・サービスの選択したコレクションに対して無料の`ライト`・プランを提供します。
-5. プロンプトが出されたら、`「再ステージ」`を選択します。 {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 この環境変数は、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合にのみアプリケーションで使用できます。
+1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
+2. **「データおよび分析」**セクションを選択し、**Cloudant NoSQL DB** を選択してサービスを作成します。
+3. **「接続」**ビューに移動し、アプリケーションを選択してから**「接続の作成」**を選択します。
+4. プロンプトが出されたら**「再ステージ」**を選択します。 {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
 
 環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。 例えば、データベース・パスワードをハードコーディングする代わりに、環境変数にそれを保管して、ソース・コードではその環境変数を参照するようにできます。 [詳細はこちら...](/docs/manageapps/depapps.html#app_env)
 {: tip}
@@ -174,9 +173,9 @@ cf api <API-endpoint>
 }
 ```
 
-このサンプル・アプリケーションでは、`CloudEnvironment` パッケージを使用して {{site.data.keyword.Bluemix_notm}} と対話して、環境変数を構文解析します。[詳細はこちら...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+このサンプル・アプリケーションでは、`CloudEnvironment` パッケージを使用して {{site.data.keyword.Bluemix_notm}} と対話して、環境変数を構文解析します。 [詳細はこちら...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
 
-`cloudfoundry:cloudant` 構成内の `cloudant` プレースホルダーは、ユーザー提供の Cloudant サービスをアプリケーションに簡単にバインドできるようにします。`cloudfoundry:cloudant` 構成を使用すると、`config.json` ファイルを編集せずに、サービス名にストリング `cloudant` を含む Cloudant サービスを作成して、このサービスをアプリケーションにバインドすることができます。この構成を変更して、後でユーザー提供の Cloudant サービスを使用するには、この構成を `cloudfoundry:cloudant` に編集するか、ユーザー提供のサービスの名前で `cloudfoundry:` を定義する必要があります。
+`cloudfoundry:cloudant` 構成内の `cloudant` プレースホルダーは、ユーザー提供の Cloudant サービスをアプリケーションに簡単にバインドできるようにします。 `cloudfoundry:cloudant` 構成を使用すると、`config.json` ファイルを編集せずに、サービス名にストリング `cloudant` を含む Cloudant サービスを作成して、このサービスをアプリケーションにバインドすることができます。 この構成を変更して、後でユーザー提供の Cloudant サービスを使用するには、この構成を `cloudfoundry:cloudant` に編集するか、ユーザー提供のサービスの名前で `cloudfoundry:` を定義する必要があります。
 {: tip}
 
 {{site.data.keyword.Bluemix_notm}} UI に戻って、「アプリ」->「接続」->「Cloudant」->「資格情報の表示」を選択します。
@@ -194,9 +193,9 @@ swift build
  ```
  {: pre}
 
- http://localhost:8080 でアプリケーションを表示します。アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
+ http://localhost:8080 でアプリケーションを表示します。 アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
 
- このサンプル・アプリケーションでは、「Kitura-CouchDB」パッケージを使用して Cloudant と対話します。[詳細はこちら...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ このサンプル・アプリケーションでは、「Kitura-CouchDB」パッケージを使用して Cloudant と対話します。 [詳細はこちら...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
 
  必要な変更を行って、{{site.data.keyword.Bluemix_notm}} に再デプロイします。
 

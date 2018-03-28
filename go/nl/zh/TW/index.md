@@ -39,6 +39,8 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 {: codeblock}
 如需相關資訊，請參閱 [godep](https://github.com/tools/godep){: new_window}。
 
+
+
 如果未指定版本，依預設會選擇 1.8.3 版。
 
 ### 可用的版本：

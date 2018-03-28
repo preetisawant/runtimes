@@ -12,11 +12,17 @@ lastupdated: "2017-10-26"
 # Customizar o JRE
 {: #customizing_jre}
 
-Os aplicativos executados em um Java Runtime Environment (JRE) que é fornecido e configurado pelo buildpack Liberty. O buildpack Liberty também possibilita configurar a versão ou tipo de JRE, customizar as opções da JVM ou sobrepor as funções do JRE.
+Os aplicativos executados em um Java Runtime Environment (JRE) que é fornecido e configurado pelo buildpack Liberty. O buildpack Liberty também
+possibilita configurar a versão ou tipo de JRE,
+customizar as opções da JVM ou sobrepor as funções do JRE.
 
-## {{site.data.keyword.IBM_notm}} JRE
+## {{site.data.keyword.IBM_notm}}JRE
 
-Por padrão, os aplicativos são configurados para executar com uma versão leve do {{site.data.keyword.IBM}} JRE. Esse JRE leve é dividido para fornecer função principal essencial com um disco e área de cobertura da memória muito reduzidos. Para obter mais informações sobre o conteúdo do JRE leve, consulte [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
+Por padrão, os aplicativos são configurados para executar com uma versão leve do {{site.data.keyword.IBM}} JRE. Esse
+JRE leve é dividido para fornecer função principal essencial com um disco
+e área de cobertura da memória muito reduzidos. Para obter mais informações sobre o
+conteúdo do JRE leve, consulte
+[Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
  {{site.data.keyword.IBM_notm}}JRE versão 8 é usado por padrão. Use a variável de ambiente JBP_CONFIG_IBMJDK para especificar uma versão alternativa do {{site.data.keyword.IBM_notm}} JRE. Por exemplo, para usar o
 {{site.data.keyword.IBM_notm}} JRE 7.1 mais recente, configure a seguinte variável de ambiente:
@@ -25,18 +31,23 @@ Por padrão, os aplicativos são configurados para executar com uma versão leve
 ```
 {: codeblock}
 
-A propriedade da versão pode ser configurada para um intervalo de versão. Existem dois intervalos de versão suportados: 1.7.+ e 1.8.+. Para obter os melhores resultados, use Java 8.
+A
+propriedade da versão pode ser configurada para um intervalo de versão. Existem dois intervalos
+de versão suportados: 1.7.+ e 1.8.+. Para obter os melhores resultados, use Java 8.
 
 ## OpenJDK
 {: #openjdk}
 
-Opcionalmente, os aplicativos podem ser configurados para execução com o OpenJDK como o JRE. Para ativar um aplicativo para execução com o OpenJDK, configure a variável de ambiente da JVM como “openjdk”. Por exemplo, usando a ferramenta de linha de comandos cf, execute o comando:
+Opcionalmente, os aplicativos podem ser
+configurados para execução com o OpenJDK como o JRE. Para ativar um aplicativo para execução com o OpenJDK, configure a variável de ambiente da JVM como “openjdk”. Por
+exemplo, usando a ferramenta de linha de comandos cf, execute o comando:
 ```
     $ cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
-Se ativado, o OpenJDK versão 8 é usado, por padrão. Use a variável de ambiente JBP_CONFIG_OPENJDK para especificar uma versão alternativa do OpenJDK. Por exemplo, para usar o mais recente OpenJDK 7, configure a variável de ambiente a seguir:
+Se ativado, o OpenJDK versão 8 é usado, por padrão. Use a variável de ambiente JBP_CONFIG_OPENJDK para especificar uma versão alternativa do OpenJDK. Por exemplo, para usar o mais recente OpenJDK 7,
+configure a variável de ambiente a seguir:
 ```
     $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
@@ -55,11 +66,14 @@ Consulte [Usando o Oracle JRE](oracle_jre.html) para obter informações sobre c
 ### Configuração padrão da JVM
 {: #jvm_default_config}
 
-O buildpack Liberty configura as opções da JVM padrão considerando:
+O buildpack Liberty configura as opções da JVM
+padrão considerando:
 
-* Um limite de memória de um aplicativo.  As configurações de heap da JVM aplicadas são calculadas com base em:
+* Um limite de memória de um aplicativo.  As configurações de heap da JVM aplicadas
+são calculadas com base em:
   * o limite de memória de um aplicativo, conforme explicado em [Limites de memória e o buildpack do Liberty](memoryLimits.html#memory_limits)
-  * o tipo de JRE, uma vez que as opções relacionadas ao heap para a JVM variam de acordo com as opções suportadas do JRE.
+  * o tipo de JRE, uma vez que as opções relacionadas ao heap para a JVM variam de acordo
+com as opções suportadas do JRE.
 
 * Os [recursos do Liberty suportados no {{site.data.keyword.Bluemix_notm}}](libertyFeatures.html#libertyfeatures).
   * As transações do banco de dados global two-phase commit não são suportadas no {{site.data.keyword.Bluemix_notm}} e, portanto, são desativadas configurando -Dcom.ibm.tx.jta.disable2PC=true.
@@ -67,11 +81,13 @@ O buildpack Liberty configura as opções da JVM padrão considerando:
 * O ambiente do {{site.data.keyword.Bluemix_notm}}.
 
     As opções da JVM são configuradas para fornecer otimização em um ambiente do {{site.data.keyword.Bluemix_notm}} e para ajudar os diagnósticos de condições de erro relacionado à memória.
-  * a recuperação rápida de falha de um aplicativo é configurada desativando as opções de dumps da JVM e eliminando os processos quando a memória de um aplicativo está esgotada.
+  * a recuperação rápida de falha de um aplicativo é configurada desativando
+as opções de dumps da JVM e eliminando os processos quando a memória de um
+aplicativo está esgotada.
   * Ajuste de virtualização (somente {{site.data.keyword.IBM_notm}} JRE).
-  * roteamento de informações nos recursos de memória disponível do aplicativo no momento da falha para o Loggregator.
-  * se um aplicativo estiver configurado para ativar os dumps de memória da JVM, o encerramento de processos Java será desativado e os dumps de memória da JVM serão roteados para um diretório "dumps" de aplicativo comum. 
-Esses dumps podem ser visualizados no painel {{site.data.keyword.Bluemix_notm}} ou da CLI do Cloud Foundry.
+  * roteamento de informações nos recursos de memória disponível do aplicativo
+no momento da falha para o Loggregator.
+  * se um aplicativo estiver configurado para ativar os dumps de memória da JVM, o encerramento de processos Java será desativado e os dumps de memória da JVM serão roteados para um diretório "dumps" de aplicativo comum. Esses dumps podem ser visualizados no painel {{site.data.keyword.Bluemix_notm}} ou da CLI do Cloud Foundry.
 
 A seguir está uma configuração da JVM padrão de exemplo que é gerada pelo buildpack para um aplicativo que é implementado com um Limite de memória de 512 M:
 
@@ -90,7 +106,11 @@ A seguir está uma configuração da JVM padrão de exemplo que é gerada pelo b
 ### Customizando a configuração da JVM
 {: #customizing_jvm}
 
-Os aplicativos podem customizar as opções da JVM com as especificações que são definidas pelo JRE configurado para o aplicativo. Referencie as diretrizes sobre como especificar uma opção e seu uso diretamente da documentação do JRE, uma vez que as opções variam de acordo com o JRE.
+Os aplicativos podem customizar as opções
+da JVM com as especificações que são definidas pelo JRE configurado
+para o aplicativo. Referencie as diretrizes sobre como especificar uma
+opção e seu uso diretamente da documentação do JRE, uma vez
+que as opções variam de acordo com o JRE.
 
 <table>
 <tr>
@@ -109,14 +129,20 @@ Os aplicativos podem customizar as opções da JVM com as especificações que s
 
 <tr>
 <td> OpenJDK </td>
-<td>é baseado no tempo de execução do HotSpot que possui a notação de -X para não padrão, -XX para opções do desenvolvedor e sinalizações Booleanas para ativar ou desativar a opção </td>
+<td>é baseado no tempo de execução do HotSpot que possui a notação de
+-X para não padrão, -XX para opções do desenvolvedor e sinalizações Booleanas
+para ativar ou desativar a opção </td>
 <td>[Visão geral do tempo de execução do HotSpot ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
 Um aplicativo que requer opções customizadas da JVM pode configurar a opção como um valor para uma das variáveis de ambiente IBM_JAVA_OPTIONS, JAVA_OPTS ou JVM_ARGS no {{site.data.keyword.Bluemix_notm}}. Consulte a seção Variáveis de ambiente sobre como configurar a variável de ambiente de um aplicativo. Um servidor em pacote ou um diretório do servidor também pode incluir um arquivo jvm.options que contém as opções da linha de comandos em vez de configurar uma variável de ambiente.
 
-Quando as opções da JVM são aplicadas ao JRE, as opções padrão do buildpack Liberty são aplicadas primeiro, seguidas pelas opções customizadas. As opções customizadas são anexadas em uma ordem específica, que é listada na tabela. A sequência das opções Java aplicadas define quais opções têm precedência. As opções que são aplicadas por último têm precedência sobre as opções que foram aplicadas anteriormente.
+Quando as opções da JVM são aplicadas ao JRE, as opções padrão
+do buildpack Liberty são aplicadas primeiro, seguidas pelas opções
+customizadas. As opções customizadas são anexadas em uma ordem específica,
+que é listada na tabela. A sequência das opções Java aplicadas define quais opções têm precedência. As opções que são aplicadas por último têm precedência sobre as opções
+que foram aplicadas anteriormente.
 
 Nota: algumas opções podem não entrar em vigor a menos que a opção seja acionada por um agente.
 
@@ -151,7 +177,8 @@ Nota: algumas opções podem não entrar em vigor a menos que a opção seja aci
 <tr>
 <td>3</td>
 <td>jvm.options</td>
-<td>um arquivo de configuração da JVM que é suportado pelo servidor em pacote ou diretório do servidor do tempo de execução do Liberty</td>
+<td>um arquivo de configuração da JVM que é suportado pelo servidor em pacote ou
+diretório do servidor do tempo de execução do Liberty</td>
 <td>Pacote do servidor</td>
 <td>Remontar o app</td>
 <td>Sim</td>
@@ -160,7 +187,8 @@ Nota: algumas opções podem não entrar em vigor a menos que a opção seja aci
 <tr>
 <td>4</td>
 <td>JVM_ARGS</td>
-<td>uma variável de ambiente que é suportada pelo tempo de execução do Liberty</td>
+<td>uma variável de ambiente que é suportada pelo tempo de execução do
+Liberty</td>
 <td>Todos</td>
 <td>Reiniciar ou remontar o app</td>
 <td>Sim</td>
@@ -170,10 +198,10 @@ Nota: algumas opções podem não entrar em vigor a menos que a opção seja aci
 ### Determinando as opções da JVM aplicadas de um aplicativo em execução
 {: #determining_applied_jvm_options}
 
-Exceto para opções definidas pelo aplicativo que são especificadas com a variável de ambiente JVM_ARGS, as opções resultantes são persistidas no ambiente de tempo de execução como opções da linha de comandos (aplicativos Java independentes) ou em um arquivo	`jvm.options` (aplicativos Java não independentes). 
-As opções da JVM aplicadas para o aplicativo podem ser visualizadas do console do {{site.data.keyword.Bluemix_notm}} ou da CLI do Cloud Foundry.
+Exceto para opções definidas pelo aplicativo que são especificadas com a variável de ambiente JVM_ARGS, as opções resultantes são persistidas no ambiente de tempo de execução como opções da linha de comandos (aplicativos Java independentes) ou em um arquivo	`jvm.options` (aplicativos Java não independentes). As opções da JVM aplicadas para o aplicativo podem ser visualizadas do console do {{site.data.keyword.Bluemix_notm}} ou da CLI do Cloud Foundry.
 
-As opções da JVM para aplicativo Java independente são persistidas como opções da linha de comandos. Elas podem ser visualizadas por meio do arquivo `staging_info.yml`.
+As opções da JVM para aplicativo Java independente
+são persistidas como opções da linha de comandos. Elas podem ser visualizadas por meio do arquivo `staging_info.yml`.
 
 Para visualizar o arquivo `staging_info.yml` em um aplicativo em execução em um nó DEA, execute:
 

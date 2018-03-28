@@ -33,7 +33,7 @@ php_buildpack은 다음과 같은 조건에서 사용됩니다.
 ## 애플리케이션의 모든 페이지에서 HTTPS 강제 실행
 {: #enforce_https}
 
-Apache를 사용하여 {{site.data.keyword.Bluemix_notm}}를 실행할 때 애플리케이션의 모든 페이지에서 HTTP 대신 HTTPS를 강제 실행하려면 ".htaccess" 파일에 대해 다음과 같이 변경해야 합니다. 이 규칙은 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 HTTPS를 사용하여 작성되지 않은 요청에 적용됩니다.
+Apache를 사용하여 {{site.data.keyword.Bluemix_notm}}를 실행할 때 애플리케이션의 모든 페이지에서 HTTP 대신 HTTPS를 강제 실행하려면 ".htaccess" 파일에 대해 다음과 같이 변경해야 합니다.  이 규칙은 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 HTTPS를 사용하여 작성되지 않은 요청에 적용됩니다.
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]
@@ -44,7 +44,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 ## 런타임 버전
 {: #runtime_versions}
 
-composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습니다. 예:
+composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습니다. 예를 들어, 다음과 같습니다.
 
 ```
 {
@@ -77,12 +77,12 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 [PHP 빌드팩](https://github.com/cloudfoundry/php-buildpack.git)을
 사용하여 애플리케이션을 배치할 수 있습니다.
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
 ## 튜토리얼 및 샘플
 {: #samples notoc}
 * [REST API 빌드 및 배치](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
 * [모바일 친화 칼로리 카운터 빌드 및 배치](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## general
+## 일반
 {: #general notoc}
 * [PHP에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/php-buildpack.git)

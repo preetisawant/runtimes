@@ -12,14 +12,14 @@ lastupdated: "2017-10-26"
 # JRE のカスタマイズ
 {: #customizing_jre}
 
-アプリケーションは、Liberty ビルドパックによって提供および構成される Java ランタイム環境 (JRE) で実行されます。Liberty ビルドパックにより、JRE のバージョンまたはタイプの構成、JVM オプションのカスタマイズ、JRE 機能のオーバーレイも可能になります。
+アプリケーションは、Liberty ビルドパックによって提供および構成される Java ランタイム環境 (JRE) で実行されます。 Liberty ビルドパックにより、JRE のバージョンまたはタイプの構成、JVM オプションのカスタマイズ、JRE 機能のオーバーレイも可能になります。
 
 ## {{site.data.keyword.IBM_notm}} JRE
 
-デフォルトでは、アプリケーションは軽量版の {{site.data.keyword.IBM}} JRE で実行するように構成されます。この軽量 JRE は、
+デフォルトでは、アプリケーションは軽量版の {{site.data.keyword.IBM}} JRE で実行するように構成されます。 この軽量 JRE は、
 中核の重要な機能のみを提供するようにしたもので、ディスクおよびメモリーにおける占有スペースが大幅に削減されます。 軽量 JRE の内容について詳しくは、[Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html) を参照してください。
 
- デフォルトでは {{site.data.keyword.IBM_notm}} JRE バージョン 8 が使用されます。別のバージョンの {{site.data.keyword.IBM_notm}} JRE を指定するには、JBP_CONFIG_IBMJDK 環境変数を使用します。例えば、最新の {{site.data.keyword.IBM_notm}} JRE 7.1 を使用するには、以下の環境変数を設定します。
+ デフォルトでは {{site.data.keyword.IBM_notm}} JRE バージョン 8 が使用されます。 別のバージョンの {{site.data.keyword.IBM_notm}} JRE を指定するには、JBP_CONFIG_IBMJDK 環境変数を使用します。 例えば、最新の {{site.data.keyword.IBM_notm}} JRE 7.1 を使用するには、以下の環境変数を設定します。
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
@@ -114,7 +114,7 @@ Liberty ビルドパックにより、以下を考慮して、デフォルト JV
 </tr>
 </table>
 
-JVM オプションのカスタマイズを必要とするアプリケーションは、{{site.data.keyword.Bluemix_notm}} で環境変数 IBM_JAVA_OPTIONS、JAVA_OPTS、または JVM_ARGS のいずれかの値としてオプションを設定できます。アプリケーションの環境変数の設定方法については、セクション『環境変数』を参照してください。 環境変数を設定する代わりに、パッケージされたサーバーまたはサーバーのディレクトリーに、コマンド・ライン・オプションが入っている jvm.options ファイルを含めることもできます。
+JVM オプションのカスタマイズを必要とするアプリケーションは、{{site.data.keyword.Bluemix_notm}} で環境変数 IBM_JAVA_OPTIONS、JAVA_OPTS、または JVM_ARGS のいずれかの値としてオプションを設定できます。 アプリケーションの環境変数の設定方法については、セクション『環境変数』を参照してください。 環境変数を設定する代わりに、パッケージされたサーバーまたはサーバーのディレクトリーに、コマンド・ライン・オプションが入っている jvm.options ファイルを含めることもできます。
 
 JVM オプションが JRE に適用される際に、Liberty ビルドパックのデフォルト・オプションが先に適用され、続けてカスタマイズしたオプションが適用されます。 カスタマイズしたオプションは、以下の表でリストしている特定の順序で追加されます。 適用された Java オプションの順序により、優先されるオプションが決定されます。 最後に適用されたオプションが、それより前に適用されたオプションより優先されます。
 

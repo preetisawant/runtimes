@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Tomcat" audience="runtime"}
+{: .toc subcollection="Tomcat" audience="runtime" href="/docs/runtimes/tomcat/getting-started.html"}}
 Tomcat
 
     {: .navgroup id="learn"}
@@ -11,7 +11,7 @@ Tomcat
 
     {: .navgroup id="howto"}
     eclipseTomcat.md
-    [프록시 작업](../../manageapps/workingWithProxy.html)
+    [프록시 작업](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -22,6 +22,7 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     [런타임 버전](index.html#runtime_versions)
-    [빌드팩 지원 설명](../../manageapps/buildpackSupport.html)
+    [빌드팩 지원 구문](../common/buildpackSupport.html)
     {: .navgroup-end}

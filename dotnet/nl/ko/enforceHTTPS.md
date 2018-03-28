@@ -12,7 +12,7 @@ lastupdated: "2017-10-25"
 # 애플리케이션의 모든 페이지에서 HTTPS 강제 실행
 {: #enforce_https}
 
-{{site.data.keyword.Bluemix}}에서 애플리케이션을 실행할 때 애플리케이션의 모든 페이지에 HTTP 대신 HTTPS를 강제 실행하려면 애플리케이션에 다음과 같은 변경사항을 적용해야 합니다. 
+{{site.data.keyword.Bluemix}}에서 애플리케이션을 실행할 때 애플리케이션의 모든 페이지에 HTTP 대신 HTTPS를 강제 실행하려면 애플리케이션에 다음과 같은 변경사항을 적용해야 합니다.
 
 `Startup` 클래스에 다음 `using` 명령문을 추가하십시오.
 

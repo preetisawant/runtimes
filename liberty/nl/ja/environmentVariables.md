@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-02-07"
+  years: 2015, 2018
+lastupdated: "2018-02-21"
 
 ---
 
@@ -64,7 +64,7 @@ Liberty for Java によってサポートされる環境変数。
 
 <tr>
 <td>JBP_CONFIG_SPRINGAUTORECONFIGURATION </td>
-<td>Spring Auto-Reconfiguration フレームワークを使用不可にします。 使用不可にするには、値を enabled: false に設定します。 </td>
+<td>[Spring Auto-Reconfiguration フレームワーク](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/framework-spring_auto_reconfiguration.md)を使用不可にします。使用不可にするには、値を enabled: false に設定します。 </td>
 </tr>
 
 <tr>

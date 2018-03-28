@@ -25,7 +25,7 @@ web: node app.js
 
 1. **Procfile** をアプリケーションのルート・ディレクトリーに保存します。
 
-**Procfile** が存在しない場合、{{site.data.keyword.Bluemix_notm}} Node.js ビルドパックによって、**package.json** ファイルに scripts.start エントリーがあるかどうかが検査されます。下の例でも、app.js はアプリケーション用の開始 js スクリプトです。
+**Procfile** が存在しない場合、{{site.data.keyword.Bluemix_notm}} Node.js ビルドパックによって、**package.json** ファイルに scripts.start エントリーがあるかどうかが検査されます。 下の例でも、app.js はアプリケーション用の開始 js スクリプトです。
 ```
 {
     ...   

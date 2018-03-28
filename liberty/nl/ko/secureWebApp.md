@@ -30,14 +30,14 @@ lastupdated: "2017-10-26"
 
 [보안 스타터 애플리케이션](https://github.com/IBM-Bluemix/java-secure-app)을 새 Liberty 애플리케이션 개발을 위한 시작점으로 사용할 수 있습니다. 앱에서 XSS 대책 코드를 학습한 다음 애플리케이션 API의 오퍼레이션에 적용하십시오. 보안 스타터 애플리케이션의 대책을 사용하면 XSS 공격을 줄이거나 방지하여 서버와 브라우저에서 애플리케이션이 손상되지 않도록 악의적인 사용자 입력을 막을 수 있습니다.
 
-먼저 이 보안 스타터 애플리케이션을 다운로드한 다음 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 샘플 애플리케이션에서 수행하는 방식과 동일하게 {{site.data.keyword.Bluemix_notm}} 또는 로컬에 이 애플리케이션을 빌드하고 배치하십시오. [{{site.data.keyword.Bluemix_notm}}에서 Liberty 시작하기](getting-started.html)로 이동하여 {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 빌드하고 배치하는 방법을 자세히 보십시오. 시작하기 위해 이러한 단계를 사용하여 앱을 복제하고 빌드하고 실행할 수 있습니다.
+먼저 이 보안 스타터 애플리케이션을 다운로드한 다음 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 샘플 애플리케이션에서 수행하는 방식과 동일하게 {{site.data.keyword.Bluemix_notm}} 또는 로컬에 이 애플리케이션을 빌드하고 배치하십시오.  [{{site.data.keyword.Bluemix_notm}}에서 Liberty 시작하기](getting-started.html)로 이동하여 {{site.data.keyword.Bluemix_notm}}에 애플리케이션을 빌드하고 배치하는 방법을 자세히 보십시오.  시작하기 위해 이러한 단계를 사용하여 앱을 복제하고 빌드하고 실행할 수 있습니다.
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app
 cd java-secure-app
 mvn install liberty:run-server
 ```
-http://localhost:9080/GetStartedSecureJava/에서 앱 보기
+다음에서 앱 보기: http://localhost:9080/GetStartedSecureJava/
 
 ## 애플리케이션의 모든 페이지에서 HTTPS 강제 실행
 {: #enforce_https}

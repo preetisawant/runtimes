@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="PHP" audience="runtime"}
+{: .toc subcollection="PHP" audience="runtime" href="/docs/runtimes/php/getting-started.html"}}
 PHP
 
     {: .navgroup id="learn"}
@@ -10,12 +10,11 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [使用代理](../../manageapps/workingWithProxy.html)
+    [使用代理](../common/workingWithProxy.html)
     [在所有页面上强制实施 HTTPS](index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-
     {: .topicgroup}
     入门模板应用程序和 buildpack
         [使用入门模板应用程序](../../cfapps/starter_app_usage.html)
@@ -23,5 +22,6 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Buildpack 支持语句](../../manageapps/buildpackSupport.html)
+    ts_index.md
+    [Buildpack 支持声明](../common/buildpackSupport.html)
     {: .navgroup-end}

@@ -19,9 +19,8 @@ lastupdated: "2017-10-26"
 缺省情况下，应用程序配置为使用 {{site.data.keyword.IBM}} JRE 的轻量级版本运行。此轻量级 JRE 已精简为只提供必要的核心功能，使用的磁盘和内存占用量都大幅减少。有关轻量级 JRE 内容的更多信息，请参阅 [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html)。
 
  缺省情况下，将使用 {{site.data.keyword.IBM_notm}} JRE V8。使用 JBP_CONFIG_IBMJDK 环境变量可指定 {{site.data.keyword.IBM_notm}} JRE 的替代版本。例如，要使用最新版本的 {{site.data.keyword.IBM_notm}} JRE 7.1，请设置以下环境变量：
-
 ```
-$ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 

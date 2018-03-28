@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-15"
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -46,13 +46,13 @@ cd get-started-python
 
   *get-started-python* 디렉토리에서 파일을 확인하여 컨텐츠를 익히십시오.
 
-## 2단계: 로컬로 앱 실행
+## 2단계: 로컬에서 앱 실행
 {: #run_locally}
 
 시스템에 Python을 설정하는 것과 관련된 사항은 [The Hitchhiker’s Guide to Python! ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.python-guide.org/en/latest/)을 참조하십시오.
 {: tip}
 
-앱을 로컬로 실행할 수 있도록 [requirements.txt ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://pip.readthedocs.io/en/stable/user_guide/#requirements-files) 파일에 나열된 종속 항목을 설치하십시오.
+앱을 로컬에서 실행할 수 있도록 [requirements.txt ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://pip.readthedocs.io/en/stable/user_guide/#requirements-files) 파일에 나열된 종속 항목을 설치하십시오.
 
 [가상 환경 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://packaging.python.org/installing/#creating-and-using-virtual-environments)을 선택적으로 사용하여 이러한 종속 항목과 다른 Python 프로젝트 또는 사용자 운영 체제의 종속 항목 간의 충돌을 방지할 수 있습니다.
 
@@ -74,7 +74,7 @@ python hello.py
   ```
   {: pre}
 
- http://localhost:8000에서 앱 보기
+ 다음에서 앱 보기: http://localhost:8000
 
 
 ## 3단계: 배치를 위한 앱 준비
@@ -114,7 +114,7 @@ cf api <API-endpoint>
 | 미국 남부 지역 | 댈러스, 미국 | api.ng.bluemix.net |
 | 미국 동부 지역 | 워싱턴, DC, 미국 | api.us-east.bluemix.net |
 | 영국 지역 | 런던, 영국 | api.eu-gb.bluemix.net |
-| 시드니 지역 | 시드니, 오스트레일리아 | api.au-syd.bluemix.net |
+| 시드니 지역 | 시드니, 호주 | api.au-syd.bluemix.net |
 | 독일 지역 | 프랑크푸르트, 독일 | api.eu-de.bluemix.net |
 {: caption="표 1. {{site.data.keyword.cloud_notm}} 지역 목록" caption-side="top"}
 
@@ -147,17 +147,17 @@ cf apps
 
 다음으로, 이 애플리케이션에 NoSQL 데이터베이스를 추가하고 애플리케이션을 설정하여 로컬 및 {{site.data.keyword.Bluemix_notm}}에서 이를 실행할 수 있도록 합니다.
 
-1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하십시오. `대시보드`로 이동하십시오. `이름` 열에서 해당 이름을 클릭하여 애플리케이션을 선택하십시오.
-2. `연결`을 클릭한 다음 `연결 작성`을 클릭하십시오.
-2. `데이터 및 분석` 섹션에서 `Cloudant NoSQL DB`를 선택한 다음 서비스를 `작성`하십시오.
-3. 프롬프트가 표시되면 `다시 스테이징`을 선택하십시오. {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 신임 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
+1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하고 대시보드로 이동하십시오. **리소스 작성**을 선택하십시오. 
+2. **데이터 및 분석** 섹션을 선택한 후에 **Cloudant NoSQL DB**를 선택하고 서비스를 작성하십시오. 
+3. **연결** 보기로 이동하여 애플리케이션을 선택한 후에 **연결 작성**을 선택하십시오. 
+4. 프롬프트가 표시되면 **다시 스테이징**을 선택하십시오. {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 신임 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
 
 환경 변수를 사용하면 배치 설정을 소스 코드와 구분할 수 있습니다. 예를 들어, 데이터베이스 비밀번호를 하드 코딩하는 대신 소스 코드에서 참조하는 환경 변수에 이 비밀번호를 저장할 수 있습니다. [자세히 보기...](/docs/manageapps/depapps.html#app_env)
 {: tip}
 
 ## 6단계: 데이터베이스 사용
 {: #use_database}
-이제 이 데이터베이스를 가리키도록 로컬 코드를 업데이트합니다. 애플리케이션이 사용할 서비스의 신임 정보를 저장할 JSON 파일을 작성합니다. 이 파일은 애플리케이션이 로컬로 실행 중인 경우에만 사용됩니다. {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우 신임 정보는 VCAP_SERVICES 환경 변수에서 읽습니다.
+이제 이 데이터베이스를 가리키도록 로컬 코드를 업데이트합니다. 애플리케이션이 사용할 서비스의 신임 정보를 저장할 JSON 파일을 작성합니다. 이 파일은 애플리케이션이 로컬에서 실행 중인 경우에만 사용됩니다. {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우 신임 정보는 VCAP_SERVICES 환경 변수에서 읽습니다.
 
 1. 다음 컨텐츠를 포함한 `get-started-python` 디렉토리의 `vcap-local.json` 파일을 작성하십시오.
   ```
@@ -182,13 +182,13 @@ cf apps
 
 3. 신임 정보의 `username`, `password` 및 `host`를 복사하여 `vcap-local.json` 파일의 동일한 필드에 붙여넣어 **CLOUDANT_DATABASE_USERNAME**, **CLOUDANT_DATABASE_PASSWORD** 및 **CLOUDANT_DATABASE_URL**을 바꾸십시오.
 
-4. 애플리케이션을 로컬로 실행하십시오.
+4. 애플리케이션을 로컬에서 실행하십시오.
   ```
 python hello.py
   ```
   {: pre}
 
-  http://localhost:8000에서 앱을 보십시오. 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
+  다음에서 앱을 보십시오. http://localhost:8000 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
 
   로컬 앱과 {{site.data.keyword.Bluemix_notm}} 앱은 데이터베이스를 공유합니다.  위에서 push 명령의 출력에 나열된 URL을 통해 {{site.data.keyword.Bluemix_notm}} 앱을 확인하십시오.  이 중 하나의 앱에서 추가하는 이름은 브라우저를 새로 고치면 두 앱에 모두 표시됩니다.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -13,6 +13,28 @@ lastupdated: "2017-10-26"
 {: #latest_updates}
 
 ## Liberty 建置套件中的最新更新項目清單。
+
+
+### 2018 年 2 月 13 日：已更新 Liberty 建置套件 3.18 版。
+* 每月 Liberty 運行環境版本已更新至 2018.2.0.0。
+* 預設 Liberty 運行環境也包括 [PI90804 Apache Commons iFix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428)。
+
+### 2018 年 1 月 31 日：已更新 Liberty 建置套件 v3.17.1。
+* 建置套件已更新成包含 Liberty 特性 microProfile-1.2。
+
+### 2018 年 1 月 26 日：已更新 Liberty 建置套件 v3.17。
+* 建置套件已更新成在 Liberty 伺服器上新增動態設定追蹤的能力。
+* 每月 Liberty 運行環境版本已更新至 2018.1.0.0。
+* IBM JRE 版本已更新至 8 SR5 FP7。
+
+### 2018 年 1 月 5 日：已更新 Liberty 建置套件 v3.16-20180102-0938
+* 預設 Liberty 運行環境版本已更新至 17.0.0.4 版。
+* 每月 Liberty 運行環境版本已更新至 2017.12.0.0。
+* IBM JRE 版本已更新至 8 SR5 FP6。
+
+
+### 2017 年 10 月 31 日：已更新 Liberty 建置套件 3.15 版。
+* 每月 Liberty 運行環境版本已更新至 2017.10.0.0。
 
 ### 2017 年 10 月 17 日：已更新 Liberty 建置套件 v3.14-20171013-1023
 * 預設 Liberty 運行環境版本已更新至 17.0.0.3 版。

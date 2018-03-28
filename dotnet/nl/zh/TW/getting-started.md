@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-15"
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -127,15 +127,17 @@ cf apps
   {: pre}
   指令來檢視應用程式狀態，並且查看 URL。
 
+
+
 ## 步驟 5：連接 MySQL 資料庫
 {: connect_mysql}
 
 接下來，我們會將 ClearDB MySQL 資料庫新增至此應用程式並設定應用程式，因此，它可以在本端及 {{site.data.keyword.Bluemix_notm}} 上執行。
 
-1. 在瀏覽器中，登入 {{site.data.keyword.Bluemix_notm}}。瀏覽至「儀表板」。按一下「名稱」直欄中的應用程式名稱，以選取該應用程式。
-2. 依序按一下「連線」及「建立連線」。
-2. 在「資料及分析」區段中，選取 `ClearDB Managed MySQL Database`，然後建立服務。
-3. 系統提示時，請選取「重新編譯打包」。{{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
+1. 在瀏覽器中，登入 {{site.data.keyword.Bluemix_notm}}，並移至「儀表板」。選取**建立資源**。
+2. 選擇**資料及分析**區段，然後選取 **ClearDB MySQL** 並建立服務。
+3. 移至**連線**視圖並選取應用程式，然後**建立連線**。
+4. 系統提示時，請選取**重新編譯打包**。{{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
 
 環境變數可讓您分開部署設定與原始碼。例如，您可以將資料庫密碼儲存在原始碼中所參考的環境變數內，而不要將資料庫密碼寫在程式中。[進一步瞭解...](/docs/manageapps/depapps.html#app_env)
 {: tip}

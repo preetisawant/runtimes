@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017
-lastupdated: "2017-10-26"
+  years: 2016, 2017, 2018
+lastupdated: "2018-01-10"
 
 ---
 
@@ -11,43 +11,44 @@ lastupdated: "2017-10-26"
 {:codeblock: .codeblock}
 
 
-# Im Offlinemodus für node.js arbeiten
+# Im Offlinemodus für Node.js arbeiten
 {: #offline_mode}
 
-Wenn eine node.js-Anwendung mit einer Push-Operation an {{site.data.keyword.Bluemix}} übertragen wird, lädt das Buildpack SDK for Node.js in der Regel Artefakte von externen Ressourcen herunter, wie z. B. Knotenmodule von NPM.  In einigen Situationen, wie z. B. bei [{[site.data.keyword.Bluemix_dedicated_notm](/docs/dedicated/index.html#dedicated) und
-[Bluemix_local_notm](/docs/local/index.html#local) möchten Sie sich ggf. nicht auf externe Sites in {{site.data.keyword.Bluemix_notm}} verlassen
-oder Sie möchten mehr explizite Kontrolle haben.  
+Wenn eine Node.js-Anwendung mit einer Push-Operation an {{site.data.keyword.Bluemix}} übertragen wird, lädt das Buildpack SDK for Node.js in der Regel Artefakte von externen Ressourcen herunter, z. B. Node-Module von NPM. In einigen Situationen, beispielsweise mit [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), können Sie Zugriff auf Sites anpassen, die sich außerhalb von {{site.data.keyword.Bluemix_notm}} befinden.  
 {: shortdesc}
 
-Das node.js-Buildpack kann auf folgende externe Sites zugreifen.  In den Umgebungen von [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
-[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) {{site.data.keyword.Bluemix_notm}} müssen diese Sites *in Whitelist aufgeführt* sein.
+Das Node.js-Buildpack kann auf die folgenden externen Sites zugreifen. Möglicherweise müssen Sie diese Sites in {{site.data.keyword.Bluemix_notm}}-Umgebungen des Typs [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) der *Whitelist* hinzufügen.
 
 * http://nodejs.org/ kann verwendet werden, um verfügbare Knotenengine-Versionen zu ermitteln.
-* https://s3pository.heroku.com wird verwendet, um Knotenengine-Versionen abzurufen, die im Buildpack nicht enthalten sind.
+* https://s3pository.heroku.com wird verwendet, um Node-Engineversionen abzurufen, die im Buildpack nicht enthalten sind.
 *  https://www.npmjs.com/package/npm und https://semver.herokuapp.com werden verwendet, um NPM-Versionen abzurufen, die im Buildpack nicht enthalten sind.
 * https://iojs.org wird verwendet, um ältere Versionen des Knotens abzurufen, die entweder im Buildpack nicht enthalten oder unter https://semver.herokuapp.com nicht verfügbar sind.
 * https://registry.npmjs.org wird verwendet, um Knotenmodule wie express abzurufen.
 
-Um die Gruppe der Whitelist-Sites zu reduzieren, konfigurieren Sie Ihre Knotenanwendungen, damit eine Knotenengine-Version verwendet werden kann, die im SDK for Node.js-Buildpack enthalten ist.  Die [letzten Aktualisierungen](./updates.html) für die Gruppe von Knotenengine-Versionen sind im Buildpack enthalten.  Anschließend muss nur noch die Site https://registry.npmjs.org die Knotenmodule herunterladen.
+Konfigurieren Sie Ihre Anwendungen für die Verwendung einer Node-Engineversion, die im SDK for Node.js-Buildpack enthalten ist, um die Anzahl der Sites in der Whitelist zu reduzieren. Die Gruppe der Node-Engineversionen, die im Buildpack enthalten ist, finden Sie in [Neueste Aktualisierungen](./updates.html). Wenn Sie Ihre Anwendung so konfigurieren, dass diese Node-Engineversionen verwendet werden, ist nur die Site https://registry.npmjs.org erforderlich, um Module herunterzuladen.
 
-Denken Sie daran, dass beim Installieren der neuen Versionen des SDK for Node.js-Buildpacks sich die Gruppe der verfügbaren Knotenengine-Versionen häufig zu den neueren Versionen verschieben.  Daher müssen Sie möglicherweise Ihre Knoten-App neu konfigurieren, um eine neuere Knotenengine-Version anzugeben.
+Beachten Sie, dass sich bei der Installation von neuen Versionen des SDK for Node.js-Buildpacks die Gruppe der verfügbaren Engineversionen häufig zu neueren Versionen verschieben. Eventuell müssen Sie Ihre App rekonfigurieren, um eine neuere Node-Engineversion anzugeben, die im Buildpack vorhanden ist.
 
 
 ## Offlineanwendungen
 {: #offline_applications}
 
-Damit nicht mehr auf https://registry.npmjs.org zugegriffen werden muss, können Sie alle Knotenmodule einbeziehen, die Ihre Anwendung innerhalb der Anwendung benötigt.  Führen Sie dazu **npm install** für alle Module aus, die Ihre Anwendung benötigt, und schließen Sie das resultierende Verzeichnis *node_modules* mit Ihrer Push-Anwendung ein.
+Damit nicht mehr auf https://registry.npmjs.org zugegriffen werden muss, können Sie alle Node-Module, die Ihre Anwendung benötigt, in die Anwendung einschließen. Führen Sie dazu `npm install` für alle erforderlichen Anwendungsmodule aus und schließen Sie das resultierende Verzeichnis *node_modules* in die Anwendung ein, für die Sie die Push-Operation durchführen.
 
-Beachten Sie, dass Ihre Abhängigkeiten weitere Abhängigkeiten haben können, die wiederum Abhängigkeiten haben usw., aber die Datei 'package.json' kann nur Abhängigkeiten der höchsten Ebene enthalten. Wenn eine Ihrer Abhängigkeiten einen Bereich in der Datei 'package.json' verwendet und hierzu eine neue Version freigegeben wird, können die Module dann in Ihrem Verzeichnis node_modules veraltet sein. *Shrinkwrap* unterstützt Sie, alle Abhängigkeitsversionen zu sperren, damit dies nicht auftritt.  Um Shrinkwrap zu verwenden, starten Sie mit einem leeren oder bereinigten Verzeichnis node_modules und führen Sie dann im Projektstammverzeichnis Folgendes aus:
-0. npm install
-1. npm dedupe
-2. npm shrinkwrap
+Ihre Abhängigkeiten können weitere Abhängigkeiten haben, die wiederum Abhängigkeiten haben usw. Die Datei `package.json` enthält jedoch nur die Abhängigkeiten der höchsten Ebene. Wenn eine Ihrer Abhängigkeiten einen Bereich in der Datei 'package.json' verwendet und hierzu eine neue Version freigegeben wird, können die Module dann in Ihrem Verzeichnis node_modules veraltet sein. *Shrinkwrap* unterstützt Sie, alle Abhängigkeitsversionen zu sperren, damit dies nicht auftritt.  Beginnen Sie mit einem leeren oder bereinigten Verzeichnis `node_modules`, um 'shrinkwrap' zu verwenden. Führen Sie anschließend im Stammverzeichnis Ihres Projekts die folgenden Befehle aus:
 
-Dadurch kann die Datei *package.json* geändert und *npm-shrinkwrap.json* zum Stammverzeichnis hinzugefügt werden.
-Wenn Sie die Abhängigkeiten in der Datei *package.json* ändern, wiederholen Sie die Schritte *dedupe* und *shringwrap*.
+
+1. ```npm install```
+1. ```npm dedupe```
+2. ```npm shrinkwrap```
+
+Dadurch kann die Datei `package.json` geändert und `npm-shrinkwrap.json` zum Stammverzeichnis hinzugefügt werden.
+Bei jeder Änderung der Abhängigkeiten in der Datei `package.json` müssen Sie die Schritte `npm dedupe` und `shringwrap` wiederholen.
 
 ## Mit einem Proxy arbeiten
 {: #working_with_proxy}
 
-In einigen Umgebungen, wie beispielsweise [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
-[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) kann ein Proxy konfiguriert werden. Weitere Informationen finden Sie unter [Mit einem Proxy arbeiten](/docs/manageapps/workingWithProxy.html).
+In einigen Umgebungen, z. B. [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), kann ein Proxy konfiguriert werden. Weitere Informationen finden Sie unter [Mit einem Proxy arbeiten](/docs/manageapps/workingWithProxy.html).

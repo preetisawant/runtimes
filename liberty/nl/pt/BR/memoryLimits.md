@@ -64,8 +64,7 @@ Ao especificar a memória heap usando variáveis de ambiente, você substitui as
 ### Especificando memória heap
 {: #specifying_heap_memory}
 
-É possível configurar o tamanho de memória heap usando variáveis de ambiente ou mudando o arquivo `jvm.options`. 
-Ao usar as variáveis de ambiente `JVM_ARGS` ou `JBP_CONFIG_IBMJDK`, quaisquer mudanças entrarão em
+É possível configurar o tamanho de memória heap usando variáveis de ambiente ou mudando o arquivo `jvm.options`. Ao usar as variáveis de ambiente `JVM_ARGS` ou `JBP_CONFIG_IBMJDK`, quaisquer mudanças entrarão em
 vigor quando enviar seu aplicativo por push para {{site.data.keyword.Bluemix_notm}}. Mudando o arquivo `jvm.options`, o efeito para a configuração de tamanho de heap também pode ser testado localmente.
 
 * Use a variável de ambiente `JVM_ARGS` e o argumento -Xmx. Por exemplo, para configurar o tamanho máximo de heap como 512 M,

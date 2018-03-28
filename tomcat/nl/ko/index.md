@@ -17,9 +17,9 @@ lastupdated: "2017-12-15"
 {{site.data.keyword.Bluemix}}의 Tomcat 런타임은 java_buildpack을 통해 제공됩니다.
 {: shortdesc}
 
-{{site.data.keyword.Bluemix_notm}}에서 Tomcat 런타임을 사용하려면 java_buildpack을 -b 옵션으로 지정해야 합니다. 예:
+{{site.data.keyword.Bluemix_notm}}에서 Tomcat 런타임을 사용하려면 java_buildpack을 -b 옵션으로 지정해야 합니다. 예를 들어, 다음과 같습니다.
 <pre>
-    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
 </pre>
 
 Tomcat 런타임에 대한 자세한 정보는
@@ -36,7 +36,7 @@ Tomcat 런타임에 대한 자세한 정보는
 
 JBP_CONFIG_TOMCAT 환경 변수를 사용하여 앱에서 사용할 Tomcat 버전을 변경할 수 있습니다.
 JBP_CONFIG_OPEN_JDK_JRE 환경 변수를 사용하여 앱에서 사용할 Java 버전을 변경할 수 있습니다.
-두 환경 변수 모두 애플리케이션의 Manifest 파일에서 지정할 수 있습니다.  예:
+두 환경 변수 모두 애플리케이션의 Manifest 파일에서 지정할 수 있습니다.  예를 들어, 다음과 같습니다.
 ```
     env:
         JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
@@ -62,8 +62,8 @@ JBP_CONFIG_OPEN_JDK_JRE 환경 변수를 사용하여 앱에서 사용할 Java �
 RemoteIpValve에 대한 추가 구성 옵션은
 [Tomcat 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html)를 참조하십시오.
 
-# rellinks
+# 관련 링크
 {: #rellinks notoc}
-## general
+## 일반
 {: #general notoc}
 * [java-buildpack](https://github.com/cloudfoundry/java-buildpack)

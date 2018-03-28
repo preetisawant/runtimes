@@ -32,7 +32,7 @@ lastupdated: "2017-10-26"
 
 在某些环境（如 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 和
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local)）中，可以配置代理。
-有关更多详细信息，请参阅[使用代理](/docs/manageapps/workingWithProxy.html)。
+有关更多详细信息，请参阅[使用代理](/docs/runtimes/common/workingWithProxy.html)。
 
 # 相关链接
 {: #rellinks notoc}

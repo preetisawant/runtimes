@@ -35,7 +35,7 @@ Liberty for Java
         monitoring/newRelic.md
 
     {: .topicgroup}
-Trabajar fuera de línea o con un proxy
+    Trabajar fuera de línea o con un proxy
         offlineMode.md
         [Trabajar con un proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
@@ -57,7 +57,7 @@ Trabajar fuera de línea o con un proxy
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-ts_index.md
+    ts_index.md
     updates.md
     [Declaración de soporte de paquete de compilación](../common/buildpackSupport.html)
     {: .navgroup-end}

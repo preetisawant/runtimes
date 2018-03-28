@@ -10,7 +10,7 @@ ASP.NET 核心
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-disablingNuGet.md
+    disablingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
     [使用代理](../common/workingWithProxy.html)
@@ -28,7 +28,7 @@ disablingNuGet.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-ts_index.md
+    ts_index.md
     updates.md
     runtimeVersions.md
     [Buildpack 支持语句](../common/buildpackSupport.html)

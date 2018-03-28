@@ -35,7 +35,7 @@ Liberty for Java
         monitoring/newRelic.md
 
     {: .topicgroup}
-離線工作或使用 Proxy
+    離線工作或使用 Proxy
         offlineMode.md
         [使用 Proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
@@ -57,7 +57,7 @@ Liberty for Java
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-ts_index.md
+    ts_index.md
     updates.md
     [建置套件支援聲明](../common/buildpackSupport.html)
     {: .navgroup-end}

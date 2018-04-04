@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -16,16 +16,14 @@ Le applicazioni vengono eseguite in un JRE (Java runtime
 environment) fornito e configurato dal pacchetto di build Liberty. Il pacchetto di build Liberty rende anche possibile configurare la versione o il tipo di JRE, personalizzare
 le opzioni JVM o sovrapporre le funzioni JRE.
 
-## IBM JRE
+## {{site.data.keyword.IBM_notm}} JRE
 
 Per impostazione predefinita, le applicazioni
-sono configurate per essere eseguite con una versione leggera di IBM JRE. Questo JRE
+sono configurate per essere eseguite con una versione leggera di {{site.data.keyword.IBM}} JRE. Questo JRE
 leggero è semplificato per fornire una funzionalità di base ed essenziale con
 un ingombro su disco e in memoria decisamente ridotto. Per ulteriori informazioni sui contenuti del JRE leggero, consulta [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
-Per impostazione predefinita, viene utilizzato IBM JRE versione 8. Utilizza la variabile di ambiente JBP_CONFIG_IBMJDK per specificare una versione alternativa di IBM JRE. Ad esempio, per utilizzare
-				l'IBM JRE 7.1 più recente, imposta la seguente variabile di
-				ambiente:
+ Per impostazione predefinita, viene utilizzato {{site.data.keyword.IBM_notm}}JRE versione 8. Utilizza la variabile di ambiente JBP_CONFIG_IBMJDK per specificare una versione alternativa di {{site.data.keyword.IBM_notm}} JRE. Ad esempio, per utilizzare {{site.data.keyword.IBM_notm}} JRE 7.1  più recente, imposta la seguente variabile di ambiente:
 ```
     $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
@@ -73,18 +71,19 @@ Il pacchetto di build Liberty configura le opzioni JVM predefinite tenendo conto
   * il limite di memoria di un'applicazione, come spiegato in [Limiti di memoria e pacchetto di build Liberty](memoryLimits.html#memory_limits)
   * il tipo di JRE, poiché le opzioni correlate all'heap per JVM variano in base alle opzioni supportate del JRE.
 
-* Le [Funzioni Liberty supportate in Bluemix](libertyFeatures.html#libertyfeatures).
-  * Le transazioni database globali con commit in due fasi non sono supportate in Bluemix e sono pertanto disabilitate impostando -Dcom.ibm.tx.jta.disable2PC=true.
+* Le [Funzioni Liberty supportate in {{site.data.keyword.Bluemix_notm}}](libertyFeatures.html#libertyfeatures).
+  * Le transazioni database globali con commit in due fasi non sono supportate in {{site.data.keyword.Bluemix_notm}} e sono pertanto disabilitate impostando -Dcom.ibm.tx.jta.disable2PC=true.
 
-* L'ambiente Bluemix.
+* L'ambiente {{site.data.keyword.Bluemix_notm}}.
 
-    Le opzioni JVM sono configurate per fornire l'ottimizzazione in un ambiente Bluemix e per essere di ausilio nella diagnostica di condizioni di errore correlate alla memoria.
+    Le opzioni JVM sono configurate per fornire l'ottimizzazione in un ambiente {{site.data.keyword.Bluemix_notm}} e per essere di ausilio nella diagnostica di condizioni di errore correlate alla memoria.
   * il rilevamento e il ripristino rapido delle condizioni di errore di un'applicazione viene configurato disabilitando
 le opzioni di dump JVM e terminando i processi quando la memoria di un'applicazione si esaurisce.
-  * l'ottimizzazione della virtualizzazione (solo per IBM JRE).
+  * l'ottimizzazione della virtualizzazione (solo per {{site.data.keyword.IBM_notm}} JRE).
   * l'instradamento delle informazioni sulle risorse di memoria disponibili dell'applicazione quando si è verificato
 l'errore al Loggregator.
-  * se un'applicazione è configurata per abilitare i dump di memoria JVM, l'interruzione dei processi Java è disabilitata e i dump di memoria JVM vengono instradati a una directory "dumps" dell'applicazione	comune. Questi dump possono essere quindi visualizzati dal dashboard Bluemix o dalla CLI CF.
+  * se un'applicazione è configurata per abilitare i dump di memoria JVM, l'interruzione dei processi Java è disabilitata e i dump di memoria JVM vengono instradati a una directory "dumps" dell'applicazione	comune. Questi dump possono essere quindi visualizzati dal dashboard {{site.data.keyword.Bluemix_notm}} o
+dalla CLI Cloud Foundry.
 
 Il seguente è un esempio della configurazione JVM predefinita di esempio generata dal pacchetto di build per un'applicazione distribuita con un limite di memoria 512M:
 
@@ -113,7 +112,7 @@ Le applicazioni possono personalizzare le opzioni JVM con le specifiche definite
 </tr>
 
 <tr>
-<td>IBM JRE</td>
+<td> {{site.data.keyword.IBM_notm}} JRE</td>
 <td>include le opzioni di runtime (con prefisso -X), le eventuali proprietà di sistema Java (con prefisso -D) e non raccomanda -XX per un utilizzo casuale (queste opzioni sono soggette a modifica)
 </td>
 <td>[Opzioni della riga di comando della Versione 8](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html), [Opzioni della riga di comando della Versione 7](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
@@ -129,7 +128,7 @@ per abilitare o disabilitare l'opzione </td>
 </tr>
 </table>
 
-Un'applicazione che richiede le opzioni JVM personalizzate può impostare l'opzione come un valore per una delle variabili di ambiente IBM_JAVA_OPTIONS, JAVA_OPTS o JVM_ARGS in Bluemix. Fai riferimento alla sezione Variabili di ambiente su come impostare la variabile di ambiente di un'applicazione. Un server in pacchetto o una directory server può anche includere un file jvm.options che contiene le opzioni di riga di comando invece dell'impostazione di una variabile di ambiente.
+Un'applicazione che richiede le opzioni JVM personalizzate può impostare l'opzione come un valore per una delle variabili di ambiente IBM_JAVA_OPTIONS, JAVA_OPTS o JVM_ARGS in {{site.data.keyword.Bluemix_notm}}. Fai riferimento alla sezione Variabili di ambiente su come impostare la variabile di ambiente di un'applicazione. Un server in pacchetto o una directory server può anche includere un file jvm.options che contiene le opzioni di riga di comando invece dell'impostazione di una variabile di ambiente.
 
 Quando le opzioni JVM vengono applicate al JRE, vengono applicate prima le opzioni
 predefinite del pacchetto di build Liberty, seguite dalle opzioni personalizzate. Le opzioni personalizzate sono accodate in
@@ -150,7 +149,7 @@ Nota: alcune opzioni potrebbero non diventare effettive se non vengono attivate 
 <tr>
 <td>1</td>
 <td>IBM_JAVA_OPTIONS</td>
-<td>una variabile di ambiente supportata da IBM JRE</td>
+<td>una variabile di ambiente supportata da {{site.data.keyword.IBM_notm}} JRE</td>
 <td>Tutti</td>
 <td>Riavviare o ripreparare l'applicazione</td>
 <td>No</td>
@@ -187,7 +186,7 @@ Nota: alcune opzioni potrebbero non diventare effettive se non vengono attivate 
 ### Determinare le opzioni JVM applicate di un'applicazione in esecuzione
 {: #determining_applied_jvm_options}
 
-Fatta eccezione per le opzioni definite dall'applicazione che sono specificate con la variabile di ambiente JVM_ARGS, le opzioni risultanti sono rese persistenti nella variabile di ambiente come opzioni della riga di comando (applicazioni Java autonome) oppure in un file`jvm.options` (applicazioni Java non autonome). Le opzioni JVM applicate per l'applicazione possono essere visualizzate dalla console IBM Bluemix o dalla CLI CF.
+Fatta eccezione per le opzioni definite dall'applicazione che sono specificate con la variabile di ambiente JVM_ARGS, le opzioni risultanti sono rese persistenti nella variabile di ambiente come opzioni della riga di comando (applicazioni Java autonome) oppure in un file`jvm.options` (applicazioni Java non autonome). Le opzioni JVM applicate per l'applicazione possono essere visualizzate dalla console {{site.data.keyword.Bluemix_notm}} o dalla CLI Cloud Foundry.
 
 Le opzioni JVM per l'applicazione JAVA autonoma sono mantenute come opzioni della riga di comando. Possono essere visualizzate dal file `staging_info.yml`.
 
@@ -225,7 +224,7 @@ Per visualizzare il file `jvm.options` in un'applicazione in esecuzione in una c
 #### Utilizzo di esempio
 {: #example_usage}
 
-Distribuzione di un'applicazione con le opzioni JVM personalizzate per abilitare la registrazione della raccolta di dati inutilizzati dettagliata di IBM JRE:
+Distribuzione di un'applicazione con le opzioni JVM personalizzate per abilitare la registrazione della raccolta di dati inutilizzati dettagliata di {{site.data.keyword.IBM_notm}} JRE.
 * Le opzioni JVM incluse nel file `manifest.yml` di un'applicazione:
 
 ```
@@ -248,7 +247,7 @@ Distribuzione di un'applicazione con le opzioni JVM personalizzate per abilitare
 ```
 {: codeblock}
 
-* Per aggiornare l'opzione di IBM JRE dell'applicazione distribuita per attivare un heap, uno snap e un javacore oppure una condizione di memoria esaurita (OutOfMemory), impostare la variabile di ambiente dell'applicazione con l'opzione JVM e riavviare l'applicazione:
+* Per aggiornare l'opzione di {{site.data.keyword.IBM_notm}} JRE dell'applicazione distribuita per attivare un heap, uno snap e un javacore oppure una condizione di memoria esaurita (OutOfMemory), impostare la variabile di ambiente dell'applicazione con l'opzione JVM e riavviare l'applicazione:
 
 ```
     $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Tomcat" audience="runtime"}
+{: .toc subcollection="Tomcat" audience="runtime" href="/docs/runtimes/tomcat/getting-started.html"}}
 Tomcat
 
     {: .navgroup id="learn"}
@@ -10,7 +10,8 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Utilizza un proxy](../../manageapps/workingWithProxy.html)
+    eclipseTomcat.md
+    [Utilizza un proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -21,6 +22,7 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    ts_index.md
     [Versioni di runtime](index.html#runtime_versions)
-    [Istruzione di supporto per il pacchetto di build](../../manageapps/buildpackSupport.html)
+    [Istruzione di supporto per il pacchetto di build](../common/buildpackSupport.html)
     {: .navgroup-end}

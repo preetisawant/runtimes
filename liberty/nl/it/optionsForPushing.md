@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-03-22"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,13 +13,16 @@ lastupdated: "2017-03-22"
 # Opzioni per eseguire il push di applicazioni Liberty
 {: #options_for_pushing}
 
-La modalità di funzionamento del server Liberty in Bluemix è controllata dal pacchetto di build Liberty. I pacchetti di build possono fornire un ambiente di runtime completo per
+La modalità di funzionamento del server Liberty in {{site.data.keyword.Bluemix}} è
+controllata dal pacchetto di build Liberty. I pacchetti di build possono fornire un ambiente di runtime completo per
 una specifica classe di applicazioni. Sono fondamentali per fornire la portabilità tra i cloud e contribuire a
 un'architettura open cloud. Il pacchetto di build Liberty fornisce un contenitore WebSphere
 Liberty in grado di eseguire applicazioni Java EE 7 e OSGi. Supporta framework di uso comune come Spring e include l'IBM JRE. WebSphere Liberty abilita un rapido sviluppo delle applicazioni che è adatto per il cloud. Il pacchetto di build Liberty supporta più applicazioni che sono distribuite in un singolo server
-Liberty. Come parte dell'integrazione del pacchetto di build Liberty in Bluemix, il pacchetto di build verifica che le variabili di ambiente per i servizi di bind siano mostrate come variabili di configurazione nel server Liberty.
+Liberty. Come parte dell'integrazione del pacchetto di build Liberty in {{site.data.keyword.Bluemix_notm}},
+il pacchetto di build verifica che le variabili di ambiente per i servizi di bind siano mostrate come variabili di
+configurazione nel server Liberty.
 
-Per distribuire le tue applicazioni Liberty a Bluemix, puoi utilizzare i seguenti metodi.
+Per distribuire le tue applicazioni Liberty a {{site.data.keyword.Bluemix_notm}}, puoi utilizzare i seguenti metodi.
 
 * Esecuzione del push di un'applicazione autonoma
 * Esecuzione del push di una directory server
@@ -30,7 +33,7 @@ Importante: quando distribuisci un'applicazione con il pacchetto di build Libert
 ## Applicazioni autonome
 {: #stand_alone_apps}
 
-Le applicazioni autonome come i file WAR o EAR possono essere distribuite a Liberty in Bluemix.
+Le applicazioni autonome come i file WAR o EAR possono essere distribuite a Liberty in {{site.data.keyword.Bluemix_notm}}.
 
 Per distribuire un'applicazione autonoma, esegui il comando cf push con il parametro -p che punta al file WAR o EAR.
 Ad esempio:
@@ -148,7 +151,8 @@ Importante: per rendere effettive le tue modifiche alle variabili di ambiente è
 
 In alcuni casi, potrebbe essere necessario fornire una configurazione server Liberty personalizzata con la tua 				applicazione. Questa configurazione personalizzata potrebbe servirti quando distribuisci un file WAR o EAR e il file server.xml predefinito non ha le specifiche impostazioni di cui la tua applicazione ha bisogno.
 
-Se hai installato il profilo Liberty sulla tua workstation e hai già creato un server Liberty con la tua applicazione, puoi distribuire i contenuti di tale directory in Bluemix.
+Se hai installato il profilo Liberty sulla tua workstation e hai già creato un server Liberty
+				con la tua applicazione, puoi distribuire i contenuti di tale directory in {{site.data.keyword.Bluemix_notm}}.
 Ad esempio, se il server Liberty è denominato defaultServer, esegui il comando:
 
 ```
@@ -179,7 +183,7 @@ Se sulla workstation non è installato un profilo Liberty, puoi utilizzare la se
 ```
 {: codeblock}
 
-Dopo che la directory server è pronta, puoi distribuirla a Bluemix.
+Dopo che la directory server è pronta, puoi distribuirla a {{site.data.keyword.Bluemix_notm}}.
 
 ```
     $ cf push <nomedellatuaapplicazione> -p defaultServer
@@ -196,7 +200,8 @@ Nota: le applicazioni web distribuite come parte della directory server sono acc
 ## Server in pacchetto
 {: #packaged_server}
 
-Puoi anche eseguire il push di un server in pacchetto a Bluemix. Il file di server in pacchetto viene creato utilizzando il comando di package server di Liberty. Oltre ai file di applicazione e configurazione, il file di server in pacchetto può contenere risorse condivise e funzioni utente Liberty richieste dall'applicazione.
+Puoi anche
+eseguire il push di un server in pacchetto a {{site.data.keyword.Bluemix_notm}}. Il file di server in pacchetto viene creato utilizzando il comando di package server di Liberty. Oltre ai file di applicazione e configurazione, il file di server in pacchetto può contenere risorse condivise e funzioni utente Liberty richieste dall'applicazione.
 
 Per impacchettare un server Liberty, utilizza il comando `./bin/server package` dalla directory di installazione di Liberty. Specifica il nome server e includi l'opzione `--include=usr`.
 Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
@@ -208,7 +213,7 @@ Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
 
 Questo comando genera un file serverName.zip nella directory del server. Se hai utilizzato l'opzione `--archive` per specificare un differente file di archivio, assicurati che abbia l'estensione `.zip` invece di `.jar`. **Il pacchetto di build non supporta i file del server in pacchetto creati con l'estensione `.jar`**.
 
-Puoi quindi eseguire il push del file `.zip` generato a Bluemix con il comando `cf push`.
+Puoi quindi eseguire il push del file `.zip` generato a {{site.data.keyword.Bluemix_notm}} con il comando `cf push`.
 Ad esempio:
 
 ```

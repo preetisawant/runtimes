@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-07-17"
 # Forza HTTPS in tutte le pagine della tua applicazione
 {: #enforce_https}
 
-Quando esegui la tua applicazione in Bluemix con il framework express, devono essere effettuate le seguenti modifiche per forzare HTTPS invece di HTTP in tutte le pagine della tua applicazione.
+Quando esegui la tua applicazione in {{site.data.keyword.Bluemix}} con il framework express, devono essere effettuate le seguenti modifiche per forzare HTTPS invece di HTTP in tutte le pagine della tua applicazione.
 
 ```
 var express = require("express");

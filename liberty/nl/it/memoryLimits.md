@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -27,22 +27,22 @@ Per determinare quale limite di memoria specificare, è
 importante comprendere che non stai specificando la dimensione dell'heap delle applicazioni
 Java. Stai specificando la quantità di memoria disponibile per il contenitore Diego o DEA da utilizzare. Questa quantità include la memoria utilizzata dai seguenti componenti:
 
-* dal contenitore Warden. 
-* per associare le estensioni kernel e le librerie di sistema nel processo. 
-* per gli eseguibili jvm, l'heap di lavoro jvm, lo spazio jit e i riferimenti compressi. 
-* per le classi (server delle applicazioni e applicazione), gli stack di thread e i buffer di I/O diretto. 
-* dall'heap delle applicazioni Java. 
+* dal contenitore Warden.
+* per associare le estensioni kernel e le librerie di sistema nel processo.
+* per gli eseguibili jvm, l'heap di lavoro jvm, lo spazio jit e i riferimenti compressi.
+* per le classi (server delle applicazioni e applicazione), gli stack di thread e i buffer di I/O diretto.
+* dall'heap delle applicazioni Java.
 
 Ulteriori informazioni sull'utilizzo della memoria JVM sono disponibili nell'articolo developerWorks [Thanks for the memory](http://www.ibm.com/developerworks/library/j-nativememory-linux/)
 
-Quando distribuisci un'applicazione, viene monitorato l'utilizzo della memoria dell'intero processo. Se l'utilizzo della memoria supera il limite di memoria da te specificato quando è stata distribuita l'applicazione, il kernel arresta il processo. Questa azione si verifica senza alcuna avvertenza e potrebbe manifestarsi in diversi modi. 
+Quando distribuisci un'applicazione, viene monitorato l'utilizzo della memoria dell'intero processo. Se l'utilizzo della memoria supera il limite di memoria da te specificato quando è stata distribuita l'applicazione, il kernel arresta il processo. Questa azione si verifica senza alcuna avvertenza e potrebbe manifestarsi in diversi modi.
 
  Se il limite di memoria viene superato durante la distribuzione dell'applicazione, ricevi un messaggio che segnala
-che si è verificato un errore e potresti visualizzare quanto segue. 
+che si è verificato un errore e potresti visualizzare quanto segue.
 
   * Potresti notare che l'applicazione è instabile.
   * Potresti vedere che l'applicazione ha provato l'avvio più volte, sempre con esito negativo.
-  * Potresti ricevere un messaggio che indica che la distribuzione dell'applicazione non è riuscita. 
+  * Potresti ricevere un messaggio che indica che la distribuzione dell'applicazione non è riuscita.
 
 Se il limite di memoria viene superato mentre l'applicazione è in funzione, il processo viene arrestato e Cloud Foundry tenta di riavviare l'applicazione. È possibile che l'applicazione venga riavviata, ma non sarà disponibile per un certo lasso di tempo.
 
@@ -51,7 +51,7 @@ Se il limite di memoria viene superato mentre l'applicazione è in funzione, il 
 
 Puoi personalizzare la quantità massima di memoria heap assegnata alla tua applicazione in vari modi utilizzando la variabile di ambiente `JVM_ARGS`, modificando il file `jvm.options` o configurando la variabile di ambiente `JBP_CONFIG_IBMJDK` che controlla `heap_size_ratio`. Se non specifichi alcuna impostazione, il pacchetto di build utilizza l'impostazione predefinita.
 
-### Valori predefiniti della memoria di heap 
+### Valori predefiniti della memoria di heap
 {: .#heap_memory_defaults}
 Per evitare errori riguardanti il superamento dei limiti di memoria, il pacchetto di build Liberty for Java configura un rapporto di dimensione di heap predefinito nel limite di memoria che specifichi quando distribuisci la tua applicazione.
 
@@ -63,7 +63,7 @@ Quando specifichi la memoria di heap che utilizza le variabili di ambiente, sovr
 ### Specifica della memoria heap
 {: #specifying_heap_memory}
 
-Puoi impostare la dimensione della memoria di heap utilizzando le variabili di ambiente o modificando il file `jvm.options`. Quando utilizzi le variabili di ambiente `JVM_ARGS` o `JBP_CONFIG_IBMJDK`, tutte le modifiche avranno effetto dopo aver trasmesso la tua applicazione a Bluemix. Modificando il file `jvm.options`, l'effetto della configurazione della dimensione di heap può venire verificato anche localmente.
+Puoi impostare la dimensione della memoria di heap utilizzando le variabili di ambiente o modificando il file `jvm.options`. Quando utilizzi le variabili di ambiente `JVM_ARGS` o `JBP_CONFIG_IBMJDK`, tutte le modifiche avranno effetto dopo aver trasmesso la tua applicazione a {{site.data.keyword.Bluemix_notm}}. Modificando il file `jvm.options`, l'effetto della configurazione della dimensione di heap può venire verificato anche localmente.
 
 * Utilizza la variabile di ambiente `JVM_ARGS` e l'argomento -Xmx. Ad esempio per impostare la dimensione heap massima di 512M
 utilizza il seguente comando, quindi riprepara la tua applicazione.
@@ -73,8 +73,8 @@ utilizza il seguente comando, quindi riprepara la tua applicazione.
 ```
 {: codeblock}
 
-* Specifica il rapporto della dimensione heap utilizzando la variabile di ambiente JBP_CONFIG_IBMJDK. heap_size_ratio è un
-valore a punto mobile che specifica quale limite di memoria assegnare all'heap. Ad esempio, per assegnare
+* Specifica il rapporto della dimensione heap utilizzando la variabile di ambiente JBP_CONFIG_IBMJDK.  heap_size_ratio è un
+valore a punto mobile che specifica quale limite di memoria assegnare all'heap.  Ad esempio, per assegnare
 metà della memoria disponibile all'heap (50% o 0.50), immetti il seguente comando e riprepara la tua applicazione.
 
 ```

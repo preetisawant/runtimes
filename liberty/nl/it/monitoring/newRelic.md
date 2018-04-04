@@ -2,21 +2,22 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Utilizza New Relic per monitorare Liberty in Bluemix
+# Utilizza New Relic per monitorare Liberty in {{site.data.keyword.cloud_notm}}
 {: #new_relic}
 
 New Relic è un servizio di terze parti che fornisce delle
 metriche di monitoraggio per la tua applicazione. Per ulteriori informazioni su cosa fornisce il servizio New Relic, consulta [New
 Relic](http://newrelic.com/java).
 
-In base alla [documentazione di installazione manuale dell'agent Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), è di norma richiesto che le applicazioni Java che devono essere monitorate utilizzando il servizio New Relic siano integrate e configurate con un agent New Relic e una chiave di licenza dell'account. Nell'ambiente IBM Bluemix, è possibile ottenere un nuovo accordo di licenza e un account New Relic creando un'istanza del servizio in IBM Bluemix. È quindi possibile eseguire il bind delle applicazioni Java all'istanza del servizio New Relic e il pacchetto di build Liberty configura automaticamente l'applicazione, che è pronta a essere monitorata dal servizio New Relic.
+In base alla [documentazione di installazione manuale dell'agent Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), è di norma richiesto che le applicazioni Java che devono essere monitorate utilizzando il servizio New Relic siano integrate e configurate con un agent New Relic e una chiave di licenza dell'account. Nell'ambiente {{site.data.keyword.Bluemix}},
+è possibile ottenere un nuovo accordo di licenza e un account New Relic creando un'istanza del servizio in {{site.data.keyword.Bluemix_notm}}. È quindi possibile eseguire il bind delle applicazioni Java all'istanza del servizio New Relic e il pacchetto di build Liberty configura automaticamente l'applicazione, che è pronta a essere monitorata dal servizio New Relic.
 In modo specifico, il pacchetto di build:
 
 * fornisce all'applicazione un agent New Relic;
@@ -37,15 +38,15 @@ Vedi la configurazione di esempio generata dal pacchetto di build Liberty per l'
 ## Aggiungi un servizio New Relic
 {: #add_new_relic}
 
-Per fare in modo che un'applicazione Java esistente sia monitorata con New Relic in IBM Bluemix, attieniti alla seguente procedura.
-1. Crea un'istanza del servizio New Relic in IBM Bluemix.
+Per fare in modo che un'applicazione Java esistente sia monitorata con New Relic in {{site.data.keyword.Bluemix_notm}}, attieniti alla seguente procedura.
+1. Crea un'istanza del servizio New Relic in {{site.data.keyword.Bluemix_notm}}.
 
   <pre>
     $ cf create-service newrelic standard mynewrelic
   </pre>
   {: codeblock}
 
-2. Distribuisci la tua applicazione a IBM Bluemix con il servizio New Relic.  Consulta il seguente manifest dell'applicazione
+2. Distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} con il servizio New Relic.  Consulta il seguente manifest dell'applicazione
 di esempio:
 
   <pre>
@@ -62,7 +63,8 @@ di esempio:
   </pre>
   {: codeblock}
 
-3. Accedi al dashboard New Relic dalla tua applicazione direttamente dal dashboard IBM Bluemix della tua applicazione.
+3. Accedi al dashboard New Relic dalla tua applicazione direttamente dal dashboard {{site.data.keyword.Bluemix_notm}}
+della tua applicazione.
 
 ### Aggiungi un servizio New Relic fornito dall'utente
 {: #add_user_provided_new_relic}
@@ -76,7 +78,8 @@ Se hai un account e una chiave di licenza New Relic esistenti, puoi eseguire il 
   ```
   {: codeblock}
 
-2. Distribuisci la tua applicazione a IBM Bluemix con l'istanza del servizio New Relic fornito dall'utente.  Il seguente è un manifest
+2. Distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} con
+l'istanza del servizio New Relic fornito dall'utente.  Il seguente è un manifest
 dell'applicazione di esempio che utilizza un'istanza del servizio New Relic
 fornito dall'utente:
   <pre>

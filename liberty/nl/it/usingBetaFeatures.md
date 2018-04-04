@@ -1,47 +1,66 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Utilizza le funzioni beta 
+# Utilizza le funzioni beta
 {: #using_beta_features}
 
 Le funzioni beta Liberty forniscono un accesso anticipato ai nuovi modelli di funzionalità e
-programmazione che potrebbero essere inclusi in una futura release di Liberty. La maggior parte delle funzioni beta può essere utilizzata anche nelle applicazioni distribuite a Bluemix.
+programmazione che potrebbero essere inclusi in una futura release di Liberty. La maggior parte delle funzioni beta può essere
+utilizzata anche nelle applicazioni distribuite a {{site.data.keyword.Bluemix}}.
 
 **Importante**: le funzioni beta sono solo per scopi di sviluppo e test e non possono essere utilizzate in produzione. Per le condizioni di utilizzo complete, consulta l'[ accordo di licenza beta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
 
-Funzioni beta Liberty disponibili in Bluemix
+Funzioni beta Liberty disponibili in {{site.data.keyword.Bluemix_notm}}
 <table>
 <tr>
-<th align="left">Funzione</th>
-<th align="left">Funzione</th>
-<th align="left">Funzione</th>
-<th align="left">Funzione</th>
+<th align="left">Funzioni </th>
 </tr>
 
 <tr>
-<td>bluemixLogCollector-1.1</td>
-<td>httpWhiteboard-1.0</td>
-<td>logstashCollector-1.1</td>
-<td>osgiBundle-1.0</td>
+    <tr><td>appSecurity-3.0</tr></td>
+    <tr><td>audit-1.0</tr></td>
+    <tr><td>beanValidation-2.0</tr></td>
+    <tr><td>bluemixLogCollector-1.1</tr></td>
+    <tr><td>cdi-2.0</tr></td>
+    <tr><td>javaee-8.0</tr></td>
+    <tr><td>javaeeClient-8.0</tr></td>
+    <tr><td>jaxrs-2.1</tr></td>
+    <tr><td>jpa-2.2</tr></td>
+    <tr><td>jpaContainer-2.2</tr></td>
+    <tr><td>jsf-2.3</tr></td>
+    <tr><td>jsfContainer-2.2</tr></td>
+    <tr><td>jsonb-1.0</tr></td>
+    <tr><td>jsonbContainer-1.0</tr></td>
+    <tr><td>jsonp-1.1</tr></td>
+    <tr><td>jsonpContainer-1.1</tr></td>
+    <tr><td>logstashCollector-1.1</tr></td>
+    <tr><td>mpConfig-1.2</tr></td>
+    <tr><td>mpOpenAPI-1.0</tr></td>
+    <tr><td>mpRestClient-1.0</tr></td>
+    <tr><td>opentracing-1.0</tr></td>
+    <tr><td>servlet-4.0</tr></td>
+    <tr><td>validator-1.0</tr></td>
+    <tr><td>webProfile-8.0</tr></td>
+
 </tr>
 </table>
 
-Per utilizzare le funzioni beta Liberty in Bluemix devi fare quanto segue:
+Per utilizzare le funzioni beta Liberty in {{site.data.keyword.Bluemix_notm}} devi fare quanto segue:
 
 1. [Distribuire una directory server o un server in pacchetto](optionsForPushing.html) con una o più funzioni beta abilitate nel file server.xml come nel seguente esempio:
 ```
     <server>
         <featureManager>
             <feature>jsp-2.3</feature>
-            <feature>bluemixLogCollector-1.1</feature>
+            <feature>mpOpenAPI-1.0</feature>
         </featureManager>
     </server>
 ```
@@ -82,5 +101,5 @@ Se stai abilitando le funzioni beta su un'applicazione esistente, non dimenticar
 {: #rellinks notoc}
 ## general
 {: #general notoc}
-* [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Runtime Liberty for Java](index.html)
+* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html)

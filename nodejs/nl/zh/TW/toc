@@ -15,13 +15,13 @@ SDK for Node.js
     enforceHTTPS.md
 
     {: .topicgroup}
-    離線工作或使用 Proxy
+離線工作或使用 Proxy
         offlineMode.md
         [使用 Proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    nodejsBuildpacks.md
+nodejsBuildpacks.md
     configurationOptions.md
     fipsMode.md
     [管理 Liberty 及 Node.js 應用程式](../common/app_mng.html)
@@ -33,7 +33,7 @@ SDK for Node.js
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
+ts_index.md
     updates.md
     availableVersions.md
     [建置套件支援聲明](../common/buildpackSupport.html)

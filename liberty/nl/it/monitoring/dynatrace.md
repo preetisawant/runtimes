@@ -2,14 +2,14 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-05-31"
+lastupdated: "2017-11-08"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-#Utilizza Dynatrace per monitorare Liberty in Bluemix
+#Utilizza Dynatrace per monitorare Liberty in {{site.data.keyword.cloud_notm}}
 {: #using_dynatrace}
 
 Dynatrace è un servizio di terze parti che fornisce monitoraggio per la tua applicazione.
@@ -29,7 +29,7 @@ creare un servizio fornito dall'utente per trasmettere le informazioni per l'age
 
 1. Configura un raccoglitore Dynatrace.
   * Consulta [Dynatrace community website](https://community.dynatrace.com/community/display/EVAL/Step+3+-+Connect+Agent+to+Dynatrace) per istruzioni su come scaricare e configurare il raccoglitore Dynatrace.
-  * Verifica che il raccoglitore sia configurato in un'ubicazione che sia accessibile dall'agent Dynatrace in esecuzione con la tua applicazione in Bluemix.
+  * Verifica che il raccoglitore sia configurato in un'ubicazione che sia accessibile dall'agent Dynatrace in esecuzione con la tua applicazione in {{site.data.keyword.Bluemix_notm}}.
 2. Crea un servizio fornito dall'utente che punta al raccoglitore Dynatrace in esecuzione. **NOTA** il nome del servizio fornito per l'utente deve contenere la stringa **dynatrace**. L'utilizzo di maiuscole/minuscole viene ignorato. Ad esempio, utilizza il seguente comando dove **my-dynatrace-collector** contiene **dynatrace**:
 
         $ cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
@@ -44,7 +44,7 @@ creare un servizio fornito dall'utente per trasmettere le informazioni per l'age
 
     Consulta [Agent Setting section of Agent Configuration](https://community.dynatrace.com/community/display/DOCDT62/Agent+Configuration) nel sito Web della community Dynatrace per ulteriori informazioni sulle opzioni disponibili. Ad esempio, utilizzando l'opzione exclude, puoi escludere le classi dal monitoraggio di Dynatrace. Consulta [DynaTrace Agent Framework](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md) per ulteriori dettagli sul servizio fornito dall'utente.
 
-3. Dopo aver eseguito il push della tua applicazione a Bluemix, esegui il bind del servizio fornito dall'utente che hai creato per l'applicazione. Ad esempio, utilizza il comando
+3. Dopo aver eseguito il push della tua applicazione a {{site.data.keyword.Bluemix_notm}}, esegui il bind del servizio fornito dall'utente che hai creato per l'applicazione. Ad esempio, utilizza il comando
 
         $ cf bs myApp my-dynatrace-collector
         {: codeblock}
@@ -62,8 +62,8 @@ i seguenti passi di configurazione addizionali.
 ### Ospitare l'agent Dynatrace
 {: #hosting_dynatrace_agent}
 L'agent Dynatrace deve essere ospitato su un server Web e il pacchetto di build Liberty deve essere in grado di scaricare il jar dell'agent da tale server. Il server deve essere configurato con un file `index.yml` che specifica i dettagli sul jar dell'agent. Completa i seguenti passi per impostare l'agent Dynatrace:
-  1. Scarica il jar dell'agent Dynatrace. Consulta [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) presso il sito Web della community Dynatrace per istruzioni su come scaricare il file jar dell'agent Dynatrace. Il file jar dell'agent appropriato per l'esecuzione su Bluemix è **dynatrace-agent-unix.jar** versione **6.+**.
-  2. Ospita il file jar dell'agent in un'ubicazione da cui il pacchetto di build Liberty può scaricarlo. Puoi ospitarlo in Bluemix stesso utilizzando una qualunque delle funzioni del server disponibili, oppure puoi ospitarlo in alcune ubicazioni disponibili pubblicamente
+  1. Scarica il jar dell'agent Dynatrace. Consulta [Dynatrace Server Platform Installers](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) presso il sito Web della community Dynatrace per istruzioni su come scaricare il file jar dell'agent Dynatrace. Il file jar dell'agent appropriato per l'esecuzione su {{site.data.keyword.Bluemix_notm}} è **dynatrace-agent-unix.jar** versione **6.+**.
+  2. Ospita il file jar dell'agent in un'ubicazione da cui il pacchetto di build Liberty può scaricarlo. Puoi ospitarlo in {{site.data.keyword.Bluemix_notm}} stesso utilizzando una qualunque delle funzioni del server disponibili, oppure puoi ospitarlo in alcune ubicazioni disponibili pubblicamente.
      * Assicurati di fornire un file `index.yml` all'ubicazione che lo ospita. Il file `index.yml` deve contenere una voce composta da l'ID versione del jar dell'agente seguito da due punti e l'URL completo dell'ubicazione di tale jar dell'agent. Ad esempio:
 
             ---

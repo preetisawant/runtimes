@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-09-06"
-
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,7 +19,7 @@ lastupdated: "2017-09-06"
 
 * {: download} Congratulazioni, hai distribuito un'applicazione di esempio Hello World su {{site.data.keyword.Bluemix}}!  Per iniziare, segui questa guida dettagliata. O <a class="xref" href="http://bluemix.net" target="_blank" title="(Scarica il codice di esempio)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Scarica codice di esempio" />scarica codice di esempio</a> o esplora da solo.
 
-Seguendo questa esercitazione Node.js, configurerai un ambiente di sviluppo, distribuirai un'applicazione localmente e in {{site.data.keyword.Bluemix}} e integrerai un servizio database {{site.data.keyword.Bluemix}} nella tua applicazione.
+Seguendo questa esercitazione Node.js, configurerai un ambiente di sviluppo, distribuirai un'applicazione localmente e in {{site.data.keyword.Bluemix}} e integrerai un servizio database {{site.data.keyword.Bluemix_notm}} nella tua applicazione.
 
 ## Prima di cominciare
 {: #prereqs}
@@ -100,12 +99,14 @@ cf api <API-endpoint>
    ```
    {: pre}
 
-   |Regione          |Endpoint API                             |
-   |:---------------|:-------------------------------|
-   | Stati Uniti Sud       |https://api.ng.bluemix.net     |
-   | Regno Unito | https://api.eu-gb.bluemix.net  |
-   | Sydney         | https://api.au-syd.bluemix.net |
-   | Francoforte     | https://api.eu-de.bluemix.net | 
+   | **Nome regione** | **Ubicazione geografica** | **Endpoint API** |
+   |-----------------|-------------------------|-------------------|
+   | Regione Stati Uniti Sud | Dallas, US | api.ng.bluemix.net |
+   | Regione Stati Uniti Est | Washington, DC, US | api.us-east.bluemix.net |
+   | Regione Regno Unito | Londra, Inghilterra | api.eu-gb.bluemix.net |
+   | Regione Sydney | Sydney, Australia | api.au-syd.bluemix.net |
+   | Regione Germania | Francoforte, Germania | api.eu-de.bluemix.net |
+   {: caption="Tabella 1. Elenco di regioni {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
 Accedi al tuo account {{site.data.keyword.Bluemix_notm}}.
 
@@ -134,12 +135,12 @@ Puoi risolvere gli errori nel processo di distribuzione eseguendo il comando `cf
 ## Passo 5: Aggiungi un database
 {: #add_database}
 
-Successivamente, aggiungeremo un database NoSQL a questa applicazione e la configureremo in modo che possa essere eseguita localmente o su {{site.data.keyword.Bluemix_notm}}.
+Successivamente, aggiungeremo un database Cloudant NoSQL a questa applicazione e la configureremo in modo che possa essere eseguita localmente o su {{site.data.keyword.Bluemix_notm}}.
 
-1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona la tua applicazione facendo clic sul relativo nome nella colonna **Name**.
-2. Fai clic su **Connections** e su **Connect new**.
-2. Nella sezione **Data & Analytics**, seleziona `Cloudant NoSQL DB` e quindi crea il servizio.
-3. Seleziona **Restage** quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Create Resource**.
+2. Scegli la sezione **Data and Analytics**, seleziona **Cloudant NoSQL DB** e crea il tuo servizio.
+3. Passa alla vista **Connections** e seleziona la tua applicazione, quindi **Create connection**.
+4. Seleziona **Restage** quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
 
 Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi archiviarla in una variabile di ambiente di riferimento nel tuo codice di origine. [Ulteriori informazioni...](/docs/manageapps/depapps.html#app_env)
 {: tip}
@@ -177,7 +178,15 @@ npm start
 
   Visualizza la tua applicazione locale all'indirizzo http://localhost:3000. Tutti i nomi immessi nell'applicazione saranno ora aggiunti al database.
 
+** Prevenzione dei problemi**: {{site.data.keyword.Bluemix_notm}} definisce la variabile di ambiente PORT quando la tua applicazione viene eseguita sul cloud. Quando esegui la tua applicazione localmente, la variabile PORT non viene definita, quindi 3000 viene utilizzato come numero porta. Per ulteriori informazioni vedi [Esegui la tua applicazione localmente](runningLocally.html#hints).
+
   La tua applicazione locale e {{site.data.keyword.Bluemix_notm}} stanno condividendo il database. I nomi che aggiungi dall'applicazione saranno visualizzati entrambi quando aggiorni i browser.
 
 Ricorda, se non hai bisogno della tua applicazione live su {{site.data.keyword.Bluemix_notm}}, arrestala così da non incorrere in alcun addebito non previsto.
 {: tip}
+
+## Passi successivi
+
+* [Esercitazioni](/docs/tutorials/index.html)
+* [Samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

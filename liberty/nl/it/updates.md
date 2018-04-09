@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-08-14"
+  years: 2015, 2018
+lastupdated: "2018-02-23"
 
 ---
 
@@ -14,9 +14,41 @@ lastupdated: "2017-08-14"
 
 ## Un elenco degli aggiornamenti più recenti nel pacchetto di build Liberty.
 
+
+### 13 febbraio 2018: pacchetto di build Liberty aggiornato v3.18.
+* La versione del runtime Liberty mensile è stata aggiornata alla versione 2018.2.0.0. 
+* Il runtime Liberty predefinito include anche la [PI90804 Apache Commons iFix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428).
+
+### 31 gennaio 2018: pacchetto di build Liberty aggiornato v3.17.1.
+* Il pacchetto di build è stato aggiornato per includere la funzione Liberty microProfile-1.2. 
+
+### 26 gennaio 2018: pacchetto di build Liberty aggiornato v3.17.
+* Il pacchetto di build è stato aggiornato per aggiungere la capacità di configurare in modo dinamico la traccia sul server Liberty.
+* La versione del runtime Liberty mensile è stata aggiornata alla versione 2018.1.0.0. 
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP7. 
+
+### 5 gennaio 2018: pacchetto di build Liberty aggiornato v3.16-20180102-0938
+* La versione del runtime Liberty predefinita è stata aggiornata alla release 17.0.0.4
+* La versione del runtime Liberty mensile è stata aggiornata alla versione 2017.12.0.0. 
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP6. 
+
+
+### 31 ottobre 2017: pacchetto di build Liberty aggiornato v3.15.
+* La versione del runtime Liberty mensile è stata aggiornata alla versione 2017.10.0.0. 
+
+### 17 ottobre 2017: pacchetto di build Liberty aggiornato v3.14-20171013-1023
+* La versione del runtime Liberty predefinita è stata aggiornata alla release 17.0.0.3.
+* La versione del runtime Liberty mensile è stata aggiornata alla versione 2017.9.0.1. 
+* La versione di IBM JRE è stata aggiornata a 8 SR5. 
+
+### 5 ottobre 2017: pacchetto di build Liberty aggiornato v3.13-20170919-1721
+* La versione del runtime Liberty mensile è stata aggiornata alla versione 2017.9.0.0. 
+* La versione di IBM JRE è stata aggiornata a 8 SR4 FP11. 
+* L'agent di ridimensionamento automatico è stato aggiornato. 
+
 ### 14 agosto, 2017: pacchetto di build Liberty aggiornato v3.12-20170814-1322
 * La versione del runtime Liberty è stata aggiornata alla release [2017.8.0.0](https://developer.ibm.com/wasdev/blog/2017/08/04/beta-websphere-liberty-tools-august-2017/).
-* Il pacchetto di build contiene inoltre le IBM JRE aggiornate: versione 8 SR4 FP10 e versione 7.1 SR4 FP10. 
+* Il pacchetto di build contiene inoltre le IBM JRE aggiornate: versione 8 SR4 FP10 e versione 7.1 SR4 FP10.
 * JRE 8 include Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files.
 * È stato corretto un bug del pacchetto di build che non consentiva alla applicazioni Liberty di [venire arrestate correttamente](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown).
 
@@ -27,20 +59,20 @@ lastupdated: "2017-08-14"
 * La libreria Cloudant predefinita è ora ufficialmente [java-cloudant](https://github.com/cloudant/java-cloudant), la [libreria Ektorp](https://github.com/helun/Ektorp) è ancora disponibile come un'opzione, per i dettagli su questa modifica consulta il post del blog [](https://www.ibm.com/blogs/bluemix/2017/05/default-library-change-cloudant-auto-wiring-liberty-buildpack/).
 * Il supporto di dimensione di heap predefinito è ora il 50% quando la tua applicazione dispone di meno di 512mb di memoria, se ne ha di più deve ancora essere il 75%.
 * È stato generato un nuovo log dell'attività di preparazione, che permette un debug più semplice degli errori di preparazione.
-* Il runtime Node.js utilizzato dal [programma di utilità di gestione dell'applicazione](/docs/manageapps/app_mng.html) è stato aggiornato alla version 6.13.0.
-* Il pacchetto di build fornisce inoltre un agent aggiornato per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html). 
+* Il runtime Node.js utilizzato dal [programma di utilità di gestione dell'applicazione](/docs/manageapps/app_mng.html) è stato aggiornato alla versione 6.13.0.
+* Il pacchetto di build fornisce inoltre un agent aggiornato per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html).
 
 ### 12 giugno, 2017: pacchetto di build Liberty aggiornato v3.10-20170525-1107
 * La versione del runtime Liberty predefinita è stata aggiornata alla release 17.0.0.2.
 * La versione del runtime Liberty è stata aggiornata alla release [2017.5.0.0](https://developer.ibm.com/wasdev/blog/2017/05/12/beta-websphere-liberty-tools-may-2017/).
-* Il runtime Node.js utilizzato dal [programma di utilità di gestione dell'applicazione](/docs/manageapps/app_mng.html) è stato aggiornato alla version 6.10.0.
+* Il runtime Node.js utilizzato dal [programma di utilità di gestione dell'applicazione](/docs/manageapps/app_mng.html) è stato aggiornato alla versione 6.10.0.
 * Il pacchetto di build fornisce inoltre una versione aggiornata del client Extreme Scale.
 
 ### 27 aprile, 2017: pacchetto di build Liberty aggiornato v3.9-20170419-1403
 * La versione del runtime Liberty predefinita `17.0.0.1` è stata aggiornata per includere le iFix [PI77770](http://www-01.ibm.com/support/docview.wss?uid=swg24043596), [PI77605](http://www-01.ibm.com/support/docview.wss?uid=swg1PI77605), [PI79275](http://www-01.ibm.com/support/docview.wss?uid=swg1PI79275) e PI77438.
 * La versione del runtime Liberty è stata aggiornata alla release [2017.3.0.0](https://developer.ibm.com/wasdev/blog/2017/03/14/beta-websphere-liberty-tools-march-2017/).
 * Il calcolo della memoria è stato spostato dalla preparazione al processo di avvio, consentendo modifiche alla memoria di heap più semplici con il riavvio di un'applicazione.
-* Il pacchetto di build fornisce inoltre versioni aggornate dell'agent per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html) e per il client Extreme Scale.
+* Il pacchetto di build fornisce inoltre versioni aggiornate dell'agent per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html) e per il client Extreme Scale.
 
 ### 14 marzo, 2017: pacchetto di build Liberty aggiornato v3.8-20170308-1507
 * La versione del runtime Liberty predefinita è stata aggiornata alla release 17.0.0.1.
@@ -115,10 +147,10 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * Il pacchetto di build contiene inoltre delle correzioni per la sicurezza per [Apache Standard Taglibs vulnerability](http://www-01.ibm.com/support/docview.wss?uid=swg21985531).
 
 ### 25 maggio 2016: pacchetto di build Liberty aggiornato v2.9-20160519-1249
-* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di maggio](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La versione aggiornata di Liberty rende disponibile le funzioni beta *bluemixLogCollector-1.1* e *logstashCollector-1.1* in Bluemix.
+* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di maggio](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/). La versione aggiornata di Liberty rende disponibile le funzioni beta *bluemixLogCollector-1.1* e *logstashCollector-1.1* in {{site.data.keyword.Bluemix_notm}}.
 
 ### 5 maggio 2016: pacchetto di build Liberty aggiornato v2.8-20160430-1011
-* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di aprile](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La versione aggiornata di Liberty rende disponibile la funzione GA *logstashCollector-1.0* e la funzione beta *logmetCollector-1.0* in Bluemix.
+* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di aprile](https://developer.ibm.com/wasdev/blog/2016/04/08/beta-websphere-liberty-and-tools-april-2016/). La versione aggiornata di Liberty rende disponibile la funzione GA *logstashCollector-1.0* e la funzione beta *logmetCollector-1.0* in {{site.data.keyword.Bluemix_notm}}.
 * Il pacchetto di build contiene anche le versioni aggiornate di IBM JRE: 8 SR3 e 7.1 SR3 FP40.
 * Il pacchetto di build aggiunge il supporto per l'agent di monitoraggio dell'applicazione [AppDynamics ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.appdynamics.com/).
 * Il supporto [Dynatrace](dynatrace.html) è stato migliorato per semplificare l'installazione dell'agent.
@@ -126,7 +158,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](/docs/manageapps/app_mng.html#app_management) è stato aggiornato alla versione 0.12.13 più recente.
 
 ### 25 marzo 2016: pacchetto di build Liberty aggiornato v2.7-20160321-1358
-* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di marzo](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La versione aggiornata di Liberty rende disponibile la funzione beta cloudant-1.0 in Bluemix.
+* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di marzo](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). La versione aggiornata di Liberty rende disponibile la funzione beta cloudant-1.0 in {{site.data.keyword.Bluemix_notm}}
 * Il pacchetto di build contiene anche le versioni aggiornate di IBM JRE: 8 SR2 FP12 e 7.1 SR3 FP32.
 * Il pacchetto di build fornisce una versione aggiornata dell'agent per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html).
 * Il pacchetto di build viene ora fornito con un nuovo raccoglitore di dati per il [servizio Monitoring and Analytics](/docs/services/monana/index.html#monana_oview). Il nuovo raccoglitore abilita la configurazione delle soglie di monitoraggio e contiene delle correzioni di bug.
@@ -138,15 +170,15 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * Il pacchetto di build aggiunge il supporto per [DynamicPULSE](www.fujitsu.com/jp/group/fsweb/products/dynamic-pulse/).
 
 ### 10 febbraio 2016: pacchetto di build Liberty aggiornato v2.5-20160209-1336
-* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di febbraio](https://developer.ibm.com/wasdev/blog/2016/02/12/beta-websphere-liberty-and-tools-february/). La versione aggiornata del profilo Liberty rende disponibile la funzione apiDiscovery-1.0 GA in Bluemix.
+* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul [beta di febbraio](https://developer.ibm.com/wasdev/blog/2016/02/12/beta-websphere-liberty-and-tools-february/). La versione aggiornata del profilo Liberty rende disponibile la funzione apiDiscovery-1.0 GA in {{site.data.keyword.Bluemix_notm}}.
 
 ### 4 febbraio 2016: pacchetto di build Liberty aggiornato v2.4-20160127-1437
-* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul beta di gennaio. Con questo aggiornamento, la funzione Liberty scim-1.0, precedentemente disponibile come una funzione beta, è ora disponibile come una funzione pronta per la produzione. La versione aggiornata di Liberty rende inoltre disponibile la funzione beta passwordUtilities-1.0 in Bluemix.
+* Il pacchetto di build contiene una versione aggiornata di WebSphere Liberty basata sul beta di gennaio. Con questo aggiornamento, la funzione Liberty scim-1.0, precedentemente disponibile come una funzione beta, è ora disponibile come una funzione pronta per la produzione. La versione aggiornata di Liberty rende inoltre disponibile la funzione beta passwordUtilities-1.0 in {{site.data.keyword.Bluemix_notm}}.
 * Il pacchetto di build contiene anche un aggiornamento IBM JRE 7.1 SF3 FP20 e IBM JRE 8 SR2 FP10.
 * Il pacchetto di build è stato aggiornato per scaricare l'ultimo 1.x [MariaDB Connector/J JDBC driver ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) quando di esegue la [configurazione automatica per il tipo MySQL dei servizi](autoConfig.html).
 
 ### 16 dicembre 2015: pacchetto di build Liberty aggiornato v2.3-20151208-1311
-* Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di dicembre](https://developer.ibm.com/wasdev/blog/2015/11/20/beta-was-liberty-beta-with-tools-december-2015/). La versione aggiornata del profilo Liberty rende disponibili le funzioni spnego-1.0 e wsSecuritySaml-1.1 GA e la funzione beta scim-1.0 in Bluemix.
+* Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di dicembre](https://developer.ibm.com/wasdev/blog/2015/11/20/beta-was-liberty-beta-with-tools-december-2015/). La versione aggiornata del profilo Liberty rende disponibili le funzioni spnego-1.0 e wsSecuritySaml-1.1 GA e la funzione beta scim-1.0 in {{site.data.keyword.Bluemix_notm}}.
 * Il pacchetto di build contiene anche un IBM JRE 8 SR2 aggiornato.
 * Il pacchetto di build è stato aggiornato per scaricare gli ultimi [9.4.x PostgreSQL JDBC driver ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://jdbc.postgresql.org/) e 1.2.x [MariaDB Connector/J JDBC driver ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) quando si esegue la [configurazione automatica](autoConfig.html) per il tipo PostgreSQL o MySQL dei servizi.
 
@@ -163,7 +195,7 @@ Scale Client con le correzioni per la protezione per la [vulnerabilità di Apach
   * La funzione di scansione degli archivi di bean impliciti [CDI 1.2](optionsForPushing.html)
 è disabilitata per impostazione predefinita quando si distribuiscono file WAR o EAR.
   * Per ridurre la dimensione del droplet, i [programmi di utilità di gestione applicazioni](/docs/manageapps/app_mng.html) evconsole e shell richiedono un'operazione di ripreparazione, invece di un riavvio.
-  * La cache di classe condivisa di IBM JRE è disabilitata poiché non veniva riutilizzata nell'ambiente Bluemix.
+  * La cache di classe condivisa di IBM JRE è disabilitata poiché non veniva riutilizzata nell'ambiente {{site.data.keyword.Bluemix_notm}}.
 
 ### 18 settembre 2015: pacchetto di build Liberty aggiornato v2.0-20150914-1535
 * Il pacchetto di build introduce due importanti modifiche:
@@ -178,7 +210,7 @@ le funzioni del profilo Web Java EE 6.
 HTTPS_PROXY](environmentVariables.html). Se impostate, il pacchetto di build utilizza il server proxy specificato da queste variabili di ambiente quando scarica i diversi componenti del pacchetto di build.
 
 ### 19 agosto 2015: pacchetto di build Liberty aggiornato v1.21-20150811-1342
-* Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di agosto](https://developer.ibm.com/wasdev/blog/2015/07/30/beta-was-liberty-beta-with-tools-august-2015/). La versione aggiornata del profilo Liberty rende disponibili le seguenti nuove [funzioni beta](usingBetaFeatures.html) in Bluemix: bells-1.0, rtcommGateway-1.0, samlWebSso-2.0.
+* Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di agosto](https://developer.ibm.com/wasdev/blog/2015/07/30/beta-was-liberty-beta-with-tools-august-2015/). La versione aggiornata del profilo Liberty rende disponibili le seguenti nuove [funzioni beta](usingBetaFeatures.html) in {{site.data.keyword.Bluemix_notm}}: bells-1.0, rtcommGateway-1.0, samlWebSso-2.0.
 
 ### 31 luglio 2015: pacchetto di build Liberty aggiornato v1.20.1-20150729-1255
 * Il pacchetto di build contiene versioni aggiornate dei JRE IBM: 7.1 SR1 FP10 r 8 SR1 FP10.
@@ -188,8 +220,7 @@ contengono le [ultime correzioni di sicurezza](http://www-01.ibm.com/support/doc
 
 ### 21 luglio 2015: pacchetto di build Liberty aggiornato v1.20-20150713-1450
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sulla [release 8.5.5.6](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/). Con questa release, tutte le funzioni Liberty Java EE 7 precedentemente disponibili come funzioni beta sono ora disponibili come funzioni pronte per la produzione. A causa di limitazioni relative
-alle porte e anche di altra natura esistenti in Bluemix, alcune funzioni come ad esempio gli EJB remoti non sono
-pienamente supportati nella piattaforma.
+alle porte e anche di altra natura esistenti in {{site.data.keyword.Bluemix_notm}}, alcune funzioni come ad esempio gli EJB remoti non sono pienamente supportati nella piattaforma.
 * Il pacchetto di build riconosce ed esegue le applicazioni fornite in [distZip-style ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.gradle.org/current/userguide/application_plugin.html).
 * Il pacchetto di build contiene un raccoglitore di dati aggiornato per il servizio [Monitoring and Analytics](/docs/services/monana/index.html) e WebSphere eXtreme Scale Client che supporta la nuova versione di runtime di Liberty.
 
@@ -226,7 +257,7 @@ distribuite sotto la root di contesto potrebbero essere distribuite sotto un
 contesto diverso sulla base delle impostazioni contenute nel file **ibm-web-ext.xml**.
 
 ### 3 aprile 2015: pacchetto di build Liberty aggiornato v1.15-20150402-1422
-* Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di marzo](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). La versione aggiornata dei profili Liberty rende disponibile la funzione beta jsf-2.2 in Bluemix.
+* Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di marzo](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). La versione aggiornata dei profili Liberty rende disponibile la funzione beta jsf-2.2 in {{site.data.keyword.Bluemix_notm}}.
 * Il pacchetto di build contiene anche una versione aggiornata del raccoglitore di dati per il [servizio Monitoring and Analytics](/docs/services/monana/index.html).
 
 ### 20 marzo 2015: pacchetto di build Liberty aggiornato v1.14-20150319-1159
@@ -242,9 +273,9 @@ di MongoDB che, in alcuni casi, generava una configurazione **server.xml** non v
 
 ### 10 febbraio 2015: pacchetto di build Liberty aggiornato v1.13-20150209-1122
 * Il pacchetto di build contiene delle correzioni per la sicurezza per gli [Apache HttpComponents e le vulnerabilità della funzione di overlay Java](https://www-304.ibm.com/connections/blogs/PSIRT/entry/ibm_security_bulletin_multiple_vulnerabilities_fixed_in_liberty_for_java_for_ibm_bluemix_cve_2012_6153_cve_2014_3577_cve_2015_0178?lang=en_us).
-* Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di febbraio](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/). La versione aggiornata del profilo Liberty fornisce una versione aggiornata della funzione WebSocket GA websocket-1.1. Rende inoltre disponibili le seguenti funzioni beta Java EE 7 in Bluemix:
+* Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di febbraio](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/). La versione aggiornata del profilo Liberty fornisce una versione aggiornata della funzione WebSocket GA websocket-1.1. Rende inoltre disponibili le seguenti funzioni beta Java EE 7 in {{site.data.keyword.Bluemix_notm}}:
   * cdi-1.2, el-3.0, jsp-2.3,  jca-1.7, jacc-1.5 e jaspic-1.1
-* Il pacchetto di build fornisce l'integrazione con [ZeroTrunaround's JRebel tool ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://zeroturnaround.com/software/jrebel/). L'integrazione semplifica l'utilizzo di JRebel con le applicazioni Bluemix e l'esecuzione di aggiornamenti delle applicazioni istantanei senza ridistribuire o ripreparare l'applicazione. Sono supportate solo le applicazioni web autonome.
+* Il pacchetto di build fornisce l'integrazione con [ZeroTrunaround's JRebel tool ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://zeroturnaround.com/software/jrebel/). L'integrazione semplifica l'utilizzo di JRebel con le applicazioni {{site.data.keyword.Bluemix_notm}} e l'esecuzione di aggiornamenti delle applicazioni istantanei senza ridistribuire o ripreparare l'applicazione. Sono supportate solo le applicazioni web autonome.
 
 ### 6 febbraio 2015: pacchetto di build Liberty aggiornato v1.12-20150130-1016
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di gennaio](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/).
@@ -259,7 +290,7 @@ di MongoDB che, in alcuni casi, generava una configurazione **server.xml** non v
 ### 19 dicembre 2014: pacchetto di build Liberty aggiornato v1.10-20141218-0103
 * Questo pacchetto di build fornisce una modalità di sviluppo per le applicazioni. La modalità di sviluppo
 è una modalità speciale che consente agli sviluppatori di condurre molte attività per un'istanza dell'applicazione
-che prima non erano possibili. Utilizzando questa funzione, questa versione di IBM Eclipse Tools for Bluemix può ora supportare il debug remoto con gli aggiornamenti file incrementali su un'applicazione Liberty in esecuzione in Bluemix. Per uno sviluppatore, ciò rende conveniente l'utilizzo di Eclipse per eseguire il debug di un'applicazione nel cloud e applicare le modifiche a tale applicazione istantaneamente.
+che prima non erano possibili. Utilizzando questa funzione, questa versione di {{site.data.keyword.eclipsetoolsfull}} può ora supportare il debug remoto con gli aggiornamenti file incrementali su un'applicazione Liberty in esecuzione in {{site.data.keyword.Bluemix_notm}}. Per uno sviluppatore, ciò rende conveniente l'utilizzo di Eclipse per eseguire il debug di un'applicazione nel cloud e applicare le modifiche a tale applicazione istantaneamente.
 * Il pacchetto di build contiene anche una versione aggiornata del profilo Liberty basata sul [beta di dicembre](https://developer.ibm.com/wasdev/blog/2014/12/10/announcing-liberty-beta-december/).
 * Inoltre, le seguenti quattro funzioni Liberty che erano in precedenza disponibili come funzioni beta sono ore pronte per la produzione:
   * concurrent-1.0
@@ -306,7 +337,7 @@ comprese WebSocket 1.0, Servlet 3.1 o JAX-RS 2.0. Per ulteriori informazioni, co
 
 ### 30 settembre 2014: pacchetto di build Liberty aggiornato v1.4-20140908-1803
 * Il pacchetto di build fornisce ora il supporto per i servizi di terze parti ElephantSQL e ClearDB MySQL Database. Il supporto di configurazione
-automatica funziona anche con i servizi sperimentali posgresql e mysql. Con il nuovo totale di 13 servizi, il supporto di configurazione automatica nel pacchetto di build Liberty rende più rapido e facile l'utilizzo di servizi Bluemix nelle applicazioni Liberty.
+automatica funziona anche con i servizi sperimentali posgresql e mysql. Con il nuovo totale di 13 servizi, il supporto di configurazione automatica nel pacchetto di build Liberty rende più rapido e facile l'utilizzo di servizi {{site.data.keyword.Bluemix_notm}} nelle applicazioni Liberty.
 * Durante la preparazione dell'applicazione, il pacchetto di build visualizza dei messaggi di log migliorati relativi alla configurazione automatica e alle altre azioni che esegue.
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty con correzioni e miglioramenti.
 * Contiene anche una versione aggiornata di IBM JRE versione 7.1 che presenta dei miglioramenti delle prestazioni. Consulta la pagina [What's new](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.71.doc/diag/preface/changes_71/changes.html) per un insieme delle modifiche in dettaglio.
@@ -316,11 +347,11 @@ automatica funziona anche con i servizi sperimentali posgresql e mysql. Con il n
 * Questa versione del pacchetto di build corregge il supporto per la variabile di ambiente JAVA_OPTS
 per passare delle opzioni JVM aggiuntive al runtime dell'applicazione.
 * Corregge anche un problema che impediva la distribuzione di applicazioni Jar basate su Spring autonome.
-* È ora possibile generare e scaricare tracce di snap IBM JVM utilizzando l'interfaccia utente Bluemix. Consulta l'[argomento relativo alla risoluzione dei problemi](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html) nella documentazione di IBM JVM per saperne di più sulle tracce di snap e le altre informazioni di diagnostica generate dalla JVM.
+* È ora possibile generare e scaricare tracce di snap IBM JVM utilizzando l'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Consulta l'[argomento relativo alla risoluzione dei problemi](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/troubleshooting.html) nella documentazione di IBM JVM per saperne di più sulle tracce di snap e le altre informazioni di diagnostica generate dalla JVM.
 
 ### 29 luglio 2014: pacchetto di build Liberty aggiornato v1.1-20140725-1341
-* La nuova versione di Liberty Bluemix Edition è ora disponibile!
-  * Con questa versione di Liberty, disponiamo di correzioni e di nuove funzioni che ti consentono di utilizzare i servizi Bluemix in modo più efficiente!
+* La nuova versione di Liberty {{site.data.keyword.Bluemix_notm}} Edition è ora disponibile!
+  * Con questa versione di Liberty, disponiamo di correzioni e di nuove funzioni che ti consentono di utilizzare i servizi {{site.data.keyword.Bluemix_notm}} in modo più efficiente!
   * Con la nuova funzione CouchDB disponibile il servizio Cloudant® può ora configurarla automaticamente in modo tale che un oggetto connettore sia prontamente disponibile! Analizzare
 VCAP_SERVICES e fornire i jar client ektorp non è più necessario.
 * La nuova versione di IBM SDK for Java è disponibile!

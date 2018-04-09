@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-09-06"
+  years: 2017, 2018
+lastupdated: "2018-02-14"
 
 ---
 
@@ -19,9 +19,9 @@ lastupdated: "2017-09-06"
 
 * {: download} Congratulazioni, hai distribuito un'applicazione di esempio Hello World su {{site.data.keyword.Bluemix}}!  Per iniziare, segui questa guida dettagliata. O <a class="xref" href="http://bluemix.net" target="_blank" title="(Scarica il codice di esempio)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Scarica codice di esempio" />scarica codice di esempio</a> o esplora da solo.
 
-Seguendo questa esercitazione introduttiva Go, configurerai un ambiente di sviluppo, distribuirai un'applicazione localmente e in {{site.data.keyword.Bluemix}} e integrerai un servizio database {{site.data.keyword.Bluemix}} nella tua applicazione. 
+Seguendo questa esercitazione introduttiva Go, configurerai un ambiente di sviluppo, distribuirai un'applicazione localmente e in {{site.data.keyword.Bluemix}} e integrerai un servizio database {{site.data.keyword.Bluemix_notm}} nella tua applicazione.
 
-## Prima di cominciare 
+## Prima di cominciare
 {: #prereqs}
 
 Avrai bisogno di quanto segue:
@@ -30,7 +30,7 @@ Avrai bisogno di quanto segue:
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
 * [Go ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://golang.org/dl/){: new_window}
 
-## Passo 1: Configura l'ambiente locale e clona l'applicazione di esempio 
+## Passo 1: Clona l'applicazione di esempio
 {: #clone}
 
 Per prima cosa configureremo l'ambiente locale per assicurarci che tutte le variabili GO siano configurate correttamente. Ad esempio:
@@ -58,7 +58,7 @@ cd github.com/IBM-Bluemix/get-started-go
 
 Studia i file nella directory *get-started-go* per acquisire familiarità con i contenuti.
 
-## Passo 2: Esegui l'applicazione localmente 
+## Passo 2: Esegui l'applicazione localmente
 {: #run_locally}
 
   {: pre}
@@ -79,7 +79,7 @@ go run main.go
 Utilizza *Ctrl-c* per arrestare la tua applicazione dalla stessa finestra in cui hai avviato l'applicazione.
 {: tip}
 
-## Passo 3: Prepara l'applicazione per la distribuzione 
+## Passo 3: Prepara l'applicazione per la distribuzione
 {: #prepare}
 
 Per distribuire a {{site.data.keyword.Bluemix_notm}}, può essere utile impostare un file manifest.yml. Il manifest.yml include le informazioni di base sulla tua applicazione, come il nome, quanta memoria allocare per ogni istanza e la rotta. Abbiamo fornito un file manifest.yml di esempio nella directory `get-started-go`.
@@ -99,7 +99,7 @@ Apri il file manifest.yml e modifica `name` da `GetStartedGo` con il nome della 
 In questo file manifest.yml, **random-route: true** genera una rotta casuale per la tua applicazione per evitare il conflitto con altre rotte.  Se scegli di farlo, puoi sostituire **random-route: true** con **host: myChosenHostName**, fornendo un nome host di tua scelta. [Ulteriori informazioni...](/docs/manageapps/depapps.html#appmanifest)
 {: tip}
 
-## Passo 4: Distribuisci l'applicazione 
+## Passo 4: Distribuisci l'applicazione
 {: #deploy}
 Puoi utilizzare la CLI Cloud Foundry per distribuire le applicazioni.
 
@@ -111,14 +111,16 @@ cf api <API-endpoint>
 
 Sostituisci *API-endpoint* nel comando con un endpoint API dal seguente elenco.
 
-|URL                             |Regione          |
-|:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | Stati Uniti Sud       |
-| https://api.eu-gb.bluemix.net  | Regno Unito |
-| https://api.au-syd.bluemix.net | Sydney         |
-| https://api.eu-de.bluemix.net | Francoforte |
+| **Nome regione** | **Ubicazione geografica** | **Endpoint API** |
+|-----------------|-------------------------|-------------------|
+| Regione Stati Uniti Sud | Dallas, US | api.ng.bluemix.net |
+| Regione Stati Uniti Est | Washington, DC, US | api.us-east.bluemix.net |
+| Regione Regno Unito | Londra, Inghilterra | api.eu-gb.bluemix.net |
+| Regione Sydney | Sydney, Australia | api.au-syd.bluemix.net |
+| Regione Germania | Francoforte, Germania | api.eu-de.bluemix.net |
+{: caption="Tabella 1. Elenco di regioni {{site.data.keyword.cloud_notm}}" caption-side="top"}
 
-Accedi al tuo account {{site.data.keyword.Bluemix_notm}}
+Accedi al tuo account {{site.data.keyword.Bluemix_notm}}.
 
   ```
 cf login
@@ -143,20 +145,20 @@ cf apps
   {: pre}
 comando per visualizzare lo stato delle tue applicazioni e l'URL.
 
-## Passo 5: Aggiungi un database 
+## Passo 5: Aggiungi un database
 {: #add_database}
 
 Successivamente, aggiungeremo un database NoSQL a questa applicazione e la configureremo in modo che possa essere eseguita localmente o su {{site.data.keyword.Bluemix_notm}}.
 
-1. Accedi a {{site.data.keyword.Bluemix_notm}} nel tuo browser. Seleziona il `Dashboard`. Seleziona la tua applicazione facendo clic sul relativo nome nella colonna `Name`.
-2. Fai cli su `Connections` e su `Connect new`.
-3. Nella sezione `Data &  Analytics`, seleziona `Cloudant NoSQL DB` e `Create` il servizio.
-4. Seleziona `Restage` quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile solo per l'applicazione quando viene eseguita su {{site.data.keyword.Bluemix_notm}}.
+1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Create Resource**.
+2. Scegli la sezione **Data and Analytics**, seleziona **Cloudant NoSQL DB** e crea il tuo servizio.
+3. Passa alla vista **Connections** e seleziona la tua applicazione, quindi **Create connection**.
+4. Seleziona **Restage** quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
 
 Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi archiviarla in una variabile di ambiente di riferimento nel tuo codice di origine. [Ulteriori informazioni...](/docs/manageapps/depapps.html#app_env)
 {: tip}
 
-## Passo 6: Utilizza il database 
+## Passo 6: Utilizza il database
 {: #use_database}
 Ora aggiorneremo il tuo codice locale per puntare a questo database. Creeremo un file json che archivierà le credenziali per i servizi che l'applicazione utilizzerà. Questo file sarà utilizzato SOLO quando l'applicazione è in esecuzione localmente. Quando è in esecuzione in {{site.data.keyword.Bluemix_notm}}, le credenziali saranno lette dalla variabile di ambiente VCAP_SERVICES.
 
@@ -186,3 +188,9 @@ go run main.go
 
 Ricorda che se non hai bisogno della tua applicazione live, arrestala così da non incorrere in alcun addebito non previsto.
 {: tip}
+
+## Passi successivi
+
+* [Esercitazioni](/docs/tutorials/index.html)
+* [Samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

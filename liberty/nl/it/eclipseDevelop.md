@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-02-15"
 
 ---
 
@@ -15,16 +15,20 @@ lastupdated: "2018-02-14"
 {:download: .download}
 {:app_name: data-hd-keyref="app_name"}
 
-# Esercitazione introduttiva
+# Sviluppa le applicazioni con IBM Eclipse Tools for {{site.data.keyword.cloud_notm}} 
 
-* {: download} Congratulazioni, hai distribuito un'applicazione di esempio Hello World su {{site.data.keyword.Bluemix}}!  Per iniziare, segui questa guida dettagliata. O <a class="xref" href="http://bluemix.net" target="_blank" title="(Scarica il codice di esempio)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Scarica codice di esempio" />scarica codice di esempio</a> o esplora da solo.
+Puoi anche utilizzare {{site.data.keyword.eclipsetoolsfull}} come un modo alternativo per sviluppare e distribuire applicazioni a {{site.data.keyword.Bluemix}}. {{site.data.keyword.eclipsetoolsfull}} fornisce plugin che è possibile installare in un ambiente Eclipse esistente per assisterti nell'integrazione del tuo IDE (integrated development environment) con {{site.data.keyword.Bluemix_notm}}.
 
-Seguendo questa esercitazione introduttiva Liberty for Java, configurerai un ambiente di sviluppo, distribuirai un'applicazione localmente e in {{site.data.keyword.Bluemix}} e integrerai un servizio database nella tua applicazione. 
+Questa procedura segue la stessa procedura generale di [Esercitazione introduttiva](getting-started.html) per Liberty. Utilizzando Eclipse, configurerai un ambiente di sviluppo, distribuirai un'applicazione localmente e nel cloud e integrerai un servizio database {{site.data.keyword.Bluemix_notm}} nella tua applicazione.
 
 ## Prima di cominciare
 {: #prereqs}
 
 Ti serviranno i seguenti account e strumenti:
+* [IBM Eclipse Tools for IBM Cloud ![External Link icon](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/wasdev/downloads/#asset/tools-IBM_Eclipse_Tools_for_Bluemix){: new_window}
+* [Eclipse IDE for Java EE Developers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
+
+Se hai completato l'[Esercitazione introduttiva](getting-started.md), potresti già avere questi strumenti e account. Assicurati che anche quanto segue sia installato e registrato prima di iniziare:
 * [Account {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
 * [CLI Cloud Foundry ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/cloudfoundry/cli#downloads){: new_window}
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
@@ -39,9 +43,8 @@ git clone https://github.com/IBM-Bluemix/get-started-java
   ```
   {: pre}
 
-
-## Passo 2: Esegui l'applicazione localmente utilizzando la riga di comando
-{: #run_locally}
+## Passo 2: Crea il codice di origine della tua applicazione 
+{: #build_app}
 
 Utilizza Maven per creare il tuo codice di origine ed eseguire l'applicazione risultante.
 
@@ -58,16 +61,6 @@ cd get-started-java
 mvn clean install
   ```
   {: pre}
-
-1. Esegui l'applicazione localmente su Liberty.
-  ```
-mvn install liberty:run-server
-  ```
-  {: pre}
-
-Quando visualizzi il messaggio *The server defaultServer is ready to run a smarter planet.*, puoi visualizzare la tua applicazione all'indirizzo: http://localhost:9080/GetStartedJava.
-
-Per arrestare la tua applicazione, premi *Ctrl-C* nella finestra della riga di comando in cui hai avviato l'applicazione.
 
 ## Passo 3: Prepara l'applicazione per la distribuzione
 {: #prepare}
@@ -95,14 +88,12 @@ In questo file manifest.yml, **random-route: true** genera una rotta casuale per
 
 Distribuisci la tua applicazione a una delle seguenti regioni {{site.data.keyword.Bluemix_notm}}. Per una latenza ottimale, scegli una regione il più vicina possibile ai tuoi utenti.
 
-| **Nome regione** | **Ubicazione geografica** | **Endpoint API** |
-|-----------------|-------------------------|-------------------|
-| Regione Stati Uniti Sud | Dallas, US | api.ng.bluemix.net |
-| Regione Stati Uniti Est | Washington, DC, US | api.us-east.bluemix.net |
-| Regione Regno Unito | Londra, Inghilterra | api.eu-gb.bluemix.net |
-| Regione Sydney | Sydney, Australia | api.au-syd.bluemix.net |
-| Regione Germania | Francoforte, Germania | api.eu-de.bluemix.net |
-{: caption="Tabella 1. Elenco di regioni {{site.data.keyword.cloud_notm}}" caption-side="top"}
+|Regione          |Endpoint API                             |
+|:---------------|:-------------------------------|
+| Stati Uniti Sud       |https://api.ng.bluemix.net     |
+| Regno Unito | https://api.eu-gb.bluemix.net  |
+| Sydney         | https://api.au-syd.bluemix.net |
+| Francoforte     | https://api.eu-de.bluemix.net |
 
 1. Configura l'endpoint API sostituendo  `<API-endpoint>`  con l'endpoint per la tua regione.
   ```
@@ -118,23 +109,49 @@ cf login
 
   Se non puoi accedere utilizzando i comandi `cf login` o `bx login` perché il tuo ID utente è federato, utilizza i comandi `cf login --sso` o `bx login --sso` con il tuo ID SSO (Single Sign On). Consulta [Accesso con un ID federato](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
 
+## Passo 5: Sviluppa utilizzando Eclipse
+{: #eclipse}
 
-1. Dall'interno della directory `get-started-java`, trasmetti la tua applicazione a {{site.data.keyword.Bluemix_notm}}.
-  ```
+1. Assicurati di disporre di [IBM Eclipse Tools for Bluemix](https://developer.ibm.com/wasdev/downloads/#asset/tools-IBM_Eclipse_Tools_for_Bluemix).
+
+2. Importa l'esempio `get-started-java` in Eclipse da **File > Import > Maven > Existing Maven Projects**.
+
+3. Crea una definizione server Liberty. I seguenti passi scaricheranno un nuovo server Liberty.
+  - Nella vista **Window > Show View > Servers**, fai clic con il tasto destro e seleziona **New > Server**.
+  - Seleziona **IBM > WebSphere Application Server Liberty**.
+  - Seleziona **Install from an archive or a repository**.
+  - Quando richiesto, immetti un percorso di destinazione a una nuova cartella (/Users/username/liberty) in cui desideri installare Liberty.
+  - Seleziona **Download and install a new runtime environment from ibm.com**.
+  - Seleziona **WAS Liberty with Java EE 7 Web Profile**.
+  - Continua la procedura guidata con le opzioni predefinite per finire.
+
+4. Esegui la tua applicazione localmente su Liberty:
+  - Modifica il browser web con l'impostazione predefinita del sistema da **Window > Web Browser > Default system web browser**.
+  - Fai clic con il tasto destro sull'esempio `GetStartedJava` e seleziona **Run As > Run on Server**.
+  - Trova e seleziona il server Liberty localhost e fai clic su **Finish**.
+
+  In pochi secondi, la tua applicazione sarà eseguita all'indirizzo http://localhost:9080/GetStartedJava.
+
+5. Aggiorna codice:
+  - Apri `src/main/webapp/index.html` e aggiorna l'intestazione da `<h1>Welcome.</h1>` in `<h1>Welcome Jane.</h1>`.
+  - Salva le tue modifiche. Liberty prenderà le tue modifiche automaticamente.
+  - Aggiorna il tuo browser (http://localhost:9080/GetStartedJava) per visualizzare le modifiche.
+
+6. Trasmetti le tue modifiche a {{site.data.keyword.Bluemix_notm}}:
+  - Dalla directory `get-started-java` nella riga di comando, ricrea il file .war.
+    ```
+mvn clean install
+    ```
+    {: pre}
+  - Esegui il push della tua applicazione a {{site.data.keyword.Bluemix_notm}}.
+    ```
 cf push
-  ```
-  {: pre}
+    ```
+    {: pre}
 
-La distribuzione della tua applicazione può impiegare diversi minuti. Quando la distribuzione è stata completata, visualizzerai un messaggio che la tua applicazione è in esecuzione. Visualizza la tua applicazione all'URL elencato nell'output del comando trasmesso o visualizza l'URL e lo stato di distribuzione dell'applicazione eseguendo il seguente comando:
-  ```
-cf apps
-  ```
-  {: pre}
+Ora stai eseguendo il tuo codice sia localmente che sul cloud!
 
-Puoi risolvere gli errori nel processo di distribuzione eseguendo il comando `cf logs <Your-App-Name> --recent`.
-{: tip}  
-
-## Passo 5: Aggiungi un database
+## Passo 6: Aggiungi un database
 {: #add_database}
 
 Successivamente, aggiungeremo un database NoSQL a questa applicazione e la configureremo in modo che possa essere eseguita localmente o su {{site.data.keyword.Bluemix_notm}}.
@@ -151,25 +168,26 @@ Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzion
 {: #use_database}
 Ora aggiorneremo il tuo codice locale per puntare a questo database. Archivieremo le credenziali per i servizi in un file properties. Questo file sarà utilizzato SOLO quando l'applicazione è in esecuzione localmente. Quando è in esecuzione in {{site.data.keyword.Bluemix_notm}}, le credenziali saranno lette dalla variabile di ambiente `VCAP_SERVICES`.
 
-1. Nel tuo browser, vai a {{site.data.keyword.Bluemix_notm}} e seleziona **Apps > _ your app_ _ > Connections > Cloudant > View Credentials**.
+1. In Eclipse, apri il file src/main/resources/cloudant.properties:
+  ```
+  cloudant_url=
+  ```
+  {: pre}
 
-2. Copia e incolla solo l'`url` dalle credenziali nel campo `url` del file `cloudant.properties` e salva le modifiche.
+2. Nel tuo browser, vai a {{site.data.keyword.Bluemix_notm}} e seleziona **Apps > _ your app_ _ > Connections > Cloudant > View Credentials**.
+
+3. Copia e incolla solo l'`url` dalle credenziali nel campo `url` del file `cloudant.properties` e salva le modifiche.
   ```
   cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
   {:pre}
 
-3. Riavvia il server
+4. Riavvia il server Liberty in Eclipse dalla vista `Servers`.
 
   Aggiorna la tua vista del browser all'indirizzo http://localhost:9080/GetStartedJava/. Tutti i nomi immessi nell'applicazione saranno ora aggiunti al database.
 
   La tua applicazione locale e {{site.data.keyword.Bluemix_notm}} stanno condividendo il database. I nomi che aggiungi dall'applicazione saranno visualizzati entrambi quando aggiorni i browser.
 
+
 Ricorda, se non hai bisogno della tua applicazione live su {{site.data.keyword.Bluemix_notm}}, arrestala così da non incorrere in alcun addebito non previsto.
 {: tip}  
-
-## Passi successivi
-
-* [Esercitazioni](/docs/tutorials/index.html)
-* [Samples ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://ibm-cloud.github.io){: new_window}
-* [Architecture Center ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

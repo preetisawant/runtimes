@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-21"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -22,25 +22,24 @@ Il ruby_buildpack viene utilizzato se la tua applicazione ha un Gemfile nella di
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} Fornisce un'applicazione starter Ruby.  L'applicazione starter Ruby è una semplice applicazione Ruby che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione di avvio, apportare modifiche ed eseguirne il push
-all'ambiente {{site.data.keyword.Bluemix}}.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix_notm}} Fornisce un'applicazione starter Ruby.  L'applicazione starter Ruby è una semplice applicazione Ruby che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione di avvio, apportare modifiche ed eseguirne il push
+all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}
 
 Puoi specificare la versione di Ruby che deve essere utilizzata dalla tua applicazione nel Gemfile della tua applicazione, ad esempio:
 
-
 ```
   source 'https://rubygems.org'
-  ruby '2.4.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
 ```
 {: codeblock}
 
-Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 2.3.3.
+Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 2.4.1.
 
 ### Versioni disponibili:
 {: #available_versions}
@@ -51,11 +50,12 @@ in {{site.data.keyword.Bluemix}}:
 
 * 2.1.8
 * 2.1.9
-* 2.2.5
 * 2.2.6
-* 2.3.2
+* 2.2.7
 * 2.3.3
+* 2.3.4
 * 2.4.0
+* 2.4.1
 
 Se la tua applicazione richiede una versione di Ruby che non è elencata,
 puoi utilizzare il [pacchetto

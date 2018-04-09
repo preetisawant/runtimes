@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2016-06-10"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2016-06-10"
 # Valori predefiniti dei pacchetti di build
 {: #buildpack_defauts}
 
-Il pacchetto di build Liberty viene aggiornato frequentemente in Bluemix. Ogni release può contenere delle correzioni per la protezione o dei miglioramenti delle funzioni.
+Il pacchetto di build Liberty viene aggiornato frequentemente in {{site.data.keyword.Bluemix}}. Ogni release può contenere delle correzioni per la protezione o dei miglioramenti delle funzioni.
 
 Il pacchetto di build ha dei valori predefiniti per impostazioni quali
 la versione Java o l'insieme di funzioni Liberty per applicazioni WAR o
@@ -77,4 +77,4 @@ ottimali, adotta Java 8 per le tue applicazioni.
 ## general
 {: #general notoc}
 * [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Panoramica di Liberty Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

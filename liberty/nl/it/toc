@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime"}
+{: .toc subcollection="liberty" audience="runtime" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -16,15 +16,20 @@ Liberty for Java
     {: .navgroup id="howto"}
     secureWebApp.md
     loggingAndTracing.md
-    [Distribuisci le applicazioni con IBM Eclipse Tools per Bluemix](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+
+    {: .topicgroup}
+    Utilizza IBM Eclipse Tools for IBM Cloud
+        eclipseDevelop.md
+        [Distribuisci le applicazioni con IBM Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+
     autoConfig.md
     customizingJRE.md
-    oracle_jre.md
+    using_own_jre.md
     usingBetaFeatures.md
     [Opt out of bound services](autoConfig.html#opting_out)
 
     {: .topicgroup}
-    Monitora Liberty in Bluemix
+    Monitora Liberty in IBM Cloud
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
@@ -32,7 +37,7 @@ Liberty for Java
     {: .topicgroup}
     Lavora offline con un proxy
         offlineMode.md
-        [Lavora offline con un proxy](../../manageapps/workingWithProxy.html)
+        [Lavora offline con un proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -47,12 +52,12 @@ Liberty for Java
         [Utilizza i pacchetti di build della community](../../cfapps/byob.html)
 
     buildpackDefaults.md
-    [Gestione delle applicazioni Liberty e Node.js](../../manageapps/app_mng.html)
-    [Introduzione al servizio IBM Monitoring and Analytics per Bluemix](../../services/monana/index.html)
+    [Gestione delle applicazioni Liberty e Node.js](../common/app_mng.html)
+    [Introduzione a IBM Monitoring and Analytics](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
-    [Istruzione di supporto per il pacchetto di build](../../manageapps/buildpackSupport.html)
+    [Istruzione di supporto per il pacchetto di build](../common/buildpackSupport.html)
     {: .navgroup-end}

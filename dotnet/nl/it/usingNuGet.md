@@ -10,7 +10,7 @@ lastupdated: "2017-05-31"
 {:codeblock: .codeblock}
 
 
-# Informazioni sulla personalizzazione delle origini dei pacchetti NuGet 
+# Informazioni sulla personalizzazione delle origini dei pacchetti NuGet
 {: #customizing_nuget}
 Puoi utilizzare il file NuGet.Config nella directory root dell'applicazione per controllare dove l'applicazione scarica le dipendenze. Nel seguente esempio, configurando la proprietà `<packageSources>` si definiscono tutte le chiavi e gli URL dell'API dell'applicazione per richiamare i pacchetti.
 ```

@@ -61,4 +61,4 @@ Controlla la versione della SDK .NET con un global.json facoltativo nella direct
 ```
 {: codeblock}
 
-Se non specificato, viene utilizzato lo strumento MSBuild per l'ultimo runtime GA Long-term-support (LTS). Per utilizzare lo strumento project.json, puoi specificare una delle versioni project.json precedentemente elencate ma devi anche tenere presente che queste versioni saranno rimosse in futuro.
+Se non specificato, viene utilizzato lo strumento MSBuild per l'ultimo runtime GA Long-term-support (LTS).  Per utilizzare lo strumento project.json, puoi specificare una delle versioni project.json precedentemente elencate ma devi anche tenere presente che queste versioni saranno rimosse in futuro.

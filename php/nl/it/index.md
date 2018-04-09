@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-17"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -31,7 +31,7 @@ all'ambiente {{site.data.keyword.Bluemix}}.  Consulta il documento relativo all'
 ## Forza HTTPS in tutte le pagine della tua applicazione
 {: #enforce_https}
 
-Per forzare l'utilizzo di HTTPS invece di HTTP in tutte le pagine della tua applicazione quando viene eseguita in Bluemix utilizzando Apache, devono essere effettuate le seguenti modifiche al tuo file ".htaccess".  Questa regola sarà applicata a tutte le richieste che non sono state effettuate utilizzando HTTPS solo quando in esecuzione in Bluemix.
+Per forzare l'utilizzo di HTTPS invece di HTTP in tutte le pagine della tua applicazione quando viene eseguita in {{site.data.keyword.Bluemix_notm}} utilizzando Apache, devono essere effettuate le seguenti modifiche al tuo file ".htaccess".  Questa regola sarà applicata a tutte le richieste che non sono state effettuate utilizzando HTTPS solo quando in esecuzione in {{site.data.keyword.Bluemix_notm}}.
 
 ```
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https [NC]
@@ -54,7 +54,7 @@ Puoi specificare la versione di PHP che deve essere utilizzata dalla tua applica
 {: codeblock}
 Per ulteriori informazioni, consulta [Composer Package links  ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://getcomposer.org/doc/04-schema.md#package-links).
 
-Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 5.5.38.
+Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 5.6.31.
 
 ### Versioni disponibili:
 {: #available_versions}
@@ -63,14 +63,12 @@ Le seguenti versioni PHP sono disponibili nel [pacchetto
 di build PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27) attualmente installato
 in {{site.data.keyword.Bluemix}}:
 
-* 5.5.37
-* 5.5.38
-* 5.6.29
 * 5.6.30
-* 7.0.14
-* 7.0.15
-* 7.1.0
-* 7.1.1
+* 5.6.31
+* 7.0.20
+* 7.0.21
+* 7.1.6
+* 7.1.7
 
 Se la tua applicazione richiede una versione di PHP che non è elencata,
 puoi utilizzare il [pacchetto

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-26"
 
 ---
 
@@ -10,7 +10,7 @@ lastupdated: "2017-07-14"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Scrittura delle applicazioni web Java sicure 
+# Scrittura delle applicazioni web Java sicure
 {: #secure_java_web_app}
 
 Tutte le applicazioni web devono essere progettate e codificate tenendo presente la sicurezza per evitare di introdurre vulnerabilità di sicurezza gravi.
@@ -30,7 +30,7 @@ Invece di imparare la teoria degli attacchi XSS e le tecniche correttive prima d
 
 Puoi utilizzare l'[applicazione starter sicura](https://github.com/IBM-Bluemix/java-secure-app) come punto di partenza per lo sviluppo della nuova applicazione Liberty. Inizia imparando il codice delle contromisure XSS nell'applicazione e quindi applicalo alle operazioni dell'API dell'applicazione. Le contromisure nell'applicazione starter sicura aiutano ad evitare input utente dannoso che danneggia la tua applicazione sul server o sul browser mitigando o prevenendo gli attacchi XSS.
 
-Per prima cosa, scarica questa applicazione starter sicura, quindi eseguine la build e distribuiscila a Bluemix o localmente nello stesso modo dell'applicazione di esempio [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).  Vai a [Introduzione a Liberty su Bluemix](getting-started.html) per ulteriori informazioni sulla build e la distribuzione delle applicazioni in Bluemix.  Per iniziare, puoi utilizzare questi passi per clonare, eseguire la build ed eseguire l'applicazione.
+Per prima cosa, scarica questa applicazione starter sicura, quindi eseguine la build e distribuiscila a {{site.data.keyword.Bluemix_notm}}  o localmente nello stesso modo dell'applicazione di esempio [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).  Vai a [Introduzione a Liberty su {{site.data.keyword.Bluemix_notm}}](getting-started.html) per ulteriori informazioni sulla build e la distribuzione delle applicazioni in {{site.data.keyword.Bluemix_notm}}.  Per iniziare, puoi utilizzare questi passi per clonare, eseguire la build ed eseguire l'applicazione.
 
 ```
 git clone https://github.com/IBM-Bluemix/java-secure-app
@@ -42,7 +42,7 @@ Visualizza l'applicazione all'indirizzo http://localhost:9080/GetStartedSecureJa
 ## Forza HTTPS in tutte le pagine della tua applicazione
 {: #enforce_https}
 
-Per forzare HTTPS invece di HTTP in tutte le pagine della tua applicazione, devono essere effettuate le seguenti modifiche. 
+Per forzare HTTPS invece di HTTP in tutte le pagine della tua applicazione, devono essere effettuate le seguenti modifiche.
 
 Modifica il tuo server.xml per abilitare la funzione `appSecurity-2.0`:
 

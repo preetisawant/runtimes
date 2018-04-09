@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-25"
-
+lastupdated: "2017-10-06"
 ---
 
 {:new_window: target="_blank"}
@@ -14,6 +13,18 @@ lastupdated: "2017-07-25"
 
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build aspnet.
+
+## 6 ottobre, 2017: aggiornamento del pacchetto di build ASP.NET Core v1.0.26-20170913-1346
+* Aggiunto il supporto per il runtime .NET Core 2.0.0
+* Aggiunto il supporto per l'SDK .NET Core 1.1.0
+* Aggiunto il supporto per l'SDK .NET Core 2.0.0
+* Rimosso il supporto per l'SDK .NET Core 1.1.0-preview1-005051
+* Rimosso il supporto per l'SDK .NET Core 2.0.0-preview1-005977
+* Rimosso il supporto per il runtime .NET Core 1.0.3
+* Rimosso il supporto per il runtime .NET Core 1.1.0
+* Aggiornamento di Node alla versione 6.11.2
+* Modificato il valore predefinito per l'SDK .NET Core con 2.0.0
+* Modificato il valore predefinito per l'SDK .NET Core per i progetti F# con 1.1.0
 
 ## 24 luglio, 2017: aggiornamento del pacchetto di build ASP.NET Core v1.0.22-20170724-0813
 

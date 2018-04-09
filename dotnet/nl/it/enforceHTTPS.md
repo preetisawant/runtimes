@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-14"
+lastupdated: "2017-10-25"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,7 +12,7 @@ lastupdated: "2017-07-14"
 # Forza HTTPS in tutte le pagine della tua applicazione
 {: #enforce_https}
 
-Per forzare HTTPS invece di HTTP in tutte le pagine della tua applicazione quando viene eseguita in Bluemix, devi effettuare le seguenti modifiche alla tua applicazione.
+Per forzare HTTPS invece di HTTP in tutte le pagine della tua applicazione quando viene eseguita in {{site.data.keyword.Bluemix}}, devi effettuare le seguenti modifiche alla tua applicazione.
 
 Aggiungi le seguenti istruzioni `using` nella casse `Startup`:
 
@@ -24,7 +24,7 @@ Aggiungi le seguenti istruzioni `using` nella casse `Startup`:
 Aggiungi quanto segue al metodo `ConfigureServices` nella classe `Startup`:
 
 ```
-  // se l'applicazione è in esecuzione in Bluemix
+  // se l'applicazione è in esecuzione in {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     services.Configure<MvcOptions>(options =>
@@ -37,7 +37,7 @@ Aggiungi quanto segue al metodo `ConfigureServices` nella classe `Startup`:
 Aggiungi quanto segue al tuo metodo `Configure` nella classe `Startup`:
 
 ```
-  // se l'applicazione è in esecuzione in Bluemix
+  // se l'applicazione è in esecuzione in {{site.data.keyword.Bluemix_notm}}
   if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BLUEMIX_REGION")))
   {
     app.Use(async (context, next) =>

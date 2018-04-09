@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-12-15"
 
 ---
 
@@ -22,8 +22,8 @@ Il python_buildpack verrà utilizzato se la directory root della tua applicazion
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} fornisce un'applicazione starter Python.  L'applicazione starter Python è una semplice applicazione Python che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push
-all'ambiente {{site.data.keyword.Bluemix}}.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix_notm}} fornisce un'applicazione starter Python.  L'applicazione starter Python è una semplice applicazione Python che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push
+all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}
@@ -31,7 +31,7 @@ all'ambiente {{site.data.keyword.Bluemix}}.  Consulta [Utilizzo di applicazioni 
 Puoi specificare la versione di Python che deve essere utilizzata dalla tua applicazione impostando python-versionnumber nel file runtime.txt nella root della tua applicazione. Ad esempio:
 
 ```
-python-3.6.0
+python-3.6.1
 ```
 {: codeblock}
 
@@ -42,7 +42,7 @@ Quando non viene specificata una versione, viene scelta per impostazione predefi
 
 Le seguenti versioni Python sono disponibili nel [pacchetto
 di build Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) attualmente
-installato in {{site.data.keyword.Bluemix}}:
+installato in {{site.data.keyword.Bluemix_notm}}:
 
 * 2.7.12
 * 2.7.13
@@ -52,7 +52,8 @@ installato in {{site.data.keyword.Bluemix}}:
 * 3.4.6
 * 3.5.2
 * 3.5.3
-* 3.6.0
+* 3.6.1
+* 3.6.2
 
 Se la tua applicazione richiede una versione di Python che non è elencata, puoi utilizzare
 il [pacchetto di build Python](https://github.com/cloudfoundry/python-buildpack) esterno

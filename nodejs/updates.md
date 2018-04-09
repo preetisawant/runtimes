@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-09"
 
 ---
 
@@ -13,8 +13,11 @@ lastupdated: "2018-03-16"
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## April 9, 2018: Updated Node.js buildpack v3.20
+The SDK for Node.js buildpack v3.20 adds Dynatrace PaaS integration for the current Node.js runtimes. See [Use Dynatrace to monitor Node.js in {{site.data.keyword.cloud_notm}}](dynatrace.html).
+
 ## March 16, 2018: Updated Node.js buildpack v3.19
-The SDK for Node.js buildpack v3.18 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 and 8.9.4. The default is latest 6.x, so it is currently 6.13.0.
+The SDK for Node.js buildpack v3.19 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 and 8.9.4. The default is latest 6.x, so it is currently 6.13.0.
 
 ## February 6, 2018: Updated Node.js buildpack v3.18
 The SDK for Node.js buildpack v3.18 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 and 8.9.4. The default is latest 6.x, so it is currently 6.12.3.
@@ -23,7 +26,7 @@ The SDK for Node.js buildpack v3.18 provides IBM SDK for Node.js versions 4.8.5,
 The SDK for Node.js buildpack v3.17 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 and 8.9.3. The default is latest 6.x, so it is currently 6.12.2.
 
 ## December 11, 2017: Updated Node.js buildpack v3.16.1
-The SDK for Node.js buildpack v3.16.1 provides IBM SDK for Node.js versions v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. The default is latest 6.x, so it is currently 6.12.0. 
+The SDK for Node.js buildpack v3.16.1 provides IBM SDK for Node.js versions v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. The default is latest 6.x, so it is currently 6.12.0.
 Please note that it fixes PSIRTs: Advisory ID: 10237 Product Record ID: 104487 Title: Node.js zlib DOS security vulnerability, October 2017 (CVE-2017-14919). It is recommended to upgrade to v3.16.1 to get fixes for security vulnerabilties affecting 8.6.0.0 and earlier, 6.10.2.0 to 6.11.4.0 and 4.8.2.0 to 4.8.4.0.
 
 ## November 1, 2017: Updated Node.js buildpack v3.15

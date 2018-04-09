@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-06"
 ---
 
 {:shortdesc: .shortdesc}
@@ -36,7 +36,7 @@ You'll need the following accounts and tools:
 
 First, clone the Node.js *hello world* sample app GitHub repo.
   ```
-git clone https://github.com/IBM-Bluemix/get-started-node
+git clone https://github.com/IBM-Cloud/get-started-node
   ```
   {: pre}
 

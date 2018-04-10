@@ -51,8 +51,7 @@ This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.1
 In addition to the new runtimes, this release contains a fix for a bug encountered when enabling the shell app management handler using the devconsole UI. This buildpack also changes the way auto-configuration works for the Monitoring and Analytics service. Applications using the Free plan will no longer have the log capability added to their applications, it is being replaced by logmet.
 
 ## January 20, 2017: Updated Node.js buildpack v3.10
-This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2, and 6.9.4. The default is now 4.7.2.
-
+This release of the buildpack supports IBM SDK for Node.js runtime versions: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2, and 6.9.4. The default is now 4.7.2.  It is also synchronized with the [Cloud Foundry Node.js buildpack v1.5.24](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24).
 It contains a fix for a bug where "npm start" was not always called to start applications.
 
 ## November 17, 2016: Updated Node.js buildpack v3.9

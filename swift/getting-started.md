@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -32,7 +32,7 @@ By following this tutorial, you'll set up a development environment, deploy an a
 
 Now you're ready to start working with the simple Swift app. Clone the repository and change to the directory to where the sample app is located.
   ```
-git clone https://github.com/IBM-Bluemix/get-started-swift
+git clone https://github.com/IBM-Cloud/get-started-swift
   ```
   {: pre}
 

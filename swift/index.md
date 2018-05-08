@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-11-08"
+lastupdated: "2018-04-06"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,7 +19,7 @@ This buildpack provides a complete runtime environment for Swift applications.
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} provides a Kitura-based Swift [starter application](https://github.com/IBM-Bluemix/Kitura-Starter). The Kitura starter app is a simple Swift app that you can use to learn about the types of server applications you can develop by using the Swift programming language. This sample app creates a basic Kitura HTTP server that returns HTML content to the client.
+{{site.data.keyword.Bluemix_notm}} provides a Kitura-based Swift [starter application](https://github.com/IBM-Cloud/Kitura-Starter). The Kitura starter app is a simple Swift app that you can use to learn about the types of server applications you can develop by using the Swift programming language. This sample app creates a basic Kitura HTTP server that returns HTML content to the client.
 
 **Note:** The Kitura starter app is meant to be used for educational purposes. You can experiment with the starter app by making enhancements, and push those changes to the {{site.data.keyword.Bluemix_notm}} environment. See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
 
@@ -93,7 +93,7 @@ There are also other online tools available from IBM for the Swift developer.
 * [IBM Swift Package Catalog](https://swiftpkgs.ng.bluemix.net/)
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Kitura Documentation and APIs](http://ibm-swift.github.io/Kitura/)
-* [Kitura Starter app for Bluemix](https://github.com/IBM-Bluemix/Kitura-Starter)
+* [Kitura Starter app for Bluemix](https://github.com/IBM-Cloud/Kitura-Starter)
 * [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
 * [IBM Bluemix buildpack for Swift release notes](https://github.com/IBM-Swift/swift-buildpack/releases)
 * [Swift.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://swift.org/)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-15"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -40,7 +40,7 @@ If you completed the [Getting started tutorial](getting-started.md), you might a
 
 First, clone the sample app GitHub repo.
   ```bash
-git clone https://github.com/IBM-Bluemix/get-started-tomcat
+git clone https://github.com/IBM-Cloud/get-started-tomcat
   ```
   {: pre}
 

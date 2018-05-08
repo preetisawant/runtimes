@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -48,11 +48,11 @@ cd $GOPATH/src
 
 Now you're ready to start working with the simple Go *hello world* app. Clone the repository and change to the directory where the sample app is located.
 ```
-go get github.com/IBM-Bluemix/get-started-go
+go get github.com/IBM-Cloud/get-started-go
 ```
 {: pre}
 ```
-cd github.com/IBM-Bluemix/get-started-go
+cd github.com/IBM-Cloud/get-started-go
 ```
 {: pre}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-26"
+lastupdated: "2018-03-27"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2017-10-26"
 # Liberty for Java
 {: #liberty_runtime}
 
-Liberty for Java applications on {{site.data.keyword.Bluemix}} are powered by the liberty-for-java buildpack. The liberty-for-java buildpack provides a complete runtime environment for running Java EE 7 and OSGi applications on top of Liberty profile. It supports popular frameworks like Spring and includes the {{site.data.keyword.IBM_notm}} JRE. WebSphere Liberty enables rapid application development that is well suited to the cloud.
+Liberty for Java applications on {{site.data.keyword.Bluemix}} are powered by the liberty-for-java buildpack. The liberty-for-java buildpack provides a complete runtime environment for running Java EE 7 and OSGi applications on top of WebSphere Liberty. It supports popular frameworks like Spring and includes the {{site.data.keyword.IBM_notm}} JRE. Liberty enables rapid application development that is well suited to the cloud.
 {: shortdesc}
 
 ## Detection
@@ -37,4 +37,5 @@ The Liberty buildpack is used when the following kinds of applications are deplo
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
 * [Managing Liberty apps](/docs/manageapps/app_mng.html#Utilities)
 * [Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-* [Getting started with IBM Monitoring and Analytics for {{site.data.keyword.Bluemix_notm}} Service](/docs/services/monana/index.html#monana_oview)
+* [Getting started with {{site.data.keyword.loganalysislong_notm}}](/docs/services/CloudLogAnalysis/index.html)
+* [Getting started with {{site.data.keyword.prf_hublong}}](/docs/services/AvailabilityMonitoring/index.html)

@@ -75,13 +75,3 @@ If your app requires a PHP version that is not listed,
 you can use the external
 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack.git) to
 deploy the app.
-
-# rellinks
-{: #rellinks notoc}
-## Tutorials and Samples
-{: #samples notoc}
-* [Build and deploy a REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
-* [Build and deploy a mobile-friendly calorie counter](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## general
-{: #general notoc}
-* [Cloud Foundry buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)

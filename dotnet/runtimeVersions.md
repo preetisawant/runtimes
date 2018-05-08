@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-07-25"
+lastupdated: "2018-05-08"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,13 +11,14 @@ lastupdated: "2017-07-25"
 
 
 # Runtime Versions
-{: #runtime_vertsions}
+{: #runtime_versions}
 
 
 {: shortdesc}
 
 ## Supported versions
 {: #supported_versions}
+
 This buildpack supports the following versions, those marked as deprecated will be removed in a future buildpack release.  See [Microsoft's support statement for LTS and Current releases](https://www.microsoft.com/net/core/support).
 
 ### project.json tooling (deprecated)
@@ -28,37 +29,33 @@ This buildpack supports the following versions, those marked as deprecated will 
 
 ### MSBuild SDK tooling
 
-| .NET SDK version        | Default |
-|-------------------------|---------|
-| 1.0.3                   |   No    |
-| 1.0.4                   |   Yes   |
-| 1.1.0-preview1-005051   |   No    |
-| 2.0.0-preview1-005977   |   No    |
-| 2.0.0-preview2-006497   |   No    |
+| .NET SDK version        | Default          |
+|-------------------------|------------------|
+| 1.0.4                   |   No             |
+| 1.1.0                   |   Yes (F# only)  |
+| 2.0.0                   |   Yes            |
 
 ### .NET Core runtime versions
 
-| .NET Core runtime version | Release type  | Default |
-|---------------------------|---------------|---------|
-| 1.0.3 (deprecated)        | LTS           |   No    |
-| 1.0.4 (deprecated)        | LTS           |   No    |
-| 1.0.5                     | LTS           |   Yes   |
-| 1.1.0 (deprecated)        | Current       |   No    |
-| 1.1.1 (deprecated)        | Current       |   No    |
-| 1.1.2                     | Current       |   No    |
-| 2.0.0-preview1-002111-00  | LTS (preview) |   No    |
-| 2.0.0-preview2-25407-01   | LTS (preview) |   No    |
+| .NET Core runtime version | Release type      |
+|---------------------------|-------------------|
+| 1.0.4 (deprecated)        | LTS               |
+| 1.0.5                     | LTS               |
+| 1.1.1 (deprecated)        | LTS               |
+| 1.1.2                     | LTS               |
+| 2.0.0-preview2-25407-01   | Current (preview) |
+| 2.0.0                     | Current           |
 
 ## Specifying the .NET SDK version
 
-Control the .NET SDK version with an optional global.json in the application's root directory. For example:
+Control the .NET SDK version with an optional `global.json` file in the application's root directory. For example:
 ```
    {
       "sdk": {
-        "version": "2.0.0-preview2-006497"
+        "version": "2.0.0"
       }
    }
 ```
 {: codeblock}
 
-If not specified, the MSBuild tooling for the latest Long-term-support (LTS) GA runtime is used.  To use project.json tooling, you can specify one of the project.json versions listed above but should also keep in mind that these versions will be removed in the future.
+If not specified, the latest MSBuild tooling is used.  To use project.json tooling, you can specify one of the listed project.json versions, but keep in mind that these versions will be removed in the future.  If the specified version is not included in the buildpack, the default version is used, and a warning appears in staging logs.

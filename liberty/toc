@@ -10,7 +10,7 @@ Liberty for Java
 
     {: .topicgroup}
     Related links
-        [Liberty Profile Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+        [Liberty overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -33,6 +33,7 @@ Liberty for Java
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
+        [Getting started with Availability Monitoring](../../services/AvailabilityMonitoring/index.html)
 
     {: .topicgroup}
     Work offline or with a proxy
@@ -53,11 +54,11 @@ Liberty for Java
 
     buildpackDefaults.md
     [Managing Liberty and Node.js apps](../common/app_mng.html)
-    [Getting started with IBM Monitoring and Analytics](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
+    [Getting started with IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html)
     updates.md
     [Buildpack support statement](../common/buildpackSupport.html)
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -35,7 +35,7 @@ You'll need the following accounts and tools:
 
 First, clone the sample app GitHub repo.
   ```bash
-git clone https://github.com/IBM-Bluemix/get-started-java
+git clone https://github.com/IBM-Cloud/get-started-java
   ```
   {: pre}
 

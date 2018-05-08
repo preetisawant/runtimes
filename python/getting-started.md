@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-04-06"
 
 ---
 
@@ -36,7 +36,7 @@ You'll need the following:
 
 Now you're ready to start working with the app. Clone the repo and change to the directory where the sample app is located.
   ```
-git clone https://github.com/IBM-Bluemix/get-started-python
+git clone https://github.com/IBM-Cloud/get-started-python
   ```
   {: pre}
   ```

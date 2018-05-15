@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-05-10"
 
 ---
 
@@ -137,7 +137,7 @@ When deployment completes you should see a message indicating that your app is r
 Next, we'll add a NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
 
 1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create Resource**.
-2. Choose the **Data and Analytics** section, then select **Cloudant NoSQL DB** and create your service.
+2. Choose the **Data and Analytics** section, then select **{{site.data.keyword.cloudant_short_notm}}** and create your service.
 3. Go to the  **Connections** view and select your application, then **Create connection**.
 4. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 
@@ -178,7 +178,7 @@ This sample application uses the `CloudEnvironment` package to interact with {{s
 The `cloudant` placeholder in the `cloudfoundry:cloudant` configuration makes it easier to bind a user-provided Cloudant service to your application. With the `cloudfoundry:cloudant` configuration, you can create a Cloudant service that includes the string, `cloudant` somewhere in the service name and bind it to your application, without editing the `config.json` file. If you modify this configuration and later want to use a user-provided Cloudant service, you either need to edit the configuration to `cloudfoundry:cloudant` or define `cloudfoundry:` with the name of your user-provided service.
 {: tip}
 
-Back in the {{site.data.keyword.Bluemix_notm}} UI, select your App -> Connections -> Cloudant -> View Credentials
+In your browser, go to the {{site.data.keyword.Bluemix_notm}} dashboard and select **_your app_ > Connections**. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&vellip;**) and select **View credentials**.
 
 Copy and paste just the credentials to the corresponding fields in your local config.json file.
 

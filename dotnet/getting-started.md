@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-05-10"
 
 ---
 
@@ -147,7 +147,7 @@ We're now going to update your local code to point to this database. We'll store
 
 1. Create the file src/GetStartedDotnet/vcap-local.json
 
-2. In your browser open the {{site.data.keyword.Bluemix_notm}} UI, select your App -> Connections -> ClearDB Managed MySQL Database -> View Credentials
+2. In your browser, go to the {{site.data.keyword.Bluemix_notm}} dashboard and select **_your app_ > Connections**. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&vellip;**) and select **View credentials**.
 
 3. Copy and paste the entire json object from the credentials to the `vcap-local.json` file and save the changes.  The result will be something like:
   ```

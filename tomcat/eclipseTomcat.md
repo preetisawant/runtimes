@@ -142,7 +142,7 @@ Now you have run your code both locally and on the cloud!
 Next, we'll add a {{site.data.keyword.cloudantfull}} database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
 
 1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create Resource**.
-2. Choose the **Data and Analytics** section, then select **Cloudant NoSQL DB** and create your service.
+2. Choose the **Data and Analytics** section, then select **{{site.data.keyword.cloudant_short_notm}}** and create your service.
 3. Go to the  **Connections** view and select your application, then **Create connection**.
 4. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 

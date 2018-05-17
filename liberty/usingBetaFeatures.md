@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -21,7 +21,6 @@ The Liberty beta features provide early access to new functionality and programm
 | `appSecurity-3.0` |
 | `audit-1.0` |
 | `beanValidation-2.0` |
-| `bluemixLogCollector-1.1` |
 | `cdi-2.0` |
 | `javaee-8.0` |
 | `javaeeClient-8.0` |
@@ -30,6 +29,7 @@ The Liberty beta features provide early access to new functionality and programm
 | `jpa-2.2` |
 | `jpaContainer-2.2` |
 | `jsf-2.3` |
+| `jsfContainer-2.3` |
 | `jsonb-1.0` |
 | `jsonbContainer-1.0` |
 | `jsonp-1.1` |
@@ -39,6 +39,8 @@ The Liberty beta features provide early access to new functionality and programm
 | `openapi-3.1` |
 | `servlet-4.0` |
 | `sessionCache-1.0` |
+| `springBoot-1.5` |
+| `springBoot-2.0` |
 | `usageMetering-1.0` |
 | `validator-1.0` |
 | `webProfile-8.0` |

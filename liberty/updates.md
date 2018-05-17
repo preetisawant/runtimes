@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-17"
+lastupdated: "2018-05-11"
 
 ---
 
@@ -13,6 +13,9 @@ lastupdated: "2018-04-17"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### May 11, 2018: Updated Liberty buildpack v3.21-20180509-1456
+* The monthly Liberty runtime version was updated to 2018.5.0.0.
 
 ### April 13, 2018: Updated Liberty buildpack v3.20-20180409-1221
 * The monthly Liberty runtime version was updated to 2018.4.0.0.

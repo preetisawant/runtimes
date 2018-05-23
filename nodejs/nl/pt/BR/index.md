@@ -35,7 +35,7 @@ var port = (process.env.PORT || 3000);
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}} fornece vários utilitários para gerenciar e depurar seu app Node.js.  Consulte [Gerenciamento de App](/docs/manageapps/app_mng.html) para obter detalhes completos.
 
-# rellinks
+## rellinks
 {: #rellinks notoc}
 ## geral
 {: #general notoc}

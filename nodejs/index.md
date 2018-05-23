@@ -40,5 +40,3 @@ var port = (process.env.PORT || 3000);
 {: #general notoc}
 * [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://nodejs.org)
 * [IBM API Connect](https://strongloop.com/)
-
-test

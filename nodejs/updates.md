@@ -9,6 +9,7 @@ lastupdated: "2018-04-09"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
+
 # Latest Updates to the SDK for Node.js buildpack
 {: #latest_updates}
 

@@ -35,8 +35,7 @@ var port = (process.env.PORT || 3000);
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}} provides a number of utilities for managing and debugging your Node.js app.  See [App Management](/docs/manageapps/app_mng.html) for complete details.
 
-## rellinks
-{: #rellinks notoc}
+
 ## general
 {: #general notoc}
 * [Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://nodejs.org)

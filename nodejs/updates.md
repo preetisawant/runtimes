@@ -2,18 +2,20 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-09"
+lastupdated: "2018-06-01"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-
 # Latest Updates to the SDK for Node.js buildpack
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+## June 1, 2018: Updated Node.js buildpack v3.20.2
+The SDK for Node.js buildpack v3.20.2 adds Dynatrace Managed PaaS integration for the current Node.js runtimes. See [Use Dynatrace to monitor Node.js in {{site.data.keyword.cloud_notm}}](dynatrace.html).
+
 ## May 17, 2018: Updated Node.js buildpack v3.20.1
 The SDK for Node.js buildpack v3.20.1 fixes Dynatrace PaaS integration for the current Node.js runtimes. See [Use Dynatrace to monitor Node.js in {{site.data.keyword.cloud_notm}}](dynatrace.html).
 

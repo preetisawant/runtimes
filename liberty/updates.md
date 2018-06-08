@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -13,6 +13,10 @@ lastupdated: "2018-05-11"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### June 8, 2018: Updated Liberty buildpack v3.22-20180601-1200
+* The monthly Liberty runtime version was updated to 2018.6.0.0.
+* The IBM JRE version was updated to 8 SR5 FP15.
 
 ### May 11, 2018: Updated Liberty buildpack v3.21-20180509-1456
 * The monthly Liberty runtime version was updated to 2018.5.0.0.
@@ -29,11 +33,11 @@ lastupdated: "2018-05-11"
 * The IBM JRE version 7 was removed.  
 * The DB2 JDBC driver was updated to the `4.23.42` version.
 
-### February 13, 2018: Updated Liberty buildpack v3.18-20180213-1234.
+### February 13, 2018: Updated Liberty buildpack v3.18-20180213-1234
 * The monthly Liberty runtime version was updated to 2018.2.0.0.
-* The default Liberty runtime also includes the [PI90804 Apache Commons iFix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428).
+* The default Liberty runtime also includes the [PI90804 Apache Commons interim fix]( http://www-01.ibm.com/support/docview.wss?uid=swg22011428).
 
-### January 31, 2018: Updated Liberty buildpack v3.17.1-20180131-1532.
+### January 31, 2018: Updated Liberty buildpack v3.17.1-20180131-1532
 * The buildpack was updated to include Liberty feature microProfile-1.2.
 
 ### January 26, 2018: Updated Liberty buildpack v3.17-20180122-1037
@@ -47,7 +51,7 @@ lastupdated: "2018-05-11"
 * The IBM JRE version was updated to 8 SR5 FP6.
 
 
-### October 31, 2017: Updated Liberty buildpack v3.15.
+### October 31, 2017: Updated Liberty buildpack v3.15
 * The monthly Liberty runtime version was updated to 2017.10.0.0.
 
 ### October 17, 2017: Updated Liberty buildpack v3.14-20171013-1023

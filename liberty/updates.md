@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-11"
+lastupdated: "2018-06-08"
 
 ---
 
@@ -14,7 +14,11 @@ lastupdated: "2018-05-11"
 
 ## A list of the latest updates in the Liberty buildpack.
 
-### May 11, 2018: Updated Liberty buildpack v3.21-20180509-1456
+### June 8, 2018: Updated Liberty buildpack v3.22-20180601-1200
+* The monthly Liberty runtime version was updated to 2018.6.0.0.
+* The IBM JRE version was updated to 8 SR5 FP15.
+
+### May 11, 2018: Updated Liberty buildpack v3.21-20180509-1456.
 * The monthly Liberty runtime version was updated to 2018.5.0.0.
 
 ### April 13, 2018: Updated Liberty buildpack v3.20-20180409-1221

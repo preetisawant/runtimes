@@ -14,7 +14,7 @@ lastupdated: "2018-02-22"
 
 Troubleshoot your ASP.NET Core applications and buildpacks with the following resources:
 
-* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html#runtimes)
-* [Troubleshooting for runtimes: ASP.NET](../../troubleshoot/ts_runtimes.html#ts_dotnet)
+* [Troubleshooting for runtimes](../common/ts_runtimes.html#runtimes)
+* [Troubleshooting for runtimes: ASP.NET](../common/ts_runtimes.html#ts_dotnet)
 * [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
 * [ASP.NET Core Overview](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

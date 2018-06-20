@@ -17,8 +17,8 @@ PHP
     {: .navgroup id="reference"}
     {: .topicgroup}
     Starter applications and buildpacks
-        [Use the starter applications](../../cfapps/starter_app_usage.html)
-        [Use community buildpacks](../../cfapps/byob.html)
+        [Use the starter applications](../common/starter_app_usage.html)
+        [Use community buildpacks](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

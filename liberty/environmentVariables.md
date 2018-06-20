@@ -24,12 +24,12 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Enable [App Management utilities](/docs/manageapps/app_mng.html)</td>
+<td>Enable [App Management utilities](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Install [App Management utilities](/docs/manageapps/app_mng.html)</td>
+<td>Install [App Management utilities](../common/app_mng.html)</td>
 </tr>
 
 <tr>

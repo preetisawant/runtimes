@@ -23,7 +23,7 @@ The python_buildpack will be used if your app's root directory contains a requir
 {: #starter_application}
 
 {{site.data.keyword.Bluemix_notm}} provides a Python starter application.  The Python starter application is a simple Python app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}}
-environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
+environment.  See the [python starter application](https://github.com/IBM-Cloud/get-started-python) for help with using the python starter application.
 
 ## Runtime versions
 {: #runtime_versions}

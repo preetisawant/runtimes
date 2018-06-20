@@ -35,7 +35,7 @@ The Liberty buildpack is used when the following kinds of applications are deplo
 ## general
 {: #general notoc}
 * [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-* [Managing Liberty apps](/docs/manageapps/app_mng.html#Utilities)
+* [Managing Liberty apps](../common/app_mng.html#Utilities)
 * [Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)
 * [Getting started with {{site.data.keyword.loganalysislong_notm}}](/docs/services/CloudLogAnalysis/index.html)
 * [Getting started with {{site.data.keyword.prf_hublong}}](/docs/services/AvailabilityMonitoring/index.html)

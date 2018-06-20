@@ -29,8 +29,8 @@ SDK for Node.js
 
     {: .topicgroup}
     Starter applications and buildpacks
-        [Use the starter applications](../../cfapps/starter_app_usage.html)
-        [Use community buildpacks](../../cfapps/byob.html)
+        [Use the starter applications](../common/starter_app_usage.html)
+        [Use community buildpacks](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -38,4 +38,5 @@ SDK for Node.js
     updates.md
     availableVersions.md
     [Buildpack support statement](../common/buildpackSupport.html)
+
     {: .navgroup-end}

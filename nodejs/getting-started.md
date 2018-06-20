@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-10"
+lastupdated: "2018-06-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,14 +19,14 @@ lastupdated: "2018-05-10"
 
 * {: download} Congratulations, you deployed a Hello World sample application on {{site.data.keyword.Bluemix}}!  To get started, follow this step-by-step guide. Or, <a class="xref" href="http://bluemix.net" target="_blank" title="(Download sample code)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Download application code" />download the sample code</a> and explore on your own.
 
-By following the Node.js tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate a {{site.data.keyword.Bluemix_notm}} database service in your app.
+By following this tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate an {{site.data.keyword.Bluemix_notm}} database service in your app.
 
 ## Before you begin
 {: #prereqs}
 
 You'll need the following accounts and tools:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html){: new_window}
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * [Node ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://nodejs.org/en/){: new_window}
 
@@ -38,7 +38,7 @@ First, clone the Node.js *hello world* sample app GitHub repo.
   ```
 git clone https://github.com/IBM-Cloud/get-started-node
   ```
-  {: pre}
+  {: codeblock}
 
 ## Step 2: Run the app locally
 {: #run_locally}
@@ -49,25 +49,24 @@ Use the npm package manager to install dependencies and run your app.
   ```
 cd get-started-node
   ```
-  {: pre}
+  {: codeblock}
 
 1. Install the dependencies listed in the [package.json ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.npmjs.com/files/package.json) file to run the app locally.  
   ```
 npm install
   ```
-  {: pre}
+  {: codeblock}
 
 1. Run the app.
   ```
 npm start  
   ```
-  {: pre}
+  {: codeblock}
 
-You can view your app at http://localhost:3000.
+1. View your app at the following URL: http://localhost:3000
 
 Use [nodemon](https://nodemon.io/) for automatic restarting of application on file changes.
 {: tip}
-
 
 ## Step 3: Prepare the app for deployment
 {: #prepare}
@@ -85,64 +84,64 @@ applications:
 ```
 {: codeblock}
 
-In this manifest.yml file, **random-route: true** generates a random route for your app to prevent your route from colliding with others.  If you choose to, you can replace **random-route: true** with **host: myChosenHostName**, supplying a host name of your choice. [Learn more...](/docs/manageapps/depapps.html#appmanifest)
+In this manifest.yml file, **random-route: true** generates a random route for your app to prevent your route from colliding with others.  If you choose to, you can replace **random-route: true** with **host: myChosenHostName**, supplying a host name of your choice.
 {: tip}
 
 ## Step 4: Deploy the app
 {: #deploy}
 
-You can use the Cloud Foundry CLI to deploy apps to {{site.data.keyword.Bluemix_notm}}.
+You can use the {{site.data.keyword.Bluemix_notm}} CLI to deploy apps to {{site.data.keyword.Bluemix_notm}}.
 
-Run the following command to set your API endpoint, replacing the _API-endpoint_ value with the API endpoint for your region.
-   ```
-cf api <API-endpoint>
-   ```
-   {: pre}
+1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
+  ```
+ibmcloud login
+  ```
+  {: codeblock}
 
-   | **Region name** | **Geographic location** | **API endpoint** |
-   |-----------------|-------------------------|-------------------|
-   | US South region | Dallas, US | api.ng.bluemix.net |
-   | US East region | Washington, DC, US | api.us-east.bluemix.net |
-   | United Kingdom region | London, England | api.eu-gb.bluemix.net |
-   | Sydney region | Sydney, Australia | api.au-syd.bluemix.net |
-   | Germany region | Frankfurt, Germany | api.eu-de.bluemix.net |
-   {: caption="Table 1. {{site.data.keyword.cloud_notm}} region list" caption-side="top"}
+  If you have a federated user ID, instead use the following command to log in with your single sign-on ID. See [Logging in with a federated ID](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) to learn more.
+  ```
+ibmcloud login --sso
+  ```
+  {: codeblock}
 
-Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Target a Cloud Foundry org and space:
+
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
+
+  If you don't have an org or a space set up, see [Adding orgs and spaces](https://console.bluemix.net/docs/account/orgs_spaces.html).
+    {: tip}
+
+1. From within the *get-started-node* directory, push your app to {{site.data.keyword.Bluemix_notm}}.
 
   ```
-cf login
+ibmcloud cf push
   ```
-  {: pre}
-
-If you cannot log in using the `cf login` or `bx login` commands because you have a federated user ID, use either the `cf login --sso` or `bx login --sso` commands to log in with your single sign on ID. See [Logging in with a federated ID](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) to learn more.
-
-From within the *get-started-node* directory, push your app to {{site.data.keyword.Bluemix_notm}}.
-  ```
-cf push
-  ```
-  {: pre}
+  {: codeblock}
 
 Deploying your application can take a few minutes. When deployment completes, you'll see a message that your app is running. View your app at the URL listed in the output of the push command, or view both the app deployment status and the URL by running the following command:
-  ```
-cf apps
-  ```
-  {: pre}
 
-You can troubleshoot errors in the deployment process by using the `cf logs <Your-App-Name> --recent` command.
+  ```
+ibmcloud cf apps
+  ```
+  {: codeblock}
+
+You can troubleshoot errors in the deployment process by using the `ibmcloud cf logs <Your-App-Name> --recent` command.
 {: tip}
 
 ## Step 5: Add a database
 {: #add_database}
 
-Next, we'll add a Cloudant NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
+Next, we'll add an {{site.data.keyword.cloudant_short_notm}} NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
 
 1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create Resource**.
 2. Choose the **Data and Analytics** section, then select **{{site.data.keyword.cloudant_short_notm}}** and create your service.
 3. Go to the  **Connections** view and select your application, then **Create connection**.
 4. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 
-Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code. [Learn more...](/docs/manageapps/depapps.html#app_env)
+Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code.
 {: tip}
 
 ## Step 6: Use the database
@@ -174,11 +173,11 @@ We're now going to update your local code to point to this database. We'll creat
   ```
 npm start  
   ```
-  {: pre}
+  {: codeblock}
 
   View your local app at http://localhost:3000. Any names you enter into the app will now get added to the database.
 
-** Avoid trouble**: {{site.data.keyword.Bluemix_notm}} defines the PORT environment variable when your app runs on the cloud. When you run your app locally, the PORT variable is not defined, so 3000 is used as the port number. See [Run your app locally](runningLocally.html#hints) for more information.
+**Avoid trouble**: {{site.data.keyword.Bluemix_notm}} defines the PORT environment variable when your app runs on the cloud. When you run your app locally, the PORT variable is not defined, so 3000 is used as the port number. See [Run your app locally](runningLocally.html#hints) for more information.
 
   Your local app and the {{site.data.keyword.Bluemix_notm}} app are sharing the database. Names you add from either app will appear in both when you refresh the browsers.
 

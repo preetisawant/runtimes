@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-10"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -19,64 +19,70 @@ lastupdated: "2018-05-10"
 
 * {: download} Congratulations, you deployed a Hello World sample application on {{site.data.keyword.Bluemix}}!  To get started, follow this step-by-step guide. Or, <a class="xref" href="http://bluemix.net" target="_blank" title="(Download sample code)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Download application code" />download the sample code</a> and explore on your own.
 
-By following the Go getting started tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate a {{site.data.keyword.Bluemix_notm}} database service in your app.
+By following this getting started tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate an {{site.data.keyword.Bluemix_notm}} database service in your app.
 
 ## Before you begin
 {: #prereqs}
 
 You'll need the following:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html){: new_window}
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * [Go ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://golang.org/dl/){: new_window}
 
 ## Step 1: Clone the sample app
 {: #clone}
 
-First we'll set up the local environment by ensuring all GO environment variables are set properly. For example:
-```
+1. First, we'll set up the local environment by ensuring all GO environment variables are set properly. For example:
+
+  ```
 mkdir $HOME/work
 export GOPATH=$HOME/work
 export PATH=$PATH:$GOPATH/bin
-```
+  ```
+  {: codeblock}
 
-Change path to $GOPATH/src
-```
+1. Change path to $GOPATH/src
+
+  ```
 mkdir $GOPATH/src
 cd $GOPATH/src
-```
+  ```
+  {: codeblock}
 
-Now you're ready to start working with the simple Go *hello world* app. Clone the repository and change to the directory where the sample app is located.
-```
+  Now you're ready to start working with the simple Go *hello world* app.
+1. Clone the repository and change to the directory where the sample app is located.
+
+  ```
 go get github.com/IBM-Cloud/get-started-go
-```
-{: pre}
-```
-cd github.com/IBM-Cloud/get-started-go
-```
-{: pre}
+  ```
+  {: codeblock}
 
-Peruse the files in the *get-started-go* directory to familiarize yourself with the contents.
+  ```
+cd github.com/IBM-Cloud/get-started-go
+  ```
+  {: codeblock}
+
+1. Peruse the files in the **`get-started-go`** directory to familiarize yourself with the contents.
 
 ## Step 2: Run the app locally
 {: #run_locally}
 
-  {: pre}
+1. Build and run the app locally by running the following commands.
 
-  Build and run the app.
   ```
 make
   ```
-  {: pre}
+  {: codeblock}
 
   ```
 go run main.go
   ```
   {: pre}
 
-  View your app at: http://localhost:8080
+1. View your app at the following URL: http://localhost:8080
 
-Use *Ctrl-c* to stop your app from the same window where you started the app.
+Press *Ctrl-C* to stop your app from the same window where you started the app.
 {: tip}
 
 ## Step 3: Prepare the app for deployment
@@ -96,97 +102,100 @@ Open the manifest.yml file, and change the `name` from `GetStartedGo` to your ap
   ```
   {: codeblock}
 
-In this manifest.yml file, **random-route: true** generates a random route for your app to prevent your route from colliding with others.  If you choose to, you can replace **random-route: true** with **host: myChosenHostName**, supplying a host name of your choice. [Learn more...](/docs/manageapps/depapps.html#appmanifest)
+In this manifest.yml file, **`random-route: true`** generates a random route for your app to prevent your route from colliding with others.  If you choose to, you can replace **`random-route: true`** with **`host: myChosenHostName`**, supplying a host name of your choice.
 {: tip}
 
 ## Step 4: Deploy the app
 {: #deploy}
-You can use the Cloud Foundry CLI to deploy apps.
 
-Choose your API endpoint
-   ```
-cf api <API-endpoint>
-   ```
-   {: pre}
+You can use the {{site.data.keyword.Bluemix_notm}} CLI to deploy apps.
 
-Replace the *API-endpoint* in the command with an API endpoint from the following list.
-
-| **Region name** | **Geographic location** | **API endpoint** |
-|-----------------|-------------------------|-------------------|
-| US South region | Dallas, US | api.ng.bluemix.net |
-| US East region | Washington, DC, US | api.us-east.bluemix.net |
-| United Kingdom region | London, England | api.eu-gb.bluemix.net |
-| Sydney region | Sydney, Australia | api.au-syd.bluemix.net |
-| Germany region | Frankfurt, Germany | api.eu-de.bluemix.net |
-{: caption="Table 1. {{site.data.keyword.cloud_notm}} region list" caption-side="top"}
-
-Log in to your {{site.data.keyword.Bluemix_notm}} account.
+1. Log in to your {{site.data.keyword.Bluemix_notm}} account.
 
   ```
-cf login
+ibmcloud login
   ```
-  {: pre}
+  {: codeblock}
 
-If you cannot log in using the `cf login` or `bx login` commands because you have a federated user ID, use either the `cf login --sso` or `bx login --sso` commands to log in with your single sign on ID. See [Logging in with a federated ID](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) to learn more.
+  If you have a federated user ID, instead use the following command to log in with your single sign-on ID. See [Logging in with a federated ID](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) to learn more.
 
-From within the *get-started-go* directory push your app to {{site.data.keyword.Bluemix_notm}}
   ```
-cf push
+ibmcloud login --sso
   ```
-  {: pre}
+  {: codeblock}
 
-This can take a minute. If there is an error in the deployment process you can use the command `cf logs <Your-App-Name> --recent` to troubleshoot.
+1. Target a Cloud Foundry org and space:
 
-When deployment completes you should see a message indicating that your app is running.  View your app at the URL listed in the output of the push command. You can also issue the
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
 
-   ```
-cf apps
-    ```
-  {: pre}
-command to view your apps status and see the URL.
+  If you don't have an org or a space set up, see [Adding orgs and spaces](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
+
+1. From within the **`get-started-go`** directory, push your app to {{site.data.keyword.Bluemix_notm}}
+
+  ```
+ibmcloud cf push
+  ```
+  {: codeblock}
+
+  This can take a minute. If there is an error in the deployment process you can use the command `ibmcloud cf logs <Your-App-Name> --recent` to troubleshoot.
+
+When deployment completes you should see a message indicating that your app is running.  View your app at the URL listed in the output of the push command. You can also issue the following command to view your app's status and see the URL.
+
+  ```
+ibmcloud cf apps
+  ```
+  {: codeblock}
 
 ## Step 5: Add a database
 {: #add_database}
 
-Next, we'll add a NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
+Next, we'll add an {{site.data.keyword.cloudant_short_notm}} NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
 
 1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create Resource**.
 2. Choose the **Data and Analytics** section, then select **{{site.data.keyword.cloudant_short_notm}}** and create your service.
 3. Go to the  **Connections** view and select your application, then **Create connection**.
 4. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 
-Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code. [Learn more...](/docs/manageapps/depapps.html#app_env)
+Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code.
 {: tip}
 
 ## Step 6: Use the database
 {: #use_database}
-We're now going to update your local code to point to this database. We'll create a json file that will store the credentials for the services the application will use. This file will get used ONLY when the application is running locally. When running in {{site.data.keyword.Bluemix_notm}}, the credentials will be read from the VCAP_SERVICES environment variable.
+We're now going to update your local code to point to this database. We'll create an .env file that will store the credentials for the services the application will use. This file will get used ONLY when the application is running locally. When running in {{site.data.keyword.Bluemix_notm}}, the credentials will be read from the VCAP_SERVICES environment variable.
 
 1. Create a file called `.env` in the `get-started-go` directory with the following content:
+
   ```
-  CLOUDANT_URL=
+CLOUDANT_URL=
   ```
-  {: pre}
+  {: codeblock}
 
 2. In your browser, go to the {{site.data.keyword.Bluemix_notm}} dashboard and select **_your app_ > Connections**. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&vellip;**) and select **View credentials**.
 
 3. Copy and paste just the `url` from the credentials to the `CLOUDANT_URL` field of the `.env` file and save the changes.  The result will be something like:
+
   ```
-  CLOUDANT_URL=https://123456789 ... bluemix.cloudant.com
+CLOUDANT_URL=https://123456789 ... bluemix.cloudant.com
   ```
+  {: codeblock}
 
 4. Run your application locally.
+
   ```
 go run main.go
   ```
-  {: pre}
+  {: codeblock}
 
   View your app at: http://localhost:8080. Any names you enter into the app will now get added to the database.
 
-  Your local app and  the {{site.data.keyword.Bluemix_notm}} app are sharing the database.  View your {{site.data.keyword.Bluemix_notm}} app at the URL listed in the output of the push command from above.  Names you add from either app should appear in both when you refresh the browsers.
+Your local app and  the {{site.data.keyword.Bluemix_notm}} app are sharing the database.  View your {{site.data.keyword.Bluemix_notm}} app at the URL listed in the output of the push command from above.  Names you add from either app should appear in both when you refresh the browsers.
 
 
-Remember if you don't need your app live, stop it so you don't incur any unexpected charges.
+If you don't need your app live, stop it so you don't incur any unexpected charges.
 {: tip}
 
 ## Next Steps

@@ -77,13 +77,13 @@ lastupdated: "2018-06-08"
 * The default Cloudant Library is now the official [java-cloudant](https://github.com/cloudant/java-cloudant), the [Ektorp library](https://github.com/helun/Ektorp) is still available as an option, for details on this change see the [blog post](https://www.ibm.com/blogs/bluemix/2017/05/default-library-change-cloudant-auto-wiring-liberty-buildpack/).
 * The default heap size ratio is now 50% when your application has less than 512mb of memory, if it has more than 512mb it will still be 75%.
 * A new staging task log is now generated, which allows for easier debugging of staging errors.
-* The Node.js runtime that is used by the [App Management utility](/docs/manageapps/app_mng.html) was updated to the 6.13.0 version.
+* The Node.js runtime that is used by the [App Management utility](../common/app_mng.html) was updated to the 6.13.0 version.
 * The buildpack also provides an updated agent for the [Auto-Scaling service](/docs/services/Auto-Scaling/index.html).
 
 ### June 12, 2017: Updated Liberty buildpack v3.10-20170525-1107
 * The default Liberty runtime version was updated to the 17.0.0.2 release.
 * The monthly Liberty runtime version was updated to the [2017.5.0.0](https://developer.ibm.com/wasdev/blog/2017/05/12/beta-websphere-liberty-tools-may-2017/) release.
-* The Node.js runtime that is used by the [App Management utility](/docs/manageapps/app_mng.html) was updated to the 6.10.0 version.
+* The Node.js runtime that is used by the [App Management utility](../common/app_mng.html) was updated to the 6.10.0 version.
 * The buildpack also provides an updated version of the Extreme Scale Client.
 
 ### April 27, 2017: Updated Liberty buildpack v3.9-20170419-1403
@@ -126,7 +126,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * The Monitoring and Analytics service integration was fixed to work with [Diego ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html).
 * The [Dynatrace](dynatrace.html) service integrations were updated to work better with the Dynatrace service offerings.
 * The [auto-configuration](autoConfig.html) support for PostgreSQL and MySQL type of services was improved to work better when deploying a server directory or packaged server.
-* The Node.js runtime that is used by the [devconsole and shell App Management utilities](/docs/manageapps/app_mng.html#app_management) was updated to the latest `0.12.17` version.
+* The Node.js runtime that is used by the [devconsole and shell App Management utilities](../common/app_mng.html#app_management) was updated to the latest `0.12.17` version.
 * [Security fixes](http://www.ibm.com/support/docview.wss?uid=swg21994945) for the Liberty runtime are included.
 
 ### November 1, 2016: Updated Liberty buildpack v3.4.1-20161030-2241
@@ -140,7 +140,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * The buildpack provides an updated data collector for the Monitoring and Analytics service.
 * The buildpack was changed back to download the latest 1.5.x [MariaDB Connector/J JDBC driver ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) when performing [auto-configuration for MySQL type of services](autoConfig.html).
 * The buildpack introduces support for customizing service auto-configuration behavior via the `LBP_SERVICE_CONFIG_<serviceType>` environment variable. For example, it can be used to change the location or version of a JDBC driver to download for the MySQL service. See the documentation of [services that support auto-configuration](autoConfig.html) for more information.
-* The buildpack also contains a number of [Diego ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) improvements related to application health check and the [App Management](/docs/manageapps/app_mng.html) functionality.
+* The buildpack also contains a number of [Diego ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) improvements related to application health check and the [App Management](../common/app_mng.html) functionality.
 
 ### September 16, 2016: Updated Liberty buildpack v3.3-20160912-1729
 * The default Liberty runtime version was updated to the [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) release. The monthly Liberty runtime version was updated to the [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) release. With these updates, the `cloudant-1.0` and `passwordUtilities-1.0` Liberty features, previously available as beta features, are now available as production-ready features.
@@ -154,7 +154,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * The service plug-in that provides [auto-configuration support](autoConfig.html) for the [SQL Database](/docs/services/SQLDB/index.html#SQLDB) service was updated to always use the JVM's trusted certificates when connecting to the service over TLS.
 
 ### July 22, 2016: Updated Liberty buildpack v3.1-20160717-2254
-* The [App Management](/docs/manageapps/app_mng.html) functionality was updated to support federated authentication. Also, the Node.js runtime that is used by the `devconsole` and `shell` utilities was updated to the latest `0.12.15` version.
+* The [App Management](../common/app_mng.html) functionality was updated to support federated authentication. Also, the Node.js runtime that is used by the `devconsole` and `shell` utilities was updated to the latest `0.12.15` version.
 * The buildpack adds support for the [Dynatrace Ruxit ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.dynatrace.com/en/ruxit/) application monitoring agent.
 * The buildpack provides an updated data collector for the Monitoring and Analytics service.
 * The buildpack also provides an updated version of the agent for the [Auto-Scaling service](/docs/services/Auto-Scaling/index.html).
@@ -173,7 +173,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * The buildpack adds initial support for the [AppDynamics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.appdynamics.com/) application monitoring agent.
 * The [Dynatrace](dynatrace.html) support was improved to simplify the installation of the agent.
 * The buildpack provides an updated data collector for the Monitoring and Analytics service. It contains a fix for a problem with collection of the max heap data.
-* The Node.js runtime that is used by the [devconsole and shell App Management utilities](/docs/manageapps/app_mng.html#app_management) was updated to the latest 0.12.13 version.
+* The Node.js runtime that is used by the [devconsole and shell App Management utilities](../common/app_mng.html#app_management) was updated to the latest 0.12.13 version.
 
 ### March 25, 2016: Updated Liberty buildpack v2.7-20160321-1358
 * The buildpack contains an updated version of WebSphere Liberty based on the [March beta](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/). The updated version of Liberty makes the cloudant-1.0 beta feature available in {{site.data.keyword.Bluemix_notm}}
@@ -181,7 +181,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * The buildpack provides an updated version of the agent for the [Auto-Scaling service](/docs/services/Auto-Scaling/index.html).
 * The buildpack now comes with a new data collector for the Monitoring and Analytics service. The new collector enables configuration of monitoring thresholds and contains a number of bug fixes.
 * The buildpack provides an updated DB2® JDBC driver version 4.19.49.
-* The Node.js runtime that is used by the [devconsole and shell App Management utilities](/docs/manageapps/app_mng.html#app_management) was updated to the latest 0.12.12 version.
+* The Node.js runtime that is used by the [devconsole and shell App Management utilities](../common/app_mng.html#app_management) was updated to the latest 0.12.12 version.
 
 ### March 7, 2016: Updated Liberty buildpack v2.6-20160225-1649
 * The buildpack adds support for Dynatrace application monitoring. See [Using Dynatrace](dynatrace.html) for details.
@@ -210,7 +210,7 @@ cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 * The buildpack also contains an updated IBM JRE 8 SR1 FP11.
 * The buildpack also provides a number of performance improvements and optimizations:
   * The [CDI 1.2](optionsForPushing.html) implicit bean archive scanning feature is disabled by default when deploying WAR or EAR files.
-  * To reduce the droplet size, the [App Management utilities](/docs/manageapps/app_mng.html) devconsole and shell, require a restage operation instead of a restart.
+  * To reduce the droplet size, the [App Management utilities](../common/app_mng.html) devconsole and shell, require a restage operation instead of a restart.
   * The IBM JRE's shared class cache is disabled as it was not being reused in the {{site.data.keyword.Bluemix_notm}} environment.
 
 ### September 18, 2015: Updated Liberty buildpack v2.0-20150914-1535
@@ -241,7 +241,7 @@ The updated JREs contain [latest security fixes](http://www-01.ibm.com/support/d
 * The [New Relic](newRelic.html) agent was updated to version 3.17. The new version provides improved integration with the Liberty profile runtime.
 
 ### June 14, 2015: Updated Liberty buildpack v1.19-20150608-1717
-* The buildpack contains a number of application management enhancements that include support for the development console and web-based shell access. See the [app management documentation](/docs/manageapps/app_mng.html) for details.
+* The buildpack contains a number of application management enhancements that include support for the development console and web-based shell access. See the [app management documentation](../common/app_mng.html) for details.
 * The buildpack also contains a fix for a problem where the Liberty feature for the Monitoring and Analytics service could not be found.
 
 ### May 27, 2015: Updated Liberty buildpack v1.18-20150519-1642

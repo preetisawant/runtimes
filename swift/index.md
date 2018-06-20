@@ -21,7 +21,7 @@ This buildpack provides a complete runtime environment for Swift applications.
 
 {{site.data.keyword.Bluemix_notm}} provides a Kitura-based Swift [starter application](https://github.com/IBM-Cloud/Kitura-Starter). The Kitura starter app is a simple Swift app that you can use to learn about the types of server applications you can develop by using the Swift programming language. This sample app creates a basic Kitura HTTP server that returns HTML content to the client.
 
-**Note:** The Kitura starter app is meant to be used for educational purposes. You can experiment with the starter app by making enhancements, and push those changes to the {{site.data.keyword.Bluemix_notm}} environment. See [Using the starter applications](../../cfapps/starter_app_usage.html) for help with using the starter application.
+**Note:** The Kitura starter app is meant to be used for educational purposes. You can experiment with the starter app by making enhancements, and push those changes to the {{site.data.keyword.Bluemix_notm}} environment. See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter application.
 
 ## Renaming your app
 {: #renaming_your_app}

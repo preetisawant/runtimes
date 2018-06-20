@@ -33,7 +33,7 @@ Expess app may help work around that. For example you can do the following in yo
 See this [stackoverflow post ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 for more information.
 
-**NOTE** [App Management](/docs/manageapps/app_mng.html) and FIPS_MODE are *NOT* simultaneously supported.  If the BLUEMIX_APP_MGMT_ENABLE environment variable is set and the FIPS_MODE environment variables is set to true, the app will fail to stage.
+**NOTE** [App Management](../common/app_mng.html) and FIPS_MODE are *NOT* simultaneously supported.  If the BLUEMIX_APP_MGMT_ENABLE environment variable is set and the FIPS_MODE environment variables is set to true, the app will fail to stage.
 
 There are various methods of checking the state of FIPS_MODE:
 <ul>

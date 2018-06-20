@@ -14,5 +14,5 @@ lastupdated: "2018-02-22"
 
 Troubleshoot your Python applications and buildpacks with the following resources:
 
-* [Troubleshooting for runtimes](../../troubleshoot/ts_runtimes.html#runtimes)
-* [Troubleshooting for runtimes: Python](../../troubleshoot/ts_runtimes.html#ts_python)
+* [Troubleshooting for runtimes](../common/ts_runtimes.html#runtimes)
+* [Troubleshooting for runtimes: Python](../common/ts_runtimes.html#ts_python)

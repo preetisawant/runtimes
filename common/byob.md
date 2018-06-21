@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2017, 2018
-
-lastupdated: "2018-06-20"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -41,7 +39,7 @@ nodejs_buildpack   9      true      false    buildpack_nodejs_v8-177-g2b0a5cf.zi
 {:screen}
 
 
-For the same runtime or framework, IBM-created buildpacks take precedence over the community ones. If you want to use the community buildpack to overwrite the IBM-created buildpack, you must specify the buildpack by using the `-b` option with the c`f push` command.
+For the same runtime or framework, IBM-created buildpacks take precedence over the community ones. If you want to use the community buildpack to overwrite the IBM-created buildpack, you must specify the buildpack by using the `-b` option with the `cf push` command.
 
 For example, you can use the community buildpack for Java™ web applications by using the following command.
 

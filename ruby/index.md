@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-12-15"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -23,7 +23,7 @@ The ruby_buildpack is used if your app has a Gemfile in the root directory. It w
 {: #starter_application}
 
 {{site.data.keyword.Bluemix_notm}} provides a Ruby starter application.  The Ruby starter application is a simple Ruby app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the  {{site.data.keyword.Bluemix_notm}}
-environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
+environment.  See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
 {: #runtime_versions}

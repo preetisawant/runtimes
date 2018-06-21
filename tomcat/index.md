@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-12-15"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,9 +18,10 @@ The Tomcat runtime on {{site.data.keyword.Bluemix}} is powered by the java_build
 {: shortdesc}
 
 To use the Tomcat runtime on {{site.data.keyword.Bluemix_notm}}, you must specify the java_buildpack with the -b option. For example:
-<pre>
-    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
-</pre>
+
+```
+ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+```
 
 For more information about the Tomcat runtime, see the
 [java-buildpack readme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md).
@@ -28,7 +29,7 @@ For more information about the Tomcat runtime, see the
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} provides a Tomcat starter application.  The Tomcat starter application is a simple Tomcat app that provides a template that you can use. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment. See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
+{{site.data.keyword.Bluemix_notm}} provides a Tomcat starter application.  The Tomcat starter application is a simple Tomcat app that provides a template that you can use. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment. See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
 {: #runtime_versions}

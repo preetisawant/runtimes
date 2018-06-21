@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-12-15"
+lastupdated: "2017-06-21"
 
 ---
 
@@ -24,7 +24,7 @@ The go_buildpack is used if your application contains a file named *.go.
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} provides a Go starter application.  The Go starter application is a simple Go app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
+{{site.data.keyword.Bluemix_notm}} provides a Go starter application.  The Go starter application is a simple Go app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment  See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
 {: #runtime_versions}

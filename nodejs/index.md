@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-26"
-
+lastupdated: "2018-06-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -29,7 +28,7 @@ var port = (process.env.PORT || 3000);
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} provides a Node.js starter applications.  The Node.js starter application is a simple Node.js app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
+{{site.data.keyword.Bluemix_notm}} provides a Node.js starter applications.  The Node.js starter application is a simple Node.js app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment  See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter application.
 
 ## App Management
 {: #app_management}

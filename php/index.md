@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-12-15"
+lastupdated: "2018-06-21"
 
 ---
 
@@ -27,7 +27,7 @@ The php_buildpack is used in the following conditions:
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}} provides a PHP starter app.  The PHP starter application is a simple PHP app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix}}
-environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter app.
+environment.  See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter app.
 
 ## Enforce HTTPS on all pages in your application
 {: #enforce_https}

@@ -158,7 +158,6 @@ Skip to the section of the feature list by using the following index, or you can
 ### M
 {: #libertyfeat_M}
 * managedBeans-1.0
-* managedBeans-1.0
 * mdb-3.1
 * mdb-3.2
 * mediaServerControl-1.0     
@@ -177,6 +176,7 @@ Skip to the section of the feature list by using the following index, or you can
 {: #libertyfeat_O}
 * oauth-2.0
 * openapi-3.0
+* openapi-3.1
 * openid-2.0
 * openidConnectClient-1.0
 * openidConnectServer-1.0
@@ -205,7 +205,6 @@ Skip to the section of the feature list by using the following index, or you can
 * servlet-3.0
 * servlet-3.1
 * sessionDatabase-1.0
-* sipServlet-1.1
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -13,6 +13,10 @@ lastupdated: "2018-06-08"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### July 2, 2018: Updated Liberty buildpack v3.23-20180628-1052
+* The default Liberty runtime version was updated to the 18.0.0.2 release.
+* The IBM JRE version was updated to 8 SR5 FP16.
 
 ### June 8, 2018: Updated Liberty buildpack v3.22-20180601-1200
 * The monthly Liberty runtime version was updated to 2018.6.0.0.
@@ -27,9 +31,9 @@ lastupdated: "2018-06-08"
 * The auto-scaling agent was updated.
 
 ### March 16, 2018: Updated Liberty buildpack v3.19-20180313-1017
-* The default Liberty runtime version was updated to the 18.0.0.1 release
+* The default Liberty runtime version was updated to the 18.0.0.1 release.
 * The monthly Liberty runtime version was updated to 2018.3.0.0.
-* The IBM JRE version was updated to 8 SR5 FP10
+* The IBM JRE version was updated to 8 SR5 FP10.
 * The IBM JRE version 7 was removed.  
 * The DB2 JDBC driver was updated to the `4.23.42` version.
 
@@ -100,7 +104,7 @@ lastupdated: "2018-06-08"
 * The auto-configuration support was also extended to work with [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
 * The auto-configuration support for [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) was updated to provide the option of using the Cloudant Java Library instead of org.ektorp. To enable the use of the Cloudant Java Library you must set the following environment variable:    
 ```
-cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
+ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
 * The buildpack also provides an updated version of the agent for the [Auto-Scaling service](/docs/services/Auto-Scaling/index.html) and a number of application management enhancements.
 * This buildpack also changes the way auto-configuration works for the Monitoring and Analytics service. Applications using the Free plan will no longer have the log capability added to their applications; it is being replaced by logmet.  

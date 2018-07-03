@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -169,10 +169,10 @@ In addition, in v3.0beta the default Node.js runtime is changed to v4.2.3.
 IBM Node.js buildpack v3.0beta is now released as a non-default buildpack on {{site.data.keyword.Bluemix_notm}} with Node.js v4.2.3 as the default runtime. To ensure that your apps and services will continue to work on {{site.data.keyword.Bluemix_notm}}, push your application with the beta version of the buildpack. After 30 days or longer, v3 will be made the default buildpack.
 
 To push your application with v3.0beta:
-* Use "-b" option in your 'cf push' command:
+* Use "-b" option in your `ibmcloud cf push` command:
 
 ```
-        cf push -b sdk-for-nodejs-v3beta
+        ibmcloud cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -217,7 +217,7 @@ In addition, we revamped the App Management feature in the Node.js buildpack, wh
 {: codeblock}
 
 * Known issues with v0.12.1:
-   * The “Suspend” feature is broken when you use the Debug Tools feature provided by {{site.data.keyword.Bluemix_notm}} Live Sync.
+   * The "Suspend" feature is broken when you use the Debug Tools feature provided by {{site.data.keyword.Bluemix_notm}} Live Sync.
    * The mqlight module that is used for the MQ Light service is not supported on v0.12.x
 
 * Various security vulnerabilities were resolved:

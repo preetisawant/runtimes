@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-12-13"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,7 +20,7 @@ To use a FIPS-enabled node engine set the environment variable FIPS_MODE to true
 For example:
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 

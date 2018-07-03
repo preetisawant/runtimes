@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -16,12 +16,12 @@ lastupdated: "2018-1-31"
 ## Log files
 {: #log_files}
 
-The standard Liberty logs, such as `messages.log` or the `ffdc` directory, are available in {{site.data.keyword.Bluemix}} in the `logs` directory of each application instance. These logs can be accessed from the {{site.data.keyword.Bluemix_notm}} console or via the Cloud Foundry CLI. For example:
+The standard Liberty logs, such as `messages.log` or the `ffdc` directory, are available in {{site.data.keyword.Bluemix}} in the `logs` directory of each application instance. These logs can be accessed from the {{site.data.keyword.Bluemix_notm}} console or via the {{site.data.keyword.Bluemix_notm}} CLI. For example:
 
 * To access recent logs for an app, run the following command:
 
   ```
-  cf logs --recent <appname>
+  ibmcloud cf logs --recent <appname>
   ```
   {: codeblock}
 
@@ -29,7 +29,7 @@ The standard Liberty logs, such as `messages.log` or the `ffdc` directory, are a
 * To see the `messages.log` file of an app, run the following command:
 
   ```
-  cf ssh <appname> -c "cat logs/messages.log"
+  ibmcloud cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
@@ -55,7 +55,7 @@ Follow these steps to change tracing configuration:
 1. SSH to your app
 
   ```
- cf ssh <appname> [-i instance_index]
+ ibmcloud cf ssh <appname> [-i instance_index]
   ```
   {: codeblock}
 
@@ -72,10 +72,10 @@ See [Troubleshooting Liberty: Logging and Trace](http://www.ibm.com/support/know
 
 ### Triggering dumps via SSH
 
-Use the command below to trigger a thread and heap dump via CF CLI using the SSH feature:
+Use the command below to trigger a thread and heap dump via {{site.data.keyword.Bluemix_notm}} CLI using the SSH feature:
 
   ```
- cf ssh <appname> -c "pkill -3 java"
+ ibmcloud cf ssh <appname> -c "pkill -3 java"
   ```
   {: codeblock}
 
@@ -84,19 +84,19 @@ See the documentation below for details on downloading the generated dump files.
 ## Download dump files
 {: #download_dumps}
 
-By default, the various dump files are placed in the `dumps` directory of the application container. Use Cloud Foundry CLI `cf ssh` to view and download the dump files.
+By default, the various dump files are placed in the `dumps` directory of the application container. Use {{site.data.keyword.Bluemix_notm}} CLI `ibmcloud cf ssh` to view and download the dump files.
 
 * To see the generated dumps, run the following command:
 
   ```
-  $ cf ssh <appname> -c "ls -l dumps"
+  ibmcloud cf ssh <appname> -c "ls -l dumps"
   ```
   {: codeblock}
 
 * To download a dump file, run the following command:
 
   ```
-  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ibmcloud cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

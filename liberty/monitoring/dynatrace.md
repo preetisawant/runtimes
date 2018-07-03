@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-04-05"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -34,13 +34,14 @@ service to pass information for the Dynatrace agent to connect with the Dynatrac
 
   **Note:** The name of the user-provided service must contain the string **dynatrace**. Case is ignored. For example, use the command that follows, where **my-dynatrace-collector** contains **dynatrace**:
   ```
-  cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
+  ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring"}'
   ```
   {: codeblock}
 
     In this example, my-dynatrace-collector is the name given to the service, DynatraceCollectorIPaddress is the IP address of the Dynatrace collector you     have configured, and profile is the optional Dynatrace profile name associated with this monitored app. The default profile value is Monitoring. You can specify optional parameters as in the example that follows.
+
     ```
-    cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
+    ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
                       "options" : {"dynatrace-parameter-1": "value",
                                    "dynatrace-parameter-2": "value"}}'
     ```
@@ -50,7 +51,7 @@ service to pass information for the Dynatrace agent to connect with the Dynatrac
 
 3. After you push your app to {{site.data.keyword.Bluemix_notm}}, bind the user-provided service that you created to the app. For example, use the following command:
   ```
-  cf bs myApp my-dynatrace-collector
+  ibmcloud cf bs myApp my-dynatrace-collector
   ```
   {: codeblock}
 
@@ -84,7 +85,7 @@ The Liberty app you want to monitor must be configured to locate the server host
 
 1. Set the variable **JBP_CONFIG_DYNATRACEAPPMONAGENT** so it has the value *"repository_root: URL_of_server_hosting_index.yml"*. For example, after pushing your application issue the following command:
 
-        $ cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
+        ibmcloud cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
         {: codeblock}
 
     In this example, *my-dynatrace-agent-host.mybluemix.net* is the URL of the `index.yml` file hosted by the server that you previously configured.

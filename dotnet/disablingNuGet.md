@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-05-30"
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,10 +14,10 @@ lastupdated: "2017-05-30"
 
 In some situations it may be necessary to clear the NuGet package cache for your application.  Doing so will clear any existing cached NuGet packages and prevent the buildpack from caching any new packages.
 
-You can do this by setting the `CACHE_NUGET_PACKAGES` environment variable to `false` using the CloudFoundry CLI:
+You can do this by setting the `CACHE_NUGET_PACKAGES` environment variable to `false` using the {{site.data.keyword.Bluemix_notm}} CLI:
 
 ```shell
-  cf set-env <app_name> CACHE_NUGET_PACKAGES false
+  ibmcloud cf set-env <app_name> CACHE_NUGET_PACKAGES false
 ```
 
 Alternatively, you can set the `CACHE_NUGET_PACKAGES` environment variable to `false` in your application's manifest.yml file:

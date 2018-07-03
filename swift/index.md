@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -53,7 +53,7 @@ Because there are frequent Swift language updates, you should always include a `
 
 Please note that you can specify any valid version of Swift in your `.swift-version` file. These alternate versions must match the naming of and are pulled directly from [Swift.org ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://swift.org/download/). While using a non-cache version will take a bit longer to provision, there is no runtime performance difference of your Swift app.
 
-The default swift_buildpack in {{site.data.keyword.Bluemix_notm}} is used if your app's root directory contains a `Package.swift` file.  If you'd like to use use an alternate buildpack, you must specify this by adding a `buildpack: {buildpackUrl}` entry to your app's manifest.yml file. Alternatively, you can define this at deployment time, using the `cf push -b {buildpackUrl}` command argument.
+The default swift_buildpack in {{site.data.keyword.Bluemix_notm}} is used if your app's root directory contains a `Package.swift` file.  If you'd like to use use an alternate buildpack, you must specify this by adding a `buildpack: {buildpackUrl}` entry to your app's manifest.yml file. Alternatively, you can define this at deployment time, using the `ibmcloud cf push -b {buildpackUrl}` command argument.
 
 
 ## Developer Environments

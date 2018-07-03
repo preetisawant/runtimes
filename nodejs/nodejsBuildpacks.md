@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -18,12 +18,12 @@ lastupdated: "2017-10-27"
 * The {{site.data.keyword.IBM_notm}} created **sdk-for-nodejs** buildpack is the default buildpack used for Node.js applications in {{site.data.keyword.Bluemix_notm}}.
 * The **nodejs_buildpack** is a community buildpack provided by the Cloud Foundry community.
 
-The **sdk-for-nodejs** buildpack takes precedence over the **nodejs_buildpack** in {{site.data.keyword.Bluemix_notm}}. If you want to use the **nodejs_buildpack** with your application instead of the **sdk-for-nodejs** buildpack, you must specify your buildpack, for example, by using the `-b` option with the **cf push** command.
+The **sdk-for-nodejs** buildpack takes precedence over the **nodejs_buildpack** in {{site.data.keyword.Bluemix_notm}}. If you want to use the **nodejs_buildpack** with your application instead of the **sdk-for-nodejs** buildpack, you must specify your buildpack, for example, by using the `-b` option with the `ibmcloud cf push` command.
 
-Typically the current **sdk-for-nodejs** buildpack and a back-level version are available.  To see all the available buildpacks us the **cf buildpacks** command.  For example:
+Typically the current **sdk-for-nodejs** buildpack and a back-level version are available.  To see all the available buildpacks us the `ibmcloud cf buildpacks` command.  For example:
 
 ```
-   cf buildpacks
+   ibmcloud cf buildpacks
    Getting buildpacks...
 
    buildpack                                 position   enabled   locked   filename   

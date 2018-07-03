@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-07-13"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -25,9 +25,9 @@ NPM provides a scripting facility allowing you to run scripts, including **prein
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} maintains a cache directory per node application, that is persisted between builds. The cache stores resolved dependencies so they are not downloaded and installed every time the app is deployed.  For example, suppose myapp depends on **express**.  Then the first time myapp is deployed the **express** module is downloaded.  On subsequent deployments of myapp,  the cached instance of **express** is used. The default behavior is to cache all node_modules installed by NPM and bower_components installed by bower.
 
-Use the NODE_MODULES_CACHE variable to determine whether or not the Node buildpack uses or ignores the cache from previous builds. The default value is true.  To disable caching set NODE_MODULES_CACHE to false, for example via the cf command line:
+Use the NODE_MODULES_CACHE variable to determine whether or not the Node buildpack uses or ignores the cache from previous builds. The default value is true.  To disable caching set NODE_MODULES_CACHE to false, for example via the {{site.data.keyword.Bluemix_notm}} command line:
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+    ibmcloud cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 

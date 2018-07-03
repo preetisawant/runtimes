@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-01"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -70,7 +70,7 @@ In some cases, you might not want the Liberty buildpack to automatically configu
 * My application uses *dashDB*, but I want the application to directly manage the connection to the database. The application contains the necessary client driver jar. I do not want the Liberty buildpack to automatically configure the *dashDB* service.
 * I am providing a server.xml file and I have provided the configuration stanzas for the *cloudant* instance because I require a non-standard datasource configuration. I do not want the Liberty buildpack to update my server.xml file, but I still require the Liberty buildpack to ensure that the appropriate supporting software is installed.
 
-To opt out of automatic service configuration, use the services_autoconfig_excludes environment variable. You can include this environment variable in a manifest.yml or set it using the cf client.
+To opt out of automatic service configuration, use the services_autoconfig_excludes environment variable. You can include this environment variable in a manifest.yml or set it using the {{site.data.keyword.Bluemix_notm}} client.
 
 You can opt out of automatic configuration of services on a per-service-type basis. You can choose to completely opt out (as in the *dashDB* scenario) or opt out of only the server.xml file configuration updates (as in the *cloudant* scenario). The value that you specify for the services_autoconfig_excludes environment variable is a string as shown below.
 
@@ -113,15 +113,15 @@ Here are sample opt-out specifications in a manifest.yml file for the *dashDB* a
 Here are examples of how to set the services_autoconfig_excludes environment variable for the application myapp by using the command-line interface.
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
 To find the *label* for a service in VCAP_SERVICES issue a command like the following example:
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -146,7 +146,7 @@ In some cases, you might want to override the default configuration for a servic
 You can use the **LBP_SERVICE_CONFIG_xxxx** environment variable to override a service configuration. See the following tables for complete environment variable names and example syntax to override them.  For example, to override the default version of the *elephantSQL* service and set it to version 8.3.4.+ issue a command such as:
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 

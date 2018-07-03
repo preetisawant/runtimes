@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -26,8 +26,8 @@ By following this getting started tutorial, you'll set up a development environm
 {: #prereqs}
 
 You'll need the following:
-* [{{site.data.keyword.Bluemix_notm}} account](https://console.ng.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * Install .NET Core 1.1 SDK 1.0.4 from the [dot.net website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core) instructions.
 
@@ -89,7 +89,7 @@ In this manifest.yml file, **`random-route: true`** generates a random route for
 
 You can use the {{site.data.keyword.Bluemix_notm}} CLI to deploy apps.
 
-1. Log in to your {{site.data.keyword.Bluemix_notm}} account:
+1. Log in to your {{site.data.keyword.Bluemix_notm}} account, and select an API endpoint.
   ```
 ibmcloud login
   ```
@@ -134,7 +134,7 @@ Next, we'll add a ClearDB MySQL database to this application and set up the appl
 3. Go to the  **Connections** view and select your application, then **Create connection**.
 4. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 
-Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code. 
+Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code.
 {: tip}
 
 ## Step 6: Use the database locally

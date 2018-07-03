@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2017-10-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -54,9 +54,9 @@ The value for the **JBP_CONFIG_OPENJDK** variable is the `index.yml` file locati
 ```
 {: codeblock}
 
-Issue the `cf se myAPP` command to set the **JBP_CONFIG_OPENJDK** variable, for example:
+Issue the `ibmcloud cf se myAPP` command to set the **JBP_CONFIG_OPENJDK** variable, for example:
 ```
-$ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
+ibmcloud cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
 ```
 {: codeblock}
 
@@ -64,7 +64,7 @@ The *repository_root* URL does not include `index.yml` in the URL. The *reposito
 
 To set the JVM environment variable, issue the following command:
 ```
-$ cf se myApp JVM 'openjdk'
+ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

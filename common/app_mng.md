@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -45,14 +45,14 @@ To enable App Management utilities, set the value of the *BLUEMIX_APP_MGMT_ENABL
 For example, to enable *hc*, *debug* and *trace* utilities, run the following command:
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
 ```
 {: codeblock}
 
 Restage your application after you set the environment variable:
 
 ```
-cf restage myApp
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
@@ -61,15 +61,15 @@ If you do not want the App Management utilities to be installed with your applic
 For example, run the following commands to stage your application without App Management utilities:
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
-cf restage myApp
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
 ## Restrictions
 {: #restrictions}
 * Changes that you make to your application by using App Management are transient and are lost after you exit this mode. This mode is only for temporary development use and is not intended to be used as a production environment due to performance.
-* For Node.js applications, most App Management utilities do not work if you set your **start** command in the `manifest.yml` file (command) or `CF CLI (-c)`. Those methods are buildpack overrides and are anti-patterns for starting Node.js applications. For best results, set the **start** command in the `package.json` file or `Procfile`.
+* For Node.js applications, most App Management utilities do not work if you set your **start** command in the `manifest.yml` file or with the `-c` option on the command line. Those methods are buildpack overrides and are anti-patterns for starting Node.js applications. For best results, set the **start** command in the `package.json` file or `Procfile`.
 
 ### Liberty and Node.js utilities
 {: #liberty_and_node_utilities}
@@ -114,10 +114,10 @@ When you have the Health Center agent enabled, you can analyze the performance o
 
 **Using *hc* with *noproxy* **
 
-The *hc* utility can be used in conjunction with *noproxy*. To use Health Center with *noproxy*, first establish port forwarding using the `cf ssh` command. For example:
+The *hc* utility can be used in conjunction with *noproxy*. To use Health Center with *noproxy*, first establish port forwarding using the `ibmcloud cf ssh` command. For example:
 
 ```
-cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
+ibmcloud cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ After you access the *shell* utility, a terminal window is displayed with shell 
 
 **Important:** The *shell* utility also starts *proxy*.
 
-Diego provides an interactive shell through the `cf ssh` command, so the *shell* utility is only useful to applications running on a DEA.
+Diego provides an interactive shell through the `ibmcloud cf ssh` command, so the *shell* utility is only useful to applications running on a DEA.
 {: .tip}
 
 
@@ -159,12 +159,12 @@ The *debug* utility puts the Liberty application into debug mode and enables cli
 
 **Important:** The *debug* utility starts *proxy*.
 
-The *debug* utility can be used in conjunction with *noproxy*. To use debug with *noproxy*, first establish port forwarding using the `cf ssh` command.
+The *debug* utility can be used in conjunction with *noproxy*. To use debug with *noproxy*, first establish port forwarding using the `ibmcloud cf ssh` command.
 
-The following code snippet shows an example of the `cf ssh` command format:
+The following code snippet shows an example of the `ibmcloud cf ssh` command format:
 
 ```
-cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
+ibmcloud cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 ```
 {: codeblock}
 
@@ -178,7 +178,7 @@ The *jmx* utility enables the JMX REST Connector to allow a remote JMX client to
 You can monitor multiple instances of an application by using JMX, but it requires a separate JMX connection for each instance. The default is to monitor instance 0. To monitor instance 1, you can use the following code snip:
 
 ```
-cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
+ibmcloud cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
 ```
 {: codeblock}
 
@@ -194,10 +194,10 @@ The *localjmx* utility enables the [localConnector-1.0 ![External link icon](../
 
 **Before you begin**: *localjmx* requires you to install JConsole.
 
-The *localjmx* utility is only applicable to applications running on a Diego cell. To use *localjmx*, first establish port forwarding using the `cf ssh` command. For example:
+The *localjmx* utility is only applicable to applications running on a Diego cell. To use *localjmx*, first establish port forwarding using the `ibmcloud cf ssh` command. For example:
 
 ```
-cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
+ibmcloud cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 {: codeblock}
 
@@ -219,13 +219,13 @@ Instead of using *proxy* to access the *inspector* interface, you use the Develo
 
 Enable access to the URL with local port forwarding with the following command:
 ```
-cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
+ibmcloud cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 {: codeblock}
 
 Get the startup log for the application by using the following command.
 ```
-cf logs <appName> --recent
+ibmcloud cf logs <appName> --recent
 ```
 {: codeblock}
 
@@ -245,7 +245,7 @@ If you use the *proxy,* you can access the *inspector* interface at `https://myA
 If you do not use the *proxy* utility, enable access to the application URL by using local port forwarding with the following command:
 
 ```
-cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
+ibmcloud cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
 ```
 {: codeblock}
 

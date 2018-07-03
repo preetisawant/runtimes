@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -55,9 +55,9 @@ To use the Liberty beta features in {{site.data.keyword.Bluemix_notm}}, you will
   {: .codeblock}
 
 2.  Set the `IBM_LIBERTY_BETA` environment variable to `true`. This variable directs the Liberty buildpack to install and enable the beta features for your application.  For example:
-  * Using the `cf` command line tool:
+  * Using the [{{site.data.keyword.Bluemix_notm}} CLI (../../cli/reference/bluemix_cli/download_cli.html):
     ```
-    cf set-env <yourappname> IBM_LIBERTY_BETA true
+    ibmcloud cf set-env <yourappname> IBM_LIBERTY_BETA true
     ```
     {: .codeblock}
 
@@ -69,9 +69,9 @@ To use the Liberty beta features in {{site.data.keyword.Bluemix_notm}}, you will
     {: .codeblock}
 
 3. Set the `JBP_CONFIG_LIBERTY` environment variable to `"version: +"`. This variable enables the [Liberty monthly runtime](buildpackDefaults.html#liberty_versions), which supports beta features. For example:
-  * Using the `cf` command line tool:
+  * Using the {{site.data.keyword.Bluemix_notm}} CLI tool:
     ```
-    cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+    ibmcloud cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
     ```
     {: .codeblock}
 

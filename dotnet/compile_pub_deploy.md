@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-05-31"
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 MSBuild based projects are now published using the `dotnet publish` command during staging.  By default, the buildpack will publish your application in `Debug` configuration.
 To publish your application in `Release` configuration, set the `PUBLISH_RELEASE_CONFIG` environment variable to `true`.
 
-You can do this with the CloudFoundry CLI with the following command:
+You can do this with the {{site.data.keyword.Bluemix_notm}} CLI with the following command:
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 Alternatively, you can set the variable in your application's manifest.yml file:

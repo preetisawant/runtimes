@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-26"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -28,11 +28,11 @@ Important: When you deploy an application with the Liberty buildpack, specify a 
 
 Stand-alone applications such as WAR or EAR files can be deployed to Liberty in {{site.data.keyword.Bluemix_notm}}.
 
-To deploy a stand-alone application, run the cf push command with the -p parameter that points to your WAR or EAR file.
+To deploy a stand-alone application, run the `ibmcloud cf push` command with the -p parameter that points to your WAR or EAR file.
 For example:
 
 ```
-    $ cf push <yourappname> -p myapp.war
+    ibmcloud cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -58,7 +58,7 @@ When a stand-alone application is deployed, a default Liberty configuration is p
 These features correspond to the Java EE 7 Web Profile features. You can specify a different set of Liberty features by setting the JBP_CONFIG_LIBERTY environment variable. For example, to enable jsp-2.3 and websocket-1.1 features only, run the command and restage the application:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -121,14 +121,14 @@ For performance reasons, when deploying WAR and EAR files only, the [CDI 1.2 imp
 For example:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 Important: In order for your environment variable changes to take effect you must restage your application:
 
 ```
-    $ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -141,7 +141,7 @@ If you installed the Liberty profile on your workstation and you already created
 For example, if your Liberty server is named defaultServer, run the command:
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -170,7 +170,7 @@ If a Liberty profile is not installed on your workstation, you can use the follo
 After the server directory is ready, you can deploy it to {{site.data.keyword.Bluemix_notm}}.
 
 ```
-    $ cf push <yourappname> -p defaultServer
+    ibmcloud cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
@@ -187,20 +187,20 @@ Note: The web applications that are deployed as part of the server directory are
 You can also push a packaged server file to {{site.data.keyword.Bluemix_notm}}. The packaged server file is created by using Liberty's server package command. In addition to the application and configuration files, the packaged server file can contain shared resources and Liberty user features needed by the application.
 
 To package a Liberty server, use the `./bin/server package` command from your Liberty installation directory. Specify your server name and include the `--include=usr` option.
-For example, if your Liberty server is defaultServer, run the command:
+For example, if your Liberty server is `defaultServer`, run the command:
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
 This command generates a serverName.zip file in the server's directory. If you used the `--archive` option to specify a different archive file, make sure it has the `.zip` extension instead of `.jar`. **The buildpack does not support packaged server files created with the `.jar` extension**.
 
-You can then push the generated `.zip` file to {{site.data.keyword.Bluemix_notm}} with the `cf push` command.
+You can then push the generated `.zip` file to {{site.data.keyword.Bluemix_notm}} with the `ibmcloud cf push` command.
 For example:
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -223,7 +223,7 @@ The following variables are defined in the `runtime-vars.xml` file, and referenc
 
 * ${port}: The HTTP port that the Liberty server is listening on.
 * ${vcap_app_port}: Same as ${port}. Not set when running on Diego.
-* ${application_name}: The name of the application, as defined by using the options in the cf push command.
+* ${application_name}: The name of the application, as defined by using the options in the `ibmcloud cf push` command.
 * ${application_version}: The version of this instance of the application, which takes the form of a UUID, such as `b687ea75-49f0-456e-b69d-e36e8a854caa`. This variable changes with each successive push of the application that contains new code or changes to the application artifacts.
 * ${host}: The IP address of the application instance.
 * ${application_uris}: A JSON-style array of the endpoints that can be used to access this application, for example: myapp.mydomain.com.

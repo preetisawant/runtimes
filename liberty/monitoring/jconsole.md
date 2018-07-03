@@ -47,7 +47,7 @@ Push the server package containing your application limiting it to a single inst
 
 JConsole is included with your Java installation.  To start the JConsole app go to &lt;java-home&gt;/bin and run the following command:
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+    jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 

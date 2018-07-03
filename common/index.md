@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -40,7 +40,7 @@ You can use the buildpacks included with {{site.data.keyword.cloud_notm}} to dep
 
 *  Buildpack
 
-   A buildpack is a typically language specific package of software provided by {{site.data.keyword.Bluemix_notm}}. When an application is deployed to {{site.data.keyword.Bluemix_notm}} a buildpack appropriate for the application is chosen. The buildpack provisions the runtime environment for the application.  You can see the set of buildpacks provided by {{site.data.keyword.Bluemix_notm}} by issuing the `cf buildpacks` command from the command line.
+   A buildpack is a typically language specific package of software provided by {{site.data.keyword.Bluemix_notm}}. When an application is deployed to {{site.data.keyword.Bluemix_notm}} a buildpack appropriate for the application is chosen. The buildpack provisions the runtime environment for the application.  You can see the set of buildpacks provided by {{site.data.keyword.Bluemix_notm}} by issuing the `ibmcloud cf buildpacks` command from the command line.
 
 *  Runtime
 

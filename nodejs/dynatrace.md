@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-01"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -26,7 +26,7 @@ When your Node.js application is configured to use Dynatrace, the Node.js runtim
 1. Create a user-provided service that points to your Dynatrace credentials by running the following command. The name of the service must contain the string `dynatrace`, such as `dynatrace-service`.
 
     ```
-    cf cups dynatrace-service -p "environmentid, apitoken"
+    ibmcloud cf cups dynatrace-service -p "environmentid, apitoken"
     ```
     {: codeblock}
     
@@ -35,7 +35,7 @@ When your Node.js application is configured to use Dynatrace, the Node.js runtim
     If you are using Dynatrace Managed, also add the `apiurl` field, which specifies the API endpoint of your Managed Server.
     
     ```
-    cf cups dynatrace-service -p "environmentid, apitoken, apiurl"
+    ibmcloud cf cups dynatrace-service -p "environmentid, apitoken, apiurl"
     ```
     {: codeblock}
     
@@ -43,7 +43,7 @@ When your Node.js application is configured to use Dynatrace, the Node.js runtim
     
 1. After you push your app to {{site.data.keyword.Bluemix_notm}}, bind the user-provided service that you created to the app. For example, use the following command:
     ```
-    cf bs myApp dynatrace-service
+    ibmcloud cf bs myApp dynatrace-service
     ```
     {: codeblock}
 

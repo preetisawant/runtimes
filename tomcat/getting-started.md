@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -22,12 +22,15 @@ lastupdated: "2018-06-20"
 
 By following this getting started tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate a database service in your app.
 
+Throughout these docs, references to the Cloud Foundry CLI are now updated to the {{site.data.keyword.Bluemix_notm}} CLI! The {{site.data.keyword.Bluemix_notm}} CLI has the same familiar Cloud Foundry commands, but with better integration with {{site.data.keyword.Bluemix_notm}} accounts and other services. Learn more about getting started with the {{site.data.keyword.Bluemix_notm}} CLI in this tutorial.
+{: tip}
+
 ## Before you begin
 {: #prereqs}
 
 You'll need the following:
-* [{{site.data.keyword.Bluemix_notm}} account](https://console.ng.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Eclipse IDE for Java EE Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * [Maven ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://maven.apache.org/download.cgi){: new_window}
@@ -100,7 +103,7 @@ In this manifest.yml file, **`random-route: true`** generates a random route for
 
 You can use the {{site.data.keyword.Bluemix_short}} CLI to deploy apps.
 
-1. Log in to your {{site.data.keyword.Bluemix_short}} account:
+1. Log in to your {{site.data.keyword.Bluemix_short}} account, and select an API endpoint.
 
   ```
 ibmcloud login

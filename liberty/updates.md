@@ -222,7 +222,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
   * The default configuration for WAR and EAR files enables Java EE 7 Web Profile features instead of Java EE 6 Web Profile features.
   * The default Java version is version 8 instead of version 7.
 * Refer to the [Upcoming Liberty for Java buildpack changes](https://developer.ibm.com/bluemix/2015/09/08/upcoming-liberty-for-java-buildpack-changes/) blog post for details about these changes and how they may affect your application.
-* The buildpack also introduces app_state configuration option to disable the appstate feature via the JBP_CONFIG_LIBERTY environment variable. The appstate feature integrates with the Cloud Foundry health check process to ensure the Liberty application is fully initialized before the application can receive HTTP requests. To disable the appstate feature, you can set the JBP_CONFIG_LIBERTY environment variable to “app_state: false”.
+* The buildpack also introduces app_state configuration option to disable the appstate feature via the JBP_CONFIG_LIBERTY environment variable. The appstate feature integrates with the Cloud Foundry health check process to ensure the Liberty application is fully initialized before the application can receive HTTP requests. To disable the appstate feature, you can set the JBP_CONFIG_LIBERTY environment variable to "app_state: false".
 
 ### September 4, 2015: Updated Liberty buildpack v1.22-20150824-1104
 * The buildpack supports the [HTTP_PROXY and HTTPS_PROXY environment variables](environmentVariables.html). If set, the buildpack uses the proxy server specified by these environment variables when it downloads various buildpack components.

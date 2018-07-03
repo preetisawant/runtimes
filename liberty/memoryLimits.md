@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-26"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -62,14 +62,14 @@ You can set the heap memory size by using environment variables or by changing t
 * Use the `JVM_ARGS` environment variable and the -Xmx argument. For example to set the maximum heap size to 512M use the command that follows, then restage your app.
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
 * Specify the heap size ratio using the JBP_CONFIG_IBMJDK environment variable.  The heap_size_ratio is a floating point value which specifies how much of memory limit to allocate to the heap.  For example, to allocate half of the available memory to the heap (50% or 0.50), issue the following command and restage your app.
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

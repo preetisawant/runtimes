@@ -186,7 +186,7 @@ To view the `staging_info.yml` file on an application running in a Diego cell, r
 ```
 {: codeblock}
 
-The JVM options for WAR, EAR, server directory and packaged server deployment are persisted in a `jvm.options` file. The `jvm.options` file can be found in the `app/wlp/usr/servers/<serverName>/` directory. In the most cases the ```<serverName>``` is set to `defaultServer` unless a packaged server was deployed with a different server name. For example:
+The JVM options for WAR, EAR, server directory and packaged server deployment are persisted in a `jvm.options` file. The `jvm.options` file can be found in the `app/wlp/usr/servers/<serverName>/` directory. In the most cases the `<serverName>` is set to `defaultServer` unless a packaged server was deployed with a different server name. For example:
 
 To view the `jvm.options` file on an application running in a DEA node, run:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2018-06-21"
 The Tomcat runtime on {{site.data.keyword.Bluemix}} is powered by the java_buildpack.
 {: shortdesc}
 
-To use the Tomcat runtime on {{site.data.keyword.Bluemix_notm}}, you must specify the java_buildpack with the -b option. For example:
+To use the Tomcat runtime on {{site.data.keyword.Bluemix_notm}}, you must specify the java_buildpack with the `-b` option. For example:
 
 ```
-ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+ibmcloud cf push <myApp> -p <pathToMyApp> -b java_buildpack
 ```
 
 For more information about the Tomcat runtime, see the

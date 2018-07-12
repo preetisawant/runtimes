@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -44,11 +44,11 @@ The Liberty tracing configuration can be adjusted for a running application dire
 
 ### Changing trace configuration via SSH
 
-When you push the application, the server.xml file includes the default properties  **updateTrigger** set to **polled** and **monitorInterval** set to 1 minute. The Liberty server is automatically configured to check for updates to the server.xml each minute.
+When you push the application, the server.xml file includes the default properties  **updateTrigger** set to **polled** and **monitorInterval** set to 1 minute. The Liberty server is automatically configured to check for updates to the server.xml file each minute.
 
-See [Push Liberty apps with server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized sever.xml
+See [Push Liberty apps with server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) for options to push Liberty apps with a customized `server.xml` file.
 
-See [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} for how to set up dynamic update in the server.xml.
+See [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} for how to set up dynamic update in the server.xml file.
 
 Follow these steps to change tracing configuration:
 
@@ -59,7 +59,7 @@ Follow these steps to change tracing configuration:
   ```
   {: codeblock}
 
-2. Edit ```<logging traceSpecification="xxxx"/>``` in the server.xml to set your desired trace specification,  for example using *vi*:
+2. Edit `<logging traceSpecification="xxxx"/>` in the server.xml to set your desired trace specification,  for example using *vi*:
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml

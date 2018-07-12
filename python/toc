@@ -9,18 +9,18 @@ Python
     index.md
     {: .navgroup-end}
 
+    {: .navgroup id="howto"}
+    ../common/workingWithProxy.md
+    {: .navgroup-end}
+
     {: .navgroup id="reference"}
     {: .topicgroup}
     Starter applications and community buildpacks
-        [Using the starter applications](../common/starter_app_usage.html)
-        [Using community buildpacks](../common/byob.html)
-    {: .navgroup-end}
-
-    {: .navgroup id="howto"}
-    [Work with a proxy](../common/workingWithProxy.html)
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
-    [Buildpack support statement](../common/buildpackSupport.html)
+    ../common/buildpackSupport.md
     {: .navgroup-end}

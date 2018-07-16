@@ -1,7 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Go" audience="runtime" href="/docs/runtimes/go/getting-started.html"}} Go
+{: .toc subcollection="Go" audience="runtime" href="/docs/runtimes/go/getting-started.html"}}
+Go
 
     {: .navgroup id="learn"}
     getting-started.md

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -29,16 +29,16 @@ lastupdated: "2017-10-26"
     * 在 `index.yml` 檔案中定義 JRE 版本。
 
     ```
-   ---
-   jre_version: https://hostingLocation/jreName.tar.gz
-```
+    ---
+    jre_version: https://hostingLocation/jreName.tar.gz
+    ```
     {: codeblock}
 
     * 包括 JRE 版本 ID 及完整的 JRE 檔案位置。例如：
 
     ```
-       ---
-       1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
+    ---
+    1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
     ```
     {: codeblock}
 
@@ -54,9 +54,9 @@ lastupdated: "2017-10-26"
 ```
 {: codeblock}
 
-發出 `cf se myAPP` 指令來設定 **JBP_CONFIG_OPENJDK** 變數，例如：
+發出 `ibmcloud cf se myAPP` 指令來設定 **JBP_CONFIG_OPENJDK** 變數，例如：
 ```
-$ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
+ibmcloud cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
 ```
 {: codeblock}
 
@@ -64,7 +64,7 @@ $ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.blu
 
 若要設定 JVM 環境變數，請發出下列指令：
 ```
-   $ cf se myApp JVM 'openjdk'
+ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

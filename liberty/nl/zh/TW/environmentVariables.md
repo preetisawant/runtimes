@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -18,18 +18,18 @@ Liberty for Java 支援的環境變數。
 
 <table>
 <tr>
-<th align="left">名稱</th>
+<th align="left">環境變數名稱</th>
 <th align="left">說明</th>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>啟用[應用程式管理公用程式](/docs/manageapps/app_mng.html)</td>
+<td>啟用[應用程式管理公用程式](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>安裝[應用程式管理公用程式](/docs/manageapps/app_mng.html)</td>
+<td>安裝[應用程式管理公用程式](../common/app_mng.html)</td>
 </tr>
 
 <tr>
@@ -102,10 +102,60 @@ Liberty for Java 支援的環境變數。
 <td>停用服務[自動配置](autoConfig.html#opting_out)。</td>
 </tr>
 </table>
+{: caption="表 1. Liberty for Java 可用的環境變數" caption-side="top"}
+
+## Liberty for Java 建置套件中已停用的屬性
+
+Liberty 建置套件會自動停用一些您無法置換的屬性。已停用下列環境變數及屬性。
+
+### 已停用的屬性表格
+
+<table>
+<tr>
+<th>已停用的屬性</th>
+<th>元素</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="表 1. Liberty for Java 已停用的屬性" caption-side="top"}
 
 # 相關鏈結
 {: #rellinks notoc}
 ## 一般
 {: #general notoc}
 * [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

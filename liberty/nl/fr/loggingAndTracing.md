@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -16,12 +16,12 @@ lastupdated: "2018-1-31"
 ## Fichiers journaux
 {: #log_files}
 
-Les journaux Liberty standard, tels que le fichier `messages.log` ou le répertoire `ffdc`, sont disponibles dans {{site.data.keyword.Bluemix}}, dans le répertoire `logs` de chaque instance d'application. Vous pouvez accéder à ces journaux à partir de la console {{site.data.keyword.Bluemix_notm}} ou à via le client de ligne de commande pour Cloud Foundry. Par exemple :
+Les journaux Liberty standard, tels que le fichier `messages.log` ou le répertoire `ffdc`, sont disponibles dans {{site.data.keyword.Bluemix}}, dans le répertoire `logs` de chaque instance d'application. Vous pouvez accéder à ces journaux à partir de la console {{site.data.keyword.Bluemix_notm}} ou à via le client de ligne de commande pour {{site.data.keyword.Bluemix_notm}}. Par exemple :
 
 * Pour accéder aux journaux récents d'une application, exécutez la commande suivante :
 
   ```
-  cf logs --recent <appname>
+  ibmcloud cf logs --recent <appname>
   ```
   {: codeblock}
 
@@ -29,27 +29,22 @@ Les journaux Liberty standard, tels que le fichier `messages.log` ou le réperto
 * Pour voir le fichier `messages.log` d'une application, exécutez la commande suivante :
 
   ```
-  cf ssh <appname> -c "cat logs/messages.log"
+  ibmcloud cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
-Vous
-pouvez définir le niveau de journalisation et d'autres options de trace dans
-le fichier de configuration de Liberty. Pour plus d'informations, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html).
+Vous pouvez définir le niveau de journalisation et d'autres options de trace dans le fichier de configuration de Liberty. Pour plus d'informations, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html).
 
 ## Utilisation des fonctions de trace et de vidage
 {: #using_trace_and_dump}
 
 ### Utilisation des fonctions de trace et de vidage dans la console {{site.data.keyword.Bluemix_notm}} (déprécié)
 
-Vous pouvez ajuster la configuration de traçage Liberty pour une application en cours d'exécution en procédant directement à partir de la console {{site.data.keyword.Bluemix_notm}}. La console offre aussi la possibilité de demander un vidage des unités d'exécution (threads) ou du tas Java (heap).
-Pour ajuster la configuration de traçage ou demander un vidage, sélectionnez une application Liberty dans la console {{site.data.keyword.Bluemix_notm}} et choisissez le menu `Exécution` dans la navigation. Dans la vue `Exécution`, sélectionnez une instance et cliquez sur le bouton *TRACE* ou *VIDAGE*. Si vous ajustez le niveau de trace, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) pour les détails concernant la syntaxe de la spécification de trace.
+Vous pouvez ajuster la configuration de traçage Liberty pour une application en cours d'exécution en procédant directement à partir de la console {{site.data.keyword.Bluemix_notm}}. La console offre aussi la possibilité de demander un vidage des unités d'exécution (threads) ou du tas Java (heap). Pour ajuster la configuration de traçage ou demander un vidage, sélectionnez une application Liberty dans la console {{site.data.keyword.Bluemix_notm}} et choisissez le menu `Exécution` dans la navigation. Dans la vue `Exécution`, sélectionnez une instance et cliquez sur le bouton *TRACE* ou *VIDAGE*. Si vous ajustez le niveau de trace, consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) pour les détails concernant la syntaxe de la spécification de trace.
 
 ### Changement de la configuration de trace via SSH
 
-Lorsque vou poussez l'application, le fichier server.xml inclut la propriété **updateTrigger** réglée sur **polled** par défaut
-et la propriété **monitorInterval** réglée à 1 minute par défaut.
-Cela signifie que le serveur Liberty est automatiquement configuré pour vérifier, chaque minute, si de nouvelles mises à jour ont été apportées au fichier server.xml.
+Lorsque vous envoyez l'application par commande push, le fichier server.xml inclut la propriété **updateTrigger** réglée sur **polled** par défaut et la propriété **monitorInterval** réglée à 1 minute par défaut. Cela signifie que le serveur Liberty est automatiquement configuré pour vérifier, chaque minute, si de nouvelles mises à jour ont été apportées au fichier server.xml.
 
 Consultez [Options pour l'envoi par commande push d'applications Liberty avec server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) pour connaître les options permettant d'envoyer les applications Liberty par commande push avec un fichier server.xml personnalisé.
 
@@ -57,15 +52,14 @@ Consultez [Contrôle des mises à jour dynamiques](https://www.ibm.com/support/k
 
 Suivez ces étapes pour changer la configuration de traçage :
 
-
 1. Connectez-vous à votre application avec SSH
 
   ```
- cf ssh <appname> [-i instance_index]
+ ibmcloud cf ssh <appname> [-i instance_index]
   ```
   {: codeblock}
 
-2. Editez ```<logging traceSpecification="xxxx"/>``` dans le fichier server.xml pour définir votre spécification de trace, par exemple en utilisant *vi* :
+2. Editez `<logging traceSpecification="xxxx"/>` dans le fichier server.xml pour définir votre spécification de trace, par exemple en utilisant *vi* :
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml
@@ -78,12 +72,10 @@ Consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http
 
 ### Déclenchement des vidages via SSL
 
-Pour provoquer un vidage des unités d'exécution et du tas Java via l'interface de ligne
-de commande CF en utilisant la fonction SSH, utilisez la commande suivante :
-
+Pour provoquer un vidage des unités d'exécution et du tas Java via l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} en utilisant la fonction SSH, utilisez la commande suivante :
 
   ```
- cf ssh <appname> -c "pkill -3 java"
+ ibmcloud cf ssh <appname> -c "pkill -3 java"
   ```
   {: codeblock}
 
@@ -92,22 +84,19 @@ Consultez la documentation ci-dessous pour les détails concernant le téléchar
 ## Téléchargement des fichiers de vidage
 {: #download_dumps}
 
-Par défaut, les différents fichiers de vidage sont placés dans le répertoire `dumps` du conteneur de l'application. Utilisez
-l'interface de ligne de commande
-de Cloud Foundry `cf ssh` pour voir et télécharger les fichiers de vidage.
-
+Par défaut, les différents fichiers de vidage sont placés dans le répertoire `dumps` du conteneur de l'application. Utilisez l'interface CLI {{site.data.keyword.Bluemix_notm}} `ibmcloud cf ssh` pour afficher et télécharger les fichiers de vidage.
 
 * Pour voir les vidages générés, exécutez la commande suivante :
 
   ```
-  $ cf ssh <appname> -c "ls -l dumps"
+  ibmcloud cf ssh <appname> -c "ls -l dumps"
   ```
   {: codeblock}
 
 * Pour télécharger un fichier de vidage, exécutez la commande suivante :
 
   ```
-  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ibmcloud cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

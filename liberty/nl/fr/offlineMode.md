@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017
+  years: 2016, 2018
 lastupdated: "2017-10-26"
 
 ---
@@ -14,10 +14,8 @@ lastupdated: "2017-10-26"
 # Utiliser le mode hors ligne pour Liberty
 {: #offline_mode}
 
-Quand une application Liberty est poussée vers {{site.data.keyword.Bluemix}}, le pack de construction Liberty peut accéder à des sites externes à
-{{site.data.keyword.Bluemix_notm}} afin d'obtenir les artefacts requis par l'application.  Les sites externes accessibles au pack de construction Liberty sont répertoriés ci-dessous.  Dans les environnements
-[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
-[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), ces sites peuvent avoir besoin d'être mis en *liste blanche*.
+Quand une application Liberty est envoyée par commande push vers {{site.data.keyword.Bluemix}}, le pack de construction Liberty peut accéder à des sites externes à
+{{site.data.keyword.Bluemix_notm}} afin d'obtenir les artefacts requis par l'application.  Les sites externes accessibles au pack de construction Liberty sont répertoriés ci-dessous.  Dans les environnements [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), ces sites peuvent avoir besoin d'être mis en *liste blanche*.
 
 * https://download.run.pivotal.io et https://java-buildpack.cloudfoundry.org sont utilisés pour accéder aux composants pour :
   * [l'agent AppDynamics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.appdynamics.com/)

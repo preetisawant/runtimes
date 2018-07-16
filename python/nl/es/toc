@@ -12,8 +12,8 @@ Python
     {: .navgroup id="reference"}
     {: .topicgroup}
     Aplicaciones de inicio y compilaciones de la comunidad
-        [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html)
-        [Utilización de compilación de la comunidad](../../cfapps/byob.html)
+        [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html)
+        [Utilización de compilación de la comunidad](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

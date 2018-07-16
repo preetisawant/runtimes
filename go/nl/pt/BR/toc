@@ -15,8 +15,8 @@
     {: .navgroup id="reference"}
     {: .topicgroup}
     Aplicativos iniciadores e buildpacks de comunidade
-        [Usar os aplicativos iniciadores](../../cfapps/starter_app_usage.html)
-        [Usar buildpacks de comunidade](../../cfapps/byob.html)
+        [Usar os aplicativos iniciadores](../common/starter_app_usage.html)
+        [Usar buildpacks de comunidade](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

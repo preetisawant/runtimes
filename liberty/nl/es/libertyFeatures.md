@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -26,8 +26,6 @@ El tiempo de ejecución de Liberty for Java también hace que algunas caracterí
 Tenga en cuenta que un servidor no puede cargar características incompatibles, por lo que debe asegurarse de que se configura para habilitar únicamente características que son compatibles. Consulte
     <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinaciones de características de Java EE 6 y 7 soportadas</a>.
 
-
-
 Para ver una lista completa de las características disponibles en Liberty junto con las versiones de Java EE y otra información, consulte
 [Características de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html) en IBM Knowledge Center.
 
@@ -37,7 +35,7 @@ debido a restricciones de puerto en el entorno de {{site.data.keyword.Bluemix_no
 
 ## Índice de características de Liberty
 {: #libertyfeat_index}
-Salte a la sección de la lista de características mediante el índice siguiente, o bien puede buscar a través de la [lista de características de Liberty](#libertyfeat_list).
+Salte a la sección de la lista de características mediante el índice siguiente, o bien puede buscar a través de la [lista de características de Liberty for Java](#libertyfeat_list).
 
 ### A-E
 * [A](#libertyfeat_A)
@@ -47,6 +45,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 
 ### F-J
 * [F](#libertyfeat_F)
+* [H](#libertyfeat_H)
 * [J](#libertyfeat_J)
 
 ### K-O
@@ -83,7 +82,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 * batchManagement-1.0
 * beanValidation-1.1
 * bells-1.0
-* blueprint-1.0 
+* blueprint-1.0
 
 ### C
 {: #libertyfeat_C}
@@ -93,6 +92,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
+* constrainedDelegation-1.0
 * couchdb-1.0
 
 ### E
@@ -108,6 +108,11 @@ Salte a la sección de la lista de características mediante el índice siguient
 {: #libertyfeat_f}
 
 * federatedRegistry-1.0
+
+### H
+{: #libertyfeat_h}
+
+* httpWhiteboard-1.0
 
 ### J
 {: #libertyfeat_J}
@@ -125,6 +130,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 * jcaInboundSecurity-1.0
 * jdbc-4.0
 * jdbc-4.1
+* jdbc-4.2
 * jms-1.1
 * jms-2.0
 * jmsMdb-3.1
@@ -134,6 +140,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 * jpa-2.1
 * jsf-2.0
 * jsf-2.2
+* jsfContainer-2.2
 * json-1.0
 * jsonp-1.0
 * jsp-2.2
@@ -150,24 +157,32 @@ Salte a la sección de la lista de características mediante el índice siguient
 ### M
 {: #libertyfeat_M}
 * managedBeans-1.0
-* managedBeans-1.0
 * mdb-3.1
 * mdb-3.2
 * mediaServerControl-1.0     
-* microprofile-1.0
-* microprofile-1.2
+* microProfile-1.0
+* microProfile-1.2
+* microProfile-1.3
 * mongodb-2.0
 * monitor-1.0
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
 * oauth-2.0
 * openapi-3.0
+* openapi-3.1
 * openid-2.0
 * openidConnectClient-1.0
 * openidConnectServer-1.0
+* opentracing-1.0
 * osgi.jpa-1.0
 * osgiAppIntegration-1.0
+* osgiBundle-1.0
 * osgiConsole-1.0
 
 ### P
@@ -189,7 +204,6 @@ Salte a la sección de la lista de características mediante el índice siguient
 * servlet-3.0
 * servlet-3.1
 * sessionDatabase-1.0
-* sipServlet-1.1
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0
@@ -223,4 +237,4 @@ Salte a la sección de la lista de características mediante el índice siguient
 ## general
 {: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Visión general de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

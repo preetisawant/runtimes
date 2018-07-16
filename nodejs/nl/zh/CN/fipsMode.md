@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,7 +20,7 @@ Nodejs buildpack V3.2-20160315-1257 及更高版本支持 [FIPS ![外部链接�
 例如：
 
 ```
-$ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
@@ -34,7 +34,7 @@ app.set('etag', false);
 
 
 
-**注**：*无法*同时支持[应用程序管理](/docs/manageapps/app_mng.html)和 FIPS_MODE。如果设置了 BLUEMIX_APP_MGMT_ENABLE 环境变量，并且 FIPS_MODE 环境变量设置为 true，那么应用程序将无法编译打包。
+**注**：*不*同时支持[应用程序管理](../common/app_mng.html)和 FIPS_MODE。如果设置了 BLUEMIX_APP_MGMT_ENABLE 环境变量，并且 FIPS_MODE 环境变量设置为 true，那么应用程序将无法编译打包。
 
 可用于检查 FIPS_MODE 状态的方法很多：
 <ul>
@@ -76,7 +76,7 @@ console.log('ssl version is [' +process.versions.openssl +']');
 
 下表说明了使用 FIPS 的 node.js V4 的行为：
 
-|                 | 结果|
+|                 |结果|
 | :-------------- | :------------ |
 |FIPS_MODE=true|success (1)|
 |FIPS_MODE !=true|success (2)|

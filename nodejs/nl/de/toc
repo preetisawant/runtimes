@@ -13,6 +13,7 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
+    dynatrace.md
 
     {: .topicgroup}
     Offline oder mit einem Proxy arbeiten
@@ -28,8 +29,8 @@ SDK for Node.js
 
     {: .topicgroup}
     Starteranwendungen und Buildpacks
-        [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html)
-        [Community-Buildpacks verwenden](../../cfapps/byob.html)
+        [Starteranwendungen verwenden](../common/starter_app_usage.html)
+        [Community-Buildpacks verwenden](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -37,4 +38,5 @@ SDK for Node.js
     updates.md
     availableVersions.md
     [Unterstützung für Buildpacks](../common/buildpackSupport.html)
+
     {: .navgroup-end}

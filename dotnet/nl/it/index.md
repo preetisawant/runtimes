@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-10-25"
 ---
 
@@ -28,7 +28,7 @@ Il pacchetto di build {{site.data.keyword.Bluemix}} ASP.NET Core viene utilizzat
 {: #starter_application}
 
 {{site.data.keyword.Bluemix_notm}} fornisce un'applicazione starter ASP.NET Core.  L'applicazione starter ASP.NET Core è una semplice applicazione che fornisce un template che puoi utilizzare. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push
-all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicazioni starter](../common/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 # rellinks
 {: #rellinks notoc}

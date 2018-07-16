@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 MSBuild 기반 프로젝트는 스테이징 중에 `dotnet publish` 명령을 사용하여 공개됩니다.  기본적으로 빌드팩은 `Debug` 구성의 애플리케이션을 공개합니다.
 `Release` 구성의 애플리케이션을 공개하려면 `PUBLISH_RELEASE_CONFIG` 환경 변수를 `true`로 설정하십시오.
 
-다음 명령을 사용하여 CloudFoundry CLI에서 이를 수행할 수 있습니다.
+다음 명령을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI에서 이를 수행할 수 있습니다.
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 또는 애플리케이션의 manifest.yml 파일에서 변수를 설정할 수 있습니다.

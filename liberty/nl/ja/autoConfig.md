@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -13,12 +13,12 @@ lastupdated: "2018-02-27"
 # バインドされたサービスの構成
 {: #auto_config}
 
-さまざまなサービスを Liberty for Java アプリケーションにバインドすることができます。サービスは開発者の希望によって、コンテナー管理、アプリケーション管理、またはその両方にできます。
+さまざまなサービスを Liberty for Java アプリケーションにバインドすることができます。 サービスは開発者の希望によって、コンテナー管理、アプリケーション管理、またはその両方にできます。
 
 アプリケーション管理サービスとは、Liberty からの支援は何もなく、完全にアプリケーションによって管理されるサービスのことです。 アプリケーションは、通常、
 VCAP_SERVICES を読み取って、バインドされたサービスについての情報を取得し、サービスに直接アクセスします。 必要なすべてのクライアント・アクセス・コードをアプリケーションが提供します。 Liberty フィーチャーまたは server.xml ファイル構成にはまったく依存しません。 このタイプのサービスには Liberty ビルドパックの自動構成は適用されません。
 
-コンテナー管理サービスとは、Liberty ランタイムによって管理されるサービスのことです。バインドされたサービスをアプリケーションが JNDI で検索する場合もあり、
+コンテナー管理サービスとは、Liberty ランタイムによって管理されるサービスのことです。 バインドされたサービスをアプリケーションが JNDI で検索する場合もあり、
 サービスが Liberty 自体によって直接使用される場合もあります。 Liberty ビルドパックが VCAP_SERVICES を読み取って、
 バインドされたサービスについての情報を取得します。 ビルドパックは、各コンテナー管理サービスに 3 つの機能を実行します。
 
@@ -40,7 +40,7 @@ Liberty ビルドパックは、以下のサービス・タイプに対して自
 * [ElephantSQL](docs/services/ElephantSQL/index.html)
 * [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Compose サービスには、コンテナー管理またはアプリケーション管理のいずれかが可能です。デフォルトでは、Liberty ビルドパックは、これらのサービスはコンテナー管理であると想定し、これらを自動的に構成します。アプリケーションがサービスを管理するようにしたい場合、`services_autoconfig_excludes` 環境変数を設定することで、サービスの自動構成をオプトアウトできます。詳しくは、[『サービス自動構成のオプトアウト』](autoConfig.html#opting_out)を参照してください。
+Compose サービスには、コンテナー管理またはアプリケーション管理のいずれかが可能です。 デフォルトでは、Liberty ビルドパックは、これらのサービスはコンテナー管理であると想定し、これらを自動的に構成します。 アプリケーションがサービスを管理するようにしたい場合、`services_autoconfig_excludes` 環境変数を設定することで、サービスの自動構成をオプトアウトできます。 詳しくは、[『サービス自動構成のオプトアウト』](autoConfig.html#opting_out)を参照してください。
 
 ## Liberty フィーチャーおよびクライアント・アクセス・コードのインストール
 {: #installation_of_liberty_features}
@@ -73,14 +73,14 @@ server.xml ファイルを用意し、コンテナー管理サービスにバイ
 場合によっては、
 バインドしたサービスを Liberty ビルドパックが自動的に構成するのが望ましくないことがあります。 次のようなシナリオが考えられます。
 
-* 自分のアプリケーションが *dashDB* を使用している場合に、このアプリケーションでデータベースへの接続を直接管理したい。ア
+* 自分のアプリケーションが *dashDB* を使用している場合に、このアプリケーションでデータベースへの接続を直接管理したい。 ア
 プリケーションには、必要なクライアント・ドライバー jar が含まれている。 Liberty ビルドパックによる *dashDB* サービスの自動構成を望まない。
-* server.xml ファイルを用意しているところであり、非標準データ・ソース構成が必要なため、*cloudant* インスタンス用の構成スタンザを作成した。この server.xml ファイルを、Liberty ビルドパックによって更新されないようにしたいが、Liberty ビルドパックによって、サポートされている適切なソフトウェアが確実にインストールされるようにもしたい。
+* server.xml ファイルを用意しているところであり、非標準データ・ソース構成が必要なため、*cloudant* インスタンス用の構成スタンザを作成した。 この server.xml ファイルを、Liberty ビルドパックによって更新されないようにしたいが、Liberty ビルドパックによって、サポートされている適切なソフトウェアが確実にインストールされるようにもしたい。
 
 自動サービス構成をオプトアウトするには、
-services_autoconfig_excludes 環境変数を使用します。 この環境変数を manifest.yml に組み込むか、または、cf クライアントを使用してこの環境変数を設定することができます。
+services_autoconfig_excludes 環境変数を使用します。 この環境変数を manifest.yml に組み込むか、または、{{site.data.keyword.Bluemix_notm}} クライアントを使用してこの環境変数を設定することができます。
 
-サービス・タイプごとにサービスの自動構成をオプトアウトすることができます。 完全にオプトアウトする (上の *dashDB* シナリオ) か、または server.xml ファイル構成の更新のみをオプトアウトする (上の *cloudant* シナリオ) ことを選択できます。services_autoconfig_excludes 環境変数に指定する値は、以下に示すようなストリングになります。
+サービス・タイプごとにサービスの自動構成をオプトアウトすることができます。 完全にオプトアウトする (上の *dashDB* シナリオ) か、または server.xml ファイル構成の更新のみをオプトアウトする (上の *cloudant* シナリオ) ことを選択できます。 services_autoconfig_excludes 環境変数に指定する値は、以下に示すようなストリングになります。
 
 * このストリングは、1 つ以上のサービスのオプトアウト指定を含むことができます。
 * 具体的なサービスのオプトアウト指定は、service_type=option で、それぞれの意味は次のとおりです。
@@ -101,9 +101,9 @@ services_autoconfig_excludes 環境変数を使用します。 この環境変�
 {: codeblock}
 
 **重要**: 指定するサービス・タイプは、VCAP_SERVICES 環境変数内で表示されるサービス・ラベルと一致しなければなりません。 空白文字は使用できません。
-**重要**: ```<service_type_specification>``` 内に空白文字を含めることはできません。 空白文字の使用が許可されるのは、複数の ```<service_type_specification>``` インスタンスを区切る場合のみです。
+**重要**: `<service_type_specification>` 内に空白文字を含めることはできません。 空白文字の使用が許可されるのは、複数の `<service_type_specification>` インスタンスを区切る場合のみです。
 
-上記の *dashDB* シナリオのように、特定のサービスに対するすべての自動構成アクションをオプトアウトするには、**all** オプションを使用します。上記の *cloudant* シナリオのように、構成の更新アクションのみをオプトアウトするには、**config** オプションを使用します。
+上記の *dashDB* シナリオのように、特定のサービスに対するすべての自動構成アクションをオプトアウトするには、**all** オプションを使用します。 上記の *cloudant* シナリオのように、構成の更新アクションのみをオプトアウトするには、**config** オプションを使用します。
 
 以下に、*dashDB* シナリオと *cloudant* シナリオの manifest.yml ファイル内のオプトアウト指定の例を示します。
 
@@ -123,15 +123,15 @@ services_autoconfig_excludes 環境変数を使用します。 この環境変�
 コマンド・ライン・インターフェースを使用して、アプリケーションの myapp の services_autoconfig_excludes 環境変数を設定する方法を示します。
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
 VCAP_SERVICES でサービスの *label* を検索するには、以下の例のようなコマンドを発行します。
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -153,10 +153,10 @@ VCAP_SERVICES でサービスの *label* を検索するには、以下の例の
 {: #override_service_config}
 
 場合によっては、自動構成で生成されたサービスのデフォルト構成をオーバーライドしたいことがあります。
-**LBP_SERVICE_CONFIG_xxxx** 環境変数を使用して、サービスをオーバーライドすることができます。環境変数の完全な名前と、オーバーライドの構文例については、以下の表を参照してください。例えば、*elephantSQL* サービスのデフォルト・バージョンをオーバーライドしてバージョン 8.3.4.+ に設定するには、次のようなコマンドを発行します。
+**LBP_SERVICE_CONFIG_xxxx** 環境変数を使用して、サービスをオーバーライドすることができます。 環境変数の完全な名前と、オーバーライドの構文例については、以下の表を参照してください。  例えば、*elephantSQL* サービスのデフォルト・バージョンをオーバーライドしてバージョン 8.3.4.+ に設定するには、次のようなコマンドを発行します。
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 
@@ -200,7 +200,7 @@ VCAP_SERVICES でサービスの *label* を検索するには、以下の例の
 
 <tr>
 <td>elephantsql</td>
-<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 </tr>
 
 <tr>

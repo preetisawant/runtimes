@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,9 +18,10 @@ O tempo de execução do Tomcat no {{site.data.keyword.Bluemix}} foi desenvolvid
 {: shortdesc}
 
 Para usar o tempo de execução do Tomcat no {{site.data.keyword.Bluemix_notm}}, deve-se especificar o java_buildpack com a opção -b. Por exemplo:
-<pre>
-    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
-</pre>
+
+```
+ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+```
 
 Para obter mais informações sobre o tempo de execução do Tomcat, veja o
 [leia-me do java-buildpack](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md).
@@ -28,11 +29,11 @@ Para obter mais informações sobre o tempo de execução do Tomcat, veja o
 ## Aplicativo iniciador
 {: #starter_application}
 
-O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do Tomcat.  O aplicativo iniciador do Tomcat é um app Tomcat simples que fornece um modelo que pode ser usado. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o
-ambiente {{site.data.keyword.Bluemix_notm}}. Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para obter ajuda sobre o uso
+O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do Tomcat.  O aplicativo iniciador do Tomcat é um app Tomcat simples que fornece um modelo que pode ser usado. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
+{{site.data.keyword.Bluemix_notm}}. Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
-## Versões de tempo de execução
+## Versões de runtime
 {: #runtime_versions}
 
 É possível mudar a versão do Tomcat a ser usada por seu app com a variável de ambiente JBP_CONFIG_TOMCAT.

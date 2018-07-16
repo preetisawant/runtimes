@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -62,14 +62,14 @@ Puede establecer el tamaño de la memoria de almacenamiento dinámico utilizando
 * Utilice la variable de entorno `JVM_ARGS` y el argumento -Xmx. Por ejemplo, para establecer el tamaño máximo de memoria de almacenamiento dinámico en 512 M utilice el mandato siguiente y luego vuelva a transferir la app.
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
 * Especifique la proporción del tamaño de almacenamiento dinámico utilizando la variable de entorno JBP_CONFIG_IBMJDK.  La proporción heap_size_ratio es un valor de coma flotante que especifica la cantidad de límite de memoria que se asignará al almacenamiento dinámico.  Por ejemplo, para asignar la mitad de la memoria disponible al almacenamiento dinámico (50% o 0,50), emita el mandato siguiente y vuelva a transferir la app.
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

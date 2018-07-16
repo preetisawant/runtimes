@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -23,29 +23,34 @@ lastupdated: "2018-02-14"
 Seguindo o tutorial de introdução do Python, você vai configurar um ambiente de desenvolvimento, implementará um aplicativo
 localmente e no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados em seu aplicativo.
 
+Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualizadas para a CLI do {{site.data.keyword.Bluemix_notm}}! A CLI do {{site.data.keyword.Bluemix_notm}} tem os mesmos comandos conhecidos do Cloud Foundry, mas com uma melhor integração com as contas do {{site.data.keyword.Bluemix_notm}} e outros serviços. Saiba mais sobre como começar a usar a CLI do {{site.data.keyword.Bluemix_notm}} neste tutorial.
+{: tip}
+
 ## Antes de Começar
 {: #prereqs}
 
 Você precisará do seguinte:
-* [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [ {{site.data.keyword.Bluemix_notm}}  conta ](https://console.bluemix.net/registration/)
+* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [Python ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.python.org/downloads/){: new_window}
 
 ## Etapa 1: clonar o aplicativo de amostra
 {: #clone}
 
-Agora você está pronto para começar a trabalhar com o app. Clone o repositório e mude para o diretório no qual o app de amostra está localizado.
+Primeiro, clone o repositório e mude para o diretório no qual o aplicativo de amostra está localizado.
+
   ```
-git clone https://github.com/IBM-Bluemix/get-started-python
+git clone https://github.com/IBM-Cloud/get-iniciado-python
   ```
-  {: pre}
+  {: codeblock}
+
   ```
 cd get-started-python
   ```
-  {: pre}
+  {: codeblock}
 
-  Examine os arquivos no diretório *get-started-python* para familiarizar-se com o conteúdo.
+Examine os arquivos no diretório *get-started-python* para familiarizar-se com o conteúdo.
 
 ## Etapa 2: executar o app localmente
 {: #run_locally}
@@ -60,20 +65,20 @@ Instale as dependências listadas no arquivo [requirements.txt ![Ícone de link 
   ```
 pip install -r requirements.txt
   ```
-  {: pre}
+  {: codeblock}
 
 Como alternativa, com o Python3 é possível emitir
 
   ```
 python3 -m pip install -r requirements.txt
   ```
-  {: pre}
+  {: codeblock}
 
 Execute o app.
   ```
 python hello.py
   ```
-  {: pre}
+  {: codeblock}
 
  Visualize seu app em: http://localhost:8000
 
@@ -94,106 +99,107 @@ Abra o arquivo manifest.yml e mude o `nome` de `GetStartedPython` para o nome de
   ```
   {: codeblock}
 
-Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **random-route: true** por **host: myChosenHostName**, fornecendo um nome de host de sua preferência. [Saiba mais...](/docs/manageapps/depapps.html#appmanifest)
+Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **random-route: true** por **host: myChosenHostName**, fornecendo um nome de host de sua preferência.
 {: tip}
 
 ## Etapa 4: implementar o app
 {: #deploy}
 
-É possível usar a CLI do Cloud Foundry para implementar apps.
+É possível usar a CLI do {{site.data.keyword.Bluemix_notm}} para implementar apps.
 
-Escolha seu terminal de API
-   ```
-cf api <API-endpoint>
-   ```
-   {: pre}
-
-Substitua o *API-endpoint* no comando por um terminal de API da lista a seguir.
-
-| **Nome da região** | **Local geográfico** | **Endpoint da API** |
-|-----------------|-------------------------|-------------------|
-| Região Sul dos EUA | Dallas, EUA | api.ng.bluemix.net |
-| Região Leste dos EUA | Washington, DC, EUA | api.us-east.bluemix.net |
-| Região do Reino Unido | Londres, Inglaterra | api.eu-gb.bluemix.net |
-| Região de Sydney | Sydney, Austrália | api.au-syd.bluemix.net |
-| Região da Alemanha | Frankfurt, Alemanha | api.eu-de.bluemix.net |
-{: caption="Tabela 1.  {{site.data.keyword.cloud_notm}} lista de região" caption-side="top"}
-
-Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}}
+1. Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}} e selecione um terminal de API.
 
   ```
-cf login
+ibmcloud login
   ```
-  {: pre}
+  {: codeblock}
 
-Se não for possível efetuar login usando os comandos `cf login` ou `bx login` porque você tem um ID de usuário federado, use os comandos `cf login --sso` ou `bx login --sso` para efetuar login com seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
+  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
 
-No diretório *get-started-python*, envie seu app por push para o {{site.data.keyword.Bluemix_notm}}
   ```
-cf push
+ibmcloud login -- sso
   ```
-  {: pre}
+  {: codeblock}
 
-Isso pode levar um minuto. Se houver um erro no processo de implementação, será possível usar o comando `cf logs <Your-App-Name> --recent` para solucionar problemas.
+1. Tenha como destino uma organização e um espaço do Cloud Foundry:
 
-Quando a implementação for concluída, você deverá ver uma mensagem indicando que o app está em execução.  Visualize o app na URL listada na saída do comando push.  Também é possível emitir o comando
+  ```	  
+ibmcloud target --cf
   ```
-cf apps
+  {: codeblock}
+
+  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
+
+1. No diretório *get-started-python*, envie seu app por push para o {{site.data.keyword.Bluemix_notm}}
+
   ```
-  {: pre}
-  para visualizar o status dos apps e ver a URL.
+ibmcloud cf push
+  ```
+  {: codeblock}
+
+  Isso pode levar um minuto. Se houver um erro no processo de implementação, será possível usar o comando `ibmcloud cf logs <Your-App-Name> --recent` para solucionar problemas.
+
+Quando a implementação for concluída, você deverá ver uma mensagem indicando que o app está em execução.  Visualize o app na URL listada na saída do comando push.  Também é possível emitir o comando a seguir para visualizar o status de seus apps e ver a URL.
+
+  ```
+Ibmcloud cf apps
+  ```
+  {: codeblock}
 
 ## Etapa 5: incluir um banco de dados
 {: #add_database}
 
-Em seguida, vamos incluir um banco de dados NoSQL nesse aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
+Em seguida, incluiremos um banco de dados NoSQL do {{site.data.keyword.cloudant_short_notm}} nesse aplicativo e configuraremos o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
 1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
-2. Escolha a seção **Dados e análise de dados**, selecione **Cloudant NoSQL DB** e crie seu serviço.
+2. Escolha a seção **Dados e análise de dados**, selecione o **{{site.data.keyword.cloudant_short_notm}}** e crie o seu serviço.
 3. Acesse a visualização **Conexões**, selecione seu aplicativo e, em seguida, **Criar conexão**.
 4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
-As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte. [Saiba mais...](/docs/manageapps/depapps.html#app_env)
+As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte.
 {: tip}
 
 ## Etapa 6: usar o banco de dados
 {: #use_database}
-Vamos agora atualizar seu código local para apontar para esse banco de dados. Criaremos um arquivo json que armazenará as credenciais dos serviços que o aplicativo usará. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente VCAP_SERVICES.
+Vamos agora atualizar seu código local para apontar para esse banco de dados. Criaremos um arquivo JSON que armazenará as credenciais dos serviços que o aplicativo usará. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente VCAP_SERVICES.
 
 1. Crie um arquivo chamado `vcap-local.json` no diretório `get-started-python` com o conteúdo a seguir:
+
   ```
-  {
-    "services": {
-      "cloudantNoSQLDB": [
+{
+  "services": {
+    "cloudantNoSQLDB": [
         {
-          "credentials": {
-            "username":"CLOUDANT_DATABASE_USERNAME",
+        "credentials": {
+          "username":"CLOUDANT_DATABASE_USERNAME",
             "password":"CLOUDANT_DATABASE_PASSWORD",
             "host":"CLOUDANT_DATABASE_HOST"
-          },
+        },
           "label": "cloudantNoSQLDB"
         }
-      ]
-    }
+    ]
   }
+}
   ```
-  {: pre}
+  {: codeblock}
 
-2. De volta na UI do {{site.data.keyword.Bluemix_notm}}, selecione seu App -> Conexões -> Cloudant -> Visualizar credenciais
+2. Em seu navegador, acesse o painel do {{site.data.keyword.Bluemix_notm}} e selecione **_seu app_ > Conexões**. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e selecione **Visualizar credenciais**.
 
 3. Copie e cole o `nome do usuário`, a `senha` e o `host` das credenciais para os mesmos campos do arquivo `vcap-local.json`, substituindo **CLOUDANT_DATABASE_USERNAME**, **CLOUDANT_DATABASE_PASSWORD** e **CLOUDANT_DATABASE_URL**.
 
 4. Execute seu aplicativo localmente.
+
   ```
 python hello.py
   ```
-  {: pre}
+  {: codeblock}
 
-  Visualize seu app em: http://localhost:8000. Os nomes que você inserir no app serão agora incluídos no banco de dados.
+Visualize seu app em: http://localhost:8000. Os nomes que você inserir no app serão agora incluídos no banco de dados.
 
-  Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados.  Visualize o app {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando push acima.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
+Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados.  Visualize o app {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando push acima.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
 
-Lembre-se, se você não precisar do app em tempo real, pare-o para não incorrer em encargos inesperados.
+Lembre-se: se você não precisar de seu app em tempo real, pare-o para que você não incorra em nenhum encargo inesperado.
 {: tip}
 
 ## Próximas Etapas

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 Los proyectos que se basan en MSBuild ahora se publican utilizando el mandato `dotnet publish` durante la transferencia.  De forma predeterminada, el paquete de compilación publicará la aplicación en la configuración `Debug`.
 Para publicar la aplicación en la configuración `Release`, establezca la variable de entorno `PUBLISH_RELEASE_CONFIG` en `true`.
 
-Puede hacerlo con la CLI de CloudFoundry con el siguiente mandato:
+Puede hacerlo con la CLI de {{site.data.keyword.Bluemix_notm}} con el siguiente mandato:
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 Como alternativa, puede establecer la variable en el archivo manifest.yml de la aplicación:
@@ -54,16 +54,12 @@ Para aplicaciones autocontenidas, la app se podrá enviar por push desde el dire
 {: codeblock}
 .
 
-
-
 Para aplicaciones portables, la app se podrá enviar por push desde el directorio
 ```
   bin/<Debug|Release>/<framework>/publish
 ```
 {:codeblock}
 .
-
-
 
 Tenga en cuenta que si utiliza un archivo manifest.yml en la aplicación, puede especificar la vía de acceso a la carpeta de salida de publicación en manifest.yml.  Después no tendrá que estar en esa carpeta cuando envíe por push la aplicación.
 

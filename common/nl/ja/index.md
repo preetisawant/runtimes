@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -27,12 +27,12 @@ lastupdated: "2018-01-23"
 # ビルドパックについて
 {: #about_buildpacks}
 
-Cloud Foundry ビルドパックは、Cloud Foundry 環境のアプリケーションに対するランタイム・サポートを提供します。アプリケーションを {{site.data.keyword.cloud}} にデプロイすると、該当のアプリケーション・タイプをサポートするビルドパックが開始されます。{{site.data.keyword.cloud_notm}} は、Java EE、Node.js、ASP.Net、Swift、およびその他のアプリケーション・タイプに対する Cloud Foundry ビルドパック・サポートを提供します。
+Cloud Foundry ビルドパックは、Cloud Foundry 環境のアプリケーションに対するランタイム・サポートを提供します。 アプリケーションを {{site.data.keyword.cloud}} にデプロイすると、該当のアプリケーション・タイプをサポートするビルドパックが開始されます。 {{site.data.keyword.cloud_notm}} は、Java EE、Node.js、ASP.Net、Swift、およびその他のアプリケーション・タイプに対する Cloud Foundry ビルドパック・サポートを提供します。
 {{site.data.keyword.cloud_notm}} に含まれるビルドパックを使用して、アプリケーションをデプロイし、サービスにバインドすることができます。
 
 *  Cloud Foundry (Cloud Foundry)
 
-    Cloud Foundry は、アプリケーション・ライフサイクル自動化用のオープン・ソースのプラットフォームである。{{site.data.keyword.Bluemix}} は、Platform as a Service の Cloud Foundry をベースに構築されている。詳しくは、[Cloud Foundry の資料](https://www.cloudfoundry.org/learn/)を参照。
+    Cloud Foundry は、アプリケーション・ライフサイクル自動化用のオープン・ソースのプラットフォームである。  {{site.data.keyword.Bluemix}} は、Platform as a Service の Cloud Foundry をベースに構築されている。 詳しくは、[Cloud Foundry の資料](https://www.cloudfoundry.org/learn/)を参照。
 
 *  Cloud Foundry アプリケーション (Cloud Foundry Application)
 
@@ -40,11 +40,11 @@ Cloud Foundry ビルドパックは、Cloud Foundry 環境のアプリケーシ�
 
 *  ビルドパック (Buildpack)
 
-   ビルドパックは通常、{{site.data.keyword.Bluemix_notm}} によって提供されるソフトウェアの言語固有のパッケージである。 アプリケーションが {{site.data.keyword.Bluemix_notm}} にデプロイされると、そのアプリケーションに適したビルドパックが選択される。 ビルドパックは、アプリケーションのランタイム環境をプロビジョンする。  コマンド・ラインから `cf buildpacks` コマンドを発行して、{{site.data.keyword.Bluemix_notm}} で提供されている一連のビルドパックを表示できる。
+   ビルドパックは通常、{{site.data.keyword.Bluemix_notm}} によって提供されるソフトウェアの言語固有のパッケージである。 アプリケーションが {{site.data.keyword.Bluemix_notm}} にデプロイされると、そのアプリケーションに適したビルドパックが選択される。 ビルドパックは、アプリケーションのランタイム環境をプロビジョンする。  コマンド・ラインから `ibmcloud cf buildpacks` コマンドを発行して、{{site.data.keyword.Bluemix_notm}} で提供されている一連のビルドパックを表示できる。
 
 *  ランタイム (Runtime)
 
-   ランタイムとは、アプリケーションの実行環境を提供する一連のソフトウェア・コンポーネントである。用語「*ランタイム (runtime)*」と用語「*ビルドパック (buildpack)*」は、同じ意味で使用されることがある。  ビルドパックでアプリケーションのデプロイが完了すると、ランタイム環境が設定される。
+   ランタイムとは、アプリケーションの実行環境を提供する一連のソフトウェア・コンポーネントである。  用語「*ランタイム (runtime)*」と用語「*ビルドパック (buildpack)*」は、同じ意味で使用されることがある。  ビルドパックでアプリケーションのデプロイが完了すると、ランタイム環境が設定される。
 
 *  ボイラープレート (Boilerplate)
 

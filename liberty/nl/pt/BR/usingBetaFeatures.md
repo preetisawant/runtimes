@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-23"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -17,93 +17,78 @@ modelos de programação e de funcionalidade que podem ser incluídos em uma lib
 do Liberty. A maioria dos recursos beta também podem ser usados em aplicativos
 implementados no {{site.data.keyword.Bluemix}}.
 
-**Importante**: os recursos beta são somente para propósitos de teste e desenvolvimento e não podem ser usados em produção. Para obter os termos de
-uso completos, consulte o [
-contrato de licença beta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
+**Importante**: os recursos beta são apenas para propósitos de desenvolvimento e de teste e não podem ser
+usados em produção. Para obter os termos completos de uso, consulte o
+[contrato de
+licença beta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html).
 
-Recursos beta do Liberty disponíveis no {{site.data.keyword.Bluemix_notm}}
-<table>
-<tr>
-<th align="left">Recursos</th>
-</tr>
+| Recursos |
+| ------ |
+| `appSecurity-3.0` |
+| `audit-1.0` |
+| `beanValidation-2.0` |
+| `cdi-2.0` |
+| `javaee-8.0` |
+| `javaeeClient-8.0` |
+| `jaxrs-2.1` |
+| `jpa-2.2` |
+| `jpaContainer-2.2` |
+| `jsf-2.3` |
+| `jsfContainer-2.3` |
+| `jsonb-1.0` |
+| `jsonbContainer-1.0` |
+| `jsonp-1.1` |
+| `jsonpContainer-1.1` |
+| `logstashCollector-1.1` |
+| `servlet-4.0` |
+| `usageMetering-1.0` |
+| `validator-1.0` |
+| `webProfile-8.0` |
+{: caption="Tabela 1. Recursos do Liberty Beta disponíveis no Liberty for Java em{{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
-<tr>
-    <tr><td>appSecurity-3.0</tr></td>
-    <tr><td>audit-1.0</tr></td>
-    <tr><td>beanValidation-2.0</tr></td>
-    <tr><td>bluemixLogCollector-1.1</tr></td>
-    <tr><td>cdi-2.0</tr></td>
-    <tr><td>javaee-8.0</tr></td>
-    <tr><td>javaeeClient-8.0</tr></td>
-    <tr><td>jaxrs-2.1</tr></td>
-    <tr><td>jpa-2.2</tr></td>
-    <tr><td>jpaContainer-2.2</tr></td>
-    <tr><td>jsf-2.3</tr></td>
-    <tr><td>jsfContainer-2.2</tr></td>
-    <tr><td>jsonb-1.0</tr></td>
-    <tr><td>jsonbContainer-1.0</tr></td>
-    <tr><td>jsonp-1.1</tr></td>
-    <tr><td>jsonpContainer-1.1</tr></td>
-    <tr><td>logstashCollector-1.1</tr></td>
-    <tr><td>mpConfig-1.2</tr></td>
-    <tr><td>mpOpenAPI-1.0</tr></td>
-    <tr><td>mpRestClient-1.0</tr></td>
-    <tr><td>opentracing-1.0</tr></td>
-    <tr><td>servlet-4.0</tr></td>
-    <tr><td>validator-1.0</tr></td>
-    <tr><td>webProfile-8.0</tr></td>
 
-</tr>
-</table>
-
-Para usar os recursos beta do Liberty no {{site.data.keyword.Bluemix_notm}} você precisará fazer o seguinte:
+Para usar os recursos beta do Liberty no {{site.data.keyword.Bluemix_notm}}, será necessário fazer o seguinte:
 
 1. [Implemente um diretório do servidor ou um servidor em pacote](optionsForPushing.html) com um ou mais recursos beta ativados no arquivo server.xml como no exemplo a seguir:
-```
-    <server>
-        <featureManager>
-            <feature>jsp-2.3</feature>
-            <feature>mpOpenAPI-1.0</feature>
-        </featureManager>
-    </server>
-```
-{: #codeblock}
 
-2.  Configure a variável de ambiente **IBM_LIBERTY_BETA** como **true**. Essa variável direciona o buildpack do Liberty para instalar
+  ```
+<server>
+    <featureManager>
+        <feature>servlet-4.0</feature>
+        <feature>webProfile-8.0</feature>
+    </featureManager>
+</server>
+  ```
+  {: .codeblock}
+
+2.  Configure a variável de ambiente `IBM_LIBERTY_BETA` como `true`. Essa variável direciona o buildpack do Liberty para instalar
 e ativar os recursos beta em seu aplicativo.  Por exemplo:
-  * usando a ferramenta de linha de comandos cf:
-```
-       $ cf set-env <yourappname> IBM_LIBERTY_BETA true
-```
-{: #codeblock}
+  * Usando o [ {{site.data.keyword.Bluemix_notm}}  CLI (../ ../cli/reference/bluemix_cli/download_cli.html):
+    ```
+    ibmcloud cf set-env < yourappname> IBM_LIBERTY_BETA true
+    ```
+    {: .codeblock}
 
-  * ou usando o arquivo manifest.yml:
-```
+  * Ou, usando o arquivo `manifest.yml`:
+    ```
       env:
           IBM_LIBERTY_BETA: "true"
-```
+    ```
+    {: .codeblock}
 
-3. Configure a variável de ambiente **JBP_CONFIG_LIBERTY** como
-**"version: +"**. Essa variável ativa o [tempo de execução mensal do Liberty](buildpackDefaults.html#liberty_versions) que suporta recursos beta. Por exemplo:
-  * usando a ferramenta de linha de comandos cf:
-```
-       $ cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
-```
-{: #codeblock}
+3. Configure a variável de ambiente `JBP_CONFIG_LIBERTY` como
+`"version: +"`. Essa variável ativa o [Tempo de execução mensal do Liberty ](buildpackDefaults.html#liberty_versions), que suporta os recursos beta. Por exemplo:
+  * Usando a ferramenta CLI do  {{site.data.keyword.Bluemix_notm}} :
+    ```
+    ibmcloud cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"
+    ```
+    {: .codeblock}
 
-  * ou usando o arquivo manifest.yml:
-```
+  * Ou, usando o arquivo `manifest.yml`:
+    ```
       env:
           JBP_CONFIG_LIBERTY: "version: +"
-```
+    ```
+    {: .codeblock}
 
-Se você estiver ativando os recursos beta em um aplicativo existente, não se esqueça de remontar seu aplicativo após a configuração das variáveis de ambiente.
-
-{: #codeblock}
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty for Java](index.html)
-* [Visão geral do Liberty](https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html)
+Se você estiver ativando os recursos beta em um aplicativo existente, não se esqueça de remontar o seu aplicativo depois de configurar as variáveis de ambiente.

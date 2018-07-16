@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-27"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,15 +20,15 @@ lastupdated: "2017-10-27"
 
 Il pacchetto di build **sdk-for-nodejs** ha la precedenza su **nodejs_buildpack** in {{site.data.keyword.Bluemix_notm}}. Se vuoi
 utilizzare **nodejs_buildpack** con la tua applicazione invece del pacchetto di build **sdk-for-nodejs**, devi
-specificare il tuo pacchetto di build, ad esempio utilizzando l'opzione `-b` con il comando **cf push**.
+specificare il tuo pacchetto di build, ad esempio utilizzando l'opzione `-b` con il comando `ibmcloud cf push`.
 
-Di norma, sono disponibili il pacchetto di build **sdk-for-nodejs** e una versione back-level.  Per visualizzare tutti i pacchetti di build disponibili, utilizza il comando **cf buildpacks**.  Ad esempio:
+Di norma, sono disponibili il pacchetto di build **sdk-for-nodejs** e una versione back-level.  Per visualizzare tutti i pacchetti di build disponibili, utilizza il comando `ibmcloud cf buildpacks`.  Ad esempio:
 
 ```
-   cf buildpacks
+   ibmcloud cf buildpacks
    Getting buildpacks...
 
-   buildpack                                 position   enabled   locked   filename   
+   buildpack                                 position   enabled   locked   filename
 
    sdk_for_nodejs                            2          true      false    buildpack_sdk-for-nodejs_v2.8-20151209-1403.zip   
    nodejs_buildpack                          5          true      false    nodejs_buildpack-cached-v1.5.0.zip   

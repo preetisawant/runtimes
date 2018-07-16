@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -28,15 +28,14 @@ lastupdated: "2018-01-23"
 {: #about_buildpacks}
 
 Os buildpacks do Cloud Foundry fornecem o suporte de tempo de execução para aplicativos no ambiente do Cloud Foundry. Ao
-implementar um aplicativo para {{site.data.keyword.cloud}}, ele inicia um buildpack que suporta seu tipo de aplicativo. 
-O {{site.data.keyword.cloud_notm}} fornece suporte de buildpack do Cloud Foundry para Java EE, Node.js, ASP.Net, Swift e
+implementar um aplicativo para {{site.data.keyword.cloud}}, ele inicia um buildpack que suporta seu tipo de aplicativo. O {{site.data.keyword.cloud_notm}} fornece suporte de buildpack do Cloud Foundry para Java EE, Node.js, ASP.Net, Swift e
 outros tipos de aplicativos.
 É possível usar os buildpacks incluídos com o {{site.data.keyword.cloud_notm}} para implementar aplicativos e ligá-los a
 serviços.
 
 *  Cloud Foundry
 
-    Cloud Foundry é uma plataforma de software livre para automação de ciclo de vida do aplicativo. O {{site.data.keyword.Bluemix}}
+    Cloud Foundry é uma plataforma de software livre para automação de ciclo de vida do aplicativo.  O {{site.data.keyword.Bluemix}}
 baseia-se na plataforma do Cloud Foundry como serviço. Consulte a documentação do [Cloud Foundry](https://www.cloudfoundry.org/learn/) para saber mais.
 
 *  Aplicativo Cloud Foundry
@@ -46,13 +45,11 @@ baseia-se na plataforma do Cloud Foundry como serviço. Consulte a documentaçã
 
 *  Buildpack
 
-   Um buildpack é geralmente um pacote de software específico da linguagem fornecido pelo {{site.data.keyword.Bluemix_notm}}. Quando um aplicativo é implementado no {{site.data.keyword.Bluemix_notm}}, um buildpack apropriado para o aplicativo é escolhido. O buildpack provisiona o ambiente de tempo de execução para o aplicativo.  
-É possível consultar o conjunto de buildpacks fornecidos pelo {{site.data.keyword.Bluemix_notm}} emitindo o comando `cf
-buildpacks` na linha de comandos.
+   Um buildpack é geralmente um pacote de software específico da linguagem fornecido pelo {{site.data.keyword.Bluemix_notm}}. Quando um aplicativo é implementado no {{site.data.keyword.Bluemix_notm}}, um buildpack apropriado para o aplicativo é escolhido. O buildpack provisiona o ambiente de tempo de execução para o aplicativo.  É possível ver o conjunto de buildpacks fornecidos pelo {{site.data.keyword.Bluemix_notm}} emitindo o comando `ibmcloud cf buildpacks` da linha de comandos.
 
 *  Tempo de execução
 
-   Um tempo de execução é o conjunto de componentes de software que fornecem o ambiente de execução para um aplicativo. Os termos *tempo de execução* e *buildpack* são, às vezes, usados de modo intercambiável.  Quando um buildpack termina a implementação de um aplicativo, o ambiente de tempo de execução é estabelecido.
+   Um tempo de execução é o conjunto de componentes de software que fornecem o ambiente de execução para um aplicativo.  Os termos *tempo de execução* e *buildpack* são, às vezes, usados de modo intercambiável.  Quando um buildpack termina a implementação de um aplicativo, o ambiente de tempo de execução é estabelecido.
 
 *  Modelo
 

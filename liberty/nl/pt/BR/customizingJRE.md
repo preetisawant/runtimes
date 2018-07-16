@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -27,29 +27,28 @@ conteúdo do JRE leve, consulte
  {{site.data.keyword.IBM_notm}}JRE versão 8 é usado por padrão. Use a variável de ambiente JBP_CONFIG_IBMJDK para especificar uma versão alternativa do {{site.data.keyword.IBM_notm}} JRE. Por exemplo, para usar o
 {{site.data.keyword.IBM_notm}} JRE 7.1 mais recente, configure a seguinte variável de ambiente:
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
 A
 propriedade da versão pode ser configurada para um intervalo de versão. Existem dois intervalos
-de versão suportados: 1.7.+ e 1.8.+. Para obter os melhores resultados, use Java 8.
+de versão suportados: 1.7.+ e 1.8.+. Para obter os melhores resultados, use Java 8.  O Java 7 foi removido do buildpack do Liberty na versão 3.19.  
 
 ## OpenJDK
 {: #openjdk}
 
 Opcionalmente, os aplicativos podem ser
-configurados para execução com o OpenJDK como o JRE. Para ativar um aplicativo para execução com o OpenJDK, configure a variável de ambiente da JVM como “openjdk”. Por
-exemplo, usando a ferramenta de linha de comandos cf, execute o comando:
+configurados para execução com o OpenJDK como o JRE. Para ativar um aplicativo para execução com o OpenJDK, configure a variável de ambiente da JVM (Java virtual machine) como "openjdk". Por exemplo, usando a ferramenta de linha de comandos {{site.data.keyword.Bluemix_notm}}, execute o comando:
 ```
-    $ cf set-env myapp JVM 'openjdk'
+    ibmcloud cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 Se ativado, o OpenJDK versão 8 é usado, por padrão. Use a variável de ambiente JBP_CONFIG_OPENJDK para especificar uma versão alternativa do OpenJDK. Por exemplo, para usar o mais recente OpenJDK 7,
 configure a variável de ambiente a seguir:
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -87,7 +86,7 @@ aplicativo está esgotada.
   * Ajuste de virtualização (somente {{site.data.keyword.IBM_notm}} JRE).
   * roteamento de informações nos recursos de memória disponível do aplicativo
 no momento da falha para o Loggregator.
-  * se um aplicativo estiver configurado para ativar os dumps de memória da JVM, o encerramento de processos Java será desativado e os dumps de memória da JVM serão roteados para um diretório "dumps" de aplicativo comum. Esses dumps podem ser visualizados no painel {{site.data.keyword.Bluemix_notm}} ou da CLI do Cloud Foundry.
+  * se um aplicativo estiver configurado para ativar os dumps de memória da JVM, o encerramento de processos Java será desativado e os dumps de memória da JVM serão roteados para um diretório "dumps" de aplicativo comum. Esses dumps podem então ser visualizados do painel do {{site.data.keyword.Bluemix_notm}} ou da CLI do {{site.data.keyword.Bluemix_notm}}.
 
 A seguir está uma configuração da JVM padrão de exemplo que é gerada pelo buildpack para um aplicativo que é implementado com um Limite de memória de 512 M:
 
@@ -198,7 +197,8 @@ Liberty</td>
 ### Determinando as opções da JVM aplicadas de um aplicativo em execução
 {: #determining_applied_jvm_options}
 
-Exceto para opções definidas pelo aplicativo que são especificadas com a variável de ambiente JVM_ARGS, as opções resultantes são persistidas no ambiente de tempo de execução como opções da linha de comandos (aplicativos Java independentes) ou em um arquivo	`jvm.options` (aplicativos Java não independentes). As opções da JVM aplicadas para o aplicativo podem ser visualizadas do console do {{site.data.keyword.Bluemix_notm}} ou da CLI do Cloud Foundry.
+Exceto para opções definidas pelo aplicativo que são especificadas com a variável de ambiente JVM_ARGS, as opções resultantes são persistidas no ambiente de tempo de execução como opções da linha de comandos (aplicativos Java independentes) ou em um arquivo	`jvm.options` (aplicativos Java não independentes). As opções da JVM aplicadas para o aplicativo podem ser visualizadas por meio do console do
+{{site.data.keyword.Bluemix_notm}} ou da CLI do {{site.data.keyword.Bluemix_notm}}.
 
 As opções da JVM para aplicativo Java independente
 são persistidas como opções da linha de comandos. Elas podem ser visualizadas por meio do arquivo `staging_info.yml`.
@@ -206,30 +206,30 @@ são persistidas como opções da linha de comandos. Elas podem ser visualizadas
 Para visualizar o arquivo `staging_info.yml` em um aplicativo em execução em um nó DEA, execute:
 
 ```
-    $ cf files myapp staging_info.yml
+    ibmcloud cf files myapp staging_info.yml
 ```
 {: codeblock}
 
 Para visualizar o arquivo `staging_info.yml` em um aplicativo em execução em uma célula do Diego, execute:
 
 ```
-    $ cf ssh myapp -c "cat staging_info.yml"
+    ibmcloud cf ssh myapp -c "cat staging_info.yml"
 ```
 {: codeblock}
 
-As opções da JVM para WAR, EAR, diretório do servidor e implementação do servidor em pacote são persistidas em um arquivo `jvm.options`. O arquivo `jvm.options` pode ser localizado no diretório `app/wlp/usr/servers/<serverName>/`. Na maioria dos casos o ```<serverName>``` é configurado como `defaultServer`, a menos que um servidor em pacote tenha sido implementado com um nome de servidor diferente. Por exemplo:
+As opções da JVM para WAR, EAR, diretório do servidor e implementação do servidor em pacote são persistidas em um arquivo `jvm.options`. O arquivo `jvm.options` pode ser localizado no diretório `app/wlp/usr/servers/<serverName>/`. Na maioria dos casos, o  `<serverName>` é configurado como `defaultServer`, a menos que um servidor compactado tenha sido implementado com um nome de servidor diferente. Por exemplo:
 
 Para visualizar o arquivo `jvm.options` em um aplicativo em execução em um nó DEA, execute:
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 Para visualizar o arquivo `jvm.options` em um aplicativo em execução em uma célula do Diego, execute:
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
 
@@ -249,22 +249,22 @@ Implementando um aplicativo com opções customizadas da JVM para ativar a cria�
 * Para visualizar o arquivo de log de coleta de lixo detalhada gerado pela JVM em um aplicativo em execução em um nó DEA, execute:
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
 * Para visualizar o arquivo de log de coleta de lixo detalhada gerado pela JVM em um aplicativo em execução em uma célula do Diego, execute:
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
 ```
 {: codeblock}
 
 * Para atualizar a opção {{site.data.keyword.IBM_notm}} JRE de um aplicativo implementado para acionar um heap, snap e javacore em uma condição OutOfMemory, configure a variável de ambiente do aplicativo com a opção JVM e reinicie o aplicativo:
 
 ```
-    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
-    $ cf restart myapp
+    ibmcloud cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    ibmcloud cf restart myapp
 ```
 {: codeblock}
 

@@ -17,12 +17,12 @@ Tomcat
     {: .navgroup id="reference"}
     {: .topicgroup}
     Applications de démarrage et packs de construction de communauté
-        [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html)
-        [Utilisation des packs de construction de communauté](../../cfapps/byob.html)
+        [Utilisation des applications de démarrage](../common/starter_app_usage.html)
+        [Utilisation des packs de construction de communauté](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-        ts_index.md
+    ts_index.md
     [Versions d'environnement d'exécution](index.html#runtime_versions)
     [Déclaration de prise en charge pour les packs de construction](../common/buildpackSupport.html)
     {: .navgroup-end}

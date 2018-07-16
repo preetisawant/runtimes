@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-13"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -24,10 +24,9 @@ NPM 提供了脚本编制功能，允许您运行脚本，其中包括分别适�
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} 为每个节点应用程序保留一个高速缓存目录，并且将在构建之间持久存储该目录。高速缓存会存储解析的依赖项，这样每次部署应用程序时就不需要再下载和安装这些依赖项。例如，假设 myapp 依赖于 **express**。那么第一次部署 myapp 时会下载 **express** 模块。在后续部署 myapp 时，会使用高速缓存的 **express** 实例。缺省行为是对 NPM 安装的所有 node_modules 以及 bower 安装的 bower_components 进行高速缓存。
 
-使用 NODE_MODULES_CACHE 变量来确定 Node buildpack 是使用还是忽略先前构建的高速缓存。缺省值为 true。要禁用高速缓存，请将 NODE_MODULES_CACHE 设置为 false，例如，通过 cf 命令行：
-
+使用 NODE_MODULES_CACHE 变量来确定 Node buildpack 是使用还是忽略先前构建的高速缓存。缺省值为 true。要禁用高速缓存，请将 NODE_MODULES_CACHE 设置为 false，例如，通过 {{site.data.keyword.Bluemix_notm}} 命令行来进行设置：
 ```
-$ cf set-env myapp NODE_MODULES_CACHE false
+    ibmcloud cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 

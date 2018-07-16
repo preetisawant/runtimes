@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-02-08"
 
 ---
@@ -13,9 +13,7 @@ lastupdated: "2017-02-08"
 # Surveillance de Liberty for Java
 {: #monitoring_liberty}
 
-Pendant leur exécution sur {{site.data.keyword.Bluemix}}, les applications
-Liberty for Java peuvent être surveillées au moyen d'une variété de fonctionnalités et de
-services.
+Pendant leur exécution sur {{site.data.keyword.Bluemix}}, les applications Liberty for Java peuvent être surveillées au moyen d'une variété de fonctionnalités et de services.
 {: shortdesc}
 
 Consultez les liens suivants :
@@ -34,4 +32,3 @@ Pour surveiller Liberty avec *Dynatrace*, consultez [Utilisation de Dynatrace](d
 {: #newrelic notoc}
 
 Pour surveiller Liberty avec *New Relic*, consultez [Utilisation de New Relic](newRelic.html)
-

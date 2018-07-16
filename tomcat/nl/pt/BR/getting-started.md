@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,15 +20,17 @@ lastupdated: "2018-02-14"
 
 * {: download} Parabéns, você implementou um aplicativo de amostra Hello World no {{site.data.keyword.Bluemix}}!  Para iniciar, siga este guia passo a passo. Ou <a class="xref" href="http://bluemix.net" target="_blank" title="(Fazer download de código de amostra)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Fazer download de código do aplicativo" />faça download do código de amostra</a> e explore você mesmo.
 
-Seguindo o tutorial de introdução do Tomcat, você irá configurar um ambiente de desenvolvimento, implementará um aplicativo
-localmente e no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados em seu aplicativo.
+Seguindo este tutorial de introdução, você configurará um ambiente de desenvolvimento, implementará um app localmente e no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados ao seu app.
+
+Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualizadas para a CLI do {{site.data.keyword.Bluemix_notm}}! A CLI do {{site.data.keyword.Bluemix_notm}} tem os mesmos comandos conhecidos do Cloud Foundry, mas com uma melhor integração com as contas do {{site.data.keyword.Bluemix_notm}} e outros serviços. Saiba mais sobre como começar a usar a CLI do {{site.data.keyword.Bluemix_notm}} neste tutorial.
+{: tip}
 
 ## Antes de Começar
 {: #prereqs}
 
 Você precisará do seguinte:
-* [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [ {{site.data.keyword.Bluemix_notm}}  conta ](https://console.bluemix.net/registration/)
+* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
 * [Eclipse IDE for Java EE Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://maven.apache.org/download.cgi){: new_window}
@@ -38,16 +40,16 @@ Você precisará do seguinte:
 ## Etapa 1: clonar o aplicativo de amostra
 {: #clone}
 
-Agora você está pronto para começar a trabalhar com o app Tomcat de amostra. Clone o repositório e mude para o diretório no qual o app de amostra está localizado.
-```
-git clone https://github.com/IBM-Bluemix/get-started-tomcat
-```
-{: pre}
+Clone o repositório e mude para o diretório no qual o app de amostra está localizado.
+  ```
+git clone https://github.com/IBM-Cloud/get-iniciado-tomcat
+  ```
+{: codeblock}
 
-```
+  ```
 cd get-started-tomcat
-```
-{: pre}
+  ```
+{: codeblock}
 
 Examine os arquivos no diretório *get-started-tomcat* para familiarizar-se com o conteúdo.
 
@@ -56,23 +58,21 @@ Examine os arquivos no diretório *get-started-tomcat* para familiarizar-se com 
 
 Deve-se instalar as dependências e construir um arquivo .war conforme definido no arquivo pom.xml para executar o app.
 
-Instale as dependências.
-
-```
+1. Instale as dependências.
+  ```
 mvn clean install  
-```
-{: pre}
+  ```
+  {: codeblock}
 
+1. Copie GetStartedTomcat.war do diretório `target` para o diretório `tomcat-install-dir` `webapps`.
 
-Copie GetStartedTomcat.war do diretório `target` para o diretório `tomcat-install-dir` `webapps`.
-
-Execute o app.  
-```
+1. Execute o app.  
+  ```
 <tomcat-install-dir>/bin/startup.bat|.sh
-```
-{: pre}
+  ```
+  {: codeblock}
 
-Visualize seu app em: http://localhost:8080/GetStartedTomcat/
+1. Visualizar o seu aplicativo na URL a seguir: http://localhost:8080/GetStartedTomcat/
 
 Use `shutdown.bat|.sh` para parar seu app.  Observe que poderá ser necessário fornecer a permissão de execução aos comandos.
 {: tip}
@@ -95,67 +95,63 @@ Abra o arquivo manifest.yml e mude o `nome` de `GetStartedTomcat` para o nome de
   ```
   {: codeblock}
 
-Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **random-route: true** por **host: myChosenHostName**, fornecendo um nome de host de sua preferência. [Saiba mais...](/docs/manageapps/depapps.html#appmanifest)
+Nesse arquivo manifest.yml, **`random-route: true`** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **`random-route: true`** por **`host: myChosenHostName`**, fornecendo um nome de host de sua preferência.
 {: tip}
 
 ## Etapa 4: implementar o app
 {: #deploy}
 
-É possível usar a CLI do Cloud Foundry para implementar apps.
+É possível usar a CLI do {{site.data.keyword.Bluemix_short}} para implementar apps.
 
-Escolha seu terminal de API
+1. Efetue login em sua conta do {{site.data.keyword.Bluemix_short}} e selecione um terminal de API.
 
-```
-cf api <API-endpoint>
-```
-{:pre}
-
-Substitua o *API-endpoint* no comando por um terminal de API da lista a seguir.
-
-| **Nome da região** | **Local geográfico** | **Endpoint da API** |
-|-----------------|-------------------------|-------------------|
-| Região Sul dos EUA | Dallas, EUA | api.ng.bluemix.net |
-| Região Leste dos EUA | Washington, DC, EUA | api.us-east.bluemix.net |
-| Região do Reino Unido | Londres, Inglaterra | api.eu-gb.bluemix.net |
-| Região de Sydney | Sydney, Austrália | api.au-syd.bluemix.net |
-| Região da Alemanha | Frankfurt, Alemanha | api.eu-de.bluemix.net |
-{: caption="Tabela 1.  {{site.data.keyword.cloud_notm}} lista de região" caption-side="top"}
-
-Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}}:
-
-```
-cf login
-```
-{: pre}
-
-Se não for possível efetuar login usando os comandos `cf login` ou `bx login` porque você tem um ID de usuário federado, use os comandos `cf login --sso` ou `bx login --sso` para efetuar login com seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
-
-No diretório *get-started-tomcat*, envie seu app por push para o {{site.data.keyword.Bluemix_notm}}
-```
-cf push
-```
-{: pre}
-
-Isso pode levar aproximadamente dois minutos. Se houver um erro no processo de implementação, será possível usar o comando `cf logs <Your-App-Name> --recent` para solucionar problemas.
-
-Quando a implementação for concluída, você deverá ver uma mensagem indicando que o app está em execução.  Visualize o app na URL listada na saída do comando push.  Também é possível emitir o comando
   ```
-cf apps
+ibmcloud login
   ```
-  {: pre}
-  para visualizar o status dos apps e ver a URL.
+  {: codeblock}
+
+  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
+
+  ```
+ibmcloud login -- sso
+  ```
+  {: codeblock}
+
+1. Em seguida, destine a organização e o espaço de um Cloud Foundry:
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
+
+  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
+
+1. De dentro do diretório *get-started-tomcat*, envie o seu aplicativo por push para o {{site.data.keyword.Bluemix_notm}}
+  ```
+ibmcloud cf push
+  ```
+  {: codeblock}
+
+  Isso pode levar aproximadamente dois minutos. Se houver um erro no processo de implementação, será possível usar o comando `ibmcloud cf logs <Your-App-Name> --recent` para solucionar problemas.
+
+Quando a implementação for concluída, você deverá ver uma mensagem indicando que o app está em execução.  Visualize o app na URL listada na saída do comando push.  Também é possível emitir o comando a seguir para visualizar o status de seus apps e ver a URL.
+  ```
+Ibmcloud cf apps
+  ```
+  {: codeblock}
+
 
 ## Etapa 5: incluir um banco de dados
 {: #add_database}
 
-Em seguida, vamos incluir um banco de dados NoSQL nesse aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
+Em seguida, incluiremos um banco de dados do {{site.data.keyword.cloudant_short_notm}} nesse aplicativo e configuraremos o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_short}}.
 
-1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
-2. Escolha a seção **Dados e análise de dados**, selecione **Cloudant NoSQL DB** e crie seu serviço.
+1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_short}} e acesse o Painel. Selecione **Criar recurso**.
+2. Escolha a seção **Dados e análise de dados**, selecione o **{{site.data.keyword.cloudant_short_notm}}** e crie o seu serviço.
 3. Acesse a visualização **Conexões**, selecione seu aplicativo e, em seguida, **Criar conexão**.
-4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
+4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_short}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_short}}.
 
-As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte. [Saiba mais...](/docs/manageapps/depapps.html#app_env)
+As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte.
 {: tip}
 
 ## Etapa 6: usar o banco de dados
@@ -163,13 +159,13 @@ As variáveis de ambiente permitem separar as configurações de implementação
 
 Vamos agora atualizar seu código local para apontar para esse banco de dados. Vamos armazenar as credenciais dos serviços em um arquivo de propriedades. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente `VCAP_SERVICES`.
 
-1. Em seu navegador, acesse {{site.data.keyword.Bluemix_notm}} e selecione **Apps > _seu app_ > Conexões > Cloudant > Visualizar credenciais**.
+1. Em seu navegador, acesse o painel do {{site.data.keyword.Bluemix_notm}} e selecione **_seu app_ > Conexões**. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e selecione **Visualizar credenciais**.
 
 2. Copie e cole apenas a `URL` das credenciais no campo `URL` do arquivo `cloudant.properties` e salve as mudanças.
   ```
-  cloudant_url=https://123456789 ... bluemix.cloudant.com
+cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
-  {:pre}
+  {:codeblock}
 
 3. Reinicie o servidor
 

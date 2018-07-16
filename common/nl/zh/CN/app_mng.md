@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -45,14 +45,14 @@ lastupdated: "2018-1-31"
 例如，要启用 *hc*、*debug* 和 *trace* 实用程序，请运行以下命令：
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
 ```
 {: codeblock}
 
 设置环境变量后，重新编译打包应用程序：
 
 ```
-cf restage myApp
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
@@ -61,15 +61,15 @@ cf restage myApp
 例如，运行以下命令以在没有“应用程序管理”实用程序的情况下编译打包应用程序：
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
-cf restage myApp
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
 ## 限制
 {: #restrictions}
 * 使用“应用程序管理”对应用程序进行的更改是暂时性的，退出此方式后即会失效。此方式仅用于临时开发，出于性能考虑，不应该用作生产环境。
-* 对于 Node.js 应用程序，如果在 `manifest.yml` 文件（命令）或 `CF CLI (-c)` 中设置 **start** 命令，那么大多数“应用程序管理”实用程序都不会工作。这些方法是 buildpack 覆盖，也是用于启动 Node.js 应用程序的反模式。为了获得最佳结果，请在 `package.json` 文件或 `Procfile` 中设置 **start** 命令。
+* 对于 Node.js 应用程序，如果在命令行上使用 `-c` 选项或在 `manifest.yml` 文件中设置 **start** 命令，那么大多数“应用程序管理”实用程序都不会正常运行。这些方法是 buildpack 覆盖，也是用于启动 Node.js 应用程序的反模式。为了获得最佳结果，请在 `package.json` 文件或 `Procfile` 中设置 **start** 命令。
 
 ### Liberty 和 Node.js 实用程序
 {: #liberty_and_node_utilities}
@@ -114,10 +114,10 @@ cf restage myApp
 
 **将 *hc* 与 *noproxy* 一起使用**
 
-*hc* 实用程序可以与 *noproxy* 一起使用。要将 Health Center 与 *noproxy* 一起使用，请首先使用 `cf ssh` 命令来建立端口转发。例如：
+*hc* 实用程序可以与 *noproxy* 一起使用。要将 Health Center 与 *noproxy* 一起使用，请先使用 `ibmcloud cf ssh` 命令来建立端口转发。例如：
 
 ```
-cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
+ibmcloud cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 
 **重要信息**：*shell* 实用程序还会启动 *proxy*。
 
-Diego 通过 `cf ssh` 命令提供交互式 shell，因此 *shell* 实用程序仅对于 DEA 上运行的应用程序有用。
+Diego 通过 `ibmcloud cf ssh` 命令提供交互式 shell，因此 *shell* 实用程序仅对 DEA 上运行的应用程序有用。
 {: .tip}
 
 
@@ -159,12 +159,12 @@ Liberty 和 Node.js 应用程序都支持开发方式。Liberty 或 Node.js 应�
 
 **重要信息**：*debug* 实用程序会启动 *proxy*。
 
-*debug* 实用程序可以与 *noproxy* 一起使用。要将 debug 与 *noproxy* 一起使用，请首先使用 `cf ssh` 命令来建立端口转发。
+*debug* 实用程序可以与 *noproxy* 一起使用。要将 debug 与 *noproxy* 一起使用，请先使用 `ibmcloud cf ssh` 命令来建立端口转发。
 
-以下代码片段显示了 `cf ssh` 命令格式的示例：
+以下代码片段显示了 `ibmcloud cf ssh` 命令格式的示例：
 
 ```
-cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
+ibmcloud cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 ```
 {: codeblock}
 
@@ -178,7 +178,7 @@ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 可以使用 JMX 来监视应用程序的多个实例，但 JMX 需要为每个实例分别建立 JMX 连接。缺省情况是监视实例 0。要监视实例 1，可以使用以下代码片段：
 
 ```
-cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
+ibmcloud cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
 ```
 {: codeblock}
 
@@ -194,10 +194,10 @@ cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
 
 **开始之前**：*localjmx* 需要安装 JConsole。
 
-*localjmx* 实用程序仅适用于在 Diego 单元上运行的应用程序。要使用 *localjmx*，请首先使用 `cf ssh` 命令建立端口转发。例如：
+*localjmx* 实用程序仅适用于在 Diego 单元上运行的应用程序。要使用 *localjmx*，请先使用 `ibmcloud cf ssh` 命令来建立端口转发。例如：
 
 ```
-cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
+ibmcloud cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 {: codeblock}
 
@@ -219,13 +219,13 @@ inspector 实用程序可用于创建 CPU 使用情况概要文件，添加断�
 
 使用以下命令通过本地端口转发来启用对 URL 的访问：
 ```
-cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
+ibmcloud cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 {: codeblock}
 
 使用以下命令获取应用程序的启动日志。
 ```
-cf logs <appName> --recent
+ibmcloud cf logs <appName> --recent
 ```
 {: codeblock}
 
@@ -245,7 +245,7 @@ cf logs <appName> --recent
 如果未使用 *proxy* 实用程序，请通过以下命令使用本地端口转发来启用对应用程序 URL 的访问：
 
 ```
-cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
+ibmcloud cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
 ```
 {: codeblock}
 

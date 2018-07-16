@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-10-26"
 
 ---
@@ -25,8 +25,7 @@ web: node app.js
 
 1. Sauvegardez le fichier **Procfile** dans le répertoire racine de votre application.
 
-S'il n'existe pas de fichier **Procfile**, le pack de construction Node.js
-de {{site.data.keyword.Bluemix_notm}} recherche une entrée scripts.start dans le fichier **package.json**. Dans l'exemple ci-dessous, app.js est le script js de démarrage de votre application.
+S'il n'existe pas de fichier **Procfile**, le pack de construction Node.js de {{site.data.keyword.Bluemix_notm}} recherche une entrée scripts.start dans le fichier **package.json**. Dans l'exemple ci-dessous, app.js est le script js de démarrage de votre application.
 ```
 {
     ...   
@@ -37,8 +36,7 @@ de {{site.data.keyword.Bluemix_notm}} recherche une entrée scripts.start dans l
 ```
 {: codeblock}
 
-Si une entrée de script de démarrage existe dans le fichier **package.json**, un fichier **Procfile** est généré
-automatiquement. Le contenu du fichier **Procfile** généré automatiquement est le suivant :
+Si une entrée de script de démarrage existe dans le fichier **package.json**, un fichier **Procfile** est généré automatiquement. Le contenu du fichier **Procfile** généré automatiquement est le suivant :
 ```
     web: npm start
 ```

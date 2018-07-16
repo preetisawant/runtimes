@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
+  years: 2016, 2018
 lastupdated: "2018-01-10"
 
 ---
@@ -14,7 +14,7 @@ lastupdated: "2018-01-10"
 # Im Offlinemodus für Node.js arbeiten
 {: #offline_mode}
 
-Wenn eine Node.js-Anwendung mit einer Push-Operation an {{site.data.keyword.Bluemix}} übertragen wird, lädt das Buildpack SDK for Node.js in der Regel Artefakte von externen Ressourcen herunter, z. B. Node-Module von NPM. In einigen Situationen, beispielsweise mit [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
+Wenn eine Node.js-Anwendung mit einer Push-Operation an {{site.data.keyword.Bluemix}} übertragen wird, lädt das Buildpack SDK for Node.js in der Regel Artefakte von externen Ressourcen herunter, z. B. Node-Module von NPM.  In einigen Situationen, beispielsweise mit [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), können Sie Zugriff auf Sites anpassen, die sich außerhalb von {{site.data.keyword.Bluemix_notm}} befinden.  
 {: shortdesc}
 
@@ -27,22 +27,22 @@ Das Node.js-Buildpack kann auf die folgenden externen Sites zugreifen. Mögliche
 * https://iojs.org wird verwendet, um ältere Versionen des Knotens abzurufen, die entweder im Buildpack nicht enthalten oder unter https://semver.herokuapp.com nicht verfügbar sind.
 * https://registry.npmjs.org wird verwendet, um Knotenmodule wie express abzurufen.
 
-Konfigurieren Sie Ihre Anwendungen für die Verwendung einer Node-Engineversion, die im SDK for Node.js-Buildpack enthalten ist, um die Anzahl der Sites in der Whitelist zu reduzieren. Die Gruppe der Node-Engineversionen, die im Buildpack enthalten ist, finden Sie in [Neueste Aktualisierungen](./updates.html). Wenn Sie Ihre Anwendung so konfigurieren, dass diese Node-Engineversionen verwendet werden, ist nur die Site https://registry.npmjs.org erforderlich, um Module herunterzuladen.
+Konfigurieren Sie Ihre Anwendungen für die Verwendung einer Node-Engineversion, die im SDK for Node.js-Buildpack enthalten ist, um die Anzahl der Sites in der Whitelist zu reduzieren.  Die Gruppe der Node-Engineversionen, die im Buildpack enthalten ist, finden Sie in [Neueste Aktualisierungen](./updates.html).  Wenn Sie Ihre Anwendung so konfigurieren, dass diese Node-Engineversionen verwendet werden, ist nur die Site https://registry.npmjs.org erforderlich, um Module herunterzuladen.
 
-Beachten Sie, dass sich bei der Installation von neuen Versionen des SDK for Node.js-Buildpacks die Gruppe der verfügbaren Engineversionen häufig zu neueren Versionen verschieben. Eventuell müssen Sie Ihre App rekonfigurieren, um eine neuere Node-Engineversion anzugeben, die im Buildpack vorhanden ist.
+Beachten Sie, dass sich bei der Installation von neuen Versionen des SDK for Node.js-Buildpacks die Gruppe der verfügbaren Engineversionen häufig zu neueren Versionen verschieben.  Eventuell müssen Sie Ihre App rekonfigurieren, um eine neuere Node-Engineversion anzugeben, die im Buildpack vorhanden ist.
 
 
 ## Offlineanwendungen
 {: #offline_applications}
 
-Damit nicht mehr auf https://registry.npmjs.org zugegriffen werden muss, können Sie alle Node-Module, die Ihre Anwendung benötigt, in die Anwendung einschließen. Führen Sie dazu `npm install` für alle erforderlichen Anwendungsmodule aus und schließen Sie das resultierende Verzeichnis *node_modules* in die Anwendung ein, für die Sie die Push-Operation durchführen.
+Damit nicht mehr auf https://registry.npmjs.org zugegriffen werden muss, können Sie alle Node-Module, die Ihre Anwendung benötigt, in die Anwendung einschließen.  Führen Sie dazu `npm install` für alle erforderlichen Anwendungsmodule aus und schließen Sie das resultierende Verzeichnis *node_modules* in die Anwendung ein, für die Sie die Push-Operation durchführen.
 
 Ihre Abhängigkeiten können weitere Abhängigkeiten haben, die wiederum Abhängigkeiten haben usw. Die Datei `package.json` enthält jedoch nur die Abhängigkeiten der höchsten Ebene. Wenn eine Ihrer Abhängigkeiten einen Bereich in der Datei 'package.json' verwendet und hierzu eine neue Version freigegeben wird, können die Module dann in Ihrem Verzeichnis node_modules veraltet sein. *Shrinkwrap* unterstützt Sie, alle Abhängigkeitsversionen zu sperren, damit dies nicht auftritt.  Beginnen Sie mit einem leeren oder bereinigten Verzeichnis `node_modules`, um 'shrinkwrap' zu verwenden. Führen Sie anschließend im Stammverzeichnis Ihres Projekts die folgenden Befehle aus:
 
 
-1. ```npm install```
-1. ```npm dedupe```
-2. ```npm shrinkwrap```
+1. `npm install`
+1. `npm dedupe`
+2. `npm shrinkwrap`
 
 Dadurch kann die Datei `package.json` geändert und `npm-shrinkwrap.json` zum Stammverzeichnis hinzugefügt werden.
 Bei jeder Änderung der Abhängigkeiten in der Datei `package.json` müssen Sie die Schritte `npm dedupe` und `shringwrap` wiederholen.

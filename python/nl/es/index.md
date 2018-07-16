@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -22,7 +22,7 @@ El python_buildpack se utilizará si el directorio raíz de la app contiene un a
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Python.  La aplicación de inicio Python es una sencilla app Python que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Python.  La aplicación de inicio Python es una sencilla app Python que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}

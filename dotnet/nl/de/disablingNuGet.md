@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-30"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,13 +14,13 @@ lastupdated: "2017-05-30"
 
 In einigen Situationen ist es möglicherweise erforderlich, den NuGet-Paketcache für Ihre Anwendung zu bereinigen.  Bei diesem Vorgang werden alle vorhandenen NuGet-Pakete, die im Cache gespeichert sind, bereinigt und es wird verhindert, dass das Buildpack neue Pakete im Cache speichert.
 
-Sie können dies durch die Angabe des Wertes `false` für die Umgebungsvariable `CACHE_NUGET_PACKAGES` erreichen. Dazu verwenden Sie die CloudFoundry-CLI:
+Sie können dies erreichen, indem Sie die Umgebungsvariable `CACHE_NUGET_PACKAGES` über die {{site.data.keyword.Bluemix_notm}}-CLI auf den Wert `false` setzen:
 
 ```shell
-  cf set-env <app_name> CACHE_NUGET_PACKAGES false
+  ibmcloud cf set-env <app_name> CACHE_NUGET_PACKAGES false
 ```
 
-Alternativ können Sie für die Umgebungsvariable `CACHE_NUGET_PACKAGES` in der Datei 'manifest.yml' Ihrer Anwendung den Wert `false` festlegen:
+Alternativ können Sie die Umgebungsvariable `CACHE_NUGET_PACKAGES` in der Datei 'manifest.yml' Ihrer Anwendung auf den Wert `false` setzen:
 
 ```yml
 ---

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-30"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,10 +14,10 @@ lastupdated: "2017-05-30"
 
 Em algumas situações, pode ser necessário limpar o cache de pacotes NuGet de seu aplicativo.  Fazer isso limpará quaisquer pacotes NuGet em cache existentes e evitará que o buildpack armazene em cache quaisquer novos pacotes.
 
-Isso pode ser feito configurando a variável de ambiente `CACHE_NUGET_PACKAGES` como `false` usando o CloudFoundry CLI:
+É possível fazer isso configurando a variável de ambiente `CACHE_NUGET_PACKAGES` como `false` usando a CLI do {{site.data.keyword.Bluemix_notm}}:
 
 ```shell
-  cf set-env <app_name> CACHE_NUGET_PACKAGES false
+  ibmcloud cf set-env < app_name> CACHE_NUGET_PACKAGES false
 ```
 
 Como alternativa, é possível configurar a variável de ambiente `CACHE_NUGET_PACKAGES` como `false` no arquivo manifest.yml do aplicativo:

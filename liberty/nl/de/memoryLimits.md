@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -71,14 +71,14 @@ Sie können die Größe des Heapspeichers mithilfe von Umgebungsvariablen oder d
 führen anschließend ein erneutes Staging Ihrer App durch.
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
 * Geben Sie den Faktor für die Größe des Heapspeichers mithilfe der Umgebungsvariablen JBP_CONFIG_IBMJDK an.  Der Gleitkommawert heap_size_ratio gibt an, wie viel Speicher der Speicherbegrenzung dem Heapspeicher zugeordnet wird.  Um beispielsweise die Hälfte des verfügbaren Speichers dem Heapspeicher zuzuordnen (50% oder 0.50), setzen Sie den folgenden Befehl ab und führen anschließend ein erneutes Staging Ihrer App durch.
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -16,12 +16,12 @@ lastupdated: "2018-1-31"
 ## 日誌檔
 {: #log_files}
 
-{{site.data.keyword.Bluemix}} 中提供標準 Liberty 日誌，例如 `messages.log` 或 `ffdc` 目錄，它們位於每一個應用程式實例的 `logs` 目錄中。這些日誌可以從 {{site.data.keyword.Bluemix_notm}} 主控台或透過 Cloud Foundry CLI 進行存取。例如：
+{{site.data.keyword.Bluemix}} 中提供標準 Liberty 日誌，例如 `messages.log` 或 `ffdc` 目錄，它們位於每一個應用程式實例的 `logs` 目錄中。這些日誌可以從 {{site.data.keyword.Bluemix_notm}} 主控台或透過 {{site.data.keyword.Bluemix_notm}} CLI 進行存取。例如：
 
 * 若要存取應用程式的最新日誌，請執行下列指令：
 
   ```
-  cf logs --recent <appname>
+  ibmcloud cf logs --recent <appname>
   ```
   {: codeblock}
 
@@ -29,7 +29,7 @@ lastupdated: "2018-1-31"
 * 若要查看應用程式的 `messages.log` 檔案，請執行下列指令：
 
   ```
-  cf ssh <appname> -c "cat logs/messages.log"
+  ibmcloud cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
@@ -52,14 +52,14 @@ lastupdated: "2018-1-31"
 
 請遵循下列步驟來變更追蹤配置：
 
-1. SSH 至您的應用程式
+1. 以 SSH 方式連接至您的應用程式
 
   ```
- cf ssh <appname> [-i instance_index]
+ ibmcloud cf ssh <appname> [-i instance_index]
   ```
   {: codeblock}
 
-2. 編輯 server.xml 中的 `<logging traceSpecification="xxxx"/>`，以設定您想要的追蹤規格，例如使用 *vi*：
+2. 編輯 server.xml 中的 `<logging traceSpecification="xxxx"/>`，以設定您想要的追蹤規格，例如，使用 *vi*：
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml
@@ -72,10 +72,10 @@ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 ### 透過 SSH 觸發傾出
 
-請使用下列指令，以利用 SSH 特性，透過 CF CLI 觸發執行緒及資料堆傾出：
+請使用下列指令，以利用 SSH 特性，透過 {{site.data.keyword.Bluemix_notm}} CLI 觸發執行緒及資料堆傾出：
 
   ```
- cf ssh <appname> -c "pkill -3 java"
+ ibmcloud cf ssh <appname> -c "pkill -3 java"
   ```
   {: codeblock}
 
@@ -84,19 +84,19 @@ vi /app/wlp/usr/servers/defaultServer/server.xml
 ## 下載傾出檔案
 {: #download_dumps}
 
-各種傾出檔案預設會放在應用程式容器的 `dumps` 目錄中。請使用 Cloud Foundry CLI `cf ssh` 來檢視及下載傾出檔案。
+各種傾出檔案預設會放在應用程式容器的 `dumps` 目錄中。請使用 {{site.data.keyword.Bluemix_notm}} CLI `ibmcloud cf ssh` 來檢視及下載傾出檔案。
 
 * 若要查看已產生的傾出，請執行下列指令：
 
   ```
-  $ cf ssh <appname> -c "ls -l dumps"
+  ibmcloud cf ssh <appname> -c "ls -l dumps"
   ```
   {: codeblock}
 
 * 若要下載傾出檔案，請執行下列指令：
 
   ```
-  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ibmcloud cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

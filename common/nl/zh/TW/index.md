@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -40,7 +40,7 @@ Cloud Foundry 建置套件會針對 Cloud Foundry 環境中的應用程式提供
 
 *  建置套件 (Buildpack)
 
-   建置套件是 {{site.data.keyword.Bluemix_notm}} 所提供的一般語言特定軟體套件。將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，會選擇應用程式適用的建置套件。建置套件會佈建應用程式的運行環境。從指令行發出 `cf buildpacks` 指令，即可看到 {{site.data.keyword.Bluemix_notm}} 所提供的建置套件集。
+   建置套件是 {{site.data.keyword.Bluemix_notm}} 所提供的一般語言特定軟體套件。將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，會選擇應用程式適用的建置套件。建置套件會佈建應用程式的運行環境。從指令行發出 `ibmcloud cf buildpacks` 指令，即可看到 {{site.data.keyword.Bluemix_notm}} 所提供的建置套件集。
 
 *  運行環境 (Runtime)
 

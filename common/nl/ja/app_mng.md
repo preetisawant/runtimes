@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -40,19 +40,19 @@ lastupdated: "2018-1-31"
 
 ## 「アプリ管理」の構成方法
 {: #configure}
-「アプリ管理」ユーティリティーを使用可能にするには、*BLUEMIX_APP_MGMT_ENABLE* 環境変数の値に、使用可能にするユーティリティーまたはそのリストを設定し、アプリケーションを再ステージングします。複数のユーティリティーを使用可能にするには、**+** で区切ります。
+「アプリ管理」ユーティリティーを使用可能にするには、*BLUEMIX_APP_MGMT_ENABLE* 環境変数の値に、使用可能にするユーティリティーまたはそのリストを設定し、アプリケーションを再ステージングします。 複数のユーティリティーを使用可能にするには、**+** で区切ります。
 
 例えば、*hc*、*debug*、*trace* のユーティリティーを使用可能にするには、以下のコマンドを実行します。
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
 ```
 {: codeblock}
 
 環境変数を設定したら、その後アプリケーションを再ステージングしてください。
 
 ```
-cf restage myApp
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
@@ -61,15 +61,15 @@ cf restage myApp
 例えば、以下のコマンドを実行すると、「アプリ管理」ユーティリティーなしでアプリケーションをステージングします。
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
-cf restage myApp
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
 ## 制約事項
 {: #restrictions}
-* 「アプリ管理」を使用してアプリケーションに対して行った変更は一時的なものであり、このモードを終了すると失われます。このモードは、一時的に開発目的のみで使用され、パフォーマンス上の理由から、実稼働環境として使用することは意図されていません。
-* Node.js アプリケーションの場合、ほとんどの「アプリ管理」ユーティリティーは、**開始**コマンドが `manifest.yml` ファイル (command) または `CF CLI (-c)` に設定されていると機能しません。このような手法はビルドパックのオーバーライドであり、Node.js アプリケーションの開始に関するアンチパターンです。最良の結果を得るには、**開始**コマンドは `package.json` ファイルか `Procfile` に設定してください。
+* 「アプリ管理」を使用してアプリケーションに対して行った変更は一時的なものであり、このモードを終了すると失われます。 このモードは、一時的に開発目的のみで使用され、パフォーマンス上の理由から、実稼働環境として使用することは意図されていません。
+* Node.js アプリケーションの場合、ほとんどの「アプリ管理」ユーティリティーは、**start** コマンドが `manifest.yml` ファイルで設定されているか、コマンド・ラインの `-c` オプションで設定されていると機能しません。このような手法はビルドパックのオーバーライドであり、Node.js アプリケーションの開始に関するアンチパターンです。 最良の結果を得るには、**開始**コマンドは `package.json` ファイルか `Procfile` に設定してください。
 
 ### Liberty および Node.js 用ユーティリティー
 {: #liberty_and_node_utilities}
@@ -79,45 +79,45 @@ cf restage myApp
 
 *proxy* ユーティリティーでは、アプリケーションと {{site.data.keyword.Bluemix_notm}} 間の最低限のアプリケーション管理が行われます。
 
-有効にすると、ビルドパックは、アプリケーションのランタイムとコンテナーの間に配置されたプロキシー・エージェントを開始します。*proxy* ユーティリティーは、アプリケーションが受信したすべての要求を処理します。要求のタイプに基づいて、「アプリ管理」アクションを実行するか、要求をアプリケーションに転送します。*proxy* を使用することにより、アプリケーションが異常終了しても、アプリケーション・コンテナーは機能し続けます。また、プロキシー・エージェントにより、増分ファイル更新が可能になり、Node.js アプリケーションに*ライブ編集* モードを使用できます。
+有効にすると、ビルドパックは、アプリケーションのランタイムとコンテナーの間に配置されたプロキシー・エージェントを開始します。  *proxy* ユーティリティーは、アプリケーションが受信したすべての要求を処理します。 要求のタイプに基づいて、「アプリ管理」アクションを実行するか、要求をアプリケーションに転送します。 *proxy* を使用することにより、アプリケーションが異常終了しても、アプリケーション・コンテナーは機能し続けます。 また、プロキシー・エージェントにより、増分ファイル更新が可能になり、Node.js アプリケーションに*ライブ編集* モードを使用できます。
 
 一部の「アプリ管理」ユーティリティーでは、アプリケーションと一緒に *proxy* ユーティリティーを使用する必要があり、*proxy* を自動的に開始することができます。
 
 #### noproxy
 {: #noproxy}
 
-*noproxy* ユーティリティーは、*proxy* ユーティリティーが別のユーティリティーによって自動的に開始された場合に、それを使用不可にします。Diego はアプリケーションに直接 *ssh* 接続し、ポート転送をセットアップする機能を備えているため、Diego ではプロキシーは必要ありません。
+*noproxy* ユーティリティーは、*proxy* ユーティリティーが別のユーティリティーによって自動的に開始された場合に、それを使用不可にします。  Diego はアプリケーションに直接 *ssh* 接続し、ポート転送をセットアップする機能を備えているため、Diego ではプロキシーは必要ありません。
 
 *noproxy* ユーティリティーは、Diego セルで実行されるアプリケーションにのみ適用されます。
 
 #### devconsole
 {: #devconsole}
 
-ユーザーは、(*devconsole*) 開発コンソール・ユーティリティーで、アプリケーションの再始動、停止、または中断を行えます。また、ユーザーは、*devconsole* を使用して shell および inspector ユーティリティーを使用可能にしたり、それらにアクセスしたりすることもできます。*devconsole* へのアクセスには、以下の URL を使用できます。
+ユーザーは、(*devconsole*) 開発コンソール・ユーティリティーで、アプリケーションの再始動、停止、または中断を行えます。 また、ユーザーは、*devconsole* を使用して shell および inspector ユーティリティーを使用可能にしたり、それらにアクセスしたりすることもできます。  *devconsole* へのアクセスには、以下の URL を使用できます。
 ```
   https://<yourappname>.mybluemix.net/bluemix-debug/manage
 ```
 {: codeblock}
 
-Node バージョン 6.3.0 以上では、開発コンソールで、アプリケーションの再始動ボタンが用意されており、また *shell* ユーティリティーにアクセスできます。詳しくは、*inspector* の説明を参照してください。
+Node バージョン 6.3.0 以上では、開発コンソールで、アプリケーションの再始動ボタンが用意されており、また *shell* ユーティリティーにアクセスできます。  詳しくは、*inspector* の説明を参照してください。
 
 **重要**: *devconsole* ユーティリティーは *proxy* を開始します。
 
 #### hc
 {: #hc}
 
-(*hc*) ヘルス・センター・エージェントにより、アプリケーションをヘルス・センター・クライアントでモニターできます。Node.js の場合、*hc* エージェントは、IBM SDK for Node.js ビルドパックに含まれる Node.js ランタイム・バージョンでのみ使用可能です。現行のランタイム・セットについては、[sdk-for-nodejs ビルドパックの最新更新](/docs/runtimes/nodejs/updates.html)を参照してください。
+(*hc*) ヘルス・センター・エージェントにより、アプリケーションをヘルス・センター・クライアントでモニターできます。  Node.js の場合、*hc* エージェントは、IBM SDK for Node.js ビルドパックに含まれる Node.js ランタイム・バージョンでのみ使用可能です。  現行のランタイム・セットについては、[sdk-for-nodejs ビルドパックの最新更新](/docs/runtimes/nodejs/updates.html)を参照してください。
 
-ヘルス・センター・エージェントを使用可能にしたら、IBM Monitoring and Diagnostic Tools を使用して Liberty および Node.js のアプリケーションのパフォーマンスを分析できます。詳細情報については、[How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window} を参照してください。
+ヘルス・センター・エージェントを使用可能にしたら、IBM Monitoring and Diagnostic Tools を使用して Liberty および Node.js のアプリケーションのパフォーマンスを分析できます。 詳細情報については、[How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window} を参照してください。
 
 **重要:** *hc* ユーティリティーは *proxy* を開始します。
 
 ***noproxy* と併せた *hc* の使用**
 
-*hc* ユーティリティーは *noproxy* と組み合わせて使用できます。ヘルス・センターを *noproxy* と一緒に使用するには、まず最初に `cf ssh` コマンドを使用してポート転送を設定します。例えば、次のように指定します。
+*hc* ユーティリティーは *noproxy* と組み合わせて使用できます。 ヘルス・センターを *noproxy* と一緒に使用するには、まず最初に `ibmcloud cf ssh` コマンドを使用してポート転送を設定します。 例えば、次のように指定します。
 
 ```
-cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
+ibmcloud cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 {: codeblock}
 
@@ -126,26 +126,26 @@ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 #### shell
 {: #shell}
 
-*shell* ユーティリティーは、Web ベースのシェルを使用可能にします。*shell* へのアクセスは、*devconsole* ユーティリティーから、または以下の URL を使用して行えます。
+*shell* ユーティリティーは、Web ベースのシェルを使用可能にします。  *shell* へのアクセスは、*devconsole* ユーティリティーから、または以下の URL を使用して行えます。
 
 ```
   https://<yourappname>.mybluemix.net/bluemix-debug/shell
 ```
 {: codeblock}
 
-*shell* ユーティリティーにアクセスすると、アプリケーションに shell アクセスした端末ウィンドウが表示されます。ファイルの編集、メモリー使用量の確認、診断コマンドの実行など、通常のシェルでサポートされるすべての操作を実行できます。
+*shell* ユーティリティーにアクセスすると、アプリケーションに shell アクセスした端末ウィンドウが表示されます。 ファイルの編集、メモリー使用量の確認、診断コマンドの実行など、通常のシェルでサポートされるすべての操作を実行できます。
 
 **重要:** *shell* ユーティリティーは *proxy* も開始します。
 
-Diego は `cf ssh` コマンドを介した対話式シェルを提供します。したがって、*shell* ユーティリティーは、DEA で実行中のアプリケーションにのみ有用です。
+Diego は `ibmcloud cf ssh` コマンドを介した対話式シェルを提供します。したがって、*shell* ユーティリティーは、DEA で実行中のアプリケーションにのみ有用です。
 {: .tip}
 
 
 ##### Eclipse Tools の開発モード
 {: #devmode}
-開発モードは、アプリケーションがクラウドで実行されているときに開発者がアプリケーションを操作できるようにする、[Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html) のフィーチャーです。Eclipse Tools の開発モードでは、セキュアな一時的ワークスペースを使用して {{site.data.keyword.cloud_notm}} でアプリケーションの作業を行えます。
+開発モードは、アプリケーションがクラウドで実行されているときに開発者がアプリケーションを操作できるようにする、[Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html) のフィーチャーです。 Eclipse Tools の開発モードでは、セキュアな一時的ワークスペースを使用して {{site.data.keyword.cloud_notm}} でアプリケーションの作業を行えます。
 
-開発モードは Liberty アプリケーションおよび Node.js アプリケーションの両方でサポートされています。開発モードを Liberty または Node.js アプリケーション用に使用可能にすると、アプリケーションをプッシュすることなく、アプリケーション・ファイルを増分的に更新できます。また、アプリケーションとのデバッグ・セッションを確立することもできます。Liberty アプリケーションの開発モードは、*debug* および *jmx* の「アプリ管理」ユーティリティーを使用可能にした場合と同等です。Node.js アプリケーションの場合は、*inspector* ユーティリティーを使用可能にした場合と同等です。
+開発モードは Liberty アプリケーションおよび Node.js アプリケーションの両方でサポートされています。 開発モードを Liberty または Node.js アプリケーション用に使用可能にすると、アプリケーションをプッシュすることなく、アプリケーション・ファイルを増分的に更新できます。 また、アプリケーションとのデバッグ・セッションを確立することもできます。 Liberty アプリケーションの開発モードは、*debug* および *jmx* の「アプリ管理」ユーティリティーを使用可能にした場合と同等です。 Node.js アプリケーションの場合は、*inspector* ユーティリティーを使用可能にした場合と同等です。
 
 ### Liberty 用のユーティリティー
 {: #liberty_utilities}
@@ -159,12 +159,12 @@ Diego は `cf ssh` コマンドを介した対話式シェルを提供します�
 
 **重要:** *debug* ユーティリティーは *proxy* を開始します。
 
-*debug* ユーティリティーは *noproxy* と組み合わせて使用できます。debug を *noproxy* と一緒に使用するには、まず最初に `cf ssh` コマンドを使用してポート転送を設定します。
+*debug* ユーティリティーは *noproxy* と組み合わせて使用できます。 debug を *noproxy* と一緒に使用するには、まず最初に `ibmcloud cf ssh` コマンドを使用してポート転送を設定します。
 
-以下のコード・スニペットは、`cf ssh` コマンド・フォーマットの例を示しています。
+以下のコード・スニペットは、`ibmcloud cf ssh` コマンド・フォーマットの例を示しています。
 
 ```
-cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
+ibmcloud cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 ```
 {: codeblock}
 
@@ -175,10 +175,10 @@ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 
 *jmx* ユーティリティーは、JMX REST Connector を使用可能にして、リモート JMX クライアントが {{site.data.keyword.Bluemix_notm}} ユーザー資格情報を使用してアプリケーションを管理できるようにします。
 
-JMX を使用してアプリケーションの複数インスタンスをモニター可能ですが、それには、インスタンスごとに別個の JMX 接続が必要です。デフォルトでは、インスタンス 0 をモニターします。インスタンス 1 をモニターするには、以下のコード・スニペットを使用できます。
+JMX を使用してアプリケーションの複数インスタンスをモニター可能ですが、それには、インスタンスごとに別個の JMX 接続が必要です。 デフォルトでは、インスタンス 0 をモニターします。インスタンス 1 をモニターするには、以下のコード・スニペットを使用できます。
 
 ```
-cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
+ibmcloud cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
 ```
 {: codeblock}
 
@@ -189,15 +189,15 @@ JMX コネクターの構成について詳しくは、[Configuring secure JMX c
 #### localjmx
 {: #localjmx}
 
-*localjmx* ユーティリティーは、[localConnector-1.0 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty フィーチャーを有効にします。*localjmx* は、ローカル・ポート転送と組み合わせることで、リモート JMX クライアントによるアプリケーションの管理を可能にする代替方法として機能します。
+*localjmx* ユーティリティーは、[localConnector-1.0 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feature_localConnector-1.0.html){:new_window} Liberty フィーチャーを有効にします。 *localjmx* は、ローカル・ポート転送と組み合わせることで、リモート JMX クライアントによるアプリケーションの管理を可能にする代替方法として機能します。
 
 
 **始める前に**: *localjmx* は、JConsole のインストールを必要とします。
 
-*localjmx* ユーティリティーは、Diego セルで実行中のアプリケーションにのみ適用できます。*localjmx* を使用するには、まず最初に `cf ssh` コマンドを使用してポート転送を設定します。例えば、次のように指定します。
+*localjmx* ユーティリティーは、Diego セルで実行中のアプリケーションにのみ適用できます。 *localjmx* を使用するには、まず最初に `ibmcloud cf ssh` コマンドを使用してポート転送を設定します。 例えば、次のように指定します。
 
 ```
-cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
+ibmcloud cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 {: codeblock}
 
@@ -210,22 +210,22 @@ cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 #### inspector
 {: #inspector}
 
-inspector ユーティリティーを使用すると、アプリケーションを {{site.data.keyword.cloud_notm}} で実行している間に、CPU 使用プロファイル、ブレークポイント、およびデバッグ・コードを作成できます。6.3.0 より前の Node.js バージョンの場合、inspector は、Node インスペクター・デバッガー・インターフェースを使用可能にします。Node インスペクターについて詳しくは、[GitHub で node-inspector ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/node-inspector/node-inspector){: new_window} の README を参照してください。Node.js バージョン 6.3.0 以上の場合、*inspector* ユーティリティーは、[V8 Inspector Integration for Node.js ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window} を使用します。
+inspector ユーティリティーを使用すると、アプリケーションを {{site.data.keyword.cloud_notm}} で実行している間に、CPU 使用プロファイル、ブレークポイント、およびデバッグ・コードを作成できます。  6.3.0 より前の Node.js バージョンの場合、inspector は、Node インスペクター・デバッガー・インターフェースを使用可能にします。  Node インスペクターについて詳しくは、[GitHub で node-inspector ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/node-inspector/node-inspector){: new_window} の README を参照してください。  Node.js バージョン 6.3.0 以上の場合、*inspector* ユーティリティーは、[V8 Inspector Integration for Node.js ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window} を使用します。
 
 ##### **6.3.0 より後の Node.js バージョンの場合**
-デバッグ・モードを開始すると、*proxy* を含まない Node.js バージョンを使用している場合でも、*proxy* は自動的に使用可能になります。6.3.0 より後の Node.js バージョンには、*proxy* が含まれません。6.3.0 より後の Node.js バージョンと一緒に *inspector* ユーティリティーを使用する場合は、*noproxy* を使用して *proxy* を再びオフにできます。
+デバッグ・モードを開始すると、*proxy* を含まない Node.js バージョンを使用している場合でも、*proxy* は自動的に使用可能になります。 6.3.0 より後の Node.js バージョンには、*proxy* が含まれません。 6.3.0 より後の Node.js バージョンと一緒に *inspector* ユーティリティーを使用する場合は、*noproxy* を使用して *proxy* を再びオフにできます。
 
 *proxy* を使用して *inspector* インターフェースにアクセスする代わりに、Google Chrome Web ブラウザーの Developer Tools 機能を使用します。  
 
 以下のコマンドにより、ローカル・ポート転送で URL へのアクセスを使用可能にします。
 ```
-cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
+ibmcloud cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 {: codeblock}
 
 以下のコマンドを使用して、アプリケーションの開始ログを取得します。
 ```
-cf logs <appName> --recent
+ibmcloud cf logs <appName> --recent
 ```
 {: codeblock}
 
@@ -245,7 +245,7 @@ cf logs <appName> --recent
 *proxy* ユーティリティーを使用しない場合は、以下のコマンドでローカル・ポート転送を使用してアプリケーション URL へのアクセスを使用可能にします。
 
 ```
-cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
+ibmcloud cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
 ```
 {: codeblock}
 

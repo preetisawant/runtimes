@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -19,7 +19,7 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS ![外�
 若要使用已啟用 FIPS 功能的 node 引擎，請將環境變數 FIPS_MODE 設為 true。例如：
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
@@ -33,7 +33,7 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS ![外�
 
 
 
-**附註**：*未* 同時支援[應用程式管理](/docs/manageapps/app_mng.html)及 FIPS_MODE。如果設定 BLUEMIX_APP_MGMT_ENABLE 環境變數，而且 FIPS_MODE 環境變數設為 true，將無法編譯打包應用程式。
+**附註**：*未* 同時支援[應用程式管理](../common/app_mng.html)及 FIPS_MODE。如果設定 BLUEMIX_APP_MGMT_ENABLE 環境變數，而且 FIPS_MODE 環境變數設為 true，將無法編譯打包應用程式。
 
 有各種方法可檢查 FIPS_MODE 的狀態：
 <ul>
@@ -75,7 +75,7 @@ Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS ![外�
 
 下表說明 node.js 第 4 版在使用 FIPS 時的行為：
 
-|                 | 結果  |
+|                 |結果  |
 | :-------------- | :------------ |
 |FIPS_MODE=true|成功 (1)|
 |FIPS_MODE !=true|成功 (2)|

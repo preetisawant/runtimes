@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -40,9 +40,9 @@ dargestellt, die vom Liberty-Buildpack für die Anwendung generiert wird:
 Führen Sie die folgenden Schritte aus, um eine bereits vorhandene Java-Anwendung mit New Relic in {{site.data.keyword.Bluemix_notm}} zu überwachen.
 1. Erstellen Sie eine New Relic-Serviceinstanz in {{site.data.keyword.Bluemix_notm}}.
 
-  <pre>
-    $ cf create-service newrelic standard mynewrelic
-  </pre>
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
   {: codeblock}
 
 2. Stellen Sie Ihre Anwendung mit dem New Relic-Service in {{site.data.keyword.Bluemix_notm}} bereit.  Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt:
@@ -68,9 +68,10 @@ Führen Sie die folgenden Schritte aus, um eine bereits vorhandene Java-Anwendun
 
 Wenn Sie über ein vorhandenes New Relic-Konto und den zugehörigen Lizenzschlüssel verfügen, können Sie den vorhandenen New Relic-Service mit einem vom Benutzer bereitgestellten Service an Ihre Anwendung binden.
 
-1. Erstellen Sie eine vom Benutzer bereitgestellte Serviceinstanz und verwenden Sie dazu den bereits vorhandenen Lizenzschlüssel.  Wenn Ihr vorhandener Lizenzschlüssel '1234567' lautet, können Sie die CF-CLI zum Erstellen eines vom Benutzer bereitgestellten Service (create-user-provided-service) verwenden und an der Eingabeaufforderung wie im Folgenden den Lizenzschlüssel '1234567' angeben:
+1. Erstellen Sie eine vom Benutzer bereitgestellte Serviceinstanz und verwenden Sie dazu den bereits vorhandenen Lizenzschlüssel.  Wenn Ihr vorhandener Lizenzschlüssel '1234567' lautet, können Sie die {{site.data.keyword.Bluemix_notm}}-CLI zum Erstellen eines vom Benutzer bereitgestellten Service (create-user-provided-service) verwenden und an der Eingabeaufforderung wie im folgenden Beispiel den Lizenzschlüssel '1234567' angeben:
+  
   ```
-    $ cf create-user-provided-service mynewrelic -p "licenseKey"
+    ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
   ```
   {: codeblock}

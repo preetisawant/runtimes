@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-13"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -27,9 +27,9 @@ NPM fornece um recurso de script permitindo que você execute scripts, incluindo
 seguida, na primeira vez que myapp for implementado, o módulo
 **express** será transferido por download.  Em implementações subsequentes de myapp, a instância armazenada em cache de **express** será usada. O comportamento padrão é armazenar em cache todos os node_modules instalados pelo NPM e bower_components instalados pelo bower.
 
-Use a variável NODE_MODULES_CACHE para determinar se o builpack Node usa ou ignora ou não o cache de construções anteriores. O valor padrão é true.  Para desativar o armazenamento em cache, configure NODE_MODULES_CACHE como false, por exemplo, por meio da linha de comandos cf:
+Use a variável NODE_MODULES_CACHE para determinar se o builpack Node usa ou ignora ou não o cache de construções anteriores. O valor padrão é true.  Para desativar o armazenamento em cache, configure NODE_MODULES_CACHE como false, por exemplo, por meio da linha de comandos do {{site.data.keyword.Bluemix_notm}}:
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+    ibmcloud cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 

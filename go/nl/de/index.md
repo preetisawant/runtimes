@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2017-06-21"
 
 ---
 
@@ -23,7 +23,7 @@ Das Buildpack 'go_buildpack' wird verwendet, wenn Ihre Anwendung eine Datei mit 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} stellt eine Go-Starteranwendung bereit.  Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Lesen Sie als Hilfe für die Verwendung von Starteranwendungen [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Go-Starteranwendung bereit. Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Informationen zur Verwendung der Starteranwendung finden Sie unter [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}

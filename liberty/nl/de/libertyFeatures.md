@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,21 +12,21 @@ lastupdated: "2018-02-14"
 # In {{site.data.keyword.cloud_notm}} unterstützte Liberty-Features
 {: #liberty_features}
 
-Die Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java umfasst eine Untergruppe von Liberty-Features. Einige Features, die Liberty anbietet, stehen in der Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können.
+Die Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java umfasst eine Untergruppe von Liberty-Features.  Einige Features, die Liberty anbietet, stehen in der Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können.
 
 Die folgenden für {{site.data.keyword.Bluemix_notm}} spezifischen Features sind enthalten:
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-Eine Untergruppe verfügbarer Funktionen wird standardmäßig aktiviert, wenn WAR- oder EAR-Dateien implementiert werden.  Details finden Sie unter dem Thema [Eigenständige Apps](optionsForPushing.html#stand_alone_apps).
+Eine Untergruppe verfügbarer Funktionen wird standardmäßig aktiviert, wenn WAR- oder EAR-Dateien implementiert werden.  Details finden Sie unter [Eigenständige Apps](optionsForPushing.html#stand_alone_apps).
 
 Die Liberty for Java-Laufzeit stellt ferner einige Funktionen der Liberty-Betaversion zur Verfügung. Diese Funktionen werden nicht aufgelistet, können jedoch unter [Beta-Features verwenden](/docs/runtimes/liberty/usingBetaFeatures.html) gefunden werden.
 
 Bedenken Sie, dass ein Server keine inkompatiblen Funktionen laden kann. Stellen Sie daher sicher, dass er so konfiguriert ist, dass nur kompatible Funktionen aktiviert werden. Siehe auch den Abschnitt zu unterstützten Kombinationen von Funktionen von Java EE 6 und 7
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>.
+    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">(Supported Java EE 6 and 7 feature combinations)</a>.
 
-Eine vollständige Liste der in Liberty verfügbaren Funktionen mit Java EE-Versionen und anderen Informationen finden Sie im Abschnitt über Liberty-Funktionen [Liberty Features](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)
+Eine vollständige Liste der in Liberty verfügbaren Funktionen mit Java EE-Versionen und anderen Informationen finden Sie im Abschnitt über Liberty-Funktionen ([Liberty Features](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html))
 im IBM Knowledge Center.
 
 Anwendungen, die ferne EJBs verwenden, können in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden.
@@ -35,7 +35,7 @@ CORBA/IIOP-Protokoll auf die fernen EJBs zugegriffen werden.
 
 ## Index der Liberty-Features
 {: #libertyfeat_index}
-Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Featureliste oder blättern Sie die [Liste der Liberty-Features](#libertyfeat_list) durch.
+Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Featureliste oder blättern Sie die [Liste der Liberty for Java-Features](#libertyfeat_list) durch.
 
 ### A-E
 * [A](#libertyfeat_A)
@@ -45,6 +45,7 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 
 ### F-J
 * [F](#libertyfeat_F)
+* [H](#libertyfeat_H)
 * [J](#libertyfeat_J)
 
 ### K-O
@@ -91,6 +92,7 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
+* constrainedDelegation-1.0
 * couchdb-1.0
 
 ### E
@@ -106,6 +108,11 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 {: #libertyfeat_f}
 
 * federatedRegistry-1.0
+
+### H
+{: #libertyfeat_h}
+
+* httpWhiteboard-1.0
 
 ### J
 {: #libertyfeat_J}
@@ -123,6 +130,7 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 * jcaInboundSecurity-1.0
 * jdbc-4.0
 * jdbc-4.1
+* jdbc-4.2
 * jms-1.1
 * jms-2.0
 * jmsMdb-3.1
@@ -132,6 +140,7 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 * jpa-2.1
 * jsf-2.0
 * jsf-2.2
+* jsfContainer-2.2
 * json-1.0
 * jsonp-1.0
 * jsp-2.2
@@ -148,24 +157,32 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 ### M
 {: #libertyfeat_M}
 * managedBeans-1.0
-* managedBeans-1.0
 * mdb-3.1
 * mdb-3.2
 * mediaServerControl-1.0     
-* microprofile-1.0
-* microprofile-1.2
+* microProfile-1.0
+* microProfile-1.2
+* microProfile-1.3
 * mongodb-2.0
 * monitor-1.0
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
 * oauth-2.0
 * openapi-3.0
+* openapi-3.1
 * openid-2.0
 * openidConnectClient-1.0
 * openidConnectServer-1.0
+* opentracing-1.0
 * osgi.jpa-1.0
 * osgiAppIntegration-1.0
+* osgiBundle-1.0
 * osgiConsole-1.0
 
 ### P
@@ -187,7 +204,6 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 * servlet-3.0
 * servlet-3.1
 * sessionDatabase-1.0
-* sipServlet-1.1
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0
@@ -221,4 +237,4 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 ## Allgemein
 {: #general notoc}
 * [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Übersicht über Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

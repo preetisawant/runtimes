@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -23,7 +23,7 @@ Il ruby_buildpack viene utilizzato se la tua applicazione ha un Gemfile nella di
 {: #starter_application}
 
 {{site.data.keyword.Bluemix_notm}} Fornisce un'applicazione starter Ruby.  L'applicazione starter Ruby è una semplice applicazione Ruby che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione di avvio, apportare modifiche ed eseguirne il push
-all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicazioni starter](/docs/cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicazioni starter](../common/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Versioni di runtime
 {: #runtime_versions}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -42,20 +42,16 @@ Les services Compose peuvent être gérés par le conteneur ou gérés par l'app
 ## Installation des fonctions Liberty et du code d'accès client
 {: #installation_of_liberty_features}
 
-Lorsque vous créez une liaison à un service géré par le conteneur, le service peut nécessiter une configuration de fonctions Liberty dans la section featureManager du fichier server.xml. Le pack de construction Liberty met à jour la section featureManager et installe les fichiers binaires de support requis. Si le service requiert des fichiers Jar de pilote client, ces fichiers Jar sont téléchargés à un emplacement prédéterminé dans le répertoire d'installation de
-Liberty.
+Lorsque vous créez une liaison à un service géré par le conteneur, le service peut nécessiter une configuration de fonctions Liberty dans la section featureManager du fichier server.xml. Le pack de construction Liberty met à jour la section featureManager et installe les fichiers binaires de support requis. Si le service requiert des fichiers Jar de pilote client, ces fichiers Jar sont téléchargés à un emplacement prédéterminé dans le répertoire d'installation de Liberty.
 
 Voir la section [Résiliation de la configuration automatique des services](#opting_out) pour obtenir plus de détails sur les types de service lié.
 
 ## Génération ou mise à jour des sections de configuration dans le fichier server.xml
 {: #generating_or_updating_serverxml}
 
-Lorsque vous poussez une application autonome, en fonction de la manière dont elle est liée aux services et
-selon que vous avez ou non un fichier server.xml existant, le pack de construction
-Liberty peut générer automatiquement les sections de configuration ou mettre à jour des sections existantes.
+Lorsque vous envoyer une application autonome par commande push, en fonction de la manière dont elle est liée aux services et selon que vous avez ou non un fichier server.xml existant, le pack de construction Liberty peut générer automatiquement les sections de configuration ou mettre à jour des sections existantes.
 
-
-Lorsque vous poussez une application autonome, le pack de construction Liberty génère, pour le fichier server.xml, la section de configuration appropriée, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing), sur {{site.data.keyword.Bluemix_notm}}. 
+Lorsque vous envoyez une application autonome par commande push, le pack de construction Liberty génère, pour le fichier server.xml, la section de configuration appropriée, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing), sur {{site.data.keyword.Bluemix_notm}}.
 
 Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections server.xml requises pour les services liés.
 
@@ -71,17 +67,12 @@ Pour plus d'informations, consultez la documentation relative au type de service
 
 Dans certains cas, vous ne souhaiterez peut-être pas que le pack de construction Liberty configure automatiquement les services qui ont été liés. Considérez les scénarios suivants :
 
-* Votre application utilise *dashDB*, mais vous souhaitez qu'elle gère directement la connexion à la base de données. L'application contient le fichier Jar de pilote client requis. Vous ne voulez
-pas que le pack de construction Liberty configure automatiquement le service *dashDB*.
-
+* Votre application utilise *dashDB*, mais vous souhaitez qu'elle gère directement la connexion à la base de données. L'application contient le fichier Jar de pilote client requis. Vous ne voulez pas que le pack de construction Liberty configure automatiquement le service *dashDB*.
 * Vous avez soumis un fichier server.xml comportant les sections de configuration pour l'instance *cloudant* car vous avez besoin d'une configuration de source de données non standard. Vous ne voulez pas que le pack de construction Liberty mette à jour le fichier server.xml, mais vous souhaitez tout de même qu'il vérifie que le logiciel de prise en charge est installé.
 
-Pour résilier la configuration automatique des services, utilisez alors la variable d'environnement services_autoconfig_excludes. Vous pouvez inclure cette variable d'environnement dans un fichier manifest.yml ou la définir à l'aide du client cf.
+Pour résilier la configuration automatique des services, utilisez alors la variable d'environnement services_autoconfig_excludes. Vous pouvez inclure cette variable d'environnement dans un fichier manifest.yml ou la définir à l'aide du client {{site.data.keyword.Bluemix_notm}}.
 
-Vous pouvez résilier la configuration automatique des services sur une base individuelle. Vous pouvez opter pour une résiliation complète (comme dans le scénario *dashDB*) ou
-seulement des mises à jour du fichier de configuration
-server.xml (comme
-dans le scénario *cloudant*). La valeur que vous spécifiez pour la variable d'environnement services_autoconfig_excludes est une chaîne ayant les caractéristiques suivantes :
+Vous pouvez résilier la configuration automatique des services sur une base individuelle. Vous pouvez opter pour une résiliation complète (comme dans le scénario *dashDB*) ou seulement des mises à jour du fichier de configuration server.xml (comme dans le scénario *cloudant*). La valeur que vous spécifiez pour la variable d'environnement services_autoconfig_excludes est une chaîne ayant les caractéristiques suivantes :
 
 * La chaîne peut contenir des spécifications de résiliation pour un ou plusieurs services.
 * La spécification de la résiliation pour un service donné est type_service=option, où :
@@ -101,13 +92,9 @@ Examinez cet exemple de grammaire pour la chaîne services_autoconfig_excludes :
 {: codeblock}
 
 **Important** : Le type de service que vous indiquez doit correspondre au libellé des services tel qu'il figure dans la variable d'environnement VCAP_SERVICES. Le caractère espace n'est pas admis.
-**Important** : Aucun espace n'est autorisé dans une entrée ```<spécification_type_service>```. L'unique utilisation admise d'un espace est pour
-la séparation de plusieurs instances de ```<spécification_type_service>```.
+**Important** : Aucun espace n'est autorisé dans entrée `<service_type_specification>`. L'unique utilisation admise d'un espace est pour la séparation de plusieurs instances de `<service_type_specification>`.
 
-Utilisez l'option **all** pour résilier toutes les actions de configuration automatique d'un service donné, comme dans le scénario *dashDB* ci-dessus. Utilisez l'option **config**
-pour résilier uniquement les actions de mise à jour
-de la configuration, comme dans le scénario *cloudant* ci-dessus.
-
+Utilisez l'option **all** pour résilier toutes les actions de configuration automatique d'un service donné, comme dans le scénario *dashDB* ci-dessus. Utilisez l'option **config** pour résilier uniquement les actions de mise à jour de la configuration, comme dans le scénario *cloudant* ci-dessus.
 
 Voici quelques exemples de résiliation de configuration automatique dans un fichier manifest.yml pour les scénarios *dashDB* et *cloudant*.
 
@@ -126,15 +113,15 @@ Voici quelques exemples de résiliation de configuration automatique dans un fic
 Ci-dessous figurent des exemples de définition de la variable d'environnement services_autoconfig_excludes pour l'application myapp à l'aide de l'interface de ligne de commande.
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
-Pour trouver le *label* d'un service dans VCAP_SERVICES, émettez une commande comme celle de l'exemple suivant : 
+Pour trouver le *label* d'un service dans VCAP_SERVICES, émettez une commande comme celle de l'exemple suivant :
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -156,17 +143,10 @@ La sortie inclut un texte similaire au suivant, dans lequel vous pouvez voir le 
 {: #override_service_config}
 
 Dans certains cas, il est souhaitable d'outrepasser la configuration par défaut générée automatiquement pour un service.
-Vous pouvez à cet effet utiliser la variable d'environnement
-**LBP_SERVICE_CONFIG_xxxx**.
-Référez-vous aux tableaux suivants pour obtenir le nom complet de chaque variable
-d'environnement et un exemple de syntaxe permettant d'outrepasser la configuration
-automatique du service correspondant.
-Par exemple,
-pour outrepasser la version par défaut du service *elephantSQL* et forcer l'utilisation de la version 8.3.4.+ à la place, émettez une commande telle que :
-
+Vous pouvez à cet effet utiliser la variable d'environnement **LBP_SERVICE_CONFIG_xxxx**. Référez-vous aux tableaux suivants pour obtenir le nom complet de chaque variable d'environnement et un exemple de syntaxe permettant d'outrepasser la configuration automatique du service correspondant.  Par exemple, pour outrepasser la version par défaut du service *elephantSQL* et forcer l'utilisation de la version 8.3.4.+ à la place, émettez une commande telle que :
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 
@@ -210,7 +190,7 @@ Ce tableau indique la correspondance entre **type_service** et nom de variable d
 
 <tr>
 <td>elephantsql</td>
-<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 </tr>
 
 <tr>

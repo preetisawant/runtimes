@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-07-13"
 ---
 
@@ -72,4 +72,3 @@ Nel metodo `Main` Program.cs, rimuovi la seguente riga:
 {: codeblock}
 
 Queste modifiche consentono alla CLI .NE di trovare le `Views` della tua applicazione che saranno ora copiate nell'output di build quando viene eseguito il comando `dotnet publish`.  Se la tua applicazione dispone di altri file, come ad esempio dei file di configurazione json, richiesti durante il runtime, devi quindi aggiungerli nella proprietà `Include` dell'elemento `Content` nel file .csproj del tuo progetto, separati da punti e virgola.
-

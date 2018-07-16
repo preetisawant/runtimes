@@ -13,6 +13,7 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
+    dynatrace.md
 
     {: .topicgroup}
     オフラインの処理またはプロキシーの処理
@@ -28,8 +29,8 @@ SDK for Node.js
 
     {: .topicgroup}
     スターター・アプリケーションおよびビルドパック
-        [スターター・アプリケーションの使用](../../cfapps/starter_app_usage.html)
-        [コミュニティー・ビルドパックの使用](../../cfapps/byob.html)
+        [スターター・アプリケーションの使用](../common/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -37,4 +38,5 @@ SDK for Node.js
     updates.md
     availableVersions.md
     [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
+
     {: .navgroup-end}

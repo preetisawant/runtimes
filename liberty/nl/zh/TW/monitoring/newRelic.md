@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -37,9 +37,9 @@ New Relic 是協力廠商服務，可為您的應用程式提供監視度量值�
 對於要在 {{site.data.keyword.Bluemix_notm}} 中使用 New Relic 監視的現有 Java 應用程式，請遵循下列步驟。
 1. 在 {{site.data.keyword.Bluemix_notm}} 中建立 New Relic 服務實例。
 
-  <pre>
-    $ cf create-service newrelic standard mynewrelic
-  </pre>
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
   {: codeblock}
 
 2. 使用 New Relic 服務，將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。請參閱下列範例應用程式資訊清單：
@@ -65,10 +65,10 @@ New Relic 是協力廠商服務，可為您的應用程式提供監視度量值�
 
 如果您有現有的 New Relic 帳戶和授權碼，可以利用「使用者提供的服務」，將現有的 New Relic 服務連結至應用程式。
 
-1. 使用現有的授權碼來建立使用者提供的服務實例。例如，如果您現有的授權碼是 1234567，則可以使用 CF CLI 來進行 "create-user-provided-service"，並在出現提示時提供授權碼 1234567，如下所示：
-
+1. 使用現有的授權碼來建立使用者提供的服務實例。例如，如果您現有的授權碼是 1234567，則可以使用 {{site.data.keyword.Bluemix_notm}} CLI 來進行 "create-user-provided-service"，並在系統提示時提供授權碼 1234567，如下所示：
+  
   ```
-    $ cf create-user-provided-service mynewrelic -p "licenseKey"
+    ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
   ```
   {: codeblock}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2017-11-10"
 
 ---
 
@@ -47,7 +47,7 @@ Envíe el paquete de servidor que contiene la aplicación, limitándolo a una so
 
 JConsole se incluye con la instalación de Java.  Para iniciar la app de JConsole, vaya a &lt;java-home&gt;/bin y ejecute el siguiente mandato:
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+    jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,9 +18,10 @@ El tiempo de ejecución de Tomcat en {{site.data.keyword.Bluemix}} está basado 
 {: shortdesc}
 
 Para utilizar el tiempo de ejecución de Tomcat en {{site.data.keyword.Bluemix_notm}}, debe especificar el java_buildpack con la opción -b. Por ejemplo:
-<pre>
-    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
-</pre>
+
+```
+ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+```
 
 Para obtener más información sobre el tiempo de ejecución de Tomcat, consulte el
 [java-buildpack readme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md).
@@ -28,7 +29,7 @@ Para obtener más información sobre el tiempo de ejecución de Tomcat, consulte
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Tomcat.  La aplicación de inicio de Tomcat es una app de Tomcat sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Tomcat.  La aplicación de inicio de Tomcat es una app de Tomcat sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -45,8 +46,6 @@ Ambos se pueden especificar en el archivo de manifiesto de la aplicación.  Por 
 La versión actual de java_buildpack es v3.19, que contiene la versión de Tomcat predeterminada 8.0.45 y la versión de Java predeterminada 1.8.0_141.
 Para obtener más información, consulte [releases de java-buildpack](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13).
 
-
-
 ## Redirección de HTTPS
 {: #https_redirect}
 
@@ -60,7 +59,7 @@ El tiempo de ejecución de Tomcat [server.xml](https://github.com/cloudfoundry/j
 ```
 {: codeblock}
 
-Encontrará más opciones de configuración para RemoteIpValve en la [documentación de Tomcat![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
+Encontrará más opciones de configuración para RemoteIpValve en la [documentación de Tomcat ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # rellinks
 {: #rellinks notoc}

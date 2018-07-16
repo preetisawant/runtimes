@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -41,9 +41,9 @@ New Relic 라이센스 계약과 계정을 확보하려면 {{site.data.keyword.B
 {{site.data.keyword.Bluemix_notm}}에서 New Relic을 통해 기존 Java 애플리케이션을 모니터링하려면 다음 단계를 따르십시오.
 1. {{site.data.keyword.Bluemix_notm}}에서 New Relic 서비스 인스턴스를 작성하십시오.
 
-  <pre>
-    $ cf create-service newrelic standard mynewrelic
-  </pre>
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
   {: codeblock}
 
 2. New Relic 서비스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에
@@ -72,9 +72,10 @@ New Relic 대시보드에 액세스하십시오.
 
 New Relic 계정과 라이센스 키가 이미 있으면 "사용자 제공 서비스"를 사용하여 기존의 New Relic 서비스를 애플리케이션에 바인드할 수 있습니다.
 
-1. 기존의 라이센스 키를 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오.  예를 들어, 기존의 라이센스 키가 1234567이면 CF CLI를 사용하여 "사용자 제공 서비스를 작성"하고 다음과 같이 프롬프트되면 라이센스 키 1234567을 제공합니다.
+1. 기존의 라이센스 키를 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오.  예를 들어, 기존의 라이센스 키가 1234567이면 {{site.data.keyword.Bluemix_notm}} CLI를 사용하여 "사용자 제공 서비스를 작성"하고 다음과 같이 프롬프트되면 라이센스 키 1234567을 제공합니다.
+  
   ```
-    $ cf create-user-provided-service mynewrelic -p "licenseKey"
+    ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
   ```
   {: codeblock}
@@ -99,7 +100,7 @@ New Relic 계정과 라이센스 키가 이미 있으면 "사용자 제공 서�
 
 3. New Relic 대시보드에 액세스하여 애플리케이션 메트릭을 확인하십시오.
 
-New Relic 서비스의 자동 구성은 빌드팩 프레임워크를 통해 제공되는 컨테이너 관리 서비스이므로 다른 서비스의 자동 구성과 다릅니다. 프레임워크를 통해 제공된다는 점에서, 이 서비스의 자동 구성은 다음 3가지 측면에서 다른 서비스들과 차이가 납니다.
+New Relic 서비스의 자동 구성은 빌드팩 프레임워크를 통해 제공되는 컨테이너 관리 서비스이므로 다른 서비스의 자동 구성과 다릅니다.  프레임워크를 통해 제공된다는 점에서, 이 서비스의 자동 구성은 다음 3가지 측면에서 다른 서비스들과 차이가 납니다.
 * 옵트 아웃이 옵션이 아닙니다.
 * 서비스 통합에 New Relic의 에이전트인 Java 에이전트가 사용됩니다. 따라서, server.xml 파일의 클라우드 변수가 아니라 Java 옵션을 통해 구성됩니다.
 * 구성에 VCAP_SERVICES 및 VCAP_APPLICATION이 사용됩니다.

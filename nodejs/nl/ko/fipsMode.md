@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,7 +20,7 @@ FIPS 사용 노드 엔진을 사용하려면 환경 변수 FIPS_MODE를 true로 
 예를 들어, 다음과 같습니다.
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
@@ -33,7 +33,7 @@ FIPS_MODE가 true일 때 일부 노드 모듈이 작동하지 않을 수도 있�
 자세한 정보는 이 [stackoverflow 게시물 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)을
 참조하십시오.
 
-**참고** [App Management](/docs/manageapps/app_mng.html) 및 FIPS_MODE는 동시에 지원되지 *않습니다*.   BLUEMIX_APP_MGMT_ENABLE 환경 변수가 설정되고 FIPS_MODE 환경 변수가 true로 설정되면 앱이 스테이징에 실패합니다.
+**참고** [App Management](../common/app_mng.html) 및 FIPS_MODE는 동시에 지원되지 *않습니다*.   BLUEMIX_APP_MGMT_ENABLE 환경 변수가 설정되고 FIPS_MODE 환경 변수가 true로 설정되면 앱이 스테이징에 실패합니다.
 
 FIPS_MODE의 상태를 확인하는 여러 방법이 있습니다.
 <ul>
@@ -73,7 +73,7 @@ SSL 버전에 "fips"가 포함되어 있다면 사용 중인 SSL의 버전이 FI
 
 다음 표에서는 FIPS를 사용하는 node.js v4의 동작을 설명합니다.
 
-|                 | 결과        |
+|                 |결과        |
 | :-------------- | :------------ |
 |FIPS_MODE=true   |success (1)    |
 |FIPS_MODE !=true |success (2)    |

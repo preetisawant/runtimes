@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-02-14"
 # Recursos do Liberty suportados no {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-O tempo de execução instantâneo do Liberty for Java inclui um subconjunto de recursos do Liberty. Alguns recursos que o
+O tempo de execução instantâneo do Liberty for Java inclui um subconjunto de recursos do Liberty.  Alguns recursos que o
 Liberty fornece não estão disponíveis no tempo de execução instantâneo do Liberty for Java porque não são aplicáveis no ambiente de
 nuvem.
 
@@ -45,8 +45,7 @@ remotos não são acessíveis remotamente com o protocolo CORBA/IIOP devido a re
 
 ## Índice de recursos do Liberty
 {: #libertyfeat_index}
-Vá para a seção da lista de recursos usando o índice a seguir ou é possível verificar a [lista de
-recursos do Liberty](#libertyfeat_list).
+Vá para a seção da lista de recursos usando o índice a seguir ou é possível consultar a [lista de recursos do Liberty for Java](#libertyfeat_list).
 
 ### A-E
 * [A](#libertyfeat_A)
@@ -56,6 +55,7 @@ recursos do Liberty](#libertyfeat_list).
 
 ### F-J
 * [F](#libertyfeat_F)
+* [ H ](#libertyfeat_H)
 * [J](#libertyfeat_J)
 
 ### K-O
@@ -102,6 +102,7 @@ recursos do Liberty](#libertyfeat_list).
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
+* constrainedDelegation-1.0
 * couchdb-1.0
 
 ### E
@@ -117,6 +118,11 @@ recursos do Liberty](#libertyfeat_list).
 {: #libertyfeat_f}
 
 * federatedRegistry-1.0
+
+### h
+{: #libertyfeat_h}
+
+* httpWhiteboard-1.0
 
 ### J
 {: #libertyfeat_J}
@@ -134,6 +140,7 @@ recursos do Liberty](#libertyfeat_list).
 * jcaInboundSecurity-1.0
 * jdbc-4.0
 * jdbc-4.1
+* jdbc-4.2
 * jms-1.1
 * jms-2.0
 * jmsMdb-3.1
@@ -143,6 +150,7 @@ recursos do Liberty](#libertyfeat_list).
 * jpa-2.1
 * jsf-2.0
 * jsf-2.2
+* jsfContainer-2.2
 * json-1.0
 * jsonp-1.0
 * jsp-2.2
@@ -159,24 +167,32 @@ recursos do Liberty](#libertyfeat_list).
 ### M
 {: #libertyfeat_M}
 * managedBeans-1.0
-* managedBeans-1.0
 * mdb-3.1
 * mdb-3.2
 * mediaServerControl-1.0     
-* microprofile-1.0
-* microprofile-1.2
+* microProfile-1.0
+* microProfile-1.2
+* microProfile-1.3
 * mongodb-2.0
 * monitor-1.0
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
 * oauth-2.0
 * openapi-3.0
+* openapi-3.1
 * openid-2.0
 * openidConnectClient-1.0
 * openidConnectServer-1.0
+* opentracing-1.0
 * osgi.jpa-1.0
 * osgiAppIntegration-1.0
+* osgiBundle-1.0
 * osgiConsole-1.0
 
 ### P
@@ -198,7 +214,6 @@ recursos do Liberty](#libertyfeat_list).
 * servlet-3.0
 * servlet-3.1
 * sessionDatabase-1.0
-* sipServlet-1.1
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0
@@ -232,4 +247,4 @@ recursos do Liberty](#libertyfeat_list).
 ## geral
 {: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Visão geral do Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

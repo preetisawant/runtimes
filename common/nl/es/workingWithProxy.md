@@ -33,7 +33,7 @@ Puede establecer estas variables de entorno utilizando *bluemix app env-set* o a
 
 Para las aplicaciones de [Liberty for Java](/docs/runtimes/liberty/index.html) y el [java_buildpack](/docs/runtimes/tomcat/index.html), los valores del proxy pueden pasarse al entorno de ejecución a través de la variable de entorno **JAVA_OPTS**.  Por ejemplo, puede emitir el mandato y luego transferir la aplicación:
 ```
-   $ bluemix app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
+   ibmcloud app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
 {: codeblock}
 

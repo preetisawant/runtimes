@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -62,14 +62,14 @@ JVM 메모리 사용에 대한 자세한 정보는 developerWorks 문서 [Thanks
 * `JVM_ARGS` 환경 변수 및 -Xmx 인수를 사용하십시오. 예를 들어, 최대 힙 크기를 512M으로 설정하려면 다음 명령을 사용한 다음 앱을 다시 스테이징하십시오.
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
 * JBP_CONFIG_IBMJDK 환경 변수를 사용하여 힙 크기 비율을 지정하십시오.  heap_size_ratio는 힙에 할당할 메모리 한계의 양을 지정하는 부동 소수점 값입니다.  예를 들어, 힙에 사용 가능한 메모리의 반(50% 또는 0.50)을 할당하려면 다음 명령을 실행하고 앱을 다시 스테이징하십시오.
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

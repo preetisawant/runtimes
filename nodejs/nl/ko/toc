@@ -13,6 +13,7 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
+    dynatrace.md
 
     {: .topicgroup}
     오프라인 작업 또는 프록시 작업
@@ -28,8 +29,8 @@ SDK for Node.js
 
     {: .topicgroup}
     스타터 애플리케이션 및 빌드팩
-        [스타터 애플리케이션 사용](../../cfapps/starter_app_usage.html)
-        [커뮤니티 빌드팩 사용](../../cfapps/byob.html)
+        [스타터 애플리케이션 사용](../common/starter_app_usage.html)
+        [커뮤니티 빌드팩 사용](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -37,4 +38,5 @@ SDK for Node.js
     updates.md
     availableVersions.md
     [빌드팩 지원 구문](../common/buildpackSupport.html)
+
     {: .navgroup-end}

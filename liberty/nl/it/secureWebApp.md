@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-04-06"
 
 ---
 
@@ -16,24 +16,24 @@ lastupdated: "2017-10-26"
 Tutte le applicazioni web devono essere progettate e codificate tenendo presente la sicurezza per evitare di introdurre vulnerabilità di sicurezza gravi.
 {: shortdesc}
 
-{{site.data.keyword.Bluemix}} fornisce un'applicazione starter sicura per aiutarti a scrivere codice Java Liberty più sicuro e per prevenire molti problemi XSS (Cross-Site Scripting). Puoi scaricare questa [applicazione starter sicura](https://github.com/IBM-Bluemix/java-secure-app), eseguirne la build e distribuirla localmente e su {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.Bluemix}} fornisce un'applicazione starter sicura per aiutarti a scrivere codice Java Liberty più sicuro e per prevenire molti problemi XSS (Cross-Site Scripting). Puoi scaricare questa [applicazione starter sicura](https://github.com/IBM-Cloud/java-secure-app), eseguirne la build e distribuirla localmente e su {{site.data.keyword.Bluemix_notm}}.
 
 ## Perché scrivere applicazioni web sicure
 {: #why}
 
 Una vulnerabilità di sicurezza può essere sfruttata da vari attacchi alla sicurezza. Un attacco potrebbe rubare le credenziali, causare perdita di dati e di funzionalità, interrompere i servizi e danneggiare la reputazione e il rinnovo di un business. Cross-Site-Scripting, XSS, è una delle vulnerabilità di sicurezza comuni che si trova in molte applicazioni web che deve essere evitata.
 
-Invece di imparare la teoria degli attacchi XSS e le tecniche correttive prima di iniziare lo sviluppo dell'applicazione web, puoi utilizzare questa [applicazione starter sicura](https://github.com/IBM-Bluemix/java-secure-app). L'applicazione starter sicura include esempi di codifica delle procedure di codifica sicure importanti che impediscono un XSS in modo che puoi iniziare a sviluppare mentre impari e applichi le tecniche di prevenzione XSS.
+Invece di imparare la teoria degli attacchi XSS e le tecniche correttive prima di iniziare lo sviluppo dell'applicazione web, puoi utilizzare questa [applicazione starter sicura](https://github.com/IBM-Cloud/java-secure-app). L'applicazione starter sicura include esempi di codifica delle procedure di codifica sicure importanti che impediscono un XSS in modo che puoi iniziare a sviluppare mentre impari e applichi le tecniche di prevenzione XSS.
 
 ## Come utilizzare l'applicazione di esempio sicura
 {: #how}
 
-Puoi utilizzare l'[applicazione starter sicura](https://github.com/IBM-Bluemix/java-secure-app) come punto di partenza per lo sviluppo della nuova applicazione Liberty. Inizia imparando il codice delle contromisure XSS nell'applicazione e quindi applicalo alle operazioni dell'API dell'applicazione. Le contromisure nell'applicazione starter sicura aiutano ad evitare input utente dannoso che danneggia la tua applicazione sul server o sul browser mitigando o prevenendo gli attacchi XSS.
+Puoi utilizzare l'[applicazione starter sicura](https://github.com/IBM-Cloud/java-secure-app) come punto di partenza per lo sviluppo della nuova applicazione Liberty. Inizia imparando il codice delle contromisure XSS nell'applicazione e quindi applicalo alle operazioni dell'API dell'applicazione. Le contromisure nell'applicazione starter sicura aiutano ad evitare input utente dannoso che danneggia la tua applicazione sul server o sul browser mitigando o prevenendo gli attacchi XSS.
 
-Per prima cosa, scarica questa applicazione starter sicura, quindi eseguine la build e distribuiscila a {{site.data.keyword.Bluemix_notm}}  o localmente nello stesso modo dell'applicazione di esempio [getting-started-java](https://github.com/IBM-Bluemix/get-started-java).  Vai a [Introduzione a Liberty su {{site.data.keyword.Bluemix_notm}}](getting-started.html) per ulteriori informazioni sulla build e la distribuzione delle applicazioni in {{site.data.keyword.Bluemix_notm}}.  Per iniziare, puoi utilizzare questi passi per clonare, eseguire la build ed eseguire l'applicazione.
+Per prima cosa, scarica questa applicazione starter sicura, quindi eseguine la build e distribuiscila a {{site.data.keyword.Bluemix_notm}}  o localmente nello stesso modo dell'applicazione di esempio [getting-started-java](https://github.com/IBM-Cloud/get-started-java).  Vai a [Introduzione a Liberty su {{site.data.keyword.Bluemix_notm}}](getting-started.html) per ulteriori informazioni sulla build e la distribuzione delle applicazioni in {{site.data.keyword.Bluemix_notm}}.  Per iniziare, puoi utilizzare questi passi per clonare, eseguire la build ed eseguire l'applicazione.
 
 ```
-git clone https://github.com/IBM-Bluemix/java-secure-app
+git clone https://github.com/IBM-Cloud/java-secure-app
 cd java-secure-app
 mvn install liberty:run-server
 ```

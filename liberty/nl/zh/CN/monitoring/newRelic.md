@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -37,9 +37,9 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 对于 {{site.data.keyword.Bluemix_notm}} 中要使用 New Relic 监视的现有 Java 应用程序，请遵循以下步骤。
 1. 在 {{site.data.keyword.Bluemix_notm}} 中创建 New Relic 服务实例。
 
-  <pre>
-    $ cf create-service newrelic standard mynewrelic
-  </pre>
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
   {: codeblock}
 
 2. 使用 New Relic 服务将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。请参阅以下样本应用程序清单：
@@ -65,12 +65,12 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 
 如果现有 New Relic 帐户和许可证密钥，那么可以使用“用户提供的服务”将现有 New Relic 服务绑定到应用程序。
 
-1. 使用现有许可证密钥来创建用户提供的服务实例。例如，如果现有许可证密钥为 1234567，那么可以使用 CF CLI 来执行“create-user-provided-service”命令，并在提示时提供许可证密钥 1234567，如下所示：
-
+1. 使用现有许可证密钥来创建用户提供的服务实例。例如，如果现有许可证密钥为 1234567，那么可以使用 {{site.data.keyword.Bluemix_notm}} CLI 来执行“create-user-provided-service”命令，并在提示时提供许可证密钥 1234567，如下所示：
+  
   ```
-$ cf create-user-provided-service mynewrelic -p "licenseKey"
+    ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
-```
+  ```
   {: codeblock}
 
 2. 使用用户提供的 New Relic 服务实例将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。下面是使用用户提供的 New Relic 服务实例的样本应用程序清单：

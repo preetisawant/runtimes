@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2017-12-15"
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了 PHP 入门模板应用程序。PHP 入门模板应用程序是一个简单的 PHP 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供了 PHP 入门模板应用程序。PHP 入门模板应用程序是一个简单的 PHP 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../common/starter_app_usage.html)。
 
 ## 在应用程序的所有页面上强制实施 HTTPS
 {: #enforce_https}
@@ -68,13 +68,3 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 * 7.1.7
 
 如果您应用程序所需的 PHP 版本没有列在上述列表中，那么可以使用外部 [PHP buildpack](https://github.com/cloudfoundry/php-buildpack.git) 来部署应用程序。
-
-# 相关链接
-{: #rellinks notoc}
-## 教程和样本
-{: #samples notoc}
-* [构建和部署 REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
-* [构建和部署移动友好的卡路里计数器](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## 常规
-{: #general notoc}
-* [用于 PHP 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/php-buildpack.git)

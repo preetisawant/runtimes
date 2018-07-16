@@ -31,7 +31,7 @@ lastupdated: "2018-01-23"
 
 若為 [Liberty for Java](/docs/runtimes/liberty/index.html) 及 [java_buildpack](/docs/runtimes/tomcat/index.html) 應用程式，可以透過 **JAVA_OPTS** 環境變數將 Proxy 設定傳遞給運行環境。例如，您可以發出指令，然後重新編譯打包您的應用程式：
 ```
-   $ bluemix app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
+   ibmcloud app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
 {: codeblock}
 

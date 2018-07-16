@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-30"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,10 +14,10 @@ lastupdated: "2017-05-30"
 
 En algunas situaciones puede ser necesario borrar la memoria caché del paquete NuGet para la aplicación.  Esto borrará los paquetes NuGet existentes en memoria caché e impedirá que el paquete de compilación almacene en memoria caché paquetes nuevos.
 
-Puede hacerlo estableciendo la variable de entorno `CACHE_NUGET_PACKAGES` en `false` con la CLI de CloudFoundry:
+Puede hacerlo estableciendo la variable de entorno `CACHE_NUGET_PACKAGES` en `false` con la CLI de {{site.data.keyword.Bluemix_notm}}:
 
 ```shell
-  cf set-env <app_name> CACHE_NUGET_PACKAGES false
+  ibmcloud cf set-env <app_name> CACHE_NUGET_PACKAGES false
 ```
 
 Como alternativa, puede establecer la variable de entorno `CACHE_NUGET_PACKAGES` en `false` en el archivo manifest.yml de la aplicación:

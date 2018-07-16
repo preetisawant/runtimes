@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -49,7 +49,7 @@ Oracle JRE 檔案必須在 Web 伺服器上進行管理，而 Liberty 建置套�
 
 若要進行此設定，您可以發出像這樣的指令：
 ```
-   $ cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
+   ibmcloud cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
 ```
 {: codeblock}
 
@@ -57,7 +57,7 @@ Oracle JRE 檔案必須在 Web 伺服器上進行管理，而 Liberty 建置套�
 
 若要設定 JVM 環境變數，請發出像這樣的指令：
 ```
-   $ cf se myApp JVM 'openjdk'
+   ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

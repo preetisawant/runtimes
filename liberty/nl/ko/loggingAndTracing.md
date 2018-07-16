@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -16,20 +16,20 @@ lastupdated: "2018-1-31"
 ## 로그 파일
 {: #log_files}
 
-`messages.log` 또는 `ffdc` 디렉토리와 같은 표준 Liberty 로그는 각 애플리케이션 인스턴스의 `logs` 디렉토리에 있는 {{site.data.keyword.Bluemix}}에서 사용 가능합니다. 이러한 로그는 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 Cloud Foundry CLI를 통해 액세스할 수 있습니다. 예를 들어, 다음과 같습니다.
+`messages.log` 또는 `ffdc` 디렉토리와 같은 표준 Liberty 로그는 각 애플리케이션 인스턴스의 `logs` 디렉토리에 있는 {{site.data.keyword.Bluemix}}에서 사용 가능합니다. 이러한 로그는 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 {{site.data.keyword.Bluemix_notm}} CLI를 통해 액세스할 수 있습니다. 예를 들어, 다음과 같습니다.
 
 * 앱의 최근 로그에 액세스하려면 다음 명령을 실행하십시오.
 
   ```
-  cf logs --recent <appname>
+  ibmcloud cf logs --recent <appname>
   ```
   {: codeblock}
 
 
-* 앱의 `messages.log` 파일을 보려면 다음 명령을 실행하십시오. 
+* 앱의 `messages.log` 파일을 보려면 다음 명령을 실행하십시오.
 
   ```
-  cf ssh <appname> -c "cat logs/messages.log"
+  ibmcloud cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
@@ -44,22 +44,22 @@ Liberty 추적 구성은 {{site.data.keyword.Bluemix_notm}} 콘솔에서 직접 
 
 ### SSH를 통한 추적 구성 변경
 
-애플리케이션을 푸시하면 server.xml 파일에 **polled**로 설정된 기본 특성 **updateTrigger**와 1분으로 설정된 기본 설정 **monitorInterval**이 포함됩니다. Liberty 서버는 매분 server.xml에 대한 업데이트를 확인하도록 자동으로 구성됩니다. 
+애플리케이션을 푸시하면 server.xml 파일에 **polled**로 설정된 기본 특성 **updateTrigger**와 1분으로 설정된 기본 설정 **monitorInterval**이 포함됩니다. Liberty 서버는 매분 server.xml에 대한 업데이트를 확인하도록 자동으로 구성됩니다.
 
-사용자 정의된 sever.xml을 사용하여 Liberty 앱을 푸시하는 옵션은 [server.xml을 사용하여 Liberty 앱 푸시](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)를 참조하십시오.
+사용자 정의된 server.xml을 사용하여 Liberty 앱을 푸시하는 옵션은 [server.xml을 사용하여 Liberty 앱 푸시](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)를 참조하십시오.
 
 server.xml에서 동적 업데이트를 설정하는 방법은 [동적 업데이트 제어](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}를 참조하십시오.
 
-추적 구성을 변경하려면 다음 단계를 따르십시오. 
+추적 구성을 변경하려면 다음 단계를 따르십시오.
 
 1. 앱에 SSH 실행
 
   ```
- cf ssh <appname> [-i instance_index]
+ ibmcloud cf ssh <appname> [-i instance_index]
   ```
   {: codeblock}
 
-2. server.xml에서 ```<logging traceSpecification="xxxx"/>```를 편집하여 원하는 추적 스펙을 설정하십시오. 예를 들어, *vi*를 사용합니다.
+2. server.xml에서 `<logging traceSpecification="xxxx"/>`를 편집하여 원하는 추적 스펙을 설정하십시오. 예를 들어, *vi*를 사용합니다.
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml
@@ -72,10 +72,10 @@ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 ### SSH를 통한 덤프 트리거링
 
-SSH 기능을 사용하여 CF CLI를 통해 스레드 및 힙 덤프를 트리거하려면 아래의 명령을 사용하십시오. 
+SSH 기능을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI를 통해 스레드 및 힙 덤프를 트리거하려면 아래의 명령을 사용하십시오. 
 
   ```
- cf ssh <appname> -c "pkill -3 java"
+ ibmcloud cf ssh <appname> -c "pkill -3 java"
   ```
   {: codeblock}
 
@@ -84,19 +84,19 @@ SSH 기능을 사용하여 CF CLI를 통해 스레드 및 힙 덤프를 트리�
 ## 덤프 파일 다운로드
 {: #download_dumps}
 
-기본적으로 다양한 덤프 파일이 애플리케이션 컨테이너의 `dumps` 디렉토리에 위치합니다. Cloud Foundry CLI `cf ssh`를 사용하여 덤프 파일을 보고 이를 다운로드할 수 있습니다. 
+기본적으로 다양한 덤프 파일이 애플리케이션 컨테이너의 `dumps` 디렉토리에 위치합니다. {{site.data.keyword.Bluemix_notm}} CLI `ibmcloud cf ssh`를 사용하여 덤프 파일을 보고 다운로드하십시오.
 
 * 생성된 덤프를 보려면 다음 명령을 실행하십시오.
 
   ```
-  $ cf ssh <appname> -c "ls -l dumps"
+  ibmcloud cf ssh <appname> -c "ls -l dumps"
   ```
   {: codeblock}
 
 * 덤프 파일을 다운로드하려면 다음 명령을 실행하십시오.
 
   ```
-  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ibmcloud cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

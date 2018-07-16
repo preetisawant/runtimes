@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -18,18 +18,18 @@ Variáveis de ambiente suportadas pelo Liberty for Java.
 
 <table>
 <tr>
-<th align="left">Nome</th>
+<th align="left">Nome da Variável de Ambiente</th>
 <th align="left">Descrição</th>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Ative os [utilitários de gerenciamento de app](/docs/manageapps/app_mng.html)</td>
+<td>Ative os [utilitários de gerenciamento de app](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Instale os [utilitários de gerenciamento de app](/docs/manageapps/app_mng.html)</td>
+<td>Instale os [utilitários de gerenciamento de app](../common/app_mng.html)</td>
 </tr>
 
 <tr>
@@ -104,10 +104,61 @@ de reconfiguração automática Spring](https://github.com/cloudfoundry/java-bui
 <td>Desative a [configuração automática](autoConfig.html#opting_out) do serviço.</td>
 </tr>
 </table>
+{: caption="Tabela 1. Variáveis de ambiente disponíveis para o Liberty for Java" caption-side="top"}
+
+## Atributos desativados no buildpack do Liberty for Java
+
+Há alguns atributos que são automaticamente desativados pelo buildpack do Liberty, que não podem ser substituídos. As
+variáveis de ambiente e os atributos a seguir são desativados.
+
+### Tabela de atributos desativada
+
+<table>
+<tr>
+<th>Atributo desativado </th>
+<th>Elemento</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>criação de log</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>criação de log</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="Tabela 1. Atributos desativados pelo Liberty for Java" caption-side="top"}
 
 # rellinks
 {: #rellinks notoc}
 ## geral
 {: #general notoc}
 * [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visão geral do Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

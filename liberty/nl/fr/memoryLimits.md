@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -50,28 +50,26 @@ Vous pouvez personnaliser de différentes manières la quantité de mémoire max
 Pour éviter les erreurs provenant d'un dépassement des limites de mémoire, le pack de construction Liberty for Java définit un rapport de taille de segment de mémoire par défaut en fonction de la limite de mémoire que vous indiquez lors du déploiement de votre application.
 
 * Les applications dont les limites de mémoire sont inférieures à 512M ont un rapport de taille de segment de mémoire de 50 %
-* Les applications dont les limites de mémoire sont supérieures ou égales à 512M ont un rapport de taille de segment de  mémoire de 75 %
+* Les applications dont les limites de mémoire sont supérieures ou égales à 512M ont un rapport de taille de segment de mémoire de 75 %
 
 Lorsque vous spécifiez le segment de mémoire à l'aide de variables d'environnement, vous remplacez les rapports de taille de segment de mémoire par défaut.
 
 ### Spécification de segment de mémoire
 {: #specifying_heap_memory}
 
-Vous pouvez définir la taille de segment de mémoire à l'aide de variables d'environnement ou en modifiant le fichier `jvm.options`. Lorsque vous utilisez les variables d'environnement `JVM_ARGS` ou
-`JBP_CONFIG_IBMJDK`, les modifications sont appliquées lorsque vous
-intégrez votre application dans {{site.data.keyword.Bluemix_notm}}. En modifiant le fichier `jvm.options`, l'effet sur la configuration de la taille de segment de mémoire peut également être testé localement.
+Vous pouvez définir la taille de segment de mémoire à l'aide de variables d'environnement ou en modifiant le fichier `jvm.options`. Lorsque vous utilisez les variables d'environnement `JVM_ARGS` ou `JBP_CONFIG_IBMJDK`, les modifications sont appliquées lorsque vous intégrez votre application dans {{site.data.keyword.Bluemix_notm}}. En modifiant le fichier `jvm.options`, l'effet sur la configuration de la taille de segment de mémoire peut également être testé localement.
 
 * Utilisez la variable d'environnement `JVM_ARGS` et l'argument -Xmx. Par exemple, pour fixer à 512M la taille maximum du segment de mémoire, utilisez la commande suivante, puis reconstituez votre application.
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
 * Indiquez le rapport de taille de segment de mémoire à l'aide de la variable d'environnement JBP_CONFIG_IBMJDK.  La valeur de heap_size_ratio est une valeur en virgule flottante qui spécifie la limite de mémoire à allouer au segment de mémoire.  Par exemple, pour allouer la moitié de la mémoire disponible au segment de mémoire (50 % ou 0,50), exécutez la commande suivante et reconstituez votre application.
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

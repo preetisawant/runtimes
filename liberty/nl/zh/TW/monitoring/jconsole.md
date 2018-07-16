@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2017-11-10"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2017-11-08"
 
 JConsole 包含在您的 Java 安裝中。若要啟動 JConsole 應用程式，請移至 &lt;java-home&gt;/bin，並執行下列指令：
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+    jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -57,7 +57,7 @@ Cuando envía una aplicación autónoma y la enlaza a servicios gestionados por 
 
 Cuando se proporciona un archivo server.xml y lo enlaza a servicios gestionados por contenedor, el paquete de compilación de Liberty generará o actualizará las stanzas de configuración.
 
-* Si el archivo server.xml proporcionado no contiene stanzas de configuración para los servicios en lazados,  Liberty genera la configuración para los servicios enlazados.
+* Si el archivo server.xml proporcionado no contiene stanzas de configuración para los servicios en lazados, Liberty genera la configuración para los servicios enlazados.
 * Si el archivo server.xml proporcionado contiene stanzas de configuración para los servicios enlazados, Liberty actualiza la configuración para los servicios enlazados.
 
 Consulte la documentación del tipo de servicio enlazado para ver más detalles.
@@ -67,12 +67,12 @@ Consulte la documentación del tipo de servicio enlazado para ver más detalles.
 
 En algunos casos, puede que no desee que el paquete de compilación de Liberty configure automáticamente los servicios ha enlazado. Vamos a examinar los casos de ejemplo.
 
-* Mi aplicación utiliza *dashDB*, pero deseo que la aplicación gestione directamente la conexión con la base de datos. La aplicación contiene el archivo jar de controlador de cliente necesario. No quiero que el paquete de compilación de Liberty configure automáticamente el servicio *dashDB* .
-* Estoy proporcionando un archivo server.xml y he proporcionado las stanzas de configuración para la instancia  *cloudant* porque necesito una configuración de fuente de datos no estándar. No quiero que el paquete de compilación de Liberty actualice mi archivo server.xml, pero necesito de todas formas el paquete de compilación de Liberty para asegurarme de que se instala el software de soporte adecuado.
+* Mi aplicación utiliza *dashDB*, pero deseo que la aplicación gestione directamente la conexión con la base de datos. La aplicación contiene el archivo jar de controlador de cliente necesario. No quiero que el paquete de compilación de Liberty configure automáticamente el servicio *dashDB*.
+* Estoy proporcionando un archivo server.xml y he proporcionado las stanzas de configuración para la instancia *cloudant* porque necesito una configuración de fuente de datos no estándar. No quiero que el paquete de compilación de Liberty actualice mi archivo server.xml, pero necesito de todas formas el paquete de compilación de Liberty para asegurarme de que se instala el software de soporte adecuado.
 
-Para renunciar a la configuración automática del servicio, utilice la variable de entorno services_autoconfig_excludes. Puede incluir esta variable de entorno en un archivo manifest.yml o la puede establecer mediante el cliente cf.
+Para renunciar a la configuración automática del servicio, utilice la variable de entorno services_autoconfig_excludes. Puede incluir esta variable de entorno en un archivo manifest.yml o la puede establecer mediante el cliente de {{site.data.keyword.Bluemix_notm}}.
 
-Puede renunciar a la configuración automática de servicios uno por uno. Puede optar por excluir completamente (como en el caso de ejemplo *dashDB*) o renunciar únicamente de las actualizaciones en la configuración del archivo server.xml (como en el el caso de ejemplo *cloudant*). El valor que especifique para la variable de entorno services_autoconfig_excludes es una serie como se muestra a continuación.
+Puede renunciar a la configuración automática de servicios uno por uno. Puede optar por excluir completamente (como en el caso de ejemplo *dashDB*) o renunciar únicamente de las actualizaciones en la configuración del archivo server.xml (como en el caso de ejemplo *cloudant*). El valor que especifique para la variable de entorno services_autoconfig_excludes es una serie como se muestra a continuación.
 
 * La serie puede contener especificaciones opt-out para uno o varios servicios.
 * La especificación opt out para un servicio específico es service_type=option, donde:
@@ -94,11 +94,11 @@ Consulte el ejemplo siguiente de la gramática de la serie services_autoconfig_e
 {: codeblock}
 
 **Importante**: El tipo de servicio que especifique debe coincidir con la etiqueta de servicio que aparece en la variable de entorno VCAP_SERVICES. No se permiten espacios en blanco.
-**Importante**: No se permiten espacios en blanco en ```<service_type_specification>```. Solo se permite el uso de espacios en blanco para separar varias ```<service_type_specification>``` .
+**Importante**: No se permiten espacios en blanco en `<service_type_specification>`. Solo se permite el uso de espacios en blanco para separar varias instancias de `<service_type_specification>`.
 
 Utilice la opción **all** para renunciar a todas las acciones de configuración automática para un servicio, como en el caso de ejemplo anterior de *dashDB*. Utilice la opción **configuración** para renunciar únicamente a las acciones de actualización de la configuración como en el caso de ejemplo *cloudant* anterior.
 
-A continuación se muestra un ejemplo de especificaciones opt-out en un archivo manifest.yml para los casos de ejemplo  *dashDB* y *cloudant*. 
+A continuación se muestra un ejemplo de especificaciones opt-out en un archivo manifest.yml para los casos de ejemplo *dashDB* y *cloudant*.
 
 ```
     env:
@@ -117,15 +117,15 @@ de entorno services_autoconfig_excludes para la aplicación
 myapp mediante la interfaz de línea de mandatos.
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
 Para encontrar la *etiqueta* para un servicio en VCAP_SERVICES emita un mandato como en el siguiente ejemplo:
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -135,7 +135,7 @@ El resultado incluye un texto similar al siguiente, en el que puede ver el campo
    "elephantsql": [
    {
       "credentials": {
-            "max_conns": "5",
+      "max_conns": "5",
       "uri":      "..."
    },
    "label": "elephantsql",
@@ -146,14 +146,15 @@ El resultado incluye un texto similar al siguiente, en el que puede ver el campo
 ## Sustitución de la configuración de servicio
 {: #override_service_config}
 
-En algunos casos, es posible que desee alterar temporalmente la configuración predeterminada para un servicio generado por la configuración automática.Puede utilizar la variable de entorno**LBP_SERVICE_CONFIG_xxxx** para alterar temporalmente una configuración de servicio. Consulte las siguientes tablas para obtener las  sintaxis de ejemplo y nombres de variable de entorno completos para sustituirlos.  Por ejemplo, para sustituir la versión predeterminada del servicio *elephantSQL* y establecerla en la version 8.3.4. + emita un mandato como por ejemplo:
+En algunos casos, es posible que desee alterar temporalmente la configuración predeterminada para un servicio generado por la configuración automática.
+Puede utilizar la variable de entorno **LBP_SERVICE_CONFIG_xxxx** para alterar temporalmente una configuración de servicio. Consulte las siguientes tablas para obtener la sintaxis de ejemplo y nombres de variable de entorno completos para sustituirlos.  Por ejemplo, para sustituir la versión predeterminada del servicio *elephantSQL* y establecerla en la version 8.3.4. + emita un mandato como por ejemplo:
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 
-Esta tabla muestra la correlación de **tipo_servicio** con los nombres de variables de entorno  **LBP_SERVICE_CONFIG_xxxx**.
+Esta tabla muestra la correlación de **tipo_servicio** con los nombres de variables de entorno **LBP_SERVICE_CONFIG_xxxx**.
 
 <table>
 <tr>
@@ -193,7 +194,7 @@ Esta tabla muestra la correlación de **tipo_servicio** con los nombres de varia
 
 <tr>
 <td>elephantsql</td>
-<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 </tr>
 
 <tr>

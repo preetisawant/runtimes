@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -67,7 +67,7 @@ Quando esegui il push di un'applicazione autonoma, il pacchetto di build Liberty
 
 Quando esegui il push di un'applicazione autonoma ed esegui il bind ai servizi gestiti dal contenitore, il pacchetto di build Liberty genera le stanze di server.xml necessarie per i servizi di cui è stato eseguito il bind.
 
-Quando fornisci un file server.xml ed esegui il bind ai servizi gestiti dal contenitore, il pacchetto di build Liberty genera o aggiorna le stanze di configurazione. 
+Quando fornisci un file server.xml ed esegui il bind ai servizi gestiti dal contenitore, il pacchetto di build Liberty genera o aggiorna le stanze di configurazione.
 
 * Se il file server.xml fornito non contiene le stanze di configurazione per i servizi di cui è stato eseguito il bind, Liberty genera la configurazione per questi servizi.
 * Se il file server.xml fornito contiene le stanze di configurazione per i servizi di cui è stato eseguito il bind, Liberty aggiorna la configurazione per questi servizi.
@@ -89,20 +89,19 @@ automaticamente il servizio *dashDB*.
 * Sto fornendo un file server.xml e ho fornito le stanze di configurazione per l'istanza *cloudant* perché richiedo una configurazione dell'origine dati non standard. Non desidero che il pacchetto di build Liberty aggiorni il mio file server.xml ma richiedo comunque che il pacchetto di build Liberty verifichi che sia installato il software di supporto appropriato.
 
 Per optare per l'esclusione dalla configurazione automatica
-del servizio, utilizza la variabile di ambiente services_autoconfig_excludes. Puoi includere questa variabile
-di ambiente in un manifest.yml o impostarla utilizzando il client cf.
+del servizio, utilizza la variabile di ambiente services_autoconfig_excludes. Puoi includere questa variabile di ambiente in un manifest.yml o impostarla utilizzando il client {{site.data.keyword.Bluemix_notm}}.
 
 Puoi optare
-per l'esclusione dalla configurazione automatica dei servizi in base ai singoli tipi di servizio. Puoi scegliere di optare per l'esclusione in modo totale (come nello scenario *dashDB*) oppure di optare per l'esclusione solo dagli aggiornamenti della configurazione del file server.xml (come nello scenario *cloudant*). Il valore da te specificato per la variabile di ambiente services_autoconfig_excludes è una stringa, come mostrato di seguito. 
+per l'esclusione dalla configurazione automatica dei servizi in base ai singoli tipi di servizio. Puoi scegliere di optare per l'esclusione in modo totale (come nello scenario *dashDB*) oppure di optare per l'esclusione solo dagli aggiornamenti della configurazione del file server.xml (come nello scenario *cloudant*). Il valore da te specificato per la variabile di ambiente services_autoconfig_excludes è una stringa, come mostrato di seguito.
 
-* La stringa può contenere le specifiche di opzione di esclusione per uno o più servizi. 
+* La stringa può contenere le specifiche di opzione di esclusione per uno o più servizi.
 * La specifica dell'opzione di esclusione per un servizio specifico è service_type=option, dove:
   * service_type è l'etichetta per il servizio come visualizzata in VCAP_SERVICES.
   * L'opzione è all o config.
 * Se la stringa contiene una specifica di opzione di esclusione per più di un servizio,
 le singole specifiche di opzione di esclusione devono essere separate da un singolo carattere spazio vuoto.
 
-Vedi il seguente esempio di grammatica della stringa services_autoconfig_excludes: 
+Vedi il seguente esempio di grammatica della stringa services_autoconfig_excludes:
 
 ```
     Opt_out_string :: <service_type_specification[<delimiter>service_type_specification]*
@@ -114,8 +113,7 @@ Vedi il seguente esempio di grammatica della stringa services_autoconfig_exclude
 {: codeblock}
 
 **Importante**: il tipo di servizio da te specificato deve corrispondere all'etichetta services come si presenta nella variabile di ambiente VCAP_SERVICES. Lo spazio vuoto non è consentito.
-**Importante**: non è consentito alcuno spazio vuoto in una ```<specifica_tipo_di_servizio>```. Il solo
-utilizzo consentito dello spazio vuoto è per separare più istanze ```<specifica_di_tipo_servizio>```. 
+**Importante**: non è consentito alcuno spazio vuoto in una `<service_type_specification>`. Il solo utilizzo consentito dello spazio vuoto è per separare più istanze di `<service_type_specification>`.
 
 Utilizza l'opzione **all** per optare per l'esclusione da tutte le azioni di configurazione automatica per un servizio, come nello scenario *dashDB* sopra riportato. Utilizza l'opzione **config** per optare per l'esclusione solo dalle azioni di aggiornamento della configurazione come nello scenario *cloudant* sopra riportato.
 
@@ -138,15 +136,15 @@ riportati degli esempi di come impostare la variabile di ambiente services_autoc
 myapp utilizzando l'interfaccia riga di comando.
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
-Per trovare il *label* per un servizio in VCAP_SERVICES immetti un comando simile al seguente esempio: 
+Per trovare il *label* per un servizio in VCAP_SERVICES immetti un comando simile al seguente esempio:
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -171,7 +169,7 @@ In alcuni casi potresti voler sovrascrivere la configurazione predefinita per un
 Puoi utilizzare la variabile di ambiente **LBP_SERVICE_CONFIG_xxxx** per sovrascrivere una configurazione del servizio. Consulta le seguenti tabelle per  i nomi della variabile di ambiente completi e per la sintassi di esempio per sovrascriverli.  Ad esempio, per sovrascrivere la versione predefinita del servizio *elephantSQL* ed impostare la versione 8.3.4.+ immetti un comando simile a:
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 
@@ -215,7 +213,7 @@ Questa tabella mostra l'associazione dei nomi della variabile di ambiente **serv
 
 <tr>
 <td>elephantsql</td>
-<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 </tr>
 
 <tr>

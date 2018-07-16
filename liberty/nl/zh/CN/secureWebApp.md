@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-04-06"
 
 ---
 
@@ -16,24 +16,24 @@ lastupdated: "2017-10-26"
 在针对所有 Web 应用程序进行设计和代码编写时，都必须牢记安全性，以避免引入严重的安全漏洞。
 {: shortdesc}
 
-{{site.data.keyword.Bluemix}} 提供了一种安全的入门模板应用程序，可帮助您编写更安全的 Liberty Java 代码，同时避免大部分跨站点脚本编制 (XSS) 问题。可下载此[安全入门模板应用程序](https://github.com/IBM-Bluemix/java-secure-app)，进行构建并在本地以及在 {{site.data.keyword.Bluemix_notm}} 上进行部署。
+{{site.data.keyword.Bluemix}} 提供了一种安全的入门模板应用程序，可帮助您编写更安全的 Liberty Java 代码，同时避免大部分跨站点脚本编制 (XSS) 问题。可下载此[安全入门模板应用程序](https://github.com/IBM-Cloud/java-secure-app)，进行构建并在本地以及在 {{site.data.keyword.Bluemix_notm}} 上进行部署。
 
 ## 为什么要编写安全 Web 应用程序
 {: #why}
 
 安全漏洞可能会被各种安全攻击所利用。攻击可能会窃取凭证，导致数据丢失和功能失灵，干扰服务，并损害公司声誉和收入。跨站点脚本编制 (XSS) 是在大多数 Web 应用程序中存在而必须避免的一种常见安全漏洞。
 
-您可以使用此[安全入门模板应用程序](https://github.com/IBM-Bluemix/java-secure-app)，而不用在开始 Web 应用程序开发之前学习 XSS 攻击理论和补救方法。安全入门模板应用程序包含关键安全代码编写实践的代码编写示例，这些实践可防范 XSS，这样您就可以在学习并应用 XSS 防范方法的同时着手进行开发。
+您可以使用此[安全入门模板应用程序](https://github.com/IBM-Cloud/java-secure-app)，而不用在开始 Web 应用程序开发之前学习 XSS 攻击理论和补救方法。安全入门模板应用程序包含关键安全代码编写实践的代码编写示例，这些实践可防范 XSS，这样您就可以在学习并应用 XSS 防范方法的同时着手进行开发。
 
 ## 如何使用安全样本应用程序
 {: #how}
 
-可以使用[安全入门模板应用程序](https://github.com/IBM-Bluemix/java-secure-app)来着手开发新 Liberty 应用程序。首先了解应用程序中的 XSS 防范措施代码，然后将其应用于应用程序 API 的操作。安全入门模板应用程序中的防范措施通过缓解或阻止 XSS 攻击，从而帮助阻止恶意用户输入在服务器和浏览器上对您的应用程序造成损害。
+可以使用[安全入门模板应用程序](https://github.com/IBM-Cloud/java-secure-app)来着手开发新 Liberty 应用程序。首先了解应用程序中的 XSS 防范措施代码，然后将其应用于应用程序 API 的操作。安全入门模板应用程序中的防范措施通过缓解或阻止 XSS 攻击，从而帮助阻止恶意用户输入在服务器和浏览器上对您的应用程序造成损害。
 
-首先，下载此安全入门模板应用程序，然后进行构建，并在 {{site.data.keyword.Bluemix_notm}} 上或本地进行部署，方法与使用 [getting-started-java](https://github.com/IBM-Bluemix/get-started-java) 样本应用程序一样。转至 [Liberty on {{site.data.keyword.Bluemix_notm}}](getting-started.html) 入门可了解有关在 {{site.data.keyword.Bluemix_notm}} 上构建和部署应用程序的更多信息。首先，可以使用这些步骤来克隆、构建和运行应用程序。
+首先，下载此安全入门模板应用程序，然后进行构建，并在 {{site.data.keyword.Bluemix_notm}} 上或本地进行部署，方法与使用 [getting-started-java](https://github.com/IBM-Cloud/get-started-java) 样本应用程序一样。转至 [Liberty on {{site.data.keyword.Bluemix_notm}}](getting-started.html) 入门可了解有关在 {{site.data.keyword.Bluemix_notm}} 上构建和部署应用程序的更多信息。首先，可以使用这些步骤来克隆、构建和运行应用程序。
 
 ```
-git clone https://github.com/IBM-Bluemix/java-secure-app
+git clone https://github.com/IBM-Cloud/java-secure-app
 cd java-secure-app
 mvn install liberty:run-server
 ```

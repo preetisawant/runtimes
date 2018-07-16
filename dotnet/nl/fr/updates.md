@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-10-06"
 ---
 
@@ -112,8 +112,7 @@ Cette version du pack de construction inclut les modifications suivantes :
 
 ## 18 septembre 2105 : Pack de construction ASP.NET 5 v0.6-20150916-1220 mis à jour
 
-* Cette version du pack de construction prend en charge les modifications de l'environnement DNX 7 bêta. De plus, elle peut exécuter des applications
-qui dépendent d'éditions bêta plus anciennes avec la commande de démarrage personnalisée suivante :
+* Cette version du pack de construction prend en charge les modifications de l'environnement DNX 7 bêta. De plus, elle peut exécuter des applications qui dépendent d'éditions bêta plus anciennes avec la commande de démarrage personnalisée suivante :
 
 ```
    dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}

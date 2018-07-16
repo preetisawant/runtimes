@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -13,14 +13,14 @@ lastupdated: "2017-12-13"
 # Modalidad FIPS
 {: #fips_mode}
 
-Las versiones del paquete de compilación de Nodejs v3.2-20160315-1257 y posteriores dan soporte a [FIPS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)  
+Las versiones del paquete de compilación de Nodejs v3.2-20160315-1257 y posteriores dan soporte a [FIPS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
 
 Para utilizar el motor de nodos habilitado para FIPS, establezca la variable de entorno FIPS_MODE en true.
 Por ejemplo:
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
@@ -33,9 +33,7 @@ Expess puede ayudar a solucionar este problema. Por ejemplo, puede realizar lo s
 Consulte esta [publicación de stackoverflow ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 para obtener más información.
 
-
-
-**NOTA** [App Management](/docs/manageapps/app_mng.html) y FIPS_MODE *NO* están soportados simultáneamente.  Si se ha establecido la variable de entorno BLUEMIX_APP_MGMT_ENABLE y la variable de entorno FIPS_MODE se ha establecido en true, la app no se podrá transferir.
+**NOTA** [App Management](../common/app_mng.html) y FIPS_MODE *NO* están soportados simultáneamente.  Si se ha establecido la variable de entorno BLUEMIX_APP_MGMT_ENABLE y la variable de entorno FIPS_MODE se ha establecido en true, la app no se podrá transferir.
 
 A continuación se muestran varios métodos para comprobar el estado de FIPS_MODE:
 <ul>
@@ -60,8 +58,6 @@ Si la versión SSL contiene "fips", la versión de SSL que está en uso da sopor
 </li>
 
 <li> Para node.js versión 6 y posterior, puede comprobar el valor devuelto por crypto.fips en el código como el siguiente:
-
-  
 
   <pre>
   console.log('crypto.fips== [' +crypto.fips +']');
@@ -105,7 +101,7 @@ Para ejecutar en modalidad FIPS con Node.js versión 6 y posterior, además de e
 ```
 {: codeblock}
 
-La siguiente tabla explica el comportamiento de node.js v6 y posterior con FIPS. 
+La siguiente tabla explica el comportamiento de node.js v6 y posterior con FIPS.
 
 |                 |--enable-fips  |NO --enable-fips |
 | :-------------- | :------------ | :-------------- |

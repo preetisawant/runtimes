@@ -14,6 +14,6 @@ lastupdated: "2018-02-22"
 
 Resuelva los problemas de las aplicaciones Liberty for Java y paquetes de compilación con los siguientes recursos:
 
-* [Resolución de problemas de tiempos de ejecución](../../troubleshoot/ts_runtimes.html#runtimes)
-* [Resolución de problemas de tiempos de ejecución: Liberty](../../troubleshoot/ts_runtimes.html#ts_liberty)
+* [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html#runtimes)
+* [Resolución de problemas de tiempos de ejecución: Liberty](../common/ts_runtimes.html#ts_liberty)
 * [Application Management](../common/app_mng.html)

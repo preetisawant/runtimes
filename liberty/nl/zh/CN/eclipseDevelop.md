@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-15"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-02-15"
 
 此过程遵循 Liberty [入门教程](getting-started.html)的相同常规步骤。使用 Eclipse，设置开发环境，在本地以及在云上部署应用程序，在应用程序中集成 {{site.data.keyword.Bluemix_notm}} 数据库服务。
 
-## 在开始之前
+## 开始之前
 {: #prereqs}
 
 您将需要以下帐户和工具：
@@ -29,8 +29,8 @@ lastupdated: "2018-02-15"
 * [Eclipse IDE for Java EE Developers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 如果已完成[入门教程](getting-started.md)，那么可能已具有这些工具和帐户。在开始之前，确保您还安装了并注册了以下帐户：
-* [{{site.data.keyword.Bluemix_notm}} 帐户](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} 帐户](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://maven.apache.org/download.cgi){: new_window}
 
@@ -38,10 +38,11 @@ lastupdated: "2018-02-15"
 {: #clone}
 
 首先，克隆样本应用程序 GitHub 存储库。
-  ```bash
-git clone https://github.com/IBM-Bluemix/get-started-java
+
   ```
-  {: pre}
+git clone https://github.com/IBM-Cloud/get-started-java
+  ```
+  {: codeblock}
 
 ## 步骤 2：构建应用程序的源代码
 {: #build_app}
@@ -53,14 +54,14 @@ git clone https://github.com/IBM-Bluemix/get-started-java
   ```
 cd get-started-java
   ```
-  {: pre}
+  {: codeblock}
 
 1. 使用 Maven 安装依赖项并构建 .war 文件。
 
   ```
 mvn clean install
   ```
-  {: pre}
+  {: codeblock}
 
 ## 步骤 3：准备部署应用程序
 {: #prepare}
@@ -80,34 +81,35 @@ mvn clean install
   ```
   {: codeblock}
 
-在此 manifest.yml 文件中，**random-route: true** 会为应用程序生成随机路径，以避免路径与其他路径冲突。如果您愿意，可以将 **random-route: true** 替换为 **host: myChosenHostName**，以提供您选择的主机名。[了解更多...](/docs/manageapps/depapps.html#appmanifest)
+在此 manifest.yml 文件中，**random-route: true** 会为应用程序生成随机路径，以避免路径与其他路径冲突。如果您愿意，可以将 **random-route: true** 替换为 **host: myChosenHostName**，以提供您选择的主机名。
 {: tip}
 
-## 步骤 4：部署到 {{site.data.keyword.Bluemix_notm}}
+## 步骤 4：登录到 {{site.data.keyword.Bluemix_notm}}
 {: #deploy}
 
-将应用程序部署到以下其中一个 {{site.data.keyword.Bluemix_notm}} 区域。为了获得最佳等待时间，请选择离您的用户最近的区域。
+1. 登录到 {{site.data.keyword.Bluemix_notm}} 帐户，然后选择 API 端点。
 
-|区域          |API 端点|
-|:---------------|:-------------------------------|
-| 美国南部|https://api.ng.bluemix.net|
-| 英国          | https://api.eu-gb.bluemix.net|
-| 悉尼  | https://api.au-syd.bluemix.net|
-| 法兰克福| https://api.eu-de.bluemix.net |
-
-1. 设置 API 端点，方法是将 `<API-endpoint>` 替换为您区域的端点。
   ```
-cf api <API-endpoint>
-  ```
-  {: pre}
-
-1. 登录到 {{site.data.keyword.Bluemix_notm}} 帐户。
-  ```
-cf login
+ibmcloud login
 ```
-  {: pre}
+  {: codeblock}
 
-  如果因为是联合用户标识而无法使用 `cf login` 或 `bx login` 命令登录，请使用 `cf login --sso` 或 `bx login --sso` 命令用单点登录标识登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
+  如果由于您具有联合用户标识而无法使用 `ibmcloud login` 登录，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
+
+  ```
+ibmcloud login --sso
+  ```
+  {: codeblock}
+
+  接下来，设置目标 Cloud Foundry CLI：
+
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
+
+  如果未设置组织或空间，请参阅[添加组织和空间](https://console.bluemix.net/docs/account/orgs_spaces.html)。
+  {: tip}
 
 ## 步骤 5：使用 Eclipse 进行开发
 {: #eclipse}
@@ -139,15 +141,18 @@ cf login
 
 6. 将更改推送到 {{site.data.keyword.Bluemix_notm}}：
   - 在命令行的 `get-started-java` 目录中，重新构建 .war 文件。
+
     ```
 mvn clean install
     ```
-    {: pre}
+    {: codeblock}
+
   - 将应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
+
     ```
-cf push
-```
-    {: pre}
+ibmcloud cf push
+    ```
+    {: codeblock}
 
 现在，您已在本地和云上运行代码！
 
@@ -157,11 +162,11 @@ cf push
 接下来，我们要将 NoSQL 数据库添加到此应用程序并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
 1. 在浏览器中，登录到 {{site.data.keyword.Bluemix_notm}}，然后转至“仪表板”。选择**创建资源**。
-2. 选择**数据和分析**部分，选择 **Cloudant NoSQL DB**，然后创建该服务。
+2. 选择**数据和分析**部分，选择 **{{site.data.keyword.cloudant_short_notm}}**，然后创建该服务。
 3. 转至**连接**视图，选择应用程序，然后选择**创建连接**。
 4. 出现提示时，选择**重新编译打包**。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
 
-通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。[了解更多...](/docs/manageapps/depapps.html#app_env)
+通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
 {: tip}
 
 ## 步骤 7：使用数据库
@@ -169,25 +174,27 @@ cf push
 现在，我们将更新本地代码以指向此数据库。我们将在属性文件中存储服务的凭证。仅当应用程序在本地运行时，才会使用此文件。在 {{site.data.keyword.Bluemix_notm}} 中运行时，将从 `VCAP_SERVICES` 环境变量中读取凭证。
 
 1. 在 Eclipse 中，打开 src/main/resources/cloudant.properties 文件：
+
   ```
   cloudant_url=
   ```
-  {: pre}
+  {: codeblock}
 
 2. 在浏览器中，转至 {{site.data.keyword.Bluemix_notm}} 并选择**应用程序 > _your app_ > 连接 > Cloudant > 查看凭证**。
 
 3. 仅将凭证中的 `url` 复制并粘贴到 `cloudant.properties` 文件的 `url` 字段，然后保存更改。
+
   ```
   cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
-  {:pre}
+  {:codeblock}
 
 4. 在 Eclipse 中的`服务器`视图中，重新启动 Liberty 服务器。
 
-  刷新浏览器视图：http://localhost:9080/GetStartedJava/。现在，输入到应用程序中的所有名称都已添加到数据库。
+  刷新浏览器视图：http://localhost:9080/GetStartedJava/。现在，您输入到应用程序中的所有名称都已添加到数据库。
 
   本地应用程序和 {{site.data.keyword.Bluemix_notm}} 应用程序共享该数据库。在刷新浏览器后，从任一应用程序添加的名称都将同时出现在这两个应用程序中。
 
 
-请记住，如果无需应用程序在 {{site.data.keyword.Bluemix_notm}} 上继续运行，请停止该应用程序，这样就不会发生任何意外的费用。
+请记住，如果无需应用程序在 {{site.data.keyword.Bluemix_notm}} 上继续运行，请停止该应用程序，这样就不会产生任何意外的费用。
 {: tip}  

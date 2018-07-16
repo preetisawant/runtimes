@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-07-13"
 ---
 
@@ -74,4 +74,3 @@ No método Program.cs `Main`, remova a linha a seguir:
 {: codeblock}
 
 Essas mudanças devem permitir que a CLI de .NET localize as `Visualizações` de seu aplicativo, uma vez que elas agora serão copiadas na saída de construção quando o comando `dotnet publish` for executado.  Se o seu aplicativo tiver quaisquer outros arquivos, como arquivos de configuração json, que são necessários no tempo de execução, também será necessário incluí-los na propriedade de `Include` do elemento `Content` no arquivo .csproj de seu projeto, separados por pontos e vírgulas.
-

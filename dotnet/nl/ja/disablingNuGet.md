@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-30"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,10 +14,10 @@ lastupdated: "2017-05-30"
 
 場合によっては、アプリケーションの NuGet パッケージのキャッシュをクリアする必要が生じることがあります。  そうすることにより、キャッシュに入れられている既存の NuGet パッケージがクリアされ、ビルドパックで新規パッケージがキャッシュに入れられなくなります。
 
-これを行うには、CloudFoundry CLI を使用して以下のように `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定します。
+これを行うには、{{site.data.keyword.Bluemix_notm}} CLI を使用して以下のように `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定します。
 
 ```shell
-  cf set-env <app_name> CACHE_NUGET_PACKAGES false
+  ibmcloud cf set-env <app_name> CACHE_NUGET_PACKAGES false
 ```
 
 あるいは、アプリケーションの manifest.yml ファイルで、以下のように `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定することもできます。

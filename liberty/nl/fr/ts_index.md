@@ -14,6 +14,6 @@ lastupdated: "2018-02-22"
 
 Dépannez vos applications et packs de construction Liberty for Java avec les ressources suivantes :
 
-* [Traitement des incidents liés aux contextes d'exécution](../../troubleshoot/ts_runtimes.html#runtimes)
-* [Traitement des incidents liés aux contextes d'exécution : Liberty](../../troubleshoot/ts_runtimes.html#ts_liberty)
+* [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html#runtimes)
+* [Traitement des incidents liés aux contextes d'exécution : Liberty](../common/ts_runtimes.html#ts_liberty)
 * [Gestion des applications](../common/app_mng.html)

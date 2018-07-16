@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -28,11 +28,11 @@ Importante: Cuando despliegue una aplicación con el paquete de compilación de 
 
 Las aplicaciones autónomas, como los archivos WAR o EAR, se pueden desplegar en Liberty en {{site.data.keyword.Bluemix_notm}}.
 
-Para desplegar una aplicación autónoma, ejecute el mandato cf push con el parámetro -p que apunte al archivo WAR o EAR.
+Para desplegar una aplicación autónoma, ejecute el mandato `ibmcloud cf push` con el parámetro -p que apunte al archivo WAR o EAR.
 Por ejemplo:
 
 ```
-    $ cf push <yourappname> -p myapp.war
+    ibmcloud cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -58,7 +58,7 @@ Cuando se despliega una aplicación autónoma, se proporciona una configuración
 Estas características corresponden a las características de Java EE 7 Web Profile. Puede especificar un conjunto distinto de características de Liberty estableciendo la variable de entorno JBP_CONFIG_LIBERTY. Por ejemplo, para habilitar solo características de jsp-2.3 y websocket-1.1, ejecute el mandato y vuelva a transferir la aplicación:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -121,14 +121,14 @@ Por razones del rendimiento, al desplegar únicamente los archivos WAR y EAR, la
 Por ejemplo:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 Importante: Para que los cambios en las variables de entorno de su entorno se hagan efectivos, debe volver a transferir su aplicación:
 
 ```
-    $ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -137,10 +137,11 @@ Importante: Para que los cambios en las variables de entorno de su entorno se ha
 
 En algunos casos, puede resultar necesario proporcionar una configuración personalizada del servidor Liberty con la aplicación. Esta configuración personalizada puede ser necesaria al desplegar un archivo WAR o EAR y el archivo server.xml predeterminado no tiene los valores determinados que necesita su aplicación.
 
-Si ha instalado el perfil de Liberty en la estación de trabajo y ya ha creado un servidor Liberty con la aplicación, puede enviar por push el contenido de dicho directorio a {{site.data.keyword.Bluemix_notm}}. Por ejemplo, si el servidor Liberty se denomina defaultServer, ejecute el mandato:
+Si ha instalado el perfil de Liberty en la estación de trabajo y ya ha creado un servidor Liberty con la aplicación, puede enviar por push el contenido de dicho directorio a {{site.data.keyword.Bluemix_notm}}.
+Por ejemplo, si el servidor Liberty se denomina defaultServer, ejecute el mandato:
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -169,7 +170,7 @@ Si un perfil de Liberty no está instalado en la estación de trabajo, puede uti
 Cuando el directorio del servidor esté listo, puede desplegarlo en {{site.data.keyword.Bluemix_notm}}.
 
 ```
-    $ cf push <yourappname> -p defaultServer
+    ibmcloud cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
@@ -186,20 +187,20 @@ Nota: Se puede acceder a las aplicaciones web desplegadas como parte del directo
 Puede enviar por push un archivo del servidor empaquetado a {{site.data.keyword.Bluemix_notm}}. El archivo del servidor empaquetado se crea mediante el mandato server package de Liberty. Además de los archivos de la aplicación y de configuración, el archivo del servidor empaquetado puede contener recursos compartidos y las características de usuario de Liberty que necesita la aplicación.
 
 Para empaquetar un servidor Liberty, utilice el mandato `./bin/server package` desde el directorio de instalación de Liberty. Especifique el nombre del servidor e incluya la opción `--include=usr`.
-Por ejemplo, si el servidor Liberty es defaultServer, ejecute el mandato:
+Por ejemplo, si el servidor Liberty es `defaultServer`, ejecute el mandato:
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
 Este mandato genera un archivo serverName.zip en el directorio del servidor. Si ha utilizado la opción `--archive` para especificar un archivo de archivado distinto, asegúrese de que tenga la extensión `.zip` en lugar de `.jar`. **El paquete de compilación no da soporte a los archivos del servidor empaquetados creados con la extensión `.jar`**.
 
-Luego puede enviar por push el archivo `.zip` generado a {{site.data.keyword.Bluemix_notm}} con el mandato `cf push`.
+Luego puede enviar por push el archivo `.zip` generado a {{site.data.keyword.Bluemix_notm}} con el mandato `ibmcloud cf push`.
 Por ejemplo:
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -222,7 +223,7 @@ Las siguientes variables están definidas en el archivo `runtime-vars.xml` y se 
 
 * ${port}: el puerto HTTP en el que escucha el servidor Liberty.
 * ${vcap_app_port}: Same as ${port}. No se establece si se ejecuta en Diego.
-* ${application_name}: el nombre de la aplicación, que se define mediante las opciones del mandato cf push.
+* ${application_name}: el nombre de la aplicación, que se define mediante las opciones del mandato `ibmcloud cf push`.
 * ${application_version}: la versión de esta instancia de la aplicación, que tiene el formato de un UUID, como por ejemplo `b687ea75-49f0-456e-b69d-e36e8a854caa`. Esta variable cambia con cada envío sucesivo de la aplicación que contiene código nuevo o cambios en los artefactos de la aplicación.
 * ${host}: la dirección IP de la instancia de la aplicación.
 * ${application_uris}: una matriz de tipo JSON de puntos finales que se puede utilizar para acceder a esta aplicación; por ejemplo: myapp.mydomain.com.
@@ -231,10 +232,7 @@ Las siguientes variables están definidas en el archivo `runtime-vars.xml` y se 
 ### Acceso a la información de los servicios enlazados
 {: #accessing_info_of_bound_services}
 
-Cuando desee enlazar un servicio con la aplicación, se incluirá información acerca del servicio, como por ejemplo las credenciales de conexión, en la [variable de entorno VCAP_SERVICES![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que
-				Cloud Foundry establece para la aplicación. Para [servicios configurados automáticamente](autoConfig.html), el paquete de compilación de Liberty generará o
-				actualizará entradas de enlace de servicios en el archivo server.xml. El contenido de las entradas de enlace de servicio
-				puede estar en una de las formas siguientes:
+Cuando desee enlazar un servicio con la aplicación, se incluirá información acerca del servicio, como por ejemplo las credenciales de conexión, en la [variable de entorno VCAP_SERVICES ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) que Cloud Foundry establece para la aplicación. Para [servicios configurados automáticamente](autoConfig.html), el paquete de compilación de Liberty generará o actualizará entradas de enlace de servicios en el archivo server.xml. El contenido de las entradas de enlace de servicio puede estar en una de las formas siguientes:
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt;, que describe la información como nombre, tipo y plan del servicio.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt;, que describe la información de conexión para el servicio.

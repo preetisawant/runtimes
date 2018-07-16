@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-27"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -18,12 +18,12 @@ lastupdated: "2017-10-27"
 * {{site.data.keyword.IBM_notm}} 作成の **sdk-for-nodejs** ビルドパックは、{{site.data.keyword.Bluemix_notm}} で Node.js アプリケーションに使用されるデフォルトのビルドパックです。
 * **nodejs_buildpack** は、Cloud Foundry コミュニティーによって提供されるコミュニティー・ビルドパックです。
 
-**sdk-for-nodejs** ビルドパックは、{{site.data.keyword.Bluemix_notm}} 内の **nodejs_buildpack** に優先します。 アプリケーションで **sdk-for-nodejs** ビルドパックではなく **nodejs_buildpack** を使用する場合、**cf push** コマンドで `-b` オプションを使用するなどしてビルドパックを指定する必要があります。
+**sdk-for-nodejs** ビルドパックは、{{site.data.keyword.Bluemix_notm}} 内の **nodejs_buildpack** に優先します。 アプリケーションで **sdk-for-nodejs** ビルドパックではなく **nodejs_buildpack** を使用する場合、`ibmcloud cf push` コマンドで `-b` オプションを使用するなどしてビルドパックを指定する必要があります。
 
-一般的には、現行 **sdk-for-nodejs** ビルドパックとバックレベル・バージョンが使用可能です。  使用可能なすべてのビルドパックを確認するには、**cf buildpacks** コマンドを使用してください。  例えば、次のとおりです。
+一般的には、現行 **sdk-for-nodejs** ビルドパックとバックレベル・バージョンが使用可能です。  使用可能なすべてのビルドパックを確認するには、`ibmcloud cf buildpacks` コマンドを使用してください。  例えば、次のとおりです。
 
 ```
-   cf buildpacks
+   ibmcloud cf buildpacks
    Getting buildpacks...
 
    buildpack                                 position   enabled   locked   filename   

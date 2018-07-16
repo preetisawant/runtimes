@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,7 +20,7 @@ Per utilizzare un nodo abilitato FIPS imposta la variabile di ambiente FIPS_MODE
 Ad esempio:
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
@@ -33,7 +33,7 @@ false nella tua applicazione Express può aiutare ad aggirare questo problema. A
 Consulta questo [post stackoverflow ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 per ulteriori informazioni.
 
-**NOTA** [Gestione applicazioni](/docs/manageapps/app_mng.html) e FIPS_MODE *NON* sono supportati contemporaneamente.  Se la variabile di ambiente BLUEMIX_APP_MGMT_ENABLE è configurata e le variabili di ambiente FIPS_MODE sono impostate su true, la preparazione dell'applicazione avrà esito negativo.
+**NOTA** [Gestione applicazioni](../common/app_mng.html) e FIPS_MODE *NON* sono supportati contemporaneamente.  Se la variabile di ambiente BLUEMIX_APP_MGMT_ENABLE è configurata e le variabili di ambiente FIPS_MODE sono impostate su true, la preparazione dell'applicazione avrà esito negativo.
 
 Esistono vari metodi per controllare lo stato di FIPS_MODE:
 <ul>
@@ -91,7 +91,7 @@ La seguente tabella illustra il funzionamento di node.js v4 con FIPS:
 {: #nodejs_v6_fips}
 
 Per eseguire la modalità FIPS con Node.js versione 6 e successiva in aggiunta all'impostazione **FIPS_MODE=true**, devi inoltre includere
-**--enable-fips** nel tuo comando di avvio come nel seguente esempio: 
+**--enable-fips** nel tuo comando di avvio come nel seguente esempio:
 ```
 {
     ...   
@@ -102,7 +102,7 @@ Per eseguire la modalità FIPS con Node.js versione 6 e successiva in aggiunta a
 ```
 {: codeblock}
 
-La seguente tabella illustra il funzionamento di node.js v6 e successiva con FIPS. 
+La seguente tabella illustra il funzionamento di node.js v6 e successiva con FIPS.
 
 |                 |--enable-fips  |NO --enable-fips |
 | :-------------- | :------------ | :-------------- |

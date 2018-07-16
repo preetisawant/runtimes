@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-10-25"
 ---
 
@@ -26,7 +26,7 @@ Das {{site.data.keyword.Bluemix}}-Buildpack 'ASP.NET Core' wird verwendet, wenn 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} stellt eine ASP.NET Core-Starteranwendung bereit.  Die ASP.NET Core-Starteranwendung ist eine einfache App, die eine Schablone bereitstellt, die Sie verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine ASP.NET Core-Starteranwendung bereit. Die ASP.NET Core-Starteranwendung ist eine einfache App, die eine Vorlage bereitstellt, die Sie verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 # Zugehörige Links
 {: #rellinks notoc}

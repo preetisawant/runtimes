@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -70,7 +70,7 @@ Compose 服务可以是容器管理的服务，也可以是应用程序管理的
 * 我的应用程序使用的是 *dashDB*，但我希望应用程序直接管理数据库的连接。应用程序中包含必要的客户机驱动程序 jar。我不希望 Liberty buildpack 自动配置 *dashDB* 服务。
 * 我提供了 server.xml 文件，并且已为 *cloudant* 实例提供配置节，因为我需要非标准数据源配置。我不希望 Liberty buildpack 更新 server.xml 文件，但仍需要 Liberty buildpack 确保安装相应的支持软件。
 
-要选择退出自动服务配置，请使用 services_autoconfig_excludes 环境变量。可以将此环境变量包含在 manifest.yml 中，或者使用 cf 客户机对其进行设置。
+要选择退出自动服务配置，请使用 services_autoconfig_excludes 环境变量。可以将此环境变量包含在 manifest.yml 中，或者使用 {{site.data.keyword.Bluemix_notm}} 客户机对其进行设置。
 
 可以按每种服务类型来选择退出自动配置服务。您可以选择完全退出（如 *dashDB* 场景中那样），也可以仅选择退出 server.xml 文件配置更新（如 *cloudant* 场景中那样）。为 services_autoconfig_excludes 环境变量指定的值是字符串，如下所示。
 
@@ -92,7 +92,7 @@ Compose 服务可以是容器管理的服务，也可以是应用程序管理的
 {: codeblock}
 
 **重要信息**：您指定的服务类型必须与 VCAP_SERVICES 环境变量中所示的服务标签相匹配。不允许使用空格。
-**重要信息**：```<service_type_specification>``` 中不允许有空格。空格只允许用于分隔多个 ```<service_type_specification>``` 实例。
+**重要信息**：`<service_type_specification>` 中不允许使用空格。只允许使用空格来分隔多个 `<service_type_specification>` 实例。
 
 使用 **all** 选项可选择退出服务的所有自动配置操作，如上面的 *dashDB* 场景中那样。使用 **config** 选项可仅选择退出配置更新操作，如上面的 *cloudant* 场景中那样。
 
@@ -113,15 +113,15 @@ Compose 服务可以是容器管理的服务，也可以是应用程序管理的
 下面是如何使用命令行界面为应用程序 myapp 设置 services_autoconfig_excludes 环境变量的示例。
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
 要查找 VCAP_SERVICES 中某个服务的 *label*，请发出类似于以下示例的命令：
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -146,7 +146,7 @@ Compose 服务可以是容器管理的服务，也可以是应用程序管理的
 可以使用 **LBP_SERVICE_CONFIG_xxxx** 环境变量来覆盖服务配置。有关完整的环境变量名称和用于覆盖这些变量的示例语法，请参阅以下各表。例如，要覆盖 *elephantSQL* 服务的缺省版本，并将其设置为 V8.3.4.+，请发出如下所示的命令：
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 
@@ -190,7 +190,7 @@ Compose 服务可以是容器管理的服务，也可以是应用程序管理的
 
 <tr>
 <td>elephantsql</td>
-<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 </tr>
 
 <tr>

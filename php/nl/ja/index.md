@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -25,7 +25,7 @@ php_buildpack は、以下のいずれかの条件下で使用されます。
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} には、PHP スターター・アプリケーションが用意されています。  PHP スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな PHP アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix}} には、PHP スターター・アプリケーションが用意されています。  PHP スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな PHP アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../common/starter_app_usage.html)を参照してください。
 
 ## アプリケーションのすべてのページでの HTTPS の適用
 {: #enforce_https}
@@ -68,13 +68,3 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 * 7.1.7
 
 アプリケーションが、リストされていないバージョンの PHP を必要とする場合は、外部の [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack.git)を使用してアプリケーションをデプロイできます。
-
-# 関連リンク
-{: #rellinks notoc}
-## チュートリアルおよびサンプル
-{: #samples notoc}
-* [Build and deploy a REST API on IBM Bluemix with PHP and MySQL](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
-* [Build and deploy a mobile-friendly calorie counter on IBM Bluemix with PHP, MySQL, AngularJS, and the Nutritionix API](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## 一般
-{: #general notoc}
-* [A Cloud Foundry Buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)

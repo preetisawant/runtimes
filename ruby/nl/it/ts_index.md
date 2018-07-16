@@ -12,6 +12,6 @@ lastupdated: "2018-02-22"
 # Risorse per la risoluzione dei problemi
 {: #ts_ruby}
 
-Risoluzione dei problemi dei tuoi pacchetti di build e applicazioni Ruby con la seguente risorsa: 
+Risoluzione dei problemi dei tuoi pacchetti di build e applicazioni Ruby con la seguente risorsa:
 
-* [Risoluzione dei problemi relativi ai runtime](../../troubleshoot/ts_runtimes.html#runtimes)
+* [Risoluzione dei problemi relativi ai runtime](../common/ts_runtimes.html#runtimes)

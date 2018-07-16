@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -29,16 +29,16 @@ Liberty 빌드팩이 다운로드할 수 있는 웹 서버에서 JRE 파일을 �
     * `index.yml` 파일에 JRE 버전을 정의하십시오.
 
     ```
-   ---
-   jre_version: https://hostingLocation/jreName.tar.gz
+    ---
+    jre_version: https://hostingLocation/jreName.tar.gz
     ```
     {: codeblock}
 
     * JRE 버전 ID와 전체 JRE 파일 위치를 포함하십시오.  예를 들어, 다음과 같습니다.
 
     ```
-       ---
-       1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
+    ---
+    1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
     ```
     {: codeblock}
 
@@ -55,9 +55,9 @@ Liberty 빌드팩이 다운로드할 수 있는 웹 서버에서 JRE 파일을 �
 ```
 {: codeblock}
 
-`cf se myAPP` 명령을 실행하여 **JBP_CONFIG_OPENJDK** 변수를 설정하십시오. 예를 들어 다음과 같습니다.
+`ibmcloud cf se myAPP` 명령을 실행하여 **JBP_CONFIG_OPENJDK** 변수를 설정하십시오. 예를 들어 다음과 같습니다.
 ```
-$ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
+ibmcloud cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
 ```
 {: codeblock}
 
@@ -65,7 +65,7 @@ $ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.blu
 
 JVM 환경 변수를 설정하려면 다음 명령을 실행하십시오.
 ```
-   $ cf se myApp JVM 'openjdk'
+ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

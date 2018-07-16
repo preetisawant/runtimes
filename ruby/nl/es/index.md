@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -22,7 +22,7 @@ El ruby_buildpack se utiliza si la app tiene un Gemfile en el directorio raíz. 
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Ruby.  La aplicación de inicio Ruby es una sencilla app Ruby que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Ruby.  La aplicación de inicio Ruby es una sencilla app Ruby que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -38,7 +38,7 @@ Puede especificar la versión de Ruby que utilizará la app en el Gemfile de la 
 ```
 {: codeblock}
 
-Cuando no se especifique una versión, se elegirá la versión 2.4.1 de forma predeterminada. 
+Cuando no se especifique una versión, se elegirá la versión 2.4.1 de forma predeterminada.
 
 ### Versiones disponibles:
 {: #available_versions}

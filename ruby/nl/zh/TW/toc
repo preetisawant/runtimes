@@ -16,8 +16,8 @@ Ruby
     {: .navgroup id="reference"}
     {: .topicgroup}
     入門範本應用程式及社群建置套件
-        [使用入門範本應用程式](../../cfapps/starter_app_usage.html)
-        [使用社群建置套件](../../cfapps/byob.html)
+        [使用入門範本應用程式](../common/starter_app_usage.html)
+        [使用社群建置套件](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

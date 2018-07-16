@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -34,7 +34,7 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 
 ## Liberty 特性索引
 {: #libertyfeat_index}
-您可以使用下列索引以跳過特性清單一節，也可以瀏覽 [Liberty 特性清單](#libertyfeat_list)。
+您可以使用下列索引以跳過特性清單一節，也可以瀏覽 [Liberty for Java 特性清單](#libertyfeat_list)。
 
 ### A-E
 * [A](#libertyfeat_A)
@@ -44,6 +44,7 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 
 ### F-J
 * [F](#libertyfeat_F)
+* [H](#libertyfeat_H)
 * [J](#libertyfeat_J)
 
 ### K-O
@@ -90,6 +91,7 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 * cloudant-1.0
 * cloudAutowiring-1.0 
 * concurrent-1.0
+* constrainedDelegation-1.0
 * couchdb-1.0
 
 ### E
@@ -105,6 +107,11 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 {: #libertyfeat_f}
 
 * federatedRegistry-1.0
+
+### H
+{: #libertyfeat_h}
+
+* httpWhiteboard-1.0
 
 ### J
 {: #libertyfeat_J}
@@ -122,6 +129,7 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 * jcaInboundSecurity-1.0
 * jdbc-4.0
 * jdbc-4.1
+* jdbc-4.2
 * jms-1.1
 * jms-2.0
 * jmsMdb-3.1 
@@ -131,6 +139,7 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 * jpa-2.1
 * jsf-2.0
 * jsf-2.2
+* jsfContainer-2.2
 * json-1.0 
 * jsonp-1.0
 * jsp-2.2
@@ -147,24 +156,32 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 ### M
 {: #libertyfeat_M}
 * managedBeans-1.0
-* managedBeans-1.0
 * mdb-3.1
 * mdb-3.2 
 * mediaServerControl-1.0     
-* microprofile-1.0
-* microprofile-1.2
+* microProfile-1.0
+* microProfile-1.2
+* microProfile-1.3
 * mongodb-2.0 
 * monitor-1.0 
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
 * oauth-2.0 
 * openapi-3.0
+* openapi-3.1
 * openid-2.0 
 * openidConnectClient-1.0 
 * openidConnectServer-1.0 
+* opentracing-1.0
 * osgi.jpa-1.0 
 * osgiAppIntegration-1.0
+* osgiBundle-1.0
 * osgiConsole-1.0 
 
 ### P
@@ -186,7 +203,6 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 * servlet-3.0
 * servlet-3.1
 * sessionDatabase-1.0 
-* sipServlet-1.1
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0
@@ -220,4 +236,4 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 ## 一般
 {: #general notoc}
 * [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Liberty 概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

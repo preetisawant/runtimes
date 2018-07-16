@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -26,7 +26,7 @@ Il php_buildpack viene utilizzato nelle seguenti condizioni:
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}} fornisce un'applicazione starter PHP.  L'applicazione starter PHP è una semplice applicazione PHP che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push
-all'ambiente {{site.data.keyword.Bluemix}}.  Consulta il documento relativo all'[utilizzo delle applicazioni starter](/docs/cfapps/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
+all'ambiente {{site.data.keyword.Bluemix}}.  Consulta il documento relativo all'[utilizzo delle applicazioni starter](../common/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
 
 ## Forza HTTPS in tutte le pagine della tua applicazione
 {: #enforce_https}
@@ -73,13 +73,3 @@ in {{site.data.keyword.Bluemix}}:
 Se la tua applicazione richiede una versione di PHP che non è elencata,
 puoi utilizzare il [pacchetto
 di build PHP](https://github.com/cloudfoundry/php-buildpack.git) esterno per distribuire l'applicazione.
-
-# rellinks
-{: #rellinks notoc}
-## Esercitazioni ed esempi
-{: #samples notoc}
-* [Crea e distribuisci un'API REST](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
-* [Crea e distribuisci un conta-calorie compatibile con i dispositivi mobili](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## general
-{: #general notoc}
-* [Pacchetto di build Cloud Foundry per PHP](https://github.com/cloudfoundry/php-buildpack.git)

@@ -33,6 +33,7 @@ Liberty for Java
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
+        [Availability Monitoring の概説](../../services/AvailabilityMonitoring/index.html)
 
     {: .topicgroup}
     オフラインの処理またはプロキシーの処理
@@ -48,16 +49,16 @@ Liberty for Java
 
     {: .topicgroup}
     スターター・アプリケーションおよびビルドパック
-        [スターター・アプリケーションの使用](../../cfapps/starter_app_usage.html)
-        [コミュニティー・ビルドパックの使用](../../cfapps/byob.html)
+        [スターター・アプリケーションの使用](../common/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](../common/byob.html)
 
     buildpackDefaults.md
-    [Liberty アプリおよび Node.js アプリの管理](../common/app_mng.html)
-    [IBM Monitoring and Analytics 入門](../../services/monana/index.html)
+    [Liberty アプリケーションおよび Node.js アプリケーションの管理](../common/app_mng.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
+    [IBM Cloud Log Analysis の概説](../../services/CloudLogAnalysis/index.html)
     updates.md
     [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
     {: .navgroup-end}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -69,7 +69,7 @@ Puoi impostare la dimensione della memoria di heap utilizzando le variabili di a
 utilizza il seguente comando, quindi riprepara la tua applicazione.
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
@@ -78,7 +78,7 @@ valore a punto mobile che specifica quale limite di memoria assegnare all'heap. 
 metà della memoria disponibile all'heap (50% o 0.50), immetti il seguente comando e riprepara la tua applicazione.
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

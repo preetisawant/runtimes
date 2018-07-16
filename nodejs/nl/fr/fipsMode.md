@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,7 +20,7 @@ Pour utiliser un moteur de noeud activé par FIPS, affectez la valeur true à la
 Par exemple :
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
@@ -31,7 +31,7 @@ Il est important de comprendre que lorsque la variable d'environnement FIPS_MODE
 {: codeblock}
 Pour plus d'informations, consultez cet [article (post) stackoverflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
 
-**REMARQUE** : Les variables d'environnement [App Management](/docs/manageapps/app_mng.html) et FIPS_MODE *NE PEUVENT PAS* être utilisées en même temps.  Si la variable d'environnement BLUEMIX_APP_MGMT_ENABLE est définie et que la variable d'environnement FIPS_MODE a pour valeur true, la reconstitution de l'application échoue.
+**REMARQUE** : Les variables d'environnement [App Management](../common/app_mng.html) et FIPS_MODE *NE PEUVENT PAS* être utilisées en même temps.  Si la variable d'environnement BLUEMIX_APP_MGMT_ENABLE est définie et que la variable d'environnement FIPS_MODE a pour valeur true, la reconstitution de l'application échoue.
 
 Il existe diverses méthodes permettant de vérifier l'état de FIPS_MODE :
 <ul>

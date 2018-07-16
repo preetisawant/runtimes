@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -13,9 +13,7 @@ lastupdated: "2017-10-26"
 # Options pour l'envoi par commande push d'applications Liberty
 {: #options_for_pushing}
 
-Le comportement du serveur Liberty dans {{site.data.keyword.Bluemix}} est contrôlé par le pack de construction Liberty. Les packs de construction peuvent fournir un environnement d'exécution complet pour une classe d'applications spécifique. Ils sont cruciaux pour assurer la portabilité entre les clouds et une contribution à une architecture de cloud ouverte. Le
-pack de construction Liberty fournit un conteneur WebSphere Liberty capable d'exécuter des applications Java EE 7 et OSGi. Il prend en charge les
-infrastructures populaires telles que Spring et inclut l'environnement d'exécution Java IBM JRE. WebSphere Liberty permet un développement d'application rapide qui est adapté au cloud. Le pack de construction Liberty prend en charge plusieurs applications déployées sur un même serveur Liberty. Dans le cadre de l'intégration du pack de construction Liberty dans {{site.data.keyword.Bluemix_notm}}, celui-ci fait en sorte que les variables d'environnement pour la liaison de services soient représentées comme des variables de configuration dans le serveur Liberty.
+Le comportement du serveur Liberty dans {{site.data.keyword.Bluemix}} est contrôlé par le pack de construction Liberty. Les packs de construction peuvent fournir un environnement d'exécution complet pour une classe d'applications spécifique. Ils sont cruciaux pour assurer la portabilité entre les clouds et une contribution à une architecture de cloud ouverte. Le pack de construction Liberty fournit un conteneur WebSphere Liberty capable d'exécuter des applications Java EE 7 et OSGi. Il prend en charge les infrastructures populaires telles que Spring et inclut l'environnement d'exécution Java IBM JRE. WebSphere Liberty permet un développement d'application rapide qui est adapté au cloud. Le pack de construction Liberty prend en charge plusieurs applications déployées sur un même serveur Liberty. Dans le cadre de l'intégration du pack de construction Liberty dans {{site.data.keyword.Bluemix_notm}}, celui-ci fait en sorte que les variables d'environnement pour la liaison de services soient représentées comme des variables de configuration dans le serveur Liberty.
 
 Vous pouvez utiliser les méthodes suivantes pour déployer vos applications Liberty sur {{site.data.keyword.Bluemix_notm}} :
 
@@ -30,17 +28,15 @@ Important : quand vous déployez une application avec le pack de construction Li
 
 Les applications autonomes, par exemple, des fichiers WAR ou EAR, peuvent être déployées sur Liberty dans {{site.data.keyword.Bluemix_notm}}.
 
-Pour déployer une application autonome, exécutez la commande cf push avec le paramètre -p qui indique le fichier WAR ou EAR.
+Pour déployer une application autonome, exécutez la commande `ibmcloud cf push` avec le paramètre -p qui indique le fichier WAR ou EAR.
 Par exemple :
 
 ```
-    $ cf push <yourappname> -p myapp.war
+    ibmcloud cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
-Lorsqu'une application autonome est déployée, une configuration Liberty par
-défaut est fournie pour l'application. Cette configuration par défaut active
-les fonctions Liberty suivantes :
+Lorsqu'une application autonome est déployée, une configuration Liberty par défaut est fournie pour l'application. Cette configuration par défaut active les fonctions Liberty suivantes :
 
 * beanValidation-1.1
 * [cdi-1.2](optionsForPushing.html#cdi12)
@@ -59,12 +55,10 @@ les fonctions Liberty suivantes :
 * icap:managementConnector-1.0
 * appstate-2.0
 
-Ces fonctions correspondent aux fonctions du profil Web Java EE 7. Vous pouvez spécifier un autre jeu de fonctions Liberty en définissant la variable d'environnement
-JBP_CONFIG_LIBERTY. Par exemple, pour n'activer que les fonctions jsp-2.3 et websocket-1.1, exécutez la commande suivante et
-reconstituez l'application :
+Ces fonctions correspondent aux fonctions du profil Web Java EE 7. Vous pouvez spécifier un autre jeu de fonctions Liberty en définissant la variable d'environnement JBP_CONFIG_LIBERTY. Par exemple, pour n'activer que les fonctions jsp-2.3 et websocket-1.1, exécutez la commande suivante et reconstituez l'application :
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -77,17 +71,14 @@ Si vous avez déployé un fichier WAR, l'application Web est accessible sous la 
 ```
 {: codeblock}
 
-Si vous avez déployé un fichier EAR, l'application Web imbriquée est accessible
-sous la racine de contexte comme indiqué dans le descripteur de déploiement du
-fichier EAR. Exemple :
+Si vous avez déployé un fichier EAR, l'application Web imbriquée est accessible sous la racine de contexte comme indiqué dans le descripteur de déploiement du fichier EAR. Exemple :
 
 ```
     http://<yourappname>.mybluemix.net/acme/
 ```
 {: codeblock}
 
-Le fichier de configuration Liberty par défaut
-server.xml complet est le suivant :
+Le fichier de configuration Liberty par défaut server.xml complet est le suivant :
 ```
     <server>
        <featureManager>
@@ -126,21 +117,18 @@ server.xml complet est le suivant :
 ### CDI 1.2
 {: #cdi12}
 
-Pour des raisons de performance, lors du déploiement des fichiers WAR et EAR seulement,
-l'[examen
-des archives de bean implicites CDI 1.2](https://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_cdi_behavior.html) est désactivé par défaut. L'examen des archives de bean implicites peut être activé avec la variable d'environnement JBP_CONFIG_LIBERTY.
+Pour des raisons de performance, lors du déploiement des fichiers WAR et EAR seulement, l'[examen des archives de bean implicites CDI 1.2](https://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_cdi_behavior.html) est désactivé par défaut. L'examen des archives de bean implicites peut être activé avec la variable d'environnement JBP_CONFIG_LIBERTY.
 Par exemple :
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
-Important : Pour que les modifications que vous apportez aux variables d'environnement soient appliquées, vous devez reconstituer votre
-application :
+Important : Pour que les modifications que vous apportez aux variables d'environnement soient appliquées, vous devez reconstituer votre application :
 
 ```
-    $ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -149,25 +137,22 @@ application :
 
 Dans certains cas, vous devez fournir une configuration de serveur Liberty personnalisée avec votre application. Cette configuration personnalisée peut s'avérer nécessaire lorsque vous déployez un fichier EAR ou WAR et que le fichier server.xml par défaut ne comporte pas certains des paramètres requis par votre application.
 
-Si vous avez installé le profil Liberty sur votre poste de travail et que vous avez déjà créé un serveur Liberty avec votre application, vous pouvez pousser le contenu de ce répertoire vers {{site.data.keyword.Bluemix_notm}}.
+Si vous avez installé le profil Liberty sur votre poste de travail et que vous avez déjà créé un serveur Liberty avec votre application, vous pouvez envoyer le contenu de ce répertoire par commande push vers {{site.data.keyword.Bluemix_notm}}.
 Par exemple, si votre serveur Liberty se nomme defaultServer, exécutez la commande suivante :
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
-Si aucun profil Liberty n'est
-installé sur votre poste de travail, vous pouvez suivre la procédure ci-après pour créer un répertoire de serveur avec votre application :
+Si aucun profil Liberty n'est installé sur votre poste de travail, vous pouvez suivre la procédure ci-après pour créer un répertoire de serveur avec votre application :
 
 1. Créez un répertoire nommé defaultServer.
 2. Créez un répertoire apps dans le répertoire defaultServer.
 3. Copiez le fichier WAR ou EAR dans le répertoire defaultServer/apps.
 4. Dans le répertoire defaultServer, créez un fichier server.xml avec l'exemple de contenu exemple ci-après.  De plus :
-  * Prenez soin de mettre à jour l'attribut location ou type de l'élément d'application afin de le faire
-correspondre au nom de fichier et au type de votre application.
-  * Le fichier server.xml dans le diagramme affiche un jeu minimal de fonctions. Vous devrez ajuster le jeu de fonctions en fonction des besoins de
-votre application.
+  * Prenez soin de mettre à jour l'attribut location ou type de l'élément d'application afin de le faire correspondre au nom de fichier et au type de votre application.
+  * Le fichier server.xml dans le diagramme affiche un jeu minimal de fonctions. Vous devrez ajuster le jeu de fonctions en fonction des besoins de votre application.
 
 ```
     <server>
@@ -185,12 +170,11 @@ votre application.
 Lorsque le répertoire de serveur est prêt, vous pouvez le déployer sur {{site.data.keyword.Bluemix_notm}}.
 
 ```
-    $ cf push <yourappname> -p defaultServer
+    ibmcloud cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
-Remarque : Les
-applications Web déployées avec le répertoire de serveur sont accessibles sous la [racine de contexte, comme spécifié par le profil Liberty](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6). Par exemple :
+Remarque : Les applications Web déployées avec le répertoire de serveur sont accessibles sous la [racine de contexte, comme spécifié par le profil Liberty](http://www.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/twlp_dep_war.html?cp=SSAW57_8.5.5%2F1-3-11-0-5-6). Par exemple :
 
 ```
     http://<yourappname>.mybluemix.net/acme/
@@ -200,56 +184,46 @@ applications Web déployées avec le répertoire de serveur sont accessibles sou
 ## Package de serveur
 {: #packaged_server}
 
-Vous pouvez aussi pousser un un fichier de package de serveur vers {{site.data.keyword.Bluemix_notm}}. Pour créer le fichier de package de serveur, utilisez la commande server
-package de Liberty. Outre les fichiers de l'application et de configuration, le
-fichier de package de serveur peut contenir des ressources partagées et les
-fonctions utilisateur Liberty requises par l'application.
+Vous pouvez aussi envoyer par commande push un fichier de package de serveur vers {{site.data.keyword.Bluemix_notm}}. Pour créer le fichier de package de serveur, utilisez la commande server package de Liberty. Outre les fichiers de l'application et de configuration, le fichier de package de serveur peut contenir des ressources partagées et les fonctions utilisateur Liberty requises par l'application.
 
-Pour
-conditionner un serveur Liberty, utilisez la commande `./bin/server
-package` à partir du répertoire d'installation de Liberty. Spécifiez le nom de votre serveur et incluez l'option `--include=usr`.
-Par exemple, si le serveur Liberty se nomme defaultServer, exécutez la commande suivante :
+Pour conditionner un serveur Liberty, utilisez la commande `./bin/server package` à partir du répertoire d'installation de Liberty. Spécifiez le nom de votre serveur et incluez l'option `--include=usr`.
+Si, par exemple, votre serveur Liberty est `defaultServer`, exécutez la commande suivante :
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
 Cette commande génère un fichier serverName.zip dans le répertoire du serveur. Si vous avez utilisé l'option `--archive` pour spécifier un fichier d'archive différent, assurez-vous qu'il a l'extension `.zip` au lieu de `.jar`. **Le pack de construction ne prend pas en charge les fichiers de package de serveur créés avec l'extension `.jar`**.
 
-Vous pouvez ensuite pousser le fichier `.zip` généré vers {{site.data.keyword.Bluemix_notm}} avec la commande `cf push`.
+Vous pouvez ensuite envoyer par commande push le fichier `.zip` généré vers {{site.data.keyword.Bluemix_notm}} avec la commande `ibmcloud cf push`.
 Par exemple :
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
-Remarque : Les applications Web déployées avec le package de serveur sont accessibles sous la
-racine
-de contexte, comme spécifié par le profil Liberty.
+Remarque : Les applications Web déployées avec le package de serveur sont accessibles sous la racine de contexte, comme spécifié par le profil Liberty.
 
 ### Modification du fichier server.xml
 {: #modifications_of_serverxml}
 
-Lors de l'envoi par commande push d'un package de serveur ou d'un répertoire de serveur
-Liberty, le pack de construction Liberty détecte le fichier server.xml, en même temps que votre application. Le pack de construction Liberty apporte les modifications suivantes au fichier server.xml.
+Lors de l'envoi par commande push d'un package de serveur ou d'un répertoire de serveur Liberty, le pack de construction Liberty détecte le fichier server.xml, en même temps que votre application. Le pack de construction Liberty apporte les modifications suivantes au fichier server.xml.
 
 * Le pack de construction vérifie que le fichier contient exactement un élément httpEndpoint.
-* Le pack de construction vérifie que l'attribut httpPort dans l'élément httpEndpoint pointe sur une variable système qui se nomme ${port}. Le
-pack de construction remplace également l'attribut host.
+* Le pack de construction vérifie que l'attribut httpPort dans l'élément httpEndpoint pointe sur une variable système qui se nomme ${port}. Le pack de construction remplace également l'attribut host.
 * Le pack de construction définit l'attribut logDirectory de l'élément logging de telle sorte qu'il pointe sur un répertoire de journal système.
 * Le pack de construction fait en sorte qu'un fichier runtime-vars.xml soit fusionné sur une base logique avec votre fichier server.xml. Plus spécifiquement, il ajoute la ligne *&lt;include location="runtime-vars.xml" /&gt;* à votre fichier server.xml.
 
 ### Variables référençables
 {: #referenceable_variables}
 
-Les variables suivantes sont définies dans le fichier `runtime-vars.xml` et référencées
-depuis un fichier `server.xml` envoyé par commande push. Toutes les variables sont sensibles à la casse.
+Les variables suivantes sont définies dans le fichier `runtime-vars.xml` et référencées depuis un fichier `server.xml` envoyé par commande push. Toutes les variables sont sensibles à la casse.
 
 * ${port} : port HTTP sur lequel le serveur Liberty est à l'écoute.
 * ${vcap_app_port} : identique à ${port}. Non définie lors de l'exécution sur Diego.
-* ${application_name} : nom de l'application, tel que défini via les options de la commande cf push.
+* ${application_name} : nom de l'application, tel que défini via les options de la commande `ibmcloud cf push`.
 * ${application_version} : version de cette instance de l'application, représentée par un identificateur unique universel (UUID), tel que `b687ea75-49f0-456e-b69d-e36e8a854caa`. Cette variable est actualisée avec chaque envoi par commande push successif de l'application contenant du nouveau code ou des modifications des artefacts de l'application.
 * ${host} : adresse IP de l'instance de l'application.
 * ${application_uris} : tableau JSON de points d'extrémité utilisables pour accéder à cette application, par exemple : myapp.mydomain.com.
@@ -275,8 +249,7 @@ L'ensemble d'informations habituel est le suivant :
 * connection.username : alias de connection.user.
 * connection.password : mot de passe utilisé pour authentification de cette application auprès du service. Le mot de passe est généré automatiquement par Cloud Foundry, par exemple, pvyCY0YzX9pu5.
 
-Pour les services liés qui ne sont pas configurés automatiquement par le pack de construction
-Liberty, l'application doit gérer elle-même l'accès à la ressource back end.
+Pour les services liés qui ne sont pas configurés automatiquement par le pack de construction Liberty, l'application doit gérer elle-même l'accès à la ressource back end.
 
 # rellinks
 {: #rellinks notoc}

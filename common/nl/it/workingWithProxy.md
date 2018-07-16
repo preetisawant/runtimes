@@ -17,7 +17,7 @@ lastupdated: "2018-01-23"
 In alcuni ambienti come [{{site.data.keyword.Bluemix_notm}} Dedicato](/docs/dedicated/index.html#dedicated) e
 [{{site.data.keyword.Bluemix_notm}} Locale](/docs/local/index.html#local) un proxy può essere configurato in modo che influisca sul comportamento della tua applicazione durante le fasi di preparazione e runtime.
 
-Puoi configurare la tua applicazione per lavorare con il proxy utilizzando le seguenti variabili di ambiente: 
+Puoi configurare la tua applicazione per lavorare con il proxy utilizzando le seguenti variabili di ambiente:
   * [http_proxy ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
   * [https_proxy ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
   * [no_proxy ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.gnu.org/software/wget/manual/html_node/Proxies.html){: new_window}
@@ -31,7 +31,7 @@ Puoi impostare queste variabili utilizzando *bluemix app env-set* o con il file 
 
 Per le applicazioni [Liberty for Java](/docs/runtimes/liberty/index.html) e [java_buildpack](/docs/runtimes/tomcat/index.html), le impostazioni del proxy possono essere passate al runtime tramite la variabile di ambiente **JAVA_OPTS**.  Ad esempio puoi immettere il comando e quindi ripreparare la tua applicazione:
 ```
-   $ bluemix app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
+   ibmcloud app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
 {: codeblock}
 

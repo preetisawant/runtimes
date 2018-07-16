@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -32,11 +32,12 @@ Importante: quando você implementa um aplicativo com o buildpack do Liberty, es
 Aplicativos independentes como os arquivos
 WAR ou EAR podem ser implementados no Liberty em {{site.data.keyword.Bluemix_notm}}.
 
-Para implementar um aplicativo independente, execute o comando cf push com o parâmetro -p que aponta para seu arquivo WAR ou EAR.
+Para implementar um aplicativo independente, execute o comando `ibmcloud cf push` com o parâmetro -p que
+aponta para o seu arquivo WAR ou EAR.
 Por exemplo:
 
 ```
-    $ cf push <yourappname> -p myapp.war
+    ibmcloud cf push < yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -62,7 +63,7 @@ Quando um aplicativo independente for implementado, uma configuração padrão d
 Esses recursos correspondem aos recursos do Java EE 7 Web Profile. É possível especificar um conjunto diferente de recursos do Liberty configurando a variável de ambiente JBP_CONFIG_LIBERTY. Por exemplo, para ativar somente os recursos jsp-2.3 e websocket-1.1, execute o comando e remonte o aplicativo:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -125,14 +126,14 @@ Por motivos de desempenho, ao implementar os arquivos WAR e EAR somente, a [varr
 Por exemplo:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 Importante: para que as mudanças da variável de ambiente entrem em vigor, deve-se remontar seu aplicativo:
 
 ```
-    $ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -146,7 +147,7 @@ Se você instalou o perfil Liberty em sua estação de trabalho e já criou um s
 Por exemplo, se o seu servidor Liberty for nomeado defaultServer, execute o comando:
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push < yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -176,7 +177,7 @@ Depois que o diretório de servidor estiver pronto, será
 possível implementá-lo no {{site.data.keyword.Bluemix_notm}}.
 
 ```
-    $ cf push <yourappname> -p defaultServer
+    ibmcloud cf push < yourappname> -p defaultServer
 ```
 {: codeblock}
 
@@ -196,21 +197,23 @@ por push um arquivo de servidor em pacote para o {{site.data.keyword.Bluemix_not
 Para colocar em pacote um servidor do Liberty, use o comando
 `./bin/server package` a partir do seu diretório de instalação do
 Liberty. Especifique o nome do servidor e inclua a opção `--include=usr`.
-Por exemplo, se o servidor Liberty for defaultServer, execute o comando:
+Por
+exemplo, se o seu servidor Liberty for `defaultServer`,
+execute o comando:
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer -- include=usr
 ```
 {: codeblock}
 
 Esse comando gera um arquivo serverName.zip no diretório do servidor. Se você tiver usado a opção `--archive` para especificar um archive diferente, certifique-se de que ele tenha a extensão `.zip` em vez de `.jar`. **O buildpack não suporta arquivos do servidor em pacote criados com a extensão `.jar`**.
 
-É possível, então, enviar por push o arquivo `.zip` gerado para
-{{site.data.keyword.Bluemix_notm}} com o comando `cf push`.
+Em seguida, é possível enviar por push o arquivo `.zip` gerado para o
+{{site.data.keyword.Bluemix_notm}} com o comando `ibmcloud cf push`.
 Por exemplo:
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push < yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -234,7 +237,7 @@ As variáveis a seguir são definidas no arquivo `runtime-vars.xml` e referencia
 
 * ${port}: a porta HTTP em que o servidor Liberty está atendendo.
 * ${vcap_app_port}: o mesmo que ${port}. Não configurado ao executar no Diego.
-* ${application_name}: o nome do aplicativo, conforme definido usando as opções no comando cf push.
+* ${application_name}: o nome do aplicativo, conforme definido usando as opções no comando `ibmcloud cf push`.
 * ${application_version}: a versão desta instância do aplicativo, que usa a forma de um
 UUID, como `b687ea75-49f0-456e-b69d-e36e8a854caa`. Esta variável muda à cada envio sucessivo por push do aplicativo que contém uma codificação nova ou muda para os artefatos de aplicativo.
 * ${host}: o endereço IP da instância do aplicativo.

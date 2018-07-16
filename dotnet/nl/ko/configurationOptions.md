@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-07-13"
 ---
 
@@ -72,4 +72,3 @@ Program.cs `Main` 메소드에서 다음 행을 제거하십시오.
 {: codeblock}
 
 이렇게 변경하면 .NET CLI가 애플리케이션의 `Views`를 찾을 수 있게 됩니다. 이제 이러한 보기가 `dotnet publish` 명령이 실행될 때 빌드 출력에 복사되기 때문입니다.  애플리케이션에 런타임 시 필요한 다른 파일(예: json 구성 파일)이 있는 경우에는 이러한 파일도 프로젝트의 .csproj 파일에 있는 `Content` 요소의 `Include` 특성에 추가해야 하며, 세미콜론으로 구분합니다.
-

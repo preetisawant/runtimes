@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -16,12 +16,12 @@ lastupdated: "2018-1-31"
 ## ログ・ファイル
 {: #log_files}
 
-標準 Liberty ログ (`messages.log` や `ffdc` ディレクトリーなど) が {{site.data.keyword.Bluemix}} で使用可能であり、各アプリケーション・インスタンスの `logs` ディレクトリーにあります。 これらのログには、{{site.data.keyword.Bluemix_notm}} コンソールからアクセスすることも、Cloud Foundry CLI を使用してアクセスすることもできます。 例えば、次のとおりです。
+標準 Liberty ログ (`messages.log` や `ffdc` ディレクトリーなど) が {{site.data.keyword.Bluemix}} で使用可能であり、各アプリケーション・インスタンスの `logs` ディレクトリーにあります。 これらのログには、{{site.data.keyword.Bluemix_notm}} コンソールからアクセスすることも、{{site.data.keyword.Bluemix_notm}} CLI を使用してアクセスすることもできます。 例えば、次のとおりです。
 
 * アプリケーションの最新のログにアクセスするには、以下のコマンドを実行します。
 
   ```
-  cf logs --recent <appname>
+  ibmcloud cf logs --recent <appname>
   ```
   {: codeblock}
 
@@ -29,7 +29,7 @@ lastupdated: "2018-1-31"
 * アプリケーションの `messages.log` ファイルを表示するには、以下のコマンドを実行します。
 
   ```
-  cf ssh <appname> -c "cat logs/messages.log"
+  ibmcloud cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
@@ -44,7 +44,7 @@ lastupdated: "2018-1-31"
 
 ### SSH を介したトレース構成の変更
 
-アプリケーションをプッシュすると、デフォルト・プロパティーの **updateTrigger** は **polled** に、**monitorInterval** は 1 分に設定されて、server.xml ファイルに含まれています。Liberty サーバーは、server.xml の更新を 1 分ごとにチェックするよう、自動的に構成されます。
+アプリケーションをプッシュすると、デフォルト・プロパティーの **updateTrigger** は **polled** に、**monitorInterval** は 1 分に設定されて、server.xml ファイルに含まれています。 Liberty サーバーは、server.xml の更新を 1 分ごとにチェックするよう、自動的に構成されます。
 
 カスタマイズされた sever.xml を含む Liberty アプリケーションをプッシュするためのオプションについては、[『server.xml を含む Liberty アプリケーションのプッシュ』](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)を参照してください。
 
@@ -55,11 +55,11 @@ server.xml での動的更新のセットアップ方法については、[『�
 1. SSH 経由でアプリケーションに接続します。
 
   ```
- cf ssh <appname> [-i instance_index]
+ ibmcloud cf ssh <appname> [-i instance_index]
   ```
   {: codeblock}
 
-2. 以下のように server.xml 内の ```<logging traceSpecification="xxxx"/>``` を編集して、必要なトレース指定 (例えば、*vi* を使用) を設定します。
+2. *vi* などを使用して、以下のように server.xml 内の `<logging traceSpecification="xxxx"/>` を編集して、必要なトレース指定を設定します。
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml
@@ -72,10 +72,10 @@ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 ### SSH を介したダンプのトリガー
 
-SSH フィーチャーを使用して CF CLI を介してスレッド・ダンプおよびヒープ・ダンプをトリガーするには、以下のコマンドを使用します。
+SSH フィーチャーを使用して {{site.data.keyword.Bluemix_notm}} CLI を介してスレッド・ダンプおよびヒープ・ダンプをトリガーするには、以下のコマンドを使用します。
 
   ```
- cf ssh <appname> -c "pkill -3 java"
+ ibmcloud cf ssh <appname> -c "pkill -3 java"
   ```
   {: codeblock}
 
@@ -84,19 +84,19 @@ SSH フィーチャーを使用して CF CLI を介してスレッド・ダン�
 ## ダンプ・ファイルのダウンロード
 {: #download_dumps}
 
-デフォルトでは、各種ダンプ・ファイルはアプリケーション・コンテナーの `dumps` ディレクトリーに置かれます。ダンプ・ファイルの表示およびダウンロードには、Cloud Foundry CLI の `cf ssh` を使用します。
+デフォルトでは、各種ダンプ・ファイルはアプリケーション・コンテナーの `dumps` ディレクトリーに置かれます。 ダンプ・ファイルの表示およびダウンロードには、{{site.data.keyword.Bluemix_notm}} CLI の `ibmcloud cf ssh` を使用します。
 
 * 生成されたダンプを表示するには、以下のコマンドを実行します。
 
   ```
-  $ cf ssh <appname> -c "ls -l dumps"
+  ibmcloud cf ssh <appname> -c "ls -l dumps"
   ```
   {: codeblock}
 
 * ダンプ・ファイルをダウンロードするには、以下のコマンドを実行します。
 
   ```
-  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ibmcloud cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,9 +19,9 @@ El paquete de compilación proporciona un entorno de ejecución completo para ap
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una [aplicación de inicio](https://github.com/IBM-Bluemix/Kitura-Starter) Swift basada en Kitura. La app de inicio de Kitura es una app de Swift sencilla que puede utilizar para obtener más información sobre los tipos de aplicaciones de servidor que puede desarrollar utilizando el lenguaje de programación Swift. Esta app de ejemplo crea un servidor HTTP Kitura básico que devuelve el contenido HTML al cliente.
+{{site.data.keyword.Bluemix_notm}} proporciona una [aplicación de inicio](https://github.com/IBM-Cloud/Kitura-Starter) Swift basada en Kitura. La app de inicio de Kitura es una app de Swift sencilla que puede utilizar para obtener más información sobre los tipos de aplicaciones de servidor que puede desarrollar utilizando el lenguaje de programación Swift. Esta app de ejemplo crea un servidor HTTP Kitura básico que devuelve el contenido HTML al cliente.
 
-**Nota:** la app de inicio de Kitura está pensada para utilizarse para fines educativos. Puede experimentar con la app de inicio realizando mejoras y enviar por push dichos cambios al entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de inicio](../../cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+**Nota:** la app de inicio de Kitura está pensada para utilizarse para fines educativos. Puede experimentar con la app de inicio realizando mejoras y enviar por push dichos cambios al entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Cambiar el nombre de la app
 {: #renaming_your_app}
@@ -51,14 +51,14 @@ $ cat .swift-version
 
 Puesto que hay frecuentes actualizaciones en el idioma de Swift, siempre debe incluir un archivo `.swift-version` para que la app se "ancle" a la versión de Swift con la que normalmente funciona la aplicación.
 
-Tenga en cuenta que puede especificar cualquier versión válida de Swift en el archivo `.swift-version`. Estas versiones alternativas deben coincidir con la denominación y se obtienen directamente de [Swift.org![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/download/) Aunque al utilizar una versión no almacenada en memoria caché se tardará más en el suministro, no hay diferencia de rendimiento del tiempo de ejecución de la app Swift.
+Tenga en cuenta que puede especificar cualquier versión válida de Swift en el archivo `.swift-version`. Estas versiones alternativas deben coincidir con la denominación y se obtienen directamente de [Swift.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/download/). Aunque al utilizar una versión no almacenada en memoria caché se tardará más en el suministro, no hay diferencia de rendimiento del tiempo de ejecución de la app Swift.
 
-Se utiliza el swift_buildpack predeterminado en {{site.data.keyword.Bluemix_notm}} si el directorio raíz de la app contiene un archivo `Package.swift`.  Si desea utilizar un paquete de compilación alternativo, debe especificarlo añadiendo una entrada `buildpack: {buildpackUrl}` en el archivo manifest.yml de la app. De forma alternativa, puede definirlo en el momento del despliegue utilizando el argumento de mandatos `cf push -b {buildpackUrl}`.
+Se utiliza el swift_buildpack predeterminado en {{site.data.keyword.Bluemix_notm}} si el directorio raíz de la app contiene un archivo `Package.swift`.  Si desea utilizar un paquete de compilación alternativo, debe especificarlo añadiendo una entrada `buildpack: {buildpackUrl}` en el archivo manifest.yml de la app. De forma alternativa, puede definirlo en el momento del despliegue utilizando el argumento de mandatos `ibmcloud cf push -b {buildpackUrl}`.
 
 
 ## Entornos de desarrollador
 
-Los desarrolladores tienen varias opciones al crear aplicaciones del lado del servidor con Swift. Los que utilizan un dispositivo MacOS de Apple pueden preferir utilizar el IDE de Xcode, aunque esto no es un requisito.  Las apps basadas en Swift que se desplegarán y ejecutarán en {{site.data.keyword.Bluemix_notm}} pueden utilizar cualquier editor de programación o IDE.  El realce y la comprobación de la sintaxis para Swift está disponible para muchos editores populares. La herramienta de línea de mandatos REPL de Swift que se incluye en los binarios desde [Swift.org![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/), permite una compilación y comprobación local antes de desplegar en {{site.data.keyword.Bluemix_notm}}.
+Los desarrolladores tienen varias opciones al crear aplicaciones del lado del servidor con Swift. Los que utilizan un dispositivo MacOS de Apple pueden preferir utilizar el IDE de Xcode, aunque esto no es un requisito.  Las apps basadas en Swift que se desplegarán y ejecutarán en {{site.data.keyword.Bluemix_notm}} pueden utilizar cualquier editor de programación o IDE.  El realce y la comprobación de la sintaxis para Swift está disponible para muchos editores populares. La herramienta de línea de mandatos REPL de Swift que se incluye en los binarios desde [Swift.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/), permite una compilación y comprobación local antes de desplegar en {{site.data.keyword.Bluemix_notm}}.
 
 Para usuarios MaxOS, puede utilizar [IBM Cloud Tools for Swift](http://cloudtools.bluemix.net/) que simplifica la creación, el despliegue, la gestión y el control de apps de Swift del lado del servidor que se ejecutan en {{site.data.keyword.Bluemix_notm}}.  
 
@@ -81,7 +81,7 @@ Para encontrar más paquetes Swift para incluir en la aplicación, vaya al [Cat�
 
 También hay otras herramientas en línea disponibles en IBM para el desarrollador de Swift.
 - [IBM Swift DevCenter](https://developer.ibm.com/swift/): sitio de destino principal para toda la información de IBM Swift. Puede encontrar información sobre nuestras ofertas, blogs, eventos sociales, documentación y más.
-- [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/): este sitio proporciona un entorno para probar rápidamente y fácilmente fragmentos de código de Swift frente a varias versiones de Swift e incluso en distintas plataformas de tiempo de ejecución de  Swift. También puede guardar y compartir ejemplos de código con otros, así como explorar ejemplos populares proporcionados por otros.
+- [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/): este sitio proporciona un entorno para probar rápidamente y fácilmente fragmentos de código de Swift frente a varias versiones de Swift e incluso en distintas plataformas de tiempo de ejecución de Swift. También puede guardar y compartir ejemplos de código con otros, así como explorar ejemplos populares proporcionados por otros.
 
 
 # rellinks
@@ -93,7 +93,7 @@ También hay otras herramientas en línea disponibles en IBM para el desarrollad
 * [IBM Swift Package Catalog](https://swiftpkgs.ng.bluemix.net/)
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Documentación y API de Kitura](http://ibm-swift.github.io/Kitura/)
-* [App de inicio de Kitura para Bluemix](https://github.com/IBM-Bluemix/Kitura-Starter)
+* [App de inicio de Kitura para Bluemix](https://github.com/IBM-Cloud/Kitura-Starter)
 * [Paquete de compilación de IBM Bluemix for Swift](https://github.com/IBM-Swift/swift-buildpack)
 * [Notas del release del paquete de compilación de IBM Bluemix for Swift](https://github.com/IBM-Swift/swift-buildpack/releases)
 * [Swift.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/)

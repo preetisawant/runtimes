@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -35,11 +35,11 @@ Importante: quando distribuisci un'applicazione con il pacchetto di build Libert
 
 Le applicazioni autonome come i file WAR o EAR possono essere distribuite a Liberty in {{site.data.keyword.Bluemix_notm}}.
 
-Per distribuire un'applicazione autonoma, esegui il comando cf push con il parametro -p che punta al file WAR o EAR.
+Per distribuire un'applicazione autonoma, esegui il comando `ibmcloud cf push` con il parametro -p che punta al file WAR o EAR.
 Ad esempio:
 
 ```
-    $ cf push <nomedellatuaapplicazione> -p myapp.war
+    ibmcloud cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -67,7 +67,7 @@ per abilitare solo le funzioni jsp-2.3 e websocket-1.1, esegui il comando e prep
 nuovo l'applicazione:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -135,14 +135,14 @@ Per motivi legati alle prestazioni, quando si distribuiscono solo file WAR ed EA
 Ad esempio:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 Importante: per rendere effettive le tue modifiche alle variabili di ambiente è necessario ripreparare la tua applicazione:
 
 ```
-    $ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -156,7 +156,7 @@ Se hai installato il profilo Liberty sulla tua workstation e hai già creato un 
 Ad esempio, se il server Liberty è denominato defaultServer, esegui il comando:
 
 ```
-    $ cf push <nomedellatuaapplicazione> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -186,7 +186,7 @@ Se sulla workstation non è installato un profilo Liberty, puoi utilizzare la se
 Dopo che la directory server è pronta, puoi distribuirla a {{site.data.keyword.Bluemix_notm}}.
 
 ```
-    $ cf push <nomedellatuaapplicazione> -p defaultServer
+    ibmcloud cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
@@ -204,20 +204,21 @@ Puoi anche
 eseguire il push di un server in pacchetto a {{site.data.keyword.Bluemix_notm}}. Il file di server in pacchetto viene creato utilizzando il comando di package server di Liberty. Oltre ai file di applicazione e configurazione, il file di server in pacchetto può contenere risorse condivise e funzioni utente Liberty richieste dall'applicazione.
 
 Per impacchettare un server Liberty, utilizza il comando `./bin/server package` dalla directory di installazione di Liberty. Specifica il nome server e includi l'opzione `--include=usr`.
-Ad esempio, se il tuo server Liberty è defaultServer, esegui il comando:
+Ad esempio,
+se il tuo server Liberty è `defaultServer`, esegui il comando:
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
 Questo comando genera un file serverName.zip nella directory del server. Se hai utilizzato l'opzione `--archive` per specificare un differente file di archivio, assicurati che abbia l'estensione `.zip` invece di `.jar`. **Il pacchetto di build non supporta i file del server in pacchetto creati con l'estensione `.jar`**.
 
-Puoi quindi eseguire il push del file `.zip` generato a {{site.data.keyword.Bluemix_notm}} con il comando `cf push`.
+Puoi quindi eseguire il push del file `.zip` generato a {{site.data.keyword.Bluemix_notm}} con il comando `ibmcloud cf push`.
 Ad esempio:
 
 ```
-    $ cf push <nomedellatuaapplicazione> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -243,7 +244,7 @@ sono sensibili al maiuscolo/minuscolo.
 
 * ${port}: la porta HTTP su cui è in ascolto il server Liberty.
 * ${vcap_app_port}: come ${port}. Non impostato se in esecuzione in Diego.
-* ${application_name}: il nome dell'applicazione, come definito utilizzando le opzioni nel comando cf push.
+* ${application_name}: il nome dell'applicazione, come definito utilizzando le opzioni nel comando `ibmcloud cf push`.
 * ${application_version}: la versione di questa istanza dell'applicazione, che assume la forma di un UUID, come `b687ea75-49f0-456e-b69d-e36e8a854caa`. Questa variabile cambia a ogni successivo push dell'applicazione che contiene del nuovo codice o delle modifiche alle risorse dell'applicazione.
 * ${host}: l'indirizzo IP dell'istanza dell'applicazione.
 * ${application_uris}: un array in stile JSON degli endpoint che è possibile utilizzare per accedere a questa applicazione, ad esempio: myapp.mydomain.com.

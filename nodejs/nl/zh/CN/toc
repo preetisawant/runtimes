@@ -13,6 +13,7 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
+    dynatrace.md
 
     {: .topicgroup}
     脱机工作或使用代理
@@ -28,8 +29,8 @@ SDK for Node.js
 
     {: .topicgroup}
     入门模板应用程序和 buildpack
-        [使用入门模板应用程序](../../cfapps/starter_app_usage.html)
-        [使用社区 buildpack](../../cfapps/byob.html)
+        [使用入门模板应用程序](../common/starter_app_usage.html)
+        [使用社区 buildpack](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -37,4 +38,5 @@ SDK for Node.js
     updates.md
     availableVersions.md
     [Buildpack 支持语句](../common/buildpackSupport.html)
+
     {: .navgroup-end}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -29,11 +29,10 @@ lastupdated: "2017-10-26"
 
 独立应用程序（例如 WAR 或 EAR 文件）可部署到 {{site.data.keyword.Bluemix_notm}} 中的 Liberty。
 
-要部署独立应用程序，请运行带有 -p 参数（指向您的 WAR 或 EAR 文件）的 cf push 命令。
-例如：
+要部署独立应用程序，请运行带有 -p 参数（指向您的 WAR 或 EAR 文件）的 `ibmcloud cf push` 命令。例如：
 
 ```
-$ cf push <yourappname> -p myapp.war
+    ibmcloud cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -59,7 +58,7 @@ $ cf push <yourappname> -p myapp.war
 这些功能与 Java EE 7 Web 概要文件功能对应。可以通过设置 JBP_CONFIG_LIBERTY 环境变量来指定其他 Liberty 功能集。例如，要仅启用 jsp-2.3 和 websocket-1.1 功能，请运行以下命令并对应用程序重新编译打包：
 
 ```
-$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -123,14 +122,14 @@ http://<yourappname>.mybluemix.net/acme/
 例如：
 
 ```
-$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 重要信息：为了使环境变量更改生效，您必须重新编译打包应用程序：
 
 ```
-$ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -142,7 +141,7 @@ $ cf restage myapp
 如果 Liberty 概要文件已安装在工作站上，且已经为应用程序创建 Liberty 服务器，那么可以将该目录的内容推送到 {{site.data.keyword.Bluemix_notm}}。例如，如果 Liberty 服务器名称为 defaultServer，请运行以下命令：
 
 ```
-$ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -171,7 +170,7 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer
 准备好服务器目录后，可以将其部署到 {{site.data.keyword.Bluemix_notm}}。
 
 ```
-$ cf push <yourappname> -p defaultServer
+    ibmcloud cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
@@ -187,19 +186,19 @@ http://<yourappname>.mybluemix.net/acme/
 
 您还可以将打包服务器文件推送到 {{site.data.keyword.Bluemix_notm}}。打包服务器文件是使用 Liberty 服务器软件包命令创建的。除了应用程序和配置文件之外，打包服务器文件中还包含应用程序所需的共享资源和 Liberty 用户功能。
 
-要打包 Liberty 服务器，请从 Liberty 安装目录使用 `./bin/server package` 命令。指定服务器名称，并包含 `--include=usr` 选项。例如，如果 Liberty 服务器为 defaultServer，请运行以下命令：
+要打包 Liberty 服务器，请从 Liberty 安装目录使用 `./bin/server package` 命令。指定服务器名称，并包含 `--include=usr` 选项。例如，如果 Liberty 服务器名称为 `defaultServer`，请运行以下命令：
 
 ```
-$ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
 此命令会在服务器目录中生成 serverName.zip 文件。如果使用了 `--archive` 选项来指定其他归档文件，请确保该文件的扩展名为 `.zip`，而不是 `.jar`。**该 buildpack 不支持使用 `.jar` 扩展名创建的打包服务器文件**。
 
-然后，可以使用 `cf push` 命令将生成的 `.zip` 文件推送到 {{site.data.keyword.Bluemix_notm}}。例如：
+然后，可以使用 `ibmcloud cf push` 命令将生成的 `.zip` 文件推送到 {{site.data.keyword.Bluemix_notm}}。例如：
 
 ```
-$ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -222,7 +221,7 @@ $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 
 * ${port}：Liberty 服务器正在侦听的 HTTP 端口。
 * ${vcap_app_port}：与 ${port} 相同。在 Diego 上运行时未设置。
-* ${application_name}：应用程序名称，它是使用 cf push 命令中的选项定义的。
+* ${application_name}：应用程序名称，它是使用 `ibmcloud cf push` 命令中的选项定义的。
 * ${application_version}：此应用程序实例的版本，采用 UUID 格式，例如 `b687ea75-49f0-456e-b69d-e36e8a854caa`。后续每次推送包含新代码或应用程序工件更改的应用程序时，此变量都会更改。
 * ${host}：应用程序实例的 IP 地址。
 * ${application_uris}：可用于访问此应用程序的端点的 JSON 样式数组，例如：myapp.mydomain.com。

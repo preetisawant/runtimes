@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -24,10 +24,10 @@ O python_buildpack será usado se o diretório-raiz de seu app contiver um arqui
 
 O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do Python.  O aplicativo iniciador do Python é um app Python simples que fornece um modelo
 que pode ser usado por seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
-{{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](/docs/cfapps/starter_app_usage.html) para obter ajuda sobre o uso
+{{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
-## Versões de tempo de execução
+## Versões de runtime
 {: #runtime_versions}
 
 É possível especificar a versão do Python a ser usada por seu app, configurando python-versionnumber no arquivo runtime.txt

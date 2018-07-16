@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -17,62 +17,67 @@ lastupdated: "2018-02-14"
 
 # Lernprogramm 'Einführung'
 
-* {: download} Herzlichen Glückwunsch! Sie haben die Hello World-Beispielanwendung unter {{site.data.keyword.Bluemix}} bereitgestellt!  Befolgen Sie diesen schrittweisen Leitfaden, um zu starten. Oder laden Sie den <a class="xref" href="http://bluemix.net" target="_blank" title="(Beispielcode herunterladen)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Beispielcode herunterladen" />Beispielcode herunter</a> und beginnen Sie auf eigene Faust.
+* {: download} Herzlichen Glückwunsch! Sie haben die Hello World-Beispielanwendung unter {{site.data.keyword.Bluemix}} bereitgestellt! Befolgen Sie diese schrittweise Anleitung, um zu starten. Oder laden Sie den <a class="xref" href="http://bluemix.net" target="_blank" title="(Beispielcode herunterladen)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Beispielcode herunterladen" />Beispielcode herunter</a> und beginnen Sie auf eigene Faust.
 
-Wenn Sie dem Lernprogramm zur Einführung für Liberty for Java folgen, werden Sie eine Entwicklungsumgebung einrichten, eine App lokal und unter {{site.data.keyword.Bluemix}} bereitstellen und einen Datenbankservice in Ihre App integrieren.
+Indem Sie dem Lernprogramm zur Einführung für Liberty for Java folgen, werden Sie eine Entwicklungsumgebung einrichten, eine App lokal und unter {{site.data.keyword.Bluemix}} bereitstellen und einen Datenbankservice in Ihre App integrieren.
+
+In diesen Dokumenten wurden Verweise auf die Cloud Foundry-Befehlszeilenschnittstelle (CLI) jetzt in Verweise auf die {{site.data.keyword.Bluemix_notm}}-CLI aktualisiert! Die {{site.data.keyword.Bluemix_notm}}-CLI besitzt die gleichen bekannten Cloud Foundry-Befehle, die jedoch besser in {{site.data.keyword.Bluemix_notm}}-Konten und andere Services integriert sind. Weitere Informationen zum Einstieg in die Arbeit mit der {{site.data.keyword.Bluemix_notm}}-CLI enthält dieses Lernprogramm.
+{: tip}
 
 ## Vorbemerkungen
 {: #prereqs}
 
 Sie benötigen die folgenden Konten und Tools:
-* [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry-CLI ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://github.com/cloudfoundry/cli#downloads){: new_window}
-* [Git ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://git-scm.com/downloads){: new_window}
-* [Maven ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://maven.apache.org/download.cgi){: new_window}
+* [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}}-CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [Git ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads){: new_window}
+* [Maven ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://maven.apache.org/download.cgi){: new_window}
 
 ## Schritt 1: Klonen Sie die Beispielapp.
 {: #clone}
 
 Klonen Sie zuerst die Beispielapp 'GitHub repo'.
-  ```bash
-git clone https://github.com/IBM-Bluemix/get-started-java
+
   ```
-  {: pre}
+git clone https://github.com/IBM-Cloud/get-started-java
+  ```
+  {: codeblock}
 
 
 ## Schritt 2: Führen Sie die App lokal über die Befehlszeile aus.
 {: #run_locally}
 
-Verwenden Sie Maven, um Ihren Quellcode zu erstellen und führen Sie die daraus resultierende App aus.
+Verwenden Sie Maven, um Ihren Quellcode zu erstellen, und führen Sie die daraus resultierende App aus.
 
-1. Wechseln Sie mithilfe der Befehlszeile das Verzeichnis, in dem sich die Beispielapp befindet.
+1. Wechseln Sie in der Befehlszeile in das Verzeichnis, in dem sich die Beispielapp befindet.
 
   ```
 cd get-started-java
   ```
-  {: pre}
+  {: codeblock}
 
 1. Verwenden Sie Maven, um Abhängigkeiten zu installieren und die .war-Datei zu erstellen.
 
   ```
 mvn clean install
   ```
-  {: pre}
+  {: codeblock}
 
 1. Führen Sie die App lokal unter Liberty aus.
+
   ```
 mvn install liberty:run-server
   ```
-  {: pre}
+  {: codeblock}
 
 Wenn die Nachricht *The server defaultServer is ready to run a smarter planet.* angezeigt wird, finden Sie Ihre App unter folgender Adresse: http://localhost:9080/GetStartedJava.
 
-Um Ihre App zu stoppen, drücken Sie *Strg-C* in dem Befehlszeilenfenster, in dem Sie die App gestartet haben.
+Um Ihre App zu stoppen, drücken Sie **Strg-C** in dem Befehlszeilenfenster, in dem Sie die App gestartet haben.
 
 ## Schritt 3: Bereiten Sie die App für die Bereitstellung vor.
 {: #prepare}
 
-Für die Bereitstellung unter {{site.data.keyword.Bluemix_notm}} kann es hilfreich sein, die Datei 'manifest.yml' zu installieren. Die Datei 'manifest.yml' enthält Basisinformationen zu Ihrer App wie den Namen, wieviel Speicher für jede Instanz zugeordnet werden soll und die Route. Wir haben eine Beispieldatei 'manifest.yml' im Verzeichnis `get-started-java` bereitgestellt.
+Für die Bereitstellung unter {{site.data.keyword.Bluemix_notm}} kann es hilfreich sein, die Datei 'manifest.yml' zu installieren. Die Datei 'manifest.yml' enthält Basisinformationen zu Ihrer App wie den Namen, die Speichergröße, die für jede Instanz zugeordnet werden soll, und die Route. Eine Beispieldatei 'manifest.yml' wird im Verzeichnis `get-started-java` bereitgestellt.
 
 Öffnen Sie die Datei 'manifest.yml' und ändern Sie die Angabe für `name` von `GetStartedJava` in den Namen Ihrer App <var class="keyword varname" data-hd-keyref="app_name">app_name</var>.
 {: download}
@@ -87,89 +92,92 @@ Für die Bereitstellung unter {{site.data.keyword.Bluemix_notm}} kann es hilfrei
   ```
   {: codeblock}
 
-In dieser Datei 'manifest.yml' generiert **random-route: true** eine zufällige Route für Ihre App, um zu verhindern, dass Ihre Route mit anderen Routen kollidiert.  Wenn Sie möchten, können Sie **random-route: true** durch **host: myChosenHostName** ersetzen und einen Hostnamen Ihrer Wahl angeben. [Weitere Informationen...](/docs/manageapps/depapps.html#appmanifest)
+In dieser Datei 'manifest.yml' generiert **random-route: true** eine zufällige Route für Ihre App, um zu verhindern, dass Ihre Route mit anderen Routen kollidiert.  Wenn Sie möchten, können Sie **random-route: true** durch **host: myChosenHostName** ersetzen und einen Hostnamen Ihrer Wahl angeben.
 {: tip}
 
 ## Schritt 4: Stellen Sie die App unter {{site.data.keyword.Bluemix_notm}} bereit.
 {: #deploy}
 
-Stellen Sie Ihre App in einer der folgenden {{site.data.keyword.Bluemix_notm}}-Regionen bereit. Für die optimale Latenzzeit wählen Sie eine Region, die Ihren Benutzern am nächsten liegt.
+Sie können Apps über die {{site.data.keyword.Bluemix_notm}}-CLI bereitstellen.
 
-| **Name der Region** | **Standort** | **API-Endpunkt** |
-|-----------------|-------------------------|-------------------|
-| Region USA (Süden) | Dallas, USA | api.ng.bluemix.net |
-| Region USA (Osten) | Washington, DC, USA | api.us-east.bluemix.net |
-| Region Großbritannien | London, England | api.eu-gb.bluemix.net |
-| Region Sydney | Sydney, Australien | api.au-syd.bluemix.net |
-| Region Deutschland | Frankfurt, Deutschland | api.eu-de.bluemix.net |
-{: caption="Tabelle 1. {{site.data.keyword.cloud_notm}}-Regionsliste" caption-side="top"}
+1. Melden Sie sich an Ihrem {{site.data.keyword.Bluemix_notm}}-Konto an und wählen Sie einen API-Endpunkt aus.
 
-1. Legen Sie den API-Endpunkt fest, indem Sie `<API-endpoint>` durch den Endpunkt Ihrer Region ersetzen.
   ```
-cf api <API-endpoint>
+ibmcloud login
   ```
-  {: pre}
+  {: codeblock}
 
-1. Melden Sie sich an Ihrem {{site.data.keyword.Bluemix_notm}}-Konto an.
+  Wenn Sie eine eingebundene Benutzer-ID haben, verwenden Sie stattdessen den folgenden Befehl, um sich mit Ihrer Single Sign-on-ID anzumelden. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id).
+
   ```
-cf login
+ibmcloud login --sso
   ```
-  {: pre}
+  {: codeblock}
 
-  Wenn Sie sich nicht über den Befehl `cf login` oder `bx login` anmelden können, weil Sie über eine eingebundene Benutzer-ID verfügen, verwenden Sie entweder den Befehl `cf login --sso` oder den Befehl `bx login --sso`, um sich mit Ihrer Single-Sign-on-ID anzumelden. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id).
+1. Legen Sie eine Cloud Foundry-Organisation und einen Bereich als Ziel fest:
 
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
+
+  Wenn Sie keine eingerichtete Organisation oder keinen eingerichteten Bereich haben, finden Sie weitere Informationen unter [Organisationen und Bereiche hinzufügen](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
 
 1. Übertragen Sie Ihre App mit einer Push-Operation aus dem Verzeichnis `get-started-java` zu {{site.data.keyword.Bluemix_notm}}.
-  ```
-cf push
-  ```
-  {: pre}
 
-Das Bereitstellen Ihrer Anwendung kann einige Minuten dauern. Wenn die Bereitstellung abgeschlossen ist, sehen Sie eine Nachricht darüber, dass Ihre App ausgeführt wird. Ihre App wird an der URL angezeigt, die in der Ausgabe des Push-Befehls aufgelistet ist. Sie können aber auch den App-Bereitstellungsstatus und die URL anzeigen, indem Sie folgenden Befehl ausführen:
   ```
-cf apps
+ibmcloud cf push
   ```
-  {: pre}
+  {: codeblock}
 
-Sie können nach Fehlern im Bereitstellungsprozess suchen, indem Sie den Befehl `cf logs <Your-App-Name> --recent` verwenden.
+Das Bereitstellen Ihrer Anwendung kann einige Minuten dauern. Wenn die Bereitstellung abgeschlossen ist, zeigt eine Nachricht an, dass Ihre App ausgeführt wird. Ihre App wird unter der URL angezeigt, die in der Ausgabe des Push-Befehls aufgelistet ist. Sie können aber auch den App-Bereitstellungsstatus und die URL anzeigen, indem Sie folgenden Befehl ausführen:
+
+  ```
+ibmcloud cf apps
+  ```
+  {: codeblock}
+
+Sie können nach Fehlern im Bereitstellungsprozess suchen, indem Sie den Befehl `ibmcloud cf logs <Your-App-Name> --recent` verwenden.
 {: tip}  
 
 ## Schritt 5: Fügen Sie eine Datenbank hinzu.
 {: #add_database}
 
-Als Nächstes werden wir eine NoSQL-Datenbank zu dieser Anwendung hinzufügen und die Anwendung so einrichten, dass sie lokal und unter {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann.
+Als Nächstes werden Sie dieser Anwendung eine {{site.data.keyword.cloudant_short_notm}} NoSQL-Datenbank hinzufügen und die Anwendung so einrichten, dass sie lokal und unter {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann.
 
-1. Melden Sie sich in Ihrem Browser bei {{site.data.keyword.Bluemix_notm}} an und wechseln Sie in das Dashboard. Wählen Sie **Ressource erstellen** aus.
-2. Wählen Sie den Abschnitt **Data and Analytics** und anschließend **Cloudant NoSQL DB** aus und erstellen Sie Ihren Service.
+1. Melden Sie sich in Ihrem Browser bei {{site.data.keyword.Bluemix_notm}} an und wechseln Sie zum Dashboard. Wählen Sie **Ressource erstellen** aus.
+2. Wählen Sie den Abschnitt **Daten und Analyse** und anschließend **{{site.data.keyword.cloudant_short_notm}}** aus und erstellen Sie Ihren Service.
 3. Rufen Sie die Ansicht **Verbindungen** auf. Wählen Sie Ihre Anwendung und anschließend **Verbindung erstellen** aus.
-4. Wählen Sie **Erneutes Staging** aus, wenn Sie dazu aufgefordert werden. {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und bietet die Datenbankberechtigungsnachweise für Ihre Anwendung unter Verwendung der Umgebungsvariablen `VCAP_SERVICES`. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn Sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
+4. Wählen Sie **Erneutes Staging** aus, wenn Sie dazu aufgefordert werden. {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und stellt die Datenbankberechtigungsnachweise für Ihre Anwendung durch die Umgebungsvariable `VCAP_SERVICES` bereit. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
 
-Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Anstelle der festen Codierung eines Datenbankkennworts können Sie dieses in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen. [Weitere Informationen...](/docs/manageapps/depapps.html#app_env)
+Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Anstelle der festen Codierung eines Datenbankkennworts können Sie dieses in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen.
 {: tip}
 
-## Schritt 7: Verwenden Sie die Datenbank.
+## Schritt 6: Verwenden Sie die Datenbank.
 {: #use_database}
-Wir werden jetzt Ihren lokalen Code aktualisieren, um auf diese Datenbank zu verweisen. Wir werden die Berechtigungsnachweise für die Services in einer Eigenschaftendatei speichern. Diese Datei wird NUR dann verwendet, wenn die Anwendung lokal ausgeführt wird. Bei der Ausführung in {{site.data.keyword.Bluemix_notm}} werden die Berechtigungsnachweise aus der Umgebungsvariablen `VCAP_SERVICES` gelesen.
+Sie werden jetzt Ihren lokalen Code aktualisieren, um auf diese Datenbank zu verweisen. Sie werden die Berechtigungsnachweise für die Services in einer Eigenschaftendatei speichern. Diese Datei wird NUR dann verwendet, wenn die Anwendung lokal ausgeführt wird. Bei der Ausführung in {{site.data.keyword.Bluemix_notm}} werden die Berechtigungsnachweise aus der Umgebungsvariablen `VCAP_SERVICES` gelesen.
 
-1. Wechseln Sie in Ihrem Browser zu {{site.data.keyword.Bluemix_notm}} und wählen Sie **Apps > _Ihre App_ > Verbindungen > Cloudant > Berechtigungsnachweise anzeigen** aus.
+1. Wechseln Sie in Ihrem Browser zum {{site.data.keyword.Bluemix_notm}}-Dashboard und wählen Sie **_Ihre App_ > Verbindungen** aus. Klicken Sie auf das {{site.data.keyword.cloudant_short_notm}}-Menüsymbol (**&vellip;**) und wählen Sie **Berechtigungsnachweise anzeigen** aus.
 
-2. Kopieren Sie einfach die `url` aus dem Feld `url` der Datei `cloudant.properties` und speichern Sie die Änderungen.
+2. Kopieren Sie einfach die `url` aus den Berechtigungsnachweisen in das Feld `url` der Datei `src/main/resources/cloudant.properties` und speichern Sie die Änderungen.
+
   ```
-  cloudant_url=https://123456789 ... bluemix.cloudant.com
+cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
-  {:pre}
+  {:codeblock}
 
 3. Starten Sie den Server erneut.
 
-  Aktualisieren Sie Ihre Browseransicht unter: http://localhost:9080/GetStartedJava/. Alle Namen, die Sie in die App eingegeben haben, werden jetzt zur Datenbank hinzugefügt.
+Aktualisieren Sie Ihre Browseransicht unter: http://localhost:9080/GetStartedJava/. Alle Namen, die Sie in die App eingegeben haben, werden jetzt der Datenbank hinzugefügt.
 
-  Ihre lokale App und die {{site.data.keyword.Bluemix_notm}}-App verwenden die Datenbank gemeinsam. Namen, die Sie in einer der Apps eingeben, werden nach einer Aktualisierung des Browsers in beiden angezeigt.
+Ihre lokale App und die {{site.data.keyword.Bluemix_notm}}-App verwenden die Datenbank gemeinsam. Namen, die Sie in einer der Apps eingeben, werden nach einer Aktualisierung des Browsers in beiden angezeigt.
 
-Denken Sie daran, dass Sie Ihre App unter {{site.data.keyword.Bluemix_notm}} stoppen, wenn Sie nicht benötigt wird, damit Ihnen nicht unerwartete Gebühren belastet werden.
+Denken Sie daran, dass Sie Ihre App unter {{site.data.keyword.Bluemix_notm}} stoppen, wenn Sie sie nicht benötigen, damit keine unerwarteten Gebühren anfallen.
 {: tip}  
 
 ## Nächste Schritte
 
 * [Lernprogramme](/docs/tutorials/index.html)
-* [Beispiele ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://ibm-cloud.github.io){: new_window}
-* [Architecture Center ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}
+* [Beispiele ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://ibm-cloud.github.io){: new_window}
+* [Architecture Center ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

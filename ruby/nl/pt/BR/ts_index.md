@@ -14,4 +14,4 @@ lastupdated: "2018-02-22"
 
 Solucione problemas de seus aplicativos Ruby e buildpacks com o seguinte recurso:
 
-* [Resolução de problemas para tempos de execução](../../troubleshoot/ts_runtimes.html#runtimes)
+* [Resolução de problemas para tempos de execução](../common/ts_runtimes.html#runtimes)

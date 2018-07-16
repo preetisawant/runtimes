@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -70,7 +70,7 @@ In manchen Fällen soll das Liberty-Buildpack die gebundenen Services vielleicht
 * Meine Anwendung verwendet *dashDB*, die Verbindung zur Datenbank soll aber von der Anwendung direkt verwaltet werden. Die Anwendung enthält die erforderliche Clienttreiber-JAR-Datei. Das Liberty-Buildpack soll den *dashDB*-Service nicht automatisch konfigurieren.
 * Ich stelle eine Datei server.xml bereit und habe die Konfigurationszeilengruppen für die *cloudant*-Instanz bereitgestellt, da ich eine vom Standard abweichende Datenquellenkonfiguration benötige. Das Liberty-Buildpack soll die Datei server.xml zwar nicht aktualisieren, aber dennoch sicherstellen, dass die entsprechende unterstützende Software installiert wird.
 
-Sie können die automatische Servicekonfiguration über die Umgebungsvariable services_autoconfig_excludes ausschließen. Diese Umgebungsvariable kann in eine Datei manifest.yml eingefügt oder mit dem cf-Client definiert werden.
+Sie können die automatische Servicekonfiguration über die Umgebungsvariable services_autoconfig_excludes ausschließen. Diese Umgebungsvariable kann in eine Datei 'manifest.yml' eingefügt oder mit dem {{site.data.keyword.Bluemix_notm}}-Client definiert werden.
 
 Das Ausschließen der automatischen Konfiguration kann pro Servicetyp erfolgen. Sie können die Konfiguration vollständig ausschließen (wie im *dashDB*-Szenario) oder nur die Konfigurationsaktualisierungen in der Datei server.xml ausschließen (wie im *cloudant*-Szenario). Der Wert, den Sie für die Umgebungsvariable services_autoconfig_excludes angeben, ist eine Zeichenfolge, für die Folgendes gilt:
 
@@ -91,8 +91,8 @@ Im Folgenden ist ein Beispiel für die Grammatik der Zeichenfolge services_autoc
 ```
 {: codeblock}
 
-**Wichtig**: Der angegebene Servicetyp muss mit der in der Umgebungsvariablen VCAP_SERVICES enthaltenen Servicebezeichnung übereinstimmen. Leerzeichen sind nicht zulässig.
-**Wichtig**: Innerhalb von ```<service_type_specification>``` ist kein Leerzeichen zulässig. Leerzeichen dürfen nur verwendet werden, um mehrere ```<service_type_specification>```-Instanzen voneinander zu trennen.
+**Wichtig:** Der angegebene Servicetyp muss mit der in der Umgebungsvariablen VCAP_SERVICES enthaltenen Servicebezeichnung übereinstimmen. Leerzeichen sind nicht zulässig.
+**Wichtig:** In `<service_type_specification>` ist kein Leerzeichen zulässig. Leerzeichen dürfen nur verwendet werden, um mehrere Instanzen von `<service_type_specification>` voneinander zu trennen.
 
 Verwenden Sie die Option **all**, um alle automatischen Konfigurationsaktionen für einen Service auszuschließen, wie im obigen *dashDB*-Szenario. Verwenden Sie die Option **config**, um nur die Konfigurationsaktualisierungsaktionen auszuschließen, wie im obigen *cloudant*-Szenario.
 
@@ -113,15 +113,15 @@ Im Folgenden einige Opt-out-Beispielspezifikationen in einer Datei manifest.yml 
 Beispiele für die Konfiguration der Umgebungsvariablen services_autoconfig_excludes für die Anwendung myapp über die Befehlszeilenschnittstelle:
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
 Zum Suchen von *label* für einen Service in VCAP_SERVICES setzen Sie einen Befehl wie im folgenden Beispiel ab:
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -143,10 +143,10 @@ Die Ausgabe enthält Text wie den folgenden, bei dem das Feld **label** den Wert
 {: #override_service_config}
 
 In einigen Fällen ist es möglicherweise sinnvoll, die Standardkonfiguration für einen Service, die von der automatischen Konfiguration erstellt wurde, zu überschreiben.
-Sie können die Umgebungsvariable **LBP_SERVICE_CONFIG_xxxx** verwenden, um eine Servicekonfiguration zu überschreiben. In den folgenden Tabellen sind die vollständigen Namen der Umgebungsvariablen und eine Beispielsyntax für ihre Überschreibung aufgeführt. Soll beispielsweise die Standardversion des Service *elephantSQL* überschrieben und auf die Version 8.3.4.+ gesetzt werden, setzen Sie einen Befehl wie den folgenden ab:
+Sie können die Umgebungsvariable **LBP_SERVICE_CONFIG_xxxx** verwenden, um eine Servicekonfiguration zu überschreiben. In den folgenden Tabellen sind die vollständigen Namen der Umgebungsvariablen und eine Beispielsyntax für ihre Überschreibung aufgeführt.  Soll beispielsweise die Standardversion des Service *elephantSQL* überschrieben und auf die Version 8.3.4.+ gesetzt werden, setzen Sie einen Befehl wie den folgenden ab:
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 
@@ -190,7 +190,7 @@ Diese Tabelle zeigt die Zuordnung von **service_type** zu den Namen der Umgebung
 
 <tr>
 <td>elephantsql</td>
-<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 </tr>
 
 <tr>

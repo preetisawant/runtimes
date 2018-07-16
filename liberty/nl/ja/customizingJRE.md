@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -14,32 +14,32 @@ lastupdated: "2017-10-26"
 
 アプリケーションは、Liberty ビルドパックによって提供および構成される Java ランタイム環境 (JRE) で実行されます。 Liberty ビルドパックにより、JRE のバージョンまたはタイプの構成、JVM オプションのカスタマイズ、JRE 機能のオーバーレイも可能になります。
 
-## {{site.data.keyword.IBM_notm}} JRE
+## {{site.data.keyword.IBM_notm}}JRE
 
 デフォルトでは、アプリケーションは軽量版の {{site.data.keyword.IBM}} JRE で実行するように構成されます。 この軽量 JRE は、
 中核の重要な機能のみを提供するようにしたもので、ディスクおよびメモリーにおける占有スペースが大幅に削減されます。 軽量 JRE の内容について詳しくは、[Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html) を参照してください。
 
  デフォルトでは {{site.data.keyword.IBM_notm}} JRE バージョン 8 が使用されます。 別のバージョンの {{site.data.keyword.IBM_notm}} JRE を指定するには、JBP_CONFIG_IBMJDK 環境変数を使用します。 例えば、最新の {{site.data.keyword.IBM_notm}} JRE 7.1 を使用するには、以下の環境変数を設定します。
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
-version プロパティーをバージョン範囲に設定することができます。 サポートされているバージョン範囲は 1.7.+ と 1.8.+ の 2 つです。 最高の結果を得るには Java 8 を使用してください。
+version プロパティーをバージョン範囲に設定することができます。 サポートされているバージョン範囲は 1.7.+ と 1.8.+ の 2 つです。 最高の結果を得るには Java 8 を使用してください。  Java 7 は、バージョン 3.19 で Liberty ビルドパックから削除されました。  
 
 ## OpenJDK
 {: #openjdk}
 
 オプションで、JRE として OpenJDK を使用して実行するようにアプリケーションを構成できます。 アプリケーションを OpenJDK を使用して実行できるようにするには、JVM 環境変数を「openjdk」に設定します。 例えば、
-cf コマンド・ライン・ツールを使用して、次のコマンドを実行します。
+{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールを使用して、次のコマンドを実行します。
 ```
-    $ cf set-env myapp JVM 'openjdk'
+    ibmcloud cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 デフォルトでは、使用可能であれば OpenJDK バージョン 8 が使用されます。 別のバージョンの OpenJDK を指定するには、JBP_CONFIG_OPENJDK  環境変数を使用します。 例えば、最新の OpenJDK 7 を使用するには、以下の環境変数を設定します。
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -71,7 +71,7 @@ Liberty ビルドパックにより、以下を考慮して、デフォルト JV
   * JVM ダンプ・オプションを無効にし、アプリケーションのメモリーが枯渇したときにプロセスを kill することで、アプリケーションの迅速な障害復旧が構成されます。
   * 仮想化チューニング ({{site.data.keyword.IBM_notm}} JRE のみ)。
   * 障害発生時のアプリケーションの使用可能メモリー・リソースに関する情報を Loggregator にルーティングします。
-  * JVM メモリー・ダンプを有効にするようにアプリケーションが構成されている場合、Java プロセスの kill は無効にされ、JVM メモリー・ダンプは共通のアプリケーション「dumps」ディレクトリーにルーティングされます。 このダンプは、{{site.data.keyword.Bluemix_notm}} ダッシュボードまたは Cloud Foundry CLI で表示できます。
+  * JVM メモリー・ダンプを有効にするようにアプリケーションが構成されている場合、Java プロセスの kill は無効にされ、JVM メモリー・ダンプは共通のアプリケーション「dumps」ディレクトリーにルーティングされます。 このダンプは、{{site.data.keyword.Bluemix_notm}} ダッシュボードまたは {{site.data.keyword.Bluemix_notm}} CLI で表示できます。
 
 以下に、512 M のメモリー制限を指定してデプロイされたアプリケーションに対してビルドパックが生成したデフォルト JVM 構成例を示します。
 
@@ -170,7 +170,7 @@ JVM オプションが JRE に適用される際に、Liberty ビルドパック
 ### 実行中のアプリケーションに適用されている JVM オプションの判別
 {: #determining_applied_jvm_options}
 
-JVM_ARGS 環境変数を使用して指定されたアプリケーション定義オプションを除いて、結果のオプションは、ランタイム環境で、コマンド・ライン・オプションとして (スタンドアロン Java アプリケーション)、または `jvm.options` ファイル内に (非スタンドアロン Java アプリケーション) 保持されます。 アプリケーションに適用されている JVM オプションは、{{site.data.keyword.Bluemix_notm}} コンソールまたは Cloud Foundry CLI で表示できます。
+JVM_ARGS 環境変数を使用して指定されたアプリケーション定義オプションを除いて、結果のオプションは、ランタイム環境で、コマンド・ライン・オプションとして (スタンドアロン Java アプリケーション)、または `jvm.options` ファイル内に (非スタンドアロン Java アプリケーション) 保持されます。 アプリケーションに適用されている JVM オプションは、{{site.data.keyword.Bluemix_notm}} コンソールまたは {{site.data.keyword.Bluemix_notm}} CLI で表示できます。
 
 スタンドアロン Java アプリケーションの JVM オプションは、
 コマンド・ライン・オプションとして保持されます。 `staging_info.yml` ファイルから表示できます。
@@ -178,31 +178,31 @@ JVM_ARGS 環境変数を使用して指定されたアプリケーション定�
 DEA ノードで実行されているアプリケーションの `staging_info.yml` ファイルを表示するには、以下を実行します。
 
 ```
-    $ cf files myapp staging_info.yml
+    ibmcloud cf files myapp staging_info.yml
 ```
 {: codeblock}
 
 Diego セルで実行されているアプリケーションの `staging_info.yml` ファイルを表示するには、以下を実行します。
 
 ```
-    $ cf ssh myapp -c "cat staging_info.yml"
+    ibmcloud cf ssh myapp -c "cat staging_info.yml"
 ```
 {: codeblock}
 
 WAR、
-EAR、サーバー・ディレクトリー、およびパッケージされたサーバーのデプロイメントの場合、JVM オプションは `jvm.options` ファイルで保持されます。 `jvm.options` ファイルは、`app/wlp/usr/servers/<serverName>/` ディレクトリーにあります。 パッケージされたサーバーが別のサーバー名でデプロイされた場合を除いて、```<serverName>``` は `defaultServer` に設定されるのが一般的です。 例えば、次のとおりです。
+EAR、サーバー・ディレクトリー、およびパッケージされたサーバーのデプロイメントの場合、JVM オプションは `jvm.options` ファイルで保持されます。 `jvm.options` ファイルは、`app/wlp/usr/servers/<serverName>/` ディレクトリーにあります。 パッケージされたサーバーが別のサーバー名でデプロイされた場合を除いて、`<serverName>` は `defaultServer` に設定されるのが一般的です。例えば、次のとおりです。
 
 DEA ノードで実行されているアプリケーションの `jvm.options` ファイルを表示するには、以下を実行します。
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 Diego セルで実行されているアプリケーションの `jvm.options` ファイルを表示するには、以下を実行します。
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
 
@@ -222,22 +222,22 @@ Diego セルで実行されているアプリケーションの `jvm.options` �
 * DEA ノードで実行されているアプリケーションの、JVM が生成した冗長ガーベッジ・コレクション・ログ・ファイルを表示するには、以下を実行します。
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
 * Diego セルで実行されているアプリケーションの、JVM が生成した冗長ガーベッジ・コレクション・ログ・ファイルを表示するには、以下を実行します。
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
 ```
 {: codeblock}
 
 * OutOfMemory 条件に基づいて heap、snap、および javacore をトリガーするように、デプロイ済みアプリケーションの {{site.data.keyword.IBM_notm}} JRE オプションを更新するには、 以下のように JVM オプションを指定してアプリケーションの環境変数を設定し、アプリケーションを再始動します。
 
 ```
-    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
-    $ cf restart myapp
+    ibmcloud cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    ibmcloud cf restart myapp
 ```
 {: codeblock}
 

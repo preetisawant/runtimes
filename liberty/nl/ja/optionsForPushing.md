@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -29,11 +29,11 @@ lastupdated: "2017-10-26"
 
 WAR ファイルや EAR ファイルなどのスタンドアロン・アプリケーションを {{site.data.keyword.Bluemix_notm}} 内の Liberty にデプロイできます。
 
-スタンドアロン・アプリケーションをデプロイするには、WAR または EAR ファイルをポイントする -p パラメーターを使用して cf push コマンドを実行します。
+スタンドアロン・アプリケーションをデプロイするには、WAR または EAR ファイルをポイントする -p パラメーターを使用して `ibmcloud cf push` コマンドを実行します。
 例えば、次のとおりです。
 
 ```
-    $ cf push <yourappname> -p myapp.war
+    ibmcloud cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -60,7 +60,7 @@ WAR ファイルや EAR ファイルなどのスタンドアロン・アプリ�
 jsp-2.3 フィーチャーと websocket-1.1 フィーチャーのみを使用可能にするには、次のコマンドを実行し、アプリケーションの再ステージングを行います。
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -124,14 +124,14 @@ EAR ファイルをデプロイした場合、組み込み Web アプリケー�
 例えば、次のとおりです。
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 重要: 環境変数の変更を有効にするには、次のようにアプリケーションの再ステージングを実行する必要があります。
 
 ```
-    $ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -144,7 +144,7 @@ Liberty プロファイルをワークステーションにインストールし
 例えば、Liberty サーバーの名前が defaultServer の場合、次のコマンドを実行します。
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -173,7 +173,7 @@ Liberty プロファイルをワークステーションにインストールし
 サーバー・ディレクトリーの準備ができたら、それを {{site.data.keyword.Bluemix_notm}} にデプロイできます。
 
 ```
-    $ cf push <yourappname> -p defaultServer
+    ibmcloud cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
@@ -190,20 +190,20 @@ Liberty プロファイルをワークステーションにインストールし
 パッケージされたサーバー・ファイルを {{site.data.keyword.Bluemix_notm}} にプッシュすることもできます。 パッケージされたサーバー・ファイルは、Liberty のサーバー・パッケージ・コマンドを使用して作成されます。 アプリケーションと構成ファイルに加えて、パッケージされたサーバー・ファイルも、アプリケーションに必要な共有リソースおよび Liberty ユーザー・フィーチャーを含むことができます。
 
 Liberty サーバーをパッケージするには、Liberty インストール・ディレクトリーから `./bin/server package` コマンドを使用します。 サーバー名を指定して、`--include=usr` オプションを含めます。
-例えば、Liberty サーバーが defaultServer の場合、次のコマンドを実行します。
+例えば、Liberty サーバーが `defaultServer` の場合、次のコマンドを実行します。
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
 このコマンドはサーバーのディレクトリーに serverName.zip ファイルを生成します。 `--archive` オプションを使用して別のアーカイブ・ファイルを指定した場合は、拡張子が `.jar` ではなく `.zip` であることを確認してください。 **ビルドパックは、`.jar` 拡張子を使用して作成されたパッケージ済みサーバー・ファイルをサポートしません**。
 
-その後、`cf push` コマンドを使用して、生成された `.zip` ファイルを {{site.data.keyword.Bluemix_notm}} にプッシュできます。
+その後、`ibmcloud cf push` コマンドを使用して、生成された `.zip` ファイルを {{site.data.keyword.Bluemix_notm}} にプッシュできます。
 例えば、次のとおりです。
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -226,7 +226,7 @@ Liberty サーバーをパッケージするには、Liberty インストール�
 
 * ${port}: Liberty サーバーが listen を行う HTTP ポート。
 * ${vcap_app_port}: ${port} と同じ。 Diego で実行する場合は設定されません。
-* ${application_name}: cf push コマンドでオプションを使用して定義された、アプリケーションの名前。
+* ${application_name}: `ibmcloud cf push` コマンドでオプションを使用して定義された、アプリケーションの名前。
 * ${application_version}: アプリケーションのこのインスタンスのバージョン。形式は UUID です (例: `b687ea75-49f0-456e-b69d-e36e8a854caa`)。 この変数は、新規コードを含んでいるか、アプリケーション成果物への変更を含んでいるアプリケーションが次にプッシュされるたびに変更されます。
 * ${host}: アプリケーション・インスタンスの IP アドレス。
 * ${application_uris}: このアプリケーションにアクセスするために使用できるエンドポイントの JSON スタイルの配列 (例: myapp.mydomain.com)。

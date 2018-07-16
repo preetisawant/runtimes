@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -62,14 +62,14 @@ lastupdated: "2017-10-26"
 * 使用 `JVM_ARGS` 环境变量和 -Xmx 自变量。例如，要将最大堆大小设置为 512M，请使用以下命令，然后重新编译打包应用程序。
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
 * 使用 JBP_CONFIG_IBMJDK 环境变量来指定堆大小比率。heap_size_ratio 是浮点值，指定可以分配给堆多大的内存限制。例如，要将一半可用内存分配给堆（50% 或 0.50），请发出以下命令，然后重新编译打包应用程序。
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

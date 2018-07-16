@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -45,14 +45,14 @@ lastupdated: "2018-1-31"
 例如，若要啟用 *hc*、*debug* 及 *trace* 公用程式，請執行下列指令：
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
 ```
 {: codeblock}
 
 設定環境變數之後，請重新編譯打包應用程式：
 
 ```
-cf restage myApp
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
@@ -61,15 +61,15 @@ cf restage myApp
 例如，執行下列指令來編譯打包應用程式，而不包含「應用程式管理」公用程式：
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
-cf restage myApp
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
 ## 限制
 {: #restrictions}
 * 使用「應用程式管理」對應用程式進行的變更是暫時性變更，會在您結束此模式之後遺失。由於效能之故，此模式僅供暫時性開發使用，而不用來作為正式作業環境。
-* 對於 Node.js 應用程式，如果您在 `manifest.yml` 檔案 (command) 或 `CF CLI (-c)` 中設定 **start** 指令，則大部分的「應用程式管理」公用程式無法運作。那些方法是建置套件置換項目，而且是啟動 Node.js 應用程式的反面模式 (anti-pattern)。若要獲得最佳的結果，請在 `package.json` 檔案或 `Procfile` 中設定 **start** 指令。
+* 對於 Node.js 應用程式，如果您在 `manifest.yml` 檔案中設定 **start** 指令，或在指令行上使用 `-c` 選項，則大部分的「應用程式管理」公用程式無法運作。那些方法是建置套件置換項目，而且是啟動 Node.js 應用程式的反面模式 (anti-pattern)。若要獲得最佳的結果，請在 `package.json` 檔案或 `Procfile` 中設定 **start** 指令。
 
 ### Liberty 及 Node.js 公用程式
 {: #liberty_and_node_utilities}
@@ -114,10 +114,10 @@ cf restage myApp
 
 **搭配使用 *hc* 與 *noproxy***
 
-*hc* 公用程式可以與 *noproxy* 一起使用。若要搭配使用「性能檢測中心」與 *noproxy*，請先使用 `cf ssh` 指令來建立埠轉遞。例如：
+*hc* 公用程式可以與 *noproxy* 一起使用。若要搭配使用「性能檢測中心」與 *noproxy*，請先使用 `ibmcloud cf ssh` 指令來建立埠轉遞。例如：
 
 ```
-cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
+ibmcloud cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 
 **重要事項：***shell* 公用程式也會啟動 *proxy*。
 
-Diego 透過 `cf ssh` 指令提供互動式 Shell，因此 *shell* 公用程式只適用於在 DEA 上執行的應用程式。
+Diego 透過 `ibmcloud cf ssh` 指令提供互動式 Shell，因此 *shell* 公用程式只適用於在 DEA 上執行的應用程式。
 {: .tip}
 
 
@@ -159,12 +159,12 @@ Liberty 及 Node.js 應用程式都支援開發模式。為您的 Liberty 或 No
 
 **重要事項：***debug* 公用程式會啟動 *proxy*。
 
-*debug* 公用程式可以與 *noproxy* 一起使用。若要搭配使用 debug 與 *noproxy*，請先使用 `cf ssh` 指令來建立埠轉遞。
+*debug* 公用程式可以與 *noproxy* 一起使用。若要搭配使用 debug 與 *noproxy*，請先使用 `ibmcloud cf ssh` 指令來建立埠轉遞。
 
-下列程式碼 Snippet 顯示 `cf ssh` 指令格式的範例：
+下列程式碼 Snippet 顯示 `ibmcloud cf ssh` 指令格式的範例：
 
 ```
-cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
+ibmcloud cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 ```
 {: codeblock}
 
@@ -178,7 +178,7 @@ cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 您可使用 JMX 來監視應用程式的多個實例，但每個實例都需要個別的 JMX 連線。預設值為監視實例 0。若要監視實例 1，您可以使用下列程式碼 Snippet：
 
 ```
-cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
+ibmcloud cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
 ```
 {: codeblock}
 
@@ -194,10 +194,10 @@ cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
 
 **開始之前**：*localjmx* 需要您安裝 JConsole。
 
-*localjmx* 公用程式僅適用於 Diego Cell 上執行的應用程式。若要使用 *localjmx*，請先使用 `cf ssh` 指令來建立埠轉遞。例如：
+*localjmx* 公用程式僅適用於 Diego Cell 上執行的應用程式。若要使用 *localjmx*，請先使用 `ibmcloud cf ssh` 指令來建立埠轉遞。例如：
 
 ```
-cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
+ibmcloud cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 {: codeblock}
 
@@ -219,13 +219,13 @@ inspector 公用程式可用來建立 CPU 用量設定檔、新增岔斷點，�
 
 請使用下列指令，透過本端埠轉遞來啟用 URL 的存取：
 ```
-cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
+ibmcloud cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 {: codeblock}
 
 使用下列指令來取得應用程式的啟動日誌。
 ```
-cf logs <appName> --recent
+ibmcloud cf logs <appName> --recent
 ```
 {: codeblock}
 
@@ -245,7 +245,7 @@ cf logs <appName> --recent
 如果您未使用 *proxy* 公用程式，請使用下列指令，透過使用本端埠轉遞來啟用應用程式 URL 的存取：
 
 ```
-cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
+ibmcloud cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
 ```
 {: codeblock}
 

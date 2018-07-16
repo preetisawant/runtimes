@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,9 +18,10 @@ lastupdated: "2017-12-15"
 {: shortdesc}
 
 {{site.data.keyword.Bluemix_notm}}에서 Tomcat 런타임을 사용하려면 java_buildpack을 -b 옵션으로 지정해야 합니다. 예를 들어, 다음과 같습니다.
-<pre>
-cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
-</pre>
+
+```
+ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+```
 
 Tomcat 런타임에 대한 자세한 정보는
 [java-buildpack readme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md)를 참조하십시오.
@@ -29,7 +30,7 @@ Tomcat 런타임에 대한 자세한 정보는
 {: #starter_application}
 
 {{site.data.keyword.Bluemix_notm}}는 Tomcat 스타터 애플리케이션을 제공합니다.  Tomcat 스타터 애플리케이션은 사용할 수 있는 템플리트를 제공하는 단순한 Tomcat 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 {{site.data.keyword.Bluemix_notm}} 환경을 변경하고 변경사항을 푸시할 수
-있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](/docs/cfapps/starter_app_usage.html)을 참조하십시오.
+있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../common/starter_app_usage.html)을 참조하십시오.
 
 ## 런타임 버전
 {: #runtime_versions}

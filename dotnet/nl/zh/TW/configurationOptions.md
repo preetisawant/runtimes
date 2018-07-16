@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-07-13"
 ---
 
@@ -72,4 +72,3 @@ lastupdated: "2017-07-13"
 {: codeblock}
 
 這些變更應該容許 .NET CLI 尋找應用程式的 `Views`，因為它們現在會在 `dotnet publish` 指令執行時複製到建置輸出。如果您的應用程式具有在執行時需要的任何其他檔案（例如 json 配置檔），則也應該將那些檔案新增至專案之 .csproj 檔案中 `Content` 元素的 `Include` 內容，並以分號區隔。
-

@@ -8,12 +8,16 @@ Buildpacks
     index.md
     {: .navgroup-end}
 
+    {: .navgroup id="howto"}
+	byob.md 
+	starter_app_usage.md
+    {: .navgroup-end}
+
     {: .navgroup id="reference"}
     app_mng.md
     workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Resolução de problemas para tempos de execução](../../troubleshoot/ts_runtimes.html)
-    buildpackSupport.md
+    ts_runtimes.md buildpackSupport.md
     {: .navgroup-end}

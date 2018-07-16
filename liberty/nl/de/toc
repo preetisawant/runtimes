@@ -10,7 +10,7 @@ Liberty for Java
 
     {: .topicgroup}
     Zugehörige Links
-        [Liberty overview (Übersicht über Liberty)](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+        [Übersicht über Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -33,6 +33,7 @@ Liberty for Java
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
+        [Einführung in die Verfügbarkeitsüberwachung](../../services/AvailabilityMonitoring/index.html)
 
     {: .topicgroup}
     Offline oder mit einem Proxy arbeiten
@@ -48,16 +49,16 @@ Liberty for Java
 
     {: .topicgroup}
     Starteranwendungen und Buildpacks
-        [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html)
-        [Community-Buildpacks verwenden](../../cfapps/byob.html)
+        [Starteranwendungen verwenden](../common/starter_app_usage.html)
+        [Community-Buildpacks verwenden](../common/byob.html)
 
     buildpackDefaults.md
     [Liberty- und Node.js-Apps verwalten](../common/app_mng.html)
-    [Erste Schritte mit IBM Monitoring and Analytics](../../services/monana/index.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
+    [Einführung in IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html)
     updates.md
     [Unterstützung für Buildpacks](../common/buildpackSupport.html)
     {: .navgroup-end}

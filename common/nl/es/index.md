@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -32,17 +32,16 @@ Puede utilizar los paquetes de compilación incluidos con {{site.data.keyword.cl
 
 *  Cloud Foundry
 
-    Cloud Foundry es una plataforma de código abierto para la automatización del ciclo de vida de las aplicaciones.  {{site.data.keyword.Bluemix}}
-     se instala sobre la plataforma Cloud Foundry como un servicio.Consulte la  [Documentación de Cloud Foundry](https://www.cloudfoundry.org/learn/) para obtener más información.
+    Cloud Foundry es una plataforma de código abierto para la automatización del ciclo de vida de las aplicaciones.  {{site.data.keyword.Bluemix}} se instala sobre la plataforma Cloud Foundry como un servicio. Consulte la [Documentación de Cloud Foundry](https://www.cloudfoundry.org/learn/) para obtener más información.
 
 *  Aplicación Cloud Foundry
 
-   Una aplicación o app cloud foundry es una aplicación pensada para de ella creen instancias los paquetes de compilación que proporciona {{site.data.keyword.Bluemix_notm}}.
+   Una aplicación o app cloud foundry es una aplicación pensada para que cree instancias de ella uno de los paquetes de compilación que proporciona {{site.data.keyword.Bluemix_notm}}.
 
 *  Paquete de compilación
 
-   Un paquete de compilación es un paquete específico de un lenguaje de software suministrado por {{site.data.keyword.Bluemix_notm}}.  Cuando se despliega una aplicación en {{site.data.keyword.Bluemix_notm}}, se elige un paquete de compilación adecuado para la aplicación.  El paquete de compilación proporciona el entorno de ejecución
-para la aplicación.  Puede ver el conjunto de paquetes de compilación proporcionados por  {{site.data.keyword.Bluemix_notm}} emitiendo el mandato `cf buildpacks` desde la línea de mandatos.
+   Un paquete de compilación es un paquete específico de un lenguaje de software suministrado por {{site.data.keyword.Bluemix_notm}}. Cuando se despliega una aplicación en {{site.data.keyword.Bluemix_notm}}, se elige un paquete de compilación adecuado para la aplicación. El paquete de compilación proporciona el entorno de ejecución
+para la aplicación.  Puede ver el conjunto de paquetes de compilación proporcionados por {{site.data.keyword.Bluemix_notm}} emitiendo el mandato `ibmcloud cf buildpacks` desde la línea de mandatos.
 
 *  Tiempo de ejecución
 

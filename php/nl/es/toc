@@ -17,8 +17,8 @@ PHP
     {: .navgroup id="reference"}
     {: .topicgroup}
     Aplicaciones de inicio y compilaciones
-        [Usar las aplicaciones de inicio](../../cfapps/starter_app_usage.html)
-        [Usar compilaciones de la comunidad](../../cfapps/byob.html)
+        [Usar las aplicaciones de inicio](../common/starter_app_usage.html)
+        [Usar compilaciones de la comunidad](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

@@ -30,7 +30,7 @@ lastupdated: "2018-01-23"
 
 对于 [Liberty for Java](/docs/runtimes/liberty/index.html) 和 [java_buildpack](/docs/runtimes/tomcat/index.html) 应用程序，可以通过 **JAVA_OPTS** 环境变量将代理设置传递到运行时。例如，可以发出以下命令，然后重新编译打包应用程序：
 ```
-   $ bluemix app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
+   ibmcloud app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
 {: codeblock}
 

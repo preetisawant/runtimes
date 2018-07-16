@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -14,27 +14,27 @@ lastupdated: "2018-02-21"
 # 환경 변수
 {: #environment_variables}
 
-Java용 Liberty에서 지원하는 환경 변수
+Liberty for Java에서 지원하는 환경 변수
 
 <table>
 <tr>
-<th align="left">이름</th>
+<th align="left">환경 변수 이름</th>
 <th align="left">설명</th>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>[App Management 유틸리티](/docs/manageapps/app_mng.html)를 사용으로 설정합니다.</td>
+<td>[App Management 유틸리티](../common/app_mng.html)를 사용으로 설정합니다.</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>[App Management 유틸리티](/docs/manageapps/app_mng.html)를 설치합니다.</td>
+<td>[App Management 유틸리티](../common/app_mng.html)를 설치합니다.</td>
 </tr>
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>[Liberty 베타 기능](usingBetaFeatures.html)을 사용합니다. </td>
+<td>[Liberty 베타 기능](usingBetaFeatures.html)을 사용으로 설정합니다.</td>
 </tr>
 
 <tr>
@@ -102,10 +102,60 @@ Java용 Liberty에서 지원하는 환경 변수
 <td>[auto-configuration](autoConfig.html#opting_out) 서비스를 사용 안함으로 설정합니다.</td>
 </tr>
 </table>
+{: caption="표 1. Liberty for Java에 사용 가능한 환경 변수" caption-side="top"}
+
+## Liberty for Java 빌드팩에서 사용 안함으로 설정된 속성
+
+일부 속성은 Liberty 빌드팩에 의해 자동으로 사용 안함으로 설정되며 이를 대체할 수 없습니다. 다음 환경 변수와 속성은 사용 안함으로 설정됩니다.
+
+### 사용 안함으로 설정된 속성 표
+
+<table>
+<tr>
+<th>사용 안함으로 설정된 속성</th>
+<th>요소</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="표 1. Liberty for Java에서 사용 안함으로 설정한 속성" caption-side="top"}
 
 # 관련 링크
 {: #rellinks notoc}
 ## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
-* [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

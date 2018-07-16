@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-13"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -24,9 +24,9 @@ NPM est doté d'une fonction permettant d'exécuter des scripts, y compris les s
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} gère un répertoire de cache par application node, qui est conservé d'une génération à l'autre. Le cache stocke les dépendances résolues pour qu'elles ne soient pas téléchargées et installées à chaque déploiement de l'appli.  Supposons, par exemple, que myapp dépende d'**express**.  Lors du premier déploiement de myapp, le module **express** est téléchargé.  Lors des déploiements suivants, l'instance d'**express** mise en cache est utilisée. Le comportement par défaut consiste à mettre en cache tous les modules node_modules installés par NPM et tous les composants bower_components installés par bower.
 
-Utilisez la variable NODE_MODULES_CACHE pour déterminer si le pack de construction Node utilise ou ignore le cache des générations précédentes. La valeur par défaut est true.  Pour désactiver la mise en cache, définissez NODE_MODULES_CACHE sur false, par exemple par la ligne de commande cf :
+Utilisez la variable NODE_MODULES_CACHE pour déterminer si le pack de construction Node utilise ou ignore le cache des générations précédentes. La valeur par défaut est true.  Pour désactiver la mise en cache, définissez NODE_MODULES_CACHE sur false, par exemple via la ligne de commande {{site.data.keyword.Bluemix_notm}} :
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+    ibmcloud cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 

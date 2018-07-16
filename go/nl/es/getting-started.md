@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -19,64 +19,73 @@ lastupdated: "2018-02-14"
 
 * {: download} Enhorabuena, ha desplegado una aplicación de ejemplo Hello World en {{site.data.keyword.Bluemix}}.  Para empezar a trabajar, siga los pasos de esta guía. O bien <a class="xref" href="http://bluemix.net" target="_blank" title="(Descargue el código de ejemplo)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Descargue el código de aplicación" />descargue el código de ejemplo</a> y explore por su cuenta.
 
-Si sigue la guía de aprendizaje de iniciación de Go, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix_notm}} en su app.
+Si sigue esta guía de aprendizaje de iniciación, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix_notm}} en su app.
+
+A lo largo de estos documentos, las referencias a la CLI de Cloud Foundry se han actualizado ahora a la CLI de {{site.data.keyword.Bluemix_notm}}. La CLI de {{site.data.keyword.Bluemix_notm}} tiene los mismos mandatos de Cloud Foundry familiares, pero con una mejor integración con las cuentas de {{site.data.keyword.Bluemix_notm}} y otros servicios. Obtenga más información sobre cómo empezar con la CLI de {{site.data.keyword.Bluemix_notm}} en esta guía de aprendizaje.
+{: tip}
 
 ## Antes de empezar
 {: #prereqs}
 
 Necesitará lo siguiente:
-* [Cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [CLI de Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [Cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git-scm.com/downloads){: new_window}
 * [Go ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://golang.org/dl/){: new_window}
 
 ## Paso 1: Clone la app de ejemplo
 {: #clone}
 
-En primer lugar configuraremos el entorno local y nos aseguraremos de que todas las variables de entorno de GO se hayan definido correctamente. Por ejemplo:
-```
+1. En primer lugar, configuraremos el entorno local y nos aseguraremos de que todas las variables de entorno de GO se hayan definido correctamente. Por ejemplo:
+
+  ```
 mkdir $HOME/work
 export GOPATH=$HOME/work
 export PATH=$PATH:$GOPATH/bin
-```
+  ```
+  {: codeblock}
 
-Vaya a la vía de acceso $GOPATH/src
-```
+1. Vaya a la vía de acceso $GOPATH/src
+
+  ```
 mkdir $GOPATH/src
 cd $GOPATH/src
-```
+  ```
+  {: codeblock}
 
-Ahora está listo para empezar a trabar con la app *hello world* sencilla de Go. Clone el repositorio y vaya al directorio donde se encuentra la app de ejemplo.
-```
-go get github.com/IBM-Bluemix/get-started-go
-```
-{: pre}
-```
-cd github.com/IBM-Bluemix/get-started-go
-```
-{: pre}
+  Ahora está listo para empezar a trabajar con la app *hello world* sencilla de Go.
+1. Clone el repositorio y vaya al directorio donde se encuentra la app de ejemplo.
 
-Lea detenidamente los archivos del directorio *get-started-go* para familiarizarse con el contenido.
+  ```
+go get github.com/IBM-Cloud/get-started-go
+  ```
+  {: codeblock}
+
+  ```
+cd github.com/IBM-Cloud/get-started-go
+  ```
+  {: codeblock}
+
+1. Lea detenidamente los archivos del directorio **`get-started-go`** para familiarizarse con el contenido.
 
 ## Paso 2: Ejecute la app localmente
 {: #run_locally}
 
-  {: pre}
+1. Compile y ejecute la app localmente ejecutando los siguientes mandatos.
 
-  Compile y ejecute la app.
   ```
 make
   ```
-  {: pre}
+  {: codeblock}
 
   ```
 go run main.go
   ```
   {: pre}
 
-  Ver la app en http://localhost:8080
+1. Visualice la app en el siguiente URL: http://localhost:8080
 
-Utilice *Control-c* para detener la app desde la misma ventana en la que la ha iniciado.
+Pulse *Control-c* para detener la app desde la misma ventana en la que la ha iniciado.
 {: tip}
 
 ## Paso 3: Prepare la app para el despliegue
@@ -96,99 +105,100 @@ Abra el archivo manifest.yml y cambie el valor de `name` de `GetStartedGo` por e
   ```
   {: codeblock}
 
-En este archivo manifest.yml, **random-rout: true** genera una ruta aleatoria para la app a fin de evitar que su ruta entre en conflicto con otras.  Si lo desea, puede sustituir **random-route: true** por **host: myChosenHostName**, especificando el nombre de host que elija. [Más información...](/docs/manageapps/depapps.html#appmanifest)
+En este archivo manifest.yml, **`random-rout: true`** genera una ruta aleatoria para la app a fin de evitar que su ruta entre en conflicto con otras.  Si lo desea, puede sustituir **`random-route: true`** por **`host: myChosenHostName`**, especificando el nombre de host que elija.
 {: tip}
 
 ## Paso 4: Despliegue la app
 {: #deploy}
-Puede utilizar la CLI de Cloud Foundry para desplegar apps.
 
-Elija el punto final de la API
-   ```
-cf api <API-endpoint>
-   ```
-   {: pre}
+Puede utilizar la CLI de {{site.data.keyword.Bluemix_notm}} para desplegar apps.
 
-Sustituya *API-endpoint* en el mandato por un punto final de API de la siguiente lista.
-
-| **Nombre de la región** | **Ubicación geográfica** | **Punto final de la API** |
-|-----------------|-------------------------|-------------------|
-| Región EE.UU. sur| Dallas, EE.UU.| api.ng.bluemix.net |
-|  Región EE.UU este | Washington, DC, EE.UU | api.us-east.bluemix.net |
-| Región del Reino Unido| Londres, Inglaterra| api.eu-gb.bluemix.net |
-| Región de Sídney| Sídney, Australia | api.au-syd.bluemix.net |
-|  Región de Alemania | Frankfurt, Alemania | api.eu-de.bluemix.net |
-{: caption="Tabla 1. Lista de regiones de {{site.data.keyword.cloud_notm}}" caption-side="top"}
-
-Inicie una sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}.
+1. Inicie sesión en su cuenta de {{site.data.keyword.Bluemix_notm}} y seleccione un punto final de API.
 
   ```
-cf login
+ibmcloud login
   ```
-  {: pre}
+  {: codeblock}
 
-Si no puede iniciar sesión utilizando los mandatos `cf login` o `bx login` porque tiene un ID de usuario federado, utilice los mandatos `cf login --sso` o `bx login --sso` para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
+  Si tiene un ID de usuario federado, en su lugar utilice el siguiente mandato para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
 
-Desde el directorio *get-started-go*, envíe por push la app a {{site.data.keyword.Bluemix_notm}}
   ```
-cf push
+ibmcloud login --sso
   ```
-  {: pre}
+  {: codeblock}
 
-Esto puede tardar un minuto. Si hay algún error en el proceso de despliegue, puede utilizar el mandato `cf logs <Your-App-Name> --recent` para resolver problemas.
+1. Destinado a una org y espacio de Cloud Foundry:
 
-Cuando finalice el despliegue, verá un mensaje que indica que la app se está ejecutando.  Visualice la app en el URL que aparece en la salida del mandato push. También puede emitir el mandato
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
 
-   ```
-cf apps
-    ```
-  {: pre}
-  para ver el estado de su app y ver el URL.
+  Si no tiene una org o un espacio configurado, consulte [Adición de organizaciones y espacios](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
 
+1. Desde el directorio **`get-started-go`**, envíe por push la app a {{site.data.keyword.Bluemix_notm}}
 
+  ```
+ibmcloud cf push
+  ```
+  {: codeblock}
+
+  Esto puede tardar un minuto. Si hay algún error en el proceso de despliegue, puede utilizar el mandato `ibmcloud cf logs <Your-App-Name> --recent` para resolver problemas.
+
+Cuando finalice el despliegue, verá un mensaje que indica que la app se está ejecutando.  Visualice la app en el URL que aparece en la salida del mandato push. También puede emitir el siguiente mandato para ver el estado de su app y ver el URL.
+
+  ```
+ibmcloud cf apps
+  ```
+  {: codeblock}
 
 ## Paso 5: Añada una base de datos
 {: #add_database}
 
-A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
+A continuación, añadiremos una base de datos de {{site.data.keyword.cloudant_short_notm}} NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
 1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione **Crear recurso**.
-2. Elija la sección **Datos y análisis** y, a continuación, seleccione **BD Cloudant NoSQL** y cree el servicio.
+2. Elija la sección **Datos y análisis** y, a continuación, seleccione **{{site.data.keyword.cloudant_short_notm}}** y cree el servicio.
 3. Vaya a la vista de **Conexiones** y seleccione su aplicación y, a continuación a **Crear conexión**.
 4. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
-Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente. [Más información...](/docs/manageapps/depapps.html#app_env)
+Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente.
 {: tip}
 
 ## Paso 6: Utilice la base de datos
 {: #use_database}
-Ahora vamos a actualizar el código local para que apunte a esta base de datos. Crearemos un archivo json que contendrá las credenciales para los servicios que utilizará la aplicación. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno VCAP_SERVICES.
+Ahora vamos a actualizar el código local para que apunte a esta base de datos. Crearemos un archivo .env que contendrá las credenciales para los servicios que utilizará la aplicación. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno VCAP_SERVICES.
 
 1. Cree un archivo denominado `.env` en el directorio `get-started-go` con el contenido siguiente:
-  ```
-  CLOUDANT_URL=
-  ```
-  {: pre}
 
-2. En la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, seleccione App -> Conexiones -> Cloudant -> Ver credenciales
+  ```
+CLOUDANT_URL=
+  ```
+  {: codeblock}
+
+2. En su navegador, vaya al panel de control de {{site.data.keyword.Bluemix_notm}} y seleccione **_su app_ > Conexiones**. Pulse el icono de menú de {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) y seleccione **Ver credenciales**.
 
 3. Copie y pegue sólo el `url` de las credenciales en el campo `CLOUDANT_URL` del archivo `.env` y guarde los cambios.  El resultado se parecerá al siguiente:
-  ```
-  CLOUDANT_URL=https://123456789 ... bluemix.cloudant.com
-  ```
 
-4. Ejecute la aplicación localmente
+  ```
+CLOUDANT_URL=https://123456789 ... bluemix.cloudant.com
+  ```
+  {: codeblock}
+
+4. Ejecute la aplicación localmente.
+
   ```
 go run main.go
   ```
-  {: pre}
+  {: codeblock}
 
   Visualice la app en: http://localhost:8080. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
 
-  La app local y la app {{site.data.keyword.Bluemix_notm}} comparten la base de datos.  Visualice la app {{site.data.keyword.Bluemix_notm}} en el URL que aparece en la salida del mandato push anterior.  Los nombres que añada desde cualquiera de las apps deberían aparecer cuando renueve los navegadores.
+La app local y la app {{site.data.keyword.Bluemix_notm}} comparten la base de datos.  Visualice la app {{site.data.keyword.Bluemix_notm}} en el URL que aparece en la salida del mandato push anterior.  Los nombres que añada desde cualquiera de las apps deberían aparecer cuando renueve los navegadores.
 
 
-Recuerde que, si no necesita la app en directo, debe detenerla para no incurrir en cargos inesperado.
+Si no necesita la app en directo, debe detenerla para no incurrir en cargos inesperado.
 {: tip}
 
 ## Siguientes pasos

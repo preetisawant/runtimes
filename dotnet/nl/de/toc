@@ -23,8 +23,8 @@ ASP.NET Core
 
     {: .topicgroup}
     Starteranwendungen und Community-Buildpacks
-        [Starteranwendungen verwenden](../../cfapps/starter_app_usage.html)
-        [Community-Buildpacks verwenden](../../cfapps/byob.html)
+        [Starteranwendungen verwenden](../common/starter_app_usage.html)
+        [Community-Buildpacks verwenden](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

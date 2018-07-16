@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-13"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -24,9 +24,9 @@ NPM proporciona un recurso de creación de scripts que le permite ejecutar scrip
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} mantiene un directorio de memoria caché por aplicación de nodo, que es persistente entre las compilaciones. La memoria caché almacena dependencias resueltas para que no se descargue ni se instale cada vez que se despliegue la app.  Por ejemplo, suponga que myapp depende de **express**.  A continuación, la primera vez que se despliegue myapp, se descargará el módulo **express**.  En los despliegues posteriores de myapp, se utilizará la instancia en memoria caché de **express**. El comportamiento predeterminado es almacenar en memoria caché todos los node_modules instalados por NPM y los bower_components instalados por bower.
 
-Utilice la variable NODE_MODULES_CACHE para determinar si el paquete de compilación de nodos utiliza o no tiene en cuenta la memoria caché desde compilaciones anteriores. El valor predeterminado es true.  Para inhabilitar el almacenamiento en memoria caché del conjunto NODE_MODULES_CACHE en false, por ejemplo a través de la línea de mandatos de cf:
+Utilice la variable NODE_MODULES_CACHE para determinar si el paquete de compilación de nodos utiliza o no tiene en cuenta la memoria caché desde compilaciones anteriores. El valor predeterminado es true.  Para inhabilitar el almacenamiento en memoria caché del conjunto NODE_MODULES_CACHE en false, por ejemplo a través de la línea de mandatos de {{site.data.keyword.Bluemix_notm}}:
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+    ibmcloud cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 

@@ -12,8 +12,8 @@ Python
     {: .navgroup id="reference"}
     {: .topicgroup}
     Aplicativos iniciadores e buildpacks de comunidade
-        [Usando os aplicativos iniciadores](../../cfapps/starter_app_usage.html)
-        [Usando buildpacks de comunidade](../../cfapps/byob.html)
+        [Usando os aplicativos iniciadores](../common/starter_app_usage.html)
+        [Usando buildpacks de comunidade](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

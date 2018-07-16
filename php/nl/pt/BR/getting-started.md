@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,15 +20,17 @@ lastupdated: "2018-02-14"
 
 * {: download} Parabéns, você implementou um aplicativo de amostra Hello World no {{site.data.keyword.Bluemix}}!  Para iniciar, siga este guia passo a passo. Ou <a class="xref" href="http://bluemix.net" target="_blank" title="(Fazer download de código de amostra)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Fazer download de código do aplicativo" />faça download do código de amostra</a> e explore você mesmo.
 
-Seguindo o tutorial de introdução do PHP, você vai configurar um ambiente de desenvolvimento, implementar um aplicativo
-localmente e no {{site.data.keyword.Bluemix}} e integrar um serviço de banco de dados em seu aplicativo.
+Seguindo este tutorial de introdução, você configurará um ambiente de desenvolvimento, implementará um app localmente e no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados ao seu app.
+
+Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualizadas para a CLI do {{site.data.keyword.Bluemix_notm}}! A CLI do {{site.data.keyword.Bluemix_notm}} tem os mesmos comandos conhecidos do Cloud Foundry, mas com uma melhor integração com as contas do {{site.data.keyword.Bluemix_notm}} e outros serviços. Saiba mais sobre como começar a usar a CLI do {{site.data.keyword.Bluemix_notm}} neste tutorial.
+{: tip}
 
 ## Antes de Começar
 {: #prereqs}
 
 Você precisará do seguinte:
-* [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [ {{site.data.keyword.Bluemix_notm}}  conta ](https://console.bluemix.net/registration/)
+* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [PHP ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://php.net/downloads.php){: new_window}
 * [Composer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://getcomposer.org/download/){: new_window}
@@ -36,32 +38,35 @@ Você precisará do seguinte:
 ## Etapa 1: clonar o aplicativo de amostra
 {: #clone}
 
-Agora você está pronto para começar a trabalhar com o app. Clone o repositório e
-mude o diretório para onde o app de amostra está localizado.
+Primeiro, clone o repositório e mude o diretório no qual o app de amostra está localizado.
+
   ```
-git clone https://github.com/IBM-Bluemix/get-started-php
+git clone https://github.com/IBM-Cloud/get-iniciado-php
   ```
-  {: pre}
+  {: codeblock}
+
   ```
 cd get-started-php
   ```
-  {: pre}
+  {: codeblock}
 
 ## Etapa 2: executar o app localmente
 
-Instale as dependências
-```
-php composer.phar install
-```
-{: pre}
+1. Instalar dependências.
 
-Execute o app
+  ```
+php composer.phar install
+  ```
+{: codeblock}
+
+1. Execute o app localmente.
+
   ```
 php -S localhost:8000
   ```
-  {: pre}
+  {: codeblock}
 
-Visualize seu app em: http://localhost:8000
+1. Visualize o seu aplicativo na URL a seguir: http://localhost:8000
 
 ## Etapa 3: preparar o app para implementação
 {: #prepare}
@@ -79,99 +84,103 @@ Abra o arquivo manifest.yml e mude o `nome` de `GetStartedPHP` para o nome de se
   ```
   {: codeblock}
 
-Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **random-route: true** por **host: myChosenHostName**, fornecendo um nome de host de sua preferência. [Saiba mais...](/docs/manageapps/depapps.html#appmanifest)
+Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **random-route: true** por **host: myChosenHostName**, fornecendo um nome de host de sua preferência.
 {: tip}
 
 ## Etapa 4: implementar o app
  {: #deploy}
 
-É possível usar a CLI do Cloud Foundry para implementar apps.
+É possível usar a CLI do {{site.data.keyword.Bluemix_notm}} para implementar apps.
 
-Escolha seu terminal de API
-   ```
-cf api <API-endpoint>
-   ```
-   {: pre}
-
-Substitua o *API-endpoint* no comando por um terminal de API da lista a seguir.
-
-| **Nome da região** | **Local geográfico** | **Endpoint da API** |
-|-----------------|-------------------------|-------------------|
-| Região Sul dos EUA | Dallas, EUA | api.ng.bluemix.net |
-| Região Leste dos EUA | Washington, DC, EUA | api.us-east.bluemix.net |
-| Região do Reino Unido | Londres, Inglaterra | api.eu-gb.bluemix.net |
-| Região de Sydney | Sydney, Austrália | api.au-syd.bluemix.net |
-| Região da Alemanha | Frankfurt, Alemanha | api.eu-de.bluemix.net |
-{: caption="Tabela 1.  {{site.data.keyword.cloud_notm}} lista de região" caption-side="top"}
-
-Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}}
+1. Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}} e selecione um terminal de API.
 
    ```
-cf login
+ibmcloud login
    ```
-   {: pre}
+   {: codeblock}
 
-Se não for possível efetuar login usando os comandos `cf login` ou `bx login` porque você tem um ID de usuário federado, use os comandos `cf login --sso` ou `bx login --sso` para efetuar login com seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
-
- No diretório *get-started-php*, envie seu app por push para o {{site.data.keyword.Bluemix_notm}}
-   ```
-cf push
-   ```
-   {: pre}
-
- Isso pode levar um minuto. Se houver um erro no processo de implementação, será possível usar o comando `cf logs <Your-App-Name> --recent` para solucionar problemas.
-
- Quando a implementação for concluída, você deverá ver uma mensagem indicando que o app está em execução.  Visualize o app na URL listada na saída do comando push.  Também é possível emitir o comando
+  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
   ```
-cf apps
+ibmcloud login -- sso
   ```
-  {: pre}
-  para visualizar o status dos apps e ver a URL.
+  {: codeblock}
+
+1. Tenha como destino uma organização e um espaço do Cloud Foundry:
+
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
+
+  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
+
+1. No diretório *get-started-php*, envie seu app por push para o {{site.data.keyword.Bluemix_notm}}
+
+   ```
+ibmcloud cf push
+   ```
+   {: codeblock}
+
+  Isso pode levar um minuto. Se houver um erro no processo de implementação, será possível usar o comando `ibmcloud cf logs <Your-App-Name> --recent` para solucionar problemas.
+
+Quando a implementação for concluída, você deverá ver uma mensagem indicando que o app está em execução.  Visualize o app na URL listada na saída do comando push. Também é possível emitir o comando a seguir para visualizar o status de seus apps e ver a URL.
+
+  ```
+Ibmcloud cf apps
+  ```
+  {: codeblock}
 
 ## Etapa 5: incluir um banco de dados
 {: #add_database}
 
-Em seguida, vamos incluir um banco de dados NoSQL nesse aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
+Em seguida, incluiremos um banco de dados NoSQL do {{site.data.keyword.cloudant_short_notm}} nesse aplicativo e configuraremos o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
 1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
-2. Escolha a seção **Dados e análise de dados**, selecione **Cloudant NoSQL DB** e crie seu serviço.
+2. Escolha a seção **Dados e análise de dados**, selecione o **{{site.data.keyword.cloudant_short_notm}}** e crie o seu serviço.
 3. Acesse a visualização **Conexões**, selecione seu aplicativo e, em seguida, **Criar conexão**.
 4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
-As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte. [Saiba mais...](/docs/manageapps/depapps.html#app_env)
+As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte.
 {: tip}
 
 ## Etapa 6: usar o banco de dados
 {: #use_database}
-Vamos agora atualizar seu código local para apontar para esse banco de dados. Criaremos um arquivo json que armazenará as credenciais dos serviços que o aplicativo usará. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente VCAP_SERVICES.
+Vamos agora atualizar seu código local para apontar para esse banco de dados. Nós criaremos um arquivo .env que armazenará as
+credenciais para os serviços que o aplicativo usará. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente VCAP_SERVICES.
 
 1. Crie um arquivo chamado `.env` no diretório `get-started-php` com o conteúdo a seguir:
+
   ```
-  CLOUDANT_HOST=
+CLOUDANT_HOST=
   CLOUDANT_USERNAME=
   CLOUDANT_PASSWORD=
   ```
+  {: codeblock}
 
-2. De volta na UI do {{site.data.keyword.Bluemix_notm}}, selecione seu App -> Conexões -> Cloudant -> Visualizar credenciais
+2. Em seu navegador, acesse o painel do {{site.data.keyword.Bluemix_notm}} e selecione **_seu app_ > Conexões**. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e selecione **Visualizar credenciais**.
 
 3. Copie e cole os valores dos campos `CLOUDANT_HOST`, `CLOUDANT_USERNAME` e `CLOUDANT_PASSWORD` no arquivo `.env` e salve as mudanças.  O resultado será algo como:
+
   ```
-  CLOUDANT_HOST=abc...yz.cloudant.com
+CLOUDANT_HOST=abc...yz.cloudant.com
   CLOUDANT_USERNAME=abc...yz
   CLOUDANT_PASSWORD=445d...d1a
   ```
+  {: codeblock}
 
 4. Execute seu aplicativo localmente.
+
   ```
 php -S localhost:8000
   ```
-  {: pre}
+  {: codeblock}
 
-  Visualize seu app em: http://localhost:8000. Os nomes que você inserir no app serão agora incluídos no banco de dados.
+Visualize seu app em: http://localhost:8000. Os nomes que você inserir no app serão agora incluídos no banco de dados.
 
-  Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados.  Visualize o app {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando push acima.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
+Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados.  Visualize o app {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando push acima.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
 
-Lembre-se, se você não precisar do app em tempo real, pare-o para não incorrer em encargos inesperados.
+Lembre-se: se você não precisar de seu app em tempo real, pare-o para que você não incorra em nenhum encargo inesperado.
 {: tip}  
 
 ## Próximas Etapas

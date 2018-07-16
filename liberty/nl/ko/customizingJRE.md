@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,24 +20,24 @@ lastupdated: "2017-10-26"
 
  기본적으로 {{site.data.keyword.IBM_notm}} JRE 버전 8이 사용됩니다. JBP_CONFIG_IBMJDK 환경 변수를 사용하면 {{site.data.keyword.IBM_notm}} JRE의 대체 버전을 지정할 수 있습니다. 예를 들어, 최신 {{site.data.keyword.IBM_notm}} JRE 7.1을 사용하려면 다음 환경 변수를 설정하십시오.
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
-버전 특성은 버전 범위로 설정될 수 있습니다. 두 개의 지원되는 버전 범위(1.7.+ 및 1.8.+) 가 있습니다. 최상의 결과를 얻으려면 Java 8을 사용하십시오.
+버전 특성은 버전 범위로 설정될 수 있습니다. 두 개의 지원되는 버전 범위(1.7.+ 및 1.8.+) 가 있습니다. 최상의 결과를 얻으려면 Java 8을 사용하십시오.  Java 7은 버전 3.19의 Liberty 빌드팩에서 제거되었습니다.  
 
 ## OpenJDK
 {: #openjdk}
 
-선택사항으로, 애플리케이션을 JRE로서 OpenJDK에서 실행되도록 구성할 수 있습니다. 애플리케이션이 OpenJDK로 실행되도록 하려면 JVM 환경 변수를 "openjdk"로 설정하십시오. 예를 들어, cf 명령행 도구를 사용하여 다음 명령을 실행하십시오.
+선택사항으로, 애플리케이션을 JRE로서 OpenJDK에서 실행되도록 구성할 수 있습니다. 애플리케이션이 OpenJDK로 실행되도록 하려면 JVM 환경 변수를 "openjdk"로 설정하십시오. 예를 들어, {{site.data.keyword.Bluemix_notm}} 명령행 도구를 사용하여 다음 명령을 실행하십시오.
 ```
-    $ cf set-env myapp JVM 'openjdk'
+    ibmcloud cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 사용으로 설정되는 경우 기본적으로 OpenJDK 버전 8이 사용됩니다. JBP_CONFIG_OPENJDK 환경 변수를 사용하면 OpenJDK의 대체 버전을 지정할 수 있습니다. 예를 들어, 최신 OpenJDK 7을 사용하려면 다음 환경 변수를 설정하십시오.
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -56,7 +56,7 @@ Oracle JRE 사용에 대한 정보는 [Oracle JRE 사용](oracle_jre.html)을 �
 
 Liberty 빌드팩은 다음을 고려하여 기본 JVM 옵션을 구성합니다.
 
-* 애플리케이션의 메모리 한계. 적용되는 JVM 힙 설정은 다음을 기준으로 계산됩니다.
+* 애플리케이션의 메모리 한계.  적용되는 JVM 힙 설정은 다음을 기준으로 계산됩니다.
   * [메모리 한계 및 Liberty 빌드팩](memoryLimits.html#memory_limits)에 설명된 애플리케이션의 메모리 한계
   * JRE 유형. JVM의 힙 관련 옵션은 JRE의 지원 옵션에 따라 다릅니다.
 
@@ -69,7 +69,7 @@ Liberty 빌드팩은 다음을 고려하여 기본 JVM 옵션을 구성합니다
   * 애플리케이션의 메모리가 전부 소모되었을 때 JVM 덤프 옵션과 프로세스 강제 종료를 비활성화하여 애플리케이션의 긴급 장애 및 복구가 구성됩니다.
   * 가상화 튜닝({{site.data.keyword.IBM_notm}} JRE만 해당).
   * 장애 발생 시 애플리케이션의 사용 가능한 메모리 리소스 정보를 Loggregator로 라우팅.
-  * JVM 메모리 덤프를 사용하도록 애플리케이션이 구성되고, Java 프로세스의 강제 종료가 비활성 상태이며, JVM 메모리 덤프가 애플리케이션 "dumps" 공통 디렉토리로 라우팅되는 경우. 그러면 {{site.data.keyword.Bluemix_notm}} 대시보드 또는 Cloud Foundry CLI에서 이 덤프를 확인할 수 있습니다.
+  * JVM 메모리 덤프를 사용하도록 애플리케이션이 구성되고, Java 프로세스의 강제 종료가 비활성 상태이며, JVM 메모리 덤프가 애플리케이션 "dumps" 공통 디렉토리로 라우팅되는 경우. 그러면 {{site.data.keyword.Bluemix_notm}} 대시보드 또는 {{site.data.keyword.Bluemix_notm}} CLI에서 이 덤프를 확인할 수 있습니다.
 
 다음은 512M 메모리 한계를 적용하여 배치된 애플리케이션에 대한 빌드팩이 생성하는 기본 JVM 구성 예제입니다.
 
@@ -168,37 +168,37 @@ JVM 옵션을 JRE에 적용하면 Liberty 빌드팩의 기본 옵션이 먼저 �
 ### 실행 중인 애플리케이션에 적용된 JVM 옵션 판별
 {: #determining_applied_jvm_options}
 
-JVM_ARGS 환경 변수를 통해 지정된 애플리케이션 정의 옵션을 제외하고는, 작업 결과로 지정된 옵션이 런타임 환경에서 명령행 옵션(독립형 Java 애플리케이션)으로 또는 `jvm.options` 파일(비독립형 Java 애플리케이션)에 지속됩니다. 애플리케이션에 대해 적용된 JVM 옵션은 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 Cloud Foundry CLI에서 볼 수 있습니다.
+JVM_ARGS 환경 변수를 통해 지정된 애플리케이션 정의 옵션을 제외하고는, 작업 결과로 지정된 옵션이 런타임 환경에서 명령행 옵션(독립형 Java 애플리케이션)으로 또는 `jvm.options` 파일(비독립형 Java 애플리케이션)에 지속됩니다. 애플리케이션에 대해 적용된 JVM 옵션은 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 {{site.data.keyword.Bluemix_notm}} CLI에서 볼 수 있습니다.
 
 독립형 Java 애플리케이션에 대한 JVM 옵션은 명령행 옵션으로서 유지됩니다. 이 옵션은 `staging_info.yml` 파일에서 확인할 수 있습니다.
 
 DEA 노드에서 실행 중인 애플리케이션에 대한 `staging_info.yml` 파일을 보려면 다음을 실행하십시오.
 
 ```
-    $ cf files myapp staging_info.yml
+    ibmcloud cf files myapp staging_info.yml
 ```
 {: codeblock}
 
 Diego 셀에서 실행 중인 애플리케이션에 대한 `staging_info.yml` 파일을 보려면 다음을 실행하십시오.
 
 ```
-    $ cf ssh myapp -c "cat staging_info.yml"
+    ibmcloud cf ssh myapp -c "cat staging_info.yml"
 ```
 {: codeblock}
 
-WAR, EAR, 서버 디렉토리 및 패키지된 서버 배치에 대한 JVM 옵션은 `jvm.options` 파일에서 유지됩니다. `jvm.options` 파일은 `app/wlp/usr/servers/<serverName>/` 디렉토리에 있습니다. 패키지된 서버가 다른 서버 이름을 사용하여 배치된 경우를 제외한 대부분의 경우 ```<serverName>```이 `defaultServer`로 설정됩니다. 예를 들어, 다음과 같습니다.
+WAR, EAR, 서버 디렉토리 및 패키지된 서버 배치에 대한 JVM 옵션은 `jvm.options` 파일에서 유지됩니다. `jvm.options` 파일은 `app/wlp/usr/servers/<serverName>/` 디렉토리에 있습니다. 패키지된 서버가 다른 서버 이름을 사용하여 배치된 경우를 제외한 대부분의 경우 `<serverName>`이 `defaultServer`로 설정됩니다. 예를 들어, 다음과 같습니다.
 
 DEA 노드에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일을 보려면 다음을 실행하십시오.
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 Diego 셀에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일을 보려면 다음을 실행하십시오.
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
 
@@ -218,22 +218,22 @@ Diego 셀에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일�
 * DEA 노드에서 실행 중인 애플리케이션에 대한 JVM 생성 상세 가비지 콜렉션 로그 파일을 보려면 다음을 실행하십시오.
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
 * Diego 노드에서 실행 중인 애플리케이션에 대한 JVM 생성 상세 가비지 콜렉션 로그 파일을 보려면 다음을 실행하십시오.
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
 ```
 {: codeblock}
 
 * 메모리 부족 조건에서 힙, 스냅 및 javacore를 트리거하도록 배치된 애플리케이션의 {{site.data.keyword.IBM_notm}} JRE 옵션을 업데이트하려면, JVM 옵션으로 애플리케이션의 환경 변수를 설정하고 애플리케이션을 다시 시작하십시오.
 
 ```
-    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
-    $ cf restart myapp
+    ibmcloud cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    ibmcloud cf restart myapp
 ```
 {: codeblock}
 

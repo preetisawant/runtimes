@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -32,7 +32,7 @@ Mit den im Lieferumfang von {{site.data.keyword.cloud_notm}} enthaltenen Buildpa
 
 *  Cloud Foundry
 
-    Cloud Foundry ist eine Open-Source-Plattform für die Automatisierung des Anwendungslebenszyklus. {{site.data.keyword.Bluemix}} baut als Service auf der Cloud Foundry-Plattform auf. Weitere Informationen finden Sie in der [Cloud Foundry-Dokumentation](https://www.cloudfoundry.org/learn/).
+    Cloud Foundry ist eine Open-Source-Plattform für die Automatisierung des Anwendungslebenszyklus.  {{site.data.keyword.Bluemix}} baut als Service auf der Cloud Foundry-Plattform auf. Weitere Informationen finden Sie in der [Cloud Foundry-Dokumentation](https://www.cloudfoundry.org/learn/).
 
 *  Cloud Foundry-Anwendung
 
@@ -40,15 +40,15 @@ Mit den im Lieferumfang von {{site.data.keyword.cloud_notm}} enthaltenen Buildpa
 
 *  Buildpack
 
-   Ein Buildpack ist ein typischerweise sprachspezifisches Paket oder eine Software, das bzw. die von {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt wird. Wenn eine Anwendung für {{site.data.keyword.Bluemix_notm}} bereitgestellt wird, wird ein entsprechendes Buildpack für die Anwendung ausgewählt. Das Buildpack stellt die Laufzeitumgebung für die Anwendung bereit.  Sie können die Gruppe der von {{site.data.keyword.Bluemix_notm}} bereitgestellten Buildpacks anzeigen, indem Sie den Befehl `cf buildpacks` in der Befehlszeile absetzen.
+   Ein Buildpack ist ein typischerweise sprachspezifisches Paket oder eine Software, das bzw. die von {{site.data.keyword.Bluemix_notm}} zur Verfügung gestellt wird. Wenn eine Anwendung für {{site.data.keyword.Bluemix_notm}} bereitgestellt wird, wird ein entsprechendes Buildpack für die Anwendung ausgewählt. Das Buildpack stellt die Laufzeitumgebung für die Anwendung bereit. Sie können die Gruppe der von {{site.data.keyword.Bluemix_notm}} bereitgestellten Buildpacks anzeigen, indem Sie den Befehl `ibmcloud cf buildpacks` in der Befehlszeile absetzen.
 
 *  Laufzeit
 
-   Eine Laufzeit ist die Gruppe von Softwarekomponenten, die die Ausführungsumgebung für eine Anwendung zur Verfügung stellen. Die Benennungen *Laufzeit* und *Buildpack* werden manchmal austauschbar verwendet.  Wenn ein Buildpack mit der Bereitstellung einer Anwendung abgeschlossen hat, wird die Laufzeitumgebung eingerichtet.
+   Eine Laufzeit ist die Gruppe von Softwarekomponenten, die die Ausführungsumgebung für eine Anwendung zur Verfügung stellen. Die Benennungen *Laufzeit* und *Buildpack* werden manchmal austauschbar verwendet. Wenn ein Buildpack mit der Bereitstellung einer Anwendung abgeschlossen hat, wird die Laufzeitumgebung eingerichtet.
 
 *  Boilerplate
 
-   Eine Boilerplate ist eine einfache Anwendung, die für eine bestimmte Laufzeit entworfen wurde.  Die Boilerplates bieten Vorlagen oder Beispiele der sprach- und laufzeitspezifischen Anwendungstypen. Sie können Boilerplates am Anfang der Entwicklung ausgereifterer Anwendungen als Startcode verwenden.  {{site.data.keyword.Bluemix_notm}} stellt folgende Boilerplates bereit:
+   Eine Boilerplate ist eine einfache Anwendung, die für eine bestimmte Laufzeit entworfen wurde. Die Boilerplates bieten Vorlagen oder Beispiele der sprach- und laufzeitspezifischen Anwendungstypen. Sie können Boilerplates am Anfang der Entwicklung ausgereifterer Anwendungen als Startcode verwenden. {{site.data.keyword.Bluemix_notm}} stellt folgende Boilerplates bereit:
    * *Hello World-Boilerplates*: Einfache Anwendungen, die in der Regel eine sprach- und laufzeitspezifische Hello World-Anwendung bereitstellen.
    * *Boilerplates mit Services*: Diese veranschaulichen, wie eine Laufzeit mit einem Service verwendet wird.
    * *Boilerplates mit Frameworks*: Einfache sprach- und laufzeitspezifische Anwendungen, die bestimmte Sprachframeworks wie Python Flask oder Ruby Sinatra nutzen.

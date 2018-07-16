@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,24 +20,24 @@ lastupdated: "2017-10-26"
 
  依預設會使用 {{site.data.keyword.IBM_notm}} JRE 第 8 版。請使用 JBP_CONFIG_IBMJDK 環境變數來指定 {{site.data.keyword.IBM_notm}} JRE 的替代版本。例如，若要使用最新的 {{site.data.keyword.IBM_notm}} JRE 7.1，請設定下列環境變數：
 ```
-$ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
-version 內容可以設成版本範圍。有兩個支援的版本範圍：1.7.+ 和 1.8.+。為求最佳結果，請使用 Java 8。
+version 內容可以設成版本範圍。有兩個支援的版本範圍：1.7.+ 和 1.8.+。為求最佳結果，請使用 Java 8。Java 7 已從 3.19 版中的 Liberty 建置套件移除。  
 
 ## OpenJDK
 {: #openjdk}
 
-應用程式可以選擇性地配置為使用 OpenJDK 作為 JRE 來執行。為了讓應用程式能使用 OpenJDK 執行，請將 JVM 環境變數設為 "openjdk"。例如，使用 cf 指令行工具，執行下列指令：
+應用程式可以選擇性地配置為使用 OpenJDK 作為 JRE 來執行。為了讓應用程式能使用 OpenJDK 執行，請將 JVM 環境變數設為 "openjdk"。例如，使用 {{site.data.keyword.Bluemix_notm}} 指令行工具，執行下列指令：
 ```
-$ cf set-env myapp JVM 'openjdk'
+    ibmcloud cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 如果啟用的話，依預設會使用 OpenJDK 第 8 版。請使用 JBP_CONFIG_OPENJDK 環境變數來指定 OpenJDK 的替代版本。例如，若要使用最新的 OpenJDK 7，請設定下列環境變數：
 ```
-$ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -69,7 +69,7 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
   * 透過停用 JVM 傾出選項，並在應用程式的記憶體耗盡時結束 (kill) 處理程序，以配置應用程式的快速失敗及回復。
   * 虛擬化調整（僅限 {{site.data.keyword.IBM_notm}} JRE）。
   * 將失敗時的應用程式可用記憶體資源資訊遞送至 Loggregator。
-  * 如果應用程式是配置為啟用 JVM 記憶體傾出，則會停用 Java 處理程序的結束 (kill) 功能，且 JVM 記憶體傾出會遞送至一個共同的應用程式 "dumps" 目錄。然後，即可從 {{site.data.keyword.Bluemix_notm}} 儀表板或 Cloud Foundry CLI 檢視這些傾出。
+  * 如果應用程式是配置為啟用 JVM 記憶體傾出，則會停用 Java 處理程序的結束 (kill) 功能，且 JVM 記憶體傾出會遞送至一個共同的應用程式 "dumps" 目錄。然後，即可從 {{site.data.keyword.Bluemix_notm}} 儀表板或 {{site.data.keyword.Bluemix_notm}} CLI 檢視這些傾出。
 
 下列範例是建置套件針對記憶體限制為 512M 的已部署應用程式所產生的預設 JVM 配置：
 
@@ -168,21 +168,21 @@ Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 ### 決定執行中應用程式的已套用 JVM 選項
 {: #determining_applied_jvm_options}
 
-使用 JVM_ARGS 環境變數所指定的應用程式定義選項除外，其他產生的選項會以指令行選項形式（獨立式 Java 應用程式）或以 `jvm.options` 檔案（非獨立式 Java 應用程式）持續保存在運行環境中。您可以從 {{site.data.keyword.Bluemix_notm}} 主控台或 Cloud Foundry CLI 檢視針對應用程式所套用的 JVM 選項。
+使用 JVM_ARGS 環境變數所指定的應用程式定義選項除外，其他產生的選項會以指令行選項形式（獨立式 Java 應用程式）或以 `jvm.options` 檔案（非獨立式 Java 應用程式）持續保存在運行環境中。您可以從 {{site.data.keyword.Bluemix_notm}} 主控台或 {{site.data.keyword.Bluemix_notm}} CLI 檢視針對應用程式所套用的 JVM 選項。
 
 獨立式 Java 應用程式的 JVM 選項會持續保存為指令行選項。您可以從 `staging_info.yml` 檔案中檢視它們。
 
 若要在執行於 DEA 節點中的應用程式上檢視 `staging_info.yml` 檔案，請執行下列指令：
 
 ```
-    $ cf files myapp staging_info.yml
+    ibmcloud cf files myapp staging_info.yml
 ```
 {: codeblock}
 
 若要在執行於 Diego Cell 中的應用程式上檢視 `staging_info.yml` 檔案，請執行下列指令：
 
 ```
-    $ cf ssh myapp -c "cat staging_info.yml"
+    ibmcloud cf ssh myapp -c "cat staging_info.yml"
 ```
 {: codeblock}
 
@@ -191,14 +191,14 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 若要在執行於 DEA 節點中的應用程式上檢視 `jvm.options` 檔案，請執行下列指令：
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 若要在執行於 Diego Cell 中的應用程式上檢視 `jvm.options` 檔案，請執行下列指令：
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
 
@@ -218,22 +218,22 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 * 若要在執行於 DEA 節點中的應用程式上檢視 JVM 所產生的詳細記憶體回收日誌檔，請執行下列指令：
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
 * 若要在執行於 Diego Cell 中的應用程式上檢視 JVM 所產生的詳細記憶體回收日誌檔，請執行下列指令：
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
 ```
 {: codeblock}
 
 * 若要更新已部署應用程式的 {{site.data.keyword.IBM_notm}} JRE 選項，以在記憶體不足 (OutOfMemory) 的狀況下觸發 heap、snap 及 javacore，請使用 JVM 選項來設定應用程式的環境變數，並重新啟動應用程式：
 
 ```
-    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
-    $ cf restart myapp
+    ibmcloud cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    ibmcloud cf restart myapp
 ```
 {: codeblock}
 

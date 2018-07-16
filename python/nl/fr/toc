@@ -12,8 +12,8 @@ Python
     {: .navgroup id="reference"}
     {: .topicgroup}
     Applications de démarrage et packs de construction de communauté
-        [Utilisation des applications de démarrage](../../cfapps/starter_app_usage.html)
-        [Utilisation des packs de construction de communauté](../../cfapps/byob.html)
+        [Utilisation des applications de démarrage](../common/starter_app_usage.html)
+        [Utilisation des packs de construction de communauté](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

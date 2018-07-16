@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -30,7 +30,7 @@ Oracle JRE ファイルは Web サーバー上でホストされる必要があ�
 ```
 {: codeblock}
 
-    * 例えば、次のように指定します。
+    * 例えば、以下のようにします。
     ```
        ---
        1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
@@ -49,7 +49,7 @@ JBP_CONFIG_OPENJDK 変数の場合、値は次のようになります。
 
 これを設定するには、次のようなコマンドを発行します。
 ```
-   $ cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
+   ibmcloud cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
 ```
 {: codeblock}
 
@@ -57,7 +57,7 @@ JBP_CONFIG_OPENJDK 変数の場合、値は次のようになります。
 
 JVM 環境変数を設定するには、次のようなコマンドを発行します。
 ```
-   $ cf se myApp JVM 'openjdk'
+   ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

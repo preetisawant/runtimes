@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -18,18 +18,18 @@ Variables d'environnement prises en charge par Liberty for Java.
 
 <table>
 <tr>
-<th align="left">Nom</th>
+<th align="left">Nom de la variable d'environnement</th>
 <th align="left">Description</th>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Activer les [utilitaires de gestion des applications](/docs/manageapps/app_mng.html)</td>
+<td>Activer les [utilitaires de gestion des applications](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Installer les [utilitaires de gestion des applications](/docs/manageapps/app_mng.html)</td>
+<td>Installer les [utilitaires de gestion des applications](../common/app_mng.html)</td>
 </tr>
 
 <tr>
@@ -59,7 +59,7 @@ Variables d'environnement prises en charge par Liberty for Java.
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>Configurer la [version d'OpenJDK](customizingJRE.html)</td>.
+<td>Configurer la [version d'OpenJDK](customizingJRE.html).</td>
 </tr>
 
 <tr>
@@ -102,10 +102,60 @@ Variables d'environnement prises en charge par Liberty for Java.
 <td>Désactiver la [configuration automatique](autoConfig.html#opting_out) des services</td>
 </tr>
 </table>
+{: caption="Tableau 1. Variables d'environnement disponibles pour Liberty for Java" caption-side="top"}
+
+## Attributs désactivés dans le pack de construction Liberty for Java
+
+Certains attributs sont automatiquement désactivés par le pack de construction Liberty et vous ne pouvez pas les redéfinir. Les variables d'environnement et attributs suivants sont désactivés.
+
+### Tableau des attributs désactivés
+
+<table>
+<tr>
+<th>Attribut désactivé </th>
+<th>Élément</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="Tableau 1. Attributs désactivés par Liberty for Java" caption-side="top"}
 
 # rellinks
 {: #rellinks notoc}
 ## general
 {: #general notoc}
 * [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Présentation de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

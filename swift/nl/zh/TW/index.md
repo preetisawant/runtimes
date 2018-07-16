@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,9 +19,9 @@ lastupdated: "2017-11-08"
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} 提供 Kitura 型 Swift [入門範本應用程式](https://github.com/IBM-Bluemix/Kitura-Starter)。Kitura 入門範本應用程式是簡單的 Swift 應用程式，您可以利用它來瞭解可使用 Swift 程式設計語言開發的伺服器應用程式類型。此範例應用程式會建立基本 Kitura HTTP 伺服器，以將 HTML 內容傳回給用戶端。
+{{site.data.keyword.Bluemix_notm}} 提供 Kitura 型 Swift [入門範本應用程式](https://github.com/IBM-Cloud/Kitura-Starter)。Kitura 入門範本應用程式是簡單的 Swift 應用程式，您可以利用它來瞭解可使用 Swift 程式設計語言開發的伺服器應用程式類型。此範例應用程式會建立基本 Kitura HTTP 伺服器，以將 HTML 內容傳回給用戶端。
 
-**附註：**Kitura 入門範本應用程式是要作為教學用途。您可以利用入門範本應用程式進行實驗，並將那些變更推送至 {{site.data.keyword.Bluemix_notm}} 環境。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../../cfapps/starter_app_usage.html)。
+**附註：**Kitura 入門範本應用程式是要作為教學用途。您可以利用入門範本應用程式進行實驗，並將那些變更推送至 {{site.data.keyword.Bluemix_notm}} 環境。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../common/starter_app_usage.html)。
 
 ## 重新命名您的應用程式
 {: #renaming_your_app}
@@ -53,7 +53,7 @@ $ cat .swift-version
 
 請注意，您可以在 `.swift-version` 檔案中指定任何有效的 Swift 版本。這些替代版本必須符合 [Swift.org ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://swift.org/download/) 命名，而且直接從該處取回。儘管使用非快取版本將需要有點長的時間來佈建，但您的 Swift 應用程式沒有運行環境效能差異。
 
-如果您應用程式的根目錄包含 `Package.swift` 檔案，則會使用 {{site.data.keyword.Bluemix_notm}} 中的預設 swift_buildpack。如果您喜歡使用替代建置套件，則必須將 `buildpack: {buildpackUrl}` 項目新增至應用程式的 manifest.yml 檔案來指定此建置套件。或者，您可以在部署時使用 `cf push -b {buildpackUrl}` 指令引數，來定義此建置套件。
+如果您應用程式的根目錄包含 `Package.swift` 檔案，則會使用 {{site.data.keyword.Bluemix_notm}} 中的預設 swift_buildpack。如果您喜歡使用替代建置套件，則必須將 `buildpack: {buildpackUrl}` 項目新增至應用程式的 manifest.yml 檔案來指定此建置套件。或者，您也可以在部署時使用 `ibmcloud cf push -b {buildpackUrl}` 指令引數，來定義此建置套件。
 
 
 ## 開發人員環境
@@ -93,7 +93,7 @@ IBM 也提供可供 Swift 開發人員使用的其他線上工具。
 * [IBM Swift 套件型錄](https://swiftpkgs.ng.bluemix.net/)
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Kitura 文件及 API](http://ibm-swift.github.io/Kitura/)
-* [適用於 Bluemix 的 Kitura 入門範本應用程式](https://github.com/IBM-Bluemix/Kitura-Starter)
+* [適用於 Bluemix 的 Kitura 入門範本應用程式](https://github.com/IBM-Cloud/Kitura-Starter)
 * [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
 * [IBM Bluemix buildpack for Swift 版本注意事項](https://github.com/IBM-Swift/swift-buildpack/releases)
 * [Swift.org ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://swift.org/)

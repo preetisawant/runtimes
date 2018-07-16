@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -13,16 +13,27 @@ lastupdated: "2018-02-14"
 {: #latest_updates}
 
 sdk-for-nodejs 빌드팩의 최신 업데이트 목록
+## 2018년 7월 1일: Node.js 빌드팩 v3.20.2 업데이트
+SDK for Node.js 빌드팩 v3.20.2에서는 현재 Node.js 런타임에 대한 Dynatrace Managed PaaS 통합을 추가합니다. [Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링](dynatrace.html)을 참조하십시오.
 
-## 2018년 2월 6일: Nodejs 빌드팩 v3.18 업데이트
-SDK for Node.js 빌드팩 v3.18은 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 및 8.9.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.12.3입니다. 
+## 2018년 5월 17일: Node.js 빌드팩 v3.20.1 업데이트
+SDK for Node.js 빌드팩 v3.20.1에서는 현재 Node.js 런타임에 대한 Dynatrace PaaS 통합을 수정합니다. [Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링](dynatrace.html)을 참조하십시오.
 
-## 2018년 1월 8일: Nodejs 빌드팩 v3.17 업데이트
-SDK for Node.js 빌드팩 v3.17은 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 및 8.9.3을 제공합니다. 기본값이 최신 6.x이므로 현재 6.12.2입니다. 
+## 2018년 4월 9일: Node.js 빌드팩 v3.20 업데이트
+SDK for Node.js 빌드팩 v3.20에서는 현재 Node.js 런타임에 대한 Dynatrace PaaS 통합을 추가합니다. [Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링](dynatrace.html)을 참조하십시오.
+
+## 2018년 3월 16일: Node.js 빌드팩 v3.19 업데이트
+SDK for Node.js 빌드팩 v3.19에서는 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 및 8.9.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.13.0입니다. 
+
+## 2018년 2월 6일: Node.js 빌드팩 v3.18 업데이트
+SDK for Node.js 빌드팩 v3.18은 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 및 8.9.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.12.3입니다.
+
+## 2018년 1월 8일: Node.js 빌드팩 v3.17 업데이트
+SDK for Node.js 빌드팩 v3.17은 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 및 8.9.3을 제공합니다. 기본값이 최신 6.x이므로 현재 6.12.2입니다.
 
 ## 2017년 12월 11일: Node.js 빌드팩 v3.16.1 업데이트
 SDK for Node.js 빌드팩 v3.16.1은 IBM SDK for Node.js 버전 v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0을 제공합니다. 기본값이 최신 6.x이므로 현재 6.12.0입니다.
-PSIRTs: 보안 권고문 ID: 10237 제품 레코드 ID: 104487 제목: Node.js zlib DOS 보안 취약성, 2017년 10월(CVE-2017-14919)을 수정합니다. v3.16.1로 업그레이드하여 8.6.0.0 이하, 6.10.2.0 - 6.11.4.0 및 4.8.2.0 - 4.8.4.0에 영향을 주는 보안 취약성에 대한 수정사항을 가져오도록 권장합니다. 
+PSIRTs: 보안 권고문 ID: 10237 제품 레코드 ID: 104487 제목: Node.js zlib DOS 보안 취약성, 2017년 10월(CVE-2017-14919)을 수정합니다. v3.16.1로 업그레이드하여 8.6.0.0 이하, 6.10.2.0 - 6.11.4.0 및 4.8.2.0 - 4.8.4.0에 영향을 주는 보안 취약성에 대한 수정사항을 가져오도록 권장합니다.
 
 ## 2017년 11월 1일: Node.js 빌드팩 v3.15 업데이트
 SDK for Node.js 빌드팩 v3.15에서는 IBM SDK for Node.js 버전 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 및 8.6.0을 제공합니다. 기본값이 최신 6.x이므로 현재 6.11.4입니다.
@@ -46,8 +57,7 @@ SDK for Node.js 빌드팩 v3.12는 IBM SDK for Node.js 버전 0.12.17, 0.12.18, 
 새 런타임 외에 이 릴리스에는 devconsole UI를 사용하는 쉘 앱 관리 핸들러를 사용할 때 발생한 버그에 대한 수정사항이 포함됩니다. 또한 이 빌드팩은 Monitoring and Analytics 서비스에 대한 자동 구성 작동 방법을 변경합니다. 무료 사용제를 사용하는 애플리케이션에는 더 이상 로그 기능이 추가되지 않습니다. 이는 logmet으로 대체됩니다.
 
 ## 2017년 1월 20일: Node.js 빌드팩 v3.10 업데이트
-이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 및 6.9.4를 지원합니다. 현재 기본 버전은 4.7.2입니다.
-
+이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 및 6.9.4를 지원합니다. 현재 기본 버전은 4.7.2입니다.  또한 이 릴리스는 [Cloud Foundry Node.js 빌드팩 v1.5.24](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24)와 동기화됩니다.
 애플리케이션 시작을 위한 "npm start"가 호출되지 않는 경우의 버그에 대한 수정사항이 포함됩니다.
 
 ## 2016년 11월 17일: Node.js 빌드팩 v3.9 업데이트
@@ -55,7 +65,7 @@ SDK for Node.js 빌드팩 v3.12는 IBM SDK for Node.js 버전 0.12.17, 0.12.18, 
 
 Node.js v6가 2016년 10월 18일에 LTS 상태로 승격되었으며 곧 빌드팩의 기본 런타임이 됩니다. Node.js v0.10이 2016년 10월 31일에 종료되었으며 빌드팩에 더 이상 포함되지 않습니다. 세부사항은 [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/)을 참조하십시오.
 
-Node.js v6와 함께 사용되는 추적 및 검사기 App Management 핸들러에 영향을 주는 버그가 이 릴리스에서 해결되었습니다. Node.js v6의 검사기 기능 통합으로 인해 검사기 핸들러가 변경되는 방식에 대한 자세한 정보는 [Liberty 및 Node.js 앱 관리](/docs/manageapps/app_mng.html#inspector)를 참조하십시오.
+Node.js v6와 함께 사용되는 추적 및 검사기 App Management 핸들러에 영향을 주는 버그가 이 릴리스에서 해결되었습니다. Node.js v6의 검사기 기능 통합으로 인해 검사기 핸들러가 변경되는 방식에 대한 자세한 정보는 [Liberty 및 Node.js 앱 관리](../common/app_mng.html#inspector)를 참조하십시오.
 
 ## 2016년 10월 7일: Node.js 빌드팩 v3.8-20161006-1211 업데이트
 이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.46, 0.10.47, 0.12.15, 0.12.16, 4.5.0, 4.6.0, 6.6.0, 6.7.0을 지원합니다. 현재 기본 버전은 4.6.0입니다.
@@ -69,7 +79,7 @@ Node.js v6와 함께 사용되는 추적 및 검사기 App Management 핸들러�
 
 이 릴리스에서는 [{{site.data.keyword.Bluemix_notm}}Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/)에 공지된 대로 strongpm App Management 핸들러에 대한 지원이 제거되었습니다.
 
-Node.js 6.x와 [개발 모드](/docs/manageapps/app_mng.html#devmode)를 사용할 때 알려진 문제가 있음에 주의하십시오. 개발 모드를 사용하려면 먼저 임시 해결책으로서 개발 모드를 사용 가능하게 설정한 후 애플리케이션을 다시 스테이징해야 합니다.
+Node.js 6.x와 [개발 모드](../common/app_mng.html#devmode)를 사용할 때 알려진 문제가 있음에 주의하십시오. 개발 모드를 사용하려면 먼저 임시 해결책으로서 개발 모드를 사용 가능하게 설정한 후 애플리케이션을 다시 스테이징해야 합니다.
 
 ## 2016년 7월 22일: Node.js 빌드팩 v3.6-20160715-0749 업데이트
 이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 및 6.2.2를 지원합니다. 현재 기본 버전은 4.4.7입니다.
@@ -159,10 +169,10 @@ IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8, v1.2.0.7(커뮤니티 버전 N
 이제, IBM Node.js 빌드팩 v3.0beta는 기본 런타임 Node.js v4.2.3과 함께 {{site.data.keyword.Bluemix_notm}}의 기본이 아닌 빌드팩으로 릴리스됩니다. 사용자 앱과 서비스가 계속해서 {{site.data.keyword.Bluemix_notm}}에서 작동되도록 하려면 이 베타 버전의 빌드팩을 사용하여 사용자 애플리케이션을 푸시하십시오. 30일 이후 v3가 기본 빌드팩이 됩니다.
 
 v3.0beta를 사용하여 사용자 애플리케이션을 푸시하려면 다음을 수행하십시오.
-* "-b" 옵션을 'cf push' 명령에서 사용하십시오.
+* "-b" 옵션을 `ibmcloud cf push` 명령에서 사용하십시오.
 
 ```
-        cf push -b sdk-for-nodejs-v3beta
+        ibmcloud cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -192,7 +202,7 @@ Node.js v2.6.1은 [StrongPM 앱 관리 핸들러](https://developer.ibm.com/blue
 ## 2015년 6월 15일: Node.js 빌드팩 v2.0-20150608-1503 업데이트
 
 이 릴리스에서는 Node.js 빌드팩이 최신 [CF 커뮤니티 Node.js 빌드팩](https://github.com/cloudfoundry/nodejs-buildpack)과 동기화되었습니다. 이 빌드팩은 커뮤니티의 몇 가지 새로운 기능과 함께 제공됩니다.
-또한 Node.js 빌드팩에서 App Management 기능을 개선하였으며 이로 인해 shell, node-inspector, {{site.data.keyword.Bluemix_notm}} Live Sync 등의 유틸리티를 사용할 수 있게 되었습니다. 세부사항은 [App Management](/docs/manageapps/app_mng.html)를 참조하십시오.
+또한 Node.js 빌드팩에서 App Management 기능을 개선하였으며 이로 인해 shell, node-inspector, {{site.data.keyword.Bluemix_notm}} Live Sync 등의 유틸리티를 사용할 수 있게 되었습니다. 세부사항은 [App Management](../common/app_mng.html)를 참조하십시오.
 
 ## 2015년 5월 5일: Node.js 빌드팩 v1.17-20150429-1033 업데이트
 
@@ -220,7 +230,7 @@ Node.js v2.6.1은 [StrongPM 앱 관리 핸들러](https://developer.ibm.com/blue
   * 데스크탑 동기화: (Windows) 데스크탑 트리를 클라우드 기반 프로젝트 작업공간과 동기화합니다.
   * 라이브 편집: {{site.data.keyword.Bluemix_notm}}에서 실행 중인 Node.js 애플리케이션을 변경하고 브라우저에서 즉시 테스트할 수 있습니다.
   * 디버그: 환경으로 쉘(shell)하여 디버그합니다! 노드 검사기 디버거를 사용하여 코드의 동적 편집, 중단점 삽입, 코드 스텝 스루, 런타임 다시 시작 등을 수행할 수 있습니다.
-  * 자세한 정보는 [App Management](/docs/manageapps/app_mng.html#Utilities)를 참조하십시오.
+  * 자세한 정보는 [App Management](../common/app_mng.html#Utilities)를 참조하십시오.
 * [Cloud Foundry의 Node.js 빌드팩](https://github.com/cloudfoundry/nodejs-buildpack)에서 최신 변경사항을 가져왔습니다. 이러한 변경은 커뮤니티에서 작성한 몇 가지 버그 수정 및 개선사항과 함께 제공됩니다.
 * 이제 Node.js 빌드팩은 [IBM SDK for Node.js v1.1.0.13](https://developer.ibm.com/node/sdk/)과 함께 제공됩니다.
 
@@ -247,9 +257,3 @@ Node.js v2.6.1은 [StrongPM 앱 관리 핸들러](https://developer.ibm.com/blue
 ## 2014년 7월 29일: Node.js 빌드팩 v1.1-20140717-1447 업데이트
 
 이제 이 Node.js 빌드팩에 IBM SDK for Node.js v1.1.0.5가 제공됩니다. 이 업데이트는 애플리케이션에 안정적인 최신 Node.js 런타임 v0.10.29를 지정하면 완전히 지원되는 IBM Node.js 런타임을 사용할 수 있다는 의미입니다. 자세한 정보는 [IBM Node.js SDK](https://developer.ibm.com/node/sdk/)에서 확인하십시오.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [node.js 런타임](index.html)

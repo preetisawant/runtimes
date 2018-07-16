@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -18,18 +18,18 @@ Von Liberty for Java unterstützte Umgebungsvariablen
 
 <table>
 <tr>
-<th align="left">Name</th>
+<th align="left">Umgebungsvariablenname</th>
 <th align="left">Beschreibung</th>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Zum Aktivieren von [App-Management-Dienstprogrammen](/docs/manageapps/app_mng.html).</td>
+<td>Zum Aktivieren von [App-Management-Dienstprogrammen](../common/app_mng.html).</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Zum Installieren von [App-Management-Dienstprogrammen](/docs/manageapps/app_mng.html).</td>
+<td>Zum Installieren von [App-Management-Dienstprogrammen](../common/app_mng.html).</td>
 </tr>
 
 <tr>
@@ -102,10 +102,60 @@ Von Liberty for Java unterstützte Umgebungsvariablen
 <td>Zum Inaktivieren des Service [auto-configuration](autoConfig.html#opting_out).</td>
 </tr>
 </table>
+{: caption="Tabelle 1. Verfügbare Umgebungsvariablen für Liberty for Java" caption-side="top"}
+
+## Inaktivierte Attribute im Liberty for Java-Buildpack
+
+Es gibt einige Attribute, die durch das Liberty-Buildpack automatisch inaktiviert werden und die Sie nicht überschreiben können. Die folgenden Umgebungsvariablen und Attribute werden inaktiviert.
+
+### Tabelle der inaktivierten Attribute
+
+<table>
+<tr>
+<th>Inaktiviertes Attribut</th>
+<th>Element</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="Tabelle 1. Von Liberty for Java inaktivierte Attribute" caption-side="top"}
 
 # Zugehörige Links
 {: #rellinks notoc}
 ## Allgemein
 {: #general notoc}
 * [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Übersicht über Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

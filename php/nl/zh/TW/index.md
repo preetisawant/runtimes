@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -25,7 +25,7 @@ php_buildpack 為 PHP 應用程式提供完整的運行環境。
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供 PHP 入門範本應用程式。PHP 入門範本應用程式是簡單的 PHP 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](/docs/cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供 PHP 入門範本應用程式。PHP 入門範本應用程式是簡單的 PHP 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../common/starter_app_usage.html)。
 
 ## 在應用程式的所有頁面上施行 HTTPS
 {: #enforce_https}
@@ -70,13 +70,3 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 * 7.1.7
 
 如果您的應用程式需要未列出的 PHP 版本，可以使用外部 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack.git)來部署該應用程式。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 指導教學及範例
-{: #samples notoc}
-* [Build and deploy a REST API on IBM Bluemix with PHP and MySQL](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
-* [Build and deploy a mobile-friendly calorie counter on IBM Bluemix with PHP, MySQL, AngularJS, and the Nutritionix API](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## 一般
-{: #general notoc}
-* [A Cloud Foundry Buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)

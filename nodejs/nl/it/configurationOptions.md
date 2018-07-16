@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-13"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -25,9 +25,9 @@ NPM fornisce una funzione per gli script che ti consente di eseguire gli script,
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} gestisce una directory di cache per ogni applicazione nodo che viene conservata tra i build. La cache memorizza le dipendenze risolte in modo che non vengano scaricate e installate ogni volta che l'applicazione viene distribuita.  Supponi, ad esempio, che myapp dipenda da **express**.  La prima volta che myapp viene distribuita, il modulo **express** viene scaricato.  Nelle successive distribuzioni di myapp, viene utilizzata l'istanza memorizzata in cache di **express**. Il comportamento predefinito è di inserire nella cache tutti i node_modules installati da NPM e i bower_components installati da bower.
 
-Utilizza la variabile NODE_MODULES_CACHE per determinare se il pacchetto di build Node utilizza o ignora la cache dai build precedenti. Il valore predefinito è true.  Per disabilitare la memorizzazione in cache, imposta NODE_MODULES_CACHE su false, ad esempio mediante la riga di comando cf:
+Utilizza la variabile NODE_MODULES_CACHE per determinare se il pacchetto di build Node utilizza o ignora la cache dai build precedenti. Il valore predefinito è true.  Per disabilitare la memorizzazione in cache, imposta NODE_MODULES_CACHE su false, ad esempio mediante la riga di comando {{site.data.keyword.Bluemix_notm}}:
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+    ibmcloud cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 

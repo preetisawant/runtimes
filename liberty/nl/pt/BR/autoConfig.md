@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -51,7 +51,8 @@ de ambiente `services_autoconfig_excludes`. Para obter mais informações, veja 
 
 Ao ligar a um serviço gerenciado por contêiner, o serviço pode requerer que os recursos do Liberty sejam configurados na sub-rotina featureManager no arquivo server.xml. O buildpack do  Liberty atualiza a sub-rotina featureManager e instala os binários de apoio necessários. Se o serviço precisar de jars do driver cliente, os jars serão transferidos por download para um local bem conhecido na instalação do Liberty.
 
-Veja a seção [Fazendo opt-out da configuração automática de serviço](#opting_out) para obter mais detalhes sobre os tipos de serviço de limite.
+Consulte a seção [Fazendo opt-out da configuração automática de serviço](#opting_out) para obter mais
+detalhes sobre os tipos de serviço de limite.
 
 ## Gerando ou atualizando sub-rotinas de configuração do server.xml
 {: #generating_or_updating_serverxml}
@@ -82,12 +83,12 @@ detalhes adicionais.
 
 Em alguns casos, talvez você não queira que o buildpack do Liberty configure automaticamente os serviços que foram ligados. Considere os cenários a seguir:
 
-* Meu aplicativo usa *dashDB*, mas desejo que o aplicativo gerencie diretamente a conexão com o banco de dados. O  aplicativo contém o jar do driver cliente necessário. 
-Eu não desejo que o buildpack do Liberty configure automaticamente o serviço *dashDB*.
+* Meu aplicativo usa *dashDB*, mas desejo que o aplicativo gerencie diretamente a conexão com o banco de dados. O  aplicativo contém o jar do driver cliente necessário. Eu não desejo que o buildpack do Liberty configure automaticamente o serviço *dashDB*.
 * Estou fornecendo um arquivo server.xml e forneci as sub-rotinas de configuração para a instância *cloudant*
 porque preciso de uma configuração de origem de dados não padrão. Eu não desejo que o buildpack do Liberty atualize meu arquivo server.xml, mas ainda preciso que o buildpack do Liberty assegure que o software de apoio apropriado esteja instalado.
 
-Para executar opt-out da configuração automática de serviço, use a variável de ambiente services_autoconfig_excludes. É possível incluir esta variável de ambiente em um manifest.yml ou configurá-la usando o cliente cf.
+Para executar opt-out da configuração automática de serviço, use a variável de ambiente services_autoconfig_excludes. É
+possível incluir essa variável de ambiente em um manifest.yml ou configurá-lo usando o cliente {{site.data.keyword.Bluemix_notm}}.
 
 É possível executar opt-out da configuração automática de serviços em uma base por tipo de serviço. É possível escolher
 fazer opt-out completamente (como no cenário *dashDB*) ou opt-out somente de atualizações de configuração do
@@ -112,8 +113,8 @@ Consulte o exemplo a seguir de gramática da sequência services_autoconfig_excl
 {: codeblock}
 
 **Importante**: O tipo de serviço que você especifica deve corresponder ao rótulo de serviços como ele aparece na variável de ambiente VCAP_SERVICES. O espaço em branco não é permitido.
-**Importante**: Nenhum espaço em branco é permitido em um ```<service_type_specification>```. 
-O único uso permitido de espaço em branco é separar múltiplas instâncias ```<service_type_specification>``` .
+**Importante**: nenhum espaço em branco é permitido em um `<service_type_specification>`. O
+único uso permitido de espaço em branco é para separar múltiplos `<service_type_specification>`  instâncias.
 
 Use a opção **todos** para fazer opt-out de todas as ações de configuração automática para um
 serviço, como no cenário *dashDB* acima. Use a opção **config** para fazer opt-out somente das
@@ -137,15 +138,15 @@ Aqui estão especificações de opt-out de amostra em um arquivo manifest.yml pa
 Aqui estão exemplos de como configurar a variável de ambiente services_autoconfig_excludes para o aplicativo myapp usando a interface de linha de comandos.
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
 Para localizar o *label* para um serviço em VCAP_SERVICES, emita um comando como o exemplo a seguir:
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -167,13 +168,12 @@ A saída inclui texto semelhante ao seguinte, em que é possível ver o campo **
 {: #override_service_config}
 
 Em alguns casos, talvez você queira substituir a configuração padrão de um serviço gerado pela configuração automática.
-É possível usar a variável de ambiente **LBP_SERVICE_CONFIG_xxxx** para substituir uma configuração de serviço. 
-Consulte as tabelas a seguir para obter os nomes completos de variáveis de ambiente e a sintaxe de exemplo para substituí-las. Por
+É possível usar a variável de ambiente **LBP_SERVICE_CONFIG_xxxx** para substituir uma configuração de serviço. Consulte as tabelas a seguir para obter os nomes completos de variáveis de ambiente e a sintaxe de exemplo para substituí-las.  Por
 exemplo, para substituir a versão padrão do serviço *elephantSQL* e configurá-la para a versão 8.3.4.+,
 emita um comando como:
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 
@@ -217,7 +217,7 @@ Esta tabela mostra o mapeamento de **service_type** para nomes de variável de a
 
 <tr>
 <td>elephantsql</td>
-<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 </tr>
 
 <tr>

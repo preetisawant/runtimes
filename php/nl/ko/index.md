@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -28,7 +28,7 @@ php_buildpack은 다음과 같은 조건에서 사용됩니다.
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}}는 PHP 스타터 애플리케이션을 제공합니다.  PHP 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 PHP 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 {{site.data.keyword.Bluemix}} 환경을 변경하고 변경사항을 푸시할 수
-있습니다.  스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](/docs/cfapps/starter_app_usage.html)을 참조하십시오.
+있습니다.  스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../common/starter_app_usage.html)을 참조하십시오.
 
 ## 애플리케이션의 모든 페이지에서 HTTPS 강제 실행
 {: #enforce_https}
@@ -76,13 +76,3 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 외부
 [PHP 빌드팩](https://github.com/cloudfoundry/php-buildpack.git)을
 사용하여 애플리케이션을 배치할 수 있습니다.
-
-# 관련 링크
-{: #rellinks notoc}
-## 튜토리얼 및 샘플
-{: #samples notoc}
-* [REST API 빌드 및 배치](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
-* [모바일 친화 칼로리 카운터 빌드 및 배치](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## 일반
-{: #general notoc}
-* [PHP에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/php-buildpack.git)

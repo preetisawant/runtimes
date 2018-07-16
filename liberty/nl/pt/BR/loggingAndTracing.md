@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -16,12 +16,12 @@ lastupdated: "2018-1-31"
 ## Arquivos de log
 {: #log_files}
 
-Os logs padrão do Liberty, tais como `messages.log` ou o diretório `ffdc`, estão disponíveis no {{site.data.keyword.Bluemix}} no diretório `logs` de cada instância do aplicativo. Esses logs podem ser acessados do console do {{site.data.keyword.Bluemix_notm}} ou por meio da CLI do Cloud Foundry. Por exemplo:
+Os logs padrão do Liberty, tais como `messages.log` ou o diretório `ffdc`, estão disponíveis no {{site.data.keyword.Bluemix}} no diretório `logs` de cada instância do aplicativo. Esses logs podem ser acessados do console do {{site.data.keyword.Bluemix_notm}} ou por meio da CLI do {{site.data.keyword.Bluemix_notm}}. Por exemplo:
 
 * Para acessar os logs recentes de um app, execute o comando a seguir:
 
   ```
-  cf logs --recent <appname>
+  ibmcloud cf logs --recent <appname>
   ```
   {: codeblock}
 
@@ -29,7 +29,7 @@ Os logs padrão do Liberty, tais como `messages.log` ou o diretório `ffdc`, est
 * Para ver o arquivo `messages.log` de um aplicativo, execute o comando a seguir:
 
   ```
-  cf ssh <appname> -c "cat logs/messages.log"
+  ibmcloud cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
@@ -45,8 +45,7 @@ A configuração de rastreio do Liberty pode ser ajustada para um aplicativo em 
 ### Mudando a configuração de rastreio por meio de SSH
 
 Ao enviar o aplicativo por push, o arquivo server.xml inclui as propriedades padrão
-**updateTrigger** configuradas para **pesquisadas** e **monitorInterval** configurado como 1 minuto. 
-O servidor Liberty é automaticamente configurado para verificar atualizações para o server.xml a cada minuto.
+**updateTrigger** configuradas para **pesquisadas** e **monitorInterval** configurado como 1 minuto. O servidor Liberty é automaticamente configurado para verificar atualizações para o server.xml a cada minuto.
 
 Consulte [Enviar por push aplicativos Liberty com server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) para opções para enviar por push os aplicativos Liberty com um sever.xml customizado
 
@@ -57,11 +56,12 @@ Siga estas etapas para mudar a configuração de rastreio:
 1. SSH para o seu app
 
   ```
- cf ssh <appname> [-i instance_index]
+ ibmcloud cf ssh < appname> [-i instance_index ]
   ```
   {: codeblock}
 
-2. Edite ```<logging traceSpecification="xxxx"/>``` no server.xml para configurar sua especificação desejada, por exemplo, usando *vi*:
+2. Editar  `<logging traceSpecification="xxxx"/>` no server.xml para configurar a sua especificação de
+rastreio desejada, por exemplo, usando *vi*:
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml
@@ -74,10 +74,11 @@ Consulte [Resolução de problemas do Liberty: criação de log e rastreio](http
 
 ### Acionamento de dumps via SSH
 
-Use o comando a seguir para acionar um dump de encadeamento e do heap por meio da CLI do CF usando o recurso SSH:
+Use o comando abaixo para acionar um encadeamento e um dump do heap por meio da CLI do
+{{site.data.keyword.Bluemix_notm}} usando o recurso SSH:
 
   ```
- cf ssh <appname> -c "pkill -3 java"
+ ibmcloud cf ssh <appname> -c "pkill -3 java"
   ```
   {: codeblock}
 
@@ -86,19 +87,20 @@ Veja a documentação abaixo para obter detalhes sobre o download dos arquivos d
 ## Fazer download de arquivos de dump
 {: #download_dumps}
 
-Por padrão, os vários arquivos de dump são colocados no diretório `dumps` do contêiner de aplicativo. Use a CLI do Cloud Foundry `cf ssh` para visualizar e fazer download dos arquivos dump.
+Por padrão, os vários arquivos de dump são colocados no diretório `dumps` do contêiner de aplicativo. Use o
+`ibmcloud cf ssh` da CLI do {{site.data.keyword.Bluemix_notm}} para visualizar e fazer download dos arquivos dump.
 
 * Para ver os dumps gerados, execute o comando a seguir:
 
   ```
-  $ cf ssh <appname> -c "ls -l dumps"
+  ibmcloud cf ssh <appname> -c "ls -l dumps"
   ```
   {: codeblock}
 
 * Para fazer download de um arquivo de dump, execute o comando a seguir:
 
   ```
-  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ibmcloud cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

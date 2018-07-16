@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-27"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -71,7 +71,7 @@ Compose 服務可以是由容器管理或由應用程式管理。依預設，Lib
 * 我的應用程式使用 *dashDB*，但我想要應用程式直接管理資料庫連線。應用程式中包含必要的用戶端驅動程式 jar。我不想讓 Liberty 建置套件自動配置 *dashDB* 服務。
 * 我有提供 server.xml 檔案，而且已經為 *cloudant* 實例提供配置段落，因為我需要非標準的資料來源配置。我不想要 Liberty 建置套件更新我的 server.xml 檔案，但是我仍然需要 Liberty 建置套件確定已經安裝適當的支援軟體。
 
-若要拒絕自動服務配置，請使用 services_autoconfig_excludes 環境變數。您可以在 manifest.yml 中包含此環境變數，或使用 cf 用戶端設定它。
+若要拒絕自動服務配置，請使用 services_autoconfig_excludes 環境變數。您可以在 manifest.yml 中包括此環境變數，或使用 {{site.data.keyword.Bluemix_notm}} 用戶端設定它。
 
 您可以針對每個服務類型來拒絕服務的自動配置。您可以選擇完全拒絕（例如在 *dashDB* 情境中）或只拒絕 server.xml 檔案配置更新（例如在 *cloudant* 情境中）。您為 services_autoconfig_excludes 環境變數指定的值是字串，如下所示。
 
@@ -113,15 +113,15 @@ Compose 服務可以是由容器管理或由應用程式管理。依預設，Lib
 以下是如何使用指令行介面來為 myapp 應用程式設定 services_autoconfig_excludes 環境變數的範例。
 
 ```
-    cf set-env myapp services_autoconfig_excludes cloudant=config
-    cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
+    ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
+    ibmcloud cf set-env myapp services_autoconfig_excludes "cloudant=config dashDB=all"
 ```
 {: codeblock}
 
 若要在 VCAP_SERVICES 中尋找服務的 *label*，請發出如下範例的指令：
 
 ```
-    cf env myapp
+    ibmcloud cf env myapp
 ```
 {: codeblock}
 
@@ -145,7 +145,7 @@ Compose 服務可以是由容器管理或由應用程式管理。依預設，Lib
 在某些情況下，您可能要置換自動配置所產生之服務的預設配置。您可以使用 **LBP_SERVICE_CONFIG_xxxx** 環境變數來置換服務配置。如需完整環境變數名稱以及用來置換它們的範例語法，請參閱下表。例如，若要置換 *elephantSQL* 服務的預設版本，並將它設為 8.3.4.+ 版，請發出與下面類似的指令：
 
 ```
-    cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
+    ibmcloud cf set-env myapp LBP_SERVICE_CONFIG_POSTGRESQL "{driver: { version: 8.3.4.+ }}"
 ```
 {: codeblock}
 
@@ -189,7 +189,7 @@ Compose 服務可以是由容器管理或由應用程式管理。依預設，Lib
 
 <tr>
 <td>elephantsql</td>
-<td>LBP_SERVICE_CONFIG_COMPOSE_POSTGRESQL</td>
+<td>LBP_SERVICE_CONFIG_POSTGRESQL</td>
 </tr>
 
 <tr>

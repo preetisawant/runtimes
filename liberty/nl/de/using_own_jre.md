@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -25,12 +25,12 @@ Sie müssen die JRE-Datei auf einem Web-Server hosten, von dem das Liberty-Build
 Führen Sie die Schritte aus, die im Folgenden für das Hosten der JRE-Datei und der Datei `index.yml` angegeben sind:
   1. Fordern Sie die JRE an. Dabei muss es sich um eine JRE-Version für ein UNIX-64-Bit-Betriebssystem handeln, die als eine `tar.gz`-Datei vorliegt.
   2. Hosten Sie die JRE-Datei an einer Position, von der das Liberty-Buildpack sie herunterladen kann.
-  3. Stellen Sie eine `index.yml`-Datei an der Hostingposition bereit. Die Datei `index.yml` muss einen Eintrag enthalten, der eine Versions-ID der JRE umfasst, gefolgt von einem Doppelpunkt und der vollständigen URL der JRE-Dateiposition.
+  3. Stellen Sie eine Datei `index.yml` an der Hostingposition bereit. Die Datei `index.yml` muss einen Eintrag enthalten, der eine Versions-ID der JRE umfasst, gefolgt von einem Doppelpunkt und der vollständigen URL der JRE-Dateiposition.
     * Definieren Sie die JRE-Version in der Datei `index.yml`.
 
     ```
     ---
-   jre_version: https://hostingLocation/jreName.tar.gz
+    jre_version: https://hostingLocation/jreName.tar.gz
     ```
     {: codeblock}
 
@@ -38,14 +38,14 @@ Führen Sie die Schritte aus, die im Folgenden für das Hosten der JRE-Datei und
 
     ```
     ---
-       1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
+    1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
     ```
     {: codeblock}
 
 ## Die App konfigurieren
 {: #configure_app}
 
-Sie müssen zwei Umgebungsvariablen in der Liberty-Anwendung festlegen, um das Buildpack zur Verwendung einer alternativen JRE zu konfigurieren. Legen Sie die Umgebungsvariable **JBP_CONFIG_OPENJDK** zur Angabe der Position der Datei `index.yml` fest und die Umgebungsvariable **JVM** für *openjdk*. Weitere Informationen zum Format der Zeichenfolge 'version-value' finden Sie in der Cloud Foundry-Dokumentation unter [Version Syntax and Ordering and Wildcards ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/util-repositories.md){: new_window}.
+Sie müssen zwei Umgebungsvariablen in der Liberty-Anwendung festlegen, um das Buildpack zur Verwendung einer alternativen JRE zu konfigurieren. Legen Sie die Umgebungsvariable **JBP_CONFIG_OPENJDK** zur Angabe der Position der Datei `index.yml` fest und die Umgebungsvariable **JVM** für *openjdk*. Weitere Informationen zum Format der Zeichenfolge 'version-value' finden Sie in der Cloud Foundry-Dokumentation unter [Version Syntax and Ordering and Wildcards ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/util-repositories.md){: new_window}.
 
 Der Wert für die Variable **JBP_CONFIG_OPENJDK** ist die Position der Datei `index.yml` und die JRE-Version, die aus der Datei index.yml ausgewählt wird.
 
@@ -54,9 +54,9 @@ Der Wert für die Variable **JBP_CONFIG_OPENJDK** ist die Position der Datei `in
 ```
 {: codeblock}
 
-Setzen Sie den Befehl `cf se myAPP` ab, um die Variable **JBP_CONFIG_OPENJDK** festzulegen. Beispiel:
+Setzen Sie den Befehl `ibmcloud cf se myAPP` ab, um die Variable **JBP_CONFIG_OPENJDK** festzulegen. Beispiel:
 ```
-$ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
+ibmcloud cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
 ```
 {: codeblock}
 
@@ -64,11 +64,11 @@ Die URL *repository_root* enthält nicht `index.yml` in der URL. Die URL *reposi
 
 Setzen Sie zum Festlegen der JVM-Umgebungsvariablen den folgenden Befehl ab:
 ```
-$ cf se myApp JVM 'openjdk'
+ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 
-**Hinweis**: Führen Sie nach dem Festlegen der Umgebungsvariablen ein erneutes Staging Ihrer Anwendung aus, damit die Änderungen wirksam werden.
+**Hinweis:** Führen Sie nach dem Festlegen der Umgebungsvariablen ein erneutes Staging Ihrer Anwendung aus, damit die Änderungen wirksam werden.
 
 ## Bestätigen
 {: #confirmation}

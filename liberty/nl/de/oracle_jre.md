@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -49,7 +49,7 @@ Der Wert der Variable JBP_CONFIG_OPENJDK ist
 
 Um dies festzulegen, können Sie einen Befehl wie den folgenden ausgeben:
 ```
-   $ cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
+   ibmcloud cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
 ```
 {: codeblock}
 
@@ -57,7 +57,7 @@ Beachten Sie, dass die URL *repository_root* die Datei `index.yml` nicht einbezi
 
 Um die JVM-Umgebungsvariable festzulegen, können Sie einen ähnlichen Befehl wie diesen ausgeben:
 ```
-   $ cf se myApp JVM 'openjdk'
+   ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

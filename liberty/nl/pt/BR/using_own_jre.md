@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -30,7 +30,7 @@ Conclua as etapas a seguir para hospedar o JRE e o arquivo `index.yml`:
 
     ```
     ---
-   jre_version: https://hostingLocation/jreName.tar.gz
+    jre_version: https://hostingLocation/jreName.tar.gz
     ```
     {: codeblock}
 
@@ -38,7 +38,7 @@ Conclua as etapas a seguir para hospedar o JRE e o arquivo `index.yml`:
 
     ```
     ---
-       1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
+    1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
     ```
     {: codeblock}
 
@@ -54,9 +54,9 @@ O valor para a variável **JBP_CONFIG_OPENJDK** é o local do arquivo `index.yml
 ```
 {: codeblock}
 
-Emita o comando `cf se myAPP` para configurar a variável **JBP_CONFIG_OPENJDK**, por exemplo:
+Emita o comando `ibmcloud cf se myAPP` para configurar a variável **JBP_CONFIG_OPENJDK**, por exemplo:
 ```
-$ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
+ibmcloud cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
 ```
 {: codeblock}
 
@@ -64,7 +64,7 @@ A URL *repository_root* não inclui `index.yml` na URL. A URL *repository_root* 
 
 Para configurar a variável de ambiente JVM, emita o comando a seguir:
 ```
-$ cf se myApp JVM 'openjdk'
+ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

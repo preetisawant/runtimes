@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -38,7 +38,7 @@ JRE および `index.yml` ファイルをホストするには、以下の手順
 
     ```
     ---
-       1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
+    1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
     ```
     {: codeblock}
 
@@ -54,9 +54,9 @@ JRE および `index.yml` ファイルをホストするには、以下の手順
 ```
 {: codeblock}
 
-`cf se myAPP` コマンドを発行して、**JBP_CONFIG_OPENJDK** 変数を設定します。例えば、次のように指定します。
+`ibmcloud cf se myAPP` コマンドを発行して、**JBP_CONFIG_OPENJDK** 変数を設定します。例えば、次のように指定します。
 ```
-$ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
+ibmcloud cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
 ```
 {: codeblock}
 
@@ -64,7 +64,7 @@ $ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.blu
 
 JVM 環境変数を設定するには、次のコマンドを発行します。
 ```
-$ cf se myApp JVM 'openjdk'
+ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

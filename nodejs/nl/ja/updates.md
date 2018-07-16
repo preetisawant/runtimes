@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -13,15 +13,26 @@ lastupdated: "2018-02-14"
 {: #latest_updates}
 
 sdk-for-nodejs ビルドパックの最新更新のリスト。
+## 2018 年 6 月 1 日: 更新された Node.js ビルドパック v3.20.2
+SDK for Node.js ビルドパック v3.20.2 では、現行の Node.js ランタイムに対する Dynatrace Managed PaaS 統合が追加されます。『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
 
-## 2018 年 2 月 6 日: 更新された Nodejs ビルドパック v3.18
-SDK for Node.js ビルドパック v3.18 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.12.2、6.12.3、8.9.3、および 8.9.4 が提供されます。デフォルトは最新の 6.x です。したがって、現在は 6.12.3 です。
+## 2018 年 5 月 17 日: 更新された Node.js ビルドパック v3.20.1
+SDK for Node.js ビルドパック v3.20.1 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が修正されます。『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
 
-## 2018 年 1 月 8 日: 更新された Nodejs ビルドパック v3.17
-SDK for Node.js ビルドパック v3.17 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.12.0、6.12.2、8.9.0、および 8.9.3 が提供されます。デフォルトは最新の 6.x です。したがって、現在は 6.12.2 です。
+## 2018 年 4 月 9 日: 更新された Node.js ビルドパック v3.20
+SDK for Node.js ビルドパック v3.20 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が追加されます。『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
+
+## 2018 年 3 月 16 日: 更新された Node.js ビルドパック v3.19
+SDK for Node.js ビルドパック v3.19 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.12.3、6.13.0、8.9.3、および 8.9.4 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.13.0 です。
+
+## 2018 年 2 月 6 日: 更新された Node.js ビルドパック v3.18
+SDK for Node.js ビルドパック v3.18 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.12.2、6.12.3、8.9.3、および 8.9.4 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.12.3 です。
+
+## 2018 年 1 月 8 日: 更新された Node.js ビルドパック v3.17
+SDK for Node.js ビルドパック v3.17 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.12.0、6.12.2、8.9.0、および 8.9.3 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.12.2 です。
 
 ## 2017 年 12 月 11 日: 更新された Node.js ビルドパック v3.16.1
-SDK for Node.js ビルドパック v3.16.1 では、IBM SDK for Node.js バージョン v4.8.4、v4.8.5、v6.11.4、v6.12.0、v8.6.0、v8.9.0 が提供されます。デフォルトは最新の 6.x です。従って、現在は 6.12.0 です。 
+SDK for Node.js ビルドパック v3.16.1 では、IBM SDK for Node.js バージョン v4.8.4、v4.8.5、v6.11.4、v6.12.0、v8.6.0、v8.9.0 が提供されます。 デフォルトは最新の 6.x です。従って、現在は 6.12.0 です。
 これは、「アドバイザリー ID: 10237 製品レコード ID: 104487 タイトル: Node.js zlib DOS セキュリティーの脆弱性、2017 年 10 月」(CVE-2017-14919) の PSIRT を修正します。 8.6.0.0 以前、6.10.2.0 から 6.11.4.0、および 4.8.2.0 から 4.8.4.0 に影響を与えるセキュリティーの脆弱性に対する修正を入手するには、v3.16.1 にアップグレードすることをお勧めします。
 
 ## 2017 年 11 月 1 日: 更新された Node.js ビルドパック v3.15
@@ -46,8 +57,7 @@ SDK for Node.js ビルドパック v3.12 では、IBM SDK for Node.js バージ�
 新規ランタイムに加えて、このリリースには、devconsole UI を使用してシェル・アプリケーション管理ハンドラーを有効化したときに起こるバグの修正も含まれています。 このビルドパックでは、Monitoring and Analytics サービスに対する自動構成の処理も変更されました。 無料プランを使用するアプリケーションにはログ機能が追加されなくなり、この機能は logmet で置き換えられます。
 
 ## 2017 年 1 月 20 日: 更新された Node.js ビルドパック v3.10
-このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.47、0.10.48、0.12.17、0.12.18、4.7.0、4.7.2、6.9.2、および 6.9.4 をサポートします。 現在のデフォルトは 4.7.2 です。
-
+このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.47、0.10.48、0.12.17、0.12.18、4.7.0、4.7.2、6.9.2、および 6.9.4 をサポートします。 現在のデフォルトは 4.7.2 です。  このリリースは、[Cloud Foundry Node.js ビルドパック v1.5.24](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24) とも同期しています。
 アプリケーションの開始のために必ずしも「npm start」が呼び出されるとは限らないというバグの修正が含まれています。
 
 ## 2016 年 11 月 17 日: 更新された Node.js ビルドパック v3.9
@@ -55,7 +65,7 @@ SDK for Node.js ビルドパック v3.12 では、IBM SDK for Node.js バージ�
 
 Node.js v6 は 2016 年 10 月 18 日に LTS ステータスにプロモートされ、まもなくビルドパックのデフォルトのランタイムになることに注意してください。 Node.js v0.10 の存続期間は 2016 年 10 月 31 日に終わりに達したため、まもなくビルドパックに含まれなくなります。 詳しくは、[Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) を参照してください。
 
-Node.js v6 と組み合わせて使用されたときにアプリケーション管理ハンドラーのトレースおよびインスペクターに影響するバグがこのリリースで対処されました。 Node.js v6 がインスペクター機能を統合したことをインスペクター・ハンドラーがどのように変更するのかについて詳しくは、『[Liberty および Node.js アプリケーションの管理](/docs/manageapps/app_mng.html#inspector)』を参照してください。
+Node.js v6 と組み合わせて使用されたときにアプリケーション管理ハンドラーのトレースおよびインスペクターに影響するバグがこのリリースで対処されました。 Node.js v6 がインスペクター機能を統合したことをインスペクター・ハンドラーがどのように変更するのかについて詳しくは、『[Liberty および Node.js アプリケーションの管理](../common/app_mng.html#inspector)』を参照してください。
 
 ## 2016 年 10 月 7 日: Node.js ビルドパック v3.8-20161006-1211 の更新
 このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0、および 6.7.0 をサポートします。 現在のデフォルトは 4.6.0 です。
@@ -69,7 +79,7 @@ Node.js v6 と組み合わせて使用されたときにアプリケーション
 
 このリリースは、[{{site.data.keyword.Bluemix_notm}}『Node.js Buildpack v3.3 – FIPS mode and more』](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/)で発表されたように、strongpm アプリケーション管理ハンドラーのサポートを削除します。
 
-Node.js 6.x および[開発モード](/docs/manageapps/app_mng.html#devmode)の使用時には既知の問題があることに注意してください。 回避策として、開発モードを有効にした後で、使用を開始する前にアプリケーションを再ステージする必要があります。
+Node.js 6.x および[開発モード](../common/app_mng.html#devmode)の使用時には既知の問題があることに注意してください。 回避策として、開発モードを有効にした後で、使用を開始する前にアプリケーションを再ステージする必要があります。
 
 ## 2016 年 7 月 22 日: 更新された Node.js ビルドパック v3.6-20160715-0749
 このリリースのビルドパックは、IBM SDK for Node.js ランタイムのバージョン 0.10.45、0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1、および 6.2.2 をサポートします。 現在のデフォルトは 4.4.7 です。
@@ -158,10 +168,10 @@ IBM SDK for Node.js v4.2.3.0、v4.2.2.0、v1.2.0.8、および v1.2.0.7 のキ�
 IBM Node.js ビルドパック v3.0beta が、{{site.data.keyword.Bluemix_notm}} の非デフォルト・ビルドパックとしてリリースされました。このビルドパックでは、Node.js v4.2.3 をデフォルト・ランタイムとしています。 アプリケーションおよびサービスが引き続き {{site.data.keyword.Bluemix_notm}} 上で確実に機能するように、ベータ版のビルドパックを使用してアプリケーションをプッシュしてください。 30 日以上が経過すると、v3 がデフォルト・ビルドパックになります。
 
 v3.0beta でアプリケーションをプッシュするには、以下を行います。
-* 「cf push」コマンドで「-b」オプションを使用します。
+* `ibmcloud cf push` コマンドで「-b」オプションを使用します。
 
 ```
-        cf push -b sdk-for-nodejs-v3beta
+        ibmcloud cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -191,7 +201,7 @@ Node.js v2.6.1 では、[StrongPM アプリケーション管理ハンドラー]
 ## 2015 年 6 月 15 日: 更新された Node.js ビルドパック v2.0-20150608-1503
 
 このリリースでは、Node.js ビルドパックが、コミュニティーからの数多くの新しいフィーチャーが付属する最新の [CF コミュニティー Node.js ビルドパック](https://github.com/cloudfoundry/nodejs-buildpack)と同期化されています。
-さらに、Node.js ビルドパックでアプリケーション管理フィーチャーが改訂されました。これにより、shell、node-inspector、{{site.data.keyword.Bluemix_notm}} Live Sync などのユーティリティーが使用可能になります。 詳しくは、[『アプリケーション管理』](/docs/manageapps/app_mng.html)を参照してください。
+さらに、Node.js ビルドパックでアプリケーション管理フィーチャーが改訂されました。これにより、shell、node-inspector、{{site.data.keyword.Bluemix_notm}} Live Sync などのユーティリティーが使用可能になります。 詳しくは、[『アプリケーション管理』](../common/app_mng.html)を参照してください。
 
 ## 2015 年 5 月 5 日: 更新された Node.js ビルドパック v1.17-20150429-1033
 
@@ -219,7 +229,7 @@ Node.js v2.6.1 では、[StrongPM アプリケーション管理ハンドラー]
   * デスクトップ同期: 任意の (Windows) デスクトップ・ツリーをクラウド・ベースのプロジェクト・ワークスペースと同期化します。
   * ライブ編集: ご使用のブラウザーで、{{site.data.keyword.Bluemix_notm}} で実行される Node.js アプリケーションを変更して、直ちにテストできます。
   * デバッグ: 環境を準備してデバッグを行います。 Node Inspector デバッガーを使用して、コードの動的編集、ブレークポイントの挿入、コードのステップスルー、ランタイムの再始動などを行うことができます。
-  * 詳しくは、[『アプリケーション管理』](/docs/manageapps/app_mng.html#Utilities)を参照してください。
+  * 詳しくは、[『アプリケーション管理』](../common/app_mng.html#Utilities)を参照してください。
 * 最新の変更が [Cloud Foundry の Node.js ビルドパック](https://github.com/cloudfoundry/nodejs-buildpack)から導入されました。 この変更には、コミュニティーによって行われたいくつかのバグ修正および改善が付随しています。
 * この Node.js ビルドパックには [IBM SDK for Node.js v1.1.0.13](https://developer.ibm.com/node/sdk/) が付属するようになりました。
 
@@ -249,9 +259,3 @@ Node.js v2.6.1 では、[StrongPM アプリケーション管理ハンドラー]
 ## 2014 年 7 月 29 日: 更新された Node.js ビルドパック v1.1-20140717-1447
 
 この Node.js ビルドパックには IBM SDK for Node.js v1.1.0.5 が付属するようになりました。 この更新により、アプリケーション v0.10.29 に最新の安定した Node.js ランタイムを指定すると、完全にサポートされる IBM Node.js ランタイムが提供されるようになります。 詳細については [IBM Node.js SDK](https://developer.ibm.com/node/sdk/) を参照してください。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [node.js ランタイム](index.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-02-14"
 # {{site.data.keyword.cloud_notm}} でサポートされる Liberty フィーチャー
 {: #liberty_features}
 
-Liberty for Java インスタント・ランタイムには、Liberty フィーチャーのサブセットが含まれています。Liberty が提供するフィーチャーの中には、クラウド環境で適用されないために Liberty for Java インスタント・ランタイムでは使用できないものがあります。
+Liberty for Java インスタント・ランタイムには、Liberty フィーチャーのサブセットが含まれています。  Liberty が提供するフィーチャーの中には、クラウド環境で適用されないために Liberty for Java インスタント・ランタイムでは使用できないものがあります。
 
 {{site.data.keyword.Bluemix_notm}} に固有の以下のフィーチャーが含まれています。
 * appstate-2.0
@@ -32,7 +32,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 
 ## Liberty フィーチャーの索引
 {: #libertyfeat_index}
-以下の索引を使用して、フィーチャー・リストの該当セクションに進めます。あるいは、[Liberty フィーチャー・リスト](#libertyfeat_list)に目を通すことも可能です。
+以下の索引を使用して、フィーチャー・リストの該当セクションに進めます。あるいは、[Liberty for Java フィーチャー・リスト](#libertyfeat_list)に目を通すことも可能です。
 
 ### A-E
 * [A](#libertyfeat_A)
@@ -42,6 +42,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 
 ### F-J
 * [F](#libertyfeat_F)
+* [H](#libertyfeat_H)
 * [J](#libertyfeat_J)
 
 ### K-O
@@ -88,6 +89,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
+* constrainedDelegation-1.0
 * couchdb-1.0
 
 ### E
@@ -103,6 +105,11 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 {: #libertyfeat_f}
 
 * federatedRegistry-1.0
+
+### H
+{: #libertyfeat_h}
+
+* httpWhiteboard-1.0
 
 ### J
 {: #libertyfeat_J}
@@ -120,6 +127,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * jcaInboundSecurity-1.0
 * jdbc-4.0
 * jdbc-4.1
+* jdbc-4.2
 * jms-1.1
 * jms-2.0
 * jmsMdb-3.1
@@ -129,6 +137,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * jpa-2.1
 * jsf-2.0
 * jsf-2.2
+* jsfContainer-2.2
 * json-1.0
 * jsonp-1.0
 * jsp-2.2
@@ -145,24 +154,32 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 ### M
 {: #libertyfeat_M}
 * managedBeans-1.0
-* managedBeans-1.0
 * mdb-3.1
 * mdb-3.2
 * mediaServerControl-1.0     
-* microprofile-1.0
-* microprofile-1.2
+* microProfile-1.0
+* microProfile-1.2
+* microProfile-1.3
 * mongodb-2.0
 * monitor-1.0
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
 * oauth-2.0
 * openapi-3.0
+* openapi-3.1
 * openid-2.0
 * openidConnectClient-1.0
 * openidConnectServer-1.0
+* opentracing-1.0
 * osgi.jpa-1.0
 * osgiAppIntegration-1.0
+* osgiBundle-1.0
 * osgiConsole-1.0
 
 ### P
@@ -184,7 +201,6 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * servlet-3.0
 * servlet-3.1
 * sessionDatabase-1.0
-* sipServlet-1.1
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0
@@ -218,4 +234,4 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 ## 一般
 {: #general notoc}
 * [Liberty ランタイム](index.html)
-* [Liberty プロファイル概要](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Liberty の概要](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -18,23 +18,23 @@ Variables de entorno admitidas por Liberty para Java.
 
 <table>
 <tr>
-<th align="left">Nombre</th>
+<th align="left">Nombre de la variable de entorno</th>
 <th align="left">Descripción</th>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Habilitar [Utilidades de App Management](/docs/manageapps/app_mng.html)</td>
+<td>Habilitar [Utilidades de App Management](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Instalar [Utilidades de App Management](/docs/manageapps/app_mng.html)</td>
+<td>Instalar [Utilidades de App Management](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>Habilite [funciones beta de Liberty](usingBetaFeatures.html)</td>
+<td>Habilitar [funciones beta de Liberty/](usingBetaFeatures.html)</td>
 </tr>
 
 <tr>
@@ -102,10 +102,60 @@ Variables de entorno admitidas por Liberty para Java.
 <td>Inhabilitar el servicio de [autoconfiguración.](autoConfig.html#opting_out)</td>
 </tr>
 </table>
+{: caption="Tabla 1. Variables de entorno disponibles para Liberty for Java" caption-side="top"}
+
+## Atributos inhabilitados en el paquete de compilación de Liberty for Java
+
+Existen algunos atributos inhabilitados automáticamente por el paquete de compilación de Liberty, que no puede alterar temporalmente. Las siguientes variables de entorno y atributos están inhabilitados.
+
+### Tabla de atributos inhabilitada
+
+<table>
+<tr>
+<th>Atributo inhabilitado </th>
+<th>Elemento</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="Tabla 1. Atributos inhabilitados por Liberty for Java" caption-side="top"}
 
 # rellinks
 {: #rellinks notoc}
 ## general
 {: #general notoc}
 * [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Visión general de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

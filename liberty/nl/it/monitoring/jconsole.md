@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2017-11-10"
 
 ---
 
@@ -48,7 +48,7 @@ a una singola istanza. Il tuo file server.xml deve contenere le funzioni `monito
 
 La JConsole è inclusa con l'installazione Java.  Per avviare l'applicazione JConsole vai in &lt;java-home&gt;/bin ed esegui il seguente comando:
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+    jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 

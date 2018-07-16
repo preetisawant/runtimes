@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 I progetti basati su MSBuild vengono ora pubblicati utilizzando il comando `dotnet publish` durante la fase di preparazione.  Per impostazione predefinita, il pacchetto di build pubblicherà la tua applicazione nella configurazione `Debug`.
 Per pubblicare la tua applicazione nella configurazione `Release`, imposta la variabile di ambiente `PUBLISH_RELEASE_CONFIG` su `true`.
 
-Puoi farlo con la CLI CloudFoundry con il seguente comando:
+Puoi eseguire tale operazione con la CLI {{site.data.keyword.Bluemix_notm}} con il seguente comando:
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 In alternativa, puoi impostare la variabile nel file manifest.yml della tua applicazione:

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-27"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -18,15 +18,12 @@ lastupdated: "2017-10-27"
 * Le pack de construction **sdk-for-nodejs** créé par {{site.data.keyword.IBM_notm}} est le pack de construction par défaut utilisé pour les applications Node.js dans {{site.data.keyword.Bluemix_notm}}.
 * **nodejs_buildpack** est un pack de construction de communauté fourni par la communauté Cloud Foundry.
 
-Le pack de construction **sdk-for-nodejs** a
-priorité sur le pack de construction **nodejs_buildpack** dans {{site.data.keyword.Bluemix_notm}}. Si vous
-voulez utiliser le pack de construction **nodejs_buildpack** avec votre application au lieu du pack de construction **sdk-for-nodejs**,
-vous devez spécifier votre pack de construction, par exemple en utilisant l'option `-b` avec la commande **cf push**.
+Le pack de construction **sdk-for-nodejs** a priorité sur le pack de construction **nodejs_buildpack** dans {{site.data.keyword.Bluemix_notm}}. Si vous voulez utiliser le pack de construction **nodejs_buildpack** avec votre application au lieu du pack de construction **sdk-for-nodejs**, vous devez spécifier votre pack de construction, par exemple en utilisant l'option `-b` avec la commande `ibmcloud cf push`.
 
-Généralement, le pack de construction **sdk-for-nodejs** en cours et une version antérieure sont disponibles.  Pour voir l'ensemble des packs de construction disponibles, utilisez la commande**cf buildpacks**.  Par exemple :
+Généralement, le pack de construction **sdk-for-nodejs** en cours et une version antérieure sont disponibles.  Pour voir l'ensemble des packs de construction disponibles, utilisez la commande`ibmcloud cf buildpacks`.  Par exemple :
 
 ```
-   cf buildpacks
+   ibmcloud cf buildpacks
    Getting buildpacks...
 
    buildpack                                 position   enabled   locked   filename   

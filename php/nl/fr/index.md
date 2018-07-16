@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -25,7 +25,7 @@ Le pack php_buildpack est utilisé dans les conditions suivantes :
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} propose une application de démarrage PHP.  L'application de démarrage PHP est une appli PHP simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} propose une application de démarrage PHP.  L'application de démarrage PHP est une appli PHP simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Imposer l'utilisation de HTTPS sur toutes les pages dans votre application
 {: #enforce_https}
@@ -67,16 +67,4 @@ Les versions de PHP suivantes sont disponibles dans le [pack de construction PHP
 * 7.1.6
 * 7.1.7
 
-Si votre application requiert une version de PHP qui n'est pas répertoriée, vous pouvez
-utiliser le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack.git) externe pour
-la déployer.
-
-# rellinks
-{: #rellinks notoc}
-## Tutoriels et exemples
-{: #samples notoc}
-* [Build and deploy a REST API](http://www.ibm.com/developerworks/library/wa-deployrest-app/)
-* [Build and deploy a mobile-friendly calorie counter ](http://www.ibm.com/developerworks/library/mo-bluemix-php-nutritionix-angularjs/)
-## general
-{: #general notoc}
-* [Cloud Foundry buildpack for PHP](https://github.com/cloudfoundry/php-buildpack.git)
+Si votre application requiert une version de PHP qui n'est pas répertoriée, vous pouvez utiliser le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack.git) externe pour la déployer.

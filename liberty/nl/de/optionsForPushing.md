@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -28,11 +28,11 @@ Wichtig: Wenn Sie eine Anwendung mit dem Liberty-Buildpack bereitstellen, müsse
 
 Eigenständige Anwendungen, wie z. B. die in WAR- oder EAR-Dateien enthaltenen Anwendungen, können in {{site.data.keyword.Bluemix_notm}} für Liberty implementiert werden.
 
-Zur Implementierung einer eigenständigen Anwendung müssen Sie den Befehl 'cf push' mit dem Parameter '-p' ausführen, der auf Ihre WAR- oder EAR-Datei verweist.
+Zur Implementierung einer eigenständigen Anwendung müssen Sie den Befehl `ibmcloud cf push` mit dem Parameter '-p' ausführen, der auf Ihre WAR- oder EAR-Datei verweist.
 Beispiel:
 
 ```
-    $ cf push <yourappname> -p myapp.war
+    ibmcloud cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -60,11 +60,11 @@ Diese Features entsprechen den Java EE 7 Web Profile-Features. Sie können eine 
 'jsp-2.3' und 'websocket-1.1' zu aktivieren, führen Sie mit dem folgenden Befehl ein erneutes Staging für die Anwendung aus:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
-Hinweis: Die besten Ergebnisse erzielen Sie, wenn Sie die Liberty-Features mit der Umgebungsvariablen JBP_CONFIG_LIBERTY festlegen oder Ihre Anwendung als [Serververzeichnis](optionsForPushing.html#server_directory) oder [paketierten Server](optionsForPushing.html#packaged_server) mit einer angepassten server.xml-Datei bereitstellen. Indem Sie diese Umgebungsvariable festlegen, stellen Sie sicher, dass Ihre Anwendung nur das Feature verwendet, das auch
+Hinweis: Die besten Ergebnisse erzielen Sie, wenn Sie die Liberty-Features mit der Umgebungsvariablen JBP_CONFIG_LIBERTY festlegen oder Ihre Anwendung als [Serververzeichnis](optionsForPushing.html#server_directory) oder [paketierten Server](optionsForPushing.html#packaged_server) mit einer angepassten Datei 'server.xml' bereitstellen. Indem Sie diese Umgebungsvariable festlegen, stellen Sie sicher, dass Ihre Anwendung nur das Feature verwendet, das auch
 benötigt wird, und dass sie nicht von den Änderungen am Liberty-Standard-Feature-Set des Buildpacks beeinträchtigt wird. Wenn die benötigte
 Liberty-Konfiguration über das Feature-Set hinausgeht, verwenden Sie die Optionen für
 [Serververzeichnisse](optionsForPushing.html#server_directory) oder
@@ -128,14 +128,14 @@ wenn nur WAR- und EAR-Dateien bereitgestellt werden. Die Funktion für das impli
 Beispiel:
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 Wichtig: Damit Ihre Änderungen an der Umgebungsvariablen wirksam werden, müssen Sie ein erneutes Staging für Ihre Anwendung durchführen:
 
 ```
-    $ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -148,7 +148,7 @@ Wenn Sie das Liberty-Profil auf Ihrer Workstation installiert und bereits einen 
 Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie den folgenden Befehl aus:
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -158,7 +158,7 @@ können Sie die folgenden Schritte befolgen, um ein Serververzeichnis mit Ihrer 
 1. Erstellen Sie ein Verzeichnis mit dem Namen 'defaultServer'.
 2. Erstellen Sie im Verzeichnis 'defaultServer' ein Verzeichnis mit dem Namen 'apps'.
 3. Kopieren Sie die WAR- oder EAR-Datei in das Verzeichnis 'defaultServer/apps'.
-4. Erstellen Sie im Verzeichnis 'defaultServer' eine server.xml-Datei mit dem folgenden Beispielinhalt.  Zusätzlich:
+4. Erstellen Sie im Verzeichnis 'defaultServer' eine Datei 'server.xml' mit dem folgenden Beispielinhalt. Zusätzlich:
   * Vergewissern Sie sich, dass das Attribut 'location' oder 'type' des Anwendungselements so aktualisiert wurde, dass die Angaben mit dem Dateinamen und dem Typ Ihrer Anwendung übereinstimmen.
   * Die im Diagramm enthaltene Datei 'server.xml' enthält ein minimales Feature-Set. Möglicherweise müssen Sie das Feature-Set abhängig von den Anforderungen Ihrer Anwendung anpassen.
 
@@ -178,7 +178,7 @@ können Sie die folgenden Schritte befolgen, um ein Serververzeichnis mit Ihrer 
 Nach Vorbereitung des Serververzeichnisses können Sie es in {{site.data.keyword.Bluemix_notm}} implementieren.
 
 ```
-    $ cf push <yourappname> -p defaultServer
+    ibmcloud cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
@@ -195,20 +195,20 @@ Hinweis: Auf die Webanwendungen, die als Teil des Serververzeichnisses implement
 Sie können auch eine Datei für einen paketierten Server mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen. Die Datei für den paketierten Server wird mithilfe des Liberty-Befehls zum Erstellen von Serverpaketen erstellt. Zusätzlich zu den Anwendungs- und Konfigurationsdateien kann die Datei des paketierten Servers gemeinsam genutzte Ressourcen und Liberty-Benutzerfeatures enthalten, die von der Anwendung benötigt werden.
 
 Verwenden Sie zum Paketieren eines Liberty-Servers den Befehl `./bin/server package` aus dem Liberty-Installationsverzeichnis. Geben Sie den Servernamen an und verwenden Sie die Option `--include=usr`.
-Wenn Ihr Liberty-Server beispielsweise den Namen 'defaultServer' hat, führen Sie folgenden Befehl aus:
+Wenn Ihr Liberty-Server beispielsweise den Namen `defaultServer` hat, führen Sie den folgenden Befehl aus:
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
 Dieser Befehl generiert die Datei 'serverName.zip' im Serververzeichnis. Wenn Sie mit der Option `--archive` eine andere Archivdatei angegeben haben, stellen Sie sicher, dass die Erweiterung `.zip` anstelle von `.jar` verwendet wird. **Das Buildpack unterstützt keine paketierten Serverdateien mit der Erweiterung `.jar`**.
 
-Anschließend können Sie die generierte `.zip`-Datei mithilfe des Befehls `cf push` mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen.
+Anschließend können Sie die generierte `.zip`-Datei mithilfe des Befehls `ibmcloud cf push` an {{site.data.keyword.Bluemix_notm}} übertragen.
 Beispiel:
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -231,7 +231,7 @@ Die folgenden Variablen sind in der Datei `runtime-vars.xml` definiert und werde
 
 * ${port}: Der HTTP-Port, an dem der Liberty-Server empfangsbereit ist.
 * ${vcap_app_port}: Identisch mit ${port}. Wird bei der Ausführung unter Diego nicht definiert.
-* ${application_name}: Der Name der Anwendung wie mithilfe der Optionen im Befehl 'cf push' definiert.
+* ${application_name}: Der Name der Anwendung wie mithilfe der Optionen im Befehl `ibmcloud cf push` definiert.
 * ${application_version}: Die Version dieser Anwendungsinstanz in Form einer UUID wie beispielsweise `b687ea75-49f0-456e-b69d-e36e8a854caa`. Diese Variable ändert sich bei jeder weiteren Push-Operation für die Anwendung, die neuen Code oder Änderungen an den Anwendungsartefakten enthält.
 * ${host}: Die IP-Adresse der Anwendungsinstanz.
 * ${application_uris}: Ein JSON-Array der Endpunkte, die für den Zugriff auf diese Anwendung verwendet werden können, zum Beispiel: 'myapp.mydomain.com'.
@@ -240,9 +240,7 @@ Die folgenden Variablen sind in der Datei `runtime-vars.xml` definiert und werde
 ### Auf Informationen gebundener Services zugreifen
 {: #accessing_info_of_bound_services}
 
-Wenn Sie einen Service an Ihre Anwendung binden möchten, finden Sie Informationen zum Service wie beispielsweise Verbindungsberechtigungsnachweise in der Umgebungsvariable [VCAP_SERVICES ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES), die Cloud Foundry für die Anwendung festlegt. Für [automatisch konfigurierte
-Services](autoConfig.html) werden Servicebindungseinträge in der Datei 'server.xml' vom Liberty-Buildpack
-generiert oder aktualisiert. Der Inhalt der Servicebindungseinträge kann in einem der folgenden Formate vorliegen:
+Wenn Sie einen Service an Ihre Anwendung binden möchten, sind Informationen zum Service, wie beispielsweise Verbindungsberechtigungsnachweise, in der Umgebungsvariablen [VCAP_SERVICES ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) enthalten, die Cloud Foundry für die Anwendung festlegt. Für [automatisch konfigurierte Services](autoConfig.html) werden Servicebindungseinträge in der Datei 'server.xml' vom Liberty-Buildpack generiert oder aktualisiert. Der Inhalt der Servicebindungseinträge kann in einem der folgenden Formate vorliegen:
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt; - Gibt Informationen wie Name, Typ und Plan des Service an.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; - Gibt die Verbindungsinformationen für den Service an.

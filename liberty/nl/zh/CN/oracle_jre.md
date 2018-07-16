@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -49,7 +49,7 @@ Oracle JRE 文件必须在 Web 服务器上进行托管，并且 Liberty buildpa
 
 要设置此值，请发出类似下面的命令：
 ```
-   $ cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
+   ibmcloud cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
 ```
 {: codeblock}
 
@@ -57,7 +57,7 @@ Oracle JRE 文件必须在 Web 服务器上进行托管，并且 Liberty buildpa
 
 要设置 JVM 环境变量，请发出类似下面的命令：
 ```
-   $ cf se myApp JVM 'openjdk'
+   ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

@@ -43,4 +43,4 @@ Si existe una entrada de script en el archivo **package.json**, se genera un
 ```
 {: codeblock}
 
-Para obtener más información sobre el archivo **Procfile** y **package.json**, consulte [Consejos para aplicaciones Node.js![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).
+Para obtener más información sobre el archivo **Procfile** y **package.json**, consulte [Consejos para aplicaciones Node.js ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).

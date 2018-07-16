@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -46,9 +46,9 @@ Para que um aplicativo Java existente seja monitorado com o New Relic em {{site.
 etapas.
 1. Crie uma instância do serviço New Relic em  {{site.data.keyword.Bluemix_notm}}.
 
-  <pre>
-    $ cf create-service newrelic standard mynewrelic
-  </pre>
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
   {: codeblock}
 
 2. Implemente seu aplicativo no {{site.data.keyword.Bluemix_notm}} com o serviço New Relic.  Veja o manifest do aplicativo
@@ -79,9 +79,11 @@ Se você tiver uma conta e uma chave de licença existente do New Relic, poderá
 New Relic existente ao seu aplicativo usando um "serviço fornecido pelo usuário".
 
 1. Crie uma instância de serviço fornecida pelo usuário usando sua chave de licença
-existente.  Por exemplo, se a sua chave de licença existente for 1234567, será possível usar a CLI do CF para "create-user-provided-service" e fornecer a chave de licença 1234567 no prompt como a seguir:
+existente.  Por exemplo, se a sua chave de licença existente for 1234567, será possível usar a CLI do
+{{site.data.keyword.Bluemix_notm}} para "create-user-provided-service" e fornecer a chave de licença 1234567 no prompt como no seguinte:
+  
   ```
-    $ cf create-user-provided-service mynewrelic -p "licenseKey"
+    ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
   ```
   {: codeblock}

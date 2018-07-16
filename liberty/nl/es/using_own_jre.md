@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2017-10-26"
 # Utilice su propio JRE
 {: #using_own_jre}
 
-Puede ejecutar la aplicación Liberty en {{site.data.keyword.Bluemix}} con su propio JRE. Debe completar lo siguiente para que su JRE esté disponible en su aplicación. 
-* Alojar el JRE en una ubicación desde la que el paquete de compilación pueda descargarlo. 
-* Alojar un archivo `index.yml` que proporcione la ubicación del JRE. 
-* Configurar la aplicación para utilizar el JRE. 
+Puede ejecutar la aplicación Liberty en {{site.data.keyword.Bluemix}} con su propio JRE. Debe completar lo siguiente para que su JRE esté disponible en su aplicación.
+* Alojar el JRE en una ubicación desde la que el paquete de compilación pueda descargarlo.
+* Alojar un archivo `index.yml` que proporcione la ubicación del JRE.
+* Configurar la aplicación para utilizar el JRE.
 
 ## Alojar el JRE e `index.yml`
 {: #hosting_jre}
@@ -25,20 +25,20 @@ Debe alojar el archivo JRE en un servidor web desde el que el paquete de compila
 Complete los pasos siguientes para alojar el JRE y el archivo `index.yml`:
   1. Adquiera el JRE, que debe ser una versión que pueda utilizar en un SO UNIX de 64 bits, y debe ser un archivo `tar.gz`.
   2. Aloje el archivo JRE en una ubicación desde la que el paquete de compilación de Liberty pueda descargarlo.
-  3. Proporcione un archivo `index.yml` en la ubicación de alojamiento. El archivo `index.yml` debe incluir una entrada que contenga un ID de versión del JRE seguido de una coma y el URL completo de dicho archivo JRE. 
+  3. Proporcione un archivo `index.yml` en la ubicación de alojamiento. El archivo `index.yml` debe incluir una entrada que contenga un ID de versión del JRE seguido de una coma y el URL completo de dicho archivo JRE.
     * Define la versión del JRE en el archivo `index.yml`.
 
     ```
     ---
-   jre_version: https://hostingLocation/jreName.tar.gz
+    jre_version: https://hostingLocation/jreName.tar.gz
     ```
     {: codeblock}
 
-    * Incluya el ID de versión del JRE y complete la ubicación de archivo de JRE completa. Por ejemplo:
+    * Incluya el ID de versión del JRE y complete la ubicación de archivo de JRE completa.  Por ejemplo:
 
     ```
     ---
-       1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
+    1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
     ```
     {: codeblock}
 
@@ -54,21 +54,21 @@ El valor de la variable **JBP_CONFIG_OPENJDK** es la ubicación de archivo de `i
 ```
 {: codeblock}
 
-Emita el mandato `cf se myAPP` para establecer la variable **JBP_CONFIG_OPENJDK**, por ejemplo: 
+Emita el mandato `ibmcloud cf se myAPP` para establecer la variable **JBP_CONFIG_OPENJDK**, por ejemplo:
 ```
-$ cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
-```
-{: codeblock}
-
-El URL *repository_root* no incluye `index.yml` en el URL.El URL *repository_root* apunta al nivel de directorio que contiene el archivo `index.yml`, no el propio archivo.
-
-Para establecer la variable de entorno JVM, emita el mandato siguiente: 
-```
-$ cf se myApp JVM 'openjdk'
+ibmcloud cf se myApp JBP_CONFIG_OPENJDK '{repository_root: "https://myHostingApp.ng.bluemix.net", version: 1.8.+}'
 ```
 {: codeblock}
 
-**Nota**: Vuelva a transferir la aplicación después de establecer las variables de entorno para que los cambios entren en vigor. 
+El URL *repository_root* no incluye `index.yml` en el URL. El URL *repository_root* apunta al nivel de directorio que contiene el archivo `index.yml`, no el propio archivo.
+
+Para establecer la variable de entorno JVM, emita el mandato siguiente:
+```
+ibmcloud cf se myApp JVM 'openjdk'
+```
+{: codeblock}
+
+**Nota**: Vuelva a transferir la aplicación después de establecer las variables de entorno para que los cambios entren en vigor.
 
 ## Confirmar
 {: #confirmation}

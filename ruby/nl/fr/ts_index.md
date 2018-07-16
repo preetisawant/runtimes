@@ -14,4 +14,4 @@ lastupdated: "2018-02-22"
 
 Dépannez vos applications et packs de construction Ruby avec les ressources suivantes :
 
-* [Traitement des incidents liés aux contextes d'exécution](../../troubleshoot/ts_runtimes.html#runtimes)
+* [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html#runtimes)

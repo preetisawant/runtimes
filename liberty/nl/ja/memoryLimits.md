@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -67,14 +67,14 @@ JVM メモリー使用について詳しくは、developerWorks の記事[『Tha
 * `JVM_ARGS` 環境変数と -Xmx 引数を使用します。 例えば、最大ヒープ・サイズを 512 M に設定するには、以下のコマンドを使用し、その後でアプリケーションの再ステージングを行います。
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
 * JBP_CONFIG_IBMJDK 環境変数を使用してヒープ・サイズ率を指定します。  heap_size_ratio は、メモリー制限のうちどれだけの量をヒープに割り振るのかを指定する浮動小数点値です。  例えば、使用可能メモリーの半分 (50% すなわち 0.50) をヒープに割り振るには、以下のコマンドを発行して、アプリケーションを再ステージングします。
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-02-08"
 
 ---
@@ -32,4 +32,3 @@ Liberty for Java 应用程序在 {{site.data.keyword.Bluemix}} 上运行时，�
 {: #newrelic notoc}
 
 要使用 *New Relic* 监视 Liberty，请参阅[使用 New Relic](newRelic.html)
-

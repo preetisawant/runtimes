@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -28,11 +28,11 @@ Liberty 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려
 
 {{site.data.keyword.Bluemix_notm}}에서 WAR 또는 EAR 파일과 같은 독립형 애플리케이션을 Liberty에 배치할 수 있습니다.
 
-독립형 애플리케이션을 배치하려면 WAR 또는 EAR 파일을 가리키는 -p 매개변수를 포함한 cf push 명령을 실행하십시오.
+독립형 애플리케이션을 배치하려면 WAR 또는 EAR 파일을 가리키는 -p 매개변수를 포함한 `ibmcloud cf push` 명령을 실행하십시오.
 예를 들어, 다음과 같습니다.
 
 ```
-$ cf push <yourappname> -p myapp.war
+    ibmcloud cf push <yourappname> -p myapp.war
 ```
 {: codeblock}
 
@@ -58,7 +58,7 @@ $ cf push <yourappname> -p myapp.war
 이 기능은 Java EE 7 Web Profile 기능에 해당합니다. JBP_CONFIG_LIBERTY 환경 변수를 설정하여 Liberty 기능의 다른 설정을 지정할 수 있습니다. 예를 들어, jsp-2.3 및 websocket-1.1 기능만 사용하려면 명령을 실행하고 애플리케이션을 다시 스테이징하십시오.
 
 ```
-$ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: {features: [jsp-2.3, websocket-1.1]}"
 ```
 {: codeblock}
 
@@ -121,14 +121,14 @@ http://<yourappname>.mybluemix.net/acme/
 예를 들어, 다음과 같습니다.
 
 ```
-    $ cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
+    ibmcloud cf set-env myapp JBP_CONFIG_LIBERTY "app_archive: { implicit_cdi: true }"
 ```    
 {: codeblock}
 
 중요: 환경 변수 변경사항을 적용하려면 다음과 같이 애플리케이션을 다시 스테이징해야 합니다.
 
 ```
-    $ cf restage myapp
+    ibmcloud cf restage myapp
 ```
 {: codeblock}
 
@@ -141,7 +141,7 @@ Liberty 프로파일을 워크스테이션에 설치했으며 이미 애플리�
 예를 들어, Liberty 서버의 이름이 defaultServer이면 다음 명령을 실행하십시오.
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer
 ```
 {: codeblock}
 
@@ -171,7 +171,7 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 {{site.data.keyword.Bluemix_notm}}에 배치할 수 있습니다.
 
 ```
-    $ cf push <yourappname> -p defaultServer
+    ibmcloud cf push <yourappname> -p defaultServer
 ```
 {: codeblock}
 
@@ -189,20 +189,20 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 {{site.data.keyword.Bluemix_notm}}에 푸시할 수도 있습니다. 패키지된 서버 파일은 Liberty의 서버 패키지 명령을 사용하여 작성됩니다. 패키지된 서버 파일에는 애플리케이션과 구성 파일 외에 애플리케이션에 필요한 공유 리소스 및 Liberty 사용자 기능이 포함되어 있습니다.
 
 Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/server package` 명령을 사용하십시오. 서버 이름을 지정하고 `--include=usr` 옵션을 포함하십시오.
-예를 들어, Liberty 서버가 defaultServer이면 다음 명령을 실행하십시오.
+예를 들어, Liberty 서버가 `defaultServer`이면 다음 명령을 실행하십시오.
 
 ```
-    $ wlp/bin/server package defaultServer --include=usr
+    wlp/bin/server package defaultServer --include=usr
 ```
 {: codeblock}
 
 이 명령은 서버 디렉토리에 serverName.zip 파일을 생성합니다. 다른 아카이브 파일을 지정하는 데 `--archive` 옵션을 사용한 경우 `.zip` 확장자가 `.jar` 대신 있는지 확인하십시오. **빌드팩은 `.jar` 확장자로 작성된 패키지된 서버 파일을 지원하지 않습니다**.
 
-그러면 사용자가 생성된 `.zip` 파일을 {{site.data.keyword.Bluemix_notm}}에 `cf push` 명령으로 푸시할 수 있습니다.
+그러면 사용자가 생성된 `.zip` 파일을 {{site.data.keyword.Bluemix_notm}}에 `ibmcloud cf push` 명령으로 푸시할 수 있습니다.
 예를 들어, 다음과 같습니다.
 
 ```
-    $ cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
+    ibmcloud cf push <yourappname> -p wlp/usr/servers/defaultServer/defaultServer.zip
 ```
 {: codeblock}
 
@@ -225,7 +225,7 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 
 * ${port}: Liberty 서버가 수신 대기하고 있는 HTTP 포트입니다.
 * ${vcap_app_port}: ${port}와 같습니다. Diego에서 실행되는 경우에는 설정되지 않습니다.
-* ${application_name}: cf push 명령에 옵션을 사용하여 정의하는 애플리케이션의 이름입니다.
+* ${application_name}: `ibmcloud cf push` 명령에 옵션을 사용하여 정의하는 애플리케이션의 이름입니다.
 * ${application_version}: 이 애플리케이션 인스턴스의 버전이며 `b687ea75-49f0-456e-b69d-e36e8a854caa`와 같은 UUID 양식을 사용합니다. 새로운 코드 또는 변경된 애플리케이션 아티팩트가 포함된 애플리케이션을 연속으로 푸시될 때마다 이 변수가 변경됩니다.
 * ${host}: 애플리케이션 인스턴스의 IP 주소입니다.
 * ${application_uris}: 이 애플리케이션에 액세스하는 데 사용하는 JSON 스타일의 엔드포인트 배열입니다. 예: myapp.mydomain.com

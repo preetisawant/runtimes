@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -21,58 +21,65 @@ lastupdated: "2018-02-14"
 
 Si sigue esta guía de aprendizaje, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix_notm}} en su app.
 
+A lo largo de estos documentos, las referencias a la CLI de Cloud Foundry se han actualizado ahora a la CLI de {{site.data.keyword.Bluemix_notm}}. La CLI de {{site.data.keyword.Bluemix_notm}} tiene los mismos mandatos de Cloud Foundry familiares, pero con una mejor integración con las cuentas de {{site.data.keyword.Bluemix_notm}} y otros servicios. Obtenga más información sobre cómo empezar con la CLI de {{site.data.keyword.Bluemix_notm}} en esta guía de aprendizaje.
+{: tip}
+
 ## Antes de empezar
 {: #prereqs}
 * [Git ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git-scm.com/downloads){: new_window}
-* [CLI de Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
 * [Compilador de Swift ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/download/) para su plataforma.
 
 ## Paso 1: Clone la app de ejemplo
 {: #clone}
 
-Ahora está listo para empezar a trabar con la app Swift sencilla. Clone el repositorio y vaya al directorio donde se encuentra la app de ejemplo.
+Primero, clone el repositorio y vaya al directorio donde se encuentra la app de ejemplo.
   ```
-git clone https://github.com/IBM-Bluemix/get-started-swift
+git clone https://github.com/IBM-Cloud/get-started-swift
   ```
-  {: pre}
+  {: codeblock}
 
   ```
 cd get-started-swift
   ```
-  {: pre}
+  {: codeblock}
 
   Lea detenidamente los archivos del directorio *get-started-swift* para familiarizarse con el contenido.
 
 ## Paso 2: Ejecute la app localmente
 {: #run_locally}
 
-Cuando haya instalado el compilador de Swift y clonado el repositorio Git, podrá compilar y ejecutar la aplicación. Vaya al directorio raíz de este repositorio en el sistema y emita el siguiente mandato:
-```
+Cuando haya instalado el compilador de Swift y clonado el repositorio Git, podrá compilar y ejecutar la aplicación.
+
+1. Vaya al directorio raíz de este repositorio en el sistema y emita el siguiente mandato:
+
+  ```
 swift build
-```
-{: pre}
+  ```
+  {: codeblock}
 
-Este mandato puede tardar unos minutos en ejecutarse.
+  Este mandato puede tardar unos minutos en ejecutarse.
 
-Cuando la aplicación se haya compilado correctamente, podrá ejecutar el archivo ejecutable que ha generado el compilador de Swift:
-```
+1. Cuando la aplicación se haya compilado correctamente, podrá ejecutar el archivo ejecutable que ha generado el compilador de Swift:
+
+  ```
 .build/debug/get-started-swift
-```
-{: pre}
+  ```
+  {: codeblock}
 
-Debería ver una salida similar a la siguiente:
+  Debería ver una salida similar a la siguiente:
 
-```
+  ```
 Server is listening on port: 8080
-```
-{: codeblock}
+  ```
+  {: pre}
 
-Ver la app en http://localhost:8080
+1. Visualice la app en el siguiente URL: http://localhost:8080
 
 ## Paso 3: Prepare la app para el despliegue
 {: #prepare}
 
-Para desplegar en {{site.data.keyword.Bluemix_notm}}, puede resultarle útil configurar un archivo manifest.yml. El archivo manifest.yml incluye información básica sobre la app, como por ejemplo el nombre, la cantidad de memoria a asignar para cada instancia y la ruta. Encontrará un archivo manifest.yml de ejemplo en el directorio `get-started-swift`.
+Para desplegar en {{site.data.keyword.Bluemix_short}}, puede resultarle útil configurar un archivo manifest.yml. El archivo manifest.yml incluye información básica sobre la app, como por ejemplo el nombre, la cantidad de memoria a asignar para cada instancia y la ruta. Encontrará un archivo manifest.yml de ejemplo en el directorio `get-started-swift`.
 
 Abra el archivo manifest.yml y cambie el valor de `name` de `GetStartedSwift` por el nombre de su app, <var class="keyword varname" data-hd-keyref="app_name">app_name</var>.
 {: download}
@@ -87,67 +94,68 @@ Abra el archivo manifest.yml y cambie el valor de `name` de `GetStartedSwift` po
   ```
   {: codeblock}
 
-En este archivo manifest.yml, **random-rout: true** genera una ruta aleatoria para la app a fin de evitar que su ruta entre en conflicto con otras.  Si lo desea, puede sustituir **random-route: true** por **host: myChosenHostName**, especificando el nombre de host que elija. [Más información...](/docs/manageapps/depapps.html#appmanifest)
+En este archivo manifest.yml, **random-rout: true** genera una ruta aleatoria para la app a fin de evitar que su ruta entre en conflicto con otras.  Si lo desea, puede sustituir **random-route: true** por **host: myChosenHostName**, especificando el nombre de host que elija.
 {: tip}
 
 ## Paso 4: Despliegue la app
 {: #deploy}
 
-Puede utilizar la CLI de Cloud Foundry para desplegar apps.
+Puede utilizar la CLI de {{site.data.keyword.Bluemix_short}} para desplegar apps.
 
-Elija el punto final de la API
+1. Inicie sesión en su cuenta de {{site.data.keyword.Bluemix_notm}} y seleccione un punto final de API.
+
   ```
-cf api <API-endpoint>
+ibmcloud cf login
   ```
-  {: pre}
+  {: codeblock}
 
-Sustituya *API-endpoint* en el mandato por un punto final de API de la siguiente lista.
+  Si tiene un ID de usuario federado, en su lugar utilice el siguiente mandato para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
 
-| **Nombre de la región** | **Ubicación geográfica** | **Punto final de la API** |
-|-----------------|-------------------------|-------------------|
-| Región EE.UU. sur| Dallas, EE.UU.| api.ng.bluemix.net |
-|  Región EE.UU este | Washington, DC, EE.UU | api.us-east.bluemix.net |
-| Región del Reino Unido| Londres, Inglaterra| api.eu-gb.bluemix.net |
-| Región de Sídney| Sídney, Australia | api.au-syd.bluemix.net |
-|  Región de Alemania | Frankfurt, Alemania | api.eu-de.bluemix.net |
-{: caption="Tabla 1. Lista de regiones de {{site.data.keyword.cloud_notm}}" caption-side="top"}
+  ```
+ibmcloud login --sso
+  ```
+  {: codeblock}
 
-Inicie una sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}
+1. Destinado a una org y espacio de Cloud Foundry:
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
 
-   ```
- cf login
-   ```
-   {: pre}
+  Si no tiene una org o un espacio configurado, consulte [Adición de organizaciones y espacios](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
 
-Si no puede iniciar sesión utilizando los mandatos `cf login` o `bx login` porque tiene un ID de usuario federado, utilice los mandatos `cf login --sso` o `bx login --sso` para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
+1. Desde el directorio *get-started-swift*, envíe por push la app a {{site.data.keyword.Bluemix_notm}}
+  ```
+ibmcloud cf push
+  ```
+  {: codeblock}
 
-Desde el directorio *get-started-swift*, envíe por push la app a {{site.data.keyword.Bluemix_notm}}
-   ```
- cf push
-   ```
-   {: pre}
+  Esto puede tardar un minuto. Si hay algún error en el proceso de despliegue, puede utilizar el mandato `ibmcloud cf logs <Your-App-Name> --recent` para resolver problemas.
 
-Esto puede tardar un minuto. Si hay algún error en el proceso de despliegue, puede utilizar el mandato `cf logs <Your-App-Name> --recent` para resolver problemas.
-
-Cuando finalice el despliegue, verá un mensaje que indica que la app se está ejecutando.  Visualice la app en el URL que aparece en la salida del mandato push.  También puede emitir el mandato `cf apps` para ver el estado de su app y ver el URL.
+Cuando finalice el despliegue, verá un mensaje que indica que la app se está ejecutando.  Visualice la app en el URL que aparece en la salida del mandato push.  También puede emitir el siguiente mandato para ver el estado de su app y ver el URL.
+  ```
+ibmcloud cf apps
+  ```
+  {: codeblock}
 
 ## Paso 5: Añada una base de datos
 {: #add_database}
 
-A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
+A continuación, añadiremos una base de datos de {{site.data.keyword.cloudant_short_notm}} a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
 1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione **Crear recurso**.
-2. Elija la sección **Datos y análisis** y, a continuación, seleccione **BD Cloudant NoSQL** y cree el servicio.
+2. Elija la sección **Datos y análisis** y, a continuación, seleccione **{{site.data.keyword.cloudant_short_notm}}** y cree el servicio.
 3. Vaya a la vista de **Conexiones** y seleccione su aplicación y, a continuación a **Crear conexión**.
 4. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
-Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente. [Más información...](/docs/manageapps/depapps.html#app_env)
+Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente.
 {: tip}
 
 ## Paso 6: Utilice la base de datos
 {: #use_database}
 
-Ahora vamos a actualizar el código local para que apunte a esta base de datos. Cree un archivo json que contendrá las credenciales para los servicios que utilizará la aplicación. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno VCAP_SERVICES.
+Ahora vamos a actualizar el código local para que apunte a esta base de datos. Cree un archivo JSON que contendrá las credenciales para los servicios que utilizará la aplicación. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno VCAP_SERVICES.
 
 Cree un archivo denominado `my-cloudant-credentials.json` en el directorio `config` con el contenido siguiente (como referencia, consulte `config/my-cloudant-credentials.json.example`):
 
@@ -158,10 +166,11 @@ Cree un archivo denominado `my-cloudant-credentials.json` en el directorio `conf
    "username": "<username>"
  }
  ```
+ {: codeblock}
 
 Actualice el archivo `mappings.json` en el directorio `config` reemplazando el marcador `cloudant` con el **nombre** de la instancia de BD:
 
-```
+  ```
 {
   "MyCloudantDB": {
     "searchPatterns": [
@@ -171,14 +180,15 @@ Actualice el archivo `mappings.json` en el directorio `config` reemplazando el m
     ]
   }
 }
-```
+  ```
+  {: codeblock}
 
-Esta aplicación de ejemplo utiliza el paquete `CloudEnvironment` para interactuar con {{site.data.keyword.Bluemix_notm}} y analizar variables de entorno.[Más información...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+Esta aplicación de ejemplo utiliza el paquete `CloudEnvironment` para interactuar con {{site.data.keyword.Bluemix_notm}} y analizar variables de entorno. [Más información...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
 
-El marcador `cloudant` de la configuración `cloudfoundry:cloudant` facilita el enlace a un servicio de Cloudant proporcionado por el usuario para la aplicación.Con la configuración `cloudfoundry:cloudant`, también puede crear un servicio Cloudant que incluya la serie y `cloudant` en algún lugar del nombre de servicio, y enlazarlos a la aplicación, sin editar el archivo `config.json`. Si modifica esta configuración y posteriormente desea utilizar un servicio Cloudant proporcionado por el usuario, necesitará editar la configuración a `cloudfoundry:cloudant` o definir `cloudfoundry:` con el nombre del servicio proporcionado por el usuario.
+El marcador `cloudant` de la configuración `cloudfoundry:cloudant` facilita el enlace a un servicio de Cloudant proporcionado por el usuario para la aplicación. Con la configuración `cloudfoundry:cloudant`, también puede crear un servicio Cloudant que incluya la serie y `cloudant` en algún lugar del nombre de servicio, y enlazarlos a la aplicación, sin editar el archivo `config.json`. Si modifica esta configuración y posteriormente desea utilizar un servicio Cloudant proporcionado por el usuario, necesitará editar la configuración a `cloudfoundry:cloudant` o definir `cloudfoundry:` con el nombre del servicio proporcionado por el usuario.
 {: tip}
 
-En la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, seleccione App -> Conexiones -> Cloudant -> Ver credenciales
+En su navegador, vaya al panel de control de {{site.data.keyword.Bluemix_notm}} y seleccione **_su app_ > Conexiones**. Pulse el icono de menú de {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) y seleccione **Ver credenciales**.
 
 Copie y pegue sólo las credenciales en los campos correspondientes en el archivo config.json local.
 
@@ -186,24 +196,25 @@ Compile y ejecute la aplicación localmente.
  ```
 swift build  
  ```
- {: pre}
+ {: codeblock}
 
   ```
 .build/debug/kitura-helloworld
- ```
- {: pre}
+  ```
+ {: codeblock}
 
-Visualice la app en: http://localhost:8080. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
+ Visualice la app en: http://localhost:8080. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
 
- Esta aplicación de ejemplo utiliza el paquete 'Kitura-CouchDB' para interactuar con Cloudant. [Más información... ] (https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ Esta aplicación de ejemplo utiliza el paquete `Kitura-CouchDB` para interactuar con Cloudant. [Más información...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
 
- Realice los cambios que desee y vuelva a desplegarlo en {{site.data.keyword.Bluemix_notm}}!
+ Realice los cambios que desee y vuelva a desplegarlo en {{site.data.keyword.Bluemix_notm}}.
 
- ```
- cf app push
- ```
+  ```
+ibmcloud cf app push
+  ```
 
- Visualice la app en el URL que aparece en la salida del mandato push, por ejemplo, *myUrl.mybluemix.net*.
+Visualice la app en el URL que aparece en la salida del mandato push, por ejemplo, *myUrl.mybluemix.net*.
+
 Recuerde que, si no necesita la app en directo, debe detenerla para no incurrir en cargos inesperado.
 {: tip}
 
@@ -211,4 +222,4 @@ Recuerde que, si no necesita la app en directo, debe detenerla para no incurrir 
 
 * [Guías de aprendizaje](/docs/tutorials/index.html)
 * [Ejemplos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://ibm-cloud.github.io){: new_window}
-* [Centro de arquitectura![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}
+* [Centro de arquitectura ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

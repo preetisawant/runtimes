@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -39,7 +39,7 @@ Cloud Foundry buildpack 用于为 Cloud Foundry 环境中的应用程序提供�
 
 *  Buildpack
 
-   buildpack 通常是 {{site.data.keyword.Bluemix_notm}} 提供的特定于语言的软件包。应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，将选择与该应用程序相应的 buildpack。buildpack 为应用程序供应运行时环境。可以通过在命令行中发出 `cf buildpacks` 命令来查看 {{site.data.keyword.Bluemix_notm}} 提供的一组 buildpack。
+   buildpack 通常是 {{site.data.keyword.Bluemix_notm}} 提供的特定于语言的软件包。将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，会选择与该应用程序相应的 buildpack。buildpack 为应用程序供应运行时环境。{{site.data.keyword.Bluemix_notm}} 提供了一组 buildpack。要查看它们，可以从命令行发出 `ibmcloud cf buildpacks` 命令。
 
 *  运行时 (Runtime)
 

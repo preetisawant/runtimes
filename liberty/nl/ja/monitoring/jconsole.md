@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2017-11-10"
 
 ---
 
@@ -47,7 +47,7 @@ lastupdated: "2017-11-08"
 
 JConsole は Java インストール済み環境に含まれています。  JConsole アプリケーションを開始するには、&lt;java-home&gt;/bin に移動し、次のコマンドを実行します。
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+    jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-02-08"
 
 ---
@@ -32,4 +32,3 @@ Informationen zur Überwachung von Liberty mit *Dynatrace* finden Sie unter [Dyn
 {: #newrelic notoc}
 
 Informationen zur Überwachung von Liberty mit *New Relic* finden Sie unter [New Relic verwenden](newRelic.html)
-

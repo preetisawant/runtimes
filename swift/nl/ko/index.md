@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,9 +19,9 @@ lastupdated: "2017-11-08"
 ## 스타터 애플리케이션
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}}에서는 Kitura 기반 Swift [스타터 애플리케이션](https://github.com/IBM-Bluemix/Kitura-Starter)을 제공합니다. Kitura 스타터 앱은 Swift 프로그래밍 언어를 사용하여 개발할 수 있는 서버 애플리케이션 유형에 대해 학습하는 데 사용할 수 있는 단순한 Swift 앱니다. 이 샘플 앱은 클라이언트에 HTML 컨텐츠를 리턴하는 기본 Kitura HTTP 서버를 작성합니다.
+{{site.data.keyword.Bluemix_notm}}에서는 Kitura 기반 Swift [스타터 애플리케이션](https://github.com/IBM-Cloud/Kitura-Starter)을 제공합니다. Kitura 스타터 앱은 Swift 프로그래밍 언어를 사용하여 개발할 수 있는 서버 애플리케이션 유형에 대해 학습하는 데 사용할 수 있는 단순한 Swift 앱니다. 이 샘플 앱은 클라이언트에 HTML 컨텐츠를 리턴하는 기본 Kitura HTTP 서버를 작성합니다.
 
-**참고:** Kitura 스타터 앱은 교육용으로 사용됩니다. 변경을 수행하여 스타터 앱을 시험해 보고 이러한 변경사항을 {{site.data.keyword.Bluemix_notm}} 환경에 푸시할 수 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../../cfapps/starter_app_usage.html)을 참조하십시오.
+**참고:** Kitura 스타터 앱은 교육용으로 사용됩니다. 변경을 수행하여 스타터 앱을 시험해 보고 이러한 변경사항을 {{site.data.keyword.Bluemix_notm}} 환경에 푸시할 수 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../common/starter_app_usage.html)을 참조하십시오.
 
 ## 앱 이름 바꾸기
 {: #renaming_your_app}
@@ -53,7 +53,7 @@ Swift 언어는 자주 변경되므로 사용하는 애플리케이션과 함께
 
 `.swift-version` 파일에서 올바른 버전의 Swift를 지정할 수 있습니다. 이러한 대체 버전은 [Swift.org ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://swift.org/download/)의 이름 지정 방식과 일치해야 하며 이 사이트에서 직접 가져와야 합니다. 비캐시 버전을 사용하는 경우 프로비저닝하는 데 시간이 좀 더 걸리지만 Swift 앱의 런타임 성능에는 차이가 없습니다.
 
-앱의 루트 디렉토리에 `Package.swift` 파일이 있으면 {{site.data.keyword.Bluemix_notm}}의 기본 swift_buildpack이 사용됩니다.  대체 빌드팩을 사용하려면 앱의 manifest.yml 파일에 `buildpack: {buildpackUrl}` 항목을 추가하여 대체 빌드팩을 지정해야 합니다. 또는 배치 시 `cf push -b {buildpackUrl}` 명령 인수를 사용하여 대체 빌드팩을 정의할 수 있습니다.
+앱의 루트 디렉토리에 `Package.swift` 파일이 있으면 {{site.data.keyword.Bluemix_notm}}의 기본 swift_buildpack이 사용됩니다.  대체 빌드팩을 사용하려면 앱의 manifest.yml 파일에 `buildpack: {buildpackUrl}` 항목을 추가하여 대체 빌드팩을 지정해야 합니다. 또는 배치 시 `ibmcloud cf push -b {buildpackUrl}` 명령 인수를 사용하여 대체 빌드팩을 정의할 수 있습니다.
 
 
 ## 개발자 환경
@@ -93,7 +93,7 @@ Swift 개발자가 사용할 수 있는 IBM의 다른 온라인 도구도 있습
 * [IBM Swift Package Catalog](https://swiftpkgs.ng.bluemix.net/)
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Kitura 문서 및 API](http://ibm-swift.github.io/Kitura/)
-* [Bluemix용 Kitura 스타터 앱](https://github.com/IBM-Bluemix/Kitura-Starter)
+* [Bluemix용 Kitura 스타터 앱](https://github.com/IBM-Cloud/Kitura-Starter)
 * [Swift용 IBM Bluemix 빌드팩](https://github.com/IBM-Swift/swift-buildpack)
 * [Swift용 IBM Bluemix 빌드팩 릴리스 정보](https://github.com/IBM-Swift/swift-buildpack/releases)
 * [Swift.org ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://swift.org/)

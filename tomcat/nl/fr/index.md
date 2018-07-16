@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,16 +18,17 @@ L'environnement d'exécution Tomcat sur {{site.data.keyword.Bluemix}} repose sur
 {: shortdesc}
 
 Pour utiliser l'environnement d'exécution Tomcat sur {{site.data.keyword.Bluemix_notm}}, vous devez spécifier le pack java_buildpack avec l'option -b. Par exemple :
-<pre>
-    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
-</pre>
+
+```
+ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+```
 
 Pour plus d'informations sur l'environnement d'exécution Tomcat, voir le fichier [Readme java-buildpack](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md).
 
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} propose une application de démarrage Tomcat.  L'application de démarrage Tomcat est une application Tomcat simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}. Voir [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix_notm}} propose une application de démarrage Tomcat.  L'application de démarrage Tomcat est une application Tomcat simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}. Voir [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}

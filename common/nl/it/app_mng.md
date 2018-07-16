@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -45,14 +45,14 @@ Per abilitare il programma di utilità Gestione applicazioni, imposta il valore 
 Ad esempio, per abilitare i programmi di utilità *hc*, *debug* e *trace*, immetti il seguente comando:
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
 ```
 {: codeblock}
 
 Prepara di nuovo la tua applicazione dopo aver impostato la variabile di ambiente:
 
 ```
-cf restage myApp
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
@@ -62,15 +62,15 @@ la variabile di ambiente *BLUEMIX_APP_MGMT_INSTALL* su 'false' e prepara di nuov
 Ad esempio, immetti i seguenti comandi per preparare la tua applicazione senza il programma di utilità Gestione applicazioni:
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
-cf restage myApp
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
 ## Limitazioni
 {: #restrictions}
 * Le modifiche che apporti alla tua applicazione utilizzando Gestione applicazioni sono transitorie e vanno perse dopo che esci da questa modalità. Questa modalità serve solo per un uso di sviluppo temporaneo e non è prevista per l'utilizzo in un ambiente di produzione per via delle prestazioni. 
-* Per le applicazioni Node.js, la maggior parte dei programmi di utilità di Gestione applicazioni non funziona se imposti il tuo comando **start** nel file (comando) `manifest.yml` o `CF CLI (-c)`. Questi metodi sono delle sostituzioni del pacchetto di build e rappresentano l'antimodello per l'avvio delle applicazioni Node.js. Per dei risultati ottimali, imposta il comando **start** nel file `package.json` o `Procfile`.
+* Per le applicazioni Node.js, la maggior parte dei programmi di utilità di Gestione applicazioni non funziona se hai impostato il tuo comando **start** nel file `manifest.yml` o con l'opzione `-c` nella riga di comando. Questi metodi sono delle sostituzioni del pacchetto di build e rappresentano l'antimodello per l'avvio delle applicazioni Node.js. Per dei risultati ottimali, imposta il comando **start** nel file `package.json` o `Procfile`.
 
 ### Programmi di utilità Liberty e Node.js
 {: #liberty_and_node_utilities}
@@ -107,7 +107,7 @@ Per Node versione 6.3.0 o superiore, la console di sviluppo fornisce un pulsante
 #### hc
 {: #hc}
 
-L'agent Health Center (*hc*) abilita il monitoraggio della tua applicazione mediante il client Health Center. Per Node.js, l'agent *hc* è disponibile solo con le versioni di runtime di Node.js incluse con il pacchetto di build IBM SDK for Node.js.  Consulta [Aggiornamenti più recenti al pacchetto di build sdk-for-nodejs](/docs/runtimes/nodejs/updates.html) per la serie corrente dei runtime. 
+L'agent Health Center (*hc*) abilita il monitoraggio della tua applicazione mediante il client Health Center. Per Node.js, l'agent *hc* è disponibile solo con le versioni di runtime di Node.js incluse con il pacchetto di build IBM SDK for Node.js.  Consulta [Aggiornamenti più recenti al pacchetto di build sdk-for-nodejs](/docs/runtimes/nodejs/updates.html) per la serie corrente dei runtime.
 
 Quando l'agent Health Center è abilitato, puoi analizzare le prestazioni delle tue applicazioni Liberty e Node.js utilizzando gli strumenti IBM Monitoring and Diagnostic. Per ulteriori informazioni, vedi [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}.
 
@@ -115,17 +115,14 @@ Quando l'agent Health Center è abilitato, puoi analizzare le prestazioni delle 
 
 **Utilizzo di *hc* con *noproxy* **
 
-Il programma di utilità *hc* può essere utilizzato insieme a *noproxy*. Per utilizzare Health Center con *noproxy*, stabilisci prima l'inoltro alla porta utilizzando il comando `cf ssh`. Ad esempio:
+Il programma di utilità *hc* può essere utilizzato insieme a *noproxy*. Per utilizzare Health Center con *noproxy*, stabilisci prima l'inoltro alla porta utilizzando il comando `ibmcloud cf ssh`. Ad esempio:
 
 ```
-cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
+ibmcloud cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 {: codeblock}
 
-Successivamente, per il collegamento al client Health Center, utilizza
-[MQTT connection
-![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} e specifica l'host come
-`127.0.0.1` e la porta come `1883`.
+Successivamente, per il collegamento al client Health Center, utilizza [MQTT connection ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.ibm.com/support/knowledgecenter/SS3KLZ/com.ibm.java.diagnostics.healthcenter.doc/topics/connectingtojvm.html){: new_window} e specifica l'host come `127.0.0.1` e la porta come `1883`.
 
 #### shell
 {: #shell}
@@ -141,7 +138,7 @@ Dopo aver effettuato l'accesso al programma di utilità *shell* viene visualizza
 
 **Importante:** anche il programma di utilità *shell* avvia *proxy*.
 
-Diego fornisce una shell interattiva tramite il comando `cf ssh`, per cui il programma di utilità *shell* è utile solo alle applicazioni in esecuzione su un DEA.
+Diego fornisce una shell interattiva tramite il comando `ibmcloud cf ssh`, per cui il programma di utilità *shell* è utile solo alle applicazioni in esecuzione su un DEA.
 {: .tip}
 
 
@@ -149,10 +146,7 @@ Diego fornisce una shell interattiva tramite il comando `cf ssh`, per cui il pro
 {: #devmode}
 La modalità di sviluppo è una funzione di [Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/docs/manageapps/eclipsetools/eclipsetools.html) che offre agli sviluppatori la possibilità di utilizzare le proprie applicazioni mentre sono in esecuzione nel cloud. La modalità di sviluppo in Eclipse Tools ti fornisce un modo di utilizzare le tue applicazioni in {{site.data.keyword.cloud_notm}} con uno spazio di lavoro sicuro e temporaneo.
 
-La modalità di sviluppo è supportata sia per le applicazioni Liberty che Node.js. Con la modalità di sviluppo
-abilitata per la tua applicazione Liberty o Node.js, puoi aggiornare i file di applicazione in modo incrementale
-senza dover distribuire l'applicazione. Puoi anche stabilire una sessione di debug con la tua
-applicazione. La modalità di sviluppo per le applicazioni Liberty è equivalente all'abilitazione dei programmi di utilità di Gestione applicazioni *debug* e *jmx*. Per le applicazioni Node.js, è equivalente all'abilitazione del programma di utilità *inspector*.
+La modalità di sviluppo è supportata sia per le applicazioni Liberty che Node.js. Con la modalità di sviluppo abilitata per la tua applicazione Liberty o Node.js, puoi aggiornare i file di applicazione in modo incrementale senza dover distribuire l'applicazione. Puoi anche stabilire una sessione di debug con la tua applicazione. La modalità di sviluppo per le applicazioni Liberty è equivalente all'abilitazione dei programmi di utilità di Gestione applicazioni *debug* e *jmx*. Per le applicazioni Node.js, è equivalente all'abilitazione del programma di utilità *inspector*.
 
 ### Programmi di utilità Liberty
 {: #liberty_utilities}
@@ -166,12 +160,12 @@ Il programma di utilità *debug* mette l'applicazione Liberty in modalità di de
 
 **Importante:** il programma di utilità *debug* avvia *proxy*.
 
-Il programma di utilità *debug* può essere utilizzato insieme a *noproxy*. Per utilizzare debug con *noproxy*, stabilisci prima l'inoltro alla porta utilizzando il comando `cf ssh`. 
+Il programma di utilità *debug* può essere utilizzato insieme a *noproxy*. Per utilizzare debug con *noproxy*, stabilisci prima l'inoltro alla porta utilizzando il comando `ibmcloud cf ssh`. 
 
-Il seguente frammento di codice mostra un esempio del formato del comando `cf ssh`:
+Il seguente frammento di codice mostra un esempio del formato del comando `ibmcloud cf ssh`:
 
 ```
-cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
+ibmcloud cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 ```
 {: codeblock}
 
@@ -185,7 +179,7 @@ Il programma di utilità *jmx* abilita il connettore JMX REST per consentire a u
 Puoi monitorare più istanze di un'applicazione utilizzando JMX, ma richiede una connessione JMX separata per ogni istanza. Il valore predefinito è di monitorare l'istanza 0. Per monitorare l'istanza 1, puoi utilizzare il seguente frammento di codice:
 
 ```
-cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
+ibmcloud cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
 ```
 {: codeblock}
 
@@ -201,10 +195,10 @@ Il programma di utilità *localjmx* abilita la funzione [localConnector-1.0 ![Ic
 
 **Prima di iniziare**: *localjmx* ti richiede di installare JConsole.
 
-Il programma di utilità *localjmx* si applica solo alle applicazioni in esecuzione in una cella Diego. Per utilizzare *localjmx*, stabilisci prima l'inoltro alla porta utilizzando il comando `cf ssh`.  Ad esempio:
+Il programma di utilità *localjmx* si applica solo alle applicazioni in esecuzione in una cella Diego. Per utilizzare *localjmx*, stabilisci prima l'inoltro alla porta utilizzando il comando `ibmcloud cf ssh`.  Ad esempio:
 
 ```
-cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
+ibmcloud cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 {: codeblock}
 
@@ -224,15 +218,15 @@ Quando avvii la modalità di debug, *proxy* viene automaticamente abilitato, anc
 
 Invece di utilizzare *proxy* per accedere all'interfaccia *inspector*, utilizza la funzionalità Developer Tools del browser web Google Chrome.  
 
-Abilita l'accesso all'URL con l'inoltro della porta locale con il seguente comando: 
+Abilita l'accesso all'URL con l'inoltro della porta locale con il seguente comando:
 ```
-cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
+ibmcloud cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 {: codeblock}
 
 Richiama il log di avvio dell'applicazione utilizzando il seguente comando:
 ```
-cf logs <appName> --recent
+ibmcloud cf logs <appName> --recent
 ```
 {: codeblock}
 
@@ -252,7 +246,7 @@ Se utilizzi *proxy,* puoi accedere all'interfaccia *inspector* all'indirizzo `ht
 Se non utilizzi il programma di utilità *proxy*, abilita l'accesso all'URL dell'applicazione utilizzando l'inoltro alla porta locale con il seguente comando:
 
 ```
-cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
+ibmcloud cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
 ```
 {: codeblock}
 

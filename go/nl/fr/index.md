@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2017-06-21"
 
 ---
 
@@ -23,7 +23,7 @@ Le pack go_buildpack est utilisé si votre application contient un fichier nomm�
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} propose une application de démarrage Go.  Il s'agit d'une appli Go simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez l'utiliser pour faire des essais, faire des modifications et les pousser vers l'environnement {{site.data.keyword.Bluemix_notm}}. Consultez [Utilisation des applications de démarrage](/docs/cfapps/starter_app_usage.html) pour obtenir de l'aide sur l'application de démarrage.
+{{site.data.keyword.Bluemix_notm}} propose une application de démarrage Go.  Il s'agit d'une appli Go simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez l'utiliser pour faire des essais, faire des modifications et les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}. Consultez [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide sur l'application de démarrage.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}
@@ -54,9 +54,7 @@ Les versions de Go suivantes sont disponibles dans le [pack de construction Go](
 * 1.8.1
 * 1.8.3
 
-Si votre application requiert une version de Go qui n'est pas répertoriée ci-dessus, vous pouvez utiliser le
-[pack de construction Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externe pour déployer
-l'application.
+Si votre application requiert une version de Go qui n'est pas répertoriée ci-dessus, vous pouvez utiliser le [pack de construction Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externe pour déployer l'application.
 
 # rellinks
 {: #rellinks notoc}

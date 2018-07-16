@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -18,23 +18,23 @@ Variabili di ambiente supportate da Liberty for Java.
 
 <table>
 <tr>
-<th align="left">Nome</th>
+<th align="left">Nome variabile di ambiente</th>
 <th align="left">Descrizione</th>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Abilita i [programmi di utilità di Gestione applicazioni](/docs/manageapps/app_mng.html)</td>
+<td>Abilita i [programmi di utilità di Gestione applicazioni](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Installa i [programmi di utilità di Gestione applicazioni](/docs/manageapps/app_mng.html)</td>
+<td>Installa i [programmi di utilità di Gestione applicazioni](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>IBM_LIBERTY_BETA</td>
-<td>Abilita le [funzioni beta Liberty](usingBetaFeatures.html)</td>
+<td>Abilita le [funzioni beta Liberty/](usingBetaFeatures.html)</td>
 </tr>
 
 <tr>
@@ -102,10 +102,60 @@ Variabili di ambiente supportate da Liberty for Java.
 <td>Disabilita il servizio di [configurazione automatica.](autoConfig.html#opting_out)</td>
 </tr>
 </table>
+{: caption="Tabella 1. Variabili di ambiente disponibili per Liberty for Java" caption-side="top"}
+
+## Attributi disabilitati nel pacchetto di build Liberty for Java
+
+Ci sono alcuni attributi che sono automaticamente disabilitati dal pacchetto di build Liberty e che non puoi sovrascrivere. Le variabili di ambiente e gli attributi di seguito indicati sono disabilitati.
+
+### Tabella degli attributi disabilitati
+
+<table>
+<tr>
+<th>Attributo disabilitato</th>
+<th>Elemento</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="Tabella 1. Attributi disabilitati da Liberty for Java" caption-side="top"}
 
 # rellinks
 {: #rellinks notoc}
 ## general
 {: #general notoc}
 * [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

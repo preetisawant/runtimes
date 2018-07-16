@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -23,12 +23,15 @@ Seguindo o tutorial de introdução do Liberty for Java, você irá configurar u
 implementará um aplicativo localmente e no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados em seu
 aplicativo.
 
+Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualizadas para a CLI do {{site.data.keyword.Bluemix_notm}}! A CLI do {{site.data.keyword.Bluemix_notm}} tem os mesmos comandos conhecidos do Cloud Foundry, mas com uma melhor integração com as contas do {{site.data.keyword.Bluemix_notm}} e outros serviços. Saiba mais sobre como começar a usar a CLI do {{site.data.keyword.Bluemix_notm}} neste tutorial.
+{: tip}
+
 ## Antes de Começar
 {: #prereqs}
 
 Você precisará das contas e ferramentas a seguir:
-* [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [ {{site.data.keyword.Bluemix_notm}}  conta ](https://console.bluemix.net/registration/)
+* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://maven.apache.org/download.cgi){: new_window}
 
@@ -36,10 +39,11 @@ Você precisará das contas e ferramentas a seguir:
 {: #clone}
 
 Primeiro, clone o repositório GitHub do app de amostra.
-  ```bash
-git clone https://github.com/IBM-Bluemix/get-started-java
+
   ```
-  {: pre}
+git clone https://github.com/IBM-Cloud/get-started-java
+  ```
+  {: codeblock}
 
 
 ## Etapa 2: executar o app localmente usando a linha de comandos
@@ -52,25 +56,26 @@ Use Maven para construir seu código-fonte e execute o app resultante.
   ```
 cd get-started-java
   ```
-  {: pre}
+  {: codeblock}
 
 1. Use Maven para instalar as dependências e construir o arquivo .war.
 
   ```
 mvn clean install
   ```
-  {: pre}
+  {: codeblock}
 
 1. Execute o app localmente no Liberty.
+
   ```
 mvn install liberty:run-server
   ```
-  {: pre}
+  {: codeblock}
 
 Quando você vir a mensagem *O servidor defaultServer está pronto para executar um planeta mais inteligente.*, será
 possível visualizar seu aplicativo em: http://localhost:9080/GetStartedJava.
 
-Para parar o app, pressione *Ctrl-C* na mesma janela de linha de comandos em que o app foi iniciado.
+Para parar o app, pressione **Ctrl-C** na mesma janela de linha de comandos em que o app foi iniciado.
 
 ## Etapa 3: preparar o app para implementação
 {: #prepare}
@@ -90,83 +95,88 @@ Abra o arquivo manifest.yml e mude o `nome` de `GetStartedJava` para o nome de s
   ```
   {: codeblock}
 
-Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **random-route: true** por **host: myChosenHostName**, fornecendo um nome de host de sua preferência. [Saiba mais...](/docs/manageapps/depapps.html#appmanifest)
+Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **random-route: true** por **host: myChosenHostName**, fornecendo um nome de host de sua preferência.
 {: tip}
 
 ## Etapa 4: implementar no {{site.data.keyword.Bluemix_notm}}
 {: #deploy}
 
-Implemente seu aplicativo para uma das seguintes regiões do {{site.data.keyword.Bluemix_notm}}. Para obter uma latência ideal, escolha uma região mais próxima de seus usuários.
+É possível usar a CLI do {{site.data.keyword.Bluemix_notm}} para implementar apps.
 
-| **Nome da região** | **Local geográfico** | **Endpoint da API** |
-|-----------------|-------------------------|-------------------|
-| Região Sul dos EUA | Dallas, EUA | api.ng.bluemix.net |
-| Região Leste dos EUA | Washington, DC, EUA | api.us-east.bluemix.net |
-| Região do Reino Unido | Londres, Inglaterra | api.eu-gb.bluemix.net |
-| Região de Sydney | Sydney, Austrália | api.au-syd.bluemix.net |
-| Região da Alemanha | Frankfurt, Alemanha | api.eu-de.bluemix.net |
-{: caption="Tabela 1.  {{site.data.keyword.cloud_notm}} lista de região" caption-side="top"}
+1. Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}} e selecione um terminal de API.
 
-1. Configure o terminal de API substituindo `<API-endpoint>` pelo terminal para sua região.
   ```
-cf api <API-endpoint>
+ibmcloud login
   ```
-  {: pre}
+  {: codeblock}
 
-1. Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}}.
+  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
+
   ```
-cf login
+ibmcloud login -- sso
   ```
-  {: pre}
+  {: codeblock}
 
-  Se não for possível efetuar login usando os comandos `cf login` ou `bx login` porque você tem um ID de usuário federado, use os comandos `cf login --sso` ou `bx login --sso` para efetuar login com seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
+1. Tenha como destino uma organização e um espaço do Cloud Foundry:
 
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
+
+  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
 
 1. No diretório `get-started-java`, envie seu aplicativo por push para o {{site.data.keyword.Bluemix_notm}}.
+
   ```
-cf push
+ibmcloud cf push
   ```
-  {: pre}
+  {: codeblock}
 
 A implementação de seu aplicativo pode levar alguns minutos. Quando a implementação for concluída, você verá uma mensagem informando que o app está em execução. Visualize o app na URL listada na saída do comando push ou visualize o status de implementação do app e a URL, executando o comando a seguir:
-  ```
-cf apps
-  ```
-  {: pre}
 
-É possível solucionar erros no processo de implementação usando o comando `cf logs <Your-App-Name> --recent`.
+  ```
+Ibmcloud cf apps
+  ```
+  {: codeblock}
+
+É possível solucionar problemas de erros no processo de implementação usando os `ibmcloud cf logs <Your-App-Name> --recent`.
 {: tip}  
 
 ## Etapa 5: incluir um banco de dados
 {: #add_database}
 
-Em seguida, vamos incluir um banco de dados NoSQL nesse aplicativo e configurar o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
+Em seguida, incluiremos um banco de dados NoSQL do {{site.data.keyword.cloudant_short_notm}} nesse aplicativo e configuraremos o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
 1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
-2. Escolha a seção **Dados e análise de dados**, selecione **Cloudant NoSQL DB** e crie seu serviço.
+2. Escolha a seção **Dados e análise de dados**, selecione o **{{site.data.keyword.cloudant_short_notm}}** e crie o seu serviço.
 3. Acesse a visualização **Conexões**, selecione seu aplicativo e, em seguida, **Criar conexão**.
 4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
-As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte. [Saiba mais...](/docs/manageapps/depapps.html#app_env)
+As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte.
 {: tip}
 
-## Etapa 7: usar o banco de dados
+## Etapa 6: usar o banco de dados
 {: #use_database}
 Vamos agora atualizar seu código local para apontar para esse banco de dados. Vamos armazenar as credenciais dos serviços em um arquivo de propriedades. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente `VCAP_SERVICES`.
 
-1. Em seu navegador, acesse {{site.data.keyword.Bluemix_notm}} e selecione **Apps > _seu app_ > Conexões > Cloudant > Visualizar credenciais**.
+1. Em seu navegador, acesse o painel do {{site.data.keyword.Bluemix_notm}} e selecione **_seu app_ > Conexões**. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e selecione **Visualizar credenciais**.
 
-2. Copie e cole apenas a `URL` das credenciais no campo `URL` do arquivo `cloudant.properties` e salve as mudanças.
+2. Copie e cole apenas a `url` das credenciais para o campo `url` do arquivo
+`src/main/resources/cloudant.properties` e salve as mudanças.
+
   ```
-  cloudant_url=https://123456789 ... bluemix.cloudant.com
+cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
-  {:pre}
+  {:codeblock}
 
-3. Reinicie o servidor
+3. Reinicie o servidor.
 
-  Atualize seu navegador em http://localhost:9080/GetStartedJava/. Os nomes que você inserir no app serão agora incluídos no banco de dados.
+Atualize seu navegador em http://localhost:9080/GetStartedJava/. Quaisquer nomes que você inserir no aplicativo serão agora
+incluídos no banco de dados.
 
-  Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados. Os nomes que você incluir de qualquer um dos apps aparecerão em ambos quando os navegadores forem atualizados.
+Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados. Os nomes que você incluir de qualquer um dos apps aparecerão em ambos quando os navegadores forem atualizados.
 
 Lembre-se, se você não precisar do app em tempo real no {{site.data.keyword.Bluemix_notm}}, pare-o para não incorrer em encargos inesperados.
 {: tip}  

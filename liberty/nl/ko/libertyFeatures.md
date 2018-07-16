@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-02-14"
 # {{site.data.keyword.cloud_notm}}에서 지원되는 Liberty 기능
 {: #liberty_features}
 
-Liberty for Java 인스턴트 런타임에는 Liberty 기능의 서브세트가 포함됩니다. Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 수 없기 때문에 Liberty for Java 인스턴트 런타임에서 사용할 수 없습니다.
+Liberty for Java 인스턴트 런타임에는 Liberty 기능의 서브세트가 포함됩니다.  Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 수 없기 때문에 Liberty for Java 인스턴트 런타임에서 사용할 수 없습니다.
 
 {{site.data.keyword.Bluemix_notm}}에 특정한 다음 기능이 포함됩니다.
 * appstate-2.0
@@ -21,7 +21,7 @@ Liberty for Java 인스턴트 런타임에는 Liberty 기능의 서브세트가 
 
 WAR 또는 EAR 파일을 배치하면 사용 가능한 기능 서브세트가 기본적으로 사용됩니다.  세부사항은 [독립형 앱](optionsForPushing.html#stand_alone_apps)을 참조하십시오.
 
-Liberty for Java 런타임에서는 일부 Liberty 베타 기능도 사용 가능합니다. 해당 기능은 나열되어 있지 않지만 [베타 기능 사용](/docs/runtimes/liberty/usingBetaFeatures.html)에서 이를 찾을 수 있습니다. 
+Liberty for Java 런타임에서는 일부 Liberty 베타 기능도 사용 가능합니다. 해당 기능은 나열되어 있지 않지만 [베타 기능 사용](/docs/runtimes/liberty/usingBetaFeatures.html)에서 이를 찾을 수 있습니다.
 
 서버는 호환 불가능한 기능은 로드할 수 없으므로 호환 가능한 기능만 사용하도록 구성해야 합니다. 
     <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">지원되는 Java EE 6 및 7 기능 조합</a>을 참조하십시오.
@@ -36,7 +36,7 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 
 ## Liberty 기능 색인
 {: #libertyfeat_index}
-다음 색인을 사용하여 기능 목록의 섹션으로 건너뛰거나 [Liberty 기능 목록](#libertyfeat_list)을 검토할 수 있습니다. 
+다음 색인을 사용하여 기능 목록의 섹션으로 건너뛰거나 [Liberty for Java 기능 목록](#libertyfeat_list)을 검토할 수 있습니다. 
 
 ### A-E
 * [A](#libertyfeat_A)
@@ -46,6 +46,7 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 
 ### F-J
 * [F](#libertyfeat_F)
+* [H](#libertyfeat_H)
 * [J](#libertyfeat_J)
 
 ### K-O
@@ -92,6 +93,7 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
+* constrainedDelegation-1.0
 * couchdb-1.0
 
 ### E
@@ -107,6 +109,11 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 {: #libertyfeat_f}
 
 * federatedRegistry-1.0
+
+### H
+{: #libertyfeat_h}
+
+* httpWhiteboard-1.0
 
 ### J
 {: #libertyfeat_J}
@@ -124,6 +131,7 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 * jcaInboundSecurity-1.0
 * jdbc-4.0
 * jdbc-4.1
+* jdbc-4.2
 * jms-1.1
 * jms-2.0
 * jmsMdb-3.1
@@ -133,6 +141,7 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 * jpa-2.1
 * jsf-2.0
 * jsf-2.2
+* jsfContainer-2.2
 * json-1.0
 * jsonp-1.0
 * jsp-2.2
@@ -149,24 +158,32 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 ### M
 {: #libertyfeat_M}
 * managedBeans-1.0
-* managedBeans-1.0
 * mdb-3.1
 * mdb-3.2
 * mediaServerControl-1.0     
-* microprofile-1.0
-* microprofile-1.2
+* microProfile-1.0
+* microProfile-1.2
+* microProfile-1.3
 * mongodb-2.0
 * monitor-1.0
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
 * oauth-2.0
 * openapi-3.0
+* openapi-3.1
 * openid-2.0
 * openidConnectClient-1.0
 * openidConnectServer-1.0
+* opentracing-1.0
 * osgi.jpa-1.0
 * osgiAppIntegration-1.0
+* osgiBundle-1.0
 * osgiConsole-1.0
 
 ### P
@@ -188,7 +205,6 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 * servlet-3.0
 * servlet-3.1
 * sessionDatabase-1.0
-* sipServlet-1.1
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0
@@ -222,4 +238,4 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 ## 일반
 {: #general notoc}
 * [Liberty 런타임](index.html)
-* [Liberty 프로파일 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Liberty 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

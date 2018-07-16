@@ -14,4 +14,4 @@ lastupdated: "2018-02-22"
 
 請使用下列資源，對 Go 應用程式及建置套件進行疑難排解：
 
-* [運行環境的疑難排解](../../troubleshoot/ts_runtimes.html#runtimes)
+* [運行環境的疑難排解](../common/ts_runtimes.html#runtimes)

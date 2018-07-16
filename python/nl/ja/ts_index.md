@@ -14,5 +14,5 @@ lastupdated: "2018-02-22"
 
 Python アプリケーションおよびビルドパックのトラブルシューティングには、以下の資料を使用できます。
 
-* [ランタイムに関するトラブルシューティング](../../troubleshoot/ts_runtimes.html#runtimes)
-* [ランタイムに関するトラブルシューティング: Python](../../troubleshoot/ts_runtimes.html#ts_python)
+* [ランタイムに関するトラブルシューティング](../common/ts_runtimes.html#runtimes)
+* [ランタイムに関するトラブルシューティング: Python](../common/ts_runtimes.html#ts_python)

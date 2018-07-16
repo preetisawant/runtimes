@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -35,7 +35,7 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 
 ## Liberty 功能索引
 {: #libertyfeat_index}
-使用以下索引跳至功能列表的相应部分，也可以浏览整个 [Liberty 功能列表](#libertyfeat_list)。
+可以使用以下索引跳至功能列表的相应部分，也可以浏览整个 [Liberty for Java 功能列表](#libertyfeat_list)。
 
 ### A-E
 * [A](#libertyfeat_A)
@@ -45,6 +45,7 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 
 ### F-J
 * [F](#libertyfeat_F)
+* [H](#libertyfeat_H)
 * [J](#libertyfeat_J)
 
 ### K-O
@@ -91,6 +92,7 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 * cloudant-1.0
 * cloudAutowiring-1.0 
 * concurrent-1.0
+* constrainedDelegation-1.0
 * couchdb-1.0
 
 ### E
@@ -106,6 +108,11 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 {: #libertyfeat_f}
 
 * federatedRegistry-1.0
+
+### H
+{: #libertyfeat_h}
+
+* httpWhiteboard-1.0
 
 ### J
 {: #libertyfeat_J}
@@ -123,6 +130,7 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 * jcaInboundSecurity-1.0
 * jdbc-4.0
 * jdbc-4.1
+* jdbc-4.2
 * jms-1.1
 * jms-2.0
 * jmsMdb-3.1 
@@ -132,6 +140,7 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 * jpa-2.1
 * jsf-2.0
 * jsf-2.2
+* jsfContainer-2.2
 * json-1.0 
 * jsonp-1.0
 * jsp-2.2
@@ -148,24 +157,32 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 ### M
 {: #libertyfeat_M}
 * managedBeans-1.0
-* managedBeans-1.0
 * mdb-3.1
 * mdb-3.2 
 * mediaServerControl-1.0     
-* microprofile-1.0
-* microprofile-1.2
+* microProfile-1.0
+* microProfile-1.2
+* microProfile-1.3
 * mongodb-2.0 
 * monitor-1.0 
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
 * oauth-2.0 
 * openapi-3.0
+* openapi-3.1
 * openid-2.0 
 * openidConnectClient-1.0 
 * openidConnectServer-1.0 
+* opentracing-1.0
 * osgi.jpa-1.0 
 * osgiAppIntegration-1.0
+* osgiBundle-1.0
 * osgiConsole-1.0 
 
 ### P
@@ -187,7 +204,6 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 * servlet-3.0
 * servlet-3.1
 * sessionDatabase-1.0 
-* sipServlet-1.1
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0
@@ -221,4 +237,4 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 ## 常规
 {: #general notoc}
 * [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)
+* [Liberty 概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

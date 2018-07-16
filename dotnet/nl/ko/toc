@@ -23,8 +23,8 @@ ASP.NET Core
 
     {: .topicgroup}
     스타터 애플리케이션 및 커뮤니티 빌드팩
-        [스타터 애플리케이션 사용](../../cfapps/starter_app_usage.html)
-        [커뮤니티 빌드팩 사용](../../cfapps/byob.html)
+        [스타터 애플리케이션 사용](../common/starter_app_usage.html)
+        [커뮤니티 빌드팩 사용](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

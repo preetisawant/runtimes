@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -12,22 +12,16 @@ lastupdated: "2017-11-08"
 # Utiliser New Relic pour surveiller Liberty dans {{site.data.keyword.cloud_notm}}
 {: #new_relic}
 
-New Relic est un service tiers qui fournit des mesures de surveillance pour votre application. Pour
-plus d'informations sur le service fourni par New Relic, voir [New
-Relic](http://newrelic.com/java).
+New Relic est un service tiers qui fournit des mesures de surveillance pour votre application. Pour plus d'informations sur le service fourni par New Relic, voir [New Relic](http://newrelic.com/java).
 
-D'après la [documentation relative à l'installation manuelle de l'agent Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), les applications Java qui doivent être surveillées par le service New Relic doivent généralement être regroupées et configurées avec un agent New Relic et une clé de licence de compte. Dans l'environnement {{site.data.keyword.Bluemix}}, vous pouvez obtenir un contrat de licence et un compte New Relic en créant une instance de service dans {{site.data.keyword.Bluemix_notm}}. Les
-applications Java peuvent ensuite être liées à l'instance de serveur New Relic et le pack de construction Liberty configure automatiquement l'application prête à être surveillée par le service New Relic.
-Le
-pack de construction :
+D'après la [documentation relative à l'installation manuelle de l'agent Java](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation), les applications Java qui doivent être surveillées par le service New Relic doivent généralement être regroupées et configurées avec un agent New Relic et une clé de licence de compte. Dans l'environnement {{site.data.keyword.Bluemix}}, vous pouvez obtenir un contrat de licence et un compte New Relic en créant une instance de service dans {{site.data.keyword.Bluemix_notm}}. Les applications Java peuvent ensuite être liées à l'instance de serveur New Relic et le pack de construction Liberty configure automatiquement l'application prête à être surveillée par le service New Relic.
+Le pack de construction :
 
 * fournit un agent New Relic à l'application,
 * obtient le nom de l'application et la clé de licence à partir des variables d'environnement VCAP_APPLICATION et VCAP_SERVICES,
 * configure les propriétés et le modèle de configuration requis par l'agent New Relic.
 
-Voici
-un exemple de configuration généré par le pack de construction Liberty
-pour l'application :
+Voici un exemple de configuration généré par le pack de construction Liberty pour l'application :
 
 ```
     -javaagent:/home/vcap/app/.new_relic_agent/new_relic_agent-3.12.0.jar
@@ -44,9 +38,9 @@ pour l'application :
 Pour une application Java existante à surveiller avec New Relic dans {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 1. Créez une instance de service New Relic dans {{site.data.keyword.Bluemix_notm}}.
 
-  <pre>
-    $ cf create-service newrelic standard mynewrelic
-  </pre>
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
   {: codeblock}
 
 2. Déployez l'application dans {{site.data.keyword.Bluemix_notm}} avec le service New Relic.  Consultez l'exemple de manifeste d'application suivant :
@@ -70,24 +64,17 @@ Pour une application Java existante à surveiller avec New Relic dans {{site.dat
 ### Ajout d'un service New Relic fourni par l'utilisateur
 {: #add_user_provided_new_relic}
 
-Si vous disposez d'un compte New
-Relic existant et d'une clé de licence, vous pouvez lier le service New Relic
-existant à l'application à l'aide d'un "service fourni par
-l'utilisateur".
+Si vous disposez d'un compte New Relic existant et d'une clé de licence, vous pouvez lier le service New Relic existant à l'application à l'aide d'un "service fourni par l'utilisateur".
 
-1. Créez une instance de service fourni par l'utilisateur avec votre clé
-de licence existante.  Par exemple, si votre clé de licence existante est
-1234567, vous pouvez utiliser l'interface de ligne de
-commande CF pour entrer la commande "create-user-provided-service" et indiquer
-la clé de licence 1234567 à l'invite, comme illustré ci-dessous :
+1. Créez une instance de service fourni par l'utilisateur avec votre clé de licence existante.  Si, par exemple, votre clé de licence existante est 1234567, vous pouvez utiliser l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour entrer la commande "create-user-provided-service" et indiquer la clé de licence 1234567 à l'invite, comme illustré ci-dessous :
+  
   ```
-    $ cf create-user-provided-service mynewrelic -p "licenseKey"
+    ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
   ```
   {: codeblock}
 
-2. Déployez votre application sur {{site.data.keyword.Bluemix_notm}} avec l'instance de service New Relic fournie par l'utilisateur.  Voici un
-exemple de manifeste d'application qui utilise une instance de service New Relic fournie par l'utilisateur :
+2. Déployez votre application sur {{site.data.keyword.Bluemix_notm}} avec l'instance de service New Relic fournie par l'utilisateur.  Voici un exemple de manifeste d'application qui utilise une instance de service New Relic fournie par l'utilisateur :
   <pre>
         &dash;&dash;&dash;
         applications:
@@ -104,15 +91,9 @@ exemple de manifeste d'application qui utilise une instance de service New Relic
 
 3. Accédez au tableau de bord New Relic pour afficher les mesures de l'application.
 
-La configuration automatique du service New
-Relic diffère de la configuration automatique des autres services car un
-service géré par le conteneur est rendu disponible via l'infrastructure du
-pack de construction.  La configuration automatique de ce service diffère
-donc en trois points :
+La configuration automatique du service New Relic diffère de la configuration automatique des autres services car un service géré par le conteneur est rendu disponible via l'infrastructure du pack de construction.  La configuration automatique de ce service diffère donc en trois points :
 * Il n'est pas possible de résilier.
-* L'intégration de service repose sur l'agent New Relic, un agent Java. Par conséquent, elle est configurée via les options
-Java et non via les variables cloud du
-fichier server.xml.
+* L'intégration de service repose sur l'agent New Relic, un agent Java. Par conséquent, elle est configurée via les options Java et non via les variables cloud du fichier server.xml.
 * La configuration est basée sur les variables VCAP_SERVICES et VCAP_APPLICATION.
 
 # rellinks

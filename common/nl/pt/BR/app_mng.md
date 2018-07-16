@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -45,14 +45,14 @@ Para ativar os utilitários do App Management, configure o valor da variável de
 Por exemplo, para ativar os utilitários *hc*, de *depuração* e de *rastreio*, execute o comando a seguir:
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc+debug+trace
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_ENABLE hc + debug + trace
 ```
 {: codeblock}
 
 Remonte o seu aplicativo após você configurar a variável de ambiente:
 
 ```
-cf restage myApp
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
@@ -61,15 +61,15 @@ Se não deseja que os utilitários do App Management sejam instalados com seu ap
 Por exemplo, execute os seguintes comandos para montar seu aplicativo sem utilitários do App Management:
 
 ```
-cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
-cf restage myApp
+ibmcloud cf set-env myApp BLUEMIX_APP_MGMT_INSTALL false
+ibmcloud cf restage myApp
 ```
 {: codeblock}
 
 ## Restrictions
 {: #restrictions}
 * As mudanças feitas em seu aplicativo usando App Management são temporárias e são perdidas após você sair deste modo. Esse modo é apenas para uso de desenvolvimento provisório e não deve ser usado como um ambiente de produção devido ao desempenho.
-* Para aplicativos Node.js, a maioria dos utilitários do App Management não funcionará se você configurar seu comando **start** no arquivo `manifest.yml` (comando) ou `CF CLI (-c)`. Esses métodos são substituições de buildpack e são antipadrões para iniciar aplicativos Node.js. Para obter melhores resultados, configure o comando **start** no arquivo `package.json` ou `Procfile`.
+* Para aplicativos Node.js, a maioria dos utilitários do App Management não funcionará se você configurar o comando **start** no arquivo `manifest.yml` ou com a opção `-c` na linha de comandos. Esses métodos são substituições de buildpack e são antipadrões para iniciar aplicativos Node.js. Para obter melhores resultados, configure o comando **start** no arquivo `package.json` ou `Procfile`.
 
 ### Utilitários Liberty e Node.js
 {: #liberty_and_node_utilities}
@@ -86,27 +86,27 @@ Alguns utilitários do App Management requerem o uso do utilitário de *proxy* c
 #### noproxy
 {: #noproxy}
 
-O utilitário *noproxy* desativa o utilitário *proxy* quando ele é iniciado automaticamente por outro utilitário. Com o Diego, o proxy não é necessário porque o Diego fornece a capacidade de executar *ssh* diretamente em seu aplicativo e configurar o encaminhamento de porta.
+O utilitário *noproxy* desativa o utilitário *proxy* quando ele é iniciado automaticamente por outro utilitário.  Com o Diego, o proxy não é necessário porque o Diego fornece a capacidade de executar *ssh* diretamente em seu aplicativo e configurar o encaminhamento de porta.
 
 O utilitário *noproxy* se aplica apenas a aplicativos que são executados em uma célula do Diego.
 
 #### devconsole
 {: #devconsole}
 
-Os usuários podem reiniciar, parar ou suspender seus aplicativos com o utilitário do console de desenvolvimento (*devconsole*). Os usuários também podem ativar ou acessar os utilitários shell e inspector usando o *devconsole*. É possível usar a URL a seguir para acessar o *devconsole*:s
+Os usuários podem reiniciar, parar ou suspender seus aplicativos com o utilitário do console de desenvolvimento (*devconsole*). Os usuários também podem ativar ou acessar os utilitários shell e inspector usando o *devconsole*.  É possível usar a URL a seguir para acessar o *devconsole*:s
 ```
   https://<yourappname>.mybluemix.net/bluemix-debug/manage
 ```
 {: codeblock}
 
-Para o Node versão 6.3.0 ou mais recente, o console de desenvolvimento fornece um botão de reinicialização para o seu aplicativo e acesso ao utilitário *shell*. Consulte a discussão do *inspetor* para obter mais informações.
+Para o Node versão 6.3.0 ou mais recente, o console de desenvolvimento fornece um botão de reinicialização para o seu aplicativo e acesso ao utilitário *shell*.  Consulte a discussão do *inspetor* para obter mais informações.
 
 **Importante**: o utilitário *devconsole* inicia o *proxy*.
 
 #### hc
 {: #hc}
 
-O agente do Health Center (*hc*) permite que o seu aplicativo seja monitorado pelo cliente do Health Center.  Para Node.js, o agente *hc* está disponível apenas com as versões de tempo de execução do Node.js incluído com o IBM SDK para o buildpack Node.js. Veja [Atualizações mais recentes para o buildpack sdk-for-nodejs](/docs/runtimes/nodejs/updates.html) para obter o conjunto atual de tempos de execução.
+O agente do Health Center (*hc*) permite que o seu aplicativo seja monitorado pelo cliente do Health Center.  Para Node.js, o agente *hc* está disponível apenas com as versões de tempo de runtime do Node.js incluído com o IBM SDK para o buildpack Node.js.  Veja [Atualizações mais recentes para o buildpack sdk-for-nodejs](/docs/runtimes/nodejs/updates.html) para obter o conjunto atual de tempos de execução.
 
 Quando você tiver o agente do Health Center ativado, será possível analisar o desempenho de seus aplicativos Liberty e Node.js usando o IBM Monitoring and Diagnostic Tools. Para obter mais informações, veja [Como analisar o desempenho de apps Liberty Java ou Node.js no {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}.
 
@@ -114,10 +114,10 @@ Quando você tiver o agente do Health Center ativado, será possível analisar o
 
 **Usando *hc* com *noproxy* **
 
-O utilitário *hc* pode ser usado em conjunção com *noproxy*. Para usar o Health Center com *noproxy*, estabeleça primeiramente o encaminhamento de porta usando o comando `cf ssh`. Por exemplo:
+O utilitário *hc* pode ser usado em conjunção com *noproxy*. Para usar o Health Center com *noproxy*, primeiro estabeleça o encaminhamento de porta usando o comando `ibmcloud cf ssh`. Por exemplo:
 
 ```
-cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
+ibmcloud cf ssh -N -T -L 1883:127.0.0.1:1883 <appName>
 ```
 {: codeblock}
 
@@ -137,7 +137,7 @@ Depois de acessar o utilitário *shell*, uma janela do terminal é exibida com a
 
 **Importante:** o utilitário *shell* também inicia o *proxy*.
 
-O Diego fornece um shell interativo por meio do comando `cf ssh`, portanto, o utilitário *shell* é útil somente para aplicativos em execução em um DEA.
+O Diego fornece um shell interativo por meio do comando ` bmcloud cf ssh`, portanto, o utilitário *shell* é útil apenas para aplicativos em execução em um DEA.
 {: .tip}
 
 
@@ -160,13 +160,12 @@ O utilitário *debug* coloca o aplicativo Liberty no modo de depuração e permi
 
 **Importante:** o utilitário *debug* inicia o *proxy*.
 
-O utilitário *debug* pode ser usado em conjunção com *noproxy*. Para usar a depuração com
-*noproxy*, estabeleça primeiramente o encaminhamento de porta usando o comando `cf ssh`.
+O utilitário *debug* pode ser usado em conjunção com *noproxy*. Para usar a depuração com *noproxy*, primeiro estabeleça o encaminhamento de porta usando o comando `ibmcloud cf ssh`.
 
-O fragmento de código a seguir mostra um exemplo do formato de comando `cf ssh`:
+O fragmento de código a seguir mostra um exemplo do formato de comando `ibmcloud cf ssh`:
 
 ```
-cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
+ibmcloud cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>
 ```
 {: codeblock}
 
@@ -181,7 +180,7 @@ O utilitário *jmx* ativa o Conector de REST do JMX para permitir que um cliente
 É possível monitorar múltiplas instâncias de um aplicativo usando JMX, mas isso requer uma conexão JMX separada para cada instância. O padrão é monitorar a instância 0. Para monitorar a instância 1, é possível usar o fragmento de código a seguir:
 
 ```
-cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
+ibmcloud cf ssh -i 1 -N -T -L 5000:127.0.0.1:5001
 ```
 {: codeblock}
 
@@ -197,10 +196,10 @@ O utilitário *localjmx* ativa o recurso Liberty [localConnector-1.0 ![Ícone de
 
 **Antes de iniciar**: *localjmx* requer que você instale o JConsole.
 
-O utilitário *localjmx* só é aplicável a aplicativos em execução em uma célula do Diego. Para usar o *localjmx*, estabeleça primeiramente o encaminhamento de porta usando o comando `cf ssh`. Por exemplo:
+O utilitário *localjmx* só é aplicável a aplicativos em execução em uma célula do Diego. Para usar *localjmx*, estabeleça primeiro o encaminhamento de porta usando o comando `ibmcloud cf ssh`. Por exemplo:
 
 ```
-cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
+ibmcloud cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 {: codeblock}
 
@@ -213,7 +212,7 @@ Em seguida, para se conectar ao JConsole, escolha **Processo remoto**, especifiq
 #### inspetor
 {: #inspector}
 
-O utilitário inspector pode ser usado para criar perfis de uso da CPU, incluir pontos de interrupção e depurar código, tudo enquanto seu aplicativo é executado no {{site.data.keyword.cloud_notm}}. Para versões do Node.js antes da 6.3.0, o inspector ativa a interface do depurador do Node Inspector. Para obter mais informações sobre o Node Inspector, consulte o leia-me para [node-inspector no GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/node-inspector/node-inspector){: new_window}.  Para o Node.js versões 6.3.0 e mais recentes, o utilitário *inspector* usa o [V8 Inspector Integration for Node.js ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
+O utilitário inspector pode ser usado para criar perfis de uso da CPU, incluir pontos de interrupção e depurar código, tudo enquanto seu aplicativo é executado no {{site.data.keyword.cloud_notm}}.  Para versões do Node.js antes da 6.3.0, o inspector ativa a interface do depurador do Node Inspector.  Para obter mais informações sobre o Node Inspector, consulte o leia-me para [node-inspector no GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/node-inspector/node-inspector){: new_window}.  Para o Node.js versões 6.3.0 e mais recentes, o utilitário *inspector* usa o [V8 Inspector Integration for Node.js ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
 ##### **Para versões do Node.js após a 6.3.0**
 Ao iniciar o modo de depuração, o *proxy* é automaticamente ativado, mesmo quando você usa uma versão do
@@ -226,13 +225,13 @@ Ferramentas do desenvolvedor do navegador da web do Google Chrome.
 
 Ative o acesso à URL com o encaminhamento de porta local com o comando a seguir:
 ```
-cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
+ibmcloud cf ssh -N -T -L 9229:127.0.0.1:9229 <appName>
 ```
 {: codeblock}
 
 Obtenha o log de inicialização para o aplicativo usando o comando a seguir.
 ```
-cf logs <appName> --recent
+ibmcloud cf logs < appName> -- recentes
 ```
 {: codeblock}
 
@@ -255,7 +254,7 @@ Se você não usar o utilitário *proxy*, ative o acesso à URL do aplicativo us
 porta local com o comando a seguir:
 
 ```
-cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
+ibmcloud cf ssh -N -T -L 8790:127.0.0.1:8790 <appName>
 ```
 {: codeblock}
 

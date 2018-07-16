@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -42,12 +42,12 @@ Liberty para la aplicación:
 Para una aplicación Java existente que se vaya a supervisar con New Relic en {{site.data.keyword.Bluemix_notm}}, siga los pasos siguientes.
 1. Cree una instancia de servicio de New Relic en {{site.data.keyword.Bluemix_notm}}.
 
-  <pre>
-    $ cf create-service newrelic standard mynewrelic
-  </pre>
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
   {: codeblock}
 
-2. Despliegue la aplicación en {{site.data.keyword.Bluemix_notm}} con el servicio de New Relic. Consulte el siguiente manifiesto de aplicación de ejemplo:
+2. Despliegue la aplicación en {{site.data.keyword.Bluemix_notm}} con el servicio de New Relic.  Consulte el siguiente manifiesto de aplicación de ejemplo:
 
   <pre>
         &dash;&dash;&dash;
@@ -71,14 +71,15 @@ Para una aplicación Java existente que se vaya a supervisar con New Relic en {{
 Si ya dispone de una clave de licencia y de una cuenta de New Relic, debe enlazar el servicio
 New Relic existente a la aplicación mediante un "servicio proporcionado por el usuario".
 
-1. Cree una instancia de servicio proporcionada por el usuario utilización su clave de licencia existente.  Por ejemplo, si su clave de licencia existente es 1234567, puede utilizar la CF CLI para crear el servicio proporcionado por el usuario ("create-user-provided-service") y proporcionar la clave de licencia 1234567 en el indicador como se muestra a continuación:
+1. Cree una instancia de servicio proporcionada por el usuario utilización su clave de licencia existente.  Por ejemplo, si su clave de licencia existente es 1234567, puede utilizar la CLI de {{site.data.keyword.Bluemix_notm}} para crear el servicio proporcionado por el usuario ("create-user-provided-service") y proporcionar la clave de licencia 1234567 en el indicador como se muestra a continuación:
+  
   ```
-    $ cf create-user-provided-service mynewrelic -p "licenseKey"
+    ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
   ```
   {: codeblock}
 
-2. Despliegue la aplicación en {{site.data.keyword.Bluemix_notm}} con la instancia de servicio New Relic proporcionada por el usuario. A continuación encontrará un manifiesto de ejemplo que utiliza una instancia de servicio New Relic proporcionada por el usuario:
+2. Despliegue la aplicación en {{site.data.keyword.Bluemix_notm}} con la instancia de servicio New Relic proporcionada por el usuario.  A continuación encontrará un manifiesto de ejemplo que utiliza una instancia de servicio New Relic proporcionada por el usuario:
   <pre>
         &dash;&dash;&dash;
         applications:

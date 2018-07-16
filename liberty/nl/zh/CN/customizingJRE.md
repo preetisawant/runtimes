@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,26 +20,26 @@ lastupdated: "2017-10-26"
 
  缺省情况下，将使用 {{site.data.keyword.IBM_notm}} JRE V8。使用 JBP_CONFIG_IBMJDK 环境变量可指定 {{site.data.keyword.IBM_notm}} JRE 的替代版本。例如，要使用最新版本的 {{site.data.keyword.IBM_notm}} JRE 7.1，请设置以下环境变量：
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
-version 属性可以设置为版本范围。支持两种版本范围：1.7.+ 和 1.8.+。为了获得最佳结果，请使用 Java 8。
+version 属性可以设置为版本范围。支持两种版本范围：1.7.+ 和 1.8.+。为了获得最佳结果，请使用 Java 8。在 V3.19 中，已从 Liberty buildpack 中除去 Java 7。  
 
 ## OpenJDK
 {: #openjdk}
 
-（可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要启用应用程序运行 OpenJDK，请将 JVM 环境变量设置为“openjdk”。例如，使用 cf 命令行工具运行以下命令：
+（可选）应用程序可以配置为以 OpenJDK 作为 JRE 来运行。要使应用程序能够以 OpenJDK 作为 JRE 来运行，请将 JVM 环境变量设置为“openjdk”。例如，使用 {{site.data.keyword.Bluemix_notm}} 命令行工具运行以下命令：
 
 ```
-$ cf set-env myapp JVM 'openjdk'
+    ibmcloud cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 如果启用，缺省情况下，将使用 OpenJDK V8。使用 JBP_CONFIG_OPENJDK 环境变量可指定 OpenJDK 的替代版本。例如，要使用最新版本的 OpenJDK 7，请设置以下环境变量：
 
 ```
-$ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -71,7 +71,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
   * 通过在应用程序内存耗尽时禁用 JVM 转储选项和终止进程来配置应用程序的快速故障恢复。
   * 虚拟化调整（仅限 {{site.data.keyword.IBM_notm}} JRE）。
   * 将发生故障时应用程序的可用内存资源相关信息路由到 Loggregator。
-  * 如果应用程序已配置为启用 JVM 内存转储，那么会禁用 Java 进程终止功能，并会将 JVM 内存转储路由到通用应用程序“dumps”目录。然后，可以从 {{site.data.keyword.Bluemix_notm}} 仪表板或 Cloud Foundry CLI 来查看这些转储。
+  * 如果应用程序已配置为启用 JVM 内存转储，那么会禁用 Java 进程终止功能，并会将 JVM 内存转储路由到通用应用程序“dumps”目录。然后，可以通过 {{site.data.keyword.Bluemix_notm}} 仪表板或 {{site.data.keyword.Bluemix_notm}} CLI 来查看这些转储。
 
 下面是缺省 JVM 配置的示例，它是由 buildpack 为使用 512M 内存限制部署的应用程序生成的：
 
@@ -170,37 +170,37 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 ### 确定运行中应用程序的已应用 JVM 选项
 {: #determining_applied_jvm_options}
 
-除了使用 JVM_ARGS 环境变量指定的应用程序定义选项之外，生成的选项会作为命令行选项（独立 Java 应用程序）或在 `jvm.options` 文件中（非独立 Java 应用程序）持久存储在运行时环境中。针对应用程序应用的 JVM 选项可以从 {{site.data.keyword.Bluemix_notm}} 控制台或 Cloud Foundry CLI 进行查看。
+除了使用 JVM_ARGS 环境变量指定的应用程序定义选项之外，生成的选项会作为命令行选项（独立 Java 应用程序）或在 `jvm.options` 文件中（非独立 Java 应用程序）持久存储在运行时环境中。对应用程序应用的 JVM 选项可以通过 {{site.data.keyword.Bluemix_notm}} 控制台或 {{site.data.keyword.Bluemix_notm}} CLI 进行查看。
 
 独立 Java 应用程序的 JVM 选项会持久存储为命令行选项。这些选项可在 `staging_info.yml` 文件中进行查看。
 
 要查看在 DEA 节点中运行的应用程序上的 `staging_info.yml` 文件，请运行：
 
 ```
-$ cf files myapp staging_info.yml
+    ibmcloud cf files myapp staging_info.yml
 ```
 {: codeblock}
 
 要查看在 Diego 单元中运行的应用程序上的 `staging_info.yml` 文件，请运行：
 
 ```
-    $ cf ssh myapp -c "cat staging_info.yml"
+    ibmcloud cf ssh myapp -c "cat staging_info.yml"
 ```
 {: codeblock}
 
-用于 WAR、EAR、服务器目录和打包服务器部署的 JVM 选项会持久存储在 `jvm.options` 文件中。`jvm.options` 文件所在位置是 `app/wlp/usr/servers/<serverName>/` 目录。在大多数情况下，```<serverName>``` 设置为 `defaultServer`，除非打包服务器是使用其他服务器名称部署的。例如：
+用于 WAR、EAR、服务器目录和打包服务器部署的 JVM 选项会持久存储在 `jvm.options` 文件中。`jvm.options` 文件所在位置是 `app/wlp/usr/servers/<serverName>/` 目录。在大多数情况下，`<serverName>` 设置为 `defaultServer`，但如果打包服务器是使用其他服务器名称部署的，则另当别论。例如：
 
 要查看在 DEA 节点中运行的应用程序上的 `jvm.options` 文件，请运行：
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 要查看在 Diego 单元中运行的应用程序上的 `jvm.options` 文件，请运行：
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
 
@@ -220,22 +220,22 @@ $ cf files myapp staging_info.yml
 * 要查看在 DEA 节点中运行的应用程序上 JVM 生成的详细垃圾回收日志文件，请运行：
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
 * 要查看在 Diego 单元中运行的应用程序上 JVM 生成的详细垃圾回收日志文件，请运行：
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
 ```
 {: codeblock}
 
 * 要更新已部署应用程序的 {{site.data.keyword.IBM_notm}} JRE 选项以在发生 OutOfMemory（内存不足）状况时触发 heap、snap 和 javacore，请使用 JVM 选项设置应用程序的环境变量，然后重新启动应用程序：
 
 ```
-    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
-    $ cf restart myapp
+    ibmcloud cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    ibmcloud cf restart myapp
 ```
 {: codeblock}
 

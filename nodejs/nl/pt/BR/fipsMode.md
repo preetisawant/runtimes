@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -21,7 +21,7 @@ usar um mecanismo ativado para FIPS, configure a variável de ambiente FIPS_MODE
 Por exemplo:
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
@@ -35,8 +35,8 @@ app Express pode ajudar a contornar isso. Por exemplo, é possível fazer o segu
 Consulte este [post do stackoverflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
 para obter mais informações.
 
-**NOTA**: o [Gerenciamento de
-aplicativo](/docs/manageapps/app_mng.html) e o FIPS_MODE NÃO são suportados simultaneamente.  Se a variável de ambiente
+**NOTA** [App Management](../common/app_mng.html) e FIPS_MODE
+*NÃO* são simultaneamente suportados.  Se a variável de ambiente
 BLUEMIX_APP_MGMT_ENABLE for configurada e a variável de ambiente FIPS_MODE for
 configurada como true, o app falhará no estágio.
 

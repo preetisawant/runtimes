@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2017-10-26"
 # Utilizar Oracle JRE
 {: #using_oraacle_jre}
 
-Puede ejecutar la aplicación Liberty en {{site.data.keyword.Bluemix}} con el Oracle JRE si lo ha elegido. Para ello, debe
+Puede ejecutar la aplicación Liberty en {{site.data.keyword.Bluemix}} con el Oracle JRE si lo ha elegido.  Para ello, debe
 * alojar el JRE en una ubicación desde la que pueda descargarlo el paquete de compilación,
 * alojar un archivo `index.yml` que proporciona la ubicación del JRE de host, y
 * configurar la aplicación para utilizar dicho JRE.
@@ -49,7 +49,7 @@ Para la variable JBP_CONFIG_OPENJDK, el valor es
 
 Para establecerlo, puede emitir un mandato como:
 ```
-   $ cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
+   ibmcloud cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
 ```
 {: codeblock}
 
@@ -57,7 +57,7 @@ Tenga en cuenta que el URL *repository_root* no incluye `index.yml`, pero se det
 
 Para establecer el entorno de JVM, la variable emite un mandato como:
 ```
-   $ cf se myApp JVM 'openjdk'
+   ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

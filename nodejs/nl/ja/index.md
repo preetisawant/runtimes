@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
-
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 ---
 
 {:shortdesc: .shortdesc}
@@ -29,11 +28,11 @@ var port = (process.env.PORT || 3000);
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} には、Node.js スターター・アプリケーションが用意されています。  Node.js スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Node.js アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/cfapps/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Node.js スターター・アプリケーションが用意されています。  Node.js スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Node.js アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../common/starter_app_usage.html)を参照してください。
 
 ## アプリケーション管理
 {: #app_management}
-{{site.data.keyword.Bluemix_notm}} には、Node.js アプリケーションを管理およびデバッグするために数多くのユーティリティーが用意されています。  詳しくは、[『アプリケーション管理』](/docs/manageapps/app_mng.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Node.js アプリケーションを管理およびデバッグするために数多くのユーティリティーが用意されています。  詳しくは、[『アプリケーション管理』](../common/app_mng.html)を参照してください。
 
 # 関連リンク
 {: #rellinks notoc}

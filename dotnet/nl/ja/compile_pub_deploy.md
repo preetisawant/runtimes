@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 MSBuild ベースのプロジェクトは、ステージング時に `dotnet publish` コマンドを使用してパブリッシュされるようになっています。  デフォルトでは、ビルドパックは、`Debug` 構成でアプリケーションをパブリッシュします。
 `Release` 構成でアプリケーションをパブリッシュするには、`PUBLISH_RELEASE_CONFIG` 環境変数を `true` に設定します。
 
-これを行うには、CloudFoundry CLI で以下のコマンドを使用します。
+これを行うには、{{site.data.keyword.Bluemix_notm}} CLI で以下のコマンドを使用します。
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 あるいは、アプリケーションの manifest.yml ファイルに以下のように変数を設定することもできます。

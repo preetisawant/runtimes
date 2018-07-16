@@ -13,6 +13,7 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
+    dynatrace.md
 
     {: .topicgroup}
     Lavora offline con un proxy
@@ -28,8 +29,8 @@ SDK for Node.js
 
     {: .topicgroup}
     Applicazioni starter e pacchetti di build
-        [Utilizza le applicazioni starter](../../cfapps/starter_app_usage.html)
-        [Utilizza i pacchetti di build della community](../../cfapps/byob.html)
+        [Utilizza le applicazioni starter](../common/starter_app_usage.html)
+        [Utilizza i pacchetti di build della community](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -37,4 +38,5 @@ SDK for Node.js
     updates.md
     availableVersions.md
     [Istruzione di supporto per il pacchetto di build](../common/buildpackSupport.html)
+
     {: .navgroup-end}

@@ -2,23 +2,34 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-06-27"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Últimas actualizaciones en el paquete de compilación de SDK for Node.js 
+# Últimas actualizaciones en el paquete de compilación de SDK for Node.js
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
+## 1 de junio de 2018: se ha actualizado el paquete de compilación de Node.js v3.20.2
+El paquete de compilación de SDK for Node.js v3.20.2 añade la integración de Dynatrace PaaS gestionada para los tiempos de ejecución de Node.js. Consulte [Utilización de Dynatrace para supervisar Node.js en {{site.data.keyword.cloud_notm}}](dynatrace.html).
 
-## 6 de febrero de 2018: se ha actualizado el paquete de compilación de Nodejs v3.18
+## 17 de mayo de 2018: se ha actualizado el paquete de compilación de Node.js v3.20.1
+El paquete de compilación de SDK for Node.js v3.20.1 corrige la integración de Dynatrace PaaS para los tiempos de ejecución de Node.js. Consulte [Utilización de Dynatrace para supervisar Node.js en {{site.data.keyword.cloud_notm}}](dynatrace.html).
+
+## 9 de abril de 2018: se ha actualizado el paquete de compilación de Node.js v3.20
+El paquete de compilación de SDK for Node.js v3.20 añade la integración de Dynatrace PaaS para los tiempos de ejecución de Node.js. Consulte [Utilización de Dynatrace para supervisar Node.js en {{site.data.keyword.cloud_notm}}](dynatrace.html).
+
+## 16 de marzo de 2018: se ha actualizado el paquete de compilación de Node.js v3.19
+El paquete de compilación de SDK for Node.js v3.19 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 y 8.9.4. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.13.0.
+
+## 6 de febrero de 2018: se ha actualizado el paquete de compilación de Node.js v3.18
 El paquete de compilación de SDK for Node.js v3.18 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 y 8.9.4. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.12.3.
 
-## 8 de enero de 2018: se ha actualizado el paquete de compilación de v3.17 Nodejs
-El paquete de compilación de SDK for Node.js v3.17 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 y 8.9.3. El valor predeterminado más reciente es  6.x, de modo que actualmente es 6.12.2.
+## 8 de enero de 2018: se ha actualizado el paquete de compilación de Node.js v3.17
+El paquete de compilación de SDK for Node.js v3.17 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 y 8.9.3. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.12.2.
 
 ## 11 de diciembre de 2017: se ha actualizado el paquete de compilación Node.js v3.16.1
 El paquete de compilación SDK for Node.js v3.16.1 proporciona las versiones de IBM SDK for Node.js v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.12.0.
@@ -27,15 +38,13 @@ Tenga en cuenta que corrige PSIRT: ID de advertencia: 10237 ID de registro de pr
 ## 1 de noviembre de 2017: Se ha actualizado el paquete de compilación de Node.js v3.15
 El SDK para el paquete de compilación de Node.js v3.15 proporciona las versiones de IBM SDK para Node.js 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 y 8.6.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.11.4.
 
-
 ## 20 de septiembre de 2017: Se ha actualizado el paquete de compilación de Node.js v3.14
-El SDK para el paquete de compilación de Node.js v3.14 proporciona las versiones de IBM SDK para Node.js 4.8.3, 4.8.4, 6.11.2, 6.11.3, 8.1.4 y 8.3.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.11.3.
-En esta versión se ha solucionado un error del paquete de compilación que impedía que las apps de Node.js [se cerrasen correctamente](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown).
+El SDK para el paquete de compilación de Node.js v3.14 proporciona las versiones de IBM SDK para Node.js 4.8.3, 4.8.4, 6.11.2, 6.11.3, 8.1.4 y 8.3.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.11.3. En esta versión se ha solucionado un error del paquete de compilación que impedía que las apps de Node.js [se cerrasen correctamente](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown).
 
 ## 26 de julio de 2017: Actualización del paquete de compilación Node.js v3.13
 El paquete de compilación SDK for Node.js v3.13 proporciona las versiones de IBM SDK for Node.js 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 y 8.1.4. El valor predeterminado es la 6.x más reciente, de modo que actualmente es 6.11.1. Tenga en cuenta que la versión 8 está disponible para pruebas, pero aún no está recomendada para producción.  
 
-Este paquete de compilación contiene las versiones de Node.js actualizadas, que abordan vulnerabilidades de seguridad recientes encontradas en Node.js. Los usuarios deberían actualizar sus aplicaciones para utilizar las últimas versiones disponibles y luego volver a transferir las aplicaciones a {{site.data.keyword.Bluemix_notm}}.  Consulte <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este enlace</a> para obtener detalles sobre las vulnerabilidades de Node.js.
+Este paquete de compilación contiene las versiones de Node.js actualizadas, que abordan vulnerabilidades de seguridad recientes encontradas en Node.js.  Los usuarios deberían actualizar sus aplicaciones para utilizar las últimas versiones disponibles y luego volver a transferir las aplicaciones a {{site.data.keyword.Bluemix_notm}}.  Consulte <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este enlace</a> para obtener detalles sobre las vulnerabilidades de Node.js.
 
 ## 5 de mayo de 2017: se ha actualizado el paquete de compilación Node.js v3.12
 El paquete de compilación SDK for Node.js v3.12 proporciona las versiones de IBM SDK for Node.js 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 y 6.10.2. El valor predeterminado ha cambiado de la 4.x más reciente a la 6.x más reciente, de modo que actualmente es 6.10.2. Puesto que es un cambio de versión principal, esto podría afectar a las apps que dependen del valor predeterminado. Consulte [Soporte a largo plazo de versiones de Node.js y el paquete de compilación de SDK para Node.js](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) para obtener más información acerca de cómo evitar problemas.
@@ -48,8 +57,7 @@ Este release del paquete de compilación da soporte a las versiones de tiempo de
 Además de los nuevos tiempos de ejecución, este release contiene un arreglo para un error encontrado al habilitar el manejador de gestión de apps de shell cuando se utiliza la interfaz de usuario de devconsole. Este paquete de compilación también ha modificado el funcionamiento de la configuración automática para el servicio Monitoring and Analytics. Las aplicaciones que utilizan el plan gratuito ya no dispondrán de la capacidad de registro, se ha sustituido por logmet.
 
 ## 20 de enero de 2017: Actualización del paquete de compilación Node.js v3.10
-Este release del paquete de compilación da soporte a las versiones de tiempo de ejecución de IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 y 6.9.4. Ahora el valor predeterminado es 4.7.2.
-
+Este release del paquete de compilación da soporte a las versiones de tiempo de ejecución de IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 y 6.9.4. Ahora el valor predeterminado es 4.7.2.  También está sincronizado con el [paquete de compilación de Cloud Foundry Node.js v1.5.24](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24).
 Contiene un arreglo para un error por el que no siempre se llamaba a "npm start" para iniciar aplicaciones.
 
 ## 17 de noviembre de 2016: se ha actualizado el paquete de compilación Node.js v3.9
@@ -57,7 +65,7 @@ Este release del paquete de compilación da soporte a las versiones de tiempo de
 
 Observe que Node.js v6 se ha promocionado al estado LTS el 18 de octubre de 2016 y pronto se convertirá en el tiempo de ejecución predeterminado del paquete de compilación. Node.js v0.10 concluyó su ciclo de vida el 31 de octubre de 2016 y pronto se dejará de incluir en el paquete de compilación. Consulte [Soporte a largo plazo de versiones de Node.js y el paquete de compilación de SDK para Node.js](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) para obtener más información.
 
-Los errores que afectan a los manejadores de gestión de apps de rastreo y de inspector, cuando se utilizan con Node.js v6, se han solucionado en este release. Consulte el apartado [Gestión de apps de Liberty y Node.js](/docs/manageapps/app_mng.html#inspector) para obtener más información sobre cómo está cambiando el manejador de inspector ahora que Node.js v6 incorpora la función del inspector.
+Los errores que afectan a los manejadores de gestión de apps de rastreo y de inspector, cuando se utilizan con Node.js v6, se han solucionado en este release. Consulte el apartado [Gestión de apps de Liberty y Node.js](../common/app_mng.html#inspector) para obtener más información sobre cómo está cambiando el manejador de inspector ahora que Node.js v6 incorpora la función del inspector.
 
 ## 7 de octubre de 2016: Se ha actualizado el paquete de compilación de Node.js v3.8-20161006-1211
 Este release del paquete de compilación da soporte a las versiones de tiempo de ejecución de IBM SDK para Node.js: 0.10.46, 0.10.47, 0.12.15, 0.12.16, 4.5.0, 4.6.0, 6.6.0 y 6.7.0. El valor predeterminado es ahora 4.6.0.
@@ -71,7 +79,7 @@ Este release incluye arreglos de errores, incluidos los del [paquete de compilac
 
 Esta versión elimina el soporte para el manejador de gestión de app strongpm, tal como se ha publicado en [{{site.data.keyword.Bluemix_notm}} Paquete de compilación de Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
-Tenga en cuenta que es un problema conocido cuando se utiliza Node.js 6.x y la [modalidad de desarrollo](/docs/manageapps/app_mng.html#devmode). Como una solución provisional será necesario volver a transferir la aplicación después de habilitar la modalidad de desarrollo antes de poder empezar a utilizarla.
+Tenga en cuenta que es un problema conocido cuando se utiliza Node.js 6.x y la [modalidad de desarrollo](../common/app_mng.html#devmode). Como una solución provisional será necesario volver a transferir la aplicación después de habilitar la modalidad de desarrollo antes de poder empezar a utilizarla.
 
 ## 22 de julio de 2016: Se ha actualizado el paquete de compilación de Node.js v3.6-20160715-0749
 Este release del paquete de compilación da soporte a las versiones de tiempo de ejecución de IBM SDK for Node.js: 0.10.45, 0.10.46, 0.12.14, 0.12.15, 4.4.6, 4.4.7, 6.2.1 y 6.2.2. El valor predeterminado es ahora 4.4.7.
@@ -97,7 +105,7 @@ Se incluyen arreglos para las siguientes vulnerabilidades de seguridad:
 * [CVE-2015-8855](http://www-01.ibm.com/support/docview.wss?uid=swg21982852)
 * [CVE-2016-2108 CVE-2016-2107 CVE-2016-2105 CVE-2016-2106 CVE-2016-2109 CVE-2016-2176 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.openssl.org/news/secadv/20160503.txt)
 
-Observe que hay un problema conocido con npm v3 y el programa de utilidad del inspector de App Management. npm 3.8.6 es el valor predeterminado con los tiempos de ejecución de 6.0.0 y 6.1.0. Si desea utilizar los tiempos de ejecución 6.x y el programa de utilidad del inspector, debe especificar una versión 2.x npm en package.json como un método alternativo temporal.
+Tenga en cuenta que hay un problema conocido con npm v3 y el programa de utilidad inspector de App Management. npm 3.8.6 es el valor predeterminado con los tiempos de ejecución de 6.0.0 y 6.1.0. Si desea utilizar los tiempos de ejecución 6.x y el programa de utilidad inspector, debe especificar una versión 2.x npm en package.json como un método alternativo temporal.
 
 ## 29 de abril de 2016: se ha actualizado el paquete de compilación Node.js v3.3-20160428-1409
 
@@ -111,7 +119,7 @@ El paquete de compilación actualizado y las nuevas versiones de tiempo de ejecu
 
 El paquete de compilación actualizado también contiene arreglos para varios errores:
 * Ahora las compilaciones de IBM SDK for Node.js se utilizarán siempre si hay una disponible que coincida con el rango solicitado. Anteriormente, este caso solo era true para versiones de tiempo de ejecución 4.x.
-* Ahora, el programa de utilidad del inspector de App Management funcionará con versiones de tiempo de ejecución 4.x.
+* Ahora, el programa de utilidad inspector de App Management funcionará con versiones de tiempo de ejecución 4.x.
 * Se ha arreglado en una regresión en el programa de utilidad strongpm App Management.
 
 ## 18 de marzo de 2016: se ha actualizado el paquete de compilación Node.js v3.2-20160315-1257
@@ -124,7 +132,7 @@ Este release del paquete de compilación mueve el tiempo de ejecución de IBM SD
 
 ## 4 de febrero de 2016: se ha actualizado el paquete de compilación Node.js v3.0-20160125-1224
 
-Este release está totalmente sincronizado con el paquete de compilación de [Cloud Foundry community Node.js](https://github.com/cloudfoundry/nodejs-buildpack). Además de los cambios de comunidad, se han realizado modificaciones en determinados valores predeterminados, junto con optimizaciones para reducir el momento de la transferencia y actualizaciones a la característica de App Management.
+Este release está totalmente sincronizado con el paquete de compilación de [Cloud Foundry community Node.js](https://github.com/cloudfoundry/nodejs-buildpack). Además de los cambios de la comunidad, se han realizado modificaciones en determinados valores predeterminados, junto con optimizaciones para reducir el momento de la transferencia y actualizaciones a la característica de App Management.
 
 * Actualizaciones del paquete de compilación:
 
@@ -153,16 +161,16 @@ Este release está totalmente sincronizado con el paquete de compilación de [Cl
 
 Este release del paquete de compilación de Node.js incluye dos versiones, v2.8 y v3.0beta. Ambas versiones incluyen los siguientes cambios:
 
-Una corrección de errores para el servicio Monitoring and Analytics. La inclusión de un tiempo de ejecución almacenado en memoria caché para IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8 y v1.2.0.7, que se basan en las versiones de comunidad Node.js v4.2.3, v4.2.2, v0.12.9 y v0.12.8.
+Una corrección de errores para el servicio Monitoring and Analytics. La inclusión de un tiempo de ejecución almacenado en memoria caché para IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8 y v1.2.0.7, que se basan en las versiones de la comunidad Node.js v4.2.3, v4.2.2, v0.12.9 y v0.12.8.
 Además, en v3.0beta el tiempo de ejecución predeterminado de Node.js se cambia por v4.2.3.
 
 El paquete de compilación de IBM Node.js v3.0beta se ha publicado como paquete de compilación no predeterminado en {{site.data.keyword.Bluemix_notm}} con Node.js v4.2.3 como tiempo de ejecución predeterminado. Para asegurarse de que las apps y servicios sigan funcionando en {{site.data.keyword.Bluemix_notm}}, envíe su aplicación por push con la versión beta del paquete de compilación. Después de 30 días o más, v3 se convertirá en el paquete de compilación predeterminado.
 
 Para enviar por push su aplicación con v3.0beta:
-* Utilice la opción "-b" en el mandato 'cf push':
+* Utilice la opción "-b" en el mandato `ibmcloud cf push`:
 
 ```
-        cf push -b sdk-for-nodejs-v3beta
+        ibmcloud cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -187,17 +195,17 @@ Node.js v2.6.1 presenta una corrección de errores para el [manejador de gestió
 
 ## 15 de octubre de 2015: se ha actualizado el paquete de compilación Node.js v2.6-20151006-1309
 
-Este release del paquete de compilación de Node.js incluye la integración del [Gestor de procesos de StrongLoop![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://strong-pm.io) en la característica de App Management. Para obtener más información, consulte la publicación del blog [StrongLoop DevOps para aplicaciones de Node.js en {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
+Este release del paquete de compilación de Node.js incluye la integración del [Gestor de procesos de StrongLoop ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://strong-pm.io) en la característica de App Management. Para obtener más información, consulte la publicación del blog [StrongLoop DevOps para aplicaciones de Node.js en {{site.data.keyword.Bluemix_notm}}](https://developer.ibm.com/bluemix/2015/10/15/strongloop-devops-on-bluemix/).
 
 ## 15 de junio de 2015: se ha actualizado el paquete de compilación Node.js v2.0-20150608-1503
 
 En esta versión, hemos sincronizado nuestro paquete de compilación Node.js con el último [paquete de compilación Node.js de CF community](https://github.com/cloudfoundry/nodejs-buildpack), que incluye varias características nuevas de la comunidad.
-Además, hemos reformado la característica de gestión de app en el paquete de compilación de Node.js, que habilita funciones tales como el shell, node-inspector, {{site.data.keyword.Bluemix_notm}} Live Sync, y más. Consulte [App Management](/docs/manageapps/app_mng.html) para obtener más detalles.
+Además, hemos reformado la característica de gestión de app en el paquete de compilación de Node.js, que habilita funciones tales como el shell, node-inspector, {{site.data.keyword.Bluemix_notm}} Live Sync, y más. Consulte [App Management](../common/app_mng.html) para obtener más detalles.
 
 ## 5 de mayo de 2015: se ha actualizado el paquete de compilación Node.js v1.17-20150429-1033
 
 * El paquete de compilación Node.js se suministra ahora con [IBM SDK for Node.js v0.12.1](https://developer.ibm.com/node/sdk/).
-* Si la aplicación no especifica un tiempo de ejecución en su paquete package.json, la app ahora se iniciará con v0.12.1, en lugar de v0.10.x. Si necesita utilizar la versión anterior, especifique v0.10.x en package.json como se muestra a continuación
+* Si la aplicación no especifica un tiempo de ejecución en su paquete package.json, la app ahora se iniciará con v0.12.1, en lugar de v0.10.x. Si necesita utilizar la versión anterior, especifique v0.10.x en package.json como se muestra a continuación.
 
 ```
         "engines": {
@@ -220,7 +228,7 @@ Además, hemos reformado la característica de gestión de app en el paquete de 
   * Sincronización del escritorio: sincronice cualquier árbol de escritorio (Windows) en un espacio de trabajo de proyectos basado en la nube
   * Edición en directo: le permite realizar cambios en una aplicación Node.js que se ejecute en {{site.data.keyword.Bluemix_notm}} y probarlos directamente en el navegador.
   * Depuración: conéctese mediante shell a su entorno e inicie la depuración. Puede editar dinámicamente código, insertar puntos de interrupción, examinar el código, reiniciar el tiempo de ejecución y más utilizando el depurador del inspector de nodos
-  * Consulte [App Management](/docs/manageapps/app_mng.html#Utilities) para obtener más información.
+  * Consulte [App Management](../common/app_mng.html#Utilities) para obtener más información.
 * Hemos integrado los últimos cambios del [paquete de compilación Node.jgs de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Este cambio incluye varias correcciones y mejoras realizadas por la comunidad.
 * El paquete de compilación Node.js se suministra ahora con [IBM SDK for Node.js v1.1.0.13](https://developer.ibm.com/node/sdk/).
 
@@ -232,7 +240,7 @@ Además, hemos reformado la característica de gestión de app en el paquete de 
 ## 23 de octubre de 2014: Se ha actualizado el paquete de compilación de Node.js v1.6-20141013-1736
 
 * El paquete de compilación Node.js se suministra ahora con [IBM SDK for Node.js v1.1.0.8](https://developer.ibm.com/node/sdk/). Esta actualización significa que obtiene un soporte completo al tiempo de ejecución de IBM Node.js
-cuando especifique el tiempo de ejecución Node.js más estable para la aplicación, v0.10.32. Este último SDK incluye un arreglo de un problema con el módulo qs incorporado que provocaba un a denegación de servicio. También contiene una versión actualizada del módulo npm y otras mejoras en los módulos http y url. Para obtener más detalles, consulte el [registro de cambios de v0.10.32](https://raw.githubusercontent.com/joyent/node/v0.10.32/ChangeLog).
+cuando especifique el tiempo de ejecución Node.js más estable para la aplicación, v0.10.32. Este último SDK incluye un arreglo de un problema con el módulo qs incorporado que provocaba una denegación de servicio. También contiene una versión actualizada del módulo npm y otras mejoras en los módulos http y url. Para obtener más detalles, consulte el [registro de cambios de v0.10.32](https://raw.githubusercontent.com/joyent/node/v0.10.32/ChangeLog).
 * El paquete de compilación también contiene un arreglo de un error que provocaba la adición de un archivo index.html incorrecto en la aplicación del cliente durante el despliegue.
 
 ## 30 de septiembre de 2014: se ha actualizado el paquete de compilación Node.js v1.4-20140908-1746
@@ -249,9 +257,3 @@ cuando especifique el tiempo de ejecución Node.js más estable para la aplicaci
 ## 29 de julio de 2014: se ha actualizado el paquete de compilación Node.js v1.1-20140717-1447
 
 El paquete de compilación Node.js se suministra ahora con IBM SDK for Node.js v1.1.0.5. Esta actualización significa que tendrá un soporte completo al tiempo de ejecución de Node.js de IBM al especificar el tiempo de ejecución de Node.js más estable para la aplicación, v0.10.29. Consulte más información sobre los [SDK IBM Node.js](https://developer.ibm.com/node/sdk/).
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [tiempo de ejecución de node.js](index.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -13,11 +13,22 @@ lastupdated: "2018-02-14"
 {: #latest_updates}
 
 sdk-for-nodejs buildpack 中最新更新的列表。
+## 2018 年 6 月 1 日：更新了 Node.js buildpack V3.20.2
+SDK for Node.js buildpack V3.20.2 为当前的 Node.js 运行时添加了 Dynatrace Managed PaaS 集成。请参阅[在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Node.js](dynatrace.html)。
 
-## 2018 年 2 月 6 日：更新了 Nodejs buildpack V3.18
+## 2018 年 5 月 17 日：更新了 Node.js buildpack V3.20.1
+SDK for Node.js buildpack V3.20.1 为当前的 Node.js 运行时修复了 Dynatrace PaaS 集成。请参阅[在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Node.js](dynatrace.html)。
+
+## 2018 年 4 月 9 日：更新了 Node.js buildpack V3.20
+SDK for Node.js buildpack V3.20 为当前的 Node.js 运行时添加了 Dynatrace PaaS 集成。请参阅[在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Node.js](dynatrace.html)。
+
+## 2018 年 3 月 16 日：更新了 Node.js buildpack V3.19
+SDK for Node.js buildpack V3.19 提供了 IBM SDK for Node.js V4.8.5、V4.8.7、V6.12.3、V6.13.0、V8.9.3 和 V8.9.4。缺省值是最新的 6.x，所以目前是 6.13.0。
+
+## 2018 年 2 月 6 日：更新了 Node.js buildpack V3.18
 SDK for Node.js buildpack V3.18 提供了 IBM SDK for Node.js V4.8.5、V4.8.7、V6.12.2、V6.12.3、V8.9.3 和 V8.9.4。缺省值是最新的 6.x，所以目前是 6.12.3。
 
-## 2018 年 1 月 8 日：更新了 Nodejs buildpack V3.17
+## 2018 年 1 月 8 日：更新了 Node.js buildpack V3.17
 SDK for Node.js buildpack V3.17 提供了 IBM SDK for Node.js V4.8.5、V4.8.7、V6.12.0、V6.12.2、V8.9.0 和 V8.9.3。缺省值是最新的 6.x，所以目前是 6.12.2。
 
 ## 2017 年 12 月 11 日：更新了 Node.js buildpack V3.16.1
@@ -35,9 +46,9 @@ SDK for Node.js buildpack V3.13 提供了 IBM SDK for Node.js V4.8.3、4.8.4、6
 此 buildpack 中包含更新的 Node.js 版本，这些版本解决了近期在 Node.js 中发现的安全漏洞。用户应更新其应用程序以使用最新可用版本，然后在 {{site.data.keyword.Bluemix_notm}} 中重新编译打包应用程序。请参阅<a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">此链接</a>以了解有关 Node.js 漏洞的详细信息。
 
 ## 2017 年 5 月 5 日：更新了 Node.js buildpack V3.12
-SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18、4.8.0、4.8.2、6.10.0、6.10.2。缺省值最新的 4.x 现在已经更改为最新的 6.x，所以目前是 6.10.2。这是一项主要版本更改，可能会影响依赖该缺省值的应用程序。请参阅 [Node.js 版本长期支持和 SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) 以了解有关如何避免问题的更多信息。
+SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、V0.12.18、V4.8.0、V4.8.2、V6.10.0 和 V6.10.2。缺省值最新的 4.x 现在已经更改为最新的 6.x，所以目前是 6.10.2。这是一项主版本更改，可能会影响依赖该缺省值的应用程序。请参阅 [Node.js 版本长期支持和 SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) 以了解有关如何避免问题的更多信息。
 
-除了新运行时，此发行版还包含一个 buildpack 错误修订、一个 App Management Health Center 处理程序问题，以及 Node.js V6.9.5 和 6.10.0。
+除了新运行时，此发行版还包含一个 buildpack 错误修订，用于解决 App Management Health Center 处理程序以及 Node.js V6.9.5 和 V6.10.0 的相关问题。
 
 ## 2017 年 3 月 10 日：更新了 Node.js buildpack V3.11
 此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.47、0.10.48、0.12.17、0.12.18、4.7.3、4.8.0、6.9.5 和 6.10.0。现在的缺省版本为 4.8.0。
@@ -45,16 +56,14 @@ SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18
 除了新运行时，此发行版还包含一个修订，用于解决使用 devconsole UI 启用 shell 应用程序管理处理程序时遇到的错误。此 buildpack 还更改了 Monitoring and Analytics 服务的自动配置工作方式。使用免费套餐的应用程序不再向其应用程序添加日志功能，此功能将替换为 logmet。
 
 ## 2017 年 1 月 20 日：更新了 Node.js buildpack V3.10
-此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.47、0.10.48、0.12.17、0.12.18、4.7.0、4.7.2、6.9.2 和 6.9.4。现在的缺省版本为 4.7.2。
-
-此发行版包含一个修订，用于解决不能每次都调用“npm start”来启动应用程序的错误。
+此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.47、0.10.48、0.12.17、0.12.18、4.7.0、4.7.2、6.9.2 和 6.9.4。现在的缺省版本为 4.7.2。此发行版还与 [Cloud Foundry Node.js buildpack V1.5.24](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24) 同步。此发行版包含一个修订，用于解决不能每次都调用“npm start”来启动应用程序的错误。
 
 ## 2016 年 11 月 17 日：更新了 Node.js buildpack V3.9
 此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.47、0.10.48、0.12.16、0.12.17、4.6.1、4.6.2、6.7.0 和 6.9.1。现在的缺省版本为 4.6.2。
 
 请注意，2016 年 10 月 18 日 Node.js V6 已升级到 LTS 状态，不久将成为此 buildpack 的缺省运行时。Node.js V0.10 已于 2016 年 10 月 31 日到期，很快就不会再包含在此 buildpack 中。有关更多详细信息，请参阅 [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/)。
 
-在此发行版中解决了与 Node.js V6 一起使用时，影响跟踪和检验器“应用程序管理”处理程序的错误。有关 Node.js V6 集成了检验器功能后检验器处理程序有何变化的更多信息，请参阅[管理 Liberty 和 Node.js 应用程序](/docs/manageapps/app_mng.html#inspector)。
+在此发行版中解决了与 Node.js V6 一起使用时，影响跟踪和检验器“应用程序管理”处理程序的错误。有关 Node.js V6 集成了检验器功能后检验器处理程序有何变化的更多信息，请参阅[管理 Liberty 和 Node.js 应用程序](../common/app_mng.html#inspector)。
 
 ## 2016 年 10 月 7 日：更新了 Node.js buildpack V3.8-20161006-1211
 此 buildpack 发行版支持以下 IBM SDK for Node.js 运行时版本：0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0 和 6.7.0。现在的缺省值为 4.6.0。
@@ -68,7 +77,7 @@ SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18
 
 该发行版不再支持 strongpm 应用程序管理处理程序，如 [{{site.data.keyword.Bluemix_notm}} Node.js Buildpack v3.3 – FIPS mode and more](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/) 中所声明。
 
-请注意，使用 Node.js 6.x 和[开发方式](/docs/manageapps/app_mng.html#devmode)时存在一个已知问题。要解决该问题，您将需要在启用“开发方式”之后重新编译打包应用程序，然后才能开始使用。
+请注意，使用 Node.js 6.x 和[开发方式](../common/app_mng.html#devmode)时存在一个已知问题。要解决该问题，您将需要在启用“开发方式”之后重新编译打包应用程序，然后才能开始使用。
 
 ## 2016 年 7 月 22 日：更新了 Node.js buildpack V3.6-20160715-0749
 此 buildpack 发行版添加了以下 IBM SDK for Node.js 运行时版本：0.10.45、0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1 和 6.2.2。现在的缺省版本为 4.4.7。
@@ -157,11 +166,10 @@ SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、0.12.18
 
 要使用 V3.0beta 推送应用程序：
 
-* 使用“cf push”命令中的“-b”选项：
-
+* 在 `ibmcloud cf push` 命令中使用“-b”选项：
 
 ```
-cf push -b sdk-for-nodejs-v3beta
+        ibmcloud cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -191,7 +199,7 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 ## 2015 年 6 月 15 日：更新了 Node.js buildpack V2.0-20150608-1503
 
 在此发行版中，我们已将 Node.js buildpack 与最新的 [CF 社区 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 同步，这带来大量来自该社区的新功能。
-此外，我们改进了 Node.js buildpack 中的“应用程序管理”功能，该功能启用 shell、node-inspector、{{site.data.keyword.Bluemix_notm}} Live Sync 等实用程序。请参阅[应用程序管理](/docs/manageapps/app_mng.html)，以获取详细信息。
+此外，我们改进了 Node.js buildpack 中的“应用程序管理”功能，该功能启用 shell、node-inspector、{{site.data.keyword.Bluemix_notm}} Live Sync 等实用程序。请参阅[应用程序管理](../common/app_mng.html)，以获取详细信息。
 
 ## 2015 年 5 月 5 日：更新了 Node.js buildpack V1.17-20150429-1033
 
@@ -219,7 +227,7 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
   * 桌面同步：将任何 (Windows) 桌面树同步到基于云的项目工作空间
   * 实时编辑：使您可以对在 {{site.data.keyword.Bluemix_notm}} 中运行的 Node.js 应用程序执行更改，并立即在浏览器中对更改进行测试。
   * 调试：在环境中执行 Shell 并进行调试！您可以使用 Node Inspector 调试器来动态编辑代码、插入断点、单步执行代码、重新启动运行时等
-  * 请参阅[应用程序管理](/docs/manageapps/app_mng.html#Utilities)，以获取更多信息。
+  * 请参阅[应用程序管理](../common/app_mng.html#Utilities)，以获取更多信息。
 * 我们已从 [Cloud Foundry 的 Node.js buildpack](https://github.com/cloudfoundry/nodejs-buildpack) 中拉入最新的更改。此更改带来该社区进行的大量错误修订和改进。
 * 该 Node.js buildpack 现在随 [IBM SDK for Node.js V1.1.0.13](https://developer.ibm.com/node/sdk/) 一起提供。
 
@@ -246,9 +254,3 @@ Node.js V2.6.1 引入了对 [StrongPM 应用程序管理处理程序](https://de
 ## 2014 年 7 月 29 日：更新了 Node.js buildpack V1.1-20140717-1447
 
 该 Node.js buildpack 现在随 IBM SDK for Node.js V1.1.0.5 一起提供。此更新意味着在为应用程序指定最新稳定的 Node.js 运行时 V0.10.29 时，您将获取完全受支持的 IBM Node.js 运行时。请参阅有关 [IBM Node.js SDK](https://developer.ibm.com/node/sdk/) 的更多信息。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [node.js 运行时](index.html)

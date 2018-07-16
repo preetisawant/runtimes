@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,9 +18,10 @@ lastupdated: "2017-12-15"
 {: shortdesc}
 
 要在 {{site.data.keyword.Bluemix_notm}} 上使用 Tomcat 运行时，必须使用 -b 选项指定 java_buildpack。例如：
-<pre>
-    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
-</pre>
+
+```
+ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+```
 
 有关 Tomcat 运行时的更多信息，请参阅
 [java-buildpack 自述文件](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md)。
@@ -28,7 +29,7 @@ lastupdated: "2017-12-15"
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} 提供了 Tomcat 入门模板应用程序。Tomcat 入门模板应用程序是一个简单的 Tomcat 应用程序，它提供了一个可供您使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/cfapps/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供了 Tomcat 入门模板应用程序。Tomcat 入门模板应用程序是一个简单的 Tomcat 应用程序，它提供了一个可供您使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../common/starter_app_usage.html)。
 
 ## 运行时版本
 {: #runtime_versions}

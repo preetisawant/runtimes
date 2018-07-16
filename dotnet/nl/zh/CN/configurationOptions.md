@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-07-13"
 ---
 
@@ -72,4 +72,3 @@ lastupdated: "2017-07-13"
 {: codeblock}
 
 这些更改应该可以让 .NET CLI 找到应用程序的 `View`，因为现在这些 View 会在执行 `dotnet publish` 命令时复制到构建输出中。如果应用程序具有在运行时需要的其他任何文件（例如 json 配置文件），那么您也应该将这些文件添加到项目的 .csproj 文件中 `Content` 元素的 `Include` 属性，各文件之间用分号分隔。
-

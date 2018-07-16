@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,10 +20,10 @@ Puoi eseguire la tua applicazione Liberty su {{site.data.keyword.Bluemix}} con i
 ## Ospitare JRE e index.yml
 {: #hosting_jre}
 
-Il file JRE Oracle deve essere ospitato su un server Web e il pacchetto di build Liberty deve essere in grado di scaricarlo da tale server. Puoi ospitarlo in {{site.data.keyword.Bluemix_notm}} stesso utilizzando una qualunque delle funzioni del server disponibili, oppure puoi ospitarlo in alcune ubicazioni disponibili pubblicamente.Il server deve essere configurato con un file `index.yml` che specifica i dettagli sul file JRE. Completa i seguenti passi per ospitare JRE e il file `index.yml`:
+Il file JRE Oracle deve essere ospitato su un server Web e il pacchetto di build Liberty deve essere in grado di scaricarlo da tale server. Puoi ospitarlo in {{site.data.keyword.Bluemix_notm}} stesso utilizzando una qualunque delle funzioni del server disponibili, oppure puoi ospitarlo in alcune ubicazioni disponibili pubblicamente.  Il server deve essere configurato con un file `index.yml` che specifica i dettagli sul file JRE. Completa i seguenti passi per ospitare JRE e il file `index.yml`:
   1. Acquisisci il JRE Oracle.  Tieni presente che JRE deve essere la versione per l'utilizzo su un SO a 64-Bit Unix e deve essere un file `tar.gz`.
   2. Ospita il file JRE dell'agent in un'ubicazione da cui il pacchetto di build Liberty può scaricarlo.
-  3. Assicurati di fornire un file `index.yml` all'ubicazione che lo ospita. Il file `index.yml` deve contenere una voce composta da l'ID versione del JRE Oracle seguito da due punti e l'URL completo dell'ubicazione di tale file JRE. Il formato del `index.yml` è:
+  3. Assicurati di fornire un file `index.yml` all'ubicazione che lo ospita. Il file `index.yml` deve contenere una voce composta dall'ID versione del JRE Oracle seguito da due punti e l'URL completo dell'ubicazione di tale file JRE. Il formato del `index.yml` è:
 ```
    ---
    jre_version: https://hostingLocation/jreName.tar.gz
@@ -49,7 +49,7 @@ Per la variabile JBP_CONFIG_OPENJDK il valore è
 
 Per configurarlo puoi emettere un comando come:
 ```
-   $ cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
+   ibmcloud cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
 ```
 {: codeblock}
 
@@ -57,7 +57,7 @@ Tieni presente che l'URL *repository_root* non include `index.yml`, ma si arrest
 
 Per configurare la variabile di ambiente JVM emetti un comando come:
 ```
-   $ cf se myApp JVM 'openjdk'
+   ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

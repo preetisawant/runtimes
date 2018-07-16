@@ -14,4 +14,4 @@ lastupdated: "2018-02-22"
 
 使用以下资源对 Swift 应用程序和 buildpack 进行故障诊断：
 
-* [运行时故障诊断](../../troubleshoot/ts_runtimes.html#runtimes)
+* [运行时的故障诊断](../common/ts_runtimes.html#runtimes)

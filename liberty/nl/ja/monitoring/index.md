@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017, 2018
 lastupdated: "2017-02-08"
 
 ---
@@ -32,4 +32,3 @@ lastupdated: "2017-02-08"
 {: #newrelic notoc}
 
 *New Relic* を使用して Liberty をモニターする場合は、『[New Relic の使用](newRelic.html)』を参照してください。
-

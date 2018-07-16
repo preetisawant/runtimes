@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2017-11-10"
 
 ---
 
@@ -47,7 +47,7 @@ Envoyez par commande push le package serveur contenant votre application en la l
 
 JConsole est inclus avec votre installation Java.   Pour démarrer l'application JConsole, accédez à &lt;java-home&gt;/bin et exécutez la commande suivante :
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+    jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 

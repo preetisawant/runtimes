@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-13"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -24,10 +24,9 @@ NPM 提供 Scripting 機能讓您執行 Script，包括安裝 node_modules 之�
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} 會為每個 node 應用程式維護一個快取目錄，它會在兩次建置之間持續保存。快取會儲存已解析的相依關係，因此不必每次部署應用程式時都進行下載及安裝。例如，假設 myapp 依賴 **express**。然後，第一次部署 myapp 時，即會下載 **express** 模組。後續部署 myapp 時，則會使用 **express** 的快取實例。預設行為是快取 NPM 安裝的所有 node_modules 以及 bower 安裝的 bower_components。
 
-使用 NODE_MODULES_CACHE 變數，以決定 Node 建置套件會使用還是忽略先前建置的快取。預設值為 true。若要停用快取，則將 NODE_MODULES_CACHE 設為 false，例如透過 cf 指令行：
-
+使用 NODE_MODULES_CACHE 變數，以決定 Node 建置套件會使用還是忽略先前建置的快取。預設值為 true。若要停用快取，則將 NODE_MODULES_CACHE 設為 false，例如，透過 {{site.data.keyword.Bluemix_notm}} 指令行：
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+    ibmcloud cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 

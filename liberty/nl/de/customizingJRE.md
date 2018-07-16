@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,24 +20,24 @@ Standardmäßig werden Anwendungen für die Ausführung mit einer einfachen {{si
 
  Standardmäßig wird {{site.data.keyword.IBM_notm}} JRE Version 8 verwendet. Mit der Umgebungsvariablen JBP_CONFIG_IBMJDK können Sie eine alternative Version der {{site.data.keyword.IBM_notm}} JRE angeben. Legen Sie beispielsweise die folgende Umgebungsvariable fest, um die neueste Version von {{site.data.keyword.IBM_notm}} JRE 7.1 zu verwenden:
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
-Die Versionseigenschaft kann auf einen Versionsbereich festgelegt werden. Es werden zwei Versionsbereiche unterstützt: 1.7.+ und 1.8.+. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden.
+Die Versionseigenschaft kann auf einen Versionsbereich festgelegt werden. Es werden zwei Versionsbereiche unterstützt: 1.7.+ und 1.8.+. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden. Java 7 wurde aus dem Liberty-Buildpack in Version 3.19 entfernt.  
 
 ## OpenJDK
 {: #openjdk}
 
-Optional können Anwendungen für die Ausführung mit OpenJDK als JRE konfiguriert werden. Um die Ausführung einer Anwendung mit OpenJDK zu ermöglichen, geben Sie “openjdk” für die JVM-Umgebungsvariable an. Führen Sie zum Beispiel mithilfe des Befehlszeilentools cf den folgenden Befehl aus:
+Optional können Anwendungen für die Ausführung mit OpenJDK als JRE konfiguriert werden. Um die Ausführung einer Anwendung mit OpenJDK zu ermöglichen, setzen Sie die -Umgebungsvariable 'JVM' auf den Wert 'openjdk'. Führen Sie zum Beispiel den folgenden Befehl über das {{site.data.keyword.Bluemix_notm}}-Befehlszeilentool aus:
 ```
-    $ cf set-env myapp JVM 'openjdk'
+    ibmcloud cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
 Standardmäßig wird OpenJDK Version 8 verwendet, sofern aktiviert. Mit der Umgebungsvariablen JBP_CONFIG_OPENJDK können Sie eine alternative Version von OpenJDK angeben. Legen Sie beispielsweise die folgende Umgebungsvariable fest, um die neueste Version von OpenJDK 7 zu verwenden:
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -69,7 +69,7 @@ Das Liberty-Buildpack konfiguriert die JVM-Standardoptionen unter Berücksichtig
   * Schnelle Fehlerdiagnose und -behebung für eine Anwendung wird durch Inaktivierung der JVM-Speicherauszugsoptionen und Beenden der Prozesse bei erschöpfter Speicherkapazität der Anwendung konfiguriert.
   * Virtualisierungsoptimierung (nur {{site.data.keyword.IBM_notm}} JRE).
   * Weiterleitung von Informationen zu den verfügbaren Speicherressourcen der Anwendung im Fehlerfall an Loggregator.
-  * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis "dumps" weitergeleitet. Diese Speicherauszüge können dann über das {{site.data.keyword.Bluemix_notm}}-Dashboard oder die Cloud Foundry-CLI angezeigt werden.
+  * Wenn eine Anwendung für die Aktivierung von JVM-Hauptspeicherauszügen konfiguriert ist, wird das Beenden von Java-Prozessen inaktiviert und die JVM-Hauptspeicherauszüge werden an das gemeinsame Anwendungsverzeichnis "dumps" weitergeleitet. Diese Speicherauszüge können dann über das {{site.data.keyword.Bluemix_notm}}-Dashboard oder die {{site.data.keyword.Bluemix_notm}}-CLI angezeigt werden.
 
 Es folgt eine Beispielkonfiguration einer Standard-JVM, die vom Buildpack für eine Anwendung generiert wurde, die mit einer Speicherbegrenzung von 512M bereitgestellt wurde:
 
@@ -108,7 +108,7 @@ Anwendungen können die JVM-Optionen mit den Spezifikationen anpassen, die von d
 <tr>
 <td> OpenJDK </td>
 <td>Basiert auf der HotSpot-Laufzeit; Schreibweise: -X für Nicht-Standardoptionen, -XX für Entwickleroptionen und boolesche Flags zum Aktivieren oder Inaktivieren von Optionen. </td>
-<td>[HotSpot Runtime Overview ![Symbol Externer Link](../../icons/launch-glyph.svg "Symbol Externer Link")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
+<td>[HotSpot Runtime Overview ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
@@ -168,37 +168,37 @@ Hinweis: Einige Optionen werden nur wirksam, wenn die Option durch einen Agenten
 ### Angewendete JVM-Optionen einer aktiven Anwendung bestimmen
 {: #determining_applied_jvm_options}
 
-Mit Ausnahme von anwendungsdefinierten Optionen, die mit der Umgebungsvariable JVM_ARGS angegeben sind, bleiben die Ergebnisoptionen in der Laufzeitumgebung entweder als Befehlszeilenoption (eigenständige Java-Anwendungen) oder in der Datei `jvm.options` (keine eigenständige Java-Anwendungen) erhalten. Die angewendeten JVM-Optionen für die Anwendung können entweder über die Konsole von {{site.data.keyword.Bluemix_notm}} oder die Cloud Foundry-CLI angezeigt werden.
+Mit Ausnahme von anwendungsdefinierten Optionen, die mit der Umgebungsvariable JVM_ARGS angegeben sind, bleiben die Ergebnisoptionen in der Laufzeitumgebung entweder als Befehlszeilenoption (eigenständige Java-Anwendungen) oder in der Datei `jvm.options` (keine eigenständige Java-Anwendungen) erhalten. Die angewendeten JVM-Optionen für die Anwendung können entweder über die {{site.data.keyword.Bluemix_notm}}-Konsole oder die {{site.data.keyword.Bluemix_notm}}-CLI angezeigt werden.
 
 Die JVM-Optionen für eigenständige Java-Anwendungen werden als Befehlszeilenoptionen gespeichert. Sie können über die Datei `staging_info.yml` angezeigt werden.
 
 Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein:
 
 ```
-    $ cf files myapp staging_info.yml
+    ibmcloud cf files myapp staging_info.yml
 ```
 {: codeblock}
 
 Um die Datei `staging_info.yml` in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie den folgenden Befehl ein:
 
 ```
-    $ cf ssh myapp -c "cat staging_info.yml"
+    ibmcloud cf ssh myapp -c "cat staging_info.yml"
 ```
 {: codeblock}
 
-Die JVM-Optionen für WAR-, EAR- und Serververzeichnisbereitstellungen sowie Bereitstellungen für paketierte Server sind in der Datei `jvm.options` gespeichert. Die Datei `jvm.options` befindet sich im Verzeichnis `app/wlp/usr/servers/<serverName>/`. In den meisten Fällen wird für ```<serverName>``` die Einstellung `defaultServer` festgelegt. Es sei denn, ein paketierter Server wurde mit einem anderen Servernamen implementiert. Beispiel:
+Die JVM-Optionen für WAR-, EAR- und Serververzeichnisbereitstellungen sowie Bereitstellungen für paketierte Server sind in der Datei `jvm.options` gespeichert. Die Datei `jvm.options` befindet sich im Verzeichnis `app/wlp/usr/servers/<serverName>/`. In den meisten Fällen wird `<serverName>` auf `defaultServer` gesetzt, sofern nicht ein paketierter Server mit einem anderen Servernamen bereitgestellt wurde. Beispiel:
 
 Um die Datei `jvm.options` in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein:
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 Um die Datei `jvm.options` in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie den folgenden Befehl ein:
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
 
@@ -218,22 +218,22 @@ Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche {{site.da
 * Um die ausführliche JVM-Garbage-Collection-Protokolldatei in einer Anwendung anzusehen, die im DEA-Modus ausgeführt wird, geben Sie folgenden Befehl ein:
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
 * Um die ausführliche JVM-Garbage-Collection-Protokolldatei in einer Anwendung anzusehen, die in einer Diego-Zelle ausgeführt wird, geben Sie folgenden Befehl ein:
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
 ```
 {: codeblock}
 
 * Wenn Sie die {{site.data.keyword.IBM_notm}} JRE-Option einer bereitgestellten Anwendung aktualisieren möchten, um heap, snap und javacore für eine OutOfMemory-Bedingung auszulösen, definieren Sie die Umgebungsvariable der Anwendung mit der JVM-Option und führen Sie einen Neustart der Anwendung durch:
 
 ```
-    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
-    $ cf restart myapp
+    ibmcloud cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    ibmcloud cf restart myapp
 ```
 {: codeblock}
 

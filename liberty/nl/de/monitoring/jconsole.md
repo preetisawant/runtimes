@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2017-11-10"
 
 ---
 
@@ -48,7 +48,7 @@ dabei eine Begrenzung auf eine Instanz vor. Die Datei 'server.xml' muss die Feat
 
 JConsole ist in der Java-Installation enthalten.  Wechseln Sie zum Starten der JConsole-App in das Verzeichnis &lt;java-home&gt;/bin und führen Sie den folgenden Befehl aus:
 ```
-    $ jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
+    jconsole -J-Djava.class.path=<java-home>/lib/jconsole.jar;<liberty-home>/wlp/clients/restConnector.jar
 ```
 {: codeblock}
 

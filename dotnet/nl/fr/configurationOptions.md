@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-07-13"
 ---
 
@@ -72,4 +72,3 @@ Dans la méthode `Main` de Program.cs, retirez la ligne suivante :
 {: codeblock}
 
 Ces changements doivent permettre à .NET CLI de trouver les `Vues` de votre application, car elles sont maintenant copiées dans la sortie de la génération lorsque la commande `dotnet publish` est exécutée.  Si votre application a besoin d'autres fichiers au moment de son exécution (par exemple, des fichiers de configuration json), vous devez aussi les ajouter, en les séparant par des points-virgules, à la propriété `Include` de l'élément `Content` dans le fichier .csproj de votre projet.
-

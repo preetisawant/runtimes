@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-21"
+lastupdated: "2018-03-06"
 
 ---
 
@@ -18,18 +18,18 @@ Liberty for Java 支持的环境变量。
 
 <table>
 <tr>
-<th align="left">名称</th>
+<th align="left">环境变量名</th>
 <th align="left">描述</th>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>启用[应用程序管理实用程序](/docs/manageapps/app_mng.html)</td>
+<td>启用[应用程序管理实用程序](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>安装[应用程序管理实用程序](/docs/manageapps/app_mng.html)</td>
+<td>安装[应用程序管理实用程序](../common/app_mng.html)</td>
 </tr>
 
 <tr>
@@ -102,10 +102,60 @@ Liberty for Java 支持的环境变量。
 <td>禁用服务[自动配置](autoConfig.html#opting_out)。</td>
 </tr>
 </table>
+{: caption="表 1. 可用于 Liberty for Java 的环境变量" caption-side="top"}
+
+## Liberty for Java buildpack 中的禁用属性
+
+Liberty buildpack 会自动禁用一些属性。您无法覆盖这些属性。下面列出了会被禁用的环境变量和属性。
+
+### 禁用属性表
+
+<table>
+<tr>
+<th>禁用的属性</th>
+<th>元素</th>
+</tr>
+
+<tr>
+<td>host</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>httpPort</td>
+<td>httpEndpoint</td>
+</tr>
+
+<tr>
+<td>trustHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>andextractHostHeaderPort</td>
+<td>webContainer</td>
+</tr>
+
+<tr>
+<td>logDirectory</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>consoleLogLevel</td>
+<td>logging</td>
+</tr>
+
+<tr>
+<td>enableWelcomePage</td>
+<td>httpDispatcher</td>
+</tr>
+</table>
+{: caption="表 1. Liberty for Java 禁用的属性" caption-side="top"}
 
 # 相关链接
 {: #rellinks notoc}
 ## 常规
 {: #general notoc}
 * [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+* [Liberty 概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

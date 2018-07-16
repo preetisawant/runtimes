@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -18,16 +18,17 @@ Die Laufzeit von Tomcat in {{site.data.keyword.Bluemix}} basiert auf dem Buildpa
 {: shortdesc}
 
 Zum Verwenden der Tomcat-Laufzeit in {{site.data.keyword.Bluemix_notm}} müssen Sie das Buildpack 'java_buildpack' zusammen mit der Option '-b' angeben. Beispiel:
-<pre>
-    cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
-</pre>
+
+```
+ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+```
 
 Weitere Informationen zur Tomcat-Laufzeit finden Sie in der [Readme-Datei zu 'java-buildpack'](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md).
 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} stellt eine Tomcat-Starteranwendung bereit.  Die Tomcat-Starteranwendung ist eine einfache Tomcat-App, die Sie als Schablone verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Tomcat-Starteranwendung bereit. Die Tomcat-Starteranwendung ist eine einfache Tomcat-App, die Sie als Vorlage verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -57,7 +58,7 @@ Die Tomcat-Laufzeit [server.xml](https://github.com/cloudfoundry/java-buildpack/
 ```
 {: codeblock}
 
-Weitere Konfigurationsoptionen für RemoteIpValve finden Sie in der [Dokumentation zu Tomcat ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
+Weitere Konfigurationsoptionen für RemoteIpValve finden Sie in der [Dokumentation zu Tomcat ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
 
 # Zugehörige Links
 {: #rellinks notoc}

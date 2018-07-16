@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
+  years: 2016, 2018
 lastupdated: "2018-01-10"
 
 ---
@@ -14,7 +14,7 @@ lastupdated: "2018-01-10"
 # Modo fuera de línea para Node.js
 {: #offline_mode}
 
-Cuando una aplicación Node.js se envía a {{site.data.keyword.Bluemix}},  el paquete de compilación de SDK for Node.js descargará normalmente artefactos desde recursos externos como módulos de Node desde NPM.  En algunas situaciones, como con [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) y [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), puede personalizar el acceso a sitios externos a {{site.data.keyword.Bluemix_notm}}.  
+Cuando una aplicación Node.js se envía a {{site.data.keyword.Bluemix}}, el paquete de compilación de SDK for Node.js descargará normalmente artefactos desde recursos externos como módulos de Node desde NPM.  En algunas situaciones, como con [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) y [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), puede personalizar el acceso a sitios externos a {{site.data.keyword.Bluemix_notm}}.  
 {: shortdesc}
 
 El paquete de compilación Node.js puede acceder a los siguientes sitios externos. Puede que necesite una *lista blanca* de estos sitios en [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) y [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) {{site.data.keyword.Bluemix_notm}}.
@@ -35,12 +35,12 @@ Tenga en cuenta que cuando se instalan versiones nuevas del paquete de compilaci
 
 Para eliminar la necesidad de acceder a https://registry.npmjs.org, puede incluir todos los módulos de nodo que necesita su aplicación dentro de la aplicación.  Para ello, ejecute `npm install`para todos los módulos que necesite su aplicación e incluya el directorio *node_modules* resultante con la aplicación enviada por push.
 
-Las dependencias pueden tener dependencias, que tienen dependencias y así sucesivamente, pero el `package.json` sólo contiene las dependencias de nivel superior. Si una de las dependencias utiliza un rango del package.json y se lanza una nueva versión del mismo, los módulos del directorio node_modules pueden quedarse obsoletos. *Shrinkwrap* le ayuda a bloquear todas las versiones de dependencias para que esto no ocurra.  Para utilizar shrinkwrap, empiece con un directorio vacío o limpio de `node_modules` . A continuación, en el directorio raíz del proyecto, ejecute:
+Las dependencias pueden tener dependencias, que tienen dependencias y así sucesivamente, pero el `package.json` sólo contiene las dependencias de nivel superior. Si una de las dependencias utiliza un rango del package.json y se lanza una nueva versión del mismo, los módulos del directorio node_modules pueden quedarse obsoletos. *Shrinkwrap* le ayuda a bloquear todas las versiones de dependencias para que esto no ocurra.  Para utilizar shrinkwrap, empiece con un directorio vacío o limpio de `node_modules`. A continuación, en el directorio raíz del proyecto, ejecute:
 
 
-1. ```npm install```
-1. ```npm dedupe```
-2. ```npm shrinkwrap```
+1. `npm install`
+1. `npm dedupe`
+2. `npm shrinkwrap`
 
 Esto puede cambiar el `package.json` y añadir `npm-shrinkwrap.json` en el directorio raíz.
 Siempre que realice un cambio en las dependencias del archivo `package.json`, repita los pasos el `npm dedupe` y `shringwrap`.

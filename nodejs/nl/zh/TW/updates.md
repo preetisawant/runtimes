@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -13,11 +13,22 @@ lastupdated: "2018-02-14"
 {: #latest_updates}
 
 sdk-for-nodejs 建置套件中的最新更新項目清單。
+## 2018 年 6 月 1 日：已更新 Node.js 建置套件 3.20.2 版
+SDK for Node.js 建置套件 3.20.2 版新增現行 Node.js 運行環境的 Dynatrace Managed PaaS 整合。請參閱[使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Node.js](dynatrace.html)。
 
-## 2018 年 2 月 6 日：已更新 Nodejs 建置套件 3.18 版
+## 2018 年 5 月 17 日：已更新 Node.js 建置套件 3.20.1 版
+SDK for Node.js 建置套件 3.20.1 版修正現行 Node.js 運行環境的 Dynatrace PaaS 整合。請參閱[使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Node.js](dynatrace.html)。
+
+## 2018 年 4 月 9 日：已更新 Node.js 建置套件 3.20 版
+SDK for Node.js 建置套件 3.20 版新增現行 Node.js 運行環境的 Dynatrace PaaS 整合。請參閱[使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Node.js](dynatrace.html)。
+
+## 2018 年 3 月 16 日：已更新 Node.js 建置套件 3.19 版
+SDK for Node.js 建置套件 3.19 版提供 IBM SDK for Node.js 4.8.5 版、4.8.7 版、6.12.3 版、6.13.0 版、8.9.3 版及 8.9.4 版。預設值是最新的 6.x，因此它目前是 6.13.0。
+
+## 2018 年 2 月 6 日：已更新 Node.js 建置套件 3.18 版
 SDK for Node.js 建置套件 3.18 版提供 IBM SDK for Node.js 4.8.5 版、4.8.7 版、6.12.2 版、6.12.3 版、8.9.3 版及 8.9.4 版。預設值是最新的 6.x，因此它目前是 6.12.3。
 
-## 2018 年 1 月 8 日：已更新 Nodejs 建置套件 3.17 版
+## 2018 年 1 月 8 日：已更新 Node.js 建置套件 3.17 版
 SDK for Node.js 建置套件 3.17 版提供 IBM SDK for Node.js 4.8.5 版、4.8.7 版、6.12.0 版、6.12.2 版、8.9.0 版及 8.9.3 版。預設值是最新的 6.x，因此它目前是 6.12.2。
 
 ## 2017 年 12 月 11 日：已更新 Node.js 建置套件 3.16.1 版
@@ -46,16 +57,14 @@ SDK for Node.js 建置套件 3.12 版提供 IBM SDK for Node.js 0.12.17、0.12.1
 除了新的運行環境之外，這個版本還會包含在使用 devconsole 使用者介面啟用 Shell 應用程式管理處理程式時所遇到錯誤的修正程式。此建置套件也會變更 Monitoring and Analytics 服務的自動配置運作方式。使用「免費」方案的應用程式無法再將記載功能新增至其應用程式，它現在已被 logmet 取代。
 
 ## 2017 年 1 月 20 日：已更新 Node.js 建置套件 3.10 版
-這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.47、0.10.48、0.12.17、0.12.18、4.7.0、4.7.2、6.9.2 及 6.9.4。預設值現在是 4.7.2。
-
-它包含錯誤的修正程式，該錯誤為不一定會呼叫 "npm start" 來啟動應用程式。
+這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.47、0.10.48、0.12.17、0.12.18、4.7.0、4.7.2、6.9.2 及 6.9.4。預設值現在是 4.7.2。這個版本同時還與 [Cloud Foundry Node.js 建置套件 1.5.24 版](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24)同步。它包含錯誤的修正程式，該錯誤為不一定會呼叫 "npm start" 來啟動應用程式。
 
 ## 2016 年 11 月 17 日：已更新 Node.js 建置套件 3.9 版
 這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.47、0.10.48、0.12.16、0.12.17、4.6.1、4.6.2、6.7.0 及 6.9.1。預設值現在是 4.6.2。
 
 請注意，Node.js 第 6 版已在 2016 年 10 月 18 日升級至 LTS 狀態，而且很快會變成建置套件的預設運行環境。Node.js 0.10 版已在 2016 年 10 月 31 日到達使用期限，很快就不再內含在建置套件中。如需詳細資料，請參閱 [Node.js 版本長期支援及 SDK for Node.js 建置套件](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/)。
 
-在這個版本中，已處理會影響追蹤及檢查程式「應用程式管理」處理程式的錯誤（當追蹤及檢查程式「應用程式管理」處理程式與 Node.js 第 6 版一起使用時）。如需 Node.js 第 6 版整合檢查程式功能後，檢查程式處理程式有哪些改變的相關資訊，請參閱[管理 Liberty 及 Node.js 應用程式](/docs/manageapps/app_mng.html#inspector)。
+在這個版本中，已處理會影響追蹤及檢查程式「應用程式管理」處理程式的錯誤（當追蹤及檢查程式「應用程式管理」處理程式與 Node.js 第 6 版一起使用時）。如需 Node.js 第 6 版整合檢查程式功能後，檢查程式處理程式有哪些改變的相關資訊，請參閱[管理 Liberty 及 Node.js 應用程式](../common/app_mng.html#inspector)。
 
 ## 2016 年 10 月 7 日：已更新 Node.js 建置套件 v3.8-20161006-1211
 這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0 及 6.7.0。預設值現在是 4.6.0。
@@ -69,7 +78,7 @@ SDK for Node.js 建置套件 3.12 版提供 IBM SDK for Node.js 0.12.17、0.12.1
 
 這個版本不再支援 [{{site.data.keyword.Bluemix_notm}} Node.js 建置套件 3.3 版 - FIPS 模式及其他項目](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/)中所發表的 strongpm「應用程式管理」處理程式。
 
-請注意，使用 Node.js 6.x 及[開發模式](/docs/manageapps/app_mng.html#devmode)時，有一個已知問題。作為暫行解決方法，您將需要在啟用「開發模式」之後重新編譯打包您的應用程式，然後才能開始使用它。
+請注意，使用 Node.js 6.x 及[開發模式](../common/app_mng.html#devmode)時，有一個已知問題。作為暫行解決方法，您將需要在啟用「開發模式」之後重新編譯打包您的應用程式，然後才能開始使用它。
 
 ## 2016 年 7 月 22 日：已更新 Node.js 建置套件 v3.6-20160715-0749
 這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.45, 0.10.46、0.12.14、0.12.15、4.4.6、4.4.7、6.2.1 和 6.2.2。現在預設值為 4.4.7。
@@ -159,10 +168,10 @@ Monitoring and Analytics 服務的錯誤修正程式
 在 {{site.data.keyword.Bluemix_notm}} 上，IBM Node.js 建置套件 3.0 測試版現在已發行為非預設建置套件，並以 Node.js 4.2.3 版作為預設運行環境。若要確保應用程式和服務能夠在 {{site.data.keyword.Bluemix_notm}} 上繼續運作，請以建置套件的測試版來推送應用程式。經過至少 30 天以後，第 3 版將成為預設建置套件。
 
 若要以 3.0 測試版來推送應用程式，請執行下列動作：
-* 在 'cf push' 指令中使用 "-b" 選項：
+* 在 `ibmcloud cf push` 指令中使用 "-b" 選項：
 
 ```
-cf push -b sdk-for-nodejs-v3beta
+        ibmcloud cf push -b sdk-for-nodejs-v3beta
 ```
 {: codeblock}
 
@@ -192,7 +201,7 @@ Node.js 2.6.1 版引進了 [StrongPM 應用程式管理處理程式](https://dev
 ## 2015 年 6 月 15 日：已更新 Node.js 建置套件 v2.0-20150608-1503
 
 在這個版本中，我們的 Node.js 建置套件已與最新 [CF 社群 Node.js 建置套件](https://github.com/cloudfoundry/nodejs-buildpack)同步化，後者具有許多來自社群的新特性。
-此外，我們也改良了 Node.js 建置套件中的「應用程式管理」特性，它能夠啟用 Shell、node-inspector、{{site.data.keyword.Bluemix_notm}} Live Sync 等這類公用程式。如需詳細資料，請參閱[應用程式管理](/docs/manageapps/app_mng.html)。
+此外，我們也改良了 Node.js 建置套件中的「應用程式管理」特性，它能夠啟用 Shell、node-inspector、{{site.data.keyword.Bluemix_notm}} Live Sync 等這類公用程式。如需詳細資料，請參閱[應用程式管理](../common/app_mng.html)。
 
 ## 2015 年 5 月 5 日：已更新 Node.js 建置套件 v1.17-20150429-1033
 
@@ -220,7 +229,7 @@ Node.js 2.6.1 版引進了 [StrongPM 應用程式管理處理程式](https://dev
   * 桌面同步：使任何 (Windows) 桌面樹狀結構與雲端型專案工作區同步
   * 即時編輯：可讓您變更在 {{site.data.keyword.Bluemix_notm}} 中執行的 Node.js 應用程式，並立刻在瀏覽器中測試它們。
   * 除錯：開啟 Shell 進入您的環境並進行除錯！您可以使用 Node Inspector 除錯器，動態地編輯程式碼、插入中斷點、逐步執行程式碼、重新啟動運行環境等等
-  * 如需相關資訊，請參閱[應用程式管理](/docs/manageapps/app_mng.html#Utilities)。
+  * 如需相關資訊，請參閱[應用程式管理](../common/app_mng.html#Utilities)。
 * 我們已經加入來自 [Cloud Foundry 的 Node.js 建置套件](https://github.com/cloudfoundry/nodejs-buildpack)的最新變更。這項變更附有由社群所提出的許多錯誤修正程式和改良功能。
 * 現在，Node.js 建置套件隨附了 [IBM SDK for Node.js 1.1.0.13 版](https://developer.ibm.com/node/sdk/)。
 
@@ -247,9 +256,3 @@ Node.js 2.6.1 版引進了 [StrongPM 應用程式管理處理程式](https://dev
 ## 2014 年 7 月 29 日：已更新 Node.js 建置套件 v1.1-20140717-1447
 
 現在，Node.js 建置套件隨附了 IBM SDK for Node.js 1.1.0.5 版。這項更新表示，當您為應用程式指定最新穩定的 Node.js 運行環境 0.10.29 版時，您會得到完整支援的 IBM Node.js 運行環境。請進一步瞭解 [IBM Node.js SDK](https://developer.ibm.com/node/sdk/)。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Node.js 運行環境](index.html)

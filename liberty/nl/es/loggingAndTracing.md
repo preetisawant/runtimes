@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -16,12 +16,12 @@ lastupdated: "2018-1-31"
 ## Archivos de registro
 {: #log_files}
 
-Los registros estándares de Liberty, como `messages.log` o el directorio `ffdc`, están disponibles en {{site.data.keyword.Bluemix}} en el directorio `logs` de cada instancia de aplicación. Se puede acceder a estos registros desde la consola de {{site.data.keyword.Bluemix_notm}} o mediante CLI de Cloud Foundry. Por ejemplo:
+Los registros estándares de Liberty, como `messages.log` o el directorio `ffdc`, están disponibles en {{site.data.keyword.Bluemix}} en el directorio `logs` de cada instancia de aplicación. Se puede acceder a estos registros desde la consola de {{site.data.keyword.Bluemix_notm}} o mediante CLI de {{site.data.keyword.Bluemix_notm}}. Por ejemplo:
 
 * Para acceder a registros recientes para una app, ejecute el mandato siguiente:
 
   ```
-  cf logs --recent <appname>
+  ibmcloud cf logs --recent <appname>
   ```
   {: codeblock}
 
@@ -29,11 +29,11 @@ Los registros estándares de Liberty, como `messages.log` o el directorio `ffdc`
 * Para ver el archivo `messages.log` de una app, ejecute el mandato siguiente:
 
   ```
-  cf ssh <appname> -c "cat logs/messages.log"
+  ibmcloud cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
-El nivel de registro y otras opciones de rastreo se pueden establecer mediante el archivo de configuración de Liberty. Para obtener más información, consulte [Resolución de problemas de Liberty: registro y rastreo](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html). 
+El nivel de registro y otras opciones de rastreo se pueden establecer mediante el archivo de configuración de Liberty. Para obtener más información, consulte [Resolución de problemas de Liberty: registro y rastreo](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html).
 
 ## Utilización de las funciones de rastreo y volcado
 {: #using_trace_and_dump}
@@ -44,7 +44,7 @@ La configuración de rastreo de Liberty se puede ajustar para una aplicación en
 
 ### Cambiar configuración de rastreo a través de SSH
 
-Cuando envía por push la aplicación, el archivo server.xml incluye las propiedades predeterminadas  **updateTrigger** establecidas en**polled** y **monitorInterval** establecidas en 1 minuto. El servidor Liberty se configura automáticamente para comprobar a cada minuto si hay actualizaciones de server.xml.
+Cuando envía por push la aplicación, el archivo server.xml incluye las propiedades predeterminadas  **updateTrigger** establecidas en **polled** y **monitorInterval** establecidas en 1 minuto. El servidor Liberty se configura automáticamente para comprobar a cada minuto si hay actualizaciones de server.xml.
 
 Consulte en [Enviar por push apps de Liberty con server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) opciones para impulsar apps de Liberty con server.xml
 
@@ -55,11 +55,11 @@ Siga estos pasos para cambiar la configuración de rastreo:
 1. SSH para su app
 
   ```
- cf ssh <appname> [-i instance_index]
+ ibmcloud cf ssh <appname> [-i instance_index]
   ```
   {: codeblock}
 
-2. Edite ```<logging traceSpecification="xxxx"/>``` en server.xml para definir la especificación de rastreo que desea, por ejemplo mediante *vi*:
+2. Edite `<logging traceSpecification="xxxx"/>` en server.xml para definir la especificación de rastreo que desea, por ejemplo mediante *vi*:
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml
@@ -70,12 +70,12 @@ Nota: el cambio en server.xml se perderá al volver a transferir o reiniciar, y 
 
 Consulte [Resolución de problemas de Liberty: registro y rastreo](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} para obtener detalles sobre la sintaxis de la especificación de rastreo.
 
-### Activación de volcados mediante SSH 
+### Activación de volcados mediante SSH
 
-Utilice el mandato siguiente para activar un volcado de hebras y de almacenamiento dinámico mediante la CLI CF utilizando la característica SSH:
+Utilice el mandato siguiente para activar un volcado de hebras y de almacenamiento dinámico mediante la CLI de {{site.data.keyword.Bluemix_notm}} utilizando la característica SSH:
 
   ```
- cf ssh <appname> -c "pkill -3 java"
+ ibmcloud cf ssh <appname> -c "pkill -3 java"
   ```
   {: codeblock}
 
@@ -84,19 +84,19 @@ Consulte la documentación siguiente para obtener detalles sobre cómo descargar
 ## Descargue archivos de volcado
 {: #download_dumps}
 
-De forma predeterminada, los diversos archivos de volcado se colocan en el directorio `dumps` del contenedor de la aplicación.Utilice Cloud Foundry CLI `cf ssh` para ver y descargar los archivos de volcado.
+De forma predeterminada, los diversos archivos de volcado se colocan en el directorio `dumps` del contenedor de la aplicación. Utilice la CLI de {{site.data.keyword.Bluemix_notm}} `ibmcloud cf ssh` para ver y descargar los archivos de volcado.
 
 * Para ver los volcados generados, ejecute el siguiente mandato:
 
   ```
-  $ cf ssh <appname> -c "ls -l dumps"
+  ibmcloud cf ssh <appname> -c "ls -l dumps"
   ```
   {: codeblock}
 
 * Para descargar un archivo de volcado, ejecute el mandato siguiente:
 
   ```
-  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ibmcloud cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

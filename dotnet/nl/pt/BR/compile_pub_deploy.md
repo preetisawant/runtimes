@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 Os projetos baseados em MSBuild são agora publicados usando o comando `dotnet publish` durante a preparação.  Por padrão, o buildpack publicará seu aplicativo na configuração de `Depuração`.
 Para publicar seu aplicativo na configuração de `Liberação`, configure a variável de ambiente `PUBLISH_RELEASE_CONFIG` como `true`.
 
-Isso pode ser feito com o CloudFoundry CLI com o comando a seguir:
+É possível fazer isso com a CLI do {{site.data.keyword.Bluemix_notm}} com o comando a seguir:
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env < app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 Como alternativa, é possível configurar a variável no arquivo manifest.yml do aplicativo:

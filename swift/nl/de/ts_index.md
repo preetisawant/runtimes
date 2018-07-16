@@ -14,4 +14,4 @@ lastupdated: "2018-02-22"
 
 Verwenden Sie die folgenden Ressourcen zur Fehlerbehebung bei Ihren Swift-Anwendungen und -Buildpacks:
 
-* [Fehlerbehebung für Laufzeiten](../../troubleshoot/ts_runtimes.html#runtimes)
+* [Fehlerbehebung für Laufzeiten](../common/ts_runtimes.html#runtimes)

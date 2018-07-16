@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2018-06-21"
 
 ---
 
@@ -22,7 +22,7 @@ Das Buildpack 'ruby_buildpack' wird verwendet, wenn im Stammverzeichnis Ihrer Ap
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} stellt eine Ruby-Starteranwendung bereit.  Die Ruby-Starteranwendung ist eine einfache Ruby-App, die Sie als Schablone für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](/docs/cfapps/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Ruby-Starteranwendung bereit. Die Ruby-Starteranwendung ist eine einfache Ruby-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -61,4 +61,4 @@ Wenn für Ihre App eine Ruby-Version erforderlich ist, die nicht aufgelistet ist
 ## Allgemein
 {: #general notoc}
 * [Cloud Foundry-Buildpack für Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Dokumentation zu Ruby on Rails ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://api.rubyonrails.org/)
+* [Dokumentation zu Ruby on Rails ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://api.rubyonrails.org/)

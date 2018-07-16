@@ -14,5 +14,5 @@ lastupdated: "2018-02-22"
 
 Dépannez vos applications et packs de construction Python avec les ressources suivantes :
 
-* [Traitement des incidents liés aux contextes d'exécution](../../troubleshoot/ts_runtimes.html#runtimes)
-* [Traitement des incidents liés aux contextes d'exécution : Python](../../troubleshoot/ts_runtimes.html#ts_python)
+* [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html#runtimes)
+* [Traitement des incidents liés aux contextes d'exécution : Python](../common/ts_runtimes.html#ts_python)

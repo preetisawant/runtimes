@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 Les projets basés sur MSBuild sont à présent publiés en utilisant la commande `dotnet publish` durant le passage en préproduction (staging).  Par défaut, le pack de construction publiera votre application en configuration `Debug`.
 Pour qu'elle soit publiée en configuration `Release`, mettez à `true` la variable d'environnement `PUBLISH_RELEASE_CONFIG`.
 
-Vous pouvez pour cela utiliser la commande suivante avec le client de ligne de commande pour Cloud Foundry :
+Vous pouvez pour cela utiliser l'interface CLI {{site.data.keyword.Bluemix_notm}} avec la commande suivante :
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 Vous pouvez aussi définir la variable dans le fichier manifest.yml de votre application :
@@ -39,7 +39,7 @@ applications:
 ## Envoi par commande push d'une application publiée
 {: #pushing_published_app}
 
-Si votre application doit contenir tous ses fichiers binaires requis et éviter ainsi que le pack de construction ne télécharge des fichiers binaires externes, vous pouvez la pousser sous forme d'application *autonome* publiée.  Consultez [.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} pour plus d'informations sur les applications autonomes.
+Si votre application doit contenir tous ses fichiers binaires requis et éviter ainsi que le pack de construction ne télécharge des fichiers binaires externes, vous pouvez l'envoyer par commande push sous forme d'application *autonome* publiée.  Consultez [.NET Core App Types](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} pour plus d'informations sur les applications autonomes.
 
 Pour publier une application, exécutez une commande telle que la suivante :
 ```
@@ -47,14 +47,14 @@ Pour publier une application, exécutez une commande telle que la suivante :
 ```
 {: codeblock}
 
-Les applications autonomes peuvent ensuite être poussées à partir de
+Les applications autonomes peuvent ensuite être envoyées par commande push à partir de
 ```
   bin/<Debug|Release>/<framework>/<runtime>/publish
 ```
 {: codeblock}
 .
 
-Les applications portables peuvent être poussées à partir de
+Les applications portables peuvent être envoyées par commande push à partir de
 ```
   bin/<Debug|Release>/<framework>/publish
 ```

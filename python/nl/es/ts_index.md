@@ -14,5 +14,5 @@ lastupdated: "2018-02-22"
 
 Resuelva los problemas de los paquetes de compilación y las aplicaciones Python con los siguientes recursos:
 
-* [Resolución de problemas de tiempos de ejecución](../../troubleshoot/ts_runtimes.html#runtimes)
-* [Resolución de problemas de tiempos de ejecución: Python](../../troubleshoot/ts_runtimes.html#ts_python)
+* [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html#runtimes)
+* [Resolución de problemas de tiempos de ejecución: Python](../common/ts_runtimes.html#ts_python)

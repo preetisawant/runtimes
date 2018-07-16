@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -12,40 +12,32 @@ lastupdated: "2017-10-26"
 # Personnaliser l'environnement d'exécution Java (JRE)
 {: #customizing_jre}
 
-Les applications fonctionnent dans un environnement d'exécution Java (JRE) fourni et configuré par le
-pack de construction Liberty. Ce dernier permet la configuration de la version ou du type d'environnement d'exécution Java (JRE), la personnalisation des options JVM ou la surimposition
-des fonctions de
-l'environnement d'exécution Java (JRE).
+Les applications fonctionnent dans un environnement d'exécution Java (JRE) fourni et configuré par le pack de construction Liberty. Ce dernier permet la configuration de la version ou du type d'environnement d'exécution Java (JRE), la personnalisation des options JVM ou la surimposition des fonctions de l'environnement d'exécution Java (JRE).
 
 ## {{site.data.keyword.IBM_notm}}JRE
 
-Par défaut, les applications sont configurées pour s'exécuter avec une version simple d'{{site.data.keyword.IBM}} JRE. Cette dernière est
-simplifiée pour fournir la fonction essentielle de base avec une empreinte mémoire et disque nettement réduite. Pour plus d'informations sur le contenu de l'environnement JRE allégé, voir [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
+Par défaut, les applications sont configurées pour s'exécuter avec une version simple d'{{site.data.keyword.IBM}} JRE. Cette dernière est simplifiée pour fournir la fonction essentielle de base avec une empreinte mémoire et disque nettement réduite. Pour plus d'informations sur le contenu de l'environnement JRE allégé, voir [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
- {{site.data.keyword.IBM_notm}} JRE version 8 est utilisé par défaut. Utilisez la variable d'environnement JBP_CONFIG_IBMJDK afin de spécifier une autre version du JRE {{site.data.keyword.IBM_notm}}. Par exemple, pour utiliser la version la plus récente
-du JRE {{site.data.keyword.IBM_notm}} 7.1, définissez la variable d'environnement suivante :
+ {{site.data.keyword.IBM_notm}} JRE version 8 est utilisé par défaut. Utilisez la variable d'environnement JBP_CONFIG_IBMJDK afin de spécifier une autre version du JRE {{site.data.keyword.IBM_notm}}. Par exemple, pour utiliser la version la plus récente du JRE {{site.data.keyword.IBM_notm}} 7.1, définissez la variable d'environnement suivante :
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
 {: codeblock}
 
-La propriété de version peut être définie avec une plage de versions. Deux plages de versions sont prises en charge : 1.7.+ et 1.8.+. Pour de meilleurs résultats, utilisez Java 8.
+La propriété de version peut être définie avec une plage de versions. Deux plages de versions sont prises en charge : 1.7.+ et 1.8.+. Pour de meilleurs résultats, utilisez Java 8.  Java 7 a été retiré du pack de construction Liberty à la version 3.19.  
 
 ## OpenJDK
 {: #openjdk}
 
-Si vous le souhaitez, vous pouvez configurer des applications pour qu'elles s'exécutent avec OpenJDK comme environnement d'exécution
-Java. Pour qu'une application puisse s'exécuter avec OpenJDK, associez la variable d'environnement JVM à "openjdk". Par exemple, avec l'outil de
-ligne de commande cf, exécutez la commande suivante :
+Si vous le souhaitez, vous pouvez configurer des applications pour qu'elles s'exécutent avec OpenJDK comme environnement d'exécution Java. Pour qu'une application puisse s'exécuter avec OpenJDK, associez la variable d'environnement JVM à "openjdk". Par exemple, avec l'outil de ligne de commande {{site.data.keyword.Bluemix_notm}} , exécutez la commande suivante :
 ```
-    $ cf set-env myapp JVM 'openjdk'
+    ibmcloud cf set-env myapp JVM 'openjdk'
 ```
 {: codeblock}
 
-S'il est activé, OpenJDK version 8 est utilisé par défaut. Utilisez la variable d'environnement JBP_CONFIG_OPENJDK afin de spécifier une autre version d'OpenJDK. Par exemple, pour utiliser la version la plus récente
-d'OpenJDK 7, définissez la variable d'environnement suivante :
+S'il est activé, OpenJDK version 8 est utilisé par défaut. Utilisez la variable d'environnement JBP_CONFIG_OPENJDK afin de spécifier une autre version d'OpenJDK. Par exemple, pour utiliser la version la plus récente d'OpenJDK 7, définissez la variable d'environnement suivante :
 ```
-    $ cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 1.7.+"
 ```
 {: codeblock}
 
@@ -66,8 +58,7 @@ Le pack de construction Liberty configure les options JVM par défaut en prenant
 
 * La limite de mémoire d'une application.  Les paramètres de segment de mémoire de machine virtuelle Java appliqués sont calculés en fonction de :
   * La limite de mémoire d'une application, comme expliqué dans [Limites mémoire et pack de construction Liberty](memoryLimits.html#memory_limits)
-  * Le type d'environnement d'exécution Java (JRE), étant donné que les options relatives au segment de mémoire pour la machine virtuelle Java varient
-selon les options prises en charge par l'environnement d'exécution Java (JRE)
+  * Le type d'environnement d'exécution Java (JRE), étant donné que les options relatives au segment de mémoire pour la machine virtuelle Java varient selon les options prises en charge par l'environnement d'exécution Java (JRE)
 
 * Les [fonctions Liberty prises en charge dans Bluemix{{site.data.keyword.Bluemix_notm}}](libertyFeatures.html#libertyfeatures).
   * Les transactions de base de données globales en deux phases ne sont pas prises en charge dans {{site.data.keyword.Bluemix_notm}} et, par conséquent, sont désactivées avec -Dcom.ibm.tx.jta.disable2PC=true.
@@ -75,16 +66,12 @@ selon les options prises en charge par l'environnement d'exécution Java (JRE)
 * L'environnement {{site.data.keyword.Bluemix_notm}}.
 
     Les options JVM sont configurées pour l'optimisation dans un environnement {{site.data.keyword.Bluemix_notm}} et pour l'aide au diagnostic des conditions d'erreur liées à la mémoire.
-  * Le mode "Fast Failure and Recovery" d'une application est configuré en désactivant les options de vidage de machine virtuelle Java et en
-arrêtant les processus lorsque la mémoire d'une application est épuisée.
+  * Le mode "Fast Failure and Recovery" d'une application est configuré en désactivant les options de vidage de machine virtuelle Java et en arrêtant les processus lorsque la mémoire d'une application est épuisée.
   * L'optimisation de la virtualisation ({{site.data.keyword.IBM_notm}} JRE seulement).
   * L'acheminement des informations sur les ressources de mémoire disponibles de l'application au moment de l'échec vers Loggregator.
-  * Si une application est configurée pour effectuer des vidages mémoire de machine virtuelle Java, l'arrêt des processus
-Java est désactivé et les vidages mémoire de machine virtuelle Java sont acheminés vers un répertoire "dumps" de
-l'application commun. Ces vidages peuvent être affichés depuis le tableau de bord {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande Cloud Foundry.
+  * Si une application est configurée pour effectuer des vidages mémoire de machine virtuelle Java, l'arrêt des processus Java est désactivé et les vidages mémoire de machine virtuelle Java sont acheminés vers un répertoire "dumps" de l'application commun. Ces vidages peuvent être affichés depuis le tableau de bord {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
-L'exemple ci-après illustre une configuration de machine virtuelle Java par défaut qui est générée par le pack de construction
-pour une application déployée avec une limite mémoire de 512M :
+L'exemple ci-après illustre une configuration de machine virtuelle Java par défaut qui est générée par le pack de construction pour une application déployée avec une limite mémoire de 512M :
 
 ```
     -Xtune:virtualized
@@ -101,10 +88,7 @@ pour une application déployée avec une limite mémoire de 512M :
 ### Personnalisation de la configuration de machine virtuelle Java
 {: #customizing_jvm}
 
-Les applications peuvent
-personnaliser les options JVM avec les spécifications qui sont définies par l'environnement d'exécution Java (JRE) configuré pour
-l'application. Reportez-vous à la documentation de l'environnement d'exécution Java (JRE) pour déterminer comment spécifier une option et quelle est son
-utilisation car les options varient en fonction de l'environnement d'exécution Java (JRE).
+Les applications peuvent personnaliser les options JVM avec les spécifications qui sont définies par l'environnement d'exécution Java (JRE) configuré pour l'application. Reportez-vous à la documentation de l'environnement d'exécution Java (JRE) pour déterminer comment spécifier une option et quelle est son utilisation car les options varient en fonction de l'environnement d'exécution Java (JRE).
 
 <table>
 <tr>
@@ -117,25 +101,20 @@ utilisation car les options varient en fonction de l'environnement d'exécution 
 <td> {{site.data.keyword.IBM_notm}}JRE</td>
 <td>Inclut des options d'exécution (préfixe -X), les propriétés système Java (préfixe -D) et ne recommande pas -XX pour l'utilisation occasionnelle (ces options sont susceptibles de changer)
 </td>
-<td>[Options de ligne de commande de la version 8 ](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html), [Options de lignes de commande de la version 7](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
+<td>[Options de ligne de commande de la version 8](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/diag/appendixes/cmdline/cmdline.html), [Options de ligne de commande de la version 7](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.70.doc/diag/appendixes/cmdline/cmdline.html)
 </td>
 </tr>
 
 <tr>
 <td> OpenJDK </td>
-<td>repose sur l'exécution HotSpot avec le préfixe -X pour les options non standard, -XX pour les options de développement et des indicateurs booléen
-pour activer ou désactiver une option </td>
+<td>repose sur l'exécution HotSpot avec le préfixe -X pour les options non standard, -XX pour les options de développement et des indicateurs booléen pour activer ou désactiver une option </td>
 <td>[Présentation de l'exécution HotSpot ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://openjdk.java.net/groups/hotspot//docs/RuntimeOverview.html) </td>
 </tr>
 </table>
 
-Une application qui requiert des options JVM personnalisées peut définir l'option sous forme de valeur pour l'une des variables d'environnement IBM_JAVA_OPTIONS, JAVA_OPTS ou JVM_ARGS dans
-{{site.data.keyword.Bluemix_notm}}. Voir la section Variables d'environnement relative à la définition d'une variable d'environnement d'application. Un package de serveur ou un répertoire de serveur peut aussi inclure un fichier jvm.options contenant les options de ligne de commande, au lieu de définir une variable d'environnement.
+Une application qui requiert des options JVM personnalisées peut définir l'option sous forme de valeur pour l'une des variables d'environnement IBM_JAVA_OPTIONS, JAVA_OPTS ou JVM_ARGS dans {{site.data.keyword.Bluemix_notm}}. Voir la section Variables d'environnement relative à la définition d'une variable d'environnement d'application. Un package de serveur ou un répertoire de serveur peut aussi inclure un fichier jvm.options contenant les options de ligne de commande, au lieu de définir une variable d'environnement.
 
-Lorsque les options JVM sont appliquées à l'environnement d'exécution Java (JRE), les options par défaut du pack de construction
-Liberty sont appliquées en premier, suivies des options personnalisées. Les options personnalisées sont ajoutées dans un ordre précis qui est répertorié
-dans le tableau. La séquence des options Java appliquées définit les options qui ont priorité. Les options qui
-sont appliquées en dernier ont priorité sur les options appliquées précédemment.
+Lorsque les options JVM sont appliquées à l'environnement d'exécution Java (JRE), les options par défaut du pack de construction Liberty sont appliquées en premier, suivies des options personnalisées. Les options personnalisées sont ajoutées dans un ordre précis qui est répertorié dans le tableau. La séquence des options Java appliquées définit les options qui ont priorité. Les options qui sont appliquées en dernier ont priorité sur les options appliquées précédemment.
 
 Remarque : Il se peut que certaines options n'aient pas d'effet, sauf si elles sont déclenchées par un agent.
 
@@ -170,8 +149,7 @@ Remarque : Il se peut que certaines options n'aient pas d'effet, sauf si elles s
 <tr>
 <td>3</td>
 <td>jvm.options</td>
-<td>Fichier de configuration de machine virtuelle Java pris en charge par le répertoire de serveur ou le package de serveur de l'environnement d'exécution
-Liberty</td>
+<td>Fichier de configuration de machine virtuelle Java pris en charge par le répertoire de serveur ou le package de serveur de l'environnement d'exécution Liberty</td>
 <td>Package serveur</td>
 <td>Reconstituez l'appli</td>
 <td>Oui</td>
@@ -190,37 +168,37 @@ Liberty</td>
 ### Détermination des options JVM appliquées pour une application en cours d'exécution
 {: #determining_applied_jvm_options}
 
-Sauf pour les options définies par l'application qui sont spécifiées avec la variable d'environnement JVM_ARGS, les options résultantes sont conservées dans l'environnement d'exécution sous forme d'options de ligne de commande (applications Java autonomes) ou dans un fichier `jvm.options` (applications Java non autonomes). Les options de JVM en vigueur pour l'application peuvent être affichées depuis la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande Cloud Foundry.
+Sauf pour les options définies par l'application qui sont spécifiées avec la variable d'environnement JVM_ARGS, les options résultantes sont conservées dans l'environnement d'exécution sous forme d'options de ligne de commande (applications Java autonomes) ou dans un fichier `jvm.options` (applications Java non autonomes). Les options de JVM en vigueur pour l'application peuvent être affichées depuis la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 Les options de JVM pour l'application Java autonome sont conservées sous forme d'options de ligne de commande. Elles peuvent être consultées dans le fichier `staging_info.yml`.
 
 Pour voir le fichier `staging_info.yml` sur une application lancée dans un noeud DEA, exécutez :
 
 ```
-    $ cf files myapp staging_info.yml
+    ibmcloud cf files myapp staging_info.yml
 ```
 {: codeblock}
 
 Pour voir le fichier `staging_info.yml` sur une application lancée dans une cellule Diego, exécutez :
 
 ```
-    $ cf ssh myapp -c "cat staging_info.yml"
+    ibmcloud cf ssh myapp -c "cat staging_info.yml"
 ```
 {: codeblock}
 
-Les options de JVM pour les déploiements sous forme de fichier WAR ou EAR, sous forme de répertoire de serveur ou sous forme de package de serveur sont conservées dans un fichier `jvm.options`. Le fichier `jvm.options` se trouve dans le répertoire `app/wlp/usr/servers/<serverName>/`. Dans la plupart des cas, ```<nomServeur>``` est `defaultServer`, sauf si un serveur en package a été déployé avec un nom de serveur différent. Par exemple :
+Les options de JVM pour les déploiements sous forme de fichier WAR ou EAR, sous forme de répertoire de serveur ou sous forme de package de serveur sont conservées dans un fichier `jvm.options`. Le fichier `jvm.options` se trouve dans le répertoire `app/wlp/usr/servers/<serverName>/`. Dans la plupart des cas `<serverName>` est défini sur `defaultServer`, à moins qu'un package de serveur n'ait été déployé avec un autre nom de serveur. Par exemple :
 
 Pour voir le fichier `jvm.options` sur une application lancée dans un noeud DEA, exécutez :
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/jvm.options
 ```
 {: codeblock}
 
 Pour voir le fichier `jvm.options` sur une application lancée dans une cellule Diego, exécutez :
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/jvm.options"
 ```
 {: codeblock}
 
@@ -240,24 +218,22 @@ Déploiement d'une application avec des options de JVM personnalisées pour acti
 * Pour voir le fichier journal généré par la JVM pour la récupération de place en mode prolixe sur une application lancée dans un noeud DEA, exécutez :
 
 ```
-    $ cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
+    ibmcloud cf files myapp app/wlp/usr/servers/defaultServer/verbosegc.log.001
 ```
 {: codeblock}
 
 * Pour voir le fichier journal généré par la JVM pour la récupération de place en mode prolixe sur une application lancée dans une cellule Diego, exécutez :
 
 ```
-    $ cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
+    ibmcloud cf ssh myapp -c "cat app/wlp/usr/servers/defaultServer/verbosegc.log.001"
 ```
 {: codeblock}
 
-* Pour mettre à jour l'option du JRE {{site.data.keyword.IBM_notm}}
-d'une application déployée afin de déclencher un vidage heap, snap et
-javacore sur une condition OutOfMemory, définissez la variable d'environnement de l'application avec l'option de JVM correspondante et redémarrez l'application :
+* Pour mettre à jour l'option du JRE {{site.data.keyword.IBM_notm}} d'une application déployée afin de déclencher un vidage heap, snap et javacore sur une condition OutOfMemory, définissez la variable d'environnement de l'application avec l'option de JVM correspondante et redémarrez l'application :
 
 ```
-    $ cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
-    $ cf restart myapp
+    ibmcloud cf set-env myapp JVM_ARGS '-Xdump:heap+java+snap:events=systhrow,filter=java/lang/OutOfMemoryError'
+    ibmcloud cf restart myapp
 ```
 {: codeblock}
 
@@ -266,12 +242,9 @@ javacore sur une condition OutOfMemory, définissez la variable d'environnement 
 ### Surimposition de l'environnement d'exécution Java (JRE)
 {: #overlaying_jre}
 
-Dans certains cas, les fichiers doivent être regroupés avec l'environnement d'exécution Java (JRE) pour
-exposer leurs fonctions. Le développeur de l'application peut fournir des fichiers
-JRE pour personnalisation.
+Dans certains cas, les fichiers doivent être regroupés avec l'environnement d'exécution Java (JRE) pour exposer leurs fonctions. Le développeur de l'application peut fournir des fichiers JRE pour personnalisation.
 
-Les fichiers à surimposer peuvent être conditionnés avec le fichier WAR, EAR ou JAR de l'application dans un dossier de
-ressources à la racine de l'archive. Dans le cas d'un serveur (fichier compressé ou répertoire de serveur), les fichiers peuvent être intégrés dans un package dans un dossier de ressources dans le répertoire de serveur, avec le fichier server.xml.
+Les fichiers à surimposer peuvent être conditionnés avec le fichier WAR, EAR ou JAR de l'application dans un dossier de ressources à la racine de l'archive. Dans le cas d'un serveur (fichier compressé ou répertoire de serveur), les fichiers peuvent être intégrés dans un package dans un dossier de ressources dans le répertoire de serveur, avec le fichier server.xml.
 
 * Fichier WAR
   * WEB-INF

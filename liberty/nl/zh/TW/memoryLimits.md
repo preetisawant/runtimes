@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-26"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -62,14 +62,14 @@ lastupdated: "2017-10-26"
 * 使用 `JVM_ARGS` 環境變數及 -Xmx 引數。例如，若要將資料堆大小上限設為 512M，請使用下列指令，並重新編譯打包應用程式。
 
 ```
-    $ cf set-env myapp JVM_ARGS -Xmx512m
+    ibmcloud cf set-env myapp JVM_ARGS -Xmx512m
 ```
 {: codeblock}
 
 * 使用 JBP_CONFIG_IBMJDK 環境變數來指定資料堆大小比例。heap_size_ratio 是浮點數值，可指定要配置記憶體限制的多少給資料堆。例如，若要將一半的可用記憶體（50% 或 0.50）配置給資料堆，請發出下列指令，並重新編譯打包應用程式。
 
 ```
-    $ cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "heap_size_ratio: 0.50"
 ```
 {: codeblock}
 

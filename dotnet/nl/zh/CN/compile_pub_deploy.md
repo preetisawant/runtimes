@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 现在，基于 MSBuild 的项目在编译打包期间使用 `dotnet publish` 命令发布。缺省情况下，buildpack 将在 `Debug` 配置中发布应用程序。
 要在 `Release` 配置中发布应用程序，请将 `PUBLISH_RELEASE_CONFIG` 环境变量设置为 `true`。
 
-可以通过 Cloud Foundry CLI 使用以下命令来执行此操作：
+可以通过 {{site.data.keyword.Bluemix_notm}} CLI 使用以下命令来执行此操作：
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 或者，可以在应用程序的 manifest.yml 文件中设置此变量：

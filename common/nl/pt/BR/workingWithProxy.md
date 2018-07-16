@@ -23,15 +23,13 @@ ser configurado, o que afeta o comportamento de seu aplicativo durante a prepara
   * [https_proxy ![ícone de link externo](../../icons/launch-glyph.svg "ícone de link externo")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}
   * [no_proxy ![ícone de link externo](../../icons/launch-glyph.svg "ícone de link externo")](http://www.gnu.org/software/wget/manual/html_node/Proxies.html){: new_window}
 
-É possível configurar essas variáveis de ambiente usando *bluemix app env-set* ou por meio do arquivo *manifest.yml*.  
-Dependendo da configuração das variáveis de ambiente do proxy, se o seu aplicativo fizer download de recursos da Internet durante a
+É possível configurar essas variáveis de ambiente usando *bluemix app env-set* ou por meio do arquivo *manifest.yml*.  Dependendo da configuração das variáveis de ambiente do proxy, se o seu aplicativo fizer download de recursos da Internet durante a
 preparação, o download dos recursos poderá ser feito usando o proxy. Por exemplo, se você tiver um aplicativo Nodejs em um ambiente
 com `http_proxy` configurado como `yourProxyURL` e quiser permitir que o
 `npm` faça download dos módulos da Internet **, mas não do proxy**.  Para fazer download sem
 usar o proxy, configure `no_proxy` para `npmjs.org`.
 
-**Nota**: você pode querer que seu aplicativo use o proxy durante o tempo de execução, depois da preparação.  
-O uso do proxy no tempo de execução é totalmente dependente do aplicativo e não é afetado pelo buildpack ou pelas variáveis de
+**Nota**: você pode querer que seu aplicativo use o proxy durante o tempo de execução, depois da preparação.  O uso do proxy no tempo de execução é totalmente dependente do aplicativo e não é afetado pelo buildpack ou pelas variáveis de
 ambiente do proxy.
 
 ## aplicativos Java
@@ -39,10 +37,10 @@ ambiente do proxy.
 
 Para os aplicativos [Liberty for Java](/docs/runtimes/liberty/index.html) e
 [java_buildpack](/docs/runtimes/tomcat/index.html), as configurações de proxy podem ser passadas para o
-tempo de execução por meio da variável de ambiente **JAVA_OPTS**. Por exemplo, é possível emitir o comando e,
+tempo de execução por meio da variável de ambiente **JAVA_OPTS**.  Por exemplo, é possível emitir o comando e,
 então, remontar seu aplicativo:
 ```
-   $ bluemix app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
+   ibmcloud app env-set myApp JAVA_OPTS "-Dhttp.proxyHost=yourProxyURL -Dhttp.proxyPort=yourProxyPort"
 ```
 {: codeblock}
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-10-26"
+  years: 2017, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -30,7 +30,7 @@ Oracle JRE 파일은 웹 서버에서 호스트되어야 하며, Liberty 빌드�
 ```
 {: codeblock}
 
-    * 예를 들어, 다음과 같습니다.
+    * 예:
     ```
        ---
        1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz
@@ -49,7 +49,7 @@ JBP_CONFIG_OPENJDK 변수의 경우 값은 다음과 같습니다.
 
 이를 설정하기 위해 다음과 같은 명령을 실행할 수 있습니다.
 ```
-   $ cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
+   ibmcloud cf se myApp JBP_CONFIG_OPENJDK 'repository_root: https://myHostingApp.ng.bluemix.net'
 ```
 {: codeblock}
 
@@ -57,7 +57,7 @@ JBP_CONFIG_OPENJDK 변수의 경우 값은 다음과 같습니다.
 
 JVM 환경 변수를 설정하려면 다음과 같은 명령을 실행합니다.
 ```
-   $ cf se myApp JVM 'openjdk'
+   ibmcloud cf se myApp JVM 'openjdk'
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -20,48 +20,50 @@ lastupdated: "2018-02-14"
 
 * {: download} Hello World サンプル・アプリケーションが {{site.data.keyword.Bluemix}} に正常にデプロイされました。  入門として、このステップバイステップのガイドに従って作業してください。 または、<a class="xref" href="http://bluemix.net" target="_blank" title="(サンプル・コードのダウンロード)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="アプリケーション・コードのダウンロード" />サンプル・コードをダウンロード</a>して、ご自身で探索してください。
 
-以下の Dotnet 入門チュートリアルに従って、開発環境のセットアップ、ローカルおよび {{site.data.keyword.Bluemix}} でのアプリケーションのデプロイ、および {{site.data.keyword.Bluemix}} データベース・サービスのアプリケーションへの統合を行います。
+この入門チュートリアルに従って、開発環境のセットアップ、ローカルおよび {{site.data.keyword.Bluemix}} でのアプリケーションのデプロイ、および {{site.data.keyword.Bluemix}} データベース・サービスのアプリケーションへの統合を行います。
 
 ## 始める前に
 {: #prereqs}
 
 以下が必要です。
-* [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.ng.bluemix.net/registration/)
-* [Cloud Foundry CLI ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
 * [dot.net Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.microsoft.com/net/download/core) の説明に従って .NET Core 1.1 SDK 1.0.4 をインストールします。
 
 ## ステップ 1: サンプル・アプリケーションを複製する
 {: #clone}
 
-アプリケーションの操作を開始する準備ができました。 リポジトリーを複製して、サンプル・アプリケーションがあるディレクトリーに移動します。
+最初に、サンプル・アプリケーション GitHub リポジトリーを複製します。
   ```
-git clone https://github.com/IBM-Bluemix/get-started-aspnet-core
+git clone https://github.com/IBM-Cloud/get-started-aspnet-core
   ```
-  {: pre}
-  ```
-cd get-started-aspnet-core
-  ```
-  {: pre}
+  {: codeblock}
+
 
 ## ステップ 2: アプリケーションをローカルで実行する
 {: #run_locally}
 
-アプリケーションを実行します。
+1. コマンド・ラインで、サンプル・アプリケーションがあるディレクトリーに移動します。
+
   ```
-cd src/GetStartedDotnet
+  cd get-started-aspnet-core/src/GetStartedDotnet
   ```
-  {: pre}
+  {: codeblock}
+
+1. 次のコマンドを実行し、アプリケーションをローカルで実行します。
+
   ```
 dotnet restore
   ```
-  {: pre}
+  {: codeblock}
+
   ```
 dotnet run
   ```
-  {: pre}
+  {: codeblock}
 
-http://localhost:5000/ でアプリケーションを表示します。
+1. http://localhost:5000/ でアプリケーションを表示します。
 
 ## ステップ 3: デプロイメントのためにアプリケーションを準備する
 {: #prepare}
@@ -79,53 +81,48 @@ manifest.yml ファイルを開き、`name` を `GetStartedDotnet` からご使�
   ```
   {: codeblock}
 
-この manifest.yml ファイル内の **random-route: true** は、アプリケーション用にランダムな経路を生成して、経路が他と衝突するのを回避します。  任意のホスト名を指定して、**random-route: true** を **host: myChosenHostName** に置き換えることも選択できます。 [詳細はこちら...](/docs/manageapps/depapps.html#appmanifest)
+この manifest.yml ファイル内の **`random-route: true`** は、アプリケーション用にランダムな経路を生成して、経路が他と衝突するのを回避します。  任意のホスト名を指定して、**`random-route: true`** を **`host: myChosenHostName`** に置き換えることも選択できます。
 {: tip}
 
 ## ステップ 4: アプリケーションをデプロイする
 {: #deploy}
 
-Cloud Foundry CLI を使用してアプリケーションをデプロイできます。
+{{site.data.keyword.Bluemix_notm}} CLI を使用してアプリケーションをデプロイできます。
 
-まず、以下のように {{site.data.keyword.Bluemix_notm}} アカウントにログインします。
+1. {{site.data.keyword.Bluemix_notm}} アカウントにログインし、API エンドポイントを選択します。
   ```
-cf login
+ibmcloud login
   ```
-  {: pre}
+  {: codeblock}
 
-  フェデレーテッド・ユーザー ID を使用しているために `cf login` または `bx login` のコマンドを使用してログインできない場合は、`cf login --sso` または `bx login --sso` のコマンドを使用し、シングル・サインオン ID を使ってログインしてください。 詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
-
-API エンドポイントを選択します。
+  フェデレーテッド・ユーザー ID をお持ちの場合は、代わりに次のコマンドを使用して、シングル・サインオン ID でログインしてください。詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
+ ```
+ibmcloud login --sso
   ```
-cf api <API-endpoint>
-  ```
-  {: pre}
+  {: codeblock}
 
-コマンド内の *API-endpoint* は以下のリストにある API エンドポイントのいずれかで置き換えてください。
-
-| **地域名** | **地理的位置** | **API エンドポイント** |
-|-----------------|-------------------------|-------------------|
-| 米国南部地域 | ダラス、米国 | api.ng.bluemix.net |
-| 米国東部地域 | ワシントン DC、米国 | api.us-east.bluemix.net |
-| 英国地域 | ロンドン、イングランド | api.eu-gb.bluemix.net |
-| シドニー地域 | シドニー、オーストラリア | api.au-syd.bluemix.net |
-| ドイツ地域 | フランクフルト、ドイツ | api.eu-de.bluemix.net |
-{: caption="表 1. {{site.data.keyword.cloud_notm}} 地域リスト" caption-side="top"}
-
-**アプリケーションのルート・ディレクトリー `get-started-aspnet-core` で作業していることを確認し**、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュします。
+1. Cloud Foundry の組織およびスペースをターゲットにします。
   ```
-cf push
+ibmcloud target --cf
   ```
-  {: pre}
+  {: codeblock}
 
-これには時間がかかることがあります。 デプロイメント・プロセスでエラーが発生した場合、`cf logs <Your-App-Name> --recent` コマンドを使用してトラブルシューティングすることができます。
+  組織およびスペースがセットアップされていない場合は、[組織およびスペースの追加](https://console.bluemix.net/docs/account/orgs_spaces.html)を参照してください。
+  {: tip}
 
-デプロイメントが完了すると、アプリケーションが実行中であることを示すメッセージが表示されます。  push コマンドの出力にリストされている URL でアプリケーションを表示します。  また、以下のコマンドを実行することもできます。
+1. **アプリケーションのルート・ディレクトリー `get-started-aspnet-core` で作業していることを確認し**、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュします。
   ```
-cf apps
+ibmcloud cf push
   ```
-  {: pre}
-  このコマンドにより、アプリケーションの状況と URL が表示されます。
+  {: codeblock}
+
+  これには時間がかかることがあります。 デプロイメント・プロセスでエラーが発生した場合、`ibmcloud cf logs <Your-App-Name> --recent` コマンドを使用してトラブルシューティングすることができます。
+
+デプロイメントが完了すると、アプリケーションが実行中であることを示すメッセージが表示されます。  push コマンドの出力にリストされている URL でアプリケーションを表示します。  また、次のコマンドを発行して、アプリケーションの状況と URL を確認することもできます。
+  ```
+ibmcloud cf apps
+  ```
+  {: codeblock}
 
 ## ステップ 5: MySQL データベースを接続する
 {: connect_mysql}
@@ -133,23 +130,23 @@ cf apps
 次に、ClearDB MySQL データベースをこのアプリケーションに追加し、ローカルおよび {{site.data.keyword.Bluemix_notm}} で実行できるようにアプリケーションをセットアップします。
 
 1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
-2. **「データおよび分析」**セクションを選択し、**ClearDB MySQL** を選択してサービスを作成します。
+2. **「データおよび分析」**セクションを選択し、**「ClearDB 管理対象 MySQL データベース (ClearDB Managed MySQL Database)」** を選択してサービスを作成します。
 3. **「接続」**ビューに移動し、アプリケーションを選択してから**「接続の作成」**を選択します。
 4. プロンプトが出されたら**「再ステージ」**を選択します。 {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
 
-環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。 例えば、データベース・パスワードをハードコーディングする代わりに、環境変数にそれを保管して、ソース・コードではその環境変数を参照するようにできます。 [詳細はこちら...](/docs/manageapps/depapps.html#app_env)
+環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。 例えば、データベース・パスワードをハードコーディングする代わりに、環境変数にそれを保管して、ソース・コードではその環境変数を参照するようにできます。
 {: tip}
 
 ## ステップ 6: ローカルでデータベースを使用する
 {: #use_database}
 
-次に、このデータベースを指すようにローカル・コードを更新します。 サービスの資格情報を json ファイルに保管します。 このファイルは、アプリケーションがローカルで実行されている場合にのみ使用されます。 {{site.data.keyword.Bluemix_notm}} で実行されているときには、資格情報は VCAP_SERVICES 環境変数から読み取られます。
+次に、このデータベースを指すようにローカル・コードを更新します。 サービスの資格情報を JSON ファイルに保管します。 このファイルは、アプリケーションがローカルで実行されている場合にのみ使用されます。 {{site.data.keyword.Bluemix_notm}} で実行されているときには、資格情報は VCAP_SERVICES 環境変数から読み取られます。
 
 1. ファイル src/GetStartedDotnet/vcap-local.json を作成します。
 
-2. ブラウザーで {{site.data.keyword.Bluemix_notm}} UI を開き、「アプリ」->「接続」->「ClearDB 管理対象 MySQL データベース (ClearDB Managed MySQL Database)」->「資格情報の表示」を選択します。
+2. ブラウザーで、{{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、**「_your app_」>「接続」**を選択します。{{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&vellip;**) をクリックし、**「資格情報の表示」**を選択します。
 
-3. 資格情報の json オブジェクト全体を `vcap-local.json` ファイルにコピー・アンド・ペーストし、変更を保存します。  結果は次のようになります。
+3. 資格情報の json オブジェクト全体を `vcap-local.json` ファイルにコピー・アンド・ペーストし、変更を保存します。  結果は次の例のようになります。
   ```
   {
   "cleardb": [
@@ -169,9 +166,9 @@ cf apps
 
 4. `get-started-aspnet-core/src/GetStartedDotnet` ディレクトリーで `dotnet run` コマンドを使用して、アプリケーションを再始動します。
 
-  http://localhost:5000/ のブラウザー・ビューを最新表示します。 アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
+http://localhost:5000/ のブラウザー・ビューを最新表示します。 アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
 
-  ローカル・アプリケーションと {{site.data.keyword.Bluemix_notm}} アプリケーションは、データベースを共有しています。  上の push コマンドの出力にリストされている URL で {{site.data.keyword.Bluemix_notm}} アプリケーションを表示します。  いずれかのアプリケーションから追加した名前は、ブラウザーを最新表示すると両方に表示されます。
+ローカル・アプリケーションと {{site.data.keyword.Bluemix_notm}} アプリケーションは、データベースを共有しています。  上の push コマンドの出力にリストされている URL で {{site.data.keyword.Bluemix_notm}} アプリケーションを表示します。  いずれかのアプリケーションから追加した名前は、ブラウザーを最新表示すると両方に表示されます。
 
 予期しない課金が発生しないように、アプリケーションを稼働中にしておく必要がない場合は停止することを忘れないでください。
 {: tip}

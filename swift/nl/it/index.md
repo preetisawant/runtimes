@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,9 +19,9 @@ Questo pacchetto di build fornisce un ambiente di runtime completo per le applic
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} fornisce un'[applicazione starter](https://github.com/IBM-Bluemix/Kitura-Starter) Swift basata su Kitura. L'applicazione starter Kitura è un'applicazione semplice Swift che puoi utilizzare per avere informazioni sui tipi di applicazioni del server che puoi distribuire utilizzando il linguaggio di programmazione Swift. Questa applicazione di esempio crea un server HTTP Kitura di base che restituisce del contenuto HTML al client.
+{{site.data.keyword.Bluemix_notm}} fornisce un'[applicazione starter](https://github.com/IBM-Cloud/Kitura-Starter) Swift basata su Kitura. L'applicazione starter Kitura è un'applicazione semplice Swift che puoi utilizzare per avere informazioni sui tipi di applicazioni del server che puoi distribuire utilizzando il linguaggio di programmazione Swift. Questa applicazione di esempio crea un server HTTP Kitura di base che restituisce del contenuto HTML al client.
 
-**Nota:** l'applicazione starter di Kitura è pensata per essere utilizzata per scopi didattici. Puoi fare delle prove con l'applicazione starter facendo delle modifiche ed eseguirne il push all'ambiente {{site.data.keyword.Bluemix_notm}}. Consulta [Utilizzo di applicazioni starter](../../cfapps/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+**Nota:** l'applicazione starter di Kitura è pensata per essere utilizzata per scopi didattici. Puoi fare delle prove con l'applicazione starter facendo delle modifiche ed eseguirne il push all'ambiente {{site.data.keyword.Bluemix_notm}}. Consulta [Utilizzo di applicazioni starter](../common/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Ridenominazione della tua applicazione
 {: #renaming_your_app}
@@ -53,7 +53,7 @@ Poiché vi sono frequenti aggiornamenti nel linguaggio Swift, dovresti sempre in
 
 Tieni presente che puoi specificare una qualsiasi versione valida di Swift nel tuo file `.swift-version`. Queste versioni alternative devono corrispondere alla denominazione e vengono trasmesse direttamente da [Swift.org ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://swift.org/download/). Quando si utilizza una versione senza cache il provisioning sarà un po' più lungo, non esistono differenze nelle prestazioni del runtime della tua applicazione Swift.
 
-Il swift_buildpack predefinito in {{site.data.keyword.Bluemix_notm}} verrà utilizzato se la directory root della tua applicazione contiene un file `Package.swift`.  Se desideri utilizzare un pacchetto di build alternativo, devi specificarlo aggiungendo una voce `buildpack: {buildpackUrl}` al file manifest.yml della tua applicazione. In alternativa, puoi definirlo al momento della distribuzione, utilizzando l'argomento del comando `cf push -b {buildpackUrl}`.
+Il swift_buildpack predefinito in {{site.data.keyword.Bluemix_notm}} verrà utilizzato se la directory root della tua applicazione contiene un file `Package.swift`.  Se desideri utilizzare un pacchetto di build alternativo, devi specificarlo aggiungendo una voce `buildpack: {buildpackUrl}` al file manifest.yml della tua applicazione. In alternativa, puoi definirlo al momento della distribuzione, utilizzando l'argomento del comando `ibmcloud cf push -b {buildpackUrl}`.
 
 
 ## Ambienti dello sviluppatore
@@ -93,7 +93,7 @@ Esistono altri strumenti online disponibili da IBM per lo sviluppatore Swift.
 * [IBM Swift Package Catalog](https://swiftpkgs.ng.bluemix.net/)
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Kitura Documentation and APIs](http://ibm-swift.github.io/Kitura/)
-* [Kitura Starter app for Bluemix](https://github.com/IBM-Bluemix/Kitura-Starter)
+* [Kitura Starter app for Bluemix](https://github.com/IBM-Cloud/Kitura-Starter)
 * [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
 * [IBM Bluemix buildpack for Swift release notes](https://github.com/IBM-Swift/swift-buildpack/releases)
 * [Swift.org ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://swift.org/)

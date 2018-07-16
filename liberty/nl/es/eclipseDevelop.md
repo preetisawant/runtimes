@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-15"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-02-15"
 
 También puede utilizar {{site.data.keyword.eclipsetoolsfull}} como una forma alternativa para desarrollar y desplegar aplicaciones en {{site.data.keyword.Bluemix}}. {{site.data.keyword.eclipsetoolsfull}} proporciona plug-ins que se pueden instalar en un entorno Eclipse existente para ayudarle a integrar el entorno de desarrollo integrado (IDE) con {{site.data.keyword.Bluemix_notm}}.
 
-Este procedimiento sigue los mismos pasos generales que la [Guía de aprendizaje de iniciación](getting-started.html) para Liberty. Si utiliza Eclipse, configurará una app localmente y en la nube, e integrará un servicio de base de datos de {{site.data.keyword.Bluemix_notm}} en la app. 
+Este procedimiento sigue los mismos pasos generales que la [Guía de aprendizaje de iniciación](getting-started.html) para Liberty. Si utiliza Eclipse, configurará una app localmente y en la nube, e integrará un servicio de base de datos de {{site.data.keyword.Bluemix_notm}} en la app.
 
 ## Antes de empezar
 {: #prereqs}
@@ -28,9 +28,9 @@ Necesitará las siguientes cuentas y herramientas:
 * [IBM Eclipse Tools for IBM Cloud ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/wasdev/downloads/#asset/tools-IBM_Eclipse_Tools_for_Bluemix){: new_window}
 * [Eclipse IDE for Java EE Developers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
-Si ha completado la [Guía de aprendizaje de iniciación](getting-started.md), es posible que ya tenga estas herramientas y cuentas. Antes de empezar, asegúrese de que también ha instalado y registrado lo siguiente: 
-* [Cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.ng.bluemix.net/registration/)
-* [CLI de Cloud Foundry ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/cloudfoundry/cli#downloads){: new_window}
+Si ha completado la [Guía de aprendizaje de iniciación](getting-started.md), es posible que ya tenga estas herramientas y cuentas. Antes de empezar, asegúrese de que también ha instalado y registrado lo siguiente:
+* [Cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://maven.apache.org/download.cgi){: new_window}
 
@@ -38,12 +38,13 @@ Si ha completado la [Guía de aprendizaje de iniciación](getting-started.md), e
 {: #clone}
 
 En primer lugar, clone el repositorio GitHub de la app de ejemplo.
-  ```bash
-git clone https://github.com/IBM-Bluemix/get-started-java
-  ```
-  {: pre}
 
-## Paso 2: Cree el código fuente de la aplicación 
+  ```
+git clone https://github.com/IBM-Cloud/get-started-java
+  ```
+  {: codeblock}
+
+## Paso 2: Cree el código fuente de la aplicación
 {: #build_app}
 
 Utilice Maven para compilar el código fuente y ejecute la app resultante.
@@ -53,14 +54,14 @@ Utilice Maven para compilar el código fuente y ejecute la app resultante.
   ```
 cd get-started-java
   ```
-  {: pre}
+  {: codeblock}
 
 1. Utilice Maven para instalar dependencias y compilar el archivo .war.
 
   ```
 mvn clean install
   ```
-  {: pre}
+  {: codeblock}
 
 ## Paso 3: Prepare la app para el despliegue
 {: #prepare}
@@ -80,34 +81,35 @@ Abra el archivo manifest.yml y cambie el valor de `name` de `GetStartedJava` por
   ```
   {: codeblock}
 
-En este archivo manifest.yml, **random-rout: true** genera una ruta aleatoria para la app a fin de evitar que su ruta entre en conflicto con otras.  Si lo desea, puede sustituir **random-route: true** por **host: myChosenHostName**, especificando el nombre de host que elija. [Más información...](/docs/manageapps/depapps.html#appmanifest)
+En este archivo manifest.yml, **random-rout: true** genera una ruta aleatoria para la app a fin de evitar que su ruta entre en conflicto con otras.  Si lo desea, puede sustituir **random-route: true** por **host: myChosenHostName**, especificando el nombre de host que elija.
 {: tip}
 
-## Paso 4: Despliegue en {{site.data.keyword.Bluemix_notm}}
+## Paso 4: Inicie la sesión en {{site.data.keyword.Bluemix_notm}}
 {: #deploy}
 
-Despliegue la app en una de las siguientes regiones de {{site.data.keyword.Bluemix_notm}}. Para optimizar la latencia, elija la región más cercana a sus usuarios.
+1. Inicie sesión en su cuenta de {{site.data.keyword.Bluemix_notm}} y seleccione un punto final de API.
 
-|Región          |Punto final de la API                             |
-|:---------------|:-------------------------------|
-| EE.UU. Sur       |https://api.ng.bluemix.net     |
-| Reino Unido | https://api.eu-gb.bluemix.net  |
-| Sidney         | https://api.au-syd.bluemix.net |
-| Frankfurt     | https://api.eu-de.bluemix.net |
+  ```
+ibmcloud login
+  ```
+  {: codeblock}
 
-1. Establezca el punto final de la API sustituyendo `<API-endpoint>`  con el punto final de su región.
-  ```
-cf api <API-endpoint>
-  ```
-  {: pre}
+  Si no puede iniciar sesión utilizando los mandatos `ibmcloud login` porque tiene un ID de usuario federado, utilice lo siguiente para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
 
-1. Inicie una sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}.
   ```
-cf login
+ibmcloud login --sso
   ```
-  {: pre}
+  {: codeblock}
 
-  Si no puede iniciar sesión utilizando los mandatos `cf login` o `bx login` porque tiene un ID de usuario federado, utilice los mandatos `cf login --sso` o `bx login --sso` para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
+  A continuación, establezca la CLI de Cloud Foundry:
+
+  ```	  
+ibmcloud target --cf
+  ```
+  {: codeblock}
+
+  Si no tiene una org o un espacio configurado, consulte [Adición de organizaciones y espacios](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  {: tip}
 
 ## Paso 5: Desarrollo mediante Eclipse
 {: #eclipse}
@@ -139,15 +141,18 @@ cf login
 
 6. Envíe por push los cambios a {{site.data.keyword.Bluemix_notm}}:
   - En el directorio `get-started-java` en la línea de mandatos, vuelva a compilar el archivo .war.
+
     ```
 mvn clean install
     ```
-    {: pre}
+    {: codeblock}
+
   - Envíe por push la aplicación a {{site.data.keyword.Bluemix_notm}}.
+
     ```
-cf push
+ibmcloud cf push
     ```
-    {: pre}
+    {: codeblock}
 
 Ahora ha ejecutado el código tanto localmente como en la nube.
 
@@ -157,11 +162,11 @@ Ahora ha ejecutado el código tanto localmente como en la nube.
 A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
 1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione **Crear recurso**.
-2. Elija la sección **Datos y análisis** y, a continuación, seleccione **BD Cloudant NoSQL** y cree el servicio.
+2. Elija la sección **Datos y análisis** y, a continuación, seleccione **{{site.data.keyword.cloudant_short_notm}}** y cree el servicio.
 3. Vaya a la vista de **Conexiones** y seleccione su aplicación y, a continuación a **Crear conexión**.
 4. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
-Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente. [Más información...](/docs/manageapps/depapps.html#app_env)
+Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente.
 {: tip}
 
 ## Paso 7: Utilice la base de datos
@@ -169,18 +174,20 @@ Las variables de entorno le permiten separar valores de despliegue del código f
 Ahora vamos a actualizar el código local para que apunte a esta base de datos. Guardaremos las credenciales correspondientes a los servicios en un archivo de propiedades. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno `VCAP_SERVICES`.
 
 1. En Eclipse, abra el archivo src/main/resources/cloudant.properties:
+
   ```
   cloudant_url=
   ```
-  {: pre}
+  {: codeblock}
 
 2. En su navegador, vaya a {{site.data.keyword.Bluemix_notm}} y seleccione **Apps > _su app_ > Conexiones > Cloudant > Ver credenciales**.
 
 3. Copie y pegue sólo el `url` de las credenciales en el campo `url` del archivo `cloudant.properties` y guarde los cambios.
+
   ```
   cloudant_url=https://123456789 ... bluemix.cloudant.com
   ```
-  {:pre}
+  {:codeblock}
 
 4. Reinicie el servidor Liberty en Eclipse desde la vista `Servers`.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-1-31"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -16,12 +16,12 @@ lastupdated: "2018-1-31"
 ## File di log
 {: #log_files}
 
-I log Liberty standard, come `messages.log` o la directory `ffdc`, sono disponibili in {{site.data.keyword.Bluemix}} nella directory `logs` di ciascuna istanza dell'applicazione. A questi log è possibile accedere dalla console {{site.data.keyword.Bluemix_notm}} oppure con la CLI Cloud Foundry. Ad esempio:
+I log Liberty standard, come `messages.log` o la directory `ffdc`, sono disponibili in {{site.data.keyword.Bluemix}} nella directory `logs` di ciascuna istanza dell'applicazione. A questi log è possibile accedere dalla console {{site.data.keyword.Bluemix_notm}} oppure tramite la CLI {{site.data.keyword.Bluemix_notm}}. Ad esempio:
 
 * Per accedere ai log recenti di un'applicazione, esegui il seguente comando:
 
   ```
-  cf logs --recent <appname>
+  ibmcloud cf logs --recent <appname>
   ```
   {: codeblock}
 
@@ -29,7 +29,7 @@ I log Liberty standard, come `messages.log` o la directory `ffdc`, sono disponib
 * Per visualizzare il file `messages.log` di un'applicazione, esegui il seguente comando:
 
   ```
-  cf ssh <appname> -c "cat logs/messages.log"
+  ibmcloud cf ssh <appname> -c "cat logs/messages.log"
   ```
   {: codeblock}
 
@@ -43,7 +43,7 @@ e le altre opzioni di traccia possono essere impostati mediante il file di confi
 
 La configurazione della traccia Liberty può essere modificata per un'applicazione in esecuzione direttamente dalla console {{site.data.keyword.Bluemix_notm}}. La console fornisce inoltre la capacità di richiedere e scaricare dump di heap e di thread. Per modificare la configurazione della traccia o per richiedere un dump, seleziona un'applicazione Liberty nella console {{site.data.keyword.Bluemix_notm}} e scegli il menu `Runtime` nella navigazione. Nella vista `Runtime`, seleziona un'istanza e premi il pulsante *TRACE* o *DUMP*. Se stai modificando il livello di traccia, consulta [Troubleshooting Liberty: Logging and Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html) per i dettagli della sintassi della specifica della traccia.
 
-### Modifica della configurazione della traccia tramite SSH 
+### Modifica della configurazione della traccia tramite SSH
 
 Quando esegui il push dell'applicazione, il file server.xml include le proprietà predefinite **updateTrigger** impostata su **polled** e **monitorInterval** impostata su 1 minuto. Il server Liberty viene automaticamente configurato per controllare gli aggiornamenti del file server.xml ogni minuto.
 
@@ -51,16 +51,16 @@ Consulta [Push delle applicazioni Liberty con server.xml](https://console.ng.blu
 
 Consulta [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} per informazioni su come configurare l'aggiornamento dinamico in server.xml.
 
-Segui questa procedura per modificare la configurazione della traccia: 
+Segui questa procedura per modificare la configurazione della traccia:
 
 1. SSH alla tua app
 
   ```
- cf ssh <appname> [-i instance_index]
+ ibmcloud cf ssh <appname> [-i instance_index]
   ```
   {: codeblock}
 
-2. Modifica ```<logging traceSpecification="xxxx"/>``` in server.xml per configurare la tua specifica della traccia desiderata, ad esempio utilizzando *vi*:
+2. Modifica `<logging traceSpecification="xxxx"/>` in server.xml per impostare la tua specifica di traccia desiderata, ad esempio utilizzando *vi*:
 
   ```
 vi /app/wlp/usr/servers/defaultServer/server.xml
@@ -71,12 +71,12 @@ Nota: la modifica a server.xml andrà persa al riavvio e alla ripreparazione ed 
 
 Consulta [Troubleshooting Liberty: Logging and Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} per i dettagli della sintassi della specifica della traccia.
 
-### Attivazione dei dump tramite SSH 
+### Attivazione dei dump tramite SSH
 
-Utilizza il seguente comando per attivare un dump di heap e di thread tramite la CLI CF utilizzando la funzione SSH: 
+Utilizza il comando di seguito per attivare un dump di thread e heap tramite la CLI {{site.data.keyword.Bluemix_notm}} utilizzando la funzione SSH.:
 
   ```
- cf ssh <appname> -c "pkill -3 java"
+ ibmcloud cf ssh <appname> -c "pkill -3 java"
   ```
   {: codeblock}
 
@@ -85,19 +85,19 @@ Consulta la seguente documentazione per i dettagli sullo scaricamento dei file d
 ## Scarica file dump
 {: #download_dumps}
 
-Per impostazione predefinita, i vari file di dump sono ubicati nella directory `dumps` del contenitore dell'applicazione. Utilizza la CLI Cloud Foundry `cf ssh` per visualizzare e scaricare i file di dump.
+Per impostazione predefinita, i vari file di dump sono ubicati nella directory `dumps` del contenitore dell'applicazione. Utilizza la CLI {{site.data.keyword.Bluemix_notm}} `ibmcloud cf ssh` per visualizzare e scaricare i file di dump:
 
 * Per visualizzare i dump generati, esegui il seguente comando:
 
   ```
-  $ cf ssh <appname> -c "ls -l dumps"
+  ibmcloud cf ssh <appname> -c "ls -l dumps"
   ```
   {: codeblock}
 
 * Per scaricare un file di dump, esegui il seguente comando:
 
   ```
-  cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
+  ibmcloud cf ssh <appname> -i <instance_id> -c "cat dumps/<dump_file_name>" > <local_dump_file_name>
   ```
   {: codeblock}
 

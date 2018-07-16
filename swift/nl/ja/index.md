@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,9 +19,9 @@ lastupdated: "2017-11-08"
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} には、Kitura ベースの Swift [スターター・アプリケーション](https://github.com/IBM-Bluemix/Kitura-Starter)が用意されています。 Kitura スターター・アプリケーションは、Swift プログラミング言語を使用して開発可能なサーバー・アプリケーションのタイプを確認するために使用できる、シンプルな Swift アプリケーションです。 このサンプル・アプリケーションは、HTML コンテンツをクライアントに返す、基本的な Kitura HTTP サーバーを作成します。
+{{site.data.keyword.Bluemix_notm}} には、Kitura ベースの Swift [スターター・アプリケーション](https://github.com/IBM-Cloud/Kitura-Starter)が用意されています。Kitura スターター・アプリケーションは、Swift プログラミング言語を使用して開発可能なサーバー・アプリケーションのタイプを確認するために使用できる、シンプルな Swift アプリケーションです。 このサンプル・アプリケーションは、HTML コンテンツをクライアントに返す、基本的な Kitura HTTP サーバーを作成します。
 
-**注:** Kitura スターター・アプリケーションは、教育目的での使用を意図しています。 機能拡張を行ってスターター・アプリケーションを試し、これらの変更を {{site.data.keyword.Bluemix_notm}} 環境に対してプッシュすることができます。 スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../../cfapps/starter_app_usage.html)を参照してください。
+**注:** Kitura スターター・アプリケーションは、教育目的での使用を意図しています。 機能拡張を行ってスターター・アプリケーションを試し、これらの変更を {{site.data.keyword.Bluemix_notm}} 環境に対してプッシュすることができます。 スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../common/starter_app_usage.html)を参照してください。
 
 ## アプリケーションの名前変更
 {: #renaming_your_app}
@@ -53,7 +53,7 @@ Swift 言語は頻繁に更新されるため、連携して動くことがわ�
 
 有効であればどのバージョンの Swift でも `.swift-version` ファイル内に指定できることに注意してください。 これらの代替バージョンは、[Swift.org ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://swift.org/download/) の命名と一致する必要があり、Swift.org から直接取得されます。 非キャッシュ・バージョンを使用するとプロビジョンに少し時間がかかりますが、Swift アプリケーションのランタイム・パフォーマンスに相違はありません。
 
-{{site.data.keyword.Bluemix_notm}} のデフォルトの swift_buildpack は、アプリケーションのルート・ディレクトリーに `Package.swift` ファイルが含まれている場合に使用されます。  代替のビルドパックを使用する場合は、`buildpack: {buildpackUrl}` エントリーをアプリケーションの manifest.yml ファイルに追加することでこれを指定する必要があります。 または、デプロイメント時に `cf push -b {buildpackUrl}` コマンド引数を使用してこれを定義することができます。
+{{site.data.keyword.Bluemix_notm}} のデフォルトの swift_buildpack は、アプリケーションのルート・ディレクトリーに `Package.swift` ファイルが含まれている場合に使用されます。  代替のビルドパックを使用する場合は、`buildpack: {buildpackUrl}` エントリーをアプリケーションの manifest.yml ファイルに追加することでこれを指定する必要があります。 または、デプロイメント時に `ibmcloud cf push -b {buildpackUrl}` コマンド引数を使用してこれを定義することができます。
 
 
 ## 開発者環境
@@ -93,7 +93,7 @@ Swift 開発者用のその他のオンライン・ツールも IBM から入手
 * [IBM Swift Package Catalog](https://swiftpkgs.ng.bluemix.net/)
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Kitura の資料および API](http://ibm-swift.github.io/Kitura/)
-* [Bluemix 用の Kitura スターター・アプリケーション](https://github.com/IBM-Bluemix/Kitura-Starter)
+* [Bluemix 用の Kitura スターター・アプリケーション](https://github.com/IBM-Cloud/Kitura-Starter)
 * [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
 * [IBM Bluemix buildpack for Swift リリース情報](https://github.com/IBM-Swift/swift-buildpack/releases)
 * [Swift.org ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://swift.org/)

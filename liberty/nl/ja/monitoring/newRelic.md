@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -39,9 +39,9 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
 {{site.data.keyword.Bluemix_notm}} 内で New Relic を使用して既存の Java アプリケーションをモニターするには、以下のステップに従ってください。
 1. {{site.data.keyword.Bluemix_notm}} に New Relic サービス・インスタンスを作成します。
 
-  <pre>
-    $ cf create-service newrelic standard mynewrelic
-  </pre>
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
   {: codeblock}
 
 2. New Relic サービスを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。  以下のサンプル・アプリケーション・マニフェストを参照してください。
@@ -67,9 +67,10 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
 
 既存の New Relic アカウントとライセンス・キーがある場合は、「ユーザー提供のサービス」を使用して既存の New Relic サービスをアプリケーションにバインドできます。
 
-1. 既存のライセンス・キーを使用してユーザー提供のサービス・インスタンスを作成します。  例えば、既存のライセンス・キーが 1234567 の場合、「create-user-provided-service」に CF CLI を使用して、以下のプロンプトでライセンス・キー 1234567 を入力できます。
+1. 既存のライセンス・キーを使用してユーザー提供のサービス・インスタンスを作成します。  例えば、既存のライセンス・キーが 1234567 の場合、「create-user-provided-service」に {{site.data.keyword.Bluemix_notm}} CLI を使用して、以下のプロンプトでライセンス・キー 1234567 を入力できます。
+  
   ```
-    $ cf create-user-provided-service mynewrelic -p "licenseKey"
+    ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
   ```
   {: codeblock}

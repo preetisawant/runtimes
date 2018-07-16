@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,7 +20,7 @@ FIPS 対応ノード・エンジンを使用するには、環境変数 FIPS_MOD
 例えば、次のとおりです。
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
@@ -31,7 +31,7 @@ FIPS_MODE が true の場合、一部のノード・モジュールが機能し�
 {: codeblock}
 詳しくは、[スタック・オーバーフローの投稿 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js) を参照してください。
 
-**注:** [アプリケーション管理](/docs/manageapps/app_mng.html)と FIPS_MODE は、同時にはサポートされ*ません*。  BLUEMIX_APP_MGMT_ENABLE 環境変数が設定され、かつ FIPS_MODE 環境変数が true に設定されると、アプリケーションはステージングに失敗します。
+**注:** [アプリケーション管理](../common/app_mng.html)と FIPS_MODE は、同時にはサポートされ*ません*。  BLUEMIX_APP_MGMT_ENABLE 環境変数が設定され、かつ FIPS_MODE 環境変数が true に設定されると、アプリケーションはステージングに失敗します。
 
 FIPS_MODE の状態を確認するには、以下のようにさまざまな方法があります。
 <ul>

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-07-13"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -24,9 +24,9 @@ NPM は、スクリプトの実行を可能にするスクリプティング機�
 {: #cache_behavior}
 {{site.data.keyword.Bluemix}} は、ノード・アプリケーションごとにキャッシュ・ディレクトリーを維持します。これはビルド間でも存続します。 キャッシュには解決された依存関係が格納されるため、これらはアプリケーションがデプロイされるたびにダウンロードもインストールもされることはありません。  例えば、myapp が **express** に依存しているとします。  その場合、myapp の初回デプロイ時に、**express** モジュールがダウンロードされます。  myapp のそれ以降のデプロイ時には、**express** のキャッシュされたインスタンスが使用されます。 デフォルトの動作では、NPM によってインストールされた node_modules と、bower によってインストールされた bower_components がすべてキャッシュされます。
 
-Node ビルドパックが以前のビルドからのキャッシュを使用するか無視するかを決定するには、NODE_MODULES_CACHE 変数を使用します。 デフォルト値は true です。  キャッシングを無効にするには、NODE_MODULES_CACHE を (例えば cf コマンド・ラインで) false に設定します。
+Node ビルドパックが以前のビルドからのキャッシュを使用するか無視するかを決定するには、NODE_MODULES_CACHE 変数を使用します。 デフォルト値は true です。  キャッシングを無効にするには、NODE_MODULES_CACHE を (例えば {{site.data.keyword.Bluemix_notm}} コマンド・ラインで) false に設定します。
 ```
-    $ cf set-env myapp NODE_MODULES_CACHE false
+    ibmcloud cf set-env myapp NODE_MODULES_CACHE false
 ```
 {: codeblock}
 

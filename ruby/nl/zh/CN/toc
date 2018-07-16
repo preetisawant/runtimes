@@ -16,8 +16,8 @@ Ruby
     {: .navgroup id="reference"}
     {: .topicgroup}
     入门模板应用程序和社区 buildpack
-        [使用入门模板应用程序](../../cfapps/starter_app_usage.html)
-        [使用社区 buildpack](../../cfapps/byob.html)
+        [使用入门模板应用程序](../common/starter_app_usage.html)
+        [使用社区 buildpack](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

@@ -12,8 +12,8 @@ Swift
     {: .navgroup id="reference"}
     {: .topicgroup}
     Applicazioni starter e pacchetti di build della community
-        [Utilizzo delle applicazioni starter](../../cfapps/starter_app_usage.html)
-        [Utilizzo dei pacchetti di build della community](../../cfapps/byob.html)
+        [Utilizzo delle applicazioni starter](../common/starter_app_usage.html)
+        [Utilizzo dei pacchetti di build della community](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

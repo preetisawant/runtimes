@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-08"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,7 +20,7 @@ Esse buildpack fornece um ambiente de tempo de execução completo para aplicati
 ## Aplicativo iniciador
 {: #starter_application}
 
-O {{site.data.keyword.Bluemix_notm}} fornece um [aplicativo iniciador](https://github.com/IBM-Bluemix/Kitura-Starter)
+O {{site.data.keyword.Bluemix_notm}} fornece um [aplicativo iniciador](https://github.com/IBM-Cloud/Kitura-Starter)
 Swift baseado em Kitura. O app iniciador Kitura é um app Swift
 simples que pode ser usado para saber mais sobre os tipos de aplicativos de servidor que
 é possível desenvolver usando a linguagem de programação Swift. Esse app de amostra
@@ -28,7 +28,7 @@ cria um servidor HTTP Kitura básico que retorna conteúdo HTML para o cliente.
 
 **Nota:** o aplicativo iniciador Kitura é destinado a ser usado para
 propósitos educacionais. É possível experimentar com o aplicativo iniciador ao fazer aprimoramentos
-e enviar essas mudanças por push para o ambiente do {{site.data.keyword.Bluemix_notm}}. Consulte [Usando os aplicativos iniciadores](../../cfapps/starter_app_usage.html) para obter ajuda sobre o uso
+e enviar essas mudanças por push para o ambiente do {{site.data.keyword.Bluemix_notm}}. Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
 ## Renomeando seu app
@@ -47,7 +47,7 @@ implementação sem erros.
     - `Comando` - o nome do executável para iniciar seu aplicativo (deve corresponder ao
 nome especificado no arquivo Package.swift).
 
-## Versões de tempo de execução
+## Versões de runtime
 {: #runtime_versions}
 
 Por padrão, o Runtime for Swift (swift_buildpack) hospedado no {{site.data.keyword.Bluemix_notm}} usa a versão de disponibilidade geral mais recente dos binários Swift. Esta
@@ -74,9 +74,8 @@ O swift_buildpack padrão no {{site.data.keyword.Bluemix_notm}} será usado se o
 do seu aplicativo contiver um arquivo `Package.swift`.  Se
 você desejar usar um buildpack alternativo, deverá especificar isso
 incluindo uma entrada
-`buildpack: {buildpackUrl}` no arquivo manifest.yml do seu app. Como
-alternativa, é possível definir isso no momento da implementação, usando o
-argumento de comando `cf push -b {buildpackUrl}`.
+`buildpack: {buildpackUrl}` no arquivo manifest.yml do seu app. Como alternativa, é possível definir isso no
+momento da implementação, usando o argumento de comando `ibmcloud cf push -b {buildpackUrl}`.
 
 
 ## Ambientes do desenvolvedor
@@ -128,7 +127,7 @@ amostras de código com outros, bem como explorar exemplos populares fornecidos 
 * [Catálogo de pacotes do IBM Swift](https://swiftpkgs.ng.bluemix.net/)
 * [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
 * [Documentação e APIs do Kitura](http://ibm-swift.github.io/Kitura/)
-* [App Starter Kitura para Bluemix](https://github.com/IBM-Bluemix/Kitura-Starter)
+* [App Starter Kitura para Bluemix](https://github.com/IBM-Cloud/Kitura-Starter)
 * [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
 * [Notas sobre a liberação
 do IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack/releases)

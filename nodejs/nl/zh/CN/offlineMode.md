@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
+  years: 2016, 2018
 lastupdated: "2018-01-10"
 
 ---
@@ -38,9 +38,9 @@ Node.js buildpack 可以访问以下外部站点。您可能需要在 [{{site.da
 依赖项中可以包含依赖项，而被包含的依赖项还可以包含依赖项，依此类推，但 `package.json` 只包含顶层依赖项。如果某个依赖项使用了 package.json 中的某个范围，且该依赖项的新版本已发布，那么 node_modules 目录中的模块会变为过时。*shrinkwrap* 可帮助您锁定所有依赖项版本，避免发生上述情况。要使用 shrinkwrap，请首先清空或清除 `node_modules` 目录。然后，在您项目的根目录中运行以下命令：
 
 
-1. ```npm install```
-1. ```npm dedupe```
-2. ```npm shrinkwrap```
+1. `npm install`
+1. `npm dedupe`
+2. `npm shrinkwrap`
 
 这可能会更改您的 `package.json`，并将 `npm-shrinkwrap.json` 添加到您的根目录中。
 每次对 `package.json` 文件中的依赖项进行更改后，请重复 `npm dedupe` 和 `shringwrap` 步骤。

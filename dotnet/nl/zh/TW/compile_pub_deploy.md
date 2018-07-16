@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-05-31"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -19,10 +19,10 @@ lastupdated: "2017-05-31"
 現在，在編譯打包期間，使用 `dotnet publish` 指令來發佈 MSBuild 型專案。建置套件預設會在 `Debug` 配置中發佈應用程式。
 若要在 `Release` 配置中發佈應用程式，請將 `PUBLISH_RELEASE_CONFIG` 環境變數設為 `true`。
 
-您可以搭配使用 CloudFoundry CLI 與下列指令來執行這項作業：
+您可以搭配使用 {{site.data.keyword.Bluemix_notm}} CLI 與下列指令來執行這項作業：
 
 ```shell
-  cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
+  ibmcloud cf set-env <app_name> PUBLISH_RELEASE_CONFIG true
 ```
 
 或者，您也可以在應用程式的 manifest.yml 檔案中設定此變數：

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-13"
+  years: 2015, 2018
+lastupdated: "2018-06-27"
 
 ---
 
@@ -13,26 +13,26 @@ lastupdated: "2017-12-13"
 # FIPS-Modus
 {: #fips_mode}
 
-Die Node.js-Buildpackversionen v3.2-20160315-1257 sowie höhere Versionen unterstützen [FIPS ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
+Die Node.js-Buildpack-Versionen ab v3.2-20160315-1257 unterstützen [FIPS ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
 
 Setzen Sie die Umgebungsvariable FIPS_MODE auf 'true', wenn Sie eine FIPS-fähige Knotenengine verwenden möchten.
 Beispiel:
 
 ```
-    $ cf set-env myapp FIPS_MODE true
+    ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
-Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist.  Zum Beispiel werden **Knotenmodule fehlschlagen, die [MD5 ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://en.wikipedia.org/wiki/MD5) verwenden,** wie beispielsweise [Express ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://expressjs.com/).  Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://expressjs.com/en/api.html) in Ihrer
+Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist. Zum Beispiel werden **Knotenmodule fehlschlagen, die [MD5 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/MD5) verwenden,** wie beispielsweise [Express ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://expressjs.com/).  Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://expressjs.com/en/api.html) in Ihrer
 Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt bearbeiten:
 ```
     app.set('etag', false);
 ```
 {: codeblock}
-Weitere Informationen dazu finden Sie in diesem [stackoverflow-Post ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
+Weitere Informationen dazu finden Sie in diesem [stackoverflow-Post ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
 
-**ANMERKUNG** [App-Management](/docs/manageapps/app_mng.html) und FIPS_MODE werden *NICHT* gleichzeitig unterstützt.  Wenn die Umgebungsvariable BLUEMIX_APP_MGMT_ENABLE eingestellt ist und die Umgebungsvariable FIPS_MODE auf 'true' gesetzt ist, kann für die App kein Staging durchgeführt werden.
+**HINWEIS:** [App-Management](../common/app_mng.html) und FIPS_MODE werden *NICHT* gleichzeitig unterstützt.  Wenn die Umgebungsvariable BLUEMIX_APP_MGMT_ENABLE eingestellt ist und die Umgebungsvariable FIPS_MODE auf 'true' gesetzt ist, kann für die App kein Staging durchgeführt werden.
 
 Es gibt mehrere Möglichkeiten, den FIPS_MODE-Status zu überprüfen:
 <ul>
@@ -43,7 +43,7 @@ Es gibt mehrere Möglichkeiten, den FIPS_MODE-Status zu überprüfen:
   </pre>
   {: codeblock}
 
-Diese Nachricht teilt mit, dass eine FIPS-fähige node.js-Engine ausgeführt wird, aber nicht unbedingt, dass FIPS ausgeführt wird
+Diese Nachricht teilt mit, dass eine FIPS-fähige Node.js-Engine ausgeführt wird, aber nicht unbedingt, dass FIPS ausgeführt wird
 </li>
 
 <li> Sie können den Wert von **process.versions.openssl** prüfen. Beispiel:
@@ -56,21 +56,21 @@ Diese Nachricht teilt mit, dass eine FIPS-fähige node.js-Engine ausgeführt wir
 Wenn die SSL-Version 'fips' enthält, unterstützt die verwendete SSL-Version FIPS.  
 </li>
 
-<li> Bei node.js Version 6 und höher können Sie den von crypto.fips zurückgegebenen Wert in Code wie dem folgenden prüfen:
+<li> Bei Node.js Version 6 und höher können Sie den von crypto.fips zurückgegebenen Wert in Code wie dem folgenden prüfen:
 
   <pre>
   console.log('crypto.fips== [' +crypto.fips +']');
   </pre>
   {: codeblock}
 
-Wenn der zurückgegebene Wert '1' ist, wird FIPS verwendet. Beachten Sie, dass crypto.fips für node.js-Versionen vor Version 6 den Wert *undefined* (nicht definiert) zurückgibt.
+Wenn der zurückgegebene Wert '1' ist, wird FIPS verwendet. Beachten Sie, dass crypto.fips für Node.js-Versionen vor Version 6 den Wert *undefined* (nicht definiert) zurückgibt.
 </li>
 </ul>
 
 ## Nodejs Version 4
 {: #nodejs_v4_fips}
 
-Die folgende Tabelle erläutert das Verhalten von node.js Version 4 bezüglich FIPS:
+Die folgende Tabelle erläutert das Verhalten von Node.js Version 4 bezüglich FIPS:
 
 |                 | Ergebnis        |
 | :-------------- | :------------ |
@@ -100,7 +100,7 @@ Für die Ausführung im FIPS-Modus müssen Sie bei Node.js Version 6 und höher 
 ```
 {: codeblock}
 
-Die folgende Tabelle erläutert das Verhalten von node.js Version 6 und höher bezüglich FIPS.
+Die folgende Tabelle erläutert das Verhalten von Node.js Version 6 und höher bezüglich FIPS.
 
 |                 |--enable-fips  |KEIN --enable-fips |
 | :-------------- | :------------ | :-------------- |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-12-15"
+  years: 2015, 2018
+lastupdated: "2017-06-21"
 
 ---
 
@@ -23,7 +23,7 @@ go_buildpack se utiliza si la aplicación contiene un archivo denominado *.go.
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Go.  La aplicación de inicio Go es una sencilla app Go que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de inicio y realizar y enviar cambios push al entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de iniciador](/docs/cfapps/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de iniciador.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Go.  La aplicación de inicio Go es una sencilla app Go que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de inicio y realizar y enviar cambios push al entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de iniciador](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de iniciador.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -40,9 +40,7 @@ Puede especificar la versión de Go que utilizará la app estableciendo la propi
 {: codeblock}
 Para obtener más información, consulte [godep](https://github.com/tools/godep){: new_window}.
 
-
-
-Cuando no se especifique una versión, se elegirá la versión 1.8.3 de forma predeterminada. 
+Cuando no se especifique una versión, se elegirá la versión 1.8.3 de forma predeterminada.
 
 ### Versiones disponibles:
 {: #available_versions}

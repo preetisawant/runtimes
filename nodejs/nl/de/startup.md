@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2015, 2017
+  years: 2015, 2018
 lastupdated: "2017-10-26"
 
 ---
@@ -42,4 +42,4 @@ Wenn ein Eintrag für ein Startscript in der Datei **package.json** vorhanden is
 ```
 {: codeblock}
 
-Weitere Informationen zur **Procfile**-Datei und zur **package.json**-Datei finden Sie in [Tips for Node.js Applications ![Symbol 'Externer Link'](../../icons/launch-glyph.svg "Symbol 'Externer Link'")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).
+Weitere Informationen zur **Procfile**-Datei und zur **package.json**-Datei finden Sie in [Tips for Node.js Applications ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html).

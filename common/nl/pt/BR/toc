@@ -9,8 +9,8 @@ Buildpacks
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-	byob.md 
-	starter_app_usage.md
+    byob.md
+    starter_app_usage.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -19,5 +19,6 @@ Buildpacks
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_runtimes.md buildpackSupport.md
+    ts_runtimes.md
+    buildpackSupport.md
     {: .navgroup-end}

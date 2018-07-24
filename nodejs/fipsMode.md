@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2018-06-27"
 # FIPS Mode
 {: #fips_mode}
 
-Nodejs buildpack versions v3.2-20160315-1257 and later support [FIPS ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
+Nodejs buildpack versions v3.2-20160315-1257 through v3.20.2-20180523-1639 support [FIPS ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
+
+**The OpenSSL FIPS module is deprecated:** In alignment with the Node.js community version, the OpenSSL FIPS module is deprecated and is eligible for removal as of 24 August 2018. Learn more in [Latest updates to the Node.js buildpack](updates.html#fips-deprecation).
 
 To use a FIPS-enabled node engine set the environment variable FIPS_MODE to true.
 For example:

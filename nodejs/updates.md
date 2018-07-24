@@ -2,17 +2,27 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Latest Updates to the SDK for Node.js buildpack
+# Latest updates to the SDK for Node.js buildpack
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+
+## July 24, 2018: Updated Node.js buildpack v3.21
+{:#fips-deprecation}
+**Important:** Beginning with the latest Node.js 6.x and 8.x versions in this release, the SDK for Node.js buildpack is based on the Node.js community release. With this change, the Node.js OpenSSL FIPS module in the buildpack will no longer be updated. The current OpenSSL FIPS module and IBM SDK for Node.js builds are eligible for removal as of 24 August 2018. For more information, see the [Aligning the Node.js Buildpack to Community Runtimes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660) blog post.
+
+The SDK for Node.js buildpack v3.21 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.13.0 and 8.9.4 and Node.js community versions 6.14.3 and 8.11.3. The default is latest 6.x, so it is currently 6.14.3.
+
+This release also includes fixes for the following security vulnerability:
+* [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
+
 ## June 1, 2018: Updated Node.js buildpack v3.20.2
 The SDK for Node.js buildpack v3.20.2 adds Dynatrace Managed PaaS integration for the current Node.js runtimes. See [Use Dynatrace to monitor Node.js in {{site.data.keyword.cloud_notm}}](dynatrace.html).
 
@@ -33,7 +43,7 @@ The SDK for Node.js buildpack v3.17 provides IBM SDK for Node.js versions 4.8.5,
 
 ## December 11, 2017: Updated Node.js buildpack v3.16.1
 The SDK for Node.js buildpack v3.16.1 provides IBM SDK for Node.js versions v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. The default is latest 6.x, so it is currently 6.12.0.
-Please note that it fixes PSIRTs: Advisory ID: 10237 Product Record ID: 104487 Title: Node.js zlib DOS security vulnerability, October 2017 (CVE-2017-14919). It is recommended to upgrade to v3.16.1 to get fixes for security vulnerabilties affecting 8.6.0.0 and earlier, 6.10.2.0 to 6.11.4.0 and 4.8.2.0 to 4.8.4.0.
+Please note that it fixes PSIRTs: Advisory ID: 10237 Product Record ID: 104487 Title: Node.js zlib DOS security vulnerability, October 2017 (CVE-2017-14919). It is recommended to upgrade to v3.16.1 to get fixes for security vulnerabilities affecting 8.6.0.0 and earlier, 6.10.2.0 to 6.11.4.0 and 4.8.2.0 to 4.8.4.0.
 
 ## November 1, 2017: Updated Node.js buildpack v3.15
 The SDK for Node.js buildpack v3.15 provides IBM SDK for Node.js versions 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 and 8.6.0. The default is latest 6.x, so it is currently 6.11.4.
@@ -44,7 +54,7 @@ The SDK for Node.js buildpack v3.14 provides IBM SDK for Node.js versions 4.8.3,
 ## July 26, 2017: Updated Node.js buildpack v3.13
 The SDK for Node.js buildpack v3.13 provides IBM SDK for Node.js versions 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 and 8.1.4. The default is latest 6.x, so it is currently 6.11.1. Please note that version 8 is available for testing but is not yet recommended for production.  
 
-This buildpack contains updated Node.js versions which address recent security vulnerabilities found in Node.js.  Users should update their applications to use the latest versions available and then restage the applications in {{site.data.keyword.Bluemix_notm}}.  See <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">this link</a> for details on the Node.js vulnerabilities.
+This buildpack contains updated Node.js versions which address recent security vulnerabilities found in Node.js. Users should update their applications to use the latest versions available and then restage the applications in {{site.data.keyword.Bluemix_notm}}.  See <a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">this security bulletin</a> for details on the CVE-2017-1000381 and CVE-2017-11499 fixes for Node.js security vulnerabilities.
 
 ## May 5, 2017: Updated Node.js buildpack v3.12
 The SDK for Node.js buildpack v3.12 provides IBM SDK for Node.js versions 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 and 6.10.2. The default is now changed from the latest 4.x to latest 6.x, so it is currently 6.10.2. Being a major version change, this could affect apps that are relying on the default. See [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) for more information about how to avoid any problems.

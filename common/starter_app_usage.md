@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
   years: 2016, 2017, 2018
-
-lastupdated: "2018-06-20"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -24,7 +22,7 @@ lastupdated: "2018-06-20"
 ## Choosing a boilerplate
 
 1. From the [{{site.data.keyword.Bluemix_notm}} Catalog](https://console.{DomainName}/catalog/),
-navigate to the Boilerplates section.
+navigate to the Starter Kits section.
 2. Click the boilerplate you want to use.
 3. Enter a name for your app, modify the host name if required, and click **Create**. Your app begins staging, and the Getting started tutorial for your app on the {{site.data.keyword.Bluemix_notm}} Dashboard displays.
 4. Follow the steps in the tutorial to:  

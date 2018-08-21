@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -39,23 +39,22 @@ You can specify the version of Ruby to be used by your app in your application's
 ```
 {: codeblock}
 
-When a version is not specified, version 2.4.1 is chosen by default.
+When a version is not specified, version 2.4.3 is chosen by default.
 
 ### Available versions:
 {: #available_versions}
 
 The following Ruby versions are available in the
-[Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.34)
+[Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.7.15)
 currently installed in {{site.data.keyword.Bluemix}}:
 
-* 2.1.8
-* 2.1.9
-* 2.2.6
-* 2.2.7
-* 2.3.3
-* 2.3.4
-* 2.4.0
-* 2.4.1
+* 2.2.8
+* 2.2.9
+* 2.3.5
+* 2.3.6
+* 2.4.2
+* 2.4.3
+* 2.5.0
 
 If your app requires a Ruby version that is not listed,
 you can use the external

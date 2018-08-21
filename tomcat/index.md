@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -43,16 +43,16 @@ Both of these can be specified in the application's manifest file.  For example:
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-The current java_buildpack version is v3.19 which contains default Tomcat version 8.0.45 and default Java version 1.8.0_141.
-For more information please see [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13).
+The current java_buildpack version is v4.9 which contains default Tomcat version 8.5.28 and default Java version 1.8.0_162.
+For more information, see [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases/tag/v4.9).
 
 ## HTTPS redirect
 {: #https_redirect}
 
 The Tomcat runtime can be configured to trust {{site.data.keyword.Bluemix_notm}} internal proxies and allow the redirect of HTTP traffic to HTTPS (SSL).
-To do so modify the server.xml file, setting the RemoteIpValve Valve element with internalProxies and protocolHeader options.
+To do so, modify the `server.xml` file, setting the `RemoteIpValve` Valve element with `internalProxies` and `protocolHeader` options.
 
-The Tomcat runtime [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) included in the buildpack only sets the protocolHeader of the RemoteIpValve Valve element by default.  To redirect HTTP traffic to HTTPS in {{site.data.keyword.Bluemix_notm}} configure the RemoteIpValve element in your custom server.xml as follows:
+The Tomcat runtime [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) included in the buildpack only sets the `protocolHeader` of the `RemoteIpValve` Valve element by default.  To redirect HTTP traffic to HTTPS in {{site.data.keyword.Bluemix_notm}}, configure the `RemoteIpValve` element in your custom `server.xml` as shown in the following example:
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />
@@ -60,10 +60,4 @@ The Tomcat runtime [server.xml](https://github.com/cloudfoundry/java-buildpack/b
 {: codeblock}
 
 More configuration options for the RemoteIpValve can be found in the
-[Tomcat documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [java-buildpack](https://github.com/cloudfoundry/java-buildpack)
+[Tomcat documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/valves/RemoteIpValve.html).

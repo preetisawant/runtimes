@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-06-21"
+lastupdated: "2017-08-21"
 
 ---
 
@@ -40,7 +40,7 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 {: codeblock}
 詳しくは、[『godep』](https://github.com/tools/godep){: new_window}を参照してください。
 
-バージョンを指定しない場合は、デフォルトでバージョン 1.8.3 が選択されます。
+バージョンを指定しない場合は、デフォルトでバージョン 1.8.7 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
@@ -51,8 +51,11 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 * 1.6.4
 * 1.7.5
 * 1.7.6
-* 1.8.1
-* 1.8.3
+* 1.8.6
+* 1.8.7
+* 1.9.3
+* 1.9.4
+* 1.10
 
 アプリケーションが、リストされていないバージョンの Go を必要とする場合は、外部の [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack.git){: new_window}を使用してアプリケーションをデプロイできます。
 

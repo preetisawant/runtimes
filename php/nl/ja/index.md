@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -53,18 +53,20 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 {: codeblock}
 詳しくは、[『Composer Package links』![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://getcomposer.org/doc/04-schema.md#package-links)を参照してください。
 
-バージョンを指定しない場合は、デフォルトでバージョン 5.6.31 が選択されます。
+バージョンを指定しない場合は、デフォルトでバージョン 5.6.34 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
 
-現在 {{site.data.keyword.Bluemix}} にインストールされている [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27)では、以下のバージョンの PHP が使用できます。
+現在 {{site.data.keyword.Bluemix}} にインストールされている [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.51)では、以下のバージョンの PHP が使用できます。
 
-* 5.6.30
-* 5.6.31
-* 7.0.20
-* 7.0.21
-* 7.1.6
-* 7.1.7
+* 5.6.33
+* 5.6.34
+* 7.0.27
+* 7.0.28
+* 7.1.14
+* 7.1.15
+* 7.2.2
+* 7.2.3
 
 アプリケーションが、リストされていないバージョンの PHP を必要とする場合は、外部の [PHP ビルドパック](https://github.com/cloudfoundry/php-buildpack.git)を使用してアプリケーションをデプロイできます。

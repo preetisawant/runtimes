@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -42,8 +42,8 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-現在の java_buildpack バージョンは v3.19 です。これには、デフォルトの Tomcat バージョン 8.0.45 とデフォルトの Java バージョン 1.8.0_141 が含まれています。
-詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13)を参照してください。
+現在の java_buildpack バージョンは v4.9 です。これには、デフォルトの Tomcat バージョン 8.5.28 とデフォルトの Java バージョン 1.8.0_162 が含まれています。
+詳しくは、[java-buildpack のリリース](https://github.com/cloudfoundry/java-buildpack/releases/tag/v4.9)を参照してください。
 
 ## HTTPS リダイレクト
 {: #https_redirect}
@@ -51,17 +51,11 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
 Tomcat ランタイムは、{{site.data.keyword.Bluemix_notm}} 内部プロキシーを信頼し、HTTP トラフィックの HTTPS (SSL) へのリダイレクトを許可するように構成できます。
 これを行うには、server.xml ファイルを変更して、RemoteIpValve バルブ・エレメントを internalProxies オプションおよび protocolHeader オプションを使用して設定します。
 
-ビルドパックに含まれている Tomcat ランタイム [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) は、デフォルトでは RemoteIpValve バルブ・エレメントの protocolHeader のみが設定されます。  {{site.data.keyword.Bluemix_notm}} で HTTP トラフィックを HTTPS にリダイレクトするには、カスタム server.xml で RemoteIpValve エレメントを次のように構成します。
+ビルドパックに含まれている Tomcat ランタイム [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) は、デフォルトでは `RemoteIpValve` バルブ・エレメントの `protocolHeader` のみが設定されます。  {{site.data.keyword.Bluemix_notm}} で HTTP トラフィックを HTTPS にリダイレクトするには、カスタム `server.xml` で `RemoteIpValve` エレメントを次のように構成します。
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />
 ```
 {: codeblock}
 
-RemoteIpValve のその他の構成オプションについては、[Tomcat の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html)を参照してください。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [java-buildpack](https://github.com/cloudfoundry/java-buildpack)
+RemoteIpValve のその他の構成オプションについては、[Tomcat の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/valves/RemoteIpValve.html)を参照してください。

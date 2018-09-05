@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -31,7 +31,7 @@ environment.  See [Using the starter applications](../common/starter_app_usage.h
 You can specify the version of Python to be used by your app by setting python-versionnumber in the runtime.txt file in the root of your application. For example:
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

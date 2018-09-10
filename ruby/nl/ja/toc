@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Ruby" audience="runtime" href="/docs/runtimes/ruby/getting-started.html"}}
+{: .toc subcollection="Ruby" audience="runtime" arm="389" href="/docs/runtimes/ruby/getting-started.html"}}
 Ruby
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ Ruby
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [プロキシーの処理](../common/workingWithProxy.html)
+    ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    スターター・アプリケーションおよびコミュニティー・ビルドパック
-        [スターター・アプリケーションの使用](../common/starter_app_usage.html)
-        [コミュニティー・ビルドパックの使用](../common/byob.html)
+    スターター・アプリケーションおよびコミュニティーのビルドパック
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     [ランタイム・バージョン](index.html#runtime_versions)
-    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
+    ../common/buildpackSupport.md
     {: .navgroup-end}

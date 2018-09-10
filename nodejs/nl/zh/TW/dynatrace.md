@@ -26,7 +26,7 @@ Node.js 應用程式配置成使用 Dynatrace 時，Node.js 運行環境會從 D
 1. 執行下列指令，以建立可指向 Dynatrace 認證的使用者所提供服務。服務的名稱必須包含字串 `dynatrace`，例如 `dynatrace-service`。
 
     ```
-    ibmcloud cf cups dynatrace-service -p "environmentid, apitoken"
+ibmcloud cf cups dynatrace-service -p "environmentid, apitoken"
     ```
     {: codeblock}
     
@@ -35,7 +35,7 @@ Node.js 應用程式配置成使用 Dynatrace 時，Node.js 運行環境會從 D
     如果您是使用 Dynatrace Managed，則也會新增 `apiurl` 欄位，該欄位會指定「受管理伺服器」的 API 端點。
     
     ```
-    ibmcloud cf cups dynatrace-service -p "environmentid, apitoken, apiurl"
+ibmcloud cf cups dynatrace-service -p "environmentid, apitoken, apiurl"
     ```
     {: codeblock}
     

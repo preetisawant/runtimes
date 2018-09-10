@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -55,18 +55,20 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 
 
-如果未指定版本，依預設會選擇 5.6.31 版。
+如果未指定版本，依預設會選擇 5.6.34 版。
 
 ### 可用的版本：
 {: #available_versions}
 
-目前安裝在 {{site.data.keyword.Bluemix}} 中的 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27)提供下列 PHP 版本：
+目前安裝在 {{site.data.keyword.Bluemix}} 中的 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.51)提供下列 PHP 版本：
 
-* 5.6.30
-* 5.6.31
-* 7.0.20
-* 7.0.21
-* 7.1.6
-* 7.1.7
+* 5.6.33
+* 5.6.34
+* 7.0.27
+* 7.0.28
+* 7.1.14
+* 7.1.15
+* 7.2.2
+* 7.2.3
 
 如果您的應用程式需要未列出的 PHP 版本，可以使用外部 [PHP 建置套件](https://github.com/cloudfoundry/php-buildpack.git)來部署該應用程式。

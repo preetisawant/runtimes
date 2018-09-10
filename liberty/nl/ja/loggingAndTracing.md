@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -44,11 +44,11 @@ lastupdated: "2018-06-27"
 
 ### SSH を介したトレース構成の変更
 
-アプリケーションをプッシュすると、デフォルト・プロパティーの **updateTrigger** は **polled** に、**monitorInterval** は 1 分に設定されて、server.xml ファイルに含まれています。 Liberty サーバーは、server.xml の更新を 1 分ごとにチェックするよう、自動的に構成されます。
+アプリケーションをプッシュすると、デフォルト・プロパティーの **updateTrigger** は **polled** に、**monitorInterval** は 1 分に設定されて、server.xml ファイルに含まれています。 Liberty サーバーは、server.xml ファイルの更新を 1 分ごとにチェックするよう、自動的に構成されます。
 
-カスタマイズされた sever.xml を含む Liberty アプリケーションをプッシュするためのオプションについては、[『server.xml を含む Liberty アプリケーションのプッシュ』](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)を参照してください。
+カスタマイズされた `server.xml` ファイルを含む Liberty アプリケーションをプッシュするためのオプションについては、[『server.xml を含む Liberty アプリケーションのプッシュ』](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)を参照してください。
 
-server.xml での動的更新のセットアップ方法については、[『動的更新の制御』](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}を参照してください。
+server.xml ファイルでの動的更新のセットアップ方法については、[『動的更新の制御』](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}を参照してください。
 
 トレース構成を変更するには、以下の手順を実行します。
 

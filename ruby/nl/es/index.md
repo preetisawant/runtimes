@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -38,23 +38,22 @@ Puede especificar la versión de Ruby que utilizará la app en el Gemfile de la 
 ```
 {: codeblock}
 
-Cuando no se especifique una versión, se elegirá la versión 2.4.1 de forma predeterminada.
+Cuando no se especifique una versión, se elegirá la versión 2.4.3 de forma predeterminada.
 
 ### Versiones disponibles:
 {: #available_versions}
 
 Las siguientes versiones de Ruby están disponibles en el
-[paquete de compilación de Ruby](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.34)
+[paquete de compilación de Ruby](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.7.15)
 actualmente instalado en {{site.data.keyword.Bluemix}}:
 
-* 2.1.8
-* 2.1.9
-* 2.2.6
-* 2.2.7
-* 2.3.3
-* 2.3.4
-* 2.4.0
-* 2.4.1
+* 2.2.8
+* 2.2.9
+* 2.3.5
+* 2.3.6
+* 2.4.2
+* 2.4.3
+* 2.5.0
 
 Si la app requiere una versión de Ruby que no aparece en la lista,
 puede utilizar el

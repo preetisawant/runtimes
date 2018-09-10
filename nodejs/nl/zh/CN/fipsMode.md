@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2018-06-27"
 # FIPS 方式
 {: #fips_mode}
 
-Nodejs buildpack V3.2-20160315-1257 及更高版本支持 [FIPS ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)。  
+Nodejs buildpack V3.2-20160315-1257 到 V3.20.2-20180523-1639 支持 [FIPS ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)。  
 {: shortdesc}
+
+**不推荐使用 OpenSSL FIPS 模块：**与 Node.js 社区版本一致，不推荐使用 OpenSSL FIPS 模块，并且该模块在 2018 年 8 月 24 日即符合删除条件。在 [Node.js buildpack 的最新更新](updates.html#fips-deprecation)中了解更多信息。
 
 要使用已启用 FIPS 的节点引擎，请将环境变量 FIPS_MODE 设置为 true。
 例如：

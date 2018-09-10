@@ -28,7 +28,7 @@ Das Liberty-Buildpack wird verwendet, wenn folgende Anwendungsarten bereitgestel
 
 ## Starteranwendung
 {: #starter_application}
-{{site.data.keyword.Bluemix_notm}} stellt mehrere Liberty-Starteranwendungen bereit. Die Liberty-Starteranwendungen sind einfache Liberty-Apps, die Sie als Vorlage verwenden können. Sie können mit den Starter-Apps experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendungen finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt mehrere Liberty-Starteranwendungen bereit.  Die Liberty-Starteranwendungen sind einfache Liberty-Apps, die Sie als Vorlage verwenden können. Sie können mit den Starter-Apps experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendungen finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 # Zugehörige Links
 {: #rellinks notoc}

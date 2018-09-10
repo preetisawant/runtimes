@@ -172,7 +172,7 @@ Sie werden jetzt Ihren lokalen Code aktualisieren, um auf diese Datenbank zu ver
 
   Aktualisieren Sie Ihre Browseransicht unter: http://localhost:8080/GetStartedTomcat/. Alle Namen, die Sie in die App eingegeben haben, werden der Datenbank jetzt hinzugefügt.
 
-  Ihre lokale App und die {{site.data.keyword.Bluemix_notm}}-App verwenden die Datenbank gemeinsam. Ihre {{site.data.keyword.Bluemix_notm}}-App wird unter der URL angezeigt, die in der Ausgabe der oben erwähnten Push-Operation aufgelistet wird. Namen, die Sie in einer der Apps eingeben, sollten nach einer Aktualisierung des Browsers in beiden angezeigt werden.
+  Ihre lokale App und die {{site.data.keyword.Bluemix_notm}}-App verwenden die Datenbank gemeinsam.  Ihre {{site.data.keyword.Bluemix_notm}}-App wird unter der URL angezeigt, die in der Ausgabe der oben erwähnten Push-Operation aufgelistet wird.  Namen, die Sie in einer der Apps eingeben, sollten nach einer Aktualisierung des Browsers in beiden angezeigt werden.
 
 Denken Sie daran, dass Sie Ihre App unter {{site.data.keyword.Bluemix_notm}} stoppen, wenn Sie sie nicht benötigen, damit keine unerwarteten Gebühren anfallen.
 {: tip}

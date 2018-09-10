@@ -12,7 +12,7 @@ lastupdated: "2018-06-27"
 # Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Liberty のモニター
 {: #using_dynatrace}
 
-Dynatrace は、アプリケーションのモニタリングを提供するサード・パーティー・サービスです。 Dynatrace を Liberty アプリケーションに統合することは可能ですが、IBM はサード・パーティー・サービスに関するサポートは提供しません。詳しくは、[サード・パーティー・サービス](../../common/buildpackSupport.html#third-party)を参照してください。
+Dynatrace は、アプリケーションのモニタリングを提供するサード・パーティー・サービスです。 Dynatrace を Liberty アプリケーションに統合することは可能ですが、IBM はサード・パーティー・サービスに関するサポートは提供しません。 詳しくは、[サード・パーティー・サービス](../../common/buildpackSupport.html#third-party)を参照してください。
 
 Dynatrace とそのライセンスについて詳しくは、[Dynatrace の『Application Monitoring』 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.dynatrace.com/en/products/application-monitoring.html) を参照してください。
 
@@ -42,7 +42,7 @@ Liberty アプリケーションが Dynatrace を使用するように構成さ�
     ```
     {: codeblock}
 
-    使用可能なオプションについて詳しくは、Dynatrace コミュニティー Web サイトの[『Agent Configuration』の『_Agent Settings_』セクション ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://community.dynatrace.com/community/display/DOCDT65/Set+up+Agents) を参照してください。例えば、exclude オプションを使用すると、Dynatrace のモニター対象からクラスを除外できます。 ユーザー提供サービスの構成について詳しくは、[『Dynatrace Agent Framework』 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md) を参照してください。
+    使用可能なオプションについて詳しくは、Dynatrace コミュニティー Web サイトの[『Agent Configuration』の『_Agent Settings_』セクション ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://community.dynatrace.com/community/display/DOCDT65/Set+up+Agents) を参照してください。 例えば、exclude オプションを使用すると、Dynatrace のモニター対象からクラスを除外できます。 ユーザー提供サービスの構成について詳しくは、[『Dynatrace Agent Framework』 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/framework-dynatrace-agent.md) を参照してください。
 
 3. アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュした後で、作成したユーザー提供サービスをアプリケーションにバインドします。 例えば、次のコマンドを使用します。
   ```
@@ -62,7 +62,7 @@ Liberty アプリケーションが Dynatrace を使用するように構成さ�
 ### Dynatrace エージェントのホスティング
 {: #hosting_dynatrace_agent}
 Dynatrace エージェントは Web サーバー上でホストされる必要があり、Liberty ビルドパックはそのサーバーからエージェント `.jar` ファイルをダウンロード可能でなければなりません。 サーバーは、エージェント `.jar` ファイルに関する詳細を指定する `index.yml` ファイルを使用して構成されている必要があります。 Dynatrace エージェントをセットアップするには、以下の手順に従ってください。
-  1. Dynatrace エージェント `.jar` ファイルをダウンロードします。 Dynatrace エージェント `.jar` ファイルのダウンロード手順については、Dynatrace コミュニティー Web サイトの[『Dynatrace Server Platform Installers』 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) を参照してください。{{site.data.keyword.Bluemix_notm}} 上で実行するための適切なエージェント `.jar` ファイルは、**dynatrace-agent-unix.jar** バージョン **6.+** です。
+  1. Dynatrace エージェント `.jar` ファイルをダウンロードします。 Dynatrace エージェント `.jar` ファイルのダウンロード手順については、Dynatrace コミュニティー Web サイトの[『Dynatrace Server Platform Installers』 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](https://community.dynatrace.com/community/display/EVAL/Step+1+-+Download+and+install+Dynatrace) を参照してください。 {{site.data.keyword.Bluemix_notm}} 上で実行するための適切なエージェント `.jar` ファイルは、**dynatrace-agent-unix.jar** バージョン **6.+** です。
   2. Liberty ビルドパックによるダウンロードが可能なロケーションでエージェント `.jar` ファイルをホストします。 このファイルは、使用可能ないずれかのサーバー機能を使用して {{site.data.keyword.Bluemix_notm}} 自体の上でホストすることも、パブリックに使用可能なロケーションでホストすることもできます。
      * ホストするロケーションに必ず `index.yml` ファイルを配置します。 `index.yml` ファイルには、エージェント `.jar` ファイルのバージョン ID その直後のコロン、およびエージェント `.jar` ファイルのロケーションの完全な URL からなる項目が含まれていなければなりません。 例えば、次のとおりです。
 

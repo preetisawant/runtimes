@@ -197,7 +197,7 @@ Eine Liberty-Anwendung wird mit einem Fehler "_Failed to start accepting connect
 ```
 {: #codeblock}
 
-{{site.data.keyword.Bluemix_notm}} führt eine Statusprüfung der Anwendung durch, um zu ermitteln, ob sie erfolgreich gestartet wurde. Die Statusprüfung stellt fest, ob die Anwendung über den Port empfangsbereit ist, der der Anwendung zugeordnet ist. Das Standardzeitlimit für diese Prüfung beträgt 60 Sekunden und einige Anwendungen benötigen zum Starten möglicherweise mehr als 60 Sekunden. Die Anwendung kann aus mehreren Gründen mehr Zeit für den Start benötigen. Zum Beispiel verlängert das Binden von Services wie [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate), [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html) oder [Enabling the Debugger](/docs/runtimes/common/app_mng.html#debug) die Startzeit. Die Anwendung kann außerdem auch Initialisierungsschritte durchführen, deren Abschluss einige Zeit dauert.
+{{site.data.keyword.Bluemix_notm}} führt eine Statusprüfung der Anwendung durch, um zu ermitteln, ob sie erfolgreich gestartet wurde. Die Statusprüfung stellt fest, ob die Anwendung über den Port empfangsbereit ist, der der Anwendung zugeordnet ist. Das Standardzeitlimit für diese Prüfung beträgt 60 Sekunden und einige Anwendungen benötigen zum Starten möglicherweise mehr als 60 Sekunden.  Die Anwendung kann aus mehreren Gründen mehr Zeit für den Start benötigen. Zum Beispiel verlängert das Binden von Services wie [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate), [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html) oder [Enabling the Debugger](/docs/runtimes/common/app_mng.html#debug) die Startzeit. Die Anwendung kann außerdem auch Initialisierungsschritte durchführen, deren Abschluss einige Zeit dauert.
 {: tsCauses}
 
 Untersuchen Sie zuerst die Protokolle auf offensichtliche Fehler, die zu dem Fehler der Liberty-Anwendung geführt haben könnten. Falls keine offensichtlichen Fehler zu erkennen sind, versuchen Sie Folgendes:
@@ -221,7 +221,7 @@ Untersuchen Sie zuerst die Protokolle auf offensichtliche Fehler, die zu dem Feh
 
 #### Feature 'appstate' inaktivieren
 
-Das Feature 'appstate' wird in den Prozess der {{site.data.keyword.Bluemix_notm}}-Statusprüfung integriert, um sicherzustellen, dass die Liberty-Anwendung vollständig initialisiert wird, bevor die Anwendung HTTP-Anforderungen empfangen kann. Sobald die Anwendung vollständig initialisiert ist, hat das Feature 'appstate' keine weitere Wirkung mehr. Der Nebeneffekt dieses Features besteht darin, dass einige Anwendungen möglicherweise mehr Zeit für den Start benötigen. Zur Inaktivierung des Features 'appstate' legen Sie die folgende Umgebungseigenschaft für Ihre Anwendung fest und führen ein erneutes Staging der Anwendung durch:
+Das Feature 'appstate' wird in den Prozess der {{site.data.keyword.Bluemix_notm}}-Statusprüfung integriert, um sicherzustellen, dass die Liberty-Anwendung vollständig initialisiert wird, bevor die Anwendung HTTP-Anforderungen empfangen kann. Sobald die Anwendung vollständig initialisiert ist, hat das Feature 'appstate' keine weitere Wirkung mehr.  Der Nebeneffekt dieses Features besteht darin, dass einige Anwendungen möglicherweise mehr Zeit für den Start benötigen. Zur Inaktivierung des Features 'appstate' legen Sie die folgende Umgebungseigenschaft für Ihre Anwendung fest und führen ein erneutes Staging der Anwendung durch:
 
 ```
 ibmcloud cf set-env myApp JBP_CONFIG_LIBERTY "app_state: false"
@@ -264,7 +264,7 @@ Die folgenden Fehler werden in den Protokollen angegeben und die Anwendung wird 
 Die Fehler können generiert werden, sobald der Service 'Monitoring and Analytics' an eine Liberty-Anwendung gebunden ist und die Liberty-Anwendung als Serververzeichnis oder paketierter Server bereitgestellt wurde, der eine Datei 'server.xml' enthält, in der das Feature 'Liberty ssl-1.0' konfiguriert wird. Das Binden des Service 'Monitoring and Analytics' an die Liberty-Anwendung veranlasst die Laufzeit, die Verbindung zu dem Service über eine sichere Verbindung herzustellen. Diese sichere Verbindung wird mit den SSL-Standardeinstellungen hergestellt. Da in der Liberty-Datei 'server.xml' die SSL-Standardeinstellungen angegeben sind, vertraut der konfigurierte Truststore dem Zertifikat, das vom Service 'Monitoring and Analytics' verwendet wird, möglicherweise nicht.
 {: tsCauses}
 
-Ändern Sie die Konfiguration, sodass der Truststore der JVM mit einer der folgenden Optionen verwendet wird. Stellen Sie sicher, dass Sie nach der Änderung ein erneutes Staging Ihrer Anwendung durchführen.
+Ändern Sie die Konfiguration, sodass der Truststore der JVM mit einer der folgenden Optionen verwendet wird.  Stellen Sie sicher, dass Sie nach der Änderung ein erneutes Staging Ihrer Anwendung durchführen.
 {: tsResolve}
 
 #### Liberty-Datei 'server.xml' aktualisieren
@@ -349,13 +349,13 @@ Eine mögliche Lösung besteht darin, die Option `--max_old_space_size` im Start
 Die Bereitstellung der Anwendung schlägt mit folgender Nachricht fehl: `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`.
 {: tsSymptoms}
 
-Wenn Sie eine ähnliche Nachricht bei der Push-Operation Ihrer ASP.net-Anwendung empfangen, ist dies am wahrscheinlichsten auf darauf zurückzuführen, dass Ihre Anwendung entweder das Hauptspeicherplatzlimit oder das Datenträgerkontingentlimit überschreitet. Erhöhen Sie die Kontingente für den Hauptspeicherplatz oder Plattenspeicherplatz für Ihre Anwendung.
+Wenn Sie eine ähnliche Nachricht bei der Push-Operation Ihrer ASP.net-Anwendung empfangen, ist dies am wahrscheinlichsten auf darauf zurückzuführen, dass Ihre Anwendung entweder das Hauptspeicherplatzlimit oder das Datenträgerkontingentlimit überschreitet.  Erhöhen Sie die Kontingente für den Hauptspeicherplatz oder Plattenspeicherplatz für Ihre Anwendung.
 {: tsCauses}
 
-Die Bereitstellung der Anwendung schlägt mit folgender Nachricht fehl: `Failed to compress droplet: signal: broken pipe` oder `No space left on device`. Wie lässt sich dieser Fehler beheben?
+Die Bereitstellung der Anwendung schlägt mit folgender Nachricht fehl: `Failed to compress droplet: signal: broken pipe` oder `No space left on device`.  Wie lässt sich dieser Fehler beheben?
 {: tsSymptoms}
 
-Projekte, die durch eine Push-Operation aus Quellcode übertragen werden, der eine hohe Anzahl von NuGet-Paketabhängigkeiten enthält, können manchmal diesen Fehler verursachen, wenn der NuGet-Paketcache aktiviert ist. Setzen Sie die Umgebungsvariable `CACHE_NUGET_PACKAGES` auf den Wert `false`, um den Cache zu inaktivieren. Weitere Informationen finden Sie in den Anweisungen zur [Inaktivierung des NuGet-Paketcache](../runtimes/dotnet/diablingNuGet.md).
+Projekte, die durch eine Push-Operation aus Quellcode übertragen werden, der eine hohe Anzahl von NuGet-Paketabhängigkeiten enthält, können manchmal diesen Fehler verursachen, wenn der NuGet-Paketcache aktiviert ist.  Setzen Sie die Umgebungsvariable `CACHE_NUGET_PACKAGES` auf den Wert `false`, um den Cache zu inaktivieren. Weitere Informationen finden Sie in den Anweisungen zur [Inaktivierung des NuGet-Paketcache](../runtimes/dotnet/diablingNuGet.md).
 {: tsCauses}
 
 ### Nützliche Links

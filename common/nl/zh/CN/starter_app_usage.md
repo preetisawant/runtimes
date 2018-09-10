@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
   years: 2016, 2017, 2018
-
-lastupdated: "2018-06-20"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -23,7 +21,7 @@ lastupdated: "2018-06-20"
 
 ## 选择样板
 
-1. 在 [{{site.data.keyword.Bluemix_notm}}“目录”](https://console.{DomainName}/catalog/)中，导航至“样板”部分。
+1. 在 [{{site.data.keyword.Bluemix_notm}}“目录”](https://console.{DomainName}/catalog/)中，导航至“初学者工具包”部分。
 2. 单击要使用的样板。
 3. 输入应用程序的名称，根据需要修改主机名，然后单击**创建**。应用程序将开始编译打包，并且会在 {{site.data.keyword.Bluemix_notm}}“仪表板”上显示应用程序的入门教程。
 4. 按照该教程中的步骤执行以下操作：  

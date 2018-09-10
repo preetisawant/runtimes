@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -33,23 +33,23 @@ python-3.6.1
 ```
 {: codeblock}
 
-如果未指定版本，缺省情况下会选择 V2.7.13。
+如果未指定版本，缺省情况下会选择 V2.7.14。
 
 ### 可用版本：
 {: #available_versions}
 
-{{site.data.keyword.Bluemix_notm}} 中当前安装的 [Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) 内提供了以下 Python 版本：
+{{site.data.keyword.Bluemix_notm}} 中当前安装的 [Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.6.11) 内提供了以下 Python 版本：
 
-* 2.7.12
 * 2.7.13
-* 3.3.5
+* 2.7.14
 * 3.3.6
-* 3.4.5
-* 3.4.6
-* 3.5.2
-* 3.5.3
-* 3.6.1
-* 3.6.2
+* 3.3.7
+* 3.4.7
+* 3.4.8
+* 3.5.4
+* 3.5.5
+* 3.6.3
+* 3.6.4
 
 如果您应用程序所需的 Python 版本没有列在上述列表中，那么可以使用外部 [Python buildpack](https://github.com/cloudfoundry/python-buildpack) 来部署应用程序。
 

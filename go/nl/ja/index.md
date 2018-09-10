@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-08-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -45,7 +45,7 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 ### 使用可能なバージョン:
 {: #available_versions}
 
-現在 {{site.data.keyword.Bluemix_notm}} にインストールされている [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.6){: new_window}では、以下のバージョンの Go が使用できます。
+現在 {{site.data.keyword.Bluemix_notm}} にインストールされている [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.20){: new_window}では、以下のバージョンの Go が使用できます。
 
 * 1.6.3
 * 1.6.4

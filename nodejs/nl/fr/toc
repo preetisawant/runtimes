@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Nodejs" audience="runtime" href="/docs/runtimes/nodejs/getting-started.html"}
+{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html"}
 SDK for Node.js
 
     {: .navgroup id="learn"}
@@ -18,25 +18,25 @@ SDK for Node.js
     {: .topicgroup}
     Travailler en mode hors ligne ou avec un proxy
         offlineMode.md
-        [Utilisation d'un proxy](../common/workingWithProxy.html)
+        ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
     fipsMode.md
-    [Gestion des applications Liberty et Node.js](../common/app_mng.html)
+    ../common/app_mng.md
 
     {: .topicgroup}
     Applications de démarrage et packs de construction
-        [Utilisation des applications de démarrage](../common/starter_app_usage.html)
-        [Utilisation des packs de construction de communauté](../common/byob.html)
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [Déclaration de prise en charge pour les packs de construction](../common/buildpackSupport.html)
+    ../common/buildpackSupport.md
 
     {: .navgroup-end}

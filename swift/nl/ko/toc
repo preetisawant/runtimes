@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Swift" audience="runtime" href="/docs/runtimes/swift/getting-started.html"}}
+{: .toc subcollection="Swift" audience="runtime" arm="393" href="/docs/runtimes/swift/getting-started.html"}}
 Swift
 
     {: .navgroup id="learn"}
@@ -9,19 +9,18 @@ Swift
     index.md
     {: .navgroup-end}
 
+    {: .navgroup id="howto"}
+    ../common/workingWithProxy.md
+    {: .navgroup-end}
+
     {: .navgroup id="reference"}
     {: .topicgroup}
     스타터 애플리케이션 및 커뮤니티 빌드팩
-        [스타터 애플리케이션 사용](../common/starter_app_usage.html)
-        [커뮤니티 빌드팩 사용](../common/byob.html)
-    {: .navgroup-end}
-
-    {: .navgroup id="howto"}
-    [프록시 작업](../common/workingWithProxy.html)
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
-    runtimeVersions.md
-    [빌드팩 지원 구문](../common/buildpackSupport.html)
+    ../common/ts_runtimes.md
+    ../common/buildpackSupport.md
     {: .navgroup-end}

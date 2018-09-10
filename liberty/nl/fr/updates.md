@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2018-07-02"
 {: #latest_updates}
 
 ## Liste des dernières mises à jour apportées au pack de construction Liberty.
+
+
+### 10 août 2018 : Mise à jour du pack de construction v3.24-20180806-1313
+* La version mensuelle de l'exécution Liberty est passée à l'édition 2018.8.0.0.
+* La version de l'IBM JRE est passée au niveau 8 SR5 FP17.
 
 ### 2 juillet 2018 : Mise à jour du pack de construction Liberty v3.23-20180628-1052.
 * La version par défaut de l'exécution Liberty a été mise à jour au niveau d'édition 18.0.0.2.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -22,7 +22,7 @@ Das Buildpack 'ruby_buildpack' wird verwendet, wenn im Stammverzeichnis Ihrer Ap
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} stellt eine Ruby-Starteranwendung bereit. Die Ruby-Starteranwendung ist eine einfache Ruby-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Ruby-Starteranwendung bereit.  Die Ruby-Starteranwendung ist eine einfache Ruby-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starteranwendung finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -38,21 +38,20 @@ Sie können die Version von Ruby, die von Ihrer App verwendet werden soll, im El
 ```
 {: codeblock}
 
-Wenn keine Version angegeben ist, wird standardmäßig Version 2.4.1 ausgewählt.
+Wenn keine Version angegeben ist, wird standardmäßig Version 2.4.3 ausgewählt.
 
 ### Verfügbare Versionen:
 {: #available_versions}
 
-Folgende Ruby-Versionen stehen im [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.34) zur Verfügung, das zurzeit in {{site.data.keyword.Bluemix}} installiert ist:
+Folgende Ruby-Versionen stehen im [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.7.15) zur Verfügung, das zurzeit in {{site.data.keyword.Bluemix}} installiert ist:
 
-* 2.1.8
-* 2.1.9
-* 2.2.6
-* 2.2.7
-* 2.3.3
-* 2.3.4
-* 2.4.0
-* 2.4.1
+* 2.2.8
+* 2.2.9
+* 2.3.5
+* 2.3.6
+* 2.4.2
+* 2.4.3
+* 2.5.0
 
 Wenn für Ihre App eine Ruby-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack) implementieren.
 

@@ -18,7 +18,7 @@ Dynatrace 및 해당 라이센싱에 대한 자세한 정보는 [Dynatrace 애�
 
 Dynatrace를 사용하도록 Liberty 애플리케이션을 구성하는 경우
 Liberty 런타임은 Dynatrace 사이트에서 Dynatrace 에이전트 `.jar` 파일을 가져와서 해당 Dynatrace 에이전트를
-사용자 앱에서 실행합니다. 이러한 기본 동작에서
+사용자 앱에서 실행합니다.  이러한 기본 동작에서
 Dynatrace를 사용하기 위한 최소 필수 구성은 Dynatrace 콜렉터를 가리키는
 사용자 제공 서비스를 작성하는 것입니다.
 
@@ -41,7 +41,7 @@ Dynatrace를 사용하기 위한 최소 필수 구성은 Dynatrace 콜렉터를 
     이 예에서 my-dynatrace-collector는 서비스에 지정된 이름이고, DynatraceCollectorIPaddress는 구성한 Dynatrace 콜렉터의 IP 주소이며, profile은 이 모니터되는 앱과 연관된 선택적 Dynatrace 프로파일 이름입니다. 기본 profile 값은 Monitoring입니다. 다음 예에서와 같이 선택적 매개변수를 지정할 수 있습니다.
 
     ```
-    ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
+ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
                       "options" : {"dynatrace-parameter-1": "value",
                                    "dynatrace-parameter-2": "value"}}'
     ```
@@ -60,7 +60,7 @@ Dynatrace를 사용하기 위한 최소 필수 구성은 Dynatrace 콜렉터를 
 ## 선택적 구성
 {: #optional_configuration}
 
-Dynatrace 에이전트 `.jar` 파일을 직접 가져오고 호스트할 수 있습니다. 이 경우 다음과 같은
+Dynatrace 에이전트 `.jar` 파일을 직접 가져오고 호스트할 수 있습니다.  이 경우 다음과 같은
 추가 구성 단계가 필요합니다.
 1. Liberty 빌드팩에서 다운로드할 수 있도록 Dynatrace 에이전트 `.jar` 파일을 가져오고 호스트하십시오.
 2. Liberty 앱이 Dynatrace 에이전트를 다운로드할 수 있도록 Liberty 앱을 구성하십시오.

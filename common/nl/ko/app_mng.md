@@ -159,9 +159,9 @@ Diego에서 `ibmcloud cf ssh` 명령을 통해 대화식 쉘을 제공하므로,
 
 **중요사항:** *debug* 유틸리티는 *proxy*를 시작합니다.
 
-*debug* 유틸리티를 *noproxy*와 함께 사용할 수 있습니다. debug 유틸리티를 *noproxy*와 함께 사용하려면 우선 `ibmcloud cf ssh` 명령을 사용하여 포트 전달을 설정하십시오. 
+*debug* 유틸리티를 *noproxy*와 함께 사용할 수 있습니다. debug 유틸리티를 *noproxy*와 함께 사용하려면 우선 `ibmcloud cf ssh` 명령을 사용하여 포트 전달을 설정하십시오.
 
-다음의 코드 스니펫은 `ibmcloud cf ssh` 명령 형식의 예를 보여줍니다. 
+다음의 코드 스니펫은 `ibmcloud cf ssh` 명령 형식의 예를 보여줍니다.
 
 ```
 ibmcloud cf ssh -N -T -L 7777:127.0.0.1:7777 <appName>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -18,26 +18,12 @@ Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含
 
 |特性|
 | ------ |
-| `appSecurity-3.0` |
 | `audit-1.0` |
-| `beanValidation-2.0` |
-| `cdi-2.0` |
-| `javaee-8.0` |
-| `javaeeClient-8.0` |
-| `jaxrs-2.1` |
-| `jpa-2.2` |
-| `jpaContainer-2.2` |
-| `jsf-2.3` |
-| `jsfContainer-2.3` |
-| `jsonb-1.0` |
-| `jsonbContainer-1.0` |
-| `jsonp-1.1` |
-| `jsonpContainer-1.1` |
 | `logstashCollector-1.1` |
-| `servlet-4.0` |
+| `mpConfig-1.3` |
+| `mpFaultTolerance-1.1` |
 | `usageMetering-1.0` |
 | `validator-1.0` |
-| `webProfile-8.0` |
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 中 Liberty for Java 可用的 Liberty 測試版特性" caption-side="top"}
 
 若要在 {{site.data.keyword.Bluemix_notm}} 中使用 Liberty 測試版特性，您需要執行下列動作：
@@ -48,15 +34,15 @@ Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含
   ```
 <server>
     <featureManager>
-        <feature>servlet-4.0</feature>
-        <feature>webProfile-8.0</feature>
+        <feature>usageMetering-1.0</feature>
+        <feature>validator-1.0</feature>
     </featureManager>
 </server>
   ```
   {: .codeblock}
 
 2.  將 `IBM_LIBERTY_BETA` 環境變數設為 `true`。此變數會指示 Liberty 建置套件，為您的應用程式安裝並啟用測試版特性。例如：
-  * 使用 [{{site.data.keyword.Bluemix_notm}} CLI (../../cli/reference/bluemix_cli/download_cli.html)：
+  * 使用 [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)：
     ```
     ibmcloud cf set-env <yourappname> IBM_LIBERTY_BETA true
     ```

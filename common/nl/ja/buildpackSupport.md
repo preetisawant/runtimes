@@ -35,7 +35,7 @@ lastupdated: "2018-04-11"
 * [Python](/docs/runtimes/python/index.html)
 * [Go](/docs/runtimes/go/index.html)
 
-これらのビルドパックに対する更新は、{{site.data.keyword.Bluemix_notm}} が Cloud Foundry の新バージョンにアップグレードされたときに行われます。 {{site.data.keyword.Bluemix_notm}} 上のこれらのランタイムでの問題を IBM に報告して、{{site.data.keyword.Bluemix_notm}} がその問題の原因かどうかを判別するための支援を受けることができます。{{site.data.keyword.Bluemix_notm}} に関連する問題であれば IBM はフィックスを提供しますが、ビルドパックまたはランタイム自体の欠陥の場合、IBM は問題を該当のコミュニティーに報告することを支援します。それらのビルドパックおよびランタイム用のフィックスを IBM が提供することはありません。
+これらのビルドパックに対する更新は、{{site.data.keyword.Bluemix_notm}} が Cloud Foundry の新バージョンにアップグレードされたときに行われます。 {{site.data.keyword.Bluemix_notm}} 上のこれらのランタイムでの問題を IBM に報告して、{{site.data.keyword.Bluemix_notm}} がその問題の原因かどうかを判別するための支援を受けることができます。 {{site.data.keyword.Bluemix_notm}} に関連する問題であれば IBM はフィックスを提供しますが、ビルドパックまたはランタイム自体の欠陥の場合、IBM は問題を該当のコミュニティーに報告することを支援します。 それらのビルドパックおよびランタイム用のフィックスを IBM が提供することはありません。
 
 ## 外部ビルドパック
 {: #external_buildpacks}
@@ -45,4 +45,4 @@ IBM は外部ビルドパックのサポートを提供しません。 サポー
 ## サード・パーティー・サービス
 {: #third-party}
 
-ビルドパックにより、IBM 以外のいくつかのサード・パーティー・サービス (Dynatrace や New Relic など) をアプリケーション内で使用できます。IBM は、サード・パーティー・サービスに関するサポートは提供しません。IBM Cloud でサード・パーティー・サービスを使用する方法については、最新の [IBM クラウド・サービス記述書 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm) の「_クラウド・サービスの使用_ 」を参照してください。サード・パーティー・サービスを使用する前に、サービス・プロバイダーのライセンス情報を調べてください。
+ビルドパックにより、IBM 以外のいくつかのサード・パーティー・サービス (Dynatrace や New Relic など) をアプリケーション内で使用できます。 IBM は、サード・パーティー・サービスに関するサポートは提供しません。 IBM Cloud でサード・パーティー・サービスを使用する方法については、最新の [IBM クラウド・サービス記述書 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm) の「_クラウド・サービスの使用_ 」を参照してください。 サード・パーティー・サービスを使用する前に、サービス・プロバイダーのライセンス情報を調べてください。

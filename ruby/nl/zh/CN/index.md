@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -37,21 +37,20 @@ gem 'json', '>=0'
 ```
 {: codeblock}
 
-如果未指定版本，缺省情况下会选择 V2.4.1。
+如果未指定版本，缺省情况下会选择 V2.4.3。
 
 ### 可用版本：
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 中当前安装的 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.34) 内提供了以下 Ruby 版本：
+{{site.data.keyword.Bluemix}} 中当前安装的 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.7.15) 内提供了以下 Ruby 版本：
 
-* 2.1.8
-* 2.1.9
-* 2.2.6
-* 2.2.7
-* 2.3.3
-* 2.3.4
-* 2.4.0
-* 2.4.1
+* 2.2.8
+* 2.2.9
+* 2.3.5
+* 2.3.6
+* 2.4.2
+* 2.4.3
+* 2.5.0
 
 如果您应用程序所需的 Ruby 版本没有列在上述列表中，那么可以使用外部 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack) 来部署应用程序。
 

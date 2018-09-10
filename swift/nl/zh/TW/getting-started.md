@@ -21,7 +21,7 @@ lastupdated: "2018-07-03"
 
 遵循本指導教學，您將設定開發環境、在本端及 {{site.data.keyword.Bluemix}} 上部署應用程式，以及在應用程式中整合 {{site.data.keyword.Bluemix_notm}} 資料庫服務。
 
-在這些文件中，Cloud Foundry CLI 的參照現在已更新至 {{site.data.keyword.Bluemix_notm}} CLI！{{site.data.keyword.Bluemix_notm}} CLI 具有相同的熟悉 Cloud Foundry 指令，但與 {{site.data.keyword.Bluemix_notm}} 帳戶及其他服務更妥善地整合。在本指導教學中，進一步瞭解開始使用 {{site.data.keyword.Bluemix_notm}} CLI。
+在這些文件中，提及 Cloud Foundry CLI 之處現在已更新為 {{site.data.keyword.Bluemix_notm}} CLI！{{site.data.keyword.Bluemix_notm}} CLI 具有相同的熟悉 Cloud Foundry 指令，但與 {{site.data.keyword.Bluemix_notm}} 帳戶及其他服務更妥善地整合。在本指導教學中，進一步瞭解開始使用 {{site.data.keyword.Bluemix_notm}} CLI。
 {: tip}
 
 ## 開始之前
@@ -55,23 +55,28 @@ cd get-started-swift
 
   ```
 swift build
- ```
+  ```
   {: codeblock}
 
   此指令可能需要一些時間來執行。
 
 1. 順利編譯應用程式之後，即可執行 Swift 編譯器所產生的執行檔：
+```
+swift run
+```
+  {: codeblock}
 
+  或
   ```
 .build/debug/get-started-swift
-```
+  ```
   {: codeblock}
 
   您應該會看到類似於下列內容的輸出：
 
   ```
 Server is listening on port: 8080
-```
+  ```
   {: pre}
 
 1. 在下列 URL 檢視您的應用程式：http://localhost:8080
@@ -86,10 +91,10 @@ Server is listening on port: 8080
 
   ```
   applications:
-   - name: GetStartedSwift
+   - name: Get-Started-Swift
      random-route: true
      memory: 256M
-     command: kitura-helloworld
+     command: get-started-swift
      buildpack: swift_buildpack
   ```
   {: codeblock}
@@ -105,7 +110,7 @@ Server is listening on port: 8080
 1. 登入 {{site.data.keyword.Bluemix_notm}} 帳戶，然後選取 API 端點。
 
   ```
-ibmcloud cf login
+ibmcloud login
   ```
   {: codeblock}
 
@@ -183,7 +188,7 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-此範例應用程式使用 `CloudEnvironment` 套件與 {{site.data.keyword.Bluemix_notm}} 互動，以剖析環境變數。[進一步瞭解...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+此範例應用程式使用 `CloudEnvironment` 套件與 {{site.data.keyword.Bluemix_notm}} 互動，以剖析環境變數。[進一步瞭解...](https://github.com/IBM-Swift/CloudEnvironment)
 `cloudfoundry:cloudant` 配置中的 `cloudant` 位置保留元可讓您更容易將使用者提供的 Cloudant 服務連結至應用程式。使用 `cloudfoundry:cloudant` 配置，您可以建立在服務名稱某處包括 `cloudant` 字串的 Cloudant 服務，並將其連結至應用程式，無需編輯 `config.json` 檔案。如果您修改此配置，而且稍後想要利用使用者提供的 Cloudant 服務，則需要編輯 `cloudfoundry:cloudant` 的配置，或利用使用者提供之服務的名稱來定義 `cloudfoundry:`。
 {: tip}
 
@@ -204,7 +209,7 @@ swift build
 
  在下列網址檢視您的應用程式：`http://localhost:8080`。您輸入至應用程式的任何名稱，現在都會新增至資料庫。
 
- 此範例應用程式使用 `Kitura-CouchDB` 套件與 Cloudant 互動。[進一步瞭解...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ 此範例應用程式使用 `Kitura-CouchDB` 套件與 Cloudant 互動。[進一步瞭解...](https://github.com/IBM-Swift/Kitura-CouchDB)
  進行您想要的任何變更，然後重新部署至 {{site.data.keyword.Bluemix_notm}}！
 
   ```
@@ -218,6 +223,6 @@ ibmcloud cf app push
 
 ## 後續步驟
 
-* [指導教學](/docs/tutorials/index.html)
+* [Kitura & Server-side Swift Tutorials ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.kitura.io/learn.html){: new_window}
 * [範例 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://ibm-cloud.github.io){: new_window}
 * [架構中心 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

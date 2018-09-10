@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated: "2018-01-10"
 {:codeblock: .codeblock}
 
 
-# Node.js 的工作離線模式
+# 使用 Node.js 離線工作
 {: #offline_mode}
 
 將 Node.js 應用程式推送至 {{site.data.keyword.Bluemix}} 之後，SDK for Node.js 建置套件通常會從外部資源下載構件，例如 NPM 提供的 Node 模組。在某些狀況下（例如使用 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 及
@@ -35,16 +35,26 @@ Node.js 建置套件可以存取下列外部網站。您可能需要在 [{{site.
 ## 離線應用程式
 {: #offline_applications}
 
-若不想要存取 https://registry.npmjs.org，您可以將應用程式需要的所有 Node 模組併入您的應用程式中。若要這麼做，請針對所有必要的應用程式模組執行 `npm install`，然後將所產生的 *node_modules* 目錄併入您推送的應用程式中。
+若不想要存取 https://registry.npmjs.org，您可以將應用程式需要的所有 Node 模組併入您的應用程式中。若要這麼做，請針對所有必要的應用程式模組執行 `npm install`，然後將所產生的 `node_modules` 目錄併入您推送的應用程式中。
 
-您的相依關係可以有相依關係，而這些相依關係還可以再有相依關係，一直延續下去，但是 `package.json` 只包含最上層相依關係。如果其中一個相依關係使用 package.json 中的範圍，而該檔案有發行新的版本，則 node_modules 目錄中的模組就會作廢。*Shrinkwrap* 可協助您鎖定所有相依關係版本，所以不會發生這種情形。若要使用 shrinkwrap，請從空的或乾淨的 `node_modules` 目錄開始進行。然後，在專案的根目錄中執行：
+您的相依關係可以有相依關係，而這些相依關係還可以再有相依關係，一直延續下去，但是 `package.json` 只包含最上層相依關係。如果其中一個相依關係使用 package.json 中的範圍，而該檔案有發行新的版本，則 `node_modules` 目錄中的模組就會作廢。*Shrinkwrap* 可協助您鎖定所有相依關係版本，所以不會發生這種情形。若要使用 shrinkwrap，請從空的或乾淨的 `node_modules` 目錄開始進行。然後，在專案的根目錄中執行下列指令：
 
+```
+npm install
+```
+{: codeblock}
 
-1. `npm install`
-1. `npm dedupe`
-2. `npm shrinkwrap`
+```
+npm dedupe
+```
+{: codeblock}
 
-這樣可能會變更您的 `package.json`，並且在您的根目錄中新增 `npm-shrinkwrap.json`。每當您變更 `package.json` 檔案中的相依關係時，就要重複 `npm dedupe` 及 `shringwrap` 步驟。
+```
+npm shrinkwrap
+```
+{: codeblock}
+
+這樣可能會變更您的 `package.json`，並且在您的根目錄中新增 `npm-shrinkwrap.json`。每當您變更 `package.json` 檔案中的相依關係時，就要重新執行 `npm dedupe` 及 `shrinkwrap` 指令。
 
 ## 使用 Proxy
 {: #working_with_proxy}

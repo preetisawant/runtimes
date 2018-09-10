@@ -158,7 +158,7 @@ können Sie die folgenden Schritte befolgen, um ein Serververzeichnis mit Ihrer 
 1. Erstellen Sie ein Verzeichnis mit dem Namen 'defaultServer'.
 2. Erstellen Sie im Verzeichnis 'defaultServer' ein Verzeichnis mit dem Namen 'apps'.
 3. Kopieren Sie die WAR- oder EAR-Datei in das Verzeichnis 'defaultServer/apps'.
-4. Erstellen Sie im Verzeichnis 'defaultServer' eine Datei 'server.xml' mit dem folgenden Beispielinhalt. Zusätzlich:
+4. Erstellen Sie im Verzeichnis 'defaultServer' eine Datei 'server.xml' mit dem folgenden Beispielinhalt.  Zusätzlich:
   * Vergewissern Sie sich, dass das Attribut 'location' oder 'type' des Anwendungselements so aktualisiert wurde, dass die Angaben mit dem Dateinamen und dem Typ Ihrer Anwendung übereinstimmen.
   * Die im Diagramm enthaltene Datei 'server.xml' enthält ein minimales Feature-Set. Möglicherweise müssen Sie das Feature-Set abhängig von den Anforderungen Ihrer Anwendung anpassen.
 

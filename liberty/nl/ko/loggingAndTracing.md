@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -44,11 +44,11 @@ Liberty 추적 구성은 {{site.data.keyword.Bluemix_notm}} 콘솔에서 직접 
 
 ### SSH를 통한 추적 구성 변경
 
-애플리케이션을 푸시하면 server.xml 파일에 **polled**로 설정된 기본 특성 **updateTrigger**와 1분으로 설정된 기본 설정 **monitorInterval**이 포함됩니다. Liberty 서버는 매분 server.xml에 대한 업데이트를 확인하도록 자동으로 구성됩니다.
+애플리케이션을 푸시하면 server.xml 파일에 **polled**로 설정된 기본 특성 **updateTrigger**와 1분으로 설정된 기본 설정 **monitorInterval**이 포함됩니다. Liberty 서버는 매분 server.xml 파일의 업데이트를 확인하도록 자동으로 구성됩니다.
 
-사용자 정의된 server.xml을 사용하여 Liberty 앱을 푸시하는 옵션은 [server.xml을 사용하여 Liberty 앱 푸시](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)를 참조하십시오.
+사용자 정의된 `server.xml` 파일을 사용하여 Liberty 앱을 푸시하는 옵션은 [server.xml을 사용하여 Liberty 앱 푸시](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)를 참조하십시오.
 
-server.xml에서 동적 업데이트를 설정하는 방법은 [동적 업데이트 제어](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}를 참조하십시오.
+server.xml 파일에서 동적 업데이트를 설정하는 방법은 [동적 업데이트 제어](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}를 참조하십시오.
 
 추적 구성을 변경하려면 다음 단계를 따르십시오.
 
@@ -72,7 +72,7 @@ vi /app/wlp/usr/servers/defaultServer/server.xml
 
 ### SSH를 통한 덤프 트리거링
 
-SSH 기능을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI를 통해 스레드 및 힙 덤프를 트리거하려면 아래의 명령을 사용하십시오. 
+SSH 기능을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI를 통해 스레드 및 힙 덤프를 트리거하려면 아래의 명령을 사용하십시오.
 
   ```
  ibmcloud cf ssh <appname> -c "pkill -3 java"

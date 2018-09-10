@@ -48,7 +48,7 @@ git clone https://github.com/IBM-Cloud/get-started-tomcat
 
   ```
 cd get-started-tomcat
-```
+  ```
 {: codeblock}
 
 仔细阅读 *get-started-tomcat* 目录中的文件，以熟悉其内容。
@@ -60,8 +60,8 @@ cd get-started-tomcat
 
 1. 安装依赖项。
   ```
-mvn clean install  
-```
+mvn clean install
+  ```
   {: codeblock}
 
 1. 将 GetStartedTomcat.war 从 `target` 目录复制到 `tomcat-install-dir` `webapps` 目录。
@@ -69,7 +69,7 @@ mvn clean install
 1. 运行应用程序。  
   ```
 <tomcat-install-dir>/bin/startup.bat|.sh
-```
+  ```
   {: codeblock}
 
 1. 通过以下 URL 查看应用程序：http://localhost:8080/GetStartedTomcat/
@@ -107,7 +107,7 @@ mvn clean install
 
   ```
 ibmcloud login
-```
+  ```
   {: codeblock}
 
   如果您有联合用户标识，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
@@ -137,7 +137,7 @@ ibmcloud cf push
 部署完成后，应该会看到一条消息，指示应用程序正在运行。可以通过 push 命令输出中列出的 URL 查看应用程序。还可以发出以下命令来查看应用程序状态和 URL。
   ```
 ibmcloud cf apps
-```
+  ```
   {: codeblock}
 
 

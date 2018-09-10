@@ -37,7 +37,7 @@ Dynatrace 是第三方服务，它提供对应用程序的监视。您可以将 
 
 
     ```
-    ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
+ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
                       "options" : {"dynatrace-parameter-1": "value",
                                    "dynatrace-parameter-2": "value"}}'
     ```

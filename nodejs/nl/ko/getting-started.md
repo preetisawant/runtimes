@@ -115,7 +115,6 @@ ibmcloud target --cf
   {: codeblock}
 
   조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](https://console.bluemix.net/docs/account/orgs_spaces.html)를 참조하십시오.
-  
     {: tip}
 
 1. *get-started-node* 디렉토리에서 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시하십시오.

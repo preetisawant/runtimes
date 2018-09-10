@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime" href="/docs/runtimes/liberty/getting-started.html"}
+{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -38,7 +38,7 @@ Liberty for Java
     {: .topicgroup}
     Travailler en mode hors ligne ou avec un proxy
         offlineMode.md
-        [Utilisation d'un proxy](../common/workingWithProxy.html)
+        ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,16 +49,16 @@ Liberty for Java
 
     {: .topicgroup}
     Applications de démarrage et packs de construction
-        [Utilisation des applications de démarrage](../common/starter_app_usage.html)
-        [Utilisation des packs de construction de communauté](../common/byob.html)
+        ../common/starter_app_usage.md
+        ../common/byob.md
 
     buildpackDefaults.md
-    [Gestion des applications Liberty et Node.js](../common/app_mng.html)
+    ../common/app_mng.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     [Initiation à IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html)
     updates.md
-    [Déclaration de support pour les packs de construction](../common/buildpackSupport.html)
+    ../common/buildpackSupport.md
     {: .navgroup-end}

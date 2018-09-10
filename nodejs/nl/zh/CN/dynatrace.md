@@ -26,7 +26,7 @@ Dynatrace 是第三方服务，它提供对应用程序的监视。您可以将 
 1. 通过运行以下命令，创建一个指向您的 Dynatrace 凭证的用户提供的服务。服务名称必须包含字符串 `dynatrace`，例如 `dynatrace-service`。
 
     ```
-    ibmcloud cf cups dynatrace-service -p "environmentid, apitoken"
+ibmcloud cf cups dynatrace-service -p "environmentid, apitoken"
     ```
     {: codeblock}
     
@@ -35,7 +35,7 @@ Dynatrace 是第三方服务，它提供对应用程序的监视。您可以将 
     如果使用 Dynatrace Managed，还需要添加 `apiurl` 字段来指定受管服务器的 API 端点。
     
     ```
-    ibmcloud cf cups dynatrace-service -p "environmentid, apitoken, apiurl"
+ibmcloud cf cups dynatrace-service -p "environmentid, apitoken, apiurl"
     ```
     {: codeblock}
     

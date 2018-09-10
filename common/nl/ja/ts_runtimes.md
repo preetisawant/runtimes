@@ -19,7 +19,7 @@ lastupdated: "2018-06-28"
 # ランタイムに関するトラブルシューティング
 {: #runtimes}
 
-[{{site.data.keyword.Bluemix}} ランタイム](index.html)の使用時に問題が発生することがあります。多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
+[{{site.data.keyword.Bluemix}} ランタイム](index.html)の使用時に問題が発生することがあります。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
 
 * [一般的なトラブルシューティング](#ts_all)
@@ -35,9 +35,9 @@ lastupdated: "2018-06-28"
 ### アプリケーションがプッシュされたときに使用できないビルドパックが使用される
 {: #ts_loading_bp}
 
-アプリケーションをプッシュしたときに、最新のビルドパック・コンポーネントを使用できない場合があります。使用できないコンポーネントがロードされないように組み込みメカニズムを備えたビルドパックを使用するか、アプリケーションのプッシュや再ステージを行う前にアプリケーションのキャッシュ・ディレクトリー内のコンテンツを削除します。
+アプリケーションをプッシュしたときに、最新のビルドパック・コンポーネントを使用できない場合があります。 使用できないコンポーネントがロードされないように組み込みメカニズムを備えたビルドパックを使用するか、アプリケーションのプッシュや再ステージを行う前にアプリケーションのキャッシュ・ディレクトリー内のコンテンツを削除します。
 
-ビルドパックが更新されてからアプリケーションをプッシュまたは再ステージすると、最新のビルドパック・コンポーネントのロードが自動的に行われません。その結果、アプリケーションは使用できないビルドパック・コンポーネントをキャッシュから使用することになります。アプリケーションを最後にプッシュしてからビルドパックに適用された更新は実装されていません。
+ビルドパックが更新されてからアプリケーションをプッシュまたは再ステージすると、最新のビルドパック・コンポーネントのロードが自動的に行われません。 その結果、アプリケーションは使用できないビルドパック・コンポーネントをキャッシュから使用することになります。 アプリケーションを最後にプッシュしてからビルドパックに適用された更新は実装されていません。
 {: tsSymptoms}
 
 ビルドパックによっては、すべての更新コンポーネントをインターネットから自動的にダウンロードして、いつでも最新バージョンを使用できるように構成されていないものもあります。
@@ -46,21 +46,21 @@ lastupdated: "2018-06-28"
 組み込みメカニズムを備えたビルドパックを使用して、使用できないコンポーネントをロードしないようにすることができます。例えば、以下のビルドパックを使用できます。
 {: tsResolve}
 
-  * [Cloud Foundry Java ビルドパック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/java-buildpack){: new_window}。このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。このメカニズムによる処理方法について詳しくは、[extending-caches.md ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window} を参照してください。
-  * [Cloud Foundry Node.js ビルドパック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。このビルドパックは、環境変数を使用して同様の機能を提供します。この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースに次のコマンドを入力します。 	
+  * [Cloud Foundry Java ビルドパック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/java-buildpack){: new_window}。 このビルドパックには、最新バージョンのビルドパックが使用されるように組み込みメカニズムが装備されています。 このメカニズムによる処理方法について詳しくは、[extending-caches.md ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window} を参照してください。
+  * [Cloud Foundry Node.js ビルドパック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。 このビルドパックは、環境変数を使用して同様の機能を提供します。 この Node.js ビルドパックを有効にして、毎回インターネットからノード・モジュールをダウンロードするには、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースに次のコマンドを入力します。 	
 
   ```
   set NODE_MODULES_CACHE=false
   ```
 
-使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリケーションを再度プッシュします。以下のステップを使用します。
+使用中のビルドパックが最新のコンポーネントを自動的にロードするメカニズムを提供していない場合は、手動でキャッシュ・ディレクトリー内のコンテンツを削除し、アプリケーションを再度プッシュします。 以下のステップを使用します。
 
- 1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
- 2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。変更をコミットする方法については、[Git Basics - Recording Changes to the Repository ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
+ 1. ヌル・ビルドパックのブランチ (例えば https://github.com/ryandotsmith/null-buildpack) をチェックアウトします。 ブランチをチェックアウトする方法については、[Git Basics - Getting a Git Repository ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window} を参照してください。  
+ 2. `null-buildpack/bin/compile` ファイルに以下の行を追加して変更をコミットします。 変更をコミットする方法については、[Git Basics - Recording Changes to the Repository ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window} を参照してください。
   ```
   rm -rfv $2/*
   ```
- 3. 以下のコマンドを使用して、キャッシュを削除するように変更されたヌル・ビルドパックでアプリケーションをプッシュします。このステップを完了すると、アプリケーションのキャッシュ・ディレクトリー内にあるすべてのコンテンツが削除されます。
+ 3. 以下のコマンドを使用して、キャッシュを削除するように変更されたヌル・ビルドパックでアプリケーションをプッシュします。 このステップを完了すると、アプリケーションのキャッシュ・ディレクトリー内にあるすべてのコンテンツが削除されます。
   ```
   ibmcloud cf push appname -p app_path -b <modified_null_buildpack>
   ```
@@ -78,14 +78,14 @@ lastupdated: "2018-06-28"
 アプリケーション・コンテナーのライフサイクル (退避やシャットダウンなど) は、アプリケーション機能に影響を与える可能性があります。  
 {: tsCauses}
 
-アプリケーション・コンテナー・ライフサイクルの中で、アプリケーション・デプロイメントのエラーを引き起こしているステップを特定します。[Cloud Foundry のアプリケーション・ライフサイクル](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#evacuation)の詳細を参照してください。
+アプリケーション・コンテナー・ライフサイクルの中で、アプリケーション・デプロイメントのエラーを引き起こしているステップを特定します。 [Cloud Foundry のアプリケーション・ライフサイクル](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#evacuation)の詳細を参照してください。
 {: tsResolve}
 
 ### 「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっている (非推奨)
   {: #ts_actionsbutton}
 
   「インスタンスの詳細」ページの「アクション」ボタンが使用不可になっています。
-{: tsSymptoms}
+  {: tsSymptoms}
 
   この問題は、以下の理由で発生します。
   {: tsCauses}
@@ -93,7 +93,7 @@ lastupdated: "2018-06-28"
    * アプリケーションが組み込みの Liberty ビルドパックでデプロイされていない。
    * アプリケーションが古いバージョンの Liberty ビルドパックでデプロイされている。
 
-  問題の原因が古いバージョンの Liberty ビルドパックである場合は、{{site.data.keyword.Bluemix_notm}} でアプリケーションを再デプロイしてください。それ以外の場合は、以下のクライアント・アプリケーションのログ・ファイルをサポート・チームにご提供ください。
+  問題の原因が古いバージョンの Liberty ビルドパックである場合は、{{site.data.keyword.Bluemix_notm}} でアプリケーションを再デプロイしてください。 それ以外の場合は、以下のクライアント・アプリケーションのログ・ファイルをサポート・チームにご提供ください。
   {: tsResolve}
 
     * logs/messages.log
@@ -117,7 +117,7 @@ lastupdated: "2018-06-28"
 ### トレース操作またはダンプ操作の実行中にエラーが発生する (非推奨)
   {: #ts_target}
 
-  トレース操作またはダンプ操作の実行中にエラー・メッセージが表示されます。そのメッセージは、アプリケーションのターゲット・インスタンスが実行状態にないことを示しています。
+  トレース操作またはダンプ操作の実行中にエラー・メッセージが表示されます。 そのメッセージは、アプリケーションのターゲット・インスタンスが実行状態にないことを示しています。
   {: tsSymptoms}
 
   ```
@@ -131,7 +131,7 @@ lastupdated: "2018-06-28"
   この問題は、以下の理由で発生します。
   {: tsCauses}
 
-    * トレースまたはダンプ管理の機能は、実行中のアプリケーション・インスタンスのみを対象としている。停止中、開始中、または異常終了状態のアプリケーション・インスタンスには、トレースまたはダンプ操作は使用できません。
+    * トレースまたはダンプ管理の機能は、実行中のアプリケーション・インスタンスのみを対象としている。 停止中、開始中、または異常終了状態のアプリケーション・インスタンスには、トレースまたはダンプ操作は使用できません。
     * トレースまたはダンプ・ダイアログが開く時点でアプリケーション・インスタンスの状況が移行中である。
 
   ウィンドウを閉じてから、再度開いてください。
@@ -147,7 +147,7 @@ lastupdated: "2018-06-28"
   この動作は、以下の理由で発生します。
   {: tsCauses}
 
-    * 1 つ以上のインスタンスの構成を以前に変更した。あるインスタンスの traceSpecification 構成を変更した場合、その変更は同じアプリケーションの他のインスタンスには適用されません。例えば、アプリケーションで log4j を使用していて、このアプリケーションのインスタンスが 2 つあるものとします。インスタンス 0 のログ・レベルを info から debug に変更できますが、インスタンス 1 のログ・レベルは info のままになります。
+    * 1 つ以上のインスタンスの構成を以前に変更した。 あるインスタンスの traceSpecification 構成を変更した場合、その変更は同じアプリケーションの他のインスタンスには適用されません。 例えば、アプリケーションで log4j を使用していて、このアプリケーションのインスタンスが 2 つあるものとします。 インスタンス 0 のログ・レベルを info から debug に変更できますが、インスタンス 1 のログ・レベルは info のままになります。
 
   アクションは不要です。 これは予期された動作です。
   {: tsResolve}
@@ -164,7 +164,7 @@ lastupdated: "2018-06-28"
   この問題は、以下のいずれかの理由で発生します。
   {: tsCauses}
 
-    * ダンプ・ファイルは実行中のアプリケーション・インスタンスで生成され、割り振られたディスク割り当て量を使い尽くします。デフォルトでは、1 つのアプリケーション・インスタンスあたりのディスク割り当て量は 1 GB です。ディスク使用量を確認するには、**「ダッシュボード」>「アプリケーション」>「アプリ・ランタイム」**とクリックします。以下の例では、アプリケーションの 2 つのインスタンスについての、ディスク使用量を含むランタイム情報を示しています。
+    * ダンプ・ファイルは実行中のアプリケーション・インスタンスで生成され、割り振られたディスク割り当て量を使い尽くします。 デフォルトでは、1 つのアプリケーション・インスタンスあたりのディスク割り当て量は 1 GB です。 ディスク使用量を確認するには、**「ダッシュボード」>「アプリケーション」>「アプリ・ランタイム」**とクリックします。 以下の例では、アプリケーションの 2 つのインスタンスについての、ディスク使用量を含むランタイム情報を示しています。
       ```
       Instance	State	CPU	Memory Usage	Disk Usage
 
@@ -349,7 +349,7 @@ Node.js は、アプリケーションが使用可能なメモリー量を認識
 アプリケーションがデプロイに失敗し、メッセージ `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}` が出されます。
 {: tsSymptoms}
 
-ASP.net アプリケーションのプッシュ時にも同様のメッセージを受け取っている場合、最も可能性が高い原因は、ご使用のアプリケーションがメモリーまたはディスクの割り当て量制限を超えていることです。アプリケーションのメモリーまたはディスク・スペースの割り当て量を増加してください。
+ASP.net アプリケーションのプッシュ時にも同様のメッセージを受け取っている場合、最も可能性が高い原因は、ご使用のアプリケーションがメモリーまたはディスクの割り当て量制限を超えていることです。  アプリケーションのメモリーまたはディスク・スペースの割り当て量を増加してください。
 {: tsCauses}
 
 アプリケーションがデプロイに失敗し、「`Failed to compress droplet: signal: broken pipe`」または「`No space left on device`」というメッセージが出されます。  これを修正する方法を教えてください。
@@ -368,7 +368,7 @@ ASP.net アプリケーションのプッシュ時にも同様のメッセージ
 ### PHP ビルドパックからの NOTICE メッセージ
 {: #ts_phplog}
 
-ログからの NOTICE を含むメッセージが表示されることがあります。このようなメッセージのロギングは、ロギング・レベルを変更すれば止めることができます。
+ログからの NOTICE を含むメッセージが表示されることがあります。 このようなメッセージのロギングは、ロギング・レベルを変更すれば止めることができます。
 
 PHP ビルドパックを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュすると、以下のような `NOTICE` を含むメッセージが表示されることがあります。
 {: tsSymptoms}
@@ -379,7 +379,7 @@ PHP ビルドパックを使用してアプリケーションを {{site.data.key
 • 2015-01-26T15:01:00.63+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: fpm is running, pid 93
 • 2015-01-26T15:01:00.63+0100 [App/0] ERR [26-Jan-2015 14:00:59] NOTICE: ready to handle connections
 ```
-PHP ビルドパックでは、error_log パラメーターはロギング・レベルを定義します。デフォルトでは、`error_log` パラメーターの値は **stderr notice** です。次の例は、Cloud Foundry が提供する PHP ビルドパックの `nginx-defaults.conf` ファイルに含まれる、デフォルトのロギング・レベル構成を示しています。詳しくは、[cloudfoundry/php-buildpack ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window} を参照してください。
+PHP ビルドパックでは、error_log パラメーターはロギング・レベルを定義します。 デフォルトでは、`error_log` パラメーターの値は **stderr notice** です。 次の例は、Cloud Foundry が提供する PHP ビルドパックの `nginx-defaults.conf` ファイルに含まれる、デフォルトのロギング・レベル構成を示しています。 詳しくは、[cloudfoundry/php-buildpack ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/cloudfoundry/php-buildpack/blob/ff71ea41d00c1226d339e83cf2c7d6dda6c590ef/defaults/config/nginx/1.5.x/nginx-defaults.conf){: new_window} を参照してください。
 {: tsCauses}
 
 ```
@@ -388,7 +388,7 @@ error_log stderr notice;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
 
-`NOTICE` メッセージは通知用であり、問題を示していない場合があります。これらのメッセージのロギングは、ビルドパックの nginx-defaults.conf ファイルに含まれるロギング・レベルを `stderr notice` から `stderr error` に変更することで停止できます。例えば、以下のようにします。
+`NOTICE` メッセージは通知用であり、問題を示していない場合があります。 これらのメッセージのロギングは、ビルドパックの nginx-defaults.conf ファイルに含まれるロギング・レベルを `stderr notice` から `stderr error` に変更することで停止できます。 例えば、以下のようにします。 	
 {: tsResolve}
 
 ```
@@ -405,7 +405,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 ### サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない
 {: #ts_importpylib}
 
-サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない場合があります。問題を解決するには、構成ファイルを python アプリケーションのルート・ディレクトリーに追加します。
+サード・パーティーの Python ライブラリーを {{site.data.keyword.Bluemix_notm}} にインポートできない場合があります。 問題を解決するには、構成ファイルを python アプリケーションのルート・ディレクトリーに追加します。
 
 サード・パーティーの Python ライブラリー (例えば `web.py` ライブラリーなど) をインポートしようとすると、`ibmcloud cf push` コマンドが失敗します。
 {: tsSymptoms}
@@ -413,12 +413,12 @@ pid @{HOME}/nginx/logs/nginx.pid;
 Python アプリケーションの構成情報が欠落しています。
 {: tsCauses}
 
-`requirements.txt` ファイルと `Procfile` ファイルを Python アプリケーションのルート・ディレクトリーに追加します。以下の情報は、`web.py` ライブラリーをインポートしていると仮定しています。
+`requirements.txt` ファイルと `Procfile` ファイルを Python アプリケーションのルート・ディレクトリーに追加します。 以下の情報は、`web.py` ライブラリーをインポートしていると仮定しています。
 {: tsResolve}
 
  1. `requirements.txt` ファイルを Python アプリケーションのルート・ディレクトリーに追加します。
 
- `requirements.txt` ファイルには、Python アプリケーションに必要なライブラリー・パッケージとそのパッケージのバージョンが指定されています。以下の例には、`requirements.txt` ファイルの内容が示されています。ここで、`web.py==0.37` は、ダウンロードされる `web.py` ライブラリーのバージョンが 0.37 であることを示しています。`wsgiref==0.1.2` は、web.py ライブラリーに必要な Web サーバー・ゲートウェイ・インターフェースのバージョンが 0.1.2 であることを示しています。
+ `requirements.txt` ファイルには、Python アプリケーションに必要なライブラリー・パッケージとそのパッケージのバージョンが指定されています。 以下の例には、`requirements.txt` ファイルの内容が示されています。ここで、`web.py==0.37` は、ダウンロードされる `web.py` ライブラリーのバージョンが 0.37 であることを示しています。`wsgiref==0.1.2` は、web.py ライブラリーに必要な Web サーバー・ゲートウェイ・インターフェースのバージョンが 0.1.2 であることを示しています。
 	 ```
 	 web.py==0.37
      wsgiref==0.1.2
@@ -426,7 +426,7 @@ Python アプリケーションの構成情報が欠落しています。
 	 `requirements.txt` ファイルの構成方法について詳しくは、「[Requirements files](https://pip.readthedocs.org/en/1.1/requirements.html)」を参照してください。
 
  2. `Procfile` ファイルを Python アプリケーションのルート・ディレクトリーに追加します。
- `Procfile` ファイルには、Python アプリケーションの開始コマンドを含めてください。以下のコマンドでは、*yourappname* が Python アプリケーションの名前で、*PORT* は、アプリケーションのユーザーから要求を受信するために Python アプリケーションが使用しなければならないポート番号です。 *$PORT* はオプションです。開始コマンドに PORT を指定しない場合は、アプリケーション内部にある `VCAP_APP_PORT` 環境変数下のポート番号が使用されます。
+ `Procfile` ファイルには、Python アプリケーションの開始コマンドを含めてください。 以下のコマンドでは、*yourappname* が Python アプリケーションの名前で、*PORT* は、アプリケーションのユーザーから要求を受信するために Python アプリケーションが使用しなければならないポート番号です。 *$PORT* はオプションです。 開始コマンドに PORT を指定しない場合は、アプリケーション内部にある `VCAP_APP_PORT` 環境変数下のポート番号が使用されます。
 	```
 	web: python <yourappname>.py $PORT
 	```

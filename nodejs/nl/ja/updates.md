@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,14 +13,24 @@ lastupdated: "2018-06-27"
 {: #latest_updates}
 
 sdk-for-nodejs ビルドパックの最新更新のリスト。
+
+## 2018 年 7 月 24 日: 更新された Node.js ビルドパック v3.21
+{:#fips-deprecation}
+**重要:** このリリースの最新の Node.js 6.x および 8.x のバージョンから、SDK for Node.js ビルドパックは、Node.js コミュニティー・リリースに基づきます。この変更により、ビルドパック内の Node.js OpenSSL FIPS モジュールは更新されなくなります。現在の OpenSSL FIPS モジュールおよび IBM SDK for Node.js ビルドは、2018 年 8 月 24 日現在、削除の対象です。詳しくは、[Aligning the Node.js Buildpack to Community Runtimes (Node.js ビルドパックをコミュニティー・ランタイムに合わせる)![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660)ブログ投稿を参照してください。
+
+SDK for Node.js ビルドパック v3.21 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.13.0、8.9.4、および Node.js コミュニティーのバージョン 6.14.3、8.11.3 が提供されます。デフォルトは最新の 6.x です。したがって、現在は 6.14.3 です。
+
+このリリースには、以下のセキュリティー脆弱性に対する修正も含まれます。
+* [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
+
 ## 2018 年 6 月 1 日: 更新された Node.js ビルドパック v3.20.2
-SDK for Node.js ビルドパック v3.20.2 では、現行の Node.js ランタイムに対する Dynatrace Managed PaaS 統合が追加されます。『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
+SDK for Node.js ビルドパック v3.20.2 では、現行の Node.js ランタイムに対する Dynatrace Managed PaaS 統合が追加されます。 『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
 
 ## 2018 年 5 月 17 日: 更新された Node.js ビルドパック v3.20.1
-SDK for Node.js ビルドパック v3.20.1 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が修正されます。『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
+SDK for Node.js ビルドパック v3.20.1 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が修正されます。 『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
 
 ## 2018 年 4 月 9 日: 更新された Node.js ビルドパック v3.20
-SDK for Node.js ビルドパック v3.20 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が追加されます。『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
+SDK for Node.js ビルドパック v3.20 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が追加されます。 『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
 
 ## 2018 年 3 月 16 日: 更新された Node.js ビルドパック v3.19
 SDK for Node.js ビルドパック v3.19 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.12.3、6.13.0、8.9.3、および 8.9.4 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.13.0 です。
@@ -33,7 +43,7 @@ SDK for Node.js ビルドパック v3.17 では、IBM SDK for Node.js バージ�
 
 ## 2017 年 12 月 11 日: 更新された Node.js ビルドパック v3.16.1
 SDK for Node.js ビルドパック v3.16.1 では、IBM SDK for Node.js バージョン v4.8.4、v4.8.5、v6.11.4、v6.12.0、v8.6.0、v8.9.0 が提供されます。 デフォルトは最新の 6.x です。従って、現在は 6.12.0 です。
-これは、「アドバイザリー ID: 10237 製品レコード ID: 104487 タイトル: Node.js zlib DOS セキュリティーの脆弱性、2017 年 10 月」(CVE-2017-14919) の PSIRT を修正します。 8.6.0.0 以前、6.10.2.0 から 6.11.4.0、および 4.8.2.0 から 4.8.4.0 に影響を与えるセキュリティーの脆弱性に対する修正を入手するには、v3.16.1 にアップグレードすることをお勧めします。
+これは、「アドバイザリー ID: 10237 製品レコード ID: 104487 タイトル: Node.js zlib DOS セキュリティーの脆弱性、2017 年 10 月」(CVE-2017-14919) の PSIRT を修正します。 8.6.0.0 以前、6.10.2.0 から 6.11.4.0、および 4.8.2.0 から 4.8.4.0 に影響するセキュリティー脆弱性に対する修正を取り入れるために、v3.16.1 にアップグレードすることをお勧めします。
 
 ## 2017 年 11 月 1 日: 更新された Node.js ビルドパック v3.15
 SDK for Node.js ビルドパック v3.15 では、IBM SDK for Node.js バージョン 4.8.3、4.8.4、6.11.3、6.11.4、8.3.0、および 8.6.0 が提供されます。 デフォルトは最新の 6.x です。従って、現在は 6.11.4 です。
@@ -44,7 +54,7 @@ SDK for Node.js ビルドパック v3.14 では、IBM SDK for Node.js バージ�
 ## 2017 年 7 月 26 日: 更新された Node.js ビルドパック v3.13
 SDK for Node.js ビルドパック v3.13 では、IBM SDK for Node.js バージョン 4.8.3、4.8.4、6.11.0、6.11.1、8.1.2、および 8.1.4 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.11.1 です。 バージョン 8 はテスト用に使用可能ですが、実動用にはまだ推奨されていません。  
 
-このビルドパックには、Node.js で検出された最近のセキュリティー脆弱性に対処する、更新された Node.js バージョンが含まれています。  ユーザーは、入手可能な最新バージョンを使用するようにアプリケーションを更新した後、{{site.data.keyword.Bluemix_notm}} 内でアプリケーションを再ステージングする必要があります。  Node.js の脆弱性についての詳細は、<a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">このリンク</a>を参照してください。
+このビルドパックには、Node.js で検出された最近のセキュリティー脆弱性に対処する、更新された Node.js バージョンが含まれています。 ユーザーは、入手可能な最新バージョンを使用するようにアプリケーションを更新した後、{{site.data.keyword.Bluemix_notm}} 内でアプリケーションを再ステージングする必要があります。  Node.js のセキュリティー脆弱性に対する修正 CVE-2017-1000381 および CVE-2017-11499 について詳しくは、<a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">このセキュリティー情報</a>を参照してください。
 
 ## 2017 年 5 月 5 日: 更新された Node.js ビルドパック v3.12
 SDK for Node.js ビルドパック v3.12 では、IBM SDK for Node.js バージョン 0.12.17、0.12.18、4.8.0、4.8.2、6.10.0、および 6.10.2 が提供されます。 デフォルトは最新の 4.x から最新の 6.x に変更されました。したがって、現在は 6.10.2 です。 これは、メジャー・バージョンの変更であるため、デフォルトに依存するアプリケーションに影響を及ぼす可能性があります。 問題を回避する方法について詳しくは、[Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) を参照してください。

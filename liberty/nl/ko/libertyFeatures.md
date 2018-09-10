@@ -36,7 +36,7 @@ CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
 
 ## Liberty 기능 색인
 {: #libertyfeat_index}
-다음 색인을 사용하여 기능 목록의 섹션으로 건너뛰거나 [Liberty for Java 기능 목록](#libertyfeat_list)을 검토할 수 있습니다. 
+다음 색인을 사용하여 기능 목록의 섹션으로 건너뛰거나 [Liberty for Java 기능 목록](#libertyfeat_list)을 검토할 수 있습니다.
 
 ### A-E
 * [A](#libertyfeat_A)

@@ -190,7 +190,7 @@ Diego セルで実行されているアプリケーションの `staging_info.ym
 {: codeblock}
 
 WAR、
-EAR、サーバー・ディレクトリー、およびパッケージされたサーバーのデプロイメントの場合、JVM オプションは `jvm.options` ファイルで保持されます。 `jvm.options` ファイルは、`app/wlp/usr/servers/<serverName>/` ディレクトリーにあります。 パッケージされたサーバーが別のサーバー名でデプロイされた場合を除いて、`<serverName>` は `defaultServer` に設定されるのが一般的です。例えば、次のとおりです。
+EAR、サーバー・ディレクトリー、およびパッケージされたサーバーのデプロイメントの場合、JVM オプションは `jvm.options` ファイルで保持されます。 `jvm.options` ファイルは、`app/wlp/usr/servers/<serverName>/` ディレクトリーにあります。 パッケージされたサーバーが別のサーバー名でデプロイされた場合を除いて、`<serverName>` は `defaultServer` に設定されるのが一般的です。 例えば、次のとおりです。
 
 DEA ノードで実行されているアプリケーションの `jvm.options` ファイルを表示するには、以下を実行します。
 

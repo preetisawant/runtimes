@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2018-06-27"
 # Modalidad FIPS
 {: #fips_mode}
 
-Las versiones del paquete de compilación de Nodejs v3.2-20160315-1257 y posteriores dan soporte a [FIPS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
+Las versiones del paquete de compilación de Nodejs v3.2-20160315-1257 a v3.20.2-20180523-1639 dan soporte a [FIPS ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
+
+**El módulo OpenSSL FIPS está en desuso:** Acorde con la versión de la comunidad de Node.js, el módulo OpenSSL FIPS está en desuso y es elegible para su eliminación desde el 24 de agosto de 2018. Obtenga más información en [Últimas actualizaciones del paquete de compilación Node.js](updates.html#fips-deprecation).
 
 Para utilizar el motor de nodos habilitado para FIPS, establezca la variable de entorno FIPS_MODE en true.
 Por ejemplo:
@@ -25,7 +27,7 @@ Por ejemplo:
 {: codeblock}
 
 Es importante comprender que cuando FIPS_MODE es true algunos módulos de nodo pueden no funcionar.  Por ejemplo, **los módulos de nodo que utilizan [MD5 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://en.wikipedia.org/wiki/MD5) fallarán**, como [Express ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://expressjs.com/).  Para Express, el establecimiento de [etag ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://expressjs.com/en/api.html) en false en la app
-Expess puede ayudar a solucionar este problema. Por ejemplo, puede realizar lo siguiente en el código:
+Express puede ayudar a solucionar este problema. Por ejemplo, puede realizar lo siguiente en el código:
 ```
     app.set('etag', false);
 ```

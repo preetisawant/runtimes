@@ -71,7 +71,7 @@ ibmcloud cf push app_name -p app_path -b https://github.com/cloudfoundry/staticf
 ```
 {: codeblock}
 
-如果您不要對 Ruby 應用程式使用內建社群建置套件，則可以輸入下列指令來使用外部建置套件。
+如果您不想針對 Ruby 應用程式使用內建社群建置套件，則可以輸入下列指令來使用外部建置套件。
 
 ```
 ibmcloud cf push app_name -p app_path -b https://github.com/cloudfoundry/ruby-buildpack.git
@@ -111,4 +111,4 @@ ibmcloud cf restage app_name
 
 ## 使用 `manifest.yml` 檔案。
 
-您可以新增要直接指定給 `manifest.yml` 檔案的環境變數及值。請參閱[環境變數](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block)。
+您可以將想要指定的環境變數及值直接新增至 `manifest.yml` 檔案。請參閱[環境變數](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block)。

@@ -45,4 +45,4 @@ lastupdated: "2018-04-11"
 ## 協力廠商服務
 {: #third-party}
 
-建置套件可讓您在應用程式內使用一些非 IBM、協力廠商服務（例如 Dynatrace 或 New Relic）。IBM 不提供對協力廠商服務的支援。如需在 IBM Cloud 中使用協力廠商服務的相關資訊，請參閱最新 [IBM Cloud 服務說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm) 中的_雲端服務使用_。在使用協力廠商服務之前，請參閱服務提供者的授權資訊。
+建置套件可讓您在應用程式內使用一些非 IBM 的協力廠商服務（例如 Dynatrace 或 New Relic）。IBM 不提供對協力廠商服務的支援。如需在 IBM Cloud 中使用協力廠商服務的相關資訊，請參閱最新 [IBM Cloud 服務說明 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm) 中的_雲端服務使用_。在使用協力廠商服務之前，請參閱服務提供者的授權資訊。

@@ -92,7 +92,7 @@ Compose 服务可以是容器管理的服务，也可以是应用程序管理的
 {: codeblock}
 
 **重要信息**：您指定的服务类型必须与 VCAP_SERVICES 环境变量中所示的服务标签相匹配。不允许使用空格。
-**重要信息**：`<service_type_specification>` 中不允许使用空格。只允许使用空格来分隔多个 `<service_type_specification>` 实例。
+**重要信息**：`<service_type_specification>`. 只允许使用空格来分隔多个 `<service_type_specification>` 实例。
 
 使用 **all** 选项可选择退出服务的所有自动配置操作，如上面的 *dashDB* 场景中那样。使用 **config** 选项可仅选择退出配置更新操作，如上面的 *cloudant* 场景中那样。
 

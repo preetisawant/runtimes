@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -59,20 +59,22 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 {: codeblock}
 Para obter mais informações, veja [Links do pacote do Composer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://getcomposer.org/doc/04-schema.md#package-links).
 
-Quando uma versão não for especificada, a versão 5.6.31 será escolhida por padrão.
+Quando uma versão não for especificada, a versão 5.6.34 será escolhida por padrão.
 
 ### Versões disponíveis:
 {: #available_versions}
 
 As seguintes versões do PHP estão disponíveis no [buildback
-PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27) atualmente instalado no {{site.data.keyword.Bluemix}}:
+PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.51) atualmente instalado no {{site.data.keyword.Bluemix}}:
 
-* 5.6.30
-* 5.6.31
-* 7.0.20
-* 7.0.21
-* 7.1.6
-* 7.1.7
+* 5.6.33
+* 5.6.34
+* 7.0.27
+* 7.0.28
+* 7.1.14
+* 7.1.15
+* 7.2.2
+* 7.2.3
 
 Se seu app requer uma versão do PHP não listada, é possível usar o [buildpack
 PHP](https://github.com/cloudfoundry/php-buildpack.git) externo para implementar o app.

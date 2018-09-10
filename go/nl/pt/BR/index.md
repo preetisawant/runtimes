@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -42,20 +42,23 @@ Godeps/Godeps.json na raiz de seu aplicativo. Por exemplo:
 {: codeblock}
 Para obter mais informações, veja [godep](https://github.com/tools/godep){: new_window}.
 
-Quando uma versão não for especificada, a versão 1.8.3 será escolhida por padrão.
+Quando uma versão não for especificada, a versão 1.8.7 será escolhida por padrão.
 
 ### Versões disponíveis:
 {: #available_versions}
 
-As seguintes versões do Go estão disponíveis no [buildpack Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.6){: new_window}
+As seguintes versões do Go estão disponíveis no [buildpack Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.20){: new_window}
 atualmente instalado no {{site.data.keyword.Bluemix_notm}}:
 
 * 1.6.3
 * 1.6.4
 * 1.7.5
 * 1.7.6
-* 1.8.1
-* 1.8.3
+* 1.8.6
+* 1.8.7
+* 1.9.3
+* 1.9.4
+* 1.10
 
 Se o seu app requer uma versão do Go não listada,
 é possível usar um [buildpack Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externo para implementar o aplicativo.

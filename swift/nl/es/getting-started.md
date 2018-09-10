@@ -61,7 +61,12 @@ swift build
   Este mandato puede tardar unos minutos en ejecutarse.
 
 1. Cuando la aplicación se haya compilado correctamente, podrá ejecutar el archivo ejecutable que ha generado el compilador de Swift:
+```
+swift run
+```
+  {: codeblock}
 
+  o
   ```
 .build/debug/get-started-swift
   ```
@@ -86,10 +91,10 @@ Abra el archivo manifest.yml y cambie el valor de `name` de `GetStartedSwift` po
 
   ```
   applications:
-   - name: GetStartedSwift
+   - name: Get-Started-Swift
      random-route: true
      memory: 256M
-     command: kitura-helloworld
+     command: get-started-swift
      buildpack: swift_buildpack
   ```
   {: codeblock}
@@ -105,7 +110,7 @@ Puede utilizar la CLI de {{site.data.keyword.Bluemix_short}} para desplegar apps
 1. Inicie sesión en su cuenta de {{site.data.keyword.Bluemix_notm}} y seleccione un punto final de API.
 
   ```
-ibmcloud cf login
+ibmcloud login
   ```
   {: codeblock}
 
@@ -183,7 +188,7 @@ Actualice el archivo `mappings.json` en el directorio `config` reemplazando el m
   ```
   {: codeblock}
 
-Esta aplicación de ejemplo utiliza el paquete `CloudEnvironment` para interactuar con {{site.data.keyword.Bluemix_notm}} y analizar variables de entorno. [Más información...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+Esta aplicación de ejemplo utiliza el paquete `CloudEnvironment` para interactuar con {{site.data.keyword.Bluemix_notm}} y analizar variables de entorno. [Más información...](https://github.com/IBM-Swift/CloudEnvironment)
 
 El marcador `cloudant` de la configuración `cloudfoundry:cloudant` facilita el enlace a un servicio de Cloudant proporcionado por el usuario para la aplicación. Con la configuración `cloudfoundry:cloudant`, también puede crear un servicio Cloudant que incluya la serie y `cloudant` en algún lugar del nombre de servicio, y enlazarlos a la aplicación, sin editar el archivo `config.json`. Si modifica esta configuración y posteriormente desea utilizar un servicio Cloudant proporcionado por el usuario, necesitará editar la configuración a `cloudfoundry:cloudant` o definir `cloudfoundry:` con el nombre del servicio proporcionado por el usuario.
 {: tip}
@@ -205,7 +210,7 @@ swift build
 
  Visualice la app en: http://localhost:8080. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
 
- Esta aplicación de ejemplo utiliza el paquete `Kitura-CouchDB` para interactuar con Cloudant. [Más información...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ Esta aplicación de ejemplo utiliza el paquete `Kitura-CouchDB` para interactuar con Cloudant. [Más información...](https://github.com/IBM-Swift/Kitura-CouchDB)
 
  Realice los cambios que desee y vuelva a desplegarlo en {{site.data.keyword.Bluemix_notm}}.
 
@@ -220,6 +225,6 @@ Recuerde que, si no necesita la app en directo, debe detenerla para no incurrir 
 
 ## Siguientes pasos
 
-* [Guías de aprendizaje](/docs/tutorials/index.html)
+* [Guías de aprendizaje de Kitura y Swift del lado del servidor ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.kitura.io/learn.html){: new_window}
 * [Ejemplos ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://ibm-cloud.github.io){: new_window}
 * [Centro de arquitectura ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

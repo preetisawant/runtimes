@@ -40,7 +40,7 @@ Cloud Foundry 빌드팩은 Cloud Foundry 환경의 애플리케이션에 대한 
 
 *  빌드팩
 
-   빌드팩은 일반적으로 {{site.data.keyword.Bluemix_notm}}에서 제공하는 소프트웨어의 언어별 패키지입니다. 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에 배치되면 애플리케이션에 적합한 빌드팩이 선택됩니다. 빌드팩은 애플리케이션의 런타임 환경을 프로비저닝합니다.  명령행에서 `ibmcloud cf buildpacks` 명령을 실행하여 {{site.data.keyword.Bluemix_notm}}에서 제공하는 빌드팩 세트를 볼 수 있습니다. 
+   빌드팩은 일반적으로 {{site.data.keyword.Bluemix_notm}}에서 제공하는 소프트웨어의 언어별 패키지입니다. 애플리케이션이 {{site.data.keyword.Bluemix_notm}}에 배치되면 애플리케이션에 적합한 빌드팩이 선택됩니다. 빌드팩은 애플리케이션의 런타임 환경을 프로비저닝합니다.  명령행에서 `ibmcloud cf buildpacks` 명령을 실행하여 {{site.data.keyword.Bluemix_notm}}에서 제공하는 빌드팩 세트를 볼 수 있습니다.
 
 *  런타임
 

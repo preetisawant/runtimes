@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
   years: 2016, 2017, 2018
-
-lastupdated: "2018-06-20"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -24,7 +22,7 @@ lastupdated: "2018-06-20"
 ## Sélection d'un conteneur boilerplate
 
 1. Depuis le [catalogue {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/catalog/),
-accédez à la section relative aux conteneurs boilerplate.
+accédez à la section relative aux kits de démarrage.
 2. Cliquez sur le conteneur boilerplate à utiliser.
 3. Entrez un nom pour votre application, modifiez le nom d'hôte si nécessaire, puis cliquez sur **Créer**. La constitution de votre application commence et le tutoriel d'initiation pour votre application sur le tableau de bord {{site.data.keyword.Bluemix_notm}} s'affiche.
 4. Suivez les procédures du tutoriel pour :  

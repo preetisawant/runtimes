@@ -61,7 +61,12 @@ swift build
   Esse comando pode levar alguns minutos para ser executado.
 
 1. Quando o aplicativo for compilado com êxito, será possível executar o executável que foi gerado pelo compilador Swift:
+```
+swift run
+```
+  {: codeblock}
 
+  ou
   ```
 .build/debug/get-started-swift
   ```
@@ -86,10 +91,10 @@ Abra o arquivo manifest.yml e mude o `nome` de `GetStartedSwift` para o nome de 
 
   ```
   applications:
-   - name: GetStartedSwift
+   - name: Get-Started-Swift
      random-route: true
      memory: 256M
-     command: kitura-helloworld
+     command: get-started-swift
      buildpack: swift_buildpack
   ```
   {: codeblock}
@@ -105,14 +110,14 @@ Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para
 1. Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}} e selecione um terminal de API.
 
   ```
-ibmcloud cf login
+ibmcloud login
   ```
   {: codeblock}
 
   Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
 
   ```
-ibmcloud login -- sso
+ibmcloud login --sso
   ```
   {: codeblock}
 
@@ -187,7 +192,7 @@ item temporário `cloudant` pelo **nome** de sua instância do banco de dados:
   {: codeblock}
 
 Esse aplicativo de amostra usa o pacote `CloudEnvironment` para interagir com o {{site.data.keyword.Bluemix_notm}}
-para analisar as variáveis de ambiente. [Saiba mais...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+para analisar as variáveis de ambiente. [Saiba mais...](https://github.com/IBM-Swift/CloudEnvironment)
 
 O item temporário `cloudant` na configuração `cloudfoundry:cloudant` torna mais
 fácil ligar um serviço Cloudant fornecido pelo usuário ao seu aplicativo. Com a configuração
@@ -214,7 +219,7 @@ swift build
 
  Visualize seu app em: http://localhost:8080. Os nomes que você inserir no app serão agora incluídos no banco de dados.
 
- Esse aplicativo de amostra usa o pacote `Kitura-CouchDB` para interagir com o Cloudant. [Saiba mais...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ Esse aplicativo de amostra usa o pacote `Kitura-CouchDB` para interagir com o Cloudant. [Saiba mais...](https://github.com/IBM-Swift/Kitura-CouchDB)
 
  Faça quaisquer mudanças desejadas e reimplemente para {{site.data.keyword.Bluemix_notm}}!
 
@@ -229,6 +234,6 @@ Lembre-se: se você não precisar de seu app em tempo real, pare-o para que voc�
 
 ## Próximas Etapas
 
-* [Tutorials (Tutoriais)](/docs/tutorials/index.html)
+* [Tutoriais do Swift do lado do servidor e do Kitura ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.kitura.io/learn.html){: new_window}
 * [Amostras ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://ibm-cloud.github.io){: new_window}
 * [Architecture Center ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

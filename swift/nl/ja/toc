@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Swift" audience="runtime" href="/docs/runtimes/swift/getting-started.html"}}
+{: .toc subcollection="Swift" audience="runtime" arm="393" href="/docs/runtimes/swift/getting-started.html"}}
 Swift
 
     {: .navgroup id="learn"}
@@ -9,19 +9,18 @@ Swift
     index.md
     {: .navgroup-end}
 
-    {: .navgroup id="reference"}
-    {: .topicgroup}
-    スターター・アプリケーションおよびコミュニティー・ビルドパック
-        [スターター・アプリケーションの使用](../common/starter_app_usage.html)
-        [コミュニティー・ビルドパックの使用](../common/byob.html)
+    {: .navgroup id="howto"}
+    ../common/workingWithProxy.md
     {: .navgroup-end}
 
-    {: .navgroup id="howto"}
-    [プロキシーの処理](../common/workingWithProxy.html)
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    スターター・アプリケーションおよびコミュニティーのビルドパック
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
-    runtimeVersions.md
-    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
+    ../common/ts_runtimes.md
+    ../common/buildpackSupport.md
     {: .navgroup-end}

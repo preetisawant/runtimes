@@ -26,7 +26,7 @@ Dynatrace를 사용하도록 Node.js 애플리케이션을 구성하는 경우 N
 1. 다음 명령을 실행하여 Dynatrace 신임 정보를 가리키는 사용자 제공 서비스를 작성하십시오. 서비스 이름에는 `dynatrace` 문자열이 포함되어야 합니다(예: `dynatrace-service`).
 
     ```
-    ibmcloud cf cups dynatrace-service -p "environmentid, apitoken"
+ibmcloud cf cups dynatrace-service -p "environmentid, apitoken"
     ```
     {: codeblock}
     
@@ -35,7 +35,7 @@ Dynatrace를 사용하도록 Node.js 애플리케이션을 구성하는 경우 N
     Dynatrace Managed를 사용하는 경우 `apiurl` 필드도 추가하십시오. 이 필드는 관리 서버의 API 엔드포인트를 지정합니다.
     
     ```
-    ibmcloud cf cups dynatrace-service -p "environmentid, apitoken, apiurl"
+ibmcloud cf cups dynatrace-service -p "environmentid, apitoken, apiurl"
     ```
     {: codeblock}
     

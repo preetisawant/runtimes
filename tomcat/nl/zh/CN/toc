@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Tomcat" audience="runtime" href="/docs/runtimes/tomcat/getting-started.html"}}
+{: .toc subcollection="Tomcat" audience="runtime" arm="390" href="/docs/runtimes/tomcat/getting-started.html"}}
 Tomcat
 
     {: .navgroup id="learn"}
@@ -11,18 +11,18 @@ Tomcat
 
     {: .navgroup id="howto"}
     eclipseTomcat.md
-    [使用代理](../common/workingWithProxy.html)
+    ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     入门模板应用程序和社区 buildpack
-        [使用入门模板应用程序](../common/starter_app_usage.html)
-        [使用社区 buildpack](../common/byob.html)
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     [运行时版本](index.html#runtime_versions)
-    [Buildpack 支持声明](../common/buildpackSupport.html)
+    ../common/buildpackSupport.md
     {: .navgroup-end}

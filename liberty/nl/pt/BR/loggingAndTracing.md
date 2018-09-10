@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -45,11 +45,16 @@ A configuração de rastreio do Liberty pode ser ajustada para um aplicativo em 
 ### Mudando a configuração de rastreio por meio de SSH
 
 Ao enviar o aplicativo por push, o arquivo server.xml inclui as propriedades padrão
-**updateTrigger** configuradas para **pesquisadas** e **monitorInterval** configurado como 1 minuto. O servidor Liberty é automaticamente configurado para verificar atualizações para o server.xml a cada minuto.
+**updateTrigger** configuradas para **pesquisadas** e **monitorInterval** configurado como 1 minuto. O
+servidor Liberty é automaticamente configurado para verificar se há atualizações para o arquivo server.xml a cada minuto.
 
-Consulte [Enviar por push aplicativos Liberty com server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) para opções para enviar por push os aplicativos Liberty com um sever.xml customizado
+Consulte [Enviar
+por push os apps Liberty com o server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) para ver as opções de envio por push dos apps Liberty com um arquivo
+`server.xml` customizado.
 
-Consulte [Controlando atualizações dinâmicas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para como configurar atualização dinâmica no server.xml.
+Consulte
+[Controlando
+as atualizações dinâmicas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para ver como configurar a atualização dinâmica no arquivo server.xml.
 
 Siga estas etapas para mudar a configuração de rastreio:
 

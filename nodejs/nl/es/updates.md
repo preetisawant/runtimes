@@ -2,17 +2,27 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Últimas actualizaciones en el paquete de compilación de SDK for Node.js
+# Últimas actualizaciones en el paquete de complicación SDK for Node.js
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
+
+## 24 de julio de 2018: paquete de compilación de Node.js v3.21
+{:#fips-deprecation}
+**Importante:** empezando por las últimas versiones de Node.js 6.x y 8.x en este release, el SDK para el paquete de compilación Node.js se basa en el release de la comunidad Node.js. Con este cambio, el módulo Node.js OpenSSL FIPS del paquete de compilación ya no se actualizará más. El módulo OpenSSL FIPS actual y las compilaciones IBM SDK for Node.js son elegibles para su eliminación el 24 de agosto de 2018. Para obtener más información, consulte la publicación de post [Alineación del paquete de compilación de Node.js a tiempos de ejecución de la comunidad ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660).
+
+El paquete de compilación de SDK for Node.js v3.21 proporciona las versiones IBM SDK for Node.js 4.8.5, 4.8.7, 6.13.0 y 8.9.4 y las versiones de la comunidad Node.js 6.14.3 y 8.11.3. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.14.3.
+
+Este release también incluye arreglos para la siguiente vulnerabilidad de seguridad:
+* [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
+
 ## 1 de junio de 2018: se ha actualizado el paquete de compilación de Node.js v3.20.2
 El paquete de compilación de SDK for Node.js v3.20.2 añade la integración de Dynatrace PaaS gestionada para los tiempos de ejecución de Node.js. Consulte [Utilización de Dynatrace para supervisar Node.js en {{site.data.keyword.cloud_notm}}](dynatrace.html).
 
@@ -44,7 +54,7 @@ El SDK para el paquete de compilación de Node.js v3.14 proporciona las versione
 ## 26 de julio de 2017: Actualización del paquete de compilación Node.js v3.13
 El paquete de compilación SDK for Node.js v3.13 proporciona las versiones de IBM SDK for Node.js 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 y 8.1.4. El valor predeterminado es la 6.x más reciente, de modo que actualmente es 6.11.1. Tenga en cuenta que la versión 8 está disponible para pruebas, pero aún no está recomendada para producción.  
 
-Este paquete de compilación contiene las versiones de Node.js actualizadas, que abordan vulnerabilidades de seguridad recientes encontradas en Node.js.  Los usuarios deberían actualizar sus aplicaciones para utilizar las últimas versiones disponibles y luego volver a transferir las aplicaciones a {{site.data.keyword.Bluemix_notm}}.  Consulte <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">este enlace</a> para obtener detalles sobre las vulnerabilidades de Node.js.
+Este paquete de compilación contiene las versiones de Node.js actualizadas, que abordan vulnerabilidades de seguridad recientes encontradas en Node.js. Los usuarios deberían actualizar sus aplicaciones para utilizar las últimas versiones disponibles y luego volver a transferir las aplicaciones a {{site.data.keyword.Bluemix_notm}}.  Consulte <a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">este boletín de seguridad</a> para obtener más detalles acerca de los arreglos CVE-2017-1000381 y CVE-2017-11499 para las vulnerabilidades de seguridad de Node.js.
 
 ## 5 de mayo de 2017: se ha actualizado el paquete de compilación Node.js v3.12
 El paquete de compilación SDK for Node.js v3.12 proporciona las versiones de IBM SDK for Node.js 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 y 6.10.2. El valor predeterminado ha cambiado de la 4.x más reciente a la 6.x más reciente, de modo que actualmente es 6.10.2. Puesto que es un cambio de versión principal, esto podría afectar a las apps que dependen del valor predeterminado. Consulte [Soporte a largo plazo de versiones de Node.js y el paquete de compilación de SDK para Node.js](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) para obtener más información acerca de cómo evitar problemas.

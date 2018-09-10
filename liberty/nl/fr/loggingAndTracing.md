@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -46,7 +46,7 @@ Vous pouvez ajuster la configuration de traçage Liberty pour une application en
 
 Lorsque vous envoyez l'application par commande push, le fichier server.xml inclut la propriété **updateTrigger** réglée sur **polled** par défaut et la propriété **monitorInterval** réglée à 1 minute par défaut. Cela signifie que le serveur Liberty est automatiquement configuré pour vérifier, chaque minute, si de nouvelles mises à jour ont été apportées au fichier server.xml.
 
-Consultez [Options pour l'envoi par commande push d'applications Liberty avec server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) pour connaître les options permettant d'envoyer les applications Liberty par commande push avec un fichier server.xml personnalisé.
+Consultez [Options pour l'envoi par commande push d'applications Liberty avec server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) pour connaître les options permettant d'envoyer les applications Liberty par commande push avec un fichier `server.xml` personnalisé.
 
 Consultez [Contrôle des mises à jour dynamiques](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} pour savoir comment configurer des mises à jour dynamiques dans le fichier server.xml.
 

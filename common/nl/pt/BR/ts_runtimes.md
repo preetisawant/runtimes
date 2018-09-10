@@ -375,16 +375,16 @@ O aplicativo falha ao implementar com a mensagem: `A instância do API/0App saiu
 {: tsSymptoms}
 
 Se você receber uma mensagem semelhante quando enviar por push o seu aplicativo ASP.net, muito provavelmente isso ocorrerá
-porque o seu aplicativo excede os limites de cota de memória ou de disco. Aumente as cotas para a memória ou o espaço em disco para
+porque o seu aplicativo excede os limites de cota de memória ou de disco.  Aumente as cotas para a memória ou o espaço em disco para
 o seu aplicativo.
 {: tsCauses}
 
 O aplicativo falha ao implementar com a mensagem: `Falha ao compactar droplet: sinal: canal
-dividido` ou `Não há mais espaço no dispositivo`. Como posso corrigir isso?
+dividido` ou `Não há mais espaço no dispositivo`.  Como posso corrigir isso?
 {: tsSymptoms}
 
 Os projetos enviados por push do código-fonte que contêm um grande número de dependências de pacote NuGet podem, às
-vezes, causar esse erro quando o cache de pacotes NuGet está ativado. Configure a variável de ambiente `CACHE_NUGET_PACKAGES` como `false` para desativar o cache. Consulte as instruções sobre como [Desativar o pacote NuGet](../runtimes/dotnet/diablingNuGet.md) para obter mais informações.
+vezes, causar esse erro quando o cache de pacotes NuGet está ativado.  Configure a variável de ambiente `CACHE_NUGET_PACKAGES` como `false` para desativar o cache. Consulte as instruções sobre como [Desativar o pacote NuGet](../runtimes/dotnet/diablingNuGet.md) para obter mais informações.
 {: tsCauses}
 
 ### Links úteis

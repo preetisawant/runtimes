@@ -61,7 +61,12 @@ swift build
   이 명령은 실행하는 데 몇 분이 소요될 수 있습니다.
 
 1. 애플리케이션이 컴파일되면 Swift 컴파일러에서 생성된 실행 파일을 실행할 수 있습니다.
+```
+swift run
+```
+  {: codeblock}
 
+  또는
   ```
 .build/debug/get-started-swift
   ```
@@ -86,10 +91,10 @@ manifest.yml 파일을 열고 `name`을 `GetStartedSwift`에서 앱 이름 <var 
 
   ```
   applications:
-   - name: GetStartedSwift
+   - name: Get-Started-Swift
      random-route: true
      memory: 256M
-     command: kitura-helloworld
+     command: get-started-swift
      buildpack: swift_buildpack
   ```
   {: codeblock}
@@ -105,7 +110,7 @@ manifest.yml 파일을 열고 `name`을 `GetStartedSwift`에서 앱 이름 <var 
 1. {{site.data.keyword.Bluemix_notm}} 계정에 로그인한 후 API 엔드포인트를 선택하십시오.
 
   ```
-ibmcloud cf login
+ibmcloud login
   ```
   {: codeblock}
 
@@ -183,7 +188,7 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-이 샘플 애플리케이션에서는 환경 변수를 구문 분석하기 위해 `CloudEnvironment` 패키지를 사용하여 {{site.data.keyword.Bluemix_notm}}와 상호 작용합니다. [자세히 보기...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+이 샘플 애플리케이션에서는 환경 변수를 구문 분석하기 위해 `CloudEnvironment` 패키지를 사용하여 {{site.data.keyword.Bluemix_notm}}와 상호 작용합니다. [자세히 보기...](https://github.com/IBM-Swift/CloudEnvironment)
 
 `cloudfoundry:cloudant` 구성의 `cloudant` 플레이스홀더를 사용하면 사용자 제공 Cloudant 서비스를 더 쉽게 애플리케이션에 바인드할 수 있습니다. `cloudfoundry:cloudant` 구성을 사용하여 서비스 이름에 `cloudant` 문자열이 포함된 Cloudant 서비스를 작성한 다음 `config.json` 파일을 편집하지 않고 애플리케이션에 바인드할 수 있습니다. 이 구성을 수정하고 나중에 사용자 제공 Cloudant 서비스를 사용하려는 경우 구성을 `cloudfoundry:cloudant`로 편집하거나 사용자 제공 서비스의 이름을 사용하여 `cloudfoundry:`를 정의해야 합니다.
 {: tip}
@@ -205,7 +210,7 @@ swift build
 
  다음에서 앱을 확인하십시오. http://localhost:8080 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
 
- 이 샘플 애플리케이션에서는 `Kitura-CouchDB` 패키지를 사용하여 Cloudant와 상호 작용합니다. [자세히 보기...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ 이 샘플 애플리케이션에서는 `Kitura-CouchDB` 패키지를 사용하여 Cloudant와 상호 작용합니다. [자세히 보기...](https://github.com/IBM-Swift/Kitura-CouchDB)
 
  원하는 내용을 변경하고 {{site.data.keyword.Bluemix_notm}}에 재배치하십시오.
 
@@ -215,12 +220,11 @@ ibmcloud cf app push
 
 push 명령의 출력에 나열된 URL에서 앱을 확인하십시오(예: *myUrl.mybluemix.net*).
 
-
 앱을 지속할 필요가 없는 경우 예상치 않은 비용이 발생하지 않도록 앱을 중지하십시오.
 {: tip}
 
 ## 다음 단계
 
-* [튜토리얼](/docs/tutorials/index.html)
+* [Kitura & 서버 측 Swift 튜토리얼 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.kitura.io/learn.html){: new_window}
 * [샘플 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://ibm-cloud.github.io){: new_window}
 * [아키텍처 센터 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

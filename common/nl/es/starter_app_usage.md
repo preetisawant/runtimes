@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
   years: 2016, 2017, 2018
-
-lastupdated: "2018-06-20"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -23,8 +21,8 @@ lastupdated: "2018-06-20"
 
 ## Elección de un contenedor modelo
 
-1. En el [Catálogo de {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/catalog/),
-acceda a la sección Contenedores modelo.
+1. Desde el catálogo [{{site.data.keyword.Bluemix_notm}} ](https://console.{DomainName}/catalog/),
+navegue a la sección de Kits de iniciación.
 2. Pulse el contenedor modelo que desea utilizar.
 3. Indique un nombre para la app, modifique el nombre de host si fuera necesario y pulse **Crear**. La app empieza la transferencia, y se muestra la Guía de aprendizaje de iniciación en el Panel de control de {{site.data.keyword.Bluemix_notm}}.
 4. Siga los pasos de la guía para:  

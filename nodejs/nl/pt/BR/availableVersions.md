@@ -17,7 +17,7 @@ O {{site.data.keyword.Bluemix}} fornece todos [os tempos de execução do Node.j
 correções de bug. Veja [Atualizações mais recentes para o buildpack do Node.js](/docs/runtimes/nodejs/updates.html) para obter mais informações sobre as versões suportadas.
 {: shortdesc}
 
-O buildpack Node.js da IBM armazena em cache as versões de tempo de runtime do {{site.data.keyword.IBM_notm}}. Se
+O buildpack Node.js da IBM armazena em cache as versões de tempo de execução do {{site.data.keyword.IBM_notm}}. Se
 você usar o tempo de execução do {{site.data.keyword.IBM_notm}} SDK para Node.js em seu aplicativo, ele executará mais rápido quando você enviá-lo por push para {{site.data.keyword.Bluemix_notm}}.
 
 ## Especificando uma versão

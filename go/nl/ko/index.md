@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -40,21 +40,24 @@ go_buildpack은 애플리케이션에 *.go 파일이 포함된 경우에 사용�
 {: codeblock}
 자세한 정보는 [godep](https://github.com/tools/godep){: new_window}를 참조하십시오.
 
-버전이 지정되지 않은 경우 기본적으로 버전 1.8.3이 선택됩니다.
+버전이 지정되지 않은 경우 기본적으로 버전 1.8.7이 선택됩니다.
 
 ### 사용 가능한 버전:
 {: #available_versions}
 
 다음 Go 버전은 현재 {{site.data.keyword.Bluemix_notm}}에 설치된
-[Go 빌드팩](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.6){: new_window}에서
+[Go 빌드팩](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.20){: new_window}에서
 사용 가능합니다.
 
 * 1.6.3
 * 1.6.4
 * 1.7.5
 * 1.7.6
-* 1.8.1
-* 1.8.3
+* 1.8.6
+* 1.8.7
+* 1.9.3
+* 1.9.4
+* 1.10
 
 나열되지 않은 Go 버전이
 애플리케이션에 필요한 경우

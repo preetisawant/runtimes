@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
   years: 2016, 2017, 2018
-
-lastupdated: "2018-06-20"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -23,8 +21,8 @@ lastupdated: "2018-06-20"
 
 ## 표준 유형 선택
 
-1. [{{site.data.keyword.Bluemix_notm}} 카탈로그](https://console.{DomainName}/catalog/)에서 표준 유형 섹션으로 이동하십시오.
-
+1. [{{site.data.keyword.Bluemix_notm}} 카탈로그](https://console.{DomainName}/catalog/)에서
+스타터 킷 섹션으로 이동하십시오.
 2. 사용할 표준 유형을 클릭하십시오.
 3. 앱 이름을 입력하고 필요한 경우 호스트 이름을 수정한 후 **작성**을 클릭하십시오. 앱 스테이징이 시작되고 {{site.data.keyword.Bluemix_notm}} 대시보드에 해당 앱의 시작하기 튜토리얼이 표시됩니다.
 4. 튜토리얼의 단계에 따라 다음을 수행하십시오.  

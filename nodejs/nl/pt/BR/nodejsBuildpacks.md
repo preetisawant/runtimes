@@ -24,7 +24,7 @@ O buildpack **sdk-for-nodejs** tem precedência sobre o **nodejs_buildpack** em
 vez do buildpack **sdk-for-nodejs**, deve-se especificar o seu buildpack, por exemplo, usando a opção `-b` com o comando `ibmcloud cf push`.
 
 Geralmente, o buildpack **sdk-for-nodejs** atual e uma versão anterior estão disponíveis.  Para ver todos
-os buildpacks disponíveis, use o comando `ibmcloud cf buildpacks`. Por exemplo:
+os buildpacks disponíveis, use o comando `ibmcloud cf buildpacks`.  Por exemplo:
 
 ```
    ibmcloud cf buildpacks

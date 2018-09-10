@@ -109,6 +109,6 @@ ibmcloud cf restage app_name
 ```
 {: codeblock}
 
-## `manifest.yml` 파일을 사용하십시오. 
+## `manifest.yml` 파일을 사용하십시오.
 
 지정하려는 환경 변수와 값을 `manifest.yml` 파일에 직접 추가할 수 있습니다. [환경 변수](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html#env-block)를 참조하십시오.

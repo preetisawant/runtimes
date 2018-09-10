@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2018-06-27"
 # FIPS モード
 {: #fips_mode}
 
-Nodejs ビルドパックのバージョン v3.2-20160315-1257 以降では、[FIPS ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards) がサポートされます。  
+Nodejs ビルドパックのバージョン v3.2-20160315-1257 から v3.20.2-20180523-1639 では、[FIPS ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards) がサポートされます。  
 {: shortdesc}
+
+**OpenSSL FIPS モジュールは非推奨です。** Node.js コミュニティー・バージョンに合わせて、OpenSSL FIPS モジュールは非推奨であり、2018 年 8 月 24 日現在、削除の対象です。詳しくは、[Node.js ビルドパックに対する最新の更新](updates.html#fips-deprecation)を参照してください。
 
 FIPS 対応ノード・エンジンを使用するには、環境変数 FIPS_MODE を true に設定します。
 例えば、次のとおりです。

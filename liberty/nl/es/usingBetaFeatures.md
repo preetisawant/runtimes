@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -18,26 +18,12 @@ Las funciones beta de Liberty proporcionan un acceso previo a las nuevas funcion
 
 | Características |
 | ------ |
-| `appSecurity-3.0` |
 | `audit-1.0` |
-| `beanValidation-2.0` |
-| `cdi-2.0` |
-| `javaee-8.0` |
-| `javaeeClient-8.0` |
-| `jaxrs-2.1` |
-| `jpa-2.2` |
-| `jpaContainer-2.2` |
-| `jsf-2.3` |
-| `jsfContainer-2.3` |
-| `jsonb-1.0` |
-| `jsonbContainer-1.0` |
-| `jsonp-1.1` |
-| `jsonpContainer-1.1` |
 | `logstashCollector-1.1` |
-| `servlet-4.0` |
+| `mpConfig-1.3` |
+| `mpFaultTolerance-1.1` |
 | `usageMetering-1.0` |
 | `validator-1.0` |
-| `webProfile-8.0` |
 {: caption="Tabla 1. Características Beta de Liberty disponibles en Liberty for Java en {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 Para utilizar las funciones beta de Liberty en {{site.data.keyword.Bluemix_notm}}, deberá hacer lo siguiente:
@@ -47,15 +33,15 @@ Para utilizar las funciones beta de Liberty en {{site.data.keyword.Bluemix_notm}
   ```
 <server>
     <featureManager>
-        <feature>servlet-4.0</feature>
-        <feature>webProfile-8.0</feature>
+        <feature>usageMetering-1.0</feature>
+        <feature>validator-1.0</feature>
     </featureManager>
 </server>
   ```
   {: .codeblock}
 
 2.  Establezca la variable de entorno `IBM_LIBERTY_BETA` en `true`. Esta variable indica al paquete de compilación de Liberty que instale y habilite las funciones beta para la aplicación.  Por ejemplo:
-  * Usando la [CLI de {{site.data.keyword.Bluemix_notm}} (../../cli/reference/bluemix_cli/download_cli.html):
+  * Usando la herramienta de CLI [{{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html):
     ```
     ibmcloud cf set-env <yourappname> IBM_LIBERTY_BETA true
     ```

@@ -47,7 +47,7 @@ lastupdated: "2018-06-28"
 {: tsResolve}
 
   * [Cloud Foundry Java 建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/java-buildpack){: new_window}。這個建置套件具有內建的機制，可以確保使用最新版本的建置套件。如需此機制運作方式的相關資訊，請參閱 [extending-caches.md ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/java-buildpack/blob/master/docs/extending-caches.md){: new_window}。
-  * [Cloud Foundry Node.js 建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。這個建置套件的功能與使用環境變數類似。若要讓 Node.js 建置套件每次都從網際網路下載節點模組，請在 {{site.data.keyword.Bluemix_notm}} 指令行介面中鍵入下列指令： 	
+  * [Cloud Foundry Node.js 建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/cloudfoundry/nodejs-buildpack){: new_window}。這個建置套件的功能與使用環境變數類似。若要讓 Node.js 建置套件每次都從網際網路下載 node 模組，請在 {{site.data.keyword.Bluemix_notm}} 指令行介面中鍵入下列指令： 	
 
   ```
   set NODE_MODULES_CACHE=false
@@ -197,7 +197,7 @@ Liberty 應用程式無法啟動，錯誤為_無法開始接受連線_。例如�
 ```
 {: #codeblock}
 
-{{site.data.keyword.Bluemix_notm}} 會對應用程式執行性能檢查，以查看它是否已順利啟動。性能檢查會測試應用程式是否正在接聽指派給應用程式的埠。此檢查的預設逾時是 60 秒，而部分應用程式可能需要 60 秒以上的時間才能啟動。應用程式需要較久的時間才能啟動的原因有許多。例如，連結服務（例如 [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) 或 [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)）或[啟用除錯器](/docs/runtimes/common/app_mng.html#debug)會增加啟動時間。應用程式也可以執行需要較久時間才能完成的起始設定步驟。
+{{site.data.keyword.Bluemix_notm}} 會對應用程式執行性能檢查，以查看它是否已順利啟動。性能檢查會測試應用程式是否正在接聽指派給應用程式的埠。此檢查的預設逾時是 60 秒，而部分應用程式可能需要超過 60 秒的時間才能啟動。應用程式需要較久的時間才能啟動的原因有許多。例如，連結服務（例如 [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) 或 [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)）或[啟用除錯器](/docs/runtimes/common/app_mng.html#debug)便會增加啟動時間。應用程式也可能執行需要較久時間才能完成的起始設定步驟。
 {: tsCauses}
 
 請先檢查日誌，以尋找任何可能導致 Liberty 應用程式失敗的明顯錯誤。如果未發現任何明顯錯誤，請嘗試下列動作：
@@ -221,7 +221,7 @@ Liberty 應用程式無法啟動，錯誤為_無法開始接受連線_。例如�
 
 #### 停用 appstate 特性
 
-appstate 特性會與 {{site.data.keyword.Bluemix_notm}} 性能檢查處理程序整合，以確定 Liberty 應用程式已完整起始設定，然後應用程式才能收到 HTTP 要求。完整起始設定應用程式之後，appstate 特性沒有任何效果。此特性的負面影響是部分應用程式可能需要較長的時間才能啟動。若要停用 appstate 特性，請在應用程式上設定下列環境內容，並重新編譯打包應用程式：
+appstate 特性會與 {{site.data.keyword.Bluemix_notm}} 性能檢查處理程序整合，以確定 Liberty 應用程式已完整起始設定，然後應用程式才能收到 HTTP 要求。完整起始設定應用程式之後，appstate 特性便不再有任何效果。此特性的負面影響是部分應用程式可能需要較長的時間才能啟動。若要停用 appstate 特性，請在應用程式上設定下列環境內容，並重新編譯打包應用程式：
 
 ```
 ibmcloud cf set-env myApp JBP_CONFIG_LIBERTY "app_state: false"
@@ -269,7 +269,7 @@ ibmcloud cf set-env myApp JBP_CONFIG_LIBERTY "app_state: false"
 
 #### 更新 Liberty 的 server.xml
 
-更新 server.xml，以使用 JVM 的 cacert 檔案作為信任儲存庫。將下列內容新增至 server.xml：
+更新 server.xml，以使用 JVM 的 cacerts 檔案作為信任儲存庫。將下列內容新增至 server.xml：
 
         <ssl id="defaultSSLConfig" trustStoreRef="defaultTrustStore"/>
         <keyStore id="defaultTrustStoretore" location="${java.home}/lib/security/cacerts"/>
@@ -301,10 +301,10 @@ Node.js 應用程式無法啟動，錯誤為「裝置上沒有可用的空間」
 ```
 {: #codeblock}
 
-下載相依關係時，使用第 3 版之前的 NPM 版本的 Nodejs 應用程式會耗用更多空間。
+下載相依關係時，使用第 3 版之前 NPM 版本的 Nodejs 應用程式會耗用更多空間。
 {: tsCauses}
 
-修改應用程式的 package.json 檔案，以使用 NPM 第 3 版或以上版本。
+修改應用程式的 package.json 檔案，以使用 NPM 第 3 版或更高版本。
 {: tsResolve}
 
 ```
@@ -335,7 +335,7 @@ Node.js 不知道應用程式可以使用多少記憶體，因此記憶體回收
 ```
 {: codeblock}
 
-可能的解決方案是在 package.json 檔案的應用程式 start 指令上設定 `--max_old_space_size` 選項。此選項代表應用程式記憶體覆蓋區的一部分，而且應該設定為小於應用程式可用總記憶體的值。請閱讀[大型記憶體暴增及 Heroku](https://github.com/nodejs/node/issues/3370)，瞭解本主題的更深入討論。
+可能的解決方案是在 package.json 檔案的應用程式 start 指令上設定 `--max_old_space_size` 選項。此選項代表應用程式記憶體覆蓋區的一部分，而且應該設定為小於應用程式可用總記憶體的值。請閱讀 [Large memory spikes and Heroku](https://github.com/nodejs/node/issues/3370)，瞭解本主題的更深入討論。
 ```
   "scripts": {
     "start": "node --max_old_space_size=800 server.js"
@@ -349,7 +349,7 @@ Node.js 不知道應用程式可以使用多少記憶體，因此記憶體回收
 應用程式無法部署，訊息為：`API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`。
 {: tsSymptoms}
 
-如果您在推送 ASP.net 應用程式時收到類似的訊息，很可能是因為您的應用程式超出記憶體或磁碟配額限制。針對您的應用程式，增加記憶體或磁碟空間的配額。
+如果您在推送 ASP.net 應用程式時收到類似的訊息，很可能是因為您的應用程式超出記憶體或磁碟配額限制。為您的應用程式，增加記憶體或磁碟空間的配額。
 {: tsCauses}
 
 應用程式無法部署，訊息為：`Failed to compress droplet: signal: broken pipe` 或 `No space left on device`。如何修正這個問題？
@@ -408,7 +408,7 @@ pid @{HOME}/nginx/logs/nginx.pid;
 ### 無法將協力廠商的 Python 檔案庫匯入 {{site.data.keyword.Bluemix_notm}}
 {: #ts_importpylib}
 
-您可能無法將協力廠商 Python 程式庫匯入 {{site.data.keyword.Bluemix_notm}}。若要解決此問題，請在 Python 應用程式的根目錄中新增配置檔。
+您可能無法將協力廠商 Python 程式庫匯入到 {{site.data.keyword.Bluemix_notm}}。若要解決此問題，請在 Python 應用程式的根目錄中新增配置檔。
 
 當您嘗試匯入協力廠商 Python 程式庫（例如 `web.py` 程式庫）時，`ibmcloud cf push` 指令會失敗。
 {: tsSymptoms}

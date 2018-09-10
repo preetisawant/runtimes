@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2018-07-02"
 {: #latest_updates}
 
 ## Liberty buildpack 中最新更新的列表。
+
+
+### 2018 年 8 月 10 日：更新了 Liberty buildpack V3.24-20180806-1313
+* 每月 Liberty 运行时版本已更新为 2018.8.0.0。
+* IBM JRE 版本已更新为 8 SR5 FP17。
 
 ### 2018 年 7 月 2 日：更新了 Liberty buildpack V3.23-20180628-1052
 * 缺省 Liberty 运行时版本已更新为 18.0.0.2 发行版。

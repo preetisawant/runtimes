@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -46,7 +46,7 @@ Die Liberty-Tracekonfiguration kann für die Ausführung einer Anwendung direkt 
 
 Wenn Sie eine Push-Operation für die Anwendung durchführen, enthält die Datei 'server.xml' die Standardeigenschaften **updateTrigger** mit dem Wert **polled** und **monitorInterval** mit dem Wert 1 Minute. Der Liberty-Server wurde automatisch so konfiguriert, dass er jede Minute die Datei 'server.xml' auf Aktualisierungen überprüft.
 
-Informationen über Optionen zum Durchführen von Push-Operationen für Liberty-Apps mit einer angepassten Datei 'server.xml' finden Sie unter [Optionen zur Durchführung von Push-Operationen für Liberty-Apps](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing).
+Informationen über Optionen zum Durchführen von Push-Operationen für Liberty-Apps mit einer angepassten Datei `server.xml` finden Sie unter [Optionen zur Durchführung von Push-Operationen für Liberty-Apps](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing).
 
 Informationen zum Einrichten der dynamischen Aktualisierung in der Datei 'server.xml' finden Sie unter [Dynamische Aktualisierungen steuern](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}.
 

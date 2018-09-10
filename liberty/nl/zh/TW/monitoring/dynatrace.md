@@ -36,7 +36,7 @@ Liberty 應用程式配置成使用 Dynatrace 時，預設行為是 Liberty 運�
     在這個範例中，my-dynatrace-collector 是提供給服務的名稱，DynatraceCollectorIPaddress 是您已配置的 Dynatrace 收集器的 IP 位址，而 profile 是與此受監視應用程式相關聯的選用 Dynatrace 設定檔名稱。預設設定檔值是 Monitoring。您可以指定選用的參數，如下列範例所示。
 
     ```
-    ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
+ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
                       "options" : {"dynatrace-parameter-1": "value",
                                    "dynatrace-parameter-2": "value"}}'
     ```

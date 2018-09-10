@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-06"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -10,7 +10,7 @@ lastupdated: "2018-04-06"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# 撰寫安全 Java Web 應用程式
+# 撰寫安全的 Java Web 應用程式
 {: #secure_java_web_app}
 
 所有 Web 應用程式在設計及編碼時都必須注意安全，以避免引起嚴重安全漏洞。

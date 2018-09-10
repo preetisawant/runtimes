@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  フェデレーテッド・ユーザー ID を使用しているために `ibmcloud login` を使用してログインできない場合は、以下のようにシングル・サインオン ID でログインしてください。詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
+  フェデレーテッド・ユーザー ID を使用しているために `ibmcloud login` を使用してログインできない場合は、以下のようにシングル・サインオン ID でログインしてください。 詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
   ```
 ibmcloud login --sso
   ```

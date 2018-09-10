@@ -16,7 +16,7 @@ lastupdated: "2017-10-26"
 
 將 Liberty 應用程式推送至 {{site.data.keyword.Bluemix}} 後，Liberty 建置套件即可存取 {{site.data.keyword.Bluemix_notm}} 的外部網站，以取得應用程式所需的構件。下面是 Liberty 建置套件可以存取的外部網站。在 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 及 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 環境中，需要將這些網站設定為*白名單*。
 
-* https://download.run.pivotal.io, and https://java-buildpack.cloudfoundry.org 可用來存取下列項目的元件：
+* https://download.run.pivotal.io 及 https://java-buildpack.cloudfoundry.org 可用來存取下列項目的元件：
   * [AppDynamics 代理程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.appdynamics.com/)
   * [MariaDB JDBC 驅動程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mariadb.com/)
   * [New Relic 代理程式](newRelic.html)

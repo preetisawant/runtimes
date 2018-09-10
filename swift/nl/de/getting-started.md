@@ -17,7 +17,7 @@ lastupdated: "2018-07-03"
 
 # Lernprogramm 'Einführung'
 
-* {: download} Herzlichen Glückwunsch! Sie haben die Hello World-Beispielanwendung unter {{site.data.keyword.Bluemix}} bereitgestellt! Befolgen Sie diese schrittweise Anleitung, um zu starten. Oder laden Sie den <a class="xref" href="http://bluemix.net" target="_blank" title="(Beispielcode herunterladen)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Anwendungscode herunterladen" />Beispielcode herunter</a> und beginnen Sie auf eigene Faust.
+* {: download} Herzlichen Glückwunsch! Sie haben die Hello World-Beispielanwendung unter {{site.data.keyword.Bluemix}} bereitgestellt!  Befolgen Sie diese schrittweise Anleitung, um zu starten. Oder laden Sie den <a class="xref" href="http://bluemix.net" target="_blank" title="(Beispielcode herunterladen)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Anwendungscode herunterladen" />Beispielcode herunter</a> und beginnen Sie auf eigene Faust.
 
 Indem Sie diesem Lernprogramm zur Einführung folgen, werden Sie eine Entwicklungsumgebung einrichten, eine App lokal und unter {{site.data.keyword.Bluemix}} bereitstellen und einen {{site.data.keyword.Bluemix_notm}}-Datenbankservice in Ihre App integrieren.
 
@@ -61,7 +61,12 @@ swift build
   Die Ausführung dieses Befehls kann einige Minuten dauern.
 
 1. Wenn die Anwendung erfolgreich kompiliert wurde, können Sie die ausführbare Datei, die vom Swift-Compiler generiert wurde, ausführen:
+```
+swift run
+```
+  {: codeblock}
 
+  oder
   ```
 .build/debug/get-started-swift
   ```
@@ -86,10 +91,10 @@ Für die Bereitstellung unter {{site.data.keyword.Bluemix_short}} kann es hilfre
 
   ```
   applications:
-   - name: GetStartedSwift
+   - name: Get-Started-Swift
      random-route: true
      memory: 256M
-     command: kitura-helloworld
+     command: get-started-swift
      buildpack: swift_buildpack
   ```
   {: codeblock}
@@ -105,7 +110,7 @@ Sie können Apps über die {{site.data.keyword.Bluemix_short}}-CLI bereitstellen
 1. Melden Sie sich an Ihrem {{site.data.keyword.Bluemix_notm}}-Konto an und wählen Sie einen API-Endpunkt aus.
 
   ```
-ibmcloud cf login
+ibmcloud login
   ```
   {: codeblock}
 
@@ -133,7 +138,7 @@ ibmcloud cf push
 
   Dieser Vorgang kann einige Minuten dauern. Falls ein Fehler im Bereitstellungsprozess auftritt, können Sie mithilfe des Befehls `ibmcloud cf logs <Your-App-Name> --recent` nach dem Fehler suchen.
 
-Wenn die Bereitstellung abgeschlossen ist, sollte eine Nachricht anzeigen, dass Ihre App ausgeführt wird. Ihre App wird unter der URL angezeigt, die in der Ausgabe der Push-Operation aufgelistet ist. Sie können auch den folgenden Befehl absetzen, um den Status der App zu prüfen und ihre URL anzuzeigen.
+Wenn die Bereitstellung abgeschlossen ist, sollte eine Nachricht anzeigen, dass Ihre App ausgeführt wird.  Ihre App wird unter der URL angezeigt, die in der Ausgabe der Push-Operation aufgelistet ist.  Sie können auch den folgenden Befehl absetzen, um den Status der App zu prüfen und ihre URL anzuzeigen.
   ```
 ibmcloud cf apps
   ```
@@ -183,7 +188,7 @@ Aktualisieren Sie die Datei `mappings.json` im Verzeichnis `config`, indem Sie d
   ```
   {: codeblock}
 
-Diese Beispielanwendung verwendet das Paket `CloudEnvironment` für die Interaktion mit {{site.data.keyword.Bluemix_notm}}, um ein Parsing für Umgebungsvariablen durchzuführen. [Weitere Informationen...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+Diese Beispielanwendung verwendet das Paket `CloudEnvironment` für die Interaktion mit {{site.data.keyword.Bluemix_notm}}, um ein Parsing für Umgebungsvariablen durchzuführen. [Weitere Informationen...](https://github.com/IBM-Swift/CloudEnvironment)
 
 Der Platzhalter `cloudant` in der Konfiguration `cloudfoundry:cloudant` erleichtert das Binden eines vom Benutzer bereitgestellten Cloudant-Service an Ihre Anwendung. Mit der Konfiguration `cloudfoundry:cloudant` können Sie einen Cloudant-Service erstellen, der die Zeichenfolge `cloudant` im Servicenamen enthält und den Service an Ihre Anwendung bindet, ohne die Datei `config.json` zu bearbeiten. Wenn Sie diese Konfiguration ändern und zu einem späteren Zeitpunkt einen vom Benutzer bereitgestellten Cloudant-Service verwenden möchten, müssen Sie entweder die Konfiguration für `cloudfoundry:cloudant` bearbeiten oder `cloudfoundry:` mit dem Namen des vom Benutzer bereitgestellten Service definieren.
 {: tip}
@@ -205,7 +210,7 @@ swift build
 
  Zeigen Sie Ihre App unter der folgenden URL an: http://localhost:8080. Alle Namen, die Sie in die App eingegeben haben, werden der Datenbank jetzt hinzugefügt.
 
- Diese Beispielanwendung verwendet das Paket `Kitura-CouchDB` für die Interaktion mit Cloudant. [Weitere Informationen...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ Diese Beispielanwendung verwendet das Paket `Kitura-CouchDB` für die Interaktion mit Cloudant. [Weitere Informationen...](https://github.com/IBM-Swift/Kitura-CouchDB)
 
  Nehmen Sie alle gewünschten Änderungen vor und stellen Sie die App erneut in {{site.data.keyword.Bluemix_notm}} bereit!
 
@@ -220,6 +225,6 @@ Denken Sie daran, Ihre App zu stoppen, wenn Sie sie nicht benötigen, damit kein
 
 ## Nächste Schritte
 
-* [Lernprogramme](/docs/tutorials/index.html)
+* [Lernprogramme für Kitura & Swift (serverseitig) ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.kitura.io/learn.html){: new_window}
 * [Beispiele ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://ibm-cloud.github.io){: new_window}
 * [Architecture Center ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

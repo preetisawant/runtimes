@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,6 +13,16 @@ lastupdated: "2018-06-27"
 {: #latest_updates}
 
 sdk-for-nodejs buildpack 中最新更新的列表。
+
+## 2018 年 7 月 24 日：更新了 Node.js buildpack V3.21
+{:#fips-deprecation}
+**重要信息：**在此发行版中从最新的 Node.js 6.x 和 8.x 版本开始，SDK for Node.js buildpack 基于 Node.js 社区发行版。在此更改后，该 buildpack 中的 Node.js OpenSSL FIPS 模块将不再更新。当前的 OpenSSL FIPS 模块和 IBM SDK for Node.js 构建在 2018 年 8 月 24 日即符合删除条件。有关更多信息，请参阅 [Aligning the Node.js Buildpack to Community Runtimes ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660) 博客帖子。
+
+SDK for Node.js buildpack V3.21 提供 IBM SDK for Node.js V4.8.5、V4.8.7、V6.13.0、V8.9.4 以及 Node.js 社区 V6.14.3 和 V8.11.3。缺省值是最新的 6.x，所以目前是 6.14.3。
+
+此发行版中还包含针对以下安全漏洞的修订：
+* [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
+
 ## 2018 年 6 月 1 日：更新了 Node.js buildpack V3.20.2
 SDK for Node.js buildpack V3.20.2 为当前的 Node.js 运行时添加了 Dynatrace Managed PaaS 集成。请参阅[在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Node.js](dynatrace.html)。
 
@@ -32,7 +42,7 @@ SDK for Node.js buildpack V3.18 提供了 IBM SDK for Node.js V4.8.5、V4.8.7、
 SDK for Node.js buildpack V3.17 提供了 IBM SDK for Node.js V4.8.5、V4.8.7、V6.12.0、V6.12.2、V8.9.0 和 V8.9.3。缺省值是最新的 6.x，所以目前是 6.12.2。
 
 ## 2017 年 12 月 11 日：更新了 Node.js buildpack V3.16.1
-SDK for Node.js buildpack V3.16.1 提供了 IBM SDK for Node.js V4.8.4、V4.8.5、V6.11.4、V6.12.0、V8.6.0 和 V8.9.0。缺省值是最新的 6.x，所以目前是 6.12.0。请注意，其修订了如下 PSIRT：建议标识：10237，产品记录标识：104487，标题：Node.js zlib DOS 安全漏洞，2017 年 10 月 (CVE-2017-14919)。建议升级至 V3.16.1，以针对影响 8.6.0.0 及更早版本（6.10.2.0 到 6.11.4.0，以及 4.8.2.0 到 4.8.4.0）的安全漏洞获取修订。
+SDK for Node.js buildpack V3.16.1 提供了 IBM SDK for Node.js V4.8.4、V4.8.5、V6.11.4、V6.12.0、V8.6.0 和 V8.9.0。缺省值是最新的 6.x，所以目前是 6.12.0。请注意，其修订了如下 PSIRT：建议标识：10237，产品记录标识：104487，标题：Node.js zlib DOS 安全漏洞，2017 年 10 月 (CVE-2017-14919)。建议升级至 V3.16.1，以获取针对影响 8.6.0.0 及更早版本（6.10.2.0 到 6.11.4.0，以及 4.8.2.0 到 4.8.4.0）的安全漏洞的修订。
 
 ## 2017 年 11 月 1 日：更新了 Node.js buildpack V3.15
 SDK for Node.js buildpack V3.15 提供了 IBM SDK for Node.js V4.8.3、4.8.4、6.11.3、6.11.4、8.3.0 和 8.6.0。缺省值是最新的 6.x，所以目前是 6.11.4。
@@ -43,7 +53,7 @@ SDK for Node.js buildpack V3.14 提供了 IBM SDK for Node.js V4.8.3、4.8.4、6
 ## 2017 年 7 月 26 日：更新了 Node.js buildpack V3.13
 SDK for Node.js buildpack V3.13 提供了 IBM SDK for Node.js V4.8.3、4.8.4、6.11.0、6.11.1、8.1.2、8.1.4。缺省值是最新的 6.x，所以目前是 6.11.1。请注意，V8 可用于测试，但不建议用于生产。  
 
-此 buildpack 中包含更新的 Node.js 版本，这些版本解决了近期在 Node.js 中发现的安全漏洞。用户应更新其应用程序以使用最新可用版本，然后在 {{site.data.keyword.Bluemix_notm}} 中重新编译打包应用程序。请参阅<a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">此链接</a>以了解有关 Node.js 漏洞的详细信息。
+此 buildpack 中包含更新的 Node.js 版本，这些版本解决了近期在 Node.js 中发现的安全漏洞。用户应更新其应用程序以使用最新可用版本，然后在 {{site.data.keyword.Bluemix_notm}} 中重新编译打包应用程序。请参阅<a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">此安全性公告</a>以了解有关针对 Node.js 安全漏洞的 CVE-2017-1000381 和 CVE-2017-11499 修订的详细信息。
 
 ## 2017 年 5 月 5 日：更新了 Node.js buildpack V3.12
 SDK for Node.js buildpack V3.12 提供了 IBM SDK for Node.js V0.12.17、V0.12.18、V4.8.0、V4.8.2、V6.10.0 和 V6.10.2。缺省值最新的 4.x 现在已经更改为最新的 6.x，所以目前是 6.10.2。这是一项主版本更改，可能会影响依赖该缺省值的应用程序。请参阅 [Node.js 版本长期支持和 SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) 以了解有关如何避免问题的更多信息。

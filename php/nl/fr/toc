@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="PHP" audience="runtime" href="/docs/runtimes/php/getting-started.html"}}
+{: .toc subcollection="PHP" audience="runtime" arm="385" href="/docs/runtimes/php/getting-started.html"}}
 PHP
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Utilisation d'un proxy](../common/workingWithProxy.html)
+    ../common/workingWithProxy.md
     [Imposer l'utilisation de HTTPS sur toutes les pages](index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Applications de démarrage et packs de construction
-        [Utilisation des applications de démarrage](../common/starter_app_usage.html)
-        [Utilisation des packs de construction de communauté](../common/byob.html)
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
-    [Déclaration de prise en charge pour les packs de construction](../common/buildpackSupport.html)
+    ../common/buildpackSupport.md
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -35,25 +35,25 @@ python-3.6.1
 ```
 {: codeblock}
 
-버전이 지정되지 않은 경우 기본적으로 버전 2.7.13이 선택됩니다.
+버전이 지정되지 않은 경우 기본적으로 버전 2.7.14가 선택됩니다.
 
 ### 사용 가능한 버전:
 {: #available_versions}
 
 다음 Python 버전은 현재
-{{site.data.keyword.Bluemix_notm}}에 설치된 [Python 빌드팩](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15)에서 사용
+{{site.data.keyword.Bluemix_notm}}에 설치된 [Python 빌드팩](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.6.11)에서 사용
 가능합니다.
 
-* 2.7.12
 * 2.7.13
-* 3.3.5
+* 2.7.14
 * 3.3.6
-* 3.4.5
-* 3.4.6
-* 3.5.2
-* 3.5.3
-* 3.6.1
-* 3.6.2
+* 3.3.7
+* 3.4.7
+* 3.4.8
+* 3.5.4
+* 3.5.5
+* 3.6.3
+* 3.6.4
 
 나열되지 않은 Python 버전이 애플리케이션에 필요한 경우
 외부

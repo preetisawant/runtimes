@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -44,11 +44,11 @@ lastupdated: "2018-06-27"
 
 ### 透過 SSH 變更追蹤配置
 
-當您推送應用程式時，server.xml 檔案會包含預設內容 **updateTrigger**（設為 **polled**）和 **monitorInterval**（設為 1 分鐘）。Liberty 伺服器會自動配置為每分鐘檢查一次是否有 server.xml 的更新項目。
+當您推送應用程式時，server.xml 檔案會包含預設內容 **updateTrigger**（設為 **polled**）和 **monitorInterval**（設為 1 分鐘）。Liberty 伺服器會自動配置為每分鐘檢查一次是否有 server.xml 檔的更新項目。
 
-如需使用自訂 server.xml 推送 Liberty 應用程式的選項，請參閱[使用 server.xml 推送 Liberty 應用程式](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)。
+如需使用自訂 `server.xml` 檔推送 Liberty 應用程式的選項，請參閱[使用 server.xml 推送 Liberty 應用程式](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)。
 
-如需如何在 server.xml 設定動態更新，請參閱[控制動態更新](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}。
+如需如何在 server.xml 檔設定動態更新，請參閱[控制動態更新](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}。
 
 請遵循下列步驟來變更追蹤配置：
 

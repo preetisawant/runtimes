@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -41,21 +41,24 @@ lastupdated: "2017-06-21"
 
 
 
-如果未指定版本，缺省情况下会选择 V1.8.3。
+如果未指定版本，缺省情况下会选择 V1.8.7。
 
 ### 可用版本：
 {: #available_versions}
 
 {{site.data.keyword.Bluemix_notm}} 中当前安装的
-[Go buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.6){: new_window} 内
+[Go buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.20){: new_window} 内
 提供了以下 Go 版本：
 
 * 1.6.3
 * 1.6.4
 * 1.7.5
 * 1.7.6
-* 1.8.1
-* 1.8.3
+* 1.8.6
+* 1.8.7
+* 1.9.3
+* 1.9.4
+* 1.10
 
 如果您应用程序所需的 Go 版本没有列在上述列表中，那么可以使用外部 [Go buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} 来部署应用程序。
 

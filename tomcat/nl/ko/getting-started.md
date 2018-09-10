@@ -167,7 +167,7 @@ ibmcloud cf apps
   ```
   {:codeblock}
 
-3. 서버를 다시 시작하십시오. 
+3. 서버를 다시 시작하십시오.
 
 다음에서 브라우저 보기를 새로 고치십시오. http://localhost:8080/GetStartedTomcat/ 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
 

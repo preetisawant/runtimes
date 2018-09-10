@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -18,26 +18,12 @@ Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会�
 
 |功能|
 | ------ |
-| `appSecurity-3.0` |
 | `audit-1.0` |
-| `beanValidation-2.0` |
-| `cdi-2.0` |
-| `javaee-8.0` |
-| `javaeeClient-8.0` |
-| `jaxrs-2.1` |
-| `jpa-2.2` |
-| `jpaContainer-2.2` |
-| `jsf-2.3` |
-| `jsfContainer-2.3` |
-| `jsonb-1.0` |
-| `jsonbContainer-1.0` |
-| `jsonp-1.1` |
-| `jsonpContainer-1.1` |
 | `logstashCollector-1.1` |
-| `servlet-4.0` |
+| `mpConfig-1.3` |
+| `mpFaultTolerance-1.1` |
 | `usageMetering-1.0` |
 | `validator-1.0` |
-| `webProfile-8.0` |
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 上 Liberty for Java 中可用的 Liberty Beta 功能" caption-side="top"}
 
 要在 {{site.data.keyword.Bluemix_notm}} 中使用 Liberty Beta 功能，需要执行以下操作：
@@ -47,8 +33,8 @@ Liberty Beta 功能让您可以提早使用未来 Liberty 发行版中可能会�
   ```
 <server>
     <featureManager>
-        <feature>servlet-4.0</feature>
-        <feature>webProfile-8.0</feature>
+        <feature>usageMetering-1.0</feature>
+        <feature>validator-1.0</feature>
     </featureManager>
 </server>
   ```

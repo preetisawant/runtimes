@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated: "2018-01-10"
 {:codeblock: .codeblock}
 
 
-# Trabalho no modo off-line para Node.js
+# Trabalhar off-line com o Node.js
 {: #offline_mode}
 
 Quando um aplicativo Node.js é enviado por push para {{site.data.keyword.Bluemix}}, o buildpack do SDK for Node.js
@@ -30,8 +30,8 @@ uma *lista de desbloqueio* nos ambientes [{{site.data.keyword.Bluemix_dedicated_
 * https://iojs.org é usado para recuperar a versão mais antiga do nó que não está contida no buildpack ou não está disponível em https://semver.herokuapp.com.
 * https://registry.npmjs.org é usado para recuperar módulos de nó, como expresso.
 
-Para minimizar o conjunto de sites incluídos na lista de desbloqueio, configure seus aplicativos para usar uma versão do
-mecanismo de nó que está incluída no buildpack do SDK for Node.js.  Consulte as [atualizações mais
+Para minimizar o conjunto de sites incluídos na lista de desbloqueio, configure os aplicativos para que eles usem uma versão do
+mecanismo do Node incluída no buildpack do SDK for Node.js.  Consulte as [atualizações mais
 recentes](./updates.html) para o conjunto de versões do mecanismo de nó incluídas no buildpack.  Se você configurar seu aplicativo para usar
 essas versões do mecanismo de nó, então apenas o site https://registry.npmjs.org será necessário para fazer download dos módulos.
 
@@ -43,22 +43,32 @@ versão de mecanismo do nó mais recente incluída no buildpack.
 ## Aplicativos off-line
 {: #offline_applications}
 
-Para eliminar a necessidade de acessar https://registry.npmjs.org, é possível incluir todos os módulos de nó que seu
-aplicativo requer dentro de seu aplicativo.  Para fazer isso, execute `npm install` para todos os módulos
-aplicativos necessários e, em seguida, inclua o diretório *node_modules* resultante com seu aplicativo enviado por push.
+Para eliminar a necessidade de acessar https://registry.npmjs.org, é possível incluir todos os módulos do Node que o aplicativo
+requer dentro dele. Para fazer isso, execute `npm install` para todos os módulos
+aplicativos necessários e, em seguida, inclua o diretório `node_modules` resultante com seu aplicativo enviado por push.
 
 Suas dependências podem ter dependências que possuam dependências e assim por diante, mas o `package.json`
-conterá somente as dependências de nível superior. Se uma das dependências usar uma faixa no package.json e uma nova versão desta for liberada, os módulos no diretório node_modules poderão se tornar obsoletos. *Termo-retrátil* ajuda você a bloquear todas as versões de dependência para que isso não possa ocorrer.  Para usar o termo-retrátil, comece com um diretório `node_modules` vazio ou limpo. Em seguida, no diretório-raiz do
-seu projeto, execute:
+conterá somente as dependências de nível superior. Se uma das dependências usar um intervalo no package.json e uma nova versão dele
+for liberada, os módulos no diretório `node_modules` poderão se tornar obsoletos. *Termo-retrátil* ajuda você a bloquear todas as versões de dependência para que isso não possa ocorrer.  Para usar o termo-retrátil, comece com um diretório `node_modules` vazio ou limpo. 
+Em seguida, no diretório-raiz do projeto, execute os comandos a seguir:
 
+```
+npm install
+```
+{: codeblock}
 
-1. `npm install`
-1. `npm dedupe`
-2. `npm shrinkwrap`
+```
+npm dedupe
+```
+{: codeblock}
+
+```
+npm shrinkwrap
+```
+{: codeblock}
 
 Isso pode mudar o `package.json` e incluir o `npm-shrinkwrap.json` no diretório-raiz.
-Sempre que você fizer uma mudança em dependências no arquivo `package.json`, repita as etapas `npm
-dedupe` e `shringwrap`.
+Sempre que você fizer uma mudança nas dependências do arquivo `package.json`, execute novamente os comandos `npm dedupe` e `shrinkwrap`.
 
 ## Trabalhando com um proxy
 {: #working_with_proxy}

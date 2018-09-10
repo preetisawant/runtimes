@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2018-06-27"
 # Mode FIPS
 {: #fips_mode}
 
-Les packs de construction Nodejs versions v3.2-20160315-1257 et ultérieur prennent en charge [FIPS![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
+Les packs de construction Nodejs versions v3.2-20160315-1257 à v3.20.2-20180523-1639 prennent en charge [FIPS![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
+
+**Le module FIPS OpenSSL est obsolète :** Pour être en conformité avec la version de la communauté Node.js, le module FIPS OpenSSL est obsolète et peut être supprimé à partir du 24 août 2018. Pour en savoir plus, consultez la section [Dernières mises à jour du pack de construction Node.js](updates.html#fips-deprecation).
 
 Pour utiliser un moteur de noeud activé par FIPS, affectez la valeur true à la variable d'environnement FIPS_MODE.
 Par exemple :

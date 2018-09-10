@@ -58,7 +58,7 @@ Controle a versão do .NET SDK com um arquivo `global.json` opcional no diretór
 ```
 {: codeblock}
 
-Se não for especificado, o conjunto de ferramentas MSBuild mais recente será usado. Para usar o conjunto de ferramentas
+Se não for especificado, o conjunto de ferramentas MSBuild mais recente será usado.  Para usar o conjunto de ferramentas
 project.json, é possível especificar uma das versões do project.json listadas, mas lembre-se que essas versões serão
-removidas no futuro. Se a versão especificada não for incluída no buildpack, a versão padrão será usada e um aviso aparecerá nos
+removidas no futuro.  Se a versão especificada não for incluída no buildpack, a versão padrão será usada e um aviso aparecerá nos
 logs temporários.

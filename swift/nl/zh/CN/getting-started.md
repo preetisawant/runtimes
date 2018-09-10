@@ -61,7 +61,12 @@ swift build
   运行此命令可能需要几分钟时间。
 
 1. 成功编译应用程序后，即可运行 Swift 编译器生成的可执行文件：
+```
+swift run
+```
+  {: codeblock}
 
+  或者
   ```
 .build/debug/get-started-swift
 ```
@@ -86,10 +91,10 @@ Server is listening on port: 8080
 
   ```
   applications:
-   - name: GetStartedSwift
+   - name: Get-Started-Swift
      random-route: true
      memory: 256M
-     command: kitura-helloworld
+     command: get-started-swift
      buildpack: swift_buildpack
   ```
   {: codeblock}
@@ -105,8 +110,8 @@ Server is listening on port: 8080
 1. 登录到 {{site.data.keyword.Bluemix_notm}} 帐户，然后选择 API 端点。
 
   ```
-ibmcloud cf login
-  ```
+ibmcloud login
+```
   {: codeblock}
 
   如果您有联合用户标识，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
@@ -183,7 +188,7 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-此样本应用程序使用 `CloudEnvironment` 软件包与 {{site.data.keyword.Bluemix_notm}} 进行交互，以解析环境变量。[了解更多...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+此样本应用程序使用 `CloudEnvironment` 软件包与 {{site.data.keyword.Bluemix_notm}} 进行交互，以解析环境变量。[了解更多...](https://github.com/IBM-Swift/CloudEnvironment)
 
 使用 `cloudfoundry:cloudant` 配置中的 `cloudant` 占位符，可以更轻松地将用户提供的 Cloudant 服务绑定到应用程序。使用 `cloudfoundry:cloudant` 配置，可创建在服务名称中包含字符串 `cloudant` 的 Cloudant 服务，而无需编辑 `config.json` 文件。如果修改此配置，并在稍后想要使用用户提供的 Cloudant 服务，您需要编辑 `cloudfoundry:cloudant` 的配置或使用用户提供的服务名称定义 `cloudfoundry:`。
 {: tip}
@@ -205,7 +210,7 @@ swift build
 
  查看应用程序：http://localhost:8080。现在，您输入到应用程序中的所有名称都已添加到数据库。
 
- 此样本应用程序使用 `Kitura-CouchDB` 软件包与 Cloudant 进行交互。[了解更多...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ 此样本应用程序使用 `Kitura-CouchDB` 软件包与 Cloudant 进行交互。[了解更多...](https://github.com/IBM-Swift/Kitura-CouchDB)
 
  执行所需的任何更改，然后重新部署到 {{site.data.keyword.Bluemix_notm}}！
 
@@ -222,6 +227,6 @@ ibmcloud cf app push
 
 ## 后续步骤
 
-* [教程](/docs/tutorials/index.html)
+* [Kitura 和服务器端 Swift 教程 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.kitura.io/learn.html){: new_window}
 * [样本 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://ibm-cloud.github.io){: new_window}
 * [Architecture Center ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

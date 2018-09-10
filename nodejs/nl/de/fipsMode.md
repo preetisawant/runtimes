@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2018-06-27"
 # FIPS-Modus
 {: #fips_mode}
 
-Die Node.js-Buildpack-Versionen ab v3.2-20160315-1257 unterstützen [FIPS ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
+Die Node.js-Buildpack-Versionen v3.2-20160315-1257 bis v3.20.2-20180523-1639 unterstützen [FIPS ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
+
+**Das OpenSSL-FIPS-Modul wird nicht weiterverwendet:** In Übereinstimmung mit der Node.js-Community-Version wird das OpenSSL-FIPS-Modul nicht weiterverwendet und kann ab 24. August 2018 entfernt werden. Weitere Informationen finden Sie in [Neueste Aktualisierungen für das Node.js-Buildpack](updates.html#fips-deprecation).
 
 Setzen Sie die Umgebungsvariable FIPS_MODE auf 'true', wenn Sie eine FIPS-fähige Knotenengine verwenden möchten.
 Beispiel:
@@ -24,7 +26,7 @@ Beispiel:
 ```
 {: codeblock}
 
-Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist. Zum Beispiel werden **Knotenmodule fehlschlagen, die [MD5 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/MD5) verwenden,** wie beispielsweise [Express ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://expressjs.com/).  Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://expressjs.com/en/api.html) in Ihrer
+Beachten Sie, dass einige Knotenmodule möglicherweise nicht funktionieren, wenn FIPS_MODE auf 'true' gesetzt ist.  Zum Beispiel werden **Knotenmodule fehlschlagen, die [MD5 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/MD5) verwenden,** wie beispielsweise [Express ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://expressjs.com/).  Im Falle von Express können Sie dieses Problem möglicherweise umgehen, indem Sie [etag ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://expressjs.com/en/api.html) in Ihrer
 Expess-App auf 'false' setzen. Sie können Ihren Code beispielsweise wie folgt bearbeiten:
 ```
     app.set('etag', false);

@@ -112,7 +112,7 @@ Liberty for Java에서 지원하는 환경 변수
 
 <table>
 <tr>
-<th>사용 안함으로 설정된 속성</th>
+<th>사용 안함으로 설정된 속성 </th>
 <th>요소</th>
 </tr>
 

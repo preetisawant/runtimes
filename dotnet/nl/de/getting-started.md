@@ -118,7 +118,7 @@ ibmcloud cf push
 
   Dieser Vorgang kann einige Minuten dauern. Falls ein Fehler im Bereitstellungsprozess auftritt, können Sie mithilfe des Befehls `ibmcloud cf logs <Your-App-Name> --recent` nach dem Fehler suchen.
 
-Wenn die Bereitstellung abgeschlossen ist, sollte eine Nachricht anzeigen, dass Ihre App ausgeführt wird. Ihre App wird unter der URL angezeigt, die in der Ausgabe der Push-Operation aufgelistet ist. Sie können auch den folgenden Befehl absetzen, um den Status der App zu prüfen und ihre URL anzuzeigen.
+Wenn die Bereitstellung abgeschlossen ist, sollte eine Nachricht anzeigen, dass Ihre App ausgeführt wird.  Ihre App wird unter der URL angezeigt, die in der Ausgabe der Push-Operation aufgelistet ist.  Sie können auch den folgenden Befehl absetzen, um den Status der App zu prüfen und ihre URL anzuzeigen.
   ```
 ibmcloud cf apps
   ```
@@ -146,7 +146,7 @@ Sie werden jetzt Ihren lokalen Code aktualisieren, um auf diese Datenbank zu ver
 
 2. Wechseln Sie in Ihrem Browser zum {{site.data.keyword.Bluemix_notm}}-Dashboard und wählen Sie **_Ihre App_ > Verbindungen** aus. Klicken Sie auf das {{site.data.keyword.cloudant_short_notm}}-Menüsymbol (**&vellip;**) und wählen Sie **Berechtigungsnachweise anzeigen** aus.
 
-3. Kopieren Sie das gesamte JSON-Objekt aus den Berechtigungsnachweisen und fügen Sie es in die Datei `vcap-local.json` ein. Danach speichern Sie die Änderungen. Das Ergebnis sieht in etwa wie im folgenden Beispiel aus:
+3. Kopieren Sie das gesamte JSON-Objekt aus den Berechtigungsnachweisen und fügen Sie es in die Datei `vcap-local.json` ein. Danach speichern Sie die Änderungen.  Das Ergebnis sieht in etwa wie im folgenden Beispiel aus:
   ```
   {
   "cleardb": [
@@ -168,7 +168,7 @@ Sie werden jetzt Ihren lokalen Code aktualisieren, um auf diese Datenbank zu ver
 
 Aktualisieren Sie Ihre Browseransicht unter: http://localhost:5000/. Alle Namen, die Sie in die App eingegeben haben, werden der Datenbank jetzt hinzugefügt.
 
-Ihre lokale App und die {{site.data.keyword.Bluemix_notm}}-App verwenden die Datenbank gemeinsam. Ihre {{site.data.keyword.Bluemix_notm}}-App wird unter der URL angezeigt, die in der Ausgabe der oben erwähnten Push-Operation aufgelistet wird. Namen, die Sie in einer der Apps eingeben, sollten nach einer Aktualisierung des Browsers in beiden angezeigt werden.
+Ihre lokale App und die {{site.data.keyword.Bluemix_notm}}-App verwenden die Datenbank gemeinsam.  Ihre {{site.data.keyword.Bluemix_notm}}-App wird unter der URL angezeigt, die in der Ausgabe der oben erwähnten Push-Operation aufgelistet wird.  Namen, die Sie in einer der Apps eingeben, sollten nach einer Aktualisierung des Browsers in beiden angezeigt werden.
 
 Denken Sie daran, Ihre App zu stoppen, wenn Sie sie nicht benötigen, damit keine unerwarteten Gebühren anfallen.
 {: tip}

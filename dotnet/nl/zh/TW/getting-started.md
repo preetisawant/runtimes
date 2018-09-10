@@ -63,7 +63,7 @@ dotnet run
   ```
   {: codeblock}
 
-1. 在下列網址檢視您的應用程式：http://localhost:5000/。
+1. 在下列網址檢視您的應用程式：http://localhost:5000/
 
 ## 步驟 3：準備應用程式以進行部署
 {: #prepare}

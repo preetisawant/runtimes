@@ -13,9 +13,7 @@ lastupdated: "2017-10-25"
 # ASP.NET Core
 {: #dotnet_core}
 
-{{site.data.keyword.Bluemix}} 上的 ASP.NET Core 運行環境是採用 ASP.NET Core 建置套件的技術。ASP.NET Core 是模組化開放程式碼架構，用於建置 .NET Web 應用程式。
-.Net Core 是 ASP.NET Core 應用程式可以設為目標的小型跨平台運行環境。
-它們會合併，以啟用現代化雲端型 Web 應用程式。
+{{site.data.keyword.Bluemix}} 上的 ASP.NET Core 運行環境是採用 ASP.NET Core 建置套件的技術。ASP.NET Core 是模組化開放程式碼架構，用於建置 .NET Web 應用程式。.Net Core 是 ASP.NET Core 應用程式可以設為目標的小型跨平台運行環境。它們會合併，以啟用現代化雲端型 Web 應用程式。
 {: shortdesc}
 
 ## 偵測

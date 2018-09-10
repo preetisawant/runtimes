@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
   years: 2016, 2017, 2018
-
-lastupdated: "2018-06-20"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -23,7 +21,8 @@ lastupdated: "2018-06-20"
 
 ## Boilerplate auswählen
 
-1. Navigieren Sie vom [{{site.data.keyword.Bluemix_notm}}-Katalog](https://console.{DomainName}/catalog/) aus zum Abschnitt 'Boilerplates'.
+1. Navigieren Sie vom [{{site.data.keyword.Bluemix_notm}}-Katalog](https://console.{DomainName}/catalog/) aus
+zum Abschnitt 'Starter-Kits'.
 2. Klicken Sie auf die Boilerplate, die Sie verwenden wollen.
 3. Geben Sie einen Namen für Ihre App ein, ändern Sie bei Bedarf den Hostnamen und klicken Sie auf **Erstellen**. Ihre App beginnt mit dem Staging und das Lernprogramm 'Einführung' für Ihre App wird auf dem {{site.data.keyword.Bluemix_notm}}-Dashboard angezeigt.
 4. Führen Sie die Schritte im Lernprogramm für folgende Aktionen aus:  

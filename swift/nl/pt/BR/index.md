@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-12"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,8 +21,7 @@ Esse buildpack fornece um ambiente de tempo de execução completo para aplicati
 ## Aplicativo iniciador
 {: #starter_application}
 
-O {{site.data.keyword.Bluemix_notm}} fornece um [aplicativo iniciador](https://github.com/IBM-Cloud/Kitura-Starter)
-Swift baseado em Kitura. O app iniciador Kitura é um app Swift
+O {{site.data.keyword.Bluemix_notm}} fornece um [aplicativo iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Cloud/Kitura-Starter) do Swift baseado no Kitura. O app iniciador Kitura é um app Swift
 simples que pode ser usado para saber mais sobre os tipos de aplicativos de servidor que
 é possível desenvolver usando a linguagem de programação Swift. Esse app de amostra
 cria um servidor HTTP Kitura básico que retorna conteúdo HTML para o cliente.
@@ -50,15 +50,19 @@ nome especificado no arquivo Package.swift).
 ## Versões de runtime
 {: #runtime_versions}
 
-Por padrão, o Runtime for Swift (swift_buildpack) hospedado no {{site.data.keyword.Bluemix_notm}} usa a versão de disponibilidade geral mais recente dos binários Swift. Esta
-é a única versão do Swift diretamente suportado pelo {{site.data.keyword.IBM_notm}} e é a versão recomendada para usar em
-seu aplicativo. É possível determinar essa versão suportada examinando as [informações sobre a liberação mais recentes](https://github.com/IBM-Swift/swift-buildpack/releases) do swift_buildpack. O buildpack pode listar outras versões do Swift conforme mostradas em seu arquivo [manifest.yml](https://github.com/IBM-Swift/swift-buildpack/blob/master/manifest.yml). Essas versões comuns, mas não suportadas, do Swift são pré-armazenadas em cache dentro do buildpack, que fornecem tempo de provisão reduzido.
+O [Runtime for Swift
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/swift-buildpack)
+(swift_buildpack) hospedado no {{site.data.keyword.Bluemix_notm}} é atualizado para usar a versão de GA mais recente dos
+binários do Swift. Essa é a versão recomendada do Swift para uso no app. O buildpack lista outras versões do Swift em seu arquivo
+[manifest.yml
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/swift-buildpack/blob/master/manifest.yml),
+que são armazenadas em cache no buildpack para conceder tempo de fornecimento reduzido.
 
 Se você desejar usar uma versão diferente do Swift no {{site.data.keyword.Bluemix_notm}} para seu aplicativo, poderá especificar a versão com um arquivo `.swift-version` na raiz do repositório. Esse arquivo `.swift-version` define qual versão do Swift deve ser usada pelo swift_buildpack.
 
 ```
 $ cat .swift-version
-3.0
+4.1.2
 ```
 {: pre}
 
@@ -66,7 +70,9 @@ Como há atualizações frequentes de idioma do Swift, sempre será necessário 
 qual sabe-se que seu aplicativo funciona.
 
 Observe que é possível especificar qualquer versão válida do Swift em seu arquivo
-`.swift-version`. Essas versões alternativas devem corresponder à nomenclatura e serem puxadas diretamente de [Swift.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://swift.org/download/). Embora o uso de uma versão
+`.swift-version`. Essas versões alternativas devem corresponder à nomenclatura em
+[Swift.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de linkexterno")](https://swift.org/download/), por meio do qual são diretamente transferidas por download. Embora o uso de uma versão
+
 não em cache levará um pouco mais de tempo para provisionar, não há diferença de
 desempenho de tempo de execução de seu app Swift.
 
@@ -81,55 +87,38 @@ momento da implementação, usando o argumento de comando `ibmcloud cf push -b {
 ## Ambientes do desenvolvedor
 
 Os desenvolvedores têm diversas opções ao criar aplicativos do lado do servidor com
-o Swift. Aqueles que usam um dispositivo MacOS da Apple podem preferir usar o Xcode IDE,
-embora este não seja um requisito.  Apps baseados no Swift que serão implementados e
+o Swift. Aqueles que usam um dispositivo Apple macOS podem preferir usar o IDE Xcode, embora isso não seja um requisito. Apps baseados no Swift que serão implementados e
 executados no {{site.data.keyword.Bluemix_notm}} podem usar qualquer editor de
 programação ou IDE.  O destaque e a claridade da sintaxe para Swift estão disponíveis para
 muitos editores populares. A ferramenta de linha de comandos REPL do Swift incluída nos binários de [Swift.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://swift.org/) permite compilação local e teste antes da implementação no {{site.data.keyword.Bluemix_notm}}.
 
-Para usuários do MaxOS, é possível usar o [IBM
-Cloud Tools for Swift](http://cloudtools.bluemix.net/) que simplifica a criação, a implementação, o gerenciamento e o
-controle de apps Swift do lado do servidor em execução no {{site.data.keyword.Bluemix_notm}}.  
+Para os usuários do macOS, é possível usar o [app Kitura
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.kitura.io/app.html),
+que simplifica a criação, a implementação, o gerenciamento e o controle dos apps Swift do lado do servidor que são executados no {{site.data.keyword.Bluemix_notm}}.  
 
 
-## Integração Aprimorada
+## Integração aprimorada
 
 O trabalho com a [estrutura da web Kitura](http://ibm-swift.github.io/Kitura/) fornece uma grande negociação de recursos. O Kitura é modular por natureza e você logo irá querer estender sua funcionalidade com SDKs empacotados, para fornecer recursos como autenticação, acesso a serviços baseados no Watson e uma ampla variedade de bancos de dados.  O Kitura fornece suporte para muitos bancos de dados diretamente, enquanto outros projetos de software livre também fornecem SDKs para muitas plataformas de banco de dados. A seguir está uma lista incompleta de SDKs fornecidos pela Kitura para trabalhar com recursos externos.
 
-- [IBM Watson](https://swiftpkgs.ng.bluemix.net/package/IBM-Swift/swift-watson-sdk)
-- [IBM DB2 e DashDB](https://swiftpkgs.ng.bluemix.net/package/IBM-DTeam/swift-for-db2)
-- [IBM Cloudant and CouchDB](https://swiftpkgs.ng.bluemix.net/package/cloudant/swift-cloudant)
-- [IBM ObjectStorage](https://swiftpkgs.ng.bluemix.net/package/ibm-bluemix-mobile-services/bluemix-objectstorage-serversdk-swift)
-- [Apache Cassandra](https://swiftpkgs.ng.bluemix.net/package/IBM-Swift/Kassandra)
-- [Aphid MQTT](https://swiftpkgs.ng.bluemix.net/package/IBM-Swift/Aphid)
+- [SDK do Swift do IBM Watson Developer Cloud
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/watson-developer-cloud/swift-sdk/)
+- [SwiftMetrics ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/RuntimeTools/SwiftMetrics)
+- [IBM Cloudant e CouchDB
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/Kitura-CouchDB)
+- [KituraKit ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/KituraKit)
+- [Swift Kuery ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ORM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
-Para saber mais sobre pacotes do Swift a serem incluídos em seu aplicativo, acesse o [Catálogo de pacotes do IBM Swift](https://swiftpkgs.ng.bluemix.net/) e execute uma procura no seu serviço ou banco de dados de destino. O Catálogo de pacotes oferece uma maneira fácil de localizar pacotes que podem ser incluídos nos aplicativos Swift. Os pacotes podem ser incluídos em um aplicativo Swift incluindo a URL do Git e os detalhes da versão do pacote no arquivo `Package.swift` do app. Para obter mais detalhes sobre gerenciamento de pacote, consulte a [seção Package Manager do Swift.org](https://swift.org/package-manager/).
+Para localizar mais pacotes do Swift a serem incluídos no aplicativo, acesse a seção Pacotes de [Kitura.io](https://www.kitura.io/packages.html). Os pacotes podem ser incluídos em um aplicativo Swift incluindo a URL do Git e os detalhes da versão do pacote no arquivo `Package.swift` do app. Para obter mais detalhes sobre gerenciamento de pacote, consulte a [seção Package Manager do Swift.org](https://swift.org/package-manager/).
 
 
-## Informações Relacionadas
+## Informações relacionadas
 
 Existem também outras ferramentas on-line disponíveis na IBM para o desenvolvedor do Swift.
-- [IBM Swift DevCenter](https://developer.ibm.com/swift/) -
-site de entrada principal para todas as informações do IBM Swift. É possível encontrar informações sobre nossas ofertas, blogs, eventos sociais, documentação e muito mais.
-- [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/) - esse
-site fornece um ambiente para que você teste de maneira rápida e fácil nossos fragmentos
-de código do Swift com relação a diversas versões do Swift, mesmo em diferentes
-plataformas de tempo de execução do Swift. É possível também salvar e compartilhar
-amostras de código com outros, bem como explorar exemplos populares fornecidos por outros.
+- [IBM Swift DevCenter ![Ícone de link externo](../../icons/launch-glyph.svg "Íconede link externo")](https://developer.ibm.com/swift/) - Site de entrada principal para todas as informações
 
+do IBM Swift. É possível encontrar informações sobre nossas ofertas, blogs, eventos sociais, documentação e muito mais.
+- O [Kitura.io ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de linkexterno")](https://www.kitura.io/index.html) fornece notícias, amostras e recursos para a construção de aplicativos Kitura.
 
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [IBM Swift DevCenter](https://developer.ibm.com/swift/)
-* [IBM Cloud Tools for Swift](http://cloudtools.bluemix.net/)
-* [Catálogo de pacotes do IBM Swift](https://swiftpkgs.ng.bluemix.net/)
-* [IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)
-* [Documentação e APIs do Kitura](http://ibm-swift.github.io/Kitura/)
-* [App Starter Kitura para Bluemix](https://github.com/IBM-Cloud/Kitura-Starter)
-* [IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack)
-* [Notas sobre a liberação
-do IBM Bluemix buildpack for Swift](https://github.com/IBM-Swift/swift-buildpack/releases)
-* [Swift.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://swift.org/)
-* [Documentação da linguagem Swift ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://swift.org/documentation)
+- O [Swift@IBM Slack ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://swift-at-ibm-slack.mybluemix.net/) fornece fóruns para fazer perguntas e resolver problemas com a equipe do Swift@IBM.

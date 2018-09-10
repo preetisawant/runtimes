@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Ruby" audience="runtime" href="/docs/runtimes/ruby/getting-started.html"}}
+{: .toc subcollection="Ruby" audience="runtime" arm="389" href="/docs/runtimes/ruby/getting-started.html"}}
 Ruby
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ Ruby
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Trabalho com um proxy](../common/workingWithProxy.html)
+    ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    Aplicativos iniciadores e buildpacks de comunidade
-        [Usar os aplicativos iniciadores](../common/starter_app_usage.html)
-        [Usar buildpacks de comunidade](../common/byob.html)
+    Aplicativos iniciadores e buildpacks da comunidade
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     [Versões de runtime](index.html#runtime_versions)
-    [Instrução de suporte do buildpack](../common/buildpackSupport.html)
+    ../common/buildpackSupport.md
     {: .navgroup-end}

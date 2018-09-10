@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -25,7 +25,7 @@ Das Buildpack 'php_buildpack' wird unter folgenden Bedingungen verwendet:
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} stellt eine PHP-Starter-App zur Verfügung. Die PHP-Starteranwendung ist eine einfache PHP-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starter-App finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
+{{site.data.keyword.Bluemix}} stellt eine PHP-Starter-App zur Verfügung.  Die PHP-Starteranwendung ist eine einfache PHP-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen.  Hilfe zur Verwendung der Starter-App finden Sie in [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 ## HTTPS auf allen Seiten in Ihrer Anwendung erzwingen
 {: #enforce_https}
@@ -53,18 +53,20 @@ Sie können die Version von PHP, die von Ihrer App verwendet werden soll, in der
 {: codeblock}
 Weitere Informationen finden Sie unter [Composer-Paketlinks ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://getcomposer.org/doc/04-schema.md#package-links).
 
-Wenn keine Version angegeben ist, wird standardmäßig Version 5.6.31 ausgewählt.
+Wenn keine Version angegeben ist, wird standardmäßig Version 5.6.34 ausgewählt.
 
 ### Verfügbare Versionen:
 {: #available_versions}
 
-Folgende PHP-Versionen stehen im [PHP-Buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27) zur Verfügung, das zurzeit in {{site.data.keyword.Bluemix}} installiert ist:
+Folgende PHP-Versionen stehen im [PHP-Buildpack](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.51) zur Verfügung, das zurzeit in {{site.data.keyword.Bluemix}} installiert ist:
 
-* 5.6.30
-* 5.6.31
-* 7.0.20
-* 7.0.21
-* 7.1.6
-* 7.1.7
+* 5.6.33
+* 5.6.34
+* 7.0.27
+* 7.0.28
+* 7.1.14
+* 7.1.15
+* 7.2.2
+* 7.2.3
 
 Wenn für Ihre App eine PHP-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [PHP-Buildpack](https://github.com/cloudfoundry/php-buildpack.git) implementieren.

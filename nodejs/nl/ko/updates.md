@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,6 +13,16 @@ lastupdated: "2018-06-27"
 {: #latest_updates}
 
 sdk-for-nodejs 빌드팩의 최신 업데이트 목록
+
+## 2018년 7월 24일: Node.js 빌드팩 v3.21 업데이트
+{:#fips-deprecation}
+**중요:** 이 릴리스의 최신 Node.js 6.x 및 8.x 버전부터 SDK for Node.js 빌드팩은 Node.js 커뮤니티 릴리스를 기반으로 합니다. 이와 같이 변경되었으므로 빌드팩의 Node.js OpenSSL FIPS 모듈은 더 이상 업데이트되지 않습니다. 현재 OpenSSL FIPS 모듈과 IBM SDK for Node.js 빌드는 2018년 8월 24일에 제거할 수 있습니다. 자세한 정보는 [커뮤니티 런타임에 Node.js 빌드팩 맞추기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660) 블로그 게시물을 참조하십시오.
+
+SDK for Node.js 빌드팩 v3.21에서는 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.13.0 및 8.9.4와 Node.js 커뮤니티 버전 6.14.3 및 8.11.3을 제공합니다. 기본값이 최신 6.x이므로 현재 6.14.3입니다.
+
+이 릴리스에는 다음 보안 취약점에 대한 수정사항도 포함됩니다.
+* [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
+
 ## 2018년 7월 1일: Node.js 빌드팩 v3.20.2 업데이트
 SDK for Node.js 빌드팩 v3.20.2에서는 현재 Node.js 런타임에 대한 Dynatrace Managed PaaS 통합을 추가합니다. [Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링](dynatrace.html)을 참조하십시오.
 
@@ -23,7 +33,7 @@ SDK for Node.js 빌드팩 v3.20.1에서는 현재 Node.js 런타임에 대한 Dy
 SDK for Node.js 빌드팩 v3.20에서는 현재 Node.js 런타임에 대한 Dynatrace PaaS 통합을 추가합니다. [Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링](dynatrace.html)을 참조하십시오.
 
 ## 2018년 3월 16일: Node.js 빌드팩 v3.19 업데이트
-SDK for Node.js 빌드팩 v3.19에서는 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 및 8.9.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.13.0입니다. 
+SDK for Node.js 빌드팩 v3.19에서는 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 및 8.9.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.13.0입니다.
 
 ## 2018년 2월 6일: Node.js 빌드팩 v3.18 업데이트
 SDK for Node.js 빌드팩 v3.18은 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 및 8.9.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.12.3입니다.
@@ -44,7 +54,7 @@ SDK for Node.js 빌드팩 v3.14에서는 IBM SDK for Node.js 버전 4.8.3, 4.8.4
 ## 2017년 7월 26일: Node.js 빌드팩 v3.13 업데이트
 SDK for Node.js 빌드팩 v3.13은 IBM SDK for Node.js 버전 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 및 8.1.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.11.1입니다. 버전 8은 테스트에 사용 가능하지만 프로덕션에는 아직 권장되지 않습니다.  
 
-이 빌드팩에는 Node.js에서 발견된 최신 보안 취약성을 해결하는 업데이트된 Node.js 버전이 포함되어 있습니다.  사용 가능한 최신 버전을 사용하도록 애플리케이션을 업데이트한 다음 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 다시 스테이징해야 합니다.  Node.js 취약성에 대한 세부사항은 <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">이 링크</a>를 참조하십시오.
+이 빌드팩에는 Node.js에서 발견된 최신 보안 취약성을 해결하는 업데이트된 Node.js 버전이 포함되어 있습니다. 사용 가능한 최신 버전을 사용하도록 애플리케이션을 업데이트한 다음 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 다시 스테이징해야 합니다.  Node.js 보안 취약성에 관한 CVE-2017-1000381 및 CVE-2017-11499 수정사항의 세부 정보는 <a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">이 보안 게시판</a>을 참조하십시오.
 
 ## 2017년 5월 5일: Node.js buildpack v3.12 업데이트
 SDK for Node.js 빌드팩 v3.12는 IBM SDK for Node.js 버전 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 및 6.10.2를 제공합니다. 이제 기본값이 최신 4.x에서 최신 6.x로 변경되므로 현재 6.10.2입니다. 주요 버전 변경사항이 발생하면 기본값에 의존하는 앱에 영향을 줄 수 있습니다. 문제점을 방지하는 방법에 대한 자세한 정보는 [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/)을 참조하십시오.

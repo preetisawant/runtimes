@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,6 +13,16 @@ lastupdated: "2018-06-27"
 {: #latest_updates}
 
 Eine Liste mit den neuesten Aktualisierungen im Buildpack 'sdk-for-nodejs'.
+
+## 24. Juli 2018: Node.js-Buildpack v3.21 aktualisiert
+{:#fips-deprecation}
+**Wichtig:** Beginnend mit den neuesten 6.x- und 8.x-Versionen von Node.js in diesem Release basiert das SDK for Node.js-Buildpack auf dem Node.js-Community-Release. Mit dieser Änderung wird das OpenSSL-FIPS-Modul für Node.js im Buildpack nicht mehr aktualisiert. Das aktuelle OpenSSL-FIPS-Modul und die IBM SDK for Node.js-Builds können ab 24. August 2018 entfernt werden. Weitere Informationen finden Sie im Blogbeitrag [Abstimmung des Node.js-Buildpacks mit Community-Laufzeiten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660).
+
+Das SDK for Node.js-Buildpack v3.21 stellt die IBM SDK for Node.js-Versionen 4.8.5, 4.8.7, 6.13.0 und 8.9.4 sowie die Node.js-Community-Versionen 6.14.3 und 8.11.3 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.14.3.
+
+Dieses Release umfasst auch Fixes für die folgende Sicherheitslücke:
+* [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
+
 ## 1. Juni 2018: Node.js-Buildpack v3.20.2 aktualisiert
 Das SDK for Node.js-Buildpack v3.20.2 fügt die Integration von Dynatrace Managed PaaS für die aktuellen Node.js-Laufzeiten hinzu. Siehe [Dynatrace zur Überwachung von Node.js in {{site.data.keyword.cloud_notm}} verwenden](dynatrace.html).
 
@@ -23,7 +33,7 @@ Das SDK for Node.js-Buildpack v3.20.1 korrigiert die Integration von Dynatrace P
 Das SDK for Node.js-Buildpack v3.20 fügt die Integration von Dynatrace PaaS für die aktuellen Node.js-Laufzeiten hinzu. Siehe [Dynatrace zur Überwachung von Node.js in {{site.data.keyword.cloud_notm}} verwenden](dynatrace.html).
 
 ## 16. März 2018: Node.js-Buildpack v3.19 aktualisiert
-Das SDK for Node.js-Buildpack v3.19 stellt IBM SDK for Node.js-Versionen 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 und 8.9.4 bereit. Die Standardversion ist die neueste Version 6.x, also zurzeit 6.13.0.
+Das SDK for Node.js-Buildpack v3.19 stellt die IBM SDK for Node.js-Versionen 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 und 8.9.4 bereit. Die Standardversion ist die neueste Version 6.x, also zurzeit 6.13.0.
 
 ## 6. Februar 2018: Node.js-Buildpack v3.18 aktualisiert
 Das SDK for Node.js-Buildpack v3.18 stellt die IBM SDK for Node.js-Versionen 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 und 8.9.4 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.12.3.
@@ -44,7 +54,7 @@ Das SDK for Node.js-Buildpack v3.14 stellt die IBM SDK for Node.js-Versionen 4.8
 ## 26. Juli 2017: Node.js-Buildpack v3.13 aktualisiert
 Das SDK for Node.js-Buildpack v3.13 stellt die IBM SDK for Node.js-Versionen 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 und 8.1.4 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.11.1. Beachten Sie, dass Version 8 zum Test zur Verfügung steht, jedoch noch nicht für die Produktion empfohlen wird.  
 
-Dieses Buildpack enthält aktualisierte Node.js-Versionen, die in Node.js gefundene, jüngste Sicherheitslücken beheben.  Benutzer sollten ihre Anwendungen für die Verwendung der neuesten verfügbaren Versionen aktualisieren und anschließend ein erneutes Staging der Anwendungen in {{site.data.keyword.Bluemix_notm}} durchführen.  Details zu den Node.js-Sicherheitslücken finden Sie unter <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">diesem Link</a>.
+Dieses Buildpack enthält aktualisierte Node.js-Versionen, die in Node.js gefundene, jüngste Sicherheitslücken beheben. Benutzer sollten ihre Anwendungen für die Verwendung der neuesten verfügbaren Versionen aktualisieren und anschließend ein erneutes Staging der Anwendungen in {{site.data.keyword.Bluemix_notm}} durchführen.  <a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">Dieses Sicherheitsbulletin</a> enthält Details zu den Fixes CVE-2017-1000381 und CVE-2017-11499 für Node.js-Sicherheitslücken.
 
 ## 5. Mai 2017: Node.js-Buildpack v3.12 aktualisiert
 Das SDK for Node.js-Buildpack v3.12 stellt die IBM SDK for Node.js-Versionen 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 und 6.10.2 bereit. Die Standardversion wurde nun von der neuesten 4.x-Version auf die neueste 6.x-Version geändert und ist aktuell Version 6.10.2. Da es sich hierbei um eine wichtige Versionsänderung handelt, kann sich dies auf Apps auswirken, die auf der Standardversion beruhen. Weitere Informationen zur Vermeidung von Problemen finden Sie unter [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/).

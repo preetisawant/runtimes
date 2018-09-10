@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,6 +13,16 @@ lastupdated: "2018-06-27"
 {: #latest_updates}
 
 sdk-for-nodejs 建置套件中的最新更新項目清單。
+
+## 2018 年 7 月 24 日：已更新 Node.js 建置套件 3.21 版
+{:#fips-deprecation}
+**重要事項**：從這版的最新 Node.js 6.x 和 8.x 版本開始，SDK for Node.js 建置套件是以 Node.js 社群版本為基礎。由於這項變更，將不再更新建置套件中的 Node.js OpenSSL FIPS 模組。現行 OpenSSL FIPS 模組和 IBM SDK for Node.js 建置在 2018 年 8 月 24 日為止符合移除資格。如需相關資訊，請參閱 [Aligning the Node.js Buildpack to Community Runtimes ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660) 部落格文章。
+
+SDK for Node.js 建置套件 3.21 版提供 IBM SDK for Node.js 4.8.5、4.8.7、6.13.0 及 8.9.4 版，以及 Node.js 社群版本 6.14.3 及 8.11.3。預設值是最新的 6.x，因此它目前是 6.14.3。
+
+此版本也包含下列安全漏洞的修正程式：
+* [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
+
 ## 2018 年 6 月 1 日：已更新 Node.js 建置套件 3.20.2 版
 SDK for Node.js 建置套件 3.20.2 版新增現行 Node.js 運行環境的 Dynatrace Managed PaaS 整合。請參閱[使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Node.js](dynatrace.html)。
 
@@ -44,7 +54,7 @@ SDK for Node.js 建置套件 3.13 版提供 IBM SDK for Node.js 4.8.3 版、4.8.
 ## 2017 年 7 月 26 日：已更新 Node.js 建置套件 3.13 版
 SDK for Node.js 建置套件 3.13 版提供 IBM SDK for Node.js 4.8.3、4.8.4、6.11.0、6.11.1、8.1.2 及 8.1.4 版。預設值是最新的 6.x，因此它目前是 6.11.1。請注意，第 8 版已可供測試，但還不建議用於正式作業。  
 
-此建置套件包含更新的 Node.js 版本，能解決最近在 Node.js 中發現的安全漏洞。使用者應該將其應用程式更新為使用可用的最新版本，然後在 {{site.data.keyword.Bluemix_notm}} 中重新編譯打包應用程式。如需 Node.js 漏洞的詳細資料，請參閱<a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">此鏈結</a>。
+此建置套件包含更新的 Node.js 版本，能解決最近在 Node.js 中發現的安全漏洞。使用者應該將其應用程式更新為使用可用的最新版本，然後在 {{site.data.keyword.Bluemix_notm}} 中重新編譯打包應用程式。請參閱<a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">此安全公告</a>，以取得 Node.js 安全漏洞之 CVE-2017-1000381 及 CVE-2017-11499 修正程式詳細資料。
 
 ## 2017 年 5 月 5 日：已更新 Node.js 建置套件 3.12 版
 SDK for Node.js 建置套件 3.12 版提供 IBM SDK for Node.js 0.12.17、0.12.18、4.8.0、4.8.2、6.10.0 及 6.10.2 版。預設值現在從最新的 4.x 變更為最新的 6.x，因此它目前是 6.10.2。由於是主要版本變更，這可能會影響依賴預設值的應用程式。如需如何避免任何問題的相關資訊，請參閱 [Node.js 版本長期支援及 SDK for Node.js 建置套件](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/)。

@@ -101,7 +101,7 @@ ibmcloud login
 
   Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
   ```
-ibmcloud login -- sso
+ibmcloud login --sso
   ```
   {: codeblock}
 

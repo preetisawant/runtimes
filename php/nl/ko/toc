@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="PHP" audience="runtime" href="/docs/runtimes/php/getting-started.html"}}
+{: .toc subcollection="PHP" audience="runtime" arm="385" href="/docs/runtimes/php/getting-started.html"}}
 PHP
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [프록시 작업](../common/workingWithProxy.html)
+    ../common/workingWithProxy.md
     [모든 페이지에서 HTTPS 강제 실행](index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     스타터 애플리케이션 및 빌드팩
-        [스타터 애플리케이션 사용](../common/starter_app_usage.html)
-        [커뮤니티 빌드팩 사용](../common/byob.html)
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
-    [빌드팩 지원 구문](../common/buildpackSupport.html)
+    ../common/buildpackSupport.md
     {: .navgroup-end}

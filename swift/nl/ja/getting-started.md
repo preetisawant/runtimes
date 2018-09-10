@@ -21,7 +21,7 @@ lastupdated: "2018-07-03"
 
 このチュートリアルに従って、開発環境のセットアップ、ローカルおよび {{site.data.keyword.Bluemix}} でのアプリケーションのデプロイ、および {{site.data.keyword.Bluemix_notm}} データベース・サービスのアプリケーションへの統合を行います。
 
-これらの資料全体で、Cloud Foundry CLI の参照が、{{site.data.keyword.Bluemix_notm}} CLI に更新されました。{{site.data.keyword.Bluemix_notm}} CLI には、同じ使い慣れた Cloud Foundry コマンドがありますが、{{site.data.keyword.Bluemix_notm}} アカウントやその他のサービスとの統合が強化されています。このチュートリアルには、{{site.data.keyword.Bluemix_notm}} CLI の入門情報があります。
+これらの資料全体で、Cloud Foundry CLI の参照が、{{site.data.keyword.Bluemix_notm}} CLI に更新されました。 {{site.data.keyword.Bluemix_notm}} CLI には、同じ使い慣れた Cloud Foundry コマンドがありますが、{{site.data.keyword.Bluemix_notm}} アカウントやその他のサービスとの統合が強化されています。 このチュートリアルには、{{site.data.keyword.Bluemix_notm}} CLI の入門情報があります。
 {: tip}
 
 ## 始める前に
@@ -61,7 +61,12 @@ swift build
   このコマンドの実行には数分かかることがあります。
 
 1. アプリケーションが正常にコンパイルされたら、Swift コンパイラーによって生成された実行可能ファイルを実行できます。
+```
+swift run
+```
+  {: codeblock}
 
+  または
   ```
 .build/debug/get-started-swift
   ```
@@ -86,10 +91,10 @@ manifest.yml ファイルを開き、`name` を `GetStartedSwift` からご使�
 
   ```
   applications:
-   - name: GetStartedSwift
+   - name: Get-Started-Swift
      random-route: true
      memory: 256M
-     command: kitura-helloworld
+     command: get-started-swift
      buildpack: swift_buildpack
   ```
   {: codeblock}
@@ -105,11 +110,11 @@ manifest.yml ファイルを開き、`name` を `GetStartedSwift` からご使�
 1. {{site.data.keyword.Bluemix_notm}} アカウントにログインし、API エンドポイントを選択します。
 
   ```
-ibmcloud cf login
+ibmcloud login
   ```
   {: codeblock}
 
-  フェデレーテッド・ユーザー ID をお持ちの場合は、代わりに次のコマンドを使用して、シングル・サインオン ID でログインしてください。詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
+  フェデレーテッド・ユーザー ID をお持ちの場合は、代わりに次のコマンドを使用して、シングル・サインオン ID でログインしてください。 詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
 
   ```
 ibmcloud login --sso
@@ -183,12 +188,12 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-このサンプル・アプリケーションでは、`CloudEnvironment` パッケージを使用して {{site.data.keyword.Bluemix_notm}} と対話して、環境変数を構文解析します。 [詳細はこちら...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+このサンプル・アプリケーションでは、`CloudEnvironment` パッケージを使用して {{site.data.keyword.Bluemix_notm}} と対話して、環境変数を構文解析します。 [詳細はこちら...](https://github.com/IBM-Swift/CloudEnvironment)
 
 `cloudfoundry:cloudant` 構成内の `cloudant` プレースホルダーは、ユーザー提供の Cloudant サービスをアプリケーションに簡単にバインドできるようにします。 `cloudfoundry:cloudant` 構成を使用すると、`config.json` ファイルを編集せずに、サービス名にストリング `cloudant` を含む Cloudant サービスを作成して、このサービスをアプリケーションにバインドすることができます。 この構成を変更して、後でユーザー提供の Cloudant サービスを使用するには、この構成を `cloudfoundry:cloudant` に編集するか、ユーザー提供のサービスの名前で `cloudfoundry:` を定義する必要があります。
 {: tip}
 
-ブラウザーで、{{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、**「_your app_」>「接続」**を選択します。{{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&vellip;**) をクリックし、**「資格情報の表示」**を選択します。
+ブラウザーで、{{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、**「_your app_」>「接続」**を選択します。 {{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&vellip;**) をクリックし、**「資格情報の表示」**を選択します。
 
 資格情報のみをコピーして、ローカルの config.json ファイルの対応するフィールドに貼り付けます。
 
@@ -205,7 +210,7 @@ swift build
 
  http://localhost:8080 でアプリケーションを表示します。 アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
 
- このサンプル・アプリケーションでは、`Kitura-CouchDB` パッケージを使用して Cloudant と対話します。 [詳細はこちら...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ このサンプル・アプリケーションでは、`Kitura-CouchDB` パッケージを使用して Cloudant と対話します。 [詳細はこちら...](https://github.com/IBM-Swift/Kitura-CouchDB)
 
  必要な変更を行って、{{site.data.keyword.Bluemix_notm}} に再デプロイします。
 
@@ -220,6 +225,6 @@ push コマンドの出力にリストされている URL (例えば、*myUrl.my
 
 ## 次のステップ
 
-* [チュートリアル](/docs/tutorials/index.html)
+* [Kitura & サーバー・サイド Swift チュートリアル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.kitura.io/learn.html){: new_window}
 * [サンプル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://ibm-cloud.github.io){: new_window}
 * [Architecture Center ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

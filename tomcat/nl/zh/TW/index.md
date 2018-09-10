@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2018-06-21"
 {{site.data.keyword.Bluemix}} 上的 Tomcat 運行環境是採用 java_buildpack 技術。
 {: shortdesc}
 
-若要在 {{site.data.keyword.Bluemix_notm}} 上使用 Tomcat 運行環境，您必須指定 java_buildpack 並搭配 -b 選項。例如：
+若要在 {{site.data.keyword.Bluemix_notm}} 上使用 Tomcat 運行環境，您必須指定 java_buildpack 並搭配 `-b` 選項。例如：
 
 ```
-ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+ibmcloud cf push <myApp> -p <pathToMyApp> -b java_buildpack
 ```
 
 如需 Tomcat 運行環境的相關資訊，請參閱
@@ -41,26 +41,18 @@ ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-最新的 java_buildpack 版本為 3.19 版，其中包含預設的 Tomcat 8.0.45 版和預設的 Java 1.8.0_141 版。如需相關資訊，請參閱 [java-buildpack 版本](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13)。
-
-
+最新的 java_buildpack 版本為 4.9 版，其中包含預設的 Tomcat 8.5.28 版和預設的 Java 1.8.0_162 版。如需相關資訊，請參閱 [java-buildpack 版本](https://github.com/cloudfoundry/java-buildpack/releases/tag/v4.9)。
 
 ## HTTPS 重新導向
 {: #https_redirect}
 
-Tomcat 運行環境可以配置成信任 {{site.data.keyword.Bluemix_notm}} 內部 Proxy，並容許將 HTTP 資料流量重新導向至 HTTPS (SSL)。若要這樣做，請設定 RemoteIpValve Valve 元素與 internalProxies 及 protocolHeader 選項來修改 server.xml 檔案。
+Tomcat 運行環境可以配置成信任 {{site.data.keyword.Bluemix_notm}} 內部 Proxy，並容許將 HTTP 資料流量重新導向至 HTTPS (SSL)。若要這樣做，請設定 `RemoteIpValve` Valve 元素與 `internalProxies` 及 `protocolHeader` 選項來修改 `server.xml` 檔案。
 
-建置套件中所含的 Tomcat 運行環境 [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml)，預設只會設定 RemoteIpValve Valve 元素的 protocolHeader。若要在 {{site.data.keyword.Bluemix_notm}} 中將 HTTP 資料流量重新導向至 HTTPS，請在自訂 server.xml 中配置 RemoteIpValve 元素，如下所示：
+建置套件中所含的 Tomcat 運行環境 [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml)，預設只會設定 `RemoteIpValve` Valve 元素的 `protocolHeader`。若要在 {{site.data.keyword.Bluemix_notm}} 中將 HTTP 資料流量重新導向至 HTTPS，請在自訂 `server.xml` 中配置 `RemoteIpValve` 元素，如下列範例所示：
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />
 ```
 {: codeblock}
 
-您可以在 [Tomcat 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html) 中找到 RemoteIpValve 的其他配置選項。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [java-buildpack](https://github.com/cloudfoundry/java-buildpack)
+您可以在 [Tomcat 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/valves/RemoteIpValve.html) 中找到 RemoteIpValve 的其他配置選項。

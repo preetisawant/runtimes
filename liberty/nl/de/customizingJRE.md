@@ -24,7 +24,7 @@ Standardmäßig werden Anwendungen für die Ausführung mit einer einfachen {{si
 ```
 {: codeblock}
 
-Die Versionseigenschaft kann auf einen Versionsbereich festgelegt werden. Es werden zwei Versionsbereiche unterstützt: 1.7.+ und 1.8.+. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden. Java 7 wurde aus dem Liberty-Buildpack in Version 3.19 entfernt.  
+Die Versionseigenschaft kann auf einen Versionsbereich festgelegt werden. Es werden zwei Versionsbereiche unterstützt: 1.7.+ und 1.8.+. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden.  Java 7 wurde aus dem Liberty-Buildpack in Version 3.19 entfernt.  
 
 ## OpenJDK
 {: #openjdk}

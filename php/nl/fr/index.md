@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -53,18 +53,20 @@ Vous pouvez spécifier la version de PHP que votre application doit utiliser en 
 {: codeblock}
 Pour plus d'informations, voir les [liens Composer Package![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://getcomposer.org/doc/04-schema.md#package-links).
 
-Si aucune version n'est spécifiée, la version 5.6.31 est sélectionnée par défaut.
+Si aucune version n'est spécifiée, la version 5.6.34 est sélectionnée par défaut.
 
 ### Versions disponibles :
 {: #available_versions}
 
-Les versions de PHP suivantes sont disponibles dans le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27) qui est installé dans {{site.data.keyword.Bluemix}} :
+Les versions de PHP suivantes sont disponibles dans le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.51) qui est installé dans {{site.data.keyword.Bluemix}} :
 
-* 5.6.30
-* 5.6.31
-* 7.0.20
-* 7.0.21
-* 7.1.6
-* 7.1.7
+* 5.6.33
+* 5.6.34
+* 7.0.27
+* 7.0.28
+* 7.1.14
+* 7.1.15
+* 7.2.2
+* 7.2.3
 
 Si votre application requiert une version de PHP qui n'est pas répertoriée, vous pouvez utiliser le [pack de construction PHP](https://github.com/cloudfoundry/php-buildpack.git) externe pour la déployer.

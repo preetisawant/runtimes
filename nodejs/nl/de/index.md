@@ -28,7 +28,7 @@ var port = (process.env.PORT || 3000);
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} stellt eine Node.js-Starteranwendung bereit. Die Node.js-Starteranwendung ist eine einfache Node.js-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Informationen zur Verwendung der Starteranwendung finden Sie unter [Starteranwendungen verwenden](../common/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Node.js-Starteranwendung bereit.  Die Node.js-Starteranwendung ist eine einfache Node.js-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Informationen zur Verwendung der Starteranwendung finden Sie unter [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 ## App-Management
 {: #app_management}

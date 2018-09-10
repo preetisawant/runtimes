@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -24,26 +24,12 @@ licença beta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/was
 
 | Recursos |
 | ------ |
-| `appSecurity-3.0` |
 | `audit-1.0` |
-| `beanValidation-2.0` |
-| `cdi-2.0` |
-| `javaee-8.0` |
-| `javaeeClient-8.0` |
-| `jaxrs-2.1` |
-| `jpa-2.2` |
-| `jpaContainer-2.2` |
-| `jsf-2.3` |
-| `jsfContainer-2.3` |
-| `jsonb-1.0` |
-| `jsonbContainer-1.0` |
-| `jsonp-1.1` |
-| `jsonpContainer-1.1` |
 | `logstashCollector-1.1` |
-| `servlet-4.0` |
+| `mpConfig-1.3` |
+| `mpFaultTolerance-1.1` |
 | `usageMetering-1.0` |
 | `validator-1.0` |
-| `webProfile-8.0` |
 {: caption="Tabela 1. Recursos do Liberty Beta disponíveis no Liberty for Java em{{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 
@@ -54,8 +40,8 @@ Para usar os recursos beta do Liberty no {{site.data.keyword.Bluemix_notm}}, ser
   ```
 <server>
     <featureManager>
-        <feature>servlet-4.0</feature>
-        <feature>webProfile-8.0</feature>
+        <feature>usageMetering-1.0</feature>
+        <feature>validator-1.0</feature>
     </featureManager>
 </server>
   ```
@@ -63,7 +49,7 @@ Para usar os recursos beta do Liberty no {{site.data.keyword.Bluemix_notm}}, ser
 
 2.  Configure a variável de ambiente `IBM_LIBERTY_BETA` como `true`. Essa variável direciona o buildpack do Liberty para instalar
 e ativar os recursos beta em seu aplicativo.  Por exemplo:
-  * Usando o [ {{site.data.keyword.Bluemix_notm}}  CLI (../ ../cli/reference/bluemix_cli/download_cli.html):
+  * Usando a [CLI do {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html):
     ```
     ibmcloud cf set-env < yourappname> IBM_LIBERTY_BETA true
     ```

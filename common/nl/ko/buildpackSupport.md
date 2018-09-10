@@ -35,12 +35,12 @@ Cloud Foundry 커뮤니티에서는 다음 기본 제공 커뮤니티 빌드팩�
 * [Python](/docs/runtimes/python/index.html)
 * [Go](/docs/runtimes/go/index.html)
 
-{{site.data.keyword.Bluemix_notm}}를 새 버전의 Cloud Foundry로 업그레이드하면 이러한 빌드팩에 대한 업데이트가 이루어집니다. {{site.data.keyword.Bluemix_notm}}에서 이러한 런타임의 문제점을 IBM에 보고할 수 있으며, IBM은 {{site.data.keyword.Bluemix_notm}}가 문제점의 원인인지 여부를 판별하는 데 도움을 줍니다. {{site.data.keyword.Bluemix_notm}} 관련 문제인 경우 IBM은 수정사항을 제공하지만 빌드팩 또는 런타임 자체의 결함인 경우 IBM은 해당 커뮤니티에 이를 보고할 수 있도록 도움을 줍니다. IBM은 이러한 빌드팩 및 런타임에 대한 수정사항은 제공하지 않습니다. 
+{{site.data.keyword.Bluemix_notm}}를 새 버전의 Cloud Foundry로 업그레이드하면 이러한 빌드팩에 대한 업데이트가 이루어집니다. {{site.data.keyword.Bluemix_notm}}에서 이러한 런타임의 문제점을 IBM에 보고할 수 있으며, IBM은 {{site.data.keyword.Bluemix_notm}}가 문제점의 원인인지 여부를 판별하는 데 도움을 줍니다. {{site.data.keyword.Bluemix_notm}} 관련 문제인 경우 IBM은 수정사항을 제공하지만 빌드팩 또는 런타임 자체의 결함인 경우 IBM은 해당 커뮤니티에 이를 보고할 수 있도록 도움을 줍니다. IBM은 이러한 빌드팩 및 런타임에 대한 수정사항은 제공하지 않습니다.
 
 ## 외부 빌드팩
 {: #external_buildpacks}
 
-외부 빌드팩의 경우에는 IBM에서 지원을 제공하지 않습니다. 지원을 받으려면 Cloud Foundry 커뮤니티에 문의해야 합니다. 
+외부 빌드팩의 경우에는 IBM에서 지원을 제공하지 않습니다. 지원을 받으려면 Cloud Foundry 커뮤니티에 문의해야 합니다.
 
 ## 써드파티 서비스
 {: #third-party}

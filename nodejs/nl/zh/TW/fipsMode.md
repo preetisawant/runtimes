@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2018-06-27"
 # FIPS 模式
 {: #fips_mode}
 
-Nodejs 建置套件 v3.2-20160315-1257 版以及更新版本支援 [FIPS ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)。  
+Nodejs 建置套件 v3.2-20160315-1257 到 v3.20.2-20180523-1639 的支援 [FIPS ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)。  
 {: shortdesc}
+
+**OpenSSL FIPS 模組已淘汰：**為了與 Node.js 社群版本一致，OpenSSL FIPS 模組已淘汰，並且在 2018 年 8 月 24 日為止符合移除資格。若要進一步瞭解，請參閱 [Node.js 建置套件的最新更新項目](updates.html#fips-deprecation)。
 
 若要使用已啟用 FIPS 功能的 node 引擎，請將環境變數 FIPS_MODE 設為 true。例如：
 

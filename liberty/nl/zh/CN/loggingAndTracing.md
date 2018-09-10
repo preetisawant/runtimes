@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -44,11 +44,11 @@ lastupdated: "2018-06-27"
 
 ### 通过 SSH 更改跟踪配置
 
-推送应用程序时，server.xml 文件包含缺省属性 **updateTrigger**（设置为 **polled**）和 **monitorInterval**（设置为 1 分钟）。Liberty 服务器会自动配置为每分钟检查一次 server.xml 的更新。
+推送应用程序时，server.xml 文件包含缺省属性 **updateTrigger**（设置为 **polled**）和 **monitorInterval**（设置为 1 分钟）。Liberty 服务器会自动配置为每分钟检查一次 server.xml 文件的更新。
 
-请参阅[使用 server.xml 推送 Liberty 应用程序](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)以了解有关使用定制 server.xml 推送 Liberty 应用程序的选项
+请参阅[使用 server.xml 推送 Liberty 应用程序](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)以了解有关使用定制 `server.xml` 文件推送 Liberty 应用程序的选项。
 
-请参阅[控制动态更新](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} 以了解如何在 server.xml 中设置动态更新。
+请参阅[控制动态更新](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window}以了解如何在 server.xml 文件中设置动态更新。
 
 执行以下步骤来更改跟踪配置：
 

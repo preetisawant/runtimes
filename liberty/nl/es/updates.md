@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2018-07-02"
 {: #latest_updates}
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
+
+
+### 10 de agosto de 2018: Se ha actualizado el paquete de compilación de Liberty v3.24-20180806-1313
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2018.8.0.0.
+* La versión de IBM JRE se ha actualizado a 8 SR5 FP17.
 
 ### 2 de julio de 2018: se ha actualizado el paquete de compilación de Liberty v3.23-20180628-1052
 * La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release 18.0.0.2.
@@ -294,7 +299,7 @@ algunas características como por ejemplo los EJB remotos no se admiten totalmen
 ### 23 de enero de 2015: se ha actualizado el paquete de compilación de Liberty v1.11-20150119-1511
 * El paquete de compilación contiene una versión actualizada de IBM JRE
 7.1 SR2 FP1.
-* También contiene una versión actualizada de WebSphere eXterme Scale Client v8.6.0.6 y el agente actualizado para el servicio Auto-Scaling.
+* También contiene una versión actualizada de WebSphere eXtreme Scale Client v8.6.0.6 y el agente actualizado para el servicio Auto-Scaling.
 * El soporte del servicio de [New Relic](newRelic.html) se ha mejorado para dar soporte a los servicios definidos por el usuario.
 * El paquete de compilación se ha mejorado para informar de versiones detalladas del perfil de Liberty e IBM JRE.
 

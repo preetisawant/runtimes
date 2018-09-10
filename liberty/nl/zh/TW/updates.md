@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2018-07-02"
 {: #latest_updates}
 
 ## Liberty 建置套件中的最新更新項目清單。
+
+
+### 2018 年 8 月 10 日：已更新 Liberty 建置套件 v3.24-20180806-1313
+* 每月 Liberty 運行環境版本已更新至 2018.8.0.0。
+* IBM JRE 版本已更新至 8 SR5 FP17。
 
 ### 2018 年 7 月 2 日：已更新 Liberty 建置套件 v3.23-20180628-1052
 * 預設 Liberty 運行環境版本已更新至 18.0.0.2 版。

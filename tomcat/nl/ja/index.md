@@ -17,10 +17,10 @@ lastupdated: "2018-08-21"
 {{site.data.keyword.Bluemix}} の Tomcat ランタイムには java_buildpack が採用されています。
 {: shortdesc}
 
-{{site.data.keyword.Bluemix_notm}} で Tomcat ランタイムを使用するには、-b オプションを使用して java_buildpack を指定する必要があります。 例えば、次のように指定します。
+{{site.data.keyword.Bluemix_notm}} で Tomcat ランタイムを使用するには、java_buildpack を `-b` オプションを付けて指定する必要があります。例えば、次のように指定します。
 
 ```
-ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+ibmcloud cf push <myApp> -p <pathToMyApp> -b java_buildpack
 ```
 
 Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](https://github.com/cloudfoundry/java-buildpack/blob/master/README.md) を参照してください。
@@ -49,9 +49,9 @@ Tomcat ランタイムについて詳しくは、[java-buildpack のreadme](http
 {: #https_redirect}
 
 Tomcat ランタイムは、{{site.data.keyword.Bluemix_notm}} 内部プロキシーを信頼し、HTTP トラフィックの HTTPS (SSL) へのリダイレクトを許可するように構成できます。
-これを行うには、server.xml ファイルを変更して、RemoteIpValve バルブ・エレメントを internalProxies オプションおよび protocolHeader オプションを使用して設定します。
+これを行うには、`server.xml` ファイルを変更して、`RemoteIpValve` Valve エレメントを `internalProxies` オプションおよび `protocolHeader` オプションを使用して設定します。
 
-ビルドパックに含まれている Tomcat ランタイム [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) は、デフォルトでは `RemoteIpValve` バルブ・エレメントの `protocolHeader` のみが設定されます。  {{site.data.keyword.Bluemix_notm}} で HTTP トラフィックを HTTPS にリダイレクトするには、カスタム `server.xml` で `RemoteIpValve` エレメントを次のように構成します。
+ビルドパックに含まれている Tomcat ランタイム [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) は、デフォルトで `RemoteIpValve` Valve エレメントの `protocolHeader` のみが設定されます。{{site.data.keyword.Bluemix_notm}} で HTTP トラフィックを HTTPS にリダイレクトするには、カスタム `server.xml` で `RemoteIpValve` エレメントを次の例のように構成します。
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />

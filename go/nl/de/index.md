@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -23,7 +23,7 @@ Das Buildpack 'go_buildpack' wird verwendet, wenn Ihre Anwendung eine Datei mit 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} stellt eine Go-Starteranwendung bereit. Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Informationen zur Verwendung der Starteranwendung finden Sie unter [Starteranwendungen verwenden](../common/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Go-Starteranwendung bereit.  Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Informationen zur Verwendung der Starteranwendung finden Sie unter [Starteranwendungen verwenden](../common/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -40,19 +40,22 @@ Sie können die Version von Go, die von Ihrer App verwendet werden soll, durch F
 {: codeblock}
 Weitere Informationen finden Sie in [godep](https://github.com/tools/godep){: new_window}.
 
-Wenn keine Version angegeben ist, wird standardmäßig Version 1.8.3 ausgewählt.
+Wenn keine Version angegeben ist, wird standardmäßig Version 1.8.7 ausgewählt.
 
 ### Verfügbare Versionen:
 {: #available_versions}
 
-Folgende Go-Versionen stehen im [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.6){: new_window} zur Verfügung, das derzeit in {{site.data.keyword.Bluemix_notm}} installiert ist:
+Folgende Go-Versionen stehen im [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.20){: new_window} zur Verfügung, das derzeit in {{site.data.keyword.Bluemix_notm}} installiert ist:
 
 * 1.6.3
 * 1.6.4
 * 1.7.5
 * 1.7.6
-* 1.8.1
-* 1.8.3
+* 1.8.6
+* 1.8.7
+* 1.9.3
+* 1.9.4
+* 1.10
 
 Wenn für Ihre App eine Go-Version erforderlich ist, die nicht aufgelistet ist, können Sie die Anwendung mit dem externen [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} implementieren.
 

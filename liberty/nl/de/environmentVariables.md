@@ -112,7 +112,7 @@ Es gibt einige Attribute, die durch das Liberty-Buildpack automatisch inaktivier
 
 <table>
 <tr>
-<th>Inaktiviertes Attribut</th>
+<th>Inaktiviertes Attribut </th>
 <th>Element</th>
 </tr>
 

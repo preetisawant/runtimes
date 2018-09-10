@@ -16,7 +16,7 @@ Dynatrace é um serviço de terceiro que fornece monitoramento para seu app. É 
 
 Para obter mais informações sobre o Dynatrace e o seu licenciamento, consulte [Monitoramento de aplicativo Dynatrace![Ícone de link externo](../../../icons/launch-glyph.svg "Ícone de link externo")](http://www.dynatrace.com/en/products/application-monitoring.html).
 
-Quando o seu aplicativo Liberty é configurado para usar o Dynatrace, o comportamento padrão é que o tempo de execução do Liberty obtenha um arquivo `.jar` do agente Dynatrace de um site do Dynatrace e execute esse agente Dynatrace com o seu aplicativo. Com esse
+Quando o seu aplicativo Liberty é configurado para usar o Dynatrace, o comportamento padrão é que o tempo de execução do Liberty obtenha um arquivo `.jar` do agente Dynatrace de um site do Dynatrace e execute esse agente Dynatrace com o seu aplicativo.  Com esse
 comportamento padrão, a configuração mínima necessária para usar o Dynatrace é criar um
 serviço fornecido pelo usuário que aponte para o coletor Dynatrace.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -56,21 +56,23 @@ composer.json 파일에서 앱이 사용할 PHP 버전을 지정할 수 있습�
 {: codeblock}
 자세한 정보는 [Composer Package links ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://getcomposer.org/doc/04-schema.md#package-links)를 참조하십시오.
 
-버전이 지정되지 않은 경우 기본적으로 버전 5.6.31이 선택됩니다.
+버전이 지정되지 않은 경우 기본적으로 버전 5.6.34가 선택됩니다.
 
 ### 사용 가능한 버전:
 {: #available_versions}
 
 다음 PHP 버전은 현재
-{{site.data.keyword.Bluemix}}에 설치된 [PHP 빌드팩](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.27)에서
+{{site.data.keyword.Bluemix}}에 설치된 [PHP 빌드팩](https://github.com/cloudfoundry/php-buildpack/releases/tag/v4.3.51)에서
 사용 가능합니다.
 
-* 5.6.30
-* 5.6.31
-* 7.0.20
-* 7.0.21
-* 7.1.6
-* 7.1.7
+* 5.6.33
+* 5.6.34
+* 7.0.27
+* 7.0.28
+* 7.1.14
+* 7.1.15
+* 7.2.2
+* 7.2.3
 
 나열되지 않은 PHP 버전이 애플리케이션에 필요한 경우
 외부

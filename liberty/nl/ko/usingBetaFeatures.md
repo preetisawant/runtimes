@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -12,33 +12,18 @@ lastupdated: "2018-07-03"
 # 베타 기능 사용
 {: #using_beta_features}
 
-Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로운 기능과 프로그래밍 모델을 미리 사용해 볼 수 있도록 합니다. {{site.data.keyword.Bluemix}}에 배치된
-애플리케이션에서도 대부분의 베타 기능을 사용할 수 있습니다.
+Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로운 기능과 프로그래밍 모델을 미리 사용해 볼 수 있도록 합니다. {{site.data.keyword.Bluemix}}에 배치된 애플리케이션에서도 대부분의 베타 기능을 사용할 수 있습니다.
 
 **중요**: 베타 기능은 개발과 테스트 용도로만 제공되며 운영 환경에서는 사용할 수 없습니다. 이용 약관 전문을 보려면 [베타 라이센스 계약](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/beta/lafiles/en.html)을 참조하십시오.
 
 |기능 |
 | ------ |
-| `appSecurity-3.0` |
 | `audit-1.0` |
-| `beanValidation-2.0` |
-| `cdi-2.0` |
-| `javaee-8.0` |
-| `javaeeClient-8.0` |
-| `jaxrs-2.1` |
-| `jpa-2.2` |
-| `jpaContainer-2.2` |
-| `jsf-2.3` |
-| `jsfContainer-2.3` |
-| `jsonb-1.0` |
-| `jsonbContainer-1.0` |
-| `jsonp-1.1` |
-| `jsonpContainer-1.1` |
 | `logstashCollector-1.1` |
-| `servlet-4.0` |
+| `mpConfig-1.3` |
+| `mpFaultTolerance-1.1` |
 | `usageMetering-1.0` |
 | `validator-1.0` |
-| `webProfile-8.0` |
 {: caption="표 1. {{site.data.keyword.Bluemix_notm}}의 Liberty for Java에서 사용 가능한 Liberty 베타 기능" caption-side="top"}
 
 {{site.data.keyword.Bluemix_notm}}에서 Liberty 베타 기능을 사용하려면 다음을 수행해야 합니다.
@@ -48,15 +33,15 @@ Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로
   ```
 <server>
     <featureManager>
-        <feature>servlet-4.0</feature>
-        <feature>webProfile-8.0</feature>
+        <feature>usageMetering-1.0</feature>
+        <feature>validator-1.0</feature>
     </featureManager>
 </server>
   ```
   {: .codeblock}
 
 2.  `IBM_LIBERTY_BETA` 환경 변수를 `true`로 설정하십시오. 이 변수는 애플리케이션의 베타 기능을 설치하고 활성화하도록 Liberty 빌드팩에 지시합니다.  예를 들어, 다음과 같습니다.
-  * [{{site.data.keyword.Bluemix_notm}} CLI(../../cli/reference/bluemix_cli/download_cli.html) 사용:
+  * [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html) 사용:
     ```
     ibmcloud cf set-env <yourappname> IBM_LIBERTY_BETA true
     ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -38,21 +38,20 @@ Vous pouvez spécifier la version de Ruby à utiliser par votre application dans
 ```
 {: codeblock}
 
-Si aucune version n'est spécifiée, la version 2.4.1 est sélectionnée par défaut.
+Si aucune version n'est spécifiée, la version 2.4.3 est sélectionnée par défaut.
 
 ### Versions disponibles :
 {: #available_versions}
 
-Les versions de Ruby suivantes sont disponibles dans le [pack de construction Ruby](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.6.34) qui est installé dans {{site.data.keyword.Bluemix}} :
+Les versions de Ruby suivantes sont disponibles dans le [pack de construction Ruby](https://github.com/cloudfoundry/ruby-buildpack/releases/tag/v1.7.15) qui est installé dans {{site.data.keyword.Bluemix}} :
 
-* 2.1.8
-* 2.1.9
-* 2.2.6
-* 2.2.7
-* 2.3.3
-* 2.3.4
-* 2.4.0
-* 2.4.1
+* 2.2.8
+* 2.2.9
+* 2.3.5
+* 2.3.6
+* 2.4.2
+* 2.4.3
+* 2.5.0
 
 Si votre application requiert une version de Ruby qui n'est pas répertoriée, vous pouvez utiliser le [pack de construction Ruby](https://github.com/cloudfoundry/ruby-buildpack) externe pour la déployer.
 

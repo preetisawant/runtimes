@@ -15,5 +15,4 @@ lastupdated: "2018-02-22"
 Troubleshoot your Liberty for Java applications and buildpacks with the following resources:
 
 * [Troubleshooting for runtimes](../common/ts_runtimes.html#runtimes)
-* [Troubleshooting for runtimes: Liberty](../common/ts_runtimes.html#ts_liberty)
 * [Application Management](../common/app_mng.html)

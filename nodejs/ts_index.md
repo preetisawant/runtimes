@@ -15,5 +15,4 @@ lastupdated: "2018-02-21"
 Troubleshoot your SDK for Node.js applications and buildpacks with the following resources:
 
 * [Troubleshooting for runtimes](../common/ts_runtimes.html#runtimes)
-* [Troubleshooting for runtimes: Node.js](../common/ts_runtimes.html#ts_nodejs)
 * [Application Management](../common/app_mng.html)

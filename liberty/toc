@@ -38,7 +38,7 @@ Liberty for Java
     {: .topicgroup}
     Work offline or with a proxy
         offlineMode.md
-        ../common/workingWithProxy.md
+        [Working with a proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,8 +49,8 @@ Liberty for Java
 
     {: .topicgroup}
     Starter applications and buildpacks
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [Using the starter apps](../common/starter_app_usage.html)
+        [Using community buildpacks](../common/byob.html)
 
     buildpackDefaults.md
     ../common/app_mng.md
@@ -60,5 +60,5 @@ Liberty for Java
     ts_index.md
     [Getting started with IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html)
     updates.md
-    ../common/buildpackSupport.md
+    [Buildpack support statement](../common/buildpackSupport.html)
     {: .navgroup-end}

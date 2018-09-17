@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,6 +13,16 @@ lastupdated: "2018-06-27"
 {: #latest_updates}
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build sdk-for-nodejs.
+
+## 24 luglio 2018: pacchetto di build Node.js aggiornato v3.21
+{:#fips-deprecation}
+**Importante:** a partire dalle versioni più recenti Node.js 6.x e 8.x in questa release, il pacchetto di build SDK for Node.js si basa sulla release della community Node.js. Con questa modifica, il modulo FIPS OpenSSL Node.js nel pacchetto di build non sarà più aggiornato. Il modulo FIPS OpenSSL corrente e le build IBM SDK for Node.js sono eleggibili per la rimozione a partire dal 24 agosto 2018. Per ulteriori informazioni, consulta il post del blog [Aligning the Node.js Buildpack to Community Runtimes ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660).
+
+Il pacchetto di build SDK for Node.js v3.21 fornisce IBM SDK for Node.js versioni 4.8.5, 4.8.7, 6.13.0 e 8.9.4 e le versioni della community Node.js 6.14.3 e 8.11.3. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.14.3.
+
+Questa release include anche le correzioni alla seguente vulnerabilità di sicurezza:
+* [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
+
 ## 1° giugno 2018: pacchetto di build Node.js aggiornato v3.20.2
 Il pacchetto di build SDK for Node.js v3.20.2 aggiunge l'integrazione Dynatrace Managed PaaS per i i runtime Node.js attuali. Consulta [Utilizza Dynatrace per monitorare Node.js in {{site.data.keyword.cloud_notm}}](dynatrace.html).
 
@@ -26,17 +36,17 @@ Il pacchetto di build SDK for Node.js v3.20 aggiunge l'integrazione Dynatrace Pa
 Il pacchetto di build SDK per Node.js v3.19 fornisce IBM SDK for Node.js versioni 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 e 8.9.4. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.13.0.
 
 ## 6 febbraio 2018: pacchetto di build Node.js aggiornato v3.18
-Il pacchetto di build SDK for Node.js v3.18 fornisce le versioni IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 e 8.9.4. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.12.3. 
+Il pacchetto di build SDK for Node.js v3.18 fornisce le versioni IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 e 8.9.4. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.12.3.
 
 ## 8 gennaio 2018: pacchetto di build Node.js aggiornato v3.17
-Il pacchetto di build SDK for Node.js v3.17 fornisce le versioni IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 e 8.9.3. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.12.2. 
+Il pacchetto di build SDK for Node.js v3.17 fornisce le versioni IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 e 8.9.3. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.12.2.
 
 ## 11 dicembre 2017: pacchetto di build Node.js aggiornato v3.16.1
 Il pacchetto di build SDK for Node.js v3.16.1 fornisce le versioni IBM SDK for Node.js v4.8.4, v4.8.5, v6.11.4, v6.12.0, v8.6.0, v8.9.0. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.12.0.
 Tieni presente che corregge la vulnerabilità di sicurezza PSIRTs: Advisory ID: 10237 Product Record ID: 104487 Title: Node.js zlib DOS, ottobre 2017 (CVE-2017-14919). Si consiglia di eseguire l'upgrade alla v3.16.1 per ottenere le correzioni alle vulnerabilità di sicurezza che riguardano la 8.6.0.0 e precedenti, da 6.10.2.0 a 6.11.4.0 e da 4.8.2.0 a 4.8.4.0.
 
 ## 1 novembre 2017: pacchetto di build Node.js aggiornato v3.15
-Il pacchetto di build SDK for Node.js v3.15 fornisce le versioni IBM SDK for Node.js 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 e 8.6.0. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.11.4. 
+Il pacchetto di build SDK for Node.js v3.15 fornisce le versioni IBM SDK for Node.js 4.8.3, 4.8.4, 6.11.3, 6.11.4, 8.3.0 e 8.6.0. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.11.4.
 
 ## 20 settembre, 2017: pacchetto di build Node.js aggiornato v3.14
 Il pacchetto di build SDK for Node.js v3.14 fornisce le versioni IBM SDK for Node.js 4.8.3, 4.8.4, 6.11.2, 6.11.3, 8.1.4 e 8.3.0. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.11.3. In questa release è stato corretto un bug del pacchetto di build che non consentiva alla applicazioni Node.js di [venire arrestate correttamente](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown).
@@ -44,7 +54,7 @@ Il pacchetto di build SDK for Node.js v3.14 fornisce le versioni IBM SDK for Nod
 ## 26 luglio, 2017: pacchetto di build Node.js aggiornato v3.13
 Il pacchetto di build SDK for Node.js v3.13 fornisce le versioni IBM SDK for Node.js 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 e 8.1.4. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.11.1. Tieni presente che la versione 8 è disponibile per il test ma non è ancora raccomandata per la produzione.  
 
-Questo pacchetto di build contiene le versioni Node.js aggiornate che risolvono le recenti vulnerabilità alla sicurezza trovate in Node.js. Gli utenti possono aggiornare le loro applicazioni in modo da utilizzare le ultime versioni e quindi ripreparale in {{site.data.keyword.Bluemix_notm}}.  Consulta <a href="https://nodejs.org/en/blog/vulnerability/july-2017-security-releases/">questo link</a> per i dettagli sulle vulnerabilità Node.js.
+Questo pacchetto di build contiene le versioni Node.js aggiornate che risolvono le recenti vulnerabilità alla sicurezza trovate in Node.js. Gli utenti possono aggiornare le loro applicazioni in modo da utilizzare le ultime versioni e quindi ripreparale in {{site.data.keyword.Bluemix_notm}}.  Consulta <a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">questo bollettino di sicurezza</a> per i dettagli sulle correzioni CVE-2017-1000381 e CVE-2017-11499 per le vulnerabilità di sicurezza di Node.js.
 
 ## 5 maggio 2017: pacchetto di build Node.js aggiornato v3.12
 Il pacchetto di build SDK for Node.js v3.12 fornisce le versioni IBM SDK for Node.js 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 e 6.10.2. Il valore predefinito è stato ora modificato dall'ultimo 4.x all'ultimo 6.x, quindi al momento è 6.10.2. Essendo una modifica alla versione importante, potrebbe influenzare le applicazioni che si affidano al valore predefinito. Consulta [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) per ulteriori informazioni su come evitare i problemi.
@@ -57,7 +67,8 @@ Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK
 In aggiunta ai nuovi runtime, questa release contiene una correzione a un bug riscontrato durante l'abilitazione dell'handler di gestione dell'applicazione shell utilizzando la IU devconsole. Questo pacchetto di build modifica il modo in cui la configurazione automatica utilizza il servizio Monitoring and Analytics. Le applicazioni che utilizzano il piano gratuito non avranno più la funzionalità di registrazione aggiunta alle loro applicazioni, sta venendo sostituita da logmet.
 
 ## 20 gennaio, 2017: pacchetto di build Node.js aggiornato v3.10
-Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 e 6.9.4. La versione predefinita è ora la 4.7.2.È inoltre sincronizzata con il [pacchetto di build Node.js Cloud Foundry v1.5.24](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24).Contiene una correzione a un bug per cui "npm start" non veniva sempre richiamato per avviare l'applicazione.
+Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 e 6.9.4. La versione predefinita è ora la 4.7.2.  È inoltre sincronizzata con il [pacchetto di build Node.js Cloud Foundry v1.5.24](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24).
+Contiene una correzione a un bug per cui "npm start" non veniva sempre richiamato per avviare l'applicazione.
 
 ## 17 novembre, 2016: pacchetto di build Node.js aggiornato v3.9
 Questa release del pacchetto di build supporta le versioni di runtime di IBM SDK for Node.js: 0.10.47, 0.10.48, 0.12.16, 0.12.17, 4.6.1, 4.6.2, 6.7.0 e 6.9.1. La versione predefinita è ora la 4.6.2.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -35,25 +35,25 @@ python-3.6.1
 ```
 {: codeblock}
 
-Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 2.7.13.
+Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 2.7.14.
 
 ### Versioni disponibili:
 {: #available_versions}
 
 Le seguenti versioni Python sono disponibili nel [pacchetto
-di build Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) attualmente
+di build Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.6.11) attualmente
 installato in {{site.data.keyword.Bluemix_notm}}:
 
-* 2.7.12
 * 2.7.13
-* 3.3.5
+* 2.7.14
 * 3.3.6
-* 3.4.5
-* 3.4.6
-* 3.5.2
-* 3.5.3
-* 3.6.1
-* 3.6.2
+* 3.3.7
+* 3.4.7
+* 3.4.8
+* 3.5.4
+* 3.5.5
+* 3.6.3
+* 3.6.4
 
 Se la tua applicazione richiede una versione di Python che non è elencata, puoi utilizzare
 il [pacchetto di build Python](https://github.com/cloudfoundry/python-buildpack) esterno

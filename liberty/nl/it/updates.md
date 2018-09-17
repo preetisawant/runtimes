@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2018-07-02"
 {: #latest_updates}
 
 ## Un elenco degli aggiornamenti più recenti nel pacchetto di build Liberty.
+
+
+### 10 agosto 2018: pacchetto di build Liberty aggiornato v3.24-20180806-1313
+* La versione del runtime Liberty mensile è stata aggiornata alla 2018.8.0.0.
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP17.
 
 ### 2 luglio 2018: pacchetto di build Liberty aggiornato v3.23-20180628-1052
 * La versione del runtime Liberty predefinita è stata aggiornata alla release 18.0.0.2.
@@ -176,7 +181,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * Il pacchetto di build contiene anche le versioni aggiornate di IBM JRE: 8 SR3 e 7.1 SR3 FP40.
 * Il pacchetto di build aggiunge il supporto per l'agent di monitoraggio dell'applicazione [AppDynamics ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.appdynamics.com/).
 * Il supporto [Dynatrace](dynatrace.html) è stato migliorato per semplificare l'installazione dell'agent.
-* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il servizio Monitoring and Analytics.Contiene una correzione per un problema con il raccoglitore dei dati di heap massimi.
+* Il pacchetto di build fornisce un raccoglitore di dati aggiornato per il servizio Monitoring and Analytics. Contiene una correzione per un problema con il raccoglitore dei dati di heap massimi.
 * Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](../common/app_mng.html#app_management) è stato aggiornato alla versione 0.12.13 più recente.
 
 ### 25 marzo 2016: pacchetto di build Liberty aggiornato v2.7-20160321-1358

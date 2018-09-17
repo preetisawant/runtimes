@@ -69,7 +69,7 @@ ibmcloud cf restage myApp
 
 ## Limitazioni
 {: #restrictions}
-* Le modifiche che apporti alla tua applicazione utilizzando Gestione applicazioni sono transitorie e vanno perse dopo che esci da questa modalità. Questa modalità serve solo per un uso di sviluppo temporaneo e non è prevista per l'utilizzo in un ambiente di produzione per via delle prestazioni. 
+* Le modifiche che apporti alla tua applicazione utilizzando Gestione applicazioni sono transitorie e vanno perse dopo che esci da questa modalità. Questa modalità serve solo per un uso di sviluppo temporaneo e non è prevista per l'utilizzo in un ambiente di produzione per via delle prestazioni.
 * Per le applicazioni Node.js, la maggior parte dei programmi di utilità di Gestione applicazioni non funziona se hai impostato il tuo comando **start** nel file `manifest.yml` o con l'opzione `-c` nella riga di comando. Questi metodi sono delle sostituzioni del pacchetto di build e rappresentano l'antimodello per l'avvio delle applicazioni Node.js. Per dei risultati ottimali, imposta il comando **start** nel file `package.json` o `Procfile`.
 
 ### Programmi di utilità Liberty e Node.js
@@ -80,7 +80,7 @@ ibmcloud cf restage myApp
 
 Il programma di utilità *proxy* fornisce la gestione dell'applicazione minima tra la tua applicazione e {{site.data.keyword.Bluemix_notm}}.
 
-Quando abilitato, il pacchetto di build avvia un agent proxy ubicato tra il runtime e il contenitore della tua applicazione. Il programma di utilità *proxy* gestisce tutte le richieste ricevute dall'applicazione. In base al tipo di richiesta, effettua un'azione di Gestione applicazione o inoltra la richiesta alla tua applicazione. Utilizzando *proxy*, il tuo contenitore dell'applicazione continua a funzionare, anche se l'applicazione si arresta in modo anomalo. L'agent proxy consente inoltre aggiornamenti di file incrementali, che abilitano la modalità *Live Edit* per le applicazioni Node.js.
+Quando abilitato, il pacchetto di build avvia un agent proxy ubicato tra il runtime e il contenitore della tua applicazione.  Il programma di utilità *proxy* gestisce tutte le richieste ricevute dall'applicazione. In base al tipo di richiesta, effettua un'azione di Gestione applicazione o inoltra la richiesta alla tua applicazione. Utilizzando *proxy*, il tuo contenitore dell'applicazione continua a funzionare, anche se l'applicazione si arresta in modo anomalo. L'agent proxy consente inoltre aggiornamenti di file incrementali, che abilitano la modalità *Live Edit* per le applicazioni Node.js.
 
 Alcuni programmi di utilità Gestione applicazione ti richiedono di utilizzare il programma di utilità *proxy* con la tua applicazione e possono avviare *proxy* automaticamente.
 
@@ -107,7 +107,7 @@ Per Node versione 6.3.0 o superiore, la console di sviluppo fornisce un pulsante
 #### hc
 {: #hc}
 
-L'agent Health Center (*hc*) abilita il monitoraggio della tua applicazione mediante il client Health Center. Per Node.js, l'agent *hc* è disponibile solo con le versioni di runtime di Node.js incluse con il pacchetto di build IBM SDK for Node.js.  Consulta [Aggiornamenti più recenti al pacchetto di build sdk-for-nodejs](/docs/runtimes/nodejs/updates.html) per la serie corrente dei runtime.
+L'agent Health Center (*hc*) abilita il monitoraggio della tua applicazione mediante il client Health Center.  Per Node.js, l'agent *hc* è disponibile solo con le versioni di runtime di Node.js incluse con il pacchetto di build IBM SDK for Node.js.  Consulta [Aggiornamenti più recenti al pacchetto di build sdk-for-nodejs](/docs/runtimes/nodejs/updates.html) per la serie corrente dei runtime.
 
 Quando l'agent Health Center è abilitato, puoi analizzare le prestazioni delle tue applicazioni Liberty e Node.js utilizzando gli strumenti IBM Monitoring and Diagnostic. Per ulteriori informazioni, vedi [How to analyze the performance of Liberty Java or Node.js apps in {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/bluemix/2015/07/03/how-to-analyze-performance-in-bluemix/){:new_window}.
 
@@ -134,7 +134,7 @@ Il programma di utilità *shell* abilita una shell basata su Web.  Puoi accedere
 ```
 {: codeblock}
 
-Dopo aver effettuato l'accesso al programma di utilità *shell* viene visualizzata una finestra di terminale con l'accesso shell nella tua applicazione. Puoi effettuare tutte le attività supportate in una normale shell, ad esempio modificare i file, controllare l'utilizzo della memoria o eseguire i comandi di diagnostica. 
+Dopo aver effettuato l'accesso al programma di utilità *shell* viene visualizzata una finestra di terminale con l'accesso shell nella tua applicazione. Puoi effettuare tutte le attività supportate in una normale shell, ad esempio modificare i file, controllare l'utilizzo della memoria o eseguire i comandi di diagnostica.
 
 **Importante:** anche il programma di utilità *shell* avvia *proxy*.
 
@@ -160,7 +160,7 @@ Il programma di utilità *debug* mette l'applicazione Liberty in modalità di de
 
 **Importante:** il programma di utilità *debug* avvia *proxy*.
 
-Il programma di utilità *debug* può essere utilizzato insieme a *noproxy*. Per utilizzare debug con *noproxy*, stabilisci prima l'inoltro alla porta utilizzando il comando `ibmcloud cf ssh`. 
+Il programma di utilità *debug* può essere utilizzato insieme a *noproxy*. Per utilizzare debug con *noproxy*, stabilisci prima l'inoltro alla porta utilizzando il comando `ibmcloud cf ssh`.
 
 Il seguente frammento di codice mostra un esempio del formato del comando `ibmcloud cf ssh`:
 
@@ -195,14 +195,14 @@ Il programma di utilità *localjmx* abilita la funzione [localConnector-1.0 ![Ic
 
 **Prima di iniziare**: *localjmx* ti richiede di installare JConsole.
 
-Il programma di utilità *localjmx* si applica solo alle applicazioni in esecuzione in una cella Diego. Per utilizzare *localjmx*, stabilisci prima l'inoltro alla porta utilizzando il comando `ibmcloud cf ssh`.  Ad esempio:
+Il programma di utilità *localjmx* si applica solo alle applicazioni in esecuzione in una cella Diego. Per utilizzare *localjmx*, stabilisci prima l'inoltro alla porta utilizzando il comando `ibmcloud cf ssh`. Ad esempio:
 
 ```
 ibmcloud cf ssh -N -T -L 5000:127.0.0.1:5000 <appName>
 ```
 {: codeblock}
 
-Successivamente, per il collegamento alla JConsole, scegli **Processo remoto**, specifica `127.0.0.1:5000` e utilizza una connessione non sicura. 
+Successivamente, per il collegamento alla JConsole, scegli **Processo remoto**, specifica `127.0.0.1:5000` e utilizza una connessione non sicura.
 
 
 ### Programmi di utilità Node.js

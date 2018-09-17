@@ -61,7 +61,12 @@ swift build
   Questo comando impiegherà diversi minuti per l'esecuzione.
 
 1. Dopo che l'applicazione è stata correttamente compilata, puoi eseguire il file eseguibile generato dal compilatore Swift:
+```
+swift run
+```
+  {: codeblock}
 
+  o
   ```
 .build/debug/get-started-swift
   ```
@@ -86,10 +91,10 @@ Apri il file manifest.yml e modifica `name` da `GetStartedSwift` con il nome del
 
   ```
   applications:
-   - name: GetStartedSwift
+   - name: Get-Started-Swift
      random-route: true
      memory: 256M
-     command: kitura-helloworld
+     command: get-started-swift
      buildpack: swift_buildpack
   ```
   {: codeblock}
@@ -105,7 +110,7 @@ Puoi utilizzare la CLI {{site.data.keyword.Bluemix_short}} per distribuire le ap
 1. Esegui l'accesso al tuo account {{site.data.keyword.Bluemix_notm}} e seleziona un endpoint API.
 
   ```
-ibmcloud cf login
+ibmcloud login
   ```
   {: codeblock}
 
@@ -131,7 +136,7 @@ ibmcloud cf push
   ```
   {: codeblock}
 
-  Ci può volere un minuto. Se si verifica un errore nel processo di distribuzione, puoi utilizzare il comando `ibmcloud cf logs.<Your-App-Name> --recent` per risolverlo.
+  Ci può volere un minuto. Se si verifica un errore nel processo di distribuzione, puoi utilizzare il comando `ibmcloud cf logs. <Your-App-Name> --recent` per risolverlo.
 
 Quando la distribuzione è stata completata dovresti visualizzare un messaggio che indica che la tua applicazione è in esecuzione.  Visualizza la tua applicazione all'URL elencato nell'output del comando trasmesso.  Puoi anche immettere il seguente comando per visualizzare lo stato delle tue applicazioni e vedere l'URL.
   ```
@@ -183,7 +188,7 @@ Aggiorna il file `mappings.json` nella directory `config` sostituendo il segnapo
   ```
   {: codeblock}
 
-Questa applicazione di esempio utilizza il pacchetto `CloudEnvironment` per interagire con {{site.data.keyword.Bluemix_notm}} per analizzare le variabili di ambiente. [Ulteriori informazioni...](https://packagecatalog.com/package/IBM-Swift/CloudEnvironment)
+Questa applicazione di esempio utilizza il pacchetto `CloudEnvironment` per interagire con {{site.data.keyword.Bluemix_notm}} per analizzare le variabili di ambiente. [Ulteriori informazioni...](https://github.com/IBM-Swift/CloudEnvironment)
 
 Il segnaposto `cloudant` nella configurazione `cloudfoundry:cloudant` rende più facile associare un servizio Cloudant fornito dall'utente alla tua applicazione. Con la configurazione `cloudfoundry:cloudant`, puoi creare un servizio Cloudant che include la stringa, `cloudant` nel nome servizio e associarla alla tua applicazione, senza modificare il file `config.json`. Se modifichi questa configurazione e poi vuoi usare un servizio Cloudant fornito dall'utente, hai bisogno di modificare la configurazione in `cloudfoundry:cloudant` o di definire `cloudfoundry:` con il nome del tuo servizio fornito dall'utente.
 {: tip}
@@ -205,7 +210,7 @@ swift build
 
  Visualizza la tua applicazione in: http://localhost:8080. Tutti i nomi immessi nell'applicazione saranno ora aggiunti al database.
 
- Questa applicazione di esempio utilizza il pacchetto `Kitura-CouchDB` per interagire con Cloudant. [Ulteriori informazioni...](https://packagecatalog.com/package/IBM-Swift/Kitura-CouchDB)
+ Questa applicazione di esempio utilizza il pacchetto `Kitura-CouchDB` per interagire con Cloudant. [Ulteriori informazioni...](https://github.com/IBM-Swift/Kitura-CouchDB)
 
  Apporta le modifiche desiderate e ridistribuisci a {{site.data.keyword.Bluemix_notm}}!
 
@@ -220,6 +225,6 @@ Ricorda: se non hai bisogno della tua applicazione live, arrestala così da non 
 
 ## Passi successivi
 
-* [Esercitazioni](/docs/tutorials/index.html)
+* [Kitura & Server-side Swift Tutorials ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.kitura.io/learn.html){: new_window}
 * [Esempi ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://ibm-cloud.github.io){: new_window}
 * [Architecture Center ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/garage/category/architectures){: new_window}

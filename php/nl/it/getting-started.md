@@ -122,7 +122,7 @@ ibmcloud cf push
    ```
    {: codeblock}
 
-  Ci può volere un minuto. Se si verifica un errore nel processo di distribuzione, puoi utilizzare il comando `ibmcloud cf logs.<Your-App-Name> --recent` per risolverlo.
+  Ci può volere un minuto. Se si verifica un errore nel processo di distribuzione, puoi utilizzare il comando `ibmcloud cf logs. <Your-App-Name> --recent` per risolverlo.
 
 Quando la distribuzione è stata completata dovresti visualizzare un messaggio che indica che la tua applicazione è in esecuzione.  Visualizza la tua applicazione all'URL elencato nell'output del comando trasmesso. Puoi anche immettere il seguente comando per visualizzare lo stato delle tue applicazioni e vedere l'URL.
 

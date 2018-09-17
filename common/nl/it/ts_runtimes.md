@@ -345,13 +345,13 @@ Una possibile soluzione è di impostare l'opzione `--max_old_space_size` nel com
 La distribuzione dell'applicazione non riesce con il messaggio: `API/0App instance exited ... payload: {... "reason"=>"CRASHED", "exit_status"=>-1, ...}`.
 {: tsSymptoms}
 
-Se ricevi un messaggio simile quando esegui il push della tua applicazione ASP.net, molto probabilmente la tua applicazione ha superato i limiti di quota di memoria o del disco. Aumenta le quote per la memoria o lo spazio su disco per la tua applicazione.
+Se ricevi un messaggio simile quando esegui il push della tua applicazione ASP.net, molto probabilmente la tua applicazione ha superato i limiti di quota di memoria o del disco.  Aumenta le quote per la memoria o lo spazio su disco per la tua applicazione.
 {: tsCauses}
 
 La distribuzione dell'applicazione non riesce con il messaggio: `Failed to compress droplet: signal: broken pipe` o `No space left on device`.  In che modo è possibile correggere l'errore?
 {: tsSymptoms}
 
-I progetti di cui viene eseguito il push dal codice sorgente che contiene un ampio numero di dipendenze del pacchetto NuGet possono a volte causare questo errore quando la cache del pacchetto NuGet è abilitata. Imposta la variabile di ambiente `CACHE_NUGET_PACKAGES` su `false` per disabilitare la cache. Per ulteriori informazioni, consulta le istruzioni su come [Disabilitare il pacchetto NuGet](../runtimes/dotnet/diablingNuGet.md).
+I progetti di cui viene eseguito il push dal codice sorgente che contiene un ampio numero di dipendenze del pacchetto NuGet possono a volte causare questo errore quando la cache del pacchetto NuGet è abilitata.  Imposta la variabile di ambiente `CACHE_NUGET_PACKAGES` su `false` per disabilitare la cache. Per ulteriori informazioni, consulta le istruzioni su come [Disabilitare il pacchetto NuGet](../runtimes/dotnet/diablingNuGet.md).
 {: tsCauses}
 
 ### Link utili

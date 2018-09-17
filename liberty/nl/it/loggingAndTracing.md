@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-10"
 
 ---
 
@@ -47,13 +47,13 @@ La configurazione della traccia Liberty può essere modificata per un'applicazio
 
 Quando esegui il push dell'applicazione, il file server.xml include le proprietà predefinite **updateTrigger** impostata su **polled** e **monitorInterval** impostata su 1 minuto. Il server Liberty viene automaticamente configurato per controllare gli aggiornamenti del file server.xml ogni minuto.
 
-Consulta [Push delle applicazioni Liberty con server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) per le opzioni per eseguire il push delle applicazioni Liberty con un sever.xml personalizzato
+Consulta [Push delle applicazioni Liberty con server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) per le opzioni per eseguire il push delle applicazioni Liberty con un file `server.xml` personalizzato.
 
-Consulta [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} per informazioni su come configurare l'aggiornamento dinamico in server.xml.
+Consulta [Controlling Dynamic Updates](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} per informazioni su come configurare l'aggiornamento dinamico nel server.xml.
 
 Segui questa procedura per modificare la configurazione della traccia:
 
-1. SSH alla tua app
+1. SSH alla tua applicazione
 
   ```
  ibmcloud cf ssh <appname> [-i instance_index]

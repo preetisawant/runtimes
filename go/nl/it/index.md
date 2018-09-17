@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -40,21 +40,24 @@ Puoi specificare la versione di Go che deve essere utilizzata dalla tua applicaz
 {: codeblock}
 Per ulteriori informazioni, consulta [godep](https://github.com/tools/godep){: new_window}.
 
-Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 1.8.3.
+Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 1.8.7.
 
 ### Versioni disponibili:
 {: #available_versions}
 
 Le seguenti versioni Go sono disponibili nel
-[pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.6){: new_window}
+[pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.20){: new_window}
 attualmente installato in {{site.data.keyword.Bluemix_notm}}:
 
 * 1.6.3
 * 1.6.4
 * 1.7.5
 * 1.7.6
-* 1.8.1
-* 1.8.3
+* 1.8.6
+* 1.8.7
+* 1.9.3
+* 1.9.4
+* 1.10
 
 Se la tua applicazione richiede una versione di Go che non è elencata, puoi utilizzare
 il [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window}

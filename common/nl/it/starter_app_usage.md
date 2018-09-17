@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
   years: 2016, 2017, 2018
-
-lastupdated: "2018-06-20"
+lastupdated: "2018-08-10"
 
 ---
 
@@ -24,7 +22,7 @@ lastupdated: "2018-06-20"
 ## Scelta di un contenitore tipo
 
 1. Dal [catalogo {{site.data.keyword.Bluemix_notm}}](https://console.{DomainName}/catalog/),
-passa alla sezione Contenitori tipo.
+passa alla sezione Kit starter.
 2. Fai clic sul contenitore tipo che desideri utilizzare.
 3. Immetti un nome per la tua applicazione, modifica il nome host se necessario e fai clic su **Crea**. La tua applicazione inizia la fase di preparazione e viene visualizzata l'esercitazione introduttiva per la tua applicazione nel dashboard {{site.data.keyword.Bluemix_notm}}.
 4. Attieniti alla procedura nell'esercitazione per:  

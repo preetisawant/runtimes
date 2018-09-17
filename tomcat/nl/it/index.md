@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2018-06-21"
 Il runtime Tomcat su {{site.data.keyword.Bluemix}} si avvale del java_buildpack.
 {: shortdesc}
 
-Per utilizzare il runtime Tomcat su {{site.data.keyword.Bluemix_notm}}, devi specificare il java_buildpack con l'opzione -b. Ad esempio:
+Per utilizzare il runtime Tomcat su {{site.data.keyword.Bluemix_notm}}, devi specificare il java_buildpack con l'opzione `-b`. Ad esempio:
 
 ```
-ibmcloud cf push &lt;myApp&gt; -p &lt;pathToMyApp&gt; -b java_buildpack
+ibmcloud cf push <myApp> -p <pathToMyApp> -b java_buildpack
 ```
 
 Per ulteriori informazioni sul runtime Tomcat, consulta il
@@ -43,16 +43,16 @@ Possono essere entrambe specificate nel file manifest dell'applicazione.  Ad ese
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
-La versione corrente del pacchetto di build è v3.19 che contiene Tomcat versione 8.0.45 e la versione Java predefinita 1.8.0_141.
-Per ulteriori informazioni, consulta per favore le [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases/tag/v3.13).
+La versione corrente del pacchetto di build è v4.9 che contiene Tomcat versione 8.5.28 e la versione Java predefinita 1.8.0_162.
+Per ulteriori informazioni, consulta le [java-buildpack releases](https://github.com/cloudfoundry/java-buildpack/releases/tag/v4.9).
 
 ## Reindirizzamento HTTPS
 {: #https_redirect}
 
 Il runtime Tomcat può essere configurato per rendere affidabili i proxy interni {{site.data.keyword.Bluemix_notm}} e consentire il reindirizzamento del traffico HTTP a HTTPS (SSL).
-Per far ciò modifica il file server.xml, configurando l'elemento RemoteIpValve Valve con le opzioni internalProxies e protocolHeader.
+Per far ciò modifica il file `server.xml`, configurando l'elemento `RemoteIpValve` Valve con le opzioni `internalProxies` e `protocolHeader`.
 
-Il runtime Tomcat [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) incluso nel pacchetto di build imposta solo il protocolHeader dell'elemento RemoteIpValve Valve per impostazione predefinita.  Per reindirizzare il traffco HTTP a HTTPS in {{site.data.keyword.Bluemix_notm}} configura l'elemento RemoteIpValve nel tuo server.xml personalizzato nel seguente modo:
+Il runtime Tomcat [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) incluso nel pacchetto di build imposta solo il `protocolHeader` dell'elemento `RemoteIpValve` Valve per impostazione predefinita.  Per reindirizzare il traffico HTTP a HTTPS in {{site.data.keyword.Bluemix_notm}}, configura l'elemento `RemoteIpValve` nel tuo `server.xml` personalizzato come illustrato nel seguente esempio:
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />
@@ -60,10 +60,4 @@ Il runtime Tomcat [server.xml](https://github.com/cloudfoundry/java-buildpack/bl
 {: codeblock}
 
 Possono essere trovate ulteriori opzioni per RemoteIpValve nella
-[Tomcat documentation ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://tomcat.apache.org/tomcat-8.0-doc/api/org/apache/catalina/valves/RemoteIpValve.html).
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [java-buildpack](https://github.com/cloudfoundry/java-buildpack)
+[Tomcat documentation ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/valves/RemoteIpValve.html).

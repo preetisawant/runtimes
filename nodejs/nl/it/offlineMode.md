@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -11,7 +11,7 @@ lastupdated: "2018-01-10"
 {:codeblock: .codeblock}
 
 
-# Utilizza la modalità offline per Node.js
+# Lavora offline con Node.js
 {: #offline_mode}
 
 Quando un'applicazione Node.js viene trasmessa a {{site.data.keyword.Bluemix}} il pacchetto di build SDK for Node.js
@@ -38,18 +38,28 @@ Fai attenzione che quando vengono installate le nuove versioni del pacchetto di 
 ## Applicazioni offline
 {: #offline_applications}
 
-Per eliminare la necessità di accedere a https://registry.npmjs.org puoi includere tutti i moduli Node richiesti dalla tua applicazione all'interno dell'applicazione.  Per fare ciò esegui `npm install` per tutti i moduli dell'applicazione richiesti e includi la risultante directory *node_modules* con la tua applicazione trasmessa.
+Per eliminare la necessità di accedere a https://registry.npmjs.org puoi includere tutti i moduli Node richiesti dalla tua applicazione all'interno dell'applicazione.  Per fare ciò esegui `npm install` per tutti i moduli dell'applicazione richiesti e includi la risultante directory `node_modules` con la tua applicazione trasmessa.
 
 Le tue dipendenze possono avere dipendenze, che hanno dipendenze e così via, ma il `package.json`
-contiene solo le dipendenze di livello superiore. Se una delle dipendenze utilizza un intervallo nel package.json e ne viene rilasciata una nuova versione, i moduli nella tua directory node_modules possono diventare obsoleti. *Shrinkwrap* ti aiuta a bloccare tutte le versioni delle dipendenze in modo che questo non succeda.  Per utilizzare shrinkwrap avvia una directory `node_modules` vuota o pulita. Quindi, nella directory root del tuo progetto esegui:
+contiene solo le dipendenze di livello superiore. Se una delle dipendenze utilizza un intervallo nel package.json e ne viene rilasciata una nuova versione, i moduli nella tua directory `node_modules` possono diventare obsoleti. *Shrinkwrap* ti aiuta a bloccare tutte le versioni delle dipendenze in modo che questo non succeda.  Per utilizzare shrinkwrap avvia una directory `node_modules` vuota o pulita. Quindi, nella directory root del tuo progetto immetti i seguenti comandi: 
 
+```
+npm install
+```
+{: codeblock}
 
-1. `npm install`
-1. `npm dedupe`
-2. `npm shrinkwrap`
+```
+npm dedupe
+```
+{: codeblock}
+
+```
+npm shrinkwrap
+```
+{: codeblock}
 
 Questo può modificare il tuo `package.json` e aggiungere `npm-shrinkwrap.json` nella tua directory root.
-Ogni volta che effettui una modifica alle dipendenze nel file `package.json`, ripeti le fasi `npm dedupe` e `shringwrap`.
+Ogni volta che effettui una modifica alle dipendenze nel file `package.json`, riesegui i comandi `npm dedupe` e `shrinkwrap`.
 
 ## Gestione di un proxy
 {: #working_with_proxy}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -13,8 +13,10 @@ lastupdated: "2018-06-27"
 # Modalità FIPS
 {: #fips_mode}
 
-Le versioni del pacchetto di build Nodejs v3.2-20160315-1257 e successive supportano [FIPS ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
+Le versioni del pacchetto di build da v3.2-20160315-1257 a v3.20.2-20180523-1639 supportano [FIPS ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
+
+**Il modulo FIPS OpenSSL è obsoleto:** in linea con la versione della community Node.js, il modulo FIPS OpenSSL è diventato obsoleto ed è eleggibile per la rimozione dal 24 agosto 2018. Ulteriori informazioni in [Aggiornamenti più recenti al pacchetto di build Node.js](updates.html#fips-deprecation).
 
 Per utilizzare un nodo abilitato FIPS imposta la variabile di ambiente FIPS_MODE su true.
 Ad esempio:

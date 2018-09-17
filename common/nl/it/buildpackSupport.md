@@ -35,7 +35,7 @@ I seguenti pacchetti di build della community integrati sono forniti dalla commu
 * [Python](/docs/runtimes/python/index.html)
 * [Go](/docs/runtimes/go/index.html)
 
-Si effettueranno aggiornamenti a questi pacchetti di build quando si esegue l'upgrade di {{site.data.keyword.Bluemix_notm}} a una nuova versione di Cloud Foundry. I problemi che si verificano con questi runtime su {{site.data.keyword.Bluemix_notm}} possono essere segnalati a IBM che ti aiuterà a determinare se {{site.data.keyword.Bluemix_notm}} è l'origine del problema. Per i problemi relativi a {{site.data.keyword.Bluemix_notm}}, IBM fornirà una correzione; tuttavia; per difetti riscontrati nel pacchetto di build o runtime stesso, IBM contribuirà a segnalarli alla community appropriata. IBM non fornirà correzioni per questi pacchetti di build e runtime. 
+Si effettueranno aggiornamenti a questi pacchetti di build quando si esegue l'upgrade di {{site.data.keyword.Bluemix_notm}} a una nuova versione di Cloud Foundry. I problemi che si verificano con questi runtime su {{site.data.keyword.Bluemix_notm}} possono essere segnalati a IBM che ti aiuterà a determinare se {{site.data.keyword.Bluemix_notm}} è l'origine del problema. Per i problemi relativi a {{site.data.keyword.Bluemix_notm}}, IBM fornirà una correzione; tuttavia; per difetti riscontrati nel pacchetto di build o runtime stesso, IBM contribuirà a segnalarli alla community appropriata. IBM non fornirà correzioni per questi pacchetti di build e runtime.
 
 ## Pacchetti di build esterni
 {: #external_buildpacks}

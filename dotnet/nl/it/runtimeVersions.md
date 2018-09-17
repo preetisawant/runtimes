@@ -44,7 +44,7 @@ Questo pacchetto di build supporta le seguenti versioni, quelle contrassegnate c
 | 1.1.1 (obsoleta)        | LTS               |
 | 1.1.2                     | LTS               |
 | 2.0.0-preview2-25407-01   | Corrente (anteprima) |
-| 2.0.0                     |Corrente       |
+| 2.0.0                     | Corrente           |
 
 ## Specifica della versione della SDK .NET
 
@@ -58,4 +58,4 @@ Controlla la versione della SDK .NET con un `global.json` facoltativo nella dire
 ```
 {: codeblock}
 
-Se non viene specificato, vengono utilizzati gli strumenti MSBuild più recenti. Per utilizzare gli strumenti project.json, puoi specificare una delle versioni project.json elencate ma tieni presente che queste versioni saranno rimosse in futuro. Se la versione specificata non è inclusa nel pacchetto di build, viene utilizzata la versione predefinita e viene visualizzata un'avvertenza nei log di preparazione.
+Se non viene specificato, vengono utilizzati gli strumenti MSBuild più recenti.  Per utilizzare gli strumenti project.json, puoi specificare una delle versioni project.json elencate ma tieni presente che queste versioni saranno rimosse in futuro.  Se la versione specificata non è inclusa nel pacchetto di build, viene utilizzata la versione predefinita e viene visualizzata un'avvertenza nei log di preparazione.

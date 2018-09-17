@@ -112,7 +112,7 @@ Ci sono alcuni attributi che sono automaticamente disabilitati dal pacchetto di 
 
 <table>
 <tr>
-<th>Attributo disabilitato</th>
+<th>Attributo disabilitato </th>
 <th>Elemento</th>
 </tr>
 

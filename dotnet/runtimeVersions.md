@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-09-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,9 +12,6 @@ lastupdated: "2018-05-08"
 
 # Runtime Versions
 {: #runtime_versions}
-
-
-{: shortdesc}
 
 ## Supported versions
 {: #supported_versions}
@@ -31,20 +28,21 @@ This buildpack supports the following versions, those marked as deprecated will 
 
 | .NET SDK version        | Default          |
 |-------------------------|------------------|
-| 1.0.4                   |   No             |
-| 1.1.0                   |   Yes (F# only)  |
-| 2.0.0                   |   Yes            |
+| 2.1.301                 |   Yes            |
+| 2.1.300                 |   No             |
+| 2.1.201                 |   No             |
 
 ### .NET Core runtime versions
 
 | .NET Core runtime version | Release type      |
 |---------------------------|-------------------|
-| 1.0.4 (deprecated)        | LTS               |
-| 1.0.5                     | LTS               |
-| 1.1.1 (deprecated)        | LTS               |
+| 2.1.1                     | LTS               |
+| 2.0.3                     | Current           |
+| 2.0.2                     | Current           |
+| 1.1.9                     | LTS               |
 | 1.1.2                     | LTS               |
-| 2.0.0-preview2-25407-01   | Current (preview) |
-| 2.0.0                     | Current           |
+| 1.0.5                     | LTS               |
+| 1.0.4                     | LTS               |
 
 ## Specifying the .NET SDK version
 
@@ -52,7 +50,7 @@ Control the .NET SDK version with an optional `global.json` file in the applicat
 ```
    {
       "sdk": {
-        "version": "2.0.0"
+        "version": "2.1.301"
       }
    }
 ```

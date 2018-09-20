@@ -2,17 +2,28 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-06"
+lastupdated: "2018-09-20"
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Latest Updates to the ASP.NET Core buildpack
+# Latest updates to the ASP.NET Core buildpack
 {: #latest_updates}
 
+A list of the latest updates in the ASP.NET Core buildpack.
 
-A list of the latest updates in the aspnet buildpack.
+## September 20, 2018: Updated ASP.NET Core buildpack v2.0-20180918-1356
+
+**Important:** Beginning with this release, the ASP.NET Core buildpack is based on the [Cloud Foundry .NET Core buildpack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html). This release includes version 2.1.3 of the dotnet-core Cloud Foundry buildpack.
+
+* Add support for .NET Core SDK 2.1.301
+* Add support for .NET Framework 1.0.11
+* Add support for .NET Framework 1.1.8
+* Add support for .NET Framework 2.0.7
+* Add support for .NET Framework 2.1.1
+* Update Node.js version to 6.14.3
+* Change default .NET Core SDK 2.1.301
 
 ## October 6, 2017: Updated ASP.NET Core buildpack v1.0.26-20170913-1346
 * Add support for .NET Core runtime 2.0.0
@@ -120,9 +131,3 @@ This version of the buildpack includes the following changes:
 {: codeblock}
 
 * Usage of the Nowin web server was removed from this buildpack and the [Kestrel]{https://github.com/aspnet/KestrelHttpServer} web server is used instead.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Dotnet core runtime](index.html)

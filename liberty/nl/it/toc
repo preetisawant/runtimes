@@ -53,7 +53,7 @@ Liberty for Java
         [Utilizzo dei pacchetti di build della community](../common/byob.html)
 
     buildpackDefaults.md
-    ../common/app_mng.md
+    [Gestione di applicazioni Liberty e Node.js](../common/app_mng.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}

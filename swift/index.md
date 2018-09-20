@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -72,7 +72,7 @@ Working with the [Kitura web framework](http://ibm-swift.github.io/Kitura/) prov
 - [SwiftMetrics ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant and CouchDB ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 To find more Swift packages to include in your application, go to the Packages section of [Kitura.io](https://www.kitura.io/packages.html). Packages can be added to a Swift application by including the package's Git URL and version details into the app's `Package.swift` file. For more details on package management, refer to the [Package Manager section of Swift.org](https://swift.org/package-manager/).

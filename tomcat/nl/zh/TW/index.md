@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -37,7 +37,7 @@ ibmcloud cf push <myApp> -p <pathToMyApp> -b java_buildpack
 您可以使用 JBP_CONFIG_TOMCAT 環境變數來變更應用程式要使用的 Tomcat 版本。您可以使用 JBP_CONFIG_OPEN_JDK_JRE 環境變數來變更應用程式要使用的 Java 版本。這兩者都可以在應用程式的資訊清單檔中予以指定。例如：
 ```
     env:
-        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
+        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.5.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}

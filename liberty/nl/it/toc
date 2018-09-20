@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime" href="/docs/runtimes/liberty/getting-started.html"}
+{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -38,7 +38,7 @@ Liberty for Java
     {: .topicgroup}
     Lavora offline con un proxy
         offlineMode.md
-        [Lavora offline con un proxy](../common/workingWithProxy.html)
+        [Utilizzo di un proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,11 +49,11 @@ Liberty for Java
 
     {: .topicgroup}
     Applicazioni starter e pacchetti di build
-        [Utilizza le applicazioni starter](../common/starter_app_usage.html)
-        [Utilizza i pacchetti di build della community](../common/byob.html)
+        [Utilizzo delle applicazioni starter](../common/starter_app_usage.html)
+        [Utilizzo dei pacchetti di build della community](../common/byob.html)
 
     buildpackDefaults.md
-    [Gestione di applicazioni Liberty e Node.js](../common/app_mng.html)
+    ../common/app_mng.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

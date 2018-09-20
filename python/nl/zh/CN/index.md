@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2018-08-21"
 您可以为您的应用程序指定要使用的 Python 版本，方法是在 runtime.txt 文件中设置 python-versionnumber，该文件位于您应用程序的根目录中。例如：
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

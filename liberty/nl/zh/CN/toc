@@ -38,7 +38,7 @@ Liberty for Java
     {: .topicgroup}
     脱机工作或使用代理
         offlineMode.md
-        ../common/workingWithProxy.md
+        [使用代理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,8 +49,8 @@ Liberty for Java
 
     {: .topicgroup}
     入门模板应用程序和 buildpack
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [使用入门模板应用程序](../common/starter_app_usage.html)
+        [使用社区 buildpack](../common/byob.html)
 
     buildpackDefaults.md
     ../common/app_mng.md
@@ -60,5 +60,5 @@ Liberty for Java
     ts_index.md
     [IBM Cloud Log Analysis 入门](../../services/CloudLogAnalysis/index.html)
     updates.md
-    ../common/buildpackSupport.md
+    [Buildpack 支持语句](../common/buildpackSupport.html)
     {: .navgroup-end}

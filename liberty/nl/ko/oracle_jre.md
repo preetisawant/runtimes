@@ -30,7 +30,7 @@ Oracle JRE 파일은 웹 서버에서 호스트되어야 하며, Liberty 빌드�
 ```
 {: codeblock}
 
-    * 예:
+    * 예를 들어, 다음과 같습니다.
     ```
        ---
        1.8.0_91: https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz

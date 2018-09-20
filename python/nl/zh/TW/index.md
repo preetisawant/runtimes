@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -30,7 +30,7 @@ python_buildpack 為 Python 2 和 Python 3 應用程式都有提供完整的運�
 您可以在應用程式根目錄的 runtime.txt 檔案中設定 python-versionnumber，以指定應用程式要使用的 Python 版本。例如：
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

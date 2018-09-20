@@ -18,7 +18,7 @@ SDK for Node.js
     {: .topicgroup}
     脱机工作或使用代理
         offlineMode.md
-        ../common/workingWithProxy.md
+        [使用代理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -29,13 +29,14 @@ SDK for Node.js
 
     {: .topicgroup}
     入门模板应用程序和 buildpack
-        ../common/starter_app_usage.md
-        ../common/byob.md{: .navgroup-end}
+        [使用入门模板应用程序](../common/starter_app_usage.html)
+        [使用社区 buildpack](../common/byob.html)
+    {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    ../common/buildpackSupport.md
+    [Buildpack 支持语句](../common/buildpackSupport.html)
 
     {: .navgroup-end}

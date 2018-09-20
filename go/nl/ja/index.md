@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -33,7 +33,7 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.8.3",
+	"GoVersion": "go1.10",
 	"Deps": []
 }
 ```

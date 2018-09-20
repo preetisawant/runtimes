@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -30,7 +30,7 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 Vous pouvez spécifier la version de Python à utiliser par votre appli en définissant python-versionnumber dans le fichier runtime.txt se trouvant à la racine de votre application. Par exemple :
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

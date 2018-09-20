@@ -112,7 +112,7 @@ lastupdated: "2018-08-10"
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
 * 빌드팩은 [Auto-Scaling 서비스](/docs/services/Auto-Scaling/index.html)를 위한 에이전트의 업데이트된 버전과 많은 애플리케이션 관리 개선사항도 제공합니다.
-* 또한 이 빌드팩은 Monitoring and Analytics 서비스에 대한 자동 구성 작동 방법을 변경합니다. 무료 사용제를 사용하는 애플리케이션에는 더 이상 로그 기능이 추가되지 않습니다. 이는 logmet으로 대체됩니다.  
+* 또한 이 빌드팩은 Monitoring and Analytics 서비스에 대한 자동 구성 작동 방법을 변경합니다. 무료 플랜을 사용하는 애플리케이션에는 더 이상 로그 기능이 추가되지 않습니다. 이는 logmet으로 대체됩니다.  
 
 
 ### 2017년 1월 23일: Liberty 빌드팩 v3.7-20170118-2046 업데이트
@@ -273,7 +273,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 
 ### 2015년 3월 20일: Liberty 빌드팩 v1.14-20150319-1159 업데이트
 * 이 빌드팩 버전에는 [FREAK 취약성](http://www-01.ibm.com/support/docview.wss?uid=swg21699864)에 대한 보안 수정사항이 있는 업데이트된 IBM JRE 7.1.2.11이 포함되어 있습니다.
-* [ SQL Database](services/SQLDB/index.html#SQLDB) 서비스는 SSL 프로토콜에서 데이터베이스 서버와의 연결을 위한 옵션을 제공하는 유료 사용제를 제공합니다. SQL Database 서비스에 대한 빌드팩의 자동 구성 지원은 SSL 연결 정보가 사용 가능한 경우 SSL에서 데이터베이스와 연결하기 위한 런타임을 구성할 수 있도록 업데이트되었습니다.
+* [ SQL Database](services/SQLDB/index.html#SQLDB) 서비스는 SSL 프로토콜에서 데이터베이스 서버와의 연결을 위한 옵션을 제공하는 유료 플랜을 제공합니다. SQL Database 서비스에 대한 빌드팩의 자동 구성 지원은 SSL 연결 정보가 사용 가능한 경우 SSL에서 데이터베이스와 연결하기 위한 런타임을 구성할 수 있도록 업데이트되었습니다.
 * 빌드팩이 애플리케이션 아카이브의 루트의 **server.xml** 구성 파일을 포함하는 독립형 WAR 또는 EAR 파일이 배치될 때 오류를 보고하도록 업데이트되었습니다.
 * 빌드팩에는 특정 경우에 올바르지 않은 **server.xml** 구성을 생성하던 MongoDB의 자동 구성 서비스 플러그인에 대한 수정사항이 포함되어 있습니다.
 
@@ -329,7 +329,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * 이 업데이트된 빌드팩을 적용하면 애플리케이션이 WebSocket 1.0, Servlet 3.1 또는 JAX-RS 2.0와 같은 Liberty 베타 기능을 사용할 수 있습니다. 자세한 정보는 [베타 기능 사용](usingBetaFeatures.html)을 참조하십시오.
 
 ### 2014년 9월 30일: Liberty 빌드팩 v1.4-20140908-1803 업데이트
-* 이 빌드팩은 이제 ElephantSQL 및 ClearDB MySQL Database 써드파티 서비스에 대한 지원을 제공합니다. posgresql 및 mysql 같은 시범 서비스에서도 자동 구성 지원이 작동합니다. 총 13개의 새로운 서비스를 사용하는 경우, Liberty 빌드팩의 자동 구성 지원을 통해 Liberty 애플리케이션에서 {{site.data.keyword.Bluemix_notm}} 서비스를 보다 쉽고 빠르게 이용할 수 있습니다.
+* 이 빌드팩은 이제 ElephantSQL 및 ClearDB MySQL Database 서드파티 서비스에 대한 지원을 제공합니다. posgresql 및 mysql 같은 시범 서비스에서도 자동 구성 지원이 작동합니다. 총 13개의 새로운 서비스를 사용하는 경우, Liberty 빌드팩의 자동 구성 지원을 통해 Liberty 애플리케이션에서 {{site.data.keyword.Bluemix_notm}} 서비스를 보다 쉽고 빠르게 이용할 수 있습니다.
 * 애플리케이션을 스테이징하는 동안 자동 구성 및 기타 수행 조치에 대한 향상된 로그 메시지가 빌드팩에 표시됩니다.
 * 빌드팩에는 수정사항 및 개선 기능이 있는 Liberty 프로파일의 업데이트된 버전이 포함되어 있습니다.
 * 성능을 강화시키는 IBM JRE 버전 7.1의 업데이트된 버전도 포함되어 있습니다. 자세한 변경사항은 [새로운 기능](http://www-01.ibm.com/support/knowledgecenter/SSYKE2_7.0.0/com.ibm.java.lnx.71.doc/diag/preface/changes_71/changes.html) 페이지를 참조하십시오.

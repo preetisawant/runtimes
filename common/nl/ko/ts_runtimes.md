@@ -19,7 +19,7 @@ lastupdated: "2018-06-28"
 # 런타임 문제점 해결
 {: #runtimes}
 
-[{{site.data.keyword.Bluemix}} 런타임](index.html)을 사용할 때 문제점이 발생할 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점을 복구할 수 있습니다.
+[{{site.data.keyword.Bluemix}} 런타임](index.html)을 사용할 때 문제점이 발생할 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
 * [일반 문제점 해결](#ts_all)
@@ -37,7 +37,7 @@ lastupdated: "2018-06-28"
 
 앱을 푸시할 때 최신 빌드팩 컴포넌트를 사용하지 못할 수 있습니다. 더 이상 사용되지 않는 컴포넌트가 로드되지 않도록 기본 제공되는 메커니즘이 있는 빌드팩을 사용하거나, 앱을 푸시하거나 다시 스테이징하기 전에 앱의 캐시 디렉토리에서 컨텐츠를 삭제할 수 있습니다.
 
-빌드팩이 업데이트된 후 앱을 푸시하거나 다시 스테이징할 때 최신 빌드팩 컴포넌트가 자동으로 로드되지 않습니다. 결과적으로 앱은 캐시에서 더 이상 사용되지 않는 빌드팩 컴포넌트를 사용합니다. 마지막으로 앱을 푸시한 이후 빌드팩에 적용한 업데이트는 구현되지 않습니다.
+빌드팩을 업데이트한 후 앱을 푸시하거나 다시 스테이징할 때 최신 빌드팩 컴포넌트가 자동으로 로드되지 않습니다. 결과적으로 앱은 캐시에서 더 이상 사용되지 않는 빌드팩 컴포넌트를 사용합니다. 마지막으로 앱을 푸시한 이후 빌드팩에 적용한 업데이트는 구현되지 않습니다.
 {: tsSymptoms}
 
 일부 빌드팩은 인터넷에서 업데이트된 모든 컴포넌트를 자동으로 다운로드하여 항상 최신 버전을 사용하도록 구성되지 않습니다.
@@ -55,7 +55,7 @@ lastupdated: "2018-06-28"
 
 사용 중인 빌드팩이 최신 컴포넌트를 자동으로 로드하는 메커니즘을 제공하지 않는 경우 캐시 디렉토리에서 해당 컨텐츠를 수동으로 삭제하고 앱을 다시 푸시할 수 있습니다. 다음 단계를 수행하십시오.
 
- 1. 널 빌드팩의 분기를 체크아웃합니다(예: https://github.com/ryandotsmith/null-buildpack). 분기를 체크아웃하는 방법에 대한 자세한 정보는 [Git Basics - Git 저장소 가져오기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}를 참조하십시오.  
+ 1. 널 빌드팩의 분기를 체크아웃합니다. 예: https://github.com/ryandotsmith/null-buildpack 분기를 체크아웃하는 방법에 대한 자세한 정보는 [Git Basics - Git 저장소 가져오기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){: new_window}를 참조하십시오.  
  2. `null-buildpack/bin/compile` 파일에 다음 행을 추가하고 변경사항을 커미트합니다. 변경사항을 커미트하는 방법에 대한 자세한 정보는 [Git Basics - 저장소에 변경사항 기록 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository){: new_window}을 참조하십시오.
   ```
   rm -rfv $2/*
@@ -84,13 +84,13 @@ lastupdated: "2018-06-28"
 ### 인스턴스 세부사항 페이지에서 조치 단추가 사용 안함 상태임(더 이상 사용되지 않음)
   {: #ts_actionsbutton}
 
-  인스턴스 세부사항 페이지에서 조치 단추가 사용 안함으로 설정되어 있습니다.
+  인스턴스 세부사항 페이지의 조치 단추가 사용 안함으로 설정되어 있습니다.
   {: tsSymptoms}
 
   이 문제점은 다음과 같은 이유로 발생합니다.
   {: tsCauses}
 
-   * 앱이 임베디드 Liberty 빌드팩을 사용하여 배치되지 않습니다.
+   * 앱이 임베디드 Liberty 빌드팩을 사용하여 배치되지 않았습니다.
    * 앱이 이전 버전의 Liberty 빌드팩을 사용하여 배치되었습니다.
 
   이전 버전의 Liberty 빌드팩으로 인해 문제점이 발생한 경우 {{site.data.keyword.Bluemix_notm}}에 앱을 다시 배치하십시오. 그렇지 않은 경우 다음과 같은 클라이언트 애플리케이션 로그 파일을 지원 팀에 제공하십시오.
@@ -101,7 +101,7 @@ lastupdated: "2018-06-28"
     * logs/stderr.log
 
 
-### 추적 또는 덤프 창을 열려면 신임 정보가 필요함(더 이상 사용되지 않음)
+### 추적 또는 덤프 창을 열려면 인증 정보가 필요함(더 이상 사용되지 않음)
   {: #ts_username}
 
   추적 또는 덤프 창을 열려면 사용자 이름과 비밀번호가 필요합니다.
@@ -402,12 +402,12 @@ pid @{HOME}/nginx/logs/nginx.pid;
 ## Python
 {: #ts_python}
 
-### 써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져올 수 없음
+### 서드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져올 수 없음
 {: #ts_importpylib}
 
-써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져오지 못할 수 있습니다. 이 문제점을 해결하려면 Python 앱의 루트 디렉토리에 구성 파일을 추가하십시오.
+서드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져오지 못할 수 있습니다. 이 문제점을 해결하려면 Python 앱의 루트 디렉토리에 구성 파일을 추가하십시오.
 
-`web.py` 라이브러리와 같은 써드파티 Python 라이브러리를 가져올 때 `ibmcloud cf push` 명령이 실패합니다.
+`web.py` 라이브러리와 같은 서드파티 Python 라이브러리를 가져올 때 `ibmcloud cf push` 명령이 실패합니다.
 {: tsSymptoms}
 
 Python 앱의 구성 정보가 누락되었습니다.
@@ -431,4 +431,4 @@ Python 앱의 구성 정보가 누락되었습니다.
 	web: python <yourappname>.py $PORT
 	```
 
-이제 써드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져올 수 있습니다.
+이제 서드파티 Python 라이브러리를 {{site.data.keyword.Bluemix_notm}}로 가져올 수 있습니다.

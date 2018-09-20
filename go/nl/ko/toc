@@ -10,18 +10,18 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    ../common/workingWithProxy.md
+    [프록시 작업](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     스타터 애플리케이션 및 커뮤니티 빌드팩
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [스타터 앱 사용](../common/starter_app_usage.html)
+        [커뮤니티 빌드팩 사용](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
+    [런타임 문제점 해결](../common/ts_runtimes.html)
     [사용 가능한 버전](index.html#runtime_versions)
-    ../common/buildpackSupport.md
+    [빌드팩 지원 구문](../common/buildpackSupport.html)
     {: .navgroup-end}

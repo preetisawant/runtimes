@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -13,6 +13,15 @@ lastupdated: "2018-07-24"
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
+
+## 7 de septiembre de 2018: se ha actualizado el paquete de compilación de Node.js v3.22
+{:#fips-deprecation}
+**Importante:** A partir de este paquete de compilación, el SDK para el paquete de compilación Node.js incluye los tiempos de ejecución del release de la comunidad de Node.js para las versiones 6.x y 8.x. Con este cambio, el módulo Node.js OpenSSL FIPS ya no se incluye en estas versiones del paquete de compilación. Sólo la versión 4.x sigue incluyendo el módulo OpenSSL FIPS.  
+
+El paquete de compilación de SDK for Node.js v3.22 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.3, 6.14.4, 8.11.3 y 8.11.4. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.14.4.
+
+Este release también incluye arreglos para la siguiente vulnerabilidad de seguridad:
+* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 24 de julio de 2018: paquete de compilación de Node.js v3.21
 {:#fips-deprecation}

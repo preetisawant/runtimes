@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -13,6 +13,15 @@ lastupdated: "2018-07-24"
 {: #latest_updates}
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build sdk-for-nodejs.
+
+## 7 settembre 2018: pacchetto di build Node.js aggiornato v3.22
+{:#fips-deprecation}
+**Importante:** a partire da questo pacchetto di build, il pacchetto di build SDK for Node.js include i runtime della release della community Node.js per le versioni 6.x e 8.x. Con questa modifica, il modulo FIPS OpenSSL Node.js non è più incluso in queste versioni del pacchetto di build. Solo la versione 4.x continua ad includere il modulo FIPS OpenSSL.   
+
+Il pacchetto di build SDK for Node.js v3.22 fornisce IBM SDK for Node.js versioni 4.8.5, 4.8.7 e le versioni della community Node.js 6.14.3, 6.14.4, 8.11.3 e 8.11.4. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.14.4.
+
+Questa release include anche le correzioni alla seguente vulnerabilità di sicurezza:
+* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 24 luglio 2018: pacchetto di build Node.js aggiornato v3.21
 {:#fips-deprecation}

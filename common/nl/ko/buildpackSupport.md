@@ -42,7 +42,7 @@ Cloud Foundry 커뮤니티에서는 다음 기본 제공 커뮤니티 빌드팩�
 
 외부 빌드팩의 경우에는 IBM에서 지원을 제공하지 않습니다. 지원을 받으려면 Cloud Foundry 커뮤니티에 문의해야 합니다.
 
-## 써드파티 서비스
+## 서드파티 서비스
 {: #third-party}
 
-빌드팩을 사용하면 사용자 애플리케이션 내에서 IBM 외의 써드파티 서비스(예: Dynatrace 또는 New Relic)를 일부 사용할 수 있습니다. IBM은 써드파티 서비스에 대한 지원을 제공하지 않습니다. IBM Cloud에서 써드파티 서비스를 사용하는 데 대한 정보는 최신 [IBM Cloud 서비스 설명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm)에서 _클라우드 서비스 사용_을 참조하십시오. 써드파티 서비스를 사용하기 전에 서비스 제공업체의 라이센싱 정보를 참조하십시오.
+빌드팩을 사용하면 사용자 애플리케이션 내에서 IBM 외의 서드파티 서비스(예: Dynatrace 또는 New Relic)를 일부 사용할 수 있습니다. IBM은 서드파티 서비스에 대한 지원을 제공하지 않습니다. IBM Cloud에서 서드파티 서비스를 사용하는 데 대한 정보는 최신 [IBM Cloud 서비스 설명 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www-03.ibm.com/software/sla/sladb.nsf/sla/bm)에서 _클라우드 서비스 사용_을 참조하십시오. 서드파티 서비스를 사용하기 전에 서비스 제공업체의 라이센싱 정보를 참조하십시오.

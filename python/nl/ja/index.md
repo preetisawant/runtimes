@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -30,7 +30,7 @@ python_buildpack は、アプリケーションのルート・ディレクトリ
 アプリケーションのルートにある runtime.txt ファイルで python-versionnumber を設定することにより、アプリケーションで使用する Python のバージョンを指定できます。 例えば、次のように指定します。
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

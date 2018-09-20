@@ -15,5 +15,4 @@ lastupdated: "2018-02-21"
 Risoluzione dei problemi dei tuoi pacchetti di build e applicazioni SDK for Node.js con le seguenti risorse:
 
 * [Risoluzione dei problemi relativi ai runtime](../common/ts_runtimes.html#runtimes)
-* [Risoluzione dei problemi relativi ai runtime: Node.js](../common/ts_runtimes.html#ts_nodejs)
 * [Gestione applicazioni](../common/app_mng.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -39,7 +39,7 @@ Puoi modificare la versione di Java che deve essere utilizzata dalla tua applica
 Possono essere entrambe specificate nel file manifest dell'applicazione.  Ad esempio:
 ```
     env:
-        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
+        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.5.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}

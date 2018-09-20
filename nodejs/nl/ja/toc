@@ -18,7 +18,7 @@ SDK for Node.js
     {: .topicgroup}
     オフラインの処理またはプロキシーの処理
         offlineMode.md
-        ../common/workingWithProxy.md
+        [プロキシーの処理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -29,14 +29,14 @@ SDK for Node.js
 
     {: .topicgroup}
     スターター・アプリケーションおよびビルドパック
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [スターター・アプリの使用](../common/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    ../common/buildpackSupport.md
+    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
 
     {: .navgroup-end}

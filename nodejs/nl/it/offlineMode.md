@@ -41,7 +41,7 @@ Fai attenzione che quando vengono installate le nuove versioni del pacchetto di 
 Per eliminare la necessità di accedere a https://registry.npmjs.org puoi includere tutti i moduli Node richiesti dalla tua applicazione all'interno dell'applicazione.  Per fare ciò esegui `npm install` per tutti i moduli dell'applicazione richiesti e includi la risultante directory `node_modules` con la tua applicazione trasmessa.
 
 Le tue dipendenze possono avere dipendenze, che hanno dipendenze e così via, ma il `package.json`
-contiene solo le dipendenze di livello superiore. Se una delle dipendenze utilizza un intervallo nel package.json e ne viene rilasciata una nuova versione, i moduli nella tua directory `node_modules` possono diventare obsoleti. *Shrinkwrap* ti aiuta a bloccare tutte le versioni delle dipendenze in modo che questo non succeda.  Per utilizzare shrinkwrap avvia una directory `node_modules` vuota o pulita. Quindi, nella directory root del tuo progetto immetti i seguenti comandi: 
+contiene solo le dipendenze di livello superiore. Se una delle dipendenze utilizza un intervallo nel package.json e ne viene rilasciata una nuova versione, i moduli nella tua directory `node_modules` possono diventare obsoleti. *Shrinkwrap* ti aiuta a bloccare tutte le versioni delle dipendenze in modo che questo non succeda.  Per utilizzare shrinkwrap avvia una directory `node_modules` vuota o pulita. Quindi, nella directory root del tuo progetto immetti i seguenti comandi:
 
 ```
 npm install

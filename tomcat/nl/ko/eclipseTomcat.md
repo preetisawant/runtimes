@@ -143,14 +143,14 @@ ibmcloud target --cf
 1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하고 대시보드로 이동하십시오. **리소스 작성**을 선택하십시오.
 2. **데이터 및 분석** 섹션을 선택한 후에 **{{site.data.keyword.cloudant_short_notm}}**을 선택하고 서비스를 작성하십시오.
 3. **연결** 보기로 이동하여 애플리케이션을 선택한 후에 **연결 작성**을 선택하십시오.
-4. 프롬프트가 표시되면 **다시 스테이징**을 선택하십시오. {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 신임 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
+4. 프롬프트가 표시되면 **다시 스테이징**을 선택하십시오. {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 인증 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
 
 환경 변수를 사용하면 배치 설정을 소스 코드와 구분할 수 있습니다. 예를 들어, 데이터베이스 비밀번호를 하드 코딩하는 대신 소스 코드에서 참조하는 환경 변수에 이 비밀번호를 저장할 수 있습니다.
 {: tip}
 
 ## 7단계: 데이터베이스 사용
 {: #use_database}
-이제 이 데이터베이스를 가리키도록 로컬 코드를 업데이트합니다. 특성 파일에 서비스의 신임 정보를 저장합니다. 이 파일은 애플리케이션이 로컬에서 실행 중인 경우에만 사용됩니다. {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우 신임 정보는 VCAP_SERVICES 환경 변수에서 읽습니다.
+이제 이 데이터베이스를 가리키도록 로컬 코드를 업데이트합니다. 특성 파일에 서비스의 인증 정보를 저장합니다. 이 파일은 애플리케이션이 로컬에서 실행 중인 경우에만 사용됩니다. {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우 인증 정보는 VCAP_SERVICES 환경 변수에서 읽습니다.
 
 1. Eclipse를 열고 파일 src/main/resources/cloudant.properties를 여십시오.
 
@@ -159,9 +159,9 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-2. 브라우저에서 {{site.data.keyword.Bluemix_notm}} UI를 열고 앱 -> 연결 -> Cloudant -> 신임 정보 보기를 선택하십시오.
+2. 브라우저에서 {{site.data.keyword.Bluemix_notm}} UI를 열고 앱 -> 연결 -> Cloudant -> 인증 정보 보기를 선택하십시오.
 
-3. 신임 정보의 `url`을 복사하여 `cloudant.properties` 파일의 `url` 필드에 붙여넣고 변경사항을 저장하십시오.  결과는 다음과 비슷합니다.
+3. 인증 정보의 `url`을 복사하여 `cloudant.properties` 파일의 `url` 필드에 붙여넣고 변경사항을 저장하십시오.  결과는 다음과 비슷합니다.
 
   ```
   cloudant_url=https://123456789 ... bluemix.cloudant.com

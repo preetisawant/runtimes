@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -31,7 +31,7 @@ all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicaz
 Puoi specificare la versione di Python che deve essere utilizzata dalla tua applicazione impostando python-versionnumber nel file runtime.txt nella root della tua applicazione. Ad esempio:
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

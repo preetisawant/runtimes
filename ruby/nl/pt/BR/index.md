@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -27,14 +27,14 @@ ser usado para seu app. É possível experimentar o app iniciador, fazendo e env
 {{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
-## Versões de runtime
+## Versões de tempo de execução
 {: #runtime_versions}
 
 É possível especificar a versão do Ruby a ser usada por seu aplicativo no Gemfile de seu aplicativo. Por exemplo:
 
 ```
   source 'https://rubygems.org'
-  ruby '2.4.1'
+  ruby '2.5.0'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'

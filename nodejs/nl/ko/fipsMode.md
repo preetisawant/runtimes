@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -13,10 +13,10 @@ lastupdated: "2018-07-24"
 # FIPS 모드
 {: #fips_mode}
 
-Nodejs 빌드팩 버전 v3.2-20160315-1257부터 v3.20.2-20180523-1639까지는 [FIPS ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)를 지원합니다.  
+Node.js 빌드팩 버전 v3.2-20160315-1257부터 v3.20.2-20180523-1639까지는 [FIPS ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards)를 지원합니다.  
 {: shortdesc}
 
-**OpenSSL FIPS 모듈은 더 이상 사용되지 않음:** Node.js 커뮤니티 버전에 따라 OpenSSL FIPS 모듈은 더 이상 사용되지 않고 2018년 8월 24일에 제거할 수 있습니다. [Node.js 빌드팩의 최신 업데이트](updates.html#fips-deprecation)에서 자세히 알아보십시오.
+**OpenSSL FIPS 모듈은 더 이상 사용되지 않음:** Node.js 빌드팩 v3.22부터 버전 6.x 및 8.x 런타임에서 OpenSSL FIPS 모듈을 더 이상 사용할 수 없습니다. 버전 4.x에만 OpenSSL FIPS 모듈이 계속 포함됩니다. [Node.js 빌드팩의 최신 업데이트](updates.html#fips-deprecation)에서 자세히 알아보십시오.
 
 FIPS 사용 노드 엔진을 사용하려면 환경 변수 FIPS_MODE를 true로 설정하십시오.
 예를 들어, 다음과 같습니다.

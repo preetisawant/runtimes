@@ -27,7 +27,7 @@ Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualiz
 ## Antes de Começar
 {: #prereqs}
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
-* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Compilador Swift ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://swift.org/download/) de sua plataforma.
 
 ## Etapa 1: clonar o aplicativo de amostra

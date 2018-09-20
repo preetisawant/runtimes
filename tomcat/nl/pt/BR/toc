@@ -11,18 +11,18 @@ Tomcat
 
     {: .navgroup id="howto"}
     eclipseTomcat.md
-    ../common/workingWithProxy.md
+    [Trabalhando com um proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    Aplicativos iniciadores e buildpacks da comunidade
-        ../common/starter_app_usage.md
-        ../common/byob.md
+    Aplicativos iniciadores e buildpacks de comunidade
+        [Usando os aplicativos iniciadores](../common/starter_app_usage.html)
+        [Usando os buildpacks de comunidade](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
-    [Versões de runtime](index.html#runtime_versions)
-    ../common/buildpackSupport.md
+    [Resolução de problemas para tempos de execução](../common/ts_runtimes.html)
+    [Versões do tempo de execução](index.html#runtime_versions)
+    [Instrução de suporte de buildpack](../common/buildpackSupport.html)
     {: .navgroup-end}

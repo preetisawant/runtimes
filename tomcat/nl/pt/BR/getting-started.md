@@ -29,8 +29,8 @@ Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualiz
 {: #prereqs}
 
 Você precisará do seguinte:
-* [ {{site.data.keyword.Bluemix_notm}}  conta ](https://console.bluemix.net/registration/)
-* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
+* [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Eclipse IDE for Java EE Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://maven.apache.org/download.cgi){: new_window}

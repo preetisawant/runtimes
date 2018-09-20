@@ -10,17 +10,17 @@ Python
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    ../common/workingWithProxy.md
+    [使用代理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     入门模板应用程序和社区 buildpack
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [使用入门模板应用程序](../common/starter_app_usage.html)
+        [使用社区 buildpack](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
-    ../common/buildpackSupport.md
+    [运行时的故障诊断](../common/ts_runtimes.html)
+    [Buildpack 支持语句](../common/buildpackSupport.html)
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -30,7 +30,7 @@ Das Buildpack 'python_buildpack' wird verwendet, wenn das Stammverzeichnis Ihrer
 Sie können die Version von Python, die von Ihrer App verwendet werden soll, durch Festlegen von 'python-versionnumber' in der Datei 'runtime.txt' im Stammverzeichnis Ihrer Anwendung angeben. Beispiel:
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

@@ -47,7 +47,7 @@ implementação sem erros.
     - `Comando` - o nome do executável para iniciar seu aplicativo (deve corresponder ao
 nome especificado no arquivo Package.swift).
 
-## Versões de runtime
+## Versões de tempo de execução
 {: #runtime_versions}
 
 O [Runtime for Swift
@@ -87,7 +87,7 @@ momento da implementação, usando o argumento de comando `ibmcloud cf push -b {
 ## Ambientes do desenvolvedor
 
 Os desenvolvedores têm diversas opções ao criar aplicativos do lado do servidor com
-o Swift. Aqueles que usam um dispositivo Apple macOS podem preferir usar o IDE Xcode, embora isso não seja um requisito. Apps baseados no Swift que serão implementados e
+o Swift. Aqueles que usam um dispositivo Apple macOS podem preferir usar o IDE Xcode, embora isso não seja um requisito.  Apps baseados no Swift que serão implementados e
 executados no {{site.data.keyword.Bluemix_notm}} podem usar qualquer editor de
 programação ou IDE.  O destaque e a claridade da sintaxe para Swift estão disponíveis para
 muitos editores populares. A ferramenta de linha de comandos REPL do Swift incluída nos binários de [Swift.org ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://swift.org/) permite compilação local e teste antes da implementação no {{site.data.keyword.Bluemix_notm}}.

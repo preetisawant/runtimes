@@ -10,17 +10,17 @@ Swift
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    ../common/workingWithProxy.md
+    [プロキシーの処理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
-    スターター・アプリケーションおよびコミュニティーのビルドパック
-        ../common/starter_app_usage.md
-        ../common/byob.md
+    スターター・アプリケーションおよびコミュニティー・ビルドパック
+        [スターター・アプリの使用](../common/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ../common/ts_runtimes.md
-    ../common/buildpackSupport.md
+    [ランタイムに関するトラブルシューティング](../common/ts_runtimes.html)
+    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
     {: .navgroup-end}

@@ -234,7 +234,7 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 ### 바인드된 서비스 정보 액세스
 {: #accessing_info_of_bound_services}
 
-애플리케이션에 서비스를 바인드하려는 경우 서비스에 대한 정보(예: 연결 신임 정보)는 Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
+애플리케이션에 서비스를 바인드하려는 경우 서비스에 대한 정보(예: 연결 인증 정보)는 Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt; 서비스의 이름, 유형, 플랜과 같은 정보를 설명합니다.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; 서비스의 연결 정보를 설명합니다.

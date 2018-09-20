@@ -13,7 +13,7 @@ ASP.NET 核心
     disablingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    ../common/workingWithProxy.md
+    [使用代理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -23,13 +23,13 @@ ASP.NET 核心
 
     {: .topicgroup}
     入门模板应用程序和社区 buildpack
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [使用入门模板应用程序](../common/starter_app_usage.html)
+        [使用社区 buildpack](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    ../common/buildpackSupport.md
+    [Buildpack 支持语句](../common/buildpackSupport.html)
     {: .navgroup-end}

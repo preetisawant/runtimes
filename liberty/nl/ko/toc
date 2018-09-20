@@ -38,7 +38,7 @@ Liberty for Java
     {: .topicgroup}
     오프라인 작업 또는 프록시 작업
         offlineMode.md
-        ../common/workingWithProxy.md
+        [프록시 작업](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,8 +49,8 @@ Liberty for Java
 
     {: .topicgroup}
     스타터 애플리케이션 및 빌드팩
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [스타터 앱 사용](../common/starter_app_usage.html)
+        [커뮤니티 빌드팩 사용](../common/byob.html)
 
     buildpackDefaults.md
     ../common/app_mng.md
@@ -60,5 +60,5 @@ Liberty for Java
     ts_index.md
     [IBM Cloud Log Analysis 시작하기](../../services/CloudLogAnalysis/index.html)
     updates.md
-    ../common/buildpackSupport.md
+    [빌드팩 지원 구문](../common/buildpackSupport.html)
     {: .navgroup-end}

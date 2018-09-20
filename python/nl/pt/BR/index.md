@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -27,14 +27,14 @@ que pode ser usado por seu app. É possível experimentar o app iniciador, fazen
 {{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
-## Versões de runtime
+## Versões de tempo de execução
 {: #runtime_versions}
 
 É possível especificar a versão do Python a ser usada por seu app, configurando python-versionnumber no arquivo runtime.txt
 na raiz de seu aplicativo. Por exemplo:
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

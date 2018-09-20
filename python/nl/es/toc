@@ -10,17 +10,17 @@ Python
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    ../common/workingWithProxy.md
+    [Cómo trabajar con un proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Aplicaciones de inicio y compilaciones de la comunidad
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [Utilización de las apps de inicio](../common/starter_app_usage.html)
+        [Utilización de compilación de la comunidad](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
-    ../common/buildpackSupport.md
+    [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html)
+    [Declaración de soporte de paquete de compilación](../common/buildpackSupport.html)
     {: .navgroup-end}

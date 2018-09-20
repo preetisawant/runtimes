@@ -15,7 +15,7 @@ lastupdated: "2018-06-27"
 # 커뮤니티 빌드팩 사용
 {: #using_buildpacks}
 
-원하는 런타임을 제공하는 {{site.data.keyword.Bluemix}} 카탈로그에서 스타터를 찾을 수 없는 경우 외부 빌드팩을 {{site.data.keyword.Bluemix_notm}}로 가져올 수 있습니다. `ibmcloud cf push` 명령을 사용하여 애플리케이션을 배치할 때 사용자 정의 Cloud Foundry 호환 빌드팩을 지정할 수 있습니다.
+원하는 런타임을 제공하는 스타터가 {{site.data.keyword.Bluemix}} 카탈로그에 없는 경우, 외부 빌드팩을 {{site.data.keyword.Bluemix_notm}}로 가져올 수 있습니다. `ibmcloud cf push` 명령을 사용하여 애플리케이션을 배치할 때 사용자 정의 Cloud Foundry 호환 빌드팩을 지정할 수 있습니다.
 {:shortdesc}
 
 사용자 자신의 빌드팩으로 사용할 수 있도록 Cloud Foundry 커뮤니티에서 외부 빌드팩을 제공합니다. 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하기 전에 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 설치해야 합니다.

@@ -13,14 +13,13 @@ lastupdated: "2018-07-12"
 # IBM Cloud Runtime for Swift
 {: #swift_runtime}
 
-L'exécution pour Swift sur {{site.data.keyword.Bluemix}} repose sur le [pack de construction {{site.data.keyword.Bluemix_notm}} pour Swift](https://github.com/IBM-Swift/swift-buildpack) (swift_buildpack).
-Ce pack de construction fournit un environnement d'exécution complet pour les applications Swift.
+L'exécution pour Swift sur {{site.data.keyword.Bluemix}} repose sur le [pack de construction {{site.data.keyword.Bluemix_notm}} pour Swift](https://github.com/IBM-Swift/swift-buildpack) (swift_buildpack). Ce pack de construction fournit un environnement d'exécution complet pour les applications Swift.
 {: shortdesc}
 
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} fournit une [application de démarrage](https://github.com/IBM-Cloud/Kitura-Starter) Swift basée sur Kitura ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"). L'application de démarrage Kitura est une application Swift simple que vous pouvez utiliser pour découvrir les types d'applications serveur que vous pouvez développer en utilisant le langage de programmation Swift. Cette application exemple crée un serveur HTTP Kitura de base qui renvoie un contenu HTML au client.
+{{site.data.keyword.Bluemix_notm}} fournit une [application de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Cloud/Kitura-Starter) Swift basée sur Kitura. L'application de démarrage Kitura est une application Swift simple que vous pouvez utiliser pour découvrir les types d'applications serveur que vous pouvez développer en utilisant le langage de programmation Swift. Cette application exemple crée un serveur HTTP Kitura de base qui renvoie un contenu HTML au client.
 
 **Remarque :** L'application de démarrage Kitura est destinée à être utilisée pour répondre à des besoins de formation. Vous pouvez expérimenter cette application en effectuant des modifications puis en les envoyant par push vers l'environnement {{site.data.keyword.Bluemix_notm}}. Voir [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide.
 
@@ -82,5 +81,5 @@ Pour trouver d'autres packages Swift à inclure dans votre application, allez à
 
 D'autres outils en ligne sont également proposés par IBM au développeur Swift.
 - [IBM Swift DevCenter ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/swift/) - site principal permettant d'accéder à toutes les informations relatives à IBM Swift. Vous pouvez y trouver des détails sur les offres IBM, des blogues, des événements sociaux, de la documentation, entre autres choses.
-- [Kitura.io ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.kitura.io/index.html) fournit des informations, des exemples et des ressources pour créer des applications Kitura. 
+- [Kitura.io ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.kitura.io/index.html) fournit des informations, des exemples et des ressources pour créer des applications Kitura.
 - [Swift@IBM Slack ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://swift-at-ibm-slack.mybluemix.net/) propose des forums pour poser des questions et résoudre des problèmes avec l'équipe Swift@IBM.

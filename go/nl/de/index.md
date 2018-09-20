@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -33,7 +33,7 @@ Sie können die Version von Go, die von Ihrer App verwendet werden soll, durch F
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.8.3",
+	"GoVersion": "go1.10",
 	"Deps": []
 }
 ```

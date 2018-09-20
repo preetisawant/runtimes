@@ -1,12 +1,16 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Python" audience="runtime" href="/docs/runtimes/python/getting-started.html"}}
+{: .toc subcollection="Python" audience="runtime" arm="384" href="/docs/runtimes/python/getting-started.html"}}
 Python
 
     {: .navgroup id="learn"}
     getting-started.md
     index.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    [Utilizzo di un proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -16,11 +20,7 @@ Python
         [Utilizzo dei pacchetti di build della community](../common/byob.html)
     {: .navgroup-end}
 
-    {: .navgroup id="howto"}
-    [Utilizza un proxy](../common/workingWithProxy.html)
-    {: .navgroup-end}
-
     {: .navgroup id="help"}
-    ts_index.md
+    [Risoluzione dei problemi relativi ai runtime](../common/ts_runtimes.html)
     [Istruzione di supporto per il pacchetto di build](../common/buildpackSupport.html)
     {: .navgroup-end}

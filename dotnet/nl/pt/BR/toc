@@ -13,7 +13,7 @@ ASP.NET Core
     disablingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    ../common/workingWithProxy.md
+    [Trabalhando com um proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -22,14 +22,14 @@ ASP.NET Core
     usingNuGet.md
 
     {: .topicgroup}
-    Aplicativos iniciadores e buildpacks da comunidade
-        ../common/starter_app_usage.md
-        ../common/byob.md
+    Aplicativos iniciadores e buildpacks de comunidade
+        [Usando os aplicativos iniciadores](../common/starter_app_usage.html)
+        [Usando os buildpacks de comunidade](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    ../common/buildpackSupport.md
+    [Instrução de suporte do buildpack](../common/buildpackSupport.html)
     {: .navgroup-end}

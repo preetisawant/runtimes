@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -13,6 +13,15 @@ lastupdated: "2018-07-24"
 {: #latest_updates}
 
 sdk-for-nodejs 빌드팩의 최신 업데이트 목록
+
+## 2018년 9월 7일: Node.js 빌드팩 v3.22 업데이트
+{:#fips-deprecation}
+**중요:** 이 빌드팩부터 SDK for Node.js 빌드팩에 버전 6.x 및 8.x용 Node.js 커뮤니티 릴리스 런타임이 포함됩니다. 이와 같이 변경되었으므로 Node.js OpenSSL FIPS 모듈이 이러한 버전의 빌드팩에 더 이상 포함되지 않습니다 .버전 4.x에만 OpenSSL FIPS 모듈이 계속 포함됩니다.  
+
+SDK for Node.js 빌드팩 v3.22에서는 IBM SDK for Node.js 버전 4.8.5 및 4.8.7과 Node.js 커뮤니티 버전 6.14.3, 6.14.4, 8.11.3 및 8.11.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.14.4입니다.
+
+이 릴리스에는 다음 보안 취약점에 대한 수정사항도 포함됩니다.
+* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 2018년 7월 24일: Node.js 빌드팩 v3.21 업데이트
 {:#fips-deprecation}
@@ -64,7 +73,7 @@ SDK for Node.js 빌드팩 v3.12는 IBM SDK for Node.js 버전 0.12.17, 0.12.18, 
 ## 2017년 3월 10일: Node.js 빌드팩 v3.11 업데이트
 이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.3, 4.8.0, 6.9.5 및 6.10.0을 지원합니다. 현재 기본 버전은 4.8.0입니다.
 
-새 런타임 외에 이 릴리스에는 devconsole UI를 사용하는 쉘 앱 관리 핸들러를 사용할 때 발생한 버그에 대한 수정사항이 포함됩니다. 또한 이 빌드팩은 Monitoring and Analytics 서비스에 대한 자동 구성 작동 방법을 변경합니다. 무료 사용제를 사용하는 애플리케이션에는 더 이상 로그 기능이 추가되지 않습니다. 이는 logmet으로 대체됩니다.
+새 런타임 외에 이 릴리스에는 devconsole UI를 사용하는 쉘 앱 관리 핸들러를 사용할 때 발생한 버그에 대한 수정사항이 포함됩니다. 또한 이 빌드팩은 Monitoring and Analytics 서비스에 대한 자동 구성 작동 방법을 변경합니다. 무료 플랜을 사용하는 애플리케이션에는 더 이상 로그 기능이 추가되지 않습니다. 이는 logmet으로 대체됩니다.
 
 ## 2017년 1월 20일: Node.js 빌드팩 v3.10 업데이트
 이 릴리스의 빌드팩은 IBM SDK for Node.js 런타임 버전 0.10.47, 0.10.48, 0.12.17, 0.12.18, 4.7.0, 4.7.2, 6.9.2 및 6.9.4를 지원합니다. 현재 기본 버전은 4.7.2입니다.  또한 이 릴리스는 [Cloud Foundry Node.js 빌드팩 v1.5.24](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.24)와 동기화됩니다.

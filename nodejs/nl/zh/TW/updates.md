@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -13,6 +13,15 @@ lastupdated: "2018-07-24"
 {: #latest_updates}
 
 sdk-for-nodejs 建置套件中的最新更新項目清單。
+
+## 2018 年 9 月 7 日：已更新 Node.js 建置套件 3.22 版
+{:#fips-deprecation}
+**重要事項**：從這個建置套件開始，SDK for Node.js 建置套件包含了 6.x 和 8.x 版的 Node.js 社群版本運行環境。由於這項變更，Node.js OpenSSL FIPS 模組不再包含於這些版本的建置套件中。只有 4.x 版繼續包含 OpenSSL FIPS 模組。  
+
+SDK for Node.js 建置套件 3.22 版提供 IBM SDK for Node.js 4.8.5、4.8.7 版，以及 Node.js 社群版本 6.14.3、8.11.3 及 8.11.4。預設值是最新的 6.x，因此它目前是 6.14.4。
+
+此版本也包含下列安全漏洞的修正程式：
+* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 2018 年 7 月 24 日：已更新 Node.js 建置套件 3.21 版
 {:#fips-deprecation}

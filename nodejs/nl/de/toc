@@ -16,9 +16,9 @@ SDK for Node.js
     dynatrace.md
 
     {: .topicgroup}
-    Offline oder mit Proxy arbeiten
+    Offline oder mit einem Proxy arbeiten
         offlineMode.md
-        ../common/workingWithProxy.md
+        [Mit einem Proxy arbeiten](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -29,14 +29,14 @@ SDK for Node.js
 
     {: .topicgroup}
     Starteranwendungen und Buildpacks
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [Starteranwendungen verwenden](../common/starter_app_usage.html)
+        [Community-Buildpacks verwenden](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    ../common/buildpackSupport.md
+    [Unterstützung für Buildpacks](../common/buildpackSupport.html)
 
     {: .navgroup-end}

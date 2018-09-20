@@ -28,8 +28,8 @@ aplicativo.
 {: #prereqs}
 
 Você precisará do seguinte:
-* [ {{site.data.keyword.Bluemix_notm}}  conta ](https://console.bluemix.net/registration/)
-* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
+* [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * Instale o .NET Core 1.1 SDK 1.0.4 de acordo com as instruções
 do [website do dot.net

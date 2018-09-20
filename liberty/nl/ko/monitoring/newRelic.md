@@ -12,7 +12,7 @@ lastupdated: "2018-06-27"
 # New Relic을 사용하여 {{site.data.keyword.cloud_notm}}의 Liberty 모니터링
 {: #new_relic}
 
-New Relic은 애플리케이션에 모니터링 메트릭을 제공하는 써드파티 서비스입니다. New Relic 서비스의 혜택에 대한 자세한 정보는 [New Relic](http://newrelic.com/java)을 참조하십시오.
+New Relic은 애플리케이션에 모니터링 메트릭을 제공하는 서드파티 서비스입니다. New Relic 서비스의 혜택에 대한 자세한 정보는 [New Relic](http://newrelic.com/java)을 참조하십시오.
 
 [Java 에이전트 매뉴얼 설치 문서](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation)에 따르면, New Relic 서비스를 사용하여 모니터하는 Java 애플리케이션은 일반적으로 번들로 제공되어야 하며 New Relic 에이전트 및 계정 라이센스 키로 구성되어야 합니다. {{site.data.keyword.Bluemix}} 환경에서
 New Relic 라이센스 계약과 계정을 확보하려면 {{site.data.keyword.Bluemix_notm}}에서

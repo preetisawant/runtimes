@@ -13,7 +13,7 @@ ASP.NET Core
     disablingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    ../common/workingWithProxy.md
+    [プロキシーの処理](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -22,14 +22,14 @@ ASP.NET Core
     usingNuGet.md
 
     {: .topicgroup}
-    スターター・アプリケーションおよびコミュニティーのビルドパック
-        ../common/starter_app_usage.md
-        ../common/byob.md
+    スターター・アプリケーションおよびコミュニティー・ビルドパック
+        [スターター・アプリの使用](../common/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    ../common/buildpackSupport.md
+    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
     {: .navgroup-end}

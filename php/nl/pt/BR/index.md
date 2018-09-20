@@ -44,7 +44,7 @@ RewriteCond %{ENV:BLUEMIX_REGION} !^$
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 ```
 
-## Versões de runtime
+## Versões de tempo de execução
 {: #runtime_versions}
 
 É possível especificar a versão do PHP a ser usado por seu app no arquivo composer.json. Por exemplo:

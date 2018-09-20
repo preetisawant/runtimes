@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -13,6 +13,15 @@ lastupdated: "2018-07-24"
 {: #latest_updates}
 
 sdk-for-nodejs buildpack 中最新更新的列表。
+
+## 2018 年 9 月 7 日：更新了 Node.js buildpack V3.22
+{:#fips-deprecation}
+**重要信息：**从该 buildpack 开始，SDK for Node.js buildpack 包含适用于 V6.x 和 V8.x 的 Node.js 社区发行版运行时。在此更改后，这些 buildpack 版本中将不再包含 Node.js OpenSSL FIPS 模块。仅 V4.x 继续包含 OpenSSL FIPS 模块。  
+
+SDK for Node.js buildpack V3.22 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.14.3、V6.14.4、V8.11.3 和 V8.11.4。缺省值是最新的 6.x，所以目前是 6.14.4。
+
+此发行版中还包含针对以下安全漏洞的修订：
+* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 2018 年 7 月 24 日：更新了 Node.js buildpack V3.21
 {:#fips-deprecation}

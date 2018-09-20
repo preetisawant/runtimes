@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -30,7 +30,7 @@ El python_buildpack se utilizará si el directorio raíz de la app contiene un a
 Puede especificar la versión de Python que va a utilizar la app estableciendo python-versionnumber en el archivo runtime.txt en la raíz de la aplicación. Por ejemplo:
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

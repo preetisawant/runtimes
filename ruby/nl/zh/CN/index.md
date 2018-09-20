@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-21"
 
 ```
   source 'https://rubygems.org'
-  ruby '2.4.1'
+  ruby '2.5.0'
   gem 'sinatra', '>= 0'
 gem 'haml', '>= 0'
 gem 'json', '>=0'

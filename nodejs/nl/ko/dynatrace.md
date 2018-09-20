@@ -12,7 +12,7 @@ lastupdated: "2018-06-27"
 # Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링
 {: #using_dynatrace}
 
-Dynatrace는 앱에 대한 모니터링을 제공하는 써드파티 서비스입니다. Dynatrace를 Node.js 애플리케이션과 통합할 수 있지만 IBM에서는 써드파티 서비스에 대한 지원을 제공하지 않습니다. 자세한 정보는 [써드파티 서비스](../common/buildpackSupport.html#third-party)를 참조하십시오.
+Dynatrace는 앱에 대한 모니터링을 제공하는 서드파티 서비스입니다. Dynatrace를 Node.js 애플리케이션과 통합할 수 있지만 IBM에서는 서드파티 서비스에 대한 지원을 제공하지 않습니다. 자세한 정보는 [서드파티 서비스](../common/buildpackSupport.html#third-party)를 참조하십시오.
 
 Dynatrace 및 해당 라이센싱에 대한 정보는 [Dynatrace 애플리케이션 모니터링 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.dynatrace.com/en/products/application-monitoring.html)을 참조하십시오.
 
@@ -23,14 +23,14 @@ Dynatrace를 사용하도록 Node.js 애플리케이션을 구성하는 경우 N
 1. Dynatrace 계정에 로그인하여 PaaS 토큰을 생성하십시오. 세부사항은 Dynatrace Cloud Foundry 앱 모니터링 문서에서 [PaaS 토큰 생성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.dynatrace.com/support/help/cloud-platforms/cloud-foundry/how-do-i-monitor-cloud-foundry-applications/) 절을 참조하십시오.
 
   환경 ID 및 토큰을 적어 두십시오.
-1. 다음 명령을 실행하여 Dynatrace 신임 정보를 가리키는 사용자 제공 서비스를 작성하십시오. 서비스 이름에는 `dynatrace` 문자열이 포함되어야 합니다(예: `dynatrace-service`).
+1. 다음 명령을 실행하여 Dynatrace 인증 정보를 가리키는 사용자 제공 서비스를 작성하십시오. 서비스 이름에는 `dynatrace` 문자열이 포함되어야 합니다(예: `dynatrace-service`).
 
     ```
 ibmcloud cf cups dynatrace-service -p "environmentid, apitoken"
     ```
     {: codeblock}
     
-    **참고:** `environmentid` 또는 `apitoken`을 신임 정보와 바꾸지 마십시오. 명령을 실행하면 해당 값을 입력하라는 프롬프트가 표시됩니다.
+    **참고:** `environmentid` 또는 `apitoken`을 인증 정보와 바꾸지 마십시오. 명령을 실행하면 해당 값을 입력하라는 프롬프트가 표시됩니다.
 
     Dynatrace Managed를 사용하는 경우 `apiurl` 필드도 추가하십시오. 이 필드는 관리 서버의 API 엔드포인트를 지정합니다.
     

@@ -15,5 +15,4 @@ lastupdated: "2018-02-22"
 Verwenden Sie die folgenden Ressourcen zur Fehlerbehebung bei Ihren Liberty for Java-Anwendungen und -Buildpacks:
 
 * [Fehlerbehebung für Laufzeiten](../common/ts_runtimes.html#runtimes)
-* [Fehlerbehebung für Laufzeiten: Liberty](../common/ts_runtimes.html#ts_liberty)
 * [Anwendungsmanagement](../common/app_mng.html)

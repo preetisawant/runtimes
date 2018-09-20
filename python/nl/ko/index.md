@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -31,7 +31,7 @@ python_buildpack은 앱의 루트 디렉토리에 requirements.txt 파일 또는
 애플리케이션 루트에 있는 runtime.txt 파일에서 python-versionnumber를 설정하여 앱에서 사용할 Python 버전을 지정할 수 있습니다. 예를 들어, 다음과 같습니다.
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 

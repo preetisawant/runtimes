@@ -10,18 +10,18 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    ../common/workingWithProxy.md
+    [Mit einem Proxy arbeiten](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Starteranwendungen und Community-Buildpacks
-        ../common/starter_app_usage.md
-        ../common/byob.md
+        [Starteranwendungen verwenden](../common/starter_app_usage.html)
+        [Community-Buildpacks verwenden](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
+    [Fehlerbehebung für Laufzeiten](../common/ts_runtimes.html)
     [Verfügbare Versionen](index.html#runtime_versions)
-    ../common/buildpackSupport.md
+    [Unterstützung für Buildpacks](../common/buildpackSupport.html)
     {: .navgroup-end}

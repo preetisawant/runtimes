@@ -18,7 +18,7 @@ SDK for Node.js
     {: .topicgroup}
     Trabajar fuera de línea o con un proxy
         offlineMode.md
-        ../common/workingWithProxy.md
+        [Cómo trabajar con un proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -28,15 +28,15 @@ SDK for Node.js
     ../common/app_mng.md
 
     {: .topicgroup}
-    Aplicaciones de inicio y paquetes de compilación
-        ../common/starter_app_usage.md
-        ../common/byob.md
+    Aplicaciones de inicio y compilaciones
+        [Utilización de las apps de inicio](../common/starter_app_usage.html)
+        [Utilización de compilación de la comunidad](../common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    ../common/buildpackSupport.md
+    [Declaración de soporte de paquete de compilación](../common/buildpackSupport.html)
 
     {: .navgroup-end}

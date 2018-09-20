@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-24"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -13,6 +13,15 @@ lastupdated: "2018-07-24"
 {: #latest_updates}
 
 Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
+
+## 7 de setembro de 2018: buildpack Node.js v3.22 atualizado
+{:#fips-deprecation}
+**Importante:** a partir desse buildpack, o buildpack SDK for Node.js inclui os tempos de execução de liberação de comunidade do Node.js para as versões 6.x e 8.x. Com essa mudança, o módulo OpenSSL FIPS do Node.js não é mais incluído nessas versões do buildpack. Somente a versão 4.x continua a incluir o módulo OpenSSL FIPS.   
+
+O buildpack SDK for Node.js v3.22 fornece as versões 4.8.5 e 4.8.7 do IBM SDK for Node.js e as versões de comunidade 6.14.3, 6.14.4, 8.11.3 e 8.11.4 do Node.js. O padrão é a 6.x mais recente, então atualmente é a 6.14.4.
+
+Essa liberação também inclui as correções para a vulnerabilidade de segurança a seguir:
+* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 24 de julho de 2018: buildpack v3.21 do Node.js atualizado
 {:#fips-deprecation}

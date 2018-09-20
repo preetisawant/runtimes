@@ -44,13 +44,12 @@ versão de mecanismo do nó mais recente incluída no buildpack.
 {: #offline_applications}
 
 Para eliminar a necessidade de acessar https://registry.npmjs.org, é possível incluir todos os módulos do Node que o aplicativo
-requer dentro dele. Para fazer isso, execute `npm install` para todos os módulos
+requer dentro dele.  Para fazer isso, execute `npm install` para todos os módulos
 aplicativos necessários e, em seguida, inclua o diretório `node_modules` resultante com seu aplicativo enviado por push.
 
 Suas dependências podem ter dependências que possuam dependências e assim por diante, mas o `package.json`
 conterá somente as dependências de nível superior. Se uma das dependências usar um intervalo no package.json e uma nova versão dele
-for liberada, os módulos no diretório `node_modules` poderão se tornar obsoletos. *Termo-retrátil* ajuda você a bloquear todas as versões de dependência para que isso não possa ocorrer.  Para usar o termo-retrátil, comece com um diretório `node_modules` vazio ou limpo. 
-Em seguida, no diretório-raiz do projeto, execute os comandos a seguir:
+for liberada, os módulos no diretório `node_modules` poderão se tornar obsoletos. *Termo-retrátil* ajuda você a bloquear todas as versões de dependência para que isso não possa ocorrer.  Para usar o termo-retrátil, comece com um diretório `node_modules` vazio ou limpo. Em seguida, no diretório-raiz do projeto, execute os comandos a seguir:
 
 ```
 npm install

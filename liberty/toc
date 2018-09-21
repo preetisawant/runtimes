@@ -25,6 +25,7 @@ Liberty for Java
     autoConfig.md
     customizingJRE.md
     using_own_jre.md
+    installFeatures.md
     usingBetaFeatures.md
     [Opt out of bound services](autoConfig.html#opting_out)
 

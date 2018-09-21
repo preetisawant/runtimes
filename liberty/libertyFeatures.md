@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,30 +12,34 @@ lastupdated: "2018-03-16"
 # Liberty features supported in {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-The Liberty for Java instant runtime includes a subset of Liberty features.  Some features which the Liberty provides are not available in the Liberty for Java instant runtime because they are not applicable in the cloud environment.
+The Liberty for Java runtime includes a subset of Liberty features. To use a feature that is not included in the runtime, see [Install Liberty features](installFeatures.html). For a complete list of the features available in Liberty, along with Java EE versions and other information, see
+[Liberty features ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
 
-The following features are included which are specific to {{site.data.keyword.Bluemix_notm}}:
+## Cloud-specific features
+{:#cloud-features}
+
+The following features are included and are specific to {{site.data.keyword.Bluemix_notm}}:
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-A subset of the available features are enabled by default when deploying WAR or EAR files.  See [Stand-alone apps](optionsForPushing.html#stand_alone_apps) for details.
+A subset of the available features are enabled by default when deploying WAR or EAR files. See [Stand-alone apps](optionsForPushing.html#stand_alone_apps) for details.
 
-The Liberty for Java runtime also makes some Liberty beta features available. Those features are not listed, but can be found at [Using the beta features](/docs/runtimes/liberty/usingBetaFeatures.html).
+The Liberty for Java runtime also makes some Liberty beta features available. These features are listed in [Using the beta features](/docs/runtimes/liberty/usingBetaFeatures.html).
 
-Keep in mind that a server cannot load incompatible features, so be sure it is configured to enable only features that are compatible. See
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>.
+## Feature compatibility
+{:#feature-compatibility}
 
-To see a complete list of the features available in Liberty along with Java EE versions and other information see
-[Liberty Features](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)
-in the IBM Knowledge Center.
+Some features that Liberty provides are not available in the Liberty for Java runtime because they are not applicable in the cloud environment.
 
-Applications that use remote EJBs can be deployed to {{site.data.keyword.Bluemix_notm}}
-however, the remote EJBs are not remotely accessible with the CORBA/IIOP
-protocol due to port restrictions in the {{site.data.keyword.Bluemix_notm}} environment.
+Keep in mind that a server cannot load incompatible features, so be sure it is configured to enable only features that are compatible. See [Supported Java EE 6 and 7 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html").
+
+Applications that use remote EJBs can be deployed to {{site.data.keyword.Bluemix_notm}}, but the remote EJBs are not remotely accessible with the CORBA/IIOP
+protocol because of port restrictions in the {{site.data.keyword.Bluemix_notm}} environment.
 
 ## Liberty features index
 {: #libertyfeat_index}
+
 Skip to the section of the feature list by using the following index, or you can look through the [Liberty for Java features list](#libertyfeat_list).
 
 ### A-E

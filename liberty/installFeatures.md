@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-03"
 
 ---
 
@@ -28,7 +28,7 @@ For information on using pre-runtime hooks, see [Configure Pre-Runtime Hooks ![E
    ```
    #!/bin/sh
    echo "Installing javaee-8.0"
-   export PATH=$PATH:$HOME/.java/jre/bin
+   export PATH=$PATH:$HOME/app/.java/jre/bin
 
    $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
    ```

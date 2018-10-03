@@ -28,7 +28,7 @@ For information on using pre-runtime hooks, see [Configure Pre-Runtime Hooks ![E
    ```
    #!/bin/sh
    echo "Installing javaee-8.0"
-   export PATH=$PATH:$HOME/app/.java/jre/bin
+   export PATH=$PATH:$HOME/.java/jre/bin
 
    $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
    ```

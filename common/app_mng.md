@@ -33,7 +33,7 @@ App Management is a set of development and debugging utilities that can be enabl
 
 ### Node.js utilities (deprecated)
 
-**Deprecation Note**: App Management utilities are deprecated for Node.js applications. Some utilities that were available for both Node.JS and Liberty applications that are now only available for Liberty applications. These utilities are deprecated for Node.js applications.
+**Deprecation Note**: App Management utilities are deprecated for Node.js applications. Some utilities that were available for both Node.JS and Liberty applications are now only available for Liberty applications. These utilities are deprecated for Node.js applications.
 
 * [proxy](#proxy)
 * [noproxy](#noproxy)

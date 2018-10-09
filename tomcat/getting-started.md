@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -31,7 +31,6 @@ Throughout these docs, references to the Cloud Foundry CLI are now updated to th
 You'll need the following:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/registration/)
 * [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
-* [Eclipse IDE for Java EE Developers ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * [Maven ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://maven.apache.org/download.cgi){: new_window}
 * [Apache Tomcat version 8.0.41 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tomcat.apache.org/download-80.cgi#8.0.41 ){: new_window}

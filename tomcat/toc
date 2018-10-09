@@ -10,7 +10,6 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    eclipseTomcat.md
     [Working with a proxy](../common/workingWithProxy.html)
     {: .navgroup-end}
 

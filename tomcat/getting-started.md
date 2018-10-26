@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-10-24"
 
 ---
 
@@ -30,7 +30,7 @@ Throughout these docs, references to the Cloud Foundry CLI are now updated to th
 
 You'll need the following:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * [Maven ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://maven.apache.org/download.cgi){: new_window}
 * [Apache Tomcat version 8.0.41 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://tomcat.apache.org/download-80.cgi#8.0.41 ){: new_window}
@@ -143,14 +143,17 @@ ibmcloud cf apps
 ## Step 5: Add a database
 {: #add_database}
 
-Next, we'll add an {{site.data.keyword.cloudant_short_notm}} database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_short}}.
+Next, we'll add an {{site.data.keyword.cloudant_short_notm}} NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
 
-1. In your browser, log in to {{site.data.keyword.Bluemix_short}} and go to the Dashboard. Select **Create Resource**.
-2. Choose the **Data and Analytics** section, then select **{{site.data.keyword.cloudant_short_notm}}** and create your service.
-3. Go to the  **Connections** view and select your application, then **Create connection**.
-4. Select **Restage** when prompted. {{site.data.keyword.Bluemix_short}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_short}}.
+1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create resource**.
+1. Search for **{{site.data.keyword.cloudant_short_notm}}**, and select the service.
+1. For **Available authentication methods**, select **Use both legacy credentials and IAM**. You can leave the default settings for the other fields. Click **Create** to create the service.
+1. In the navigation, go to **Connections**. Select your application, and click **Create connection**.
+1. Connect to your application using the default values, and click **Connect & restage app**. Then, click **Restage** when prompted.
 
-Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code.
+   {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
+
+Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store it in an environment variable that you reference in your source code.
 {: tip}
 
 ## Step 6: Use the database

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Tomcat" audience="runtime" arm="390" href="/docs/runtimes/tomcat/getting-started.html"}}
+{: .toc subcollection="Tomcat" audience="runtime" arm="390" href="/docs/runtimes/tomcat/getting-started.html" path="runtimes/tomcat"}
 Tomcat
 
     {: .navgroup id="learn"}

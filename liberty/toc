@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html"}
+{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html" path="runtimes/liberty"}
 Liberty for Java
 
     {: .navgroup id="learn"}

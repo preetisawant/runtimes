@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -13,6 +13,11 @@ lastupdated: "2018-09-21"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### October 29, 2018: Updated Liberty buildpack v3.26-20181023-1545
+* The default Liberty runtime version, `18.0.0.3`, was updated to include the [PH02063 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10729557) interim fix.
+* The monthly Liberty runtime version was updated to the 2018.10.0.0 release.
+* The IBM JRE version was updated to 8 SR5 FP22.
 
 ### September 21, 2018: Updated Liberty buildpack v3.25-20180918-1034
 * The buildpack now supports Java Platform, Enterprise Edition 8.0. To use Java EE 8, install the `javaee-8.0` Liberty feature when you push your app. Learn more in [Install Liberty features](installFeatures.html).

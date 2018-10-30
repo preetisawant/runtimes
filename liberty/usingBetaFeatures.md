@@ -19,8 +19,6 @@ The Liberty beta features provide early access to new functionality and programm
 | Features |
 | ------ |
 | `logstashCollector-1.1` |
-| `mpConfig-1.3` |
-| `mpFaultTolerance-1.1` |
 | `validator-1.0` |
 {: caption="Table 1. Liberty Beta features available in Liberty for Java in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
@@ -31,7 +29,7 @@ To use the Liberty beta features in {{site.data.keyword.Bluemix_notm}}, you will
   ```
 <server>
     <featureManager>
-        <feature>mpConfig-.13</feature>
+        <feature>logstashCollector-1.1</feature>
     </featureManager>
 </server>
   ```

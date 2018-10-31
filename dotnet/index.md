@@ -28,10 +28,3 @@ The {{site.data.keyword.Bluemix}} ASP.NET Core buildpack is used if there are on
 {: #starter_application}
 
 {{site.data.keyword.Bluemix_notm}} provides an ASP.NET Core starter application.  The ASP.NET Core starter application is a simple app that provides a template that you can use. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment.  See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter application.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
-* [ASP.NET Core Overview](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

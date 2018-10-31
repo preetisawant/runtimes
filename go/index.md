@@ -64,11 +64,3 @@ If your app requires a Go version that is not listed,
 you can use the external
 [Go buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} to
 deploy the application.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Cloud Foundry buildpack for Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

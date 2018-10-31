@@ -152,10 +152,3 @@ There are some attributes that are automatically disabled by the Liberty buildpa
 </tr>
 </table>
 {: caption="Table 1. Attributes disabled by Liberty for Java" caption-side="top"}
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Liberty runtime](index.html)
-* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

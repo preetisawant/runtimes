@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -124,15 +124,18 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-## Step 5: Connect a MySQL database
-{: connect_mysql}
+## Step 5: Add a database
+{: #add_database}
 
-Next, we'll add a ClearDB MySQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
+Next, we'll add an {{site.data.keyword.cloudant_short_notm}} NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
 
-1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create Resource**.
-2. Choose the **Data and Analytics** section, then select **ClearDB Managed MySQL Database** and create your service.
-3. Go to the  **Connections** view and select your application, then **Create connection**.
-4. Select **Restage** when prompted. {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
+1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create resource**.
+1. Search for **{{site.data.keyword.cloudant_short_notm}}**, and select the service.
+1. For **Available authentication methods**, select **Use both legacy credentials and IAM**. You can leave the default settings for the other fields. Click **Create** to create the service.
+1. In the navigation, go to **Connections**. Select your application, and click **Create connection**.
+1. Connect to your application using the default values, and click **Connect & restage app**. Then, click **Restage** when prompted.
+
+   {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 
 Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store it in an environment variable that you reference in your source code.
 {: tip}
@@ -140,35 +143,42 @@ Environment variables enable you to separate deployment settings from your sourc
 ## Step 6: Use the database locally
 {: #use_database}
 
-We're now going to update your local code to point to this database. We'll store the credentials for the services in a JSON file. This file will get used ONLY when the application is running locally. When running in {{site.data.keyword.Bluemix_notm}}, the credentials will be read from the VCAP_SERVICES environment variable.
+We're now going to update your local code to point to this database. We'll store the credentials for the services in a JSON file. This file will get used ONLY when the application is running locally. When running in {{site.data.keyword.Bluemix_notm}}, the credentials will be read from the `VCAP_SERVICES` environment variable.
 
-1. Create the file src/GetStartedDotnet/vcap-local.json
+1. In the `src/GetStartedDotnet` directory, create a `vcap-local.json` file.
 
-2. In your browser, go to the {{site.data.keyword.Bluemix_notm}} dashboard and select **_your app_ > Connections**. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&vellip;**) and select **View credentials**.
+1. Copy and paste the following JSON object into the `vcap-local.json` file, and save your changes.
 
-3. Copy and paste the entire json object from the credentials to the `vcap-local.json` file and save the changes.  The result will be something like the following example:
-  ```
-  {
-  "cleardb": [
-    {
-      "credentials": {
-        ...
-        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
-        ...
-      },
-      ...
-      "name": "My ClearDB service instance name",
-      ...
-    }
-  ]
-}
-  ```
+   ```json
+   {
+     "services": {
+       "cloudantNoSQLDB": [
+         {
+           "credentials": {
+             "url":"CLOUDANT_DATABASE_URL"
+           },
+           "label": "cloudantNoSQLDB"
+         }
+       ]
+     }
+   }
+   ```
+   {: codeblock}
 
-4. From the `get-started-aspnet-core/src/GetStartedDotnet` directory restart your application with the `dotnet run` command.
+1. In your browser, go to the {{site.data.keyword.Bluemix_notm}} dashboard and select **_your app_ > Connections**. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&vellip;**) and select **View credentials**.
 
-Refresh your browser view at: http://localhost:5000/. Any names you enter into the app will now get added to the database.
+1. Copy and paste just the `url` value from the credentials to the `url` field of the `vcap-local.json` file, replacing `CLOUDANT_DATABASE_URL`.
 
-Your local app and the {{site.data.keyword.Bluemix_notm}} app are sharing the database.  View your {{site.data.keyword.Bluemix_notm}} app at the URL listed in the output of the push command from above.  Names you add from either app should appear in both when you refresh the browsers.
+1. From the `get-started-aspnet-core/src/GetStartedDotnet` directory, restart your application by running the following command.
+
+   ```
+   dotnet run
+   ```
+   {: codeblock}
+
+1. Refresh your browser view at http://localhost:5000/. Any names you enter into the app will now get added to the database.
+
+Your local app and the {{site.data.keyword.Bluemix_notm}} app share the database.  View your {{site.data.keyword.Bluemix_notm}} app at the URL listed in the output of the `ibmcloud cf push` command.  Names you add from either app should appear in both when you refresh the browsers.
 
 Remember, if you don't need your app live, stop it so you don't incur any unexpected charges.
 {: tip}

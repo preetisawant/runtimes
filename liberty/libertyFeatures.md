@@ -236,10 +236,3 @@ Skip to the section of the feature list by using the following index, or you can
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Liberty runtime](index.html)
-* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

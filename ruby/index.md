@@ -60,10 +60,3 @@ If your app requires a Ruby version that is not listed,
 you can use the external
 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack) to
 deploy the app.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Cloud Foundry buildpack for Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://api.rubyonrails.org/)

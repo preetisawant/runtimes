@@ -294,10 +294,3 @@ Download the appropriate unrestricted policy files and add them to your applicat
 {: codeblock}
 
 When you push your application, these jars overlay the default policy jars in the Java runtime. This process enables AES 256-bit encryption.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Liberty runtime](index.html)
-* [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

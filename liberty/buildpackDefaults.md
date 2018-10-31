@@ -47,11 +47,3 @@ Applications that are deployed as a server directory or a packaged server are un
 The buildpack provides a default JRE for the application. The major or minor version of the JRE might change between the buildpack releases. The minor version of the JRE might be updated frequently while the major version is rarely updated. The change in the major version of the JRE might adversely affect the application.
 
 To ensure that the application is not affected by the major version change, set the environment variable with the appropriate JRE version as described in [Customizing the JRE](customizingJRE.html). For best results, adopt Java 8 for your applications.
-
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Liberty runtime](index.html)
-* [Liberty Profile Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

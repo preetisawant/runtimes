@@ -85,10 +85,3 @@ You can also add <b>&dash;J&dash;Djavax.net.debug=ssl</b> to the jconsole comman
     <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
 ```
 {: codeblock}
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Liberty runtime](index.html)
-* [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

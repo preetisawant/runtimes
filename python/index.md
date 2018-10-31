@@ -59,9 +59,3 @@ If your application requires a Python version that is not listed,
 you can use the external
 [Python buildpack](https://github.com/cloudfoundry/python-buildpack) to
 deploy the app.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

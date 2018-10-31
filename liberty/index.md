@@ -29,12 +29,3 @@ The Liberty buildpack is used when the following kinds of applications are deplo
 ## Starter application
 {: #starter_application}
 {{site.data.keyword.Bluemix_notm}} provides several Liberty starter applications.  The Liberty starter applications are simple Liberty apps that provide a template that you can use. You can experiment with the starter apps, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment.  See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter applications.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Liberty Profile Overview](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-* [Managing Liberty apps](../common/app_mng.html#Utilities)
-* [Getting started with {{site.data.keyword.loganalysislong_notm}}](/docs/services/CloudLogAnalysis/index.html)
-* [Getting started with {{site.data.keyword.prf_hublong}}](/docs/services/AvailabilityMonitoring/index.html)

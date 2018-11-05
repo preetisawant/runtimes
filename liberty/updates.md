@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-02"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2018-10-29"
 ## A list of the latest updates in the Liberty buildpack.
 
 ### October 29, 2018: Updated Liberty buildpack v3.26-20181023-1545
-* The default Liberty runtime version, `18.0.0.3`, was updated to include the [PH02063 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10729557) interim fix.
+
+* The default Liberty runtime version, `18.0.0.3`, was updated to include a fix for the [CVE-2014-7810 security vulnerability ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055).
 * The monthly Liberty runtime version was updated to the 2018.10.0.0 release.
 * The IBM JRE version was updated to 8 SR5 FP22.
 

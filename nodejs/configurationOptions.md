@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -20,6 +20,20 @@ sdk-for-nodejs buildpack.
 ## NPM scripts
 {: #npm_scripts}
 NPM provides a scripting facility allowing you to run scripts, including **preinstall** and **postinstall** scripts which are applied before and after your node_modules are installed.  See [npm-scripts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.npmjs.com/misc/scripts) for complete details.
+
+## Auto-size heap in low-memory environments
+{: #heap_autosize}
+
+When you run the IBM SDK for Node.js buildpack in low-memory environments, your app might occasionally restart due to memory constraints. Because the Node.js runtime does not know the amount of available memory, its garbage collector can wait past the memory limit, causing the restart.
+
+To avoid this problem, set the `OPTIMIZE_MEMORY` environment variable to `true`. The buildpack will set the Node.js `max_old_space_size` variable to a value based on the available memory.
+
+For example:
+
+```
+ibmcloud cf set-env my-app OPTIMIZE_MEMORY true
+```
+{: codeblock}
 
 ## Cache behavior
 {: #cache_behavior}

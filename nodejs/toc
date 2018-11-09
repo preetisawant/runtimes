@@ -13,7 +13,7 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
-    dynatrace.md
+    hooks.md
 
     {: .topicgroup}
     Work offline or with a proxy
@@ -24,7 +24,6 @@ SDK for Node.js
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    fipsMode.md
     ../common/app_mng.md
 
     {: .topicgroup}

@@ -17,11 +17,23 @@ A list of the latest updates in the ASP.NET Core buildpack.
 
 **Important:** Beginning with this release, the ASP.NET Core buildpack is based on the [Cloud Foundry .NET Core buildpack ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html). This release includes version 2.1.3 of the dotnet-core Cloud Foundry buildpack.
 
+* Add support for .NET Core SDK 1.1.9
+* Add support for .NET Core SDK 2.0.2
+* Add support for .NET Core SDK 2.0.3
+* Add support for .NET Core SDK 2.1.201
+* Add support for .NET Core SDK 2.1.300
 * Add support for .NET Core SDK 2.1.301
 * Add support for .NET Framework 1.0.11
 * Add support for .NET Framework 1.1.8
 * Add support for .NET Framework 2.0.7
+* Add support for .NET Framework 2.1.0
 * Add support for .NET Framework 2.1.1
+* Remove support for .NET Core SDK 1.1.0
+* Remove support for .NET Core SDK 1.0.0-preview2-003156
+* Remove support for .NET Core SDK 2.0.0
+* Remove support for .NET Core SDK 2.0.0-preview2-006497
+* Remove support for .NET Framework 1.0.4
+* Remove support for .NET Framework 1.1.1
 * Update Node.js version to 6.14.3
 * Change default .NET Core SDK 2.1.301
 

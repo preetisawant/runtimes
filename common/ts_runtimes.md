@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -288,6 +288,24 @@ Modify the configured trust store to trust the DigitCert ROOT CA.
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### Application fails to start: General troubleshooting
+
+For the {{site.data.keyword.runtime_nodejs_notm}} buildpack V3.23 or later, try vendoring your dependencies as a first troubleshooting step. Vendoring dependencies means that you package the dependencies in the same source files as your application. This can resolve various errors that can occur when dependencies assume that they are in the same base directory as the application.
+
+1. From your application root directory, install dependencies by running the following command.
+
+   ```bash
+   npm install
+   ```
+   {: codeblock}
+1. Ensure that your `.cfignore` file does not include the following line:
+
+   ```
+   node_modules/
+   ```
+
+Now when you deploy your application with the  `ibmcloud cf push` command, instead of downloading your dependencies to a separate location, the dependencies are copied into the same directory as the rest of the application.
+
 ### Application fails to start with a "No space left on device" error
 {: #no_space_left_on_device}
 
@@ -299,7 +317,7 @@ A Node.js application fails to start with a "No space left on device" error. For
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 Node.js applications using NPM versions prior to version 3 consume more space downloading dependencies.
 {: tsCauses}
@@ -320,7 +338,7 @@ Modify the package.json file for your application to use an NPM version 3 or gre
 ```
 {: codeblock}
 
-### Application restarts due to memory contraints
+### Application restarts due to memory constraints
 {: #oom}
 
 Node.js does not know how much memory is available to the application, so the garbage collector might not run before memory is exhausted.

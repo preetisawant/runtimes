@@ -198,7 +198,7 @@ Diego provides an interactive shell through the `ibmcloud cf ssh` command, so th
 
 The inspector utility can be used to create CPU usage profiles, add breakpoints, and debug code, all while your application runs on {{site.data.keyword.cloud_notm}}.  For Node.js versions before 6.3.0, the inspector enables the Node inspector debugger interface.  For more information about the Node inspector, see the Readme for [node-inspector on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/node-inspector/node-inspector){: new_window}.  For Node.js versions 6.3.0 and greater, the *inspector* utility uses the [V8 Inspector Integration for Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://nodejs.org/dist/latest-v6.x/docs/api/debugger.html#debugger_v8_inspector_integration_for_node_js){:new_window}.
 
-##### **For Node.js versions after 6.3.0**
+##### For Node.js versions after 6.3.0
 When you start debugging mode, *proxy* is automatically enabled, even if you use a version of Node.js that does not include *proxy*. Versions of Node.js after 6.3.0 do not include *proxy.* If you use the *inspector* utility with versions of Node.js after 6.3.0, you can turn off *proxy* again by using *noproxy.*
 
 Instead of using *proxy* to access the *inspector* interface, you use the Developer Tools capability of the Google Chrome web browser.  
@@ -225,7 +225,7 @@ If the *inspector* utility is active, the log contains messages similar to the f
 Use an up-to-date version of the Google Chrome web browser to browse to `chrome://inspect`.
 From this URL, you see your app listed along with a link to your applictation files such as `file://home/vcap/app/app.js`., then select **inspect** to access the inspect interface.
 
-##### **For Node.js versions before 6.3.0**
+##### For Node.js versions before 6.3.0
 If you use the *proxy,* you can access the *inspector* interface at `https://myApp.mybluemix.net/bluemix-debug/inspector`.
 
 If you do not use the *proxy* utility, enable access to the application URL by using local port forwarding with the following command:

@@ -31,16 +31,25 @@ This buildpack supports the following versions, those marked as deprecated will 
 | 2.1.301                 |   Yes            |
 | 2.1.300                 |   No             |
 | 2.1.201                 |   No             |
+| 2.0.3                   |   No             |
+| 2.0.2                   |   No             |
+| 1.1.9                   |   No             |
+| 1.0.4                   |   No             |
+
 
 ### .NET Core runtime versions
 
 | .NET Core runtime version | Release type      |
 |---------------------------|-------------------|
 | 2.1.1                     | LTS               |
+| 2.1.0                     | LTS               |
+| 2.0.7                     | LTS               |
 | 2.0.3                     | Current           |
 | 2.0.2                     | Current           |
-| 1.1.9                     | LTS               |
+| 2.0.0                     | LTS               |
+| 1.1.8                     | LTS               |
 | 1.1.2                     | LTS               |
+| 1.0.11                    | LTS               |
 | 1.0.5                     | LTS               |
 | 1.0.4                     | LTS               |
 

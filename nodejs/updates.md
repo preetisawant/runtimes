@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-09"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -16,11 +16,15 @@ A list of the latest updates in the sdk-for-nodejs buildpack.
 
 ## November 9, 2018: Updated Node.js buildpack v3.23
 
-**Important:** Beginning with this buildpack, the SDK for Node.js buildpack no longer includes Application Management or the version 4.x runtime. With the removal of the 4.x runtime, the OpenSSL FIPS module is no longer available.
+**Important:** This release of the buildpack includes the following key changes.
 
-The SDK for Node.js buildpack v3.23 is now based on the community buildpack v1.6.32 and fixes an issue with having more than one dynatrace service bound to an application.
+* The buildpack no longer includes Application Management or the version 4.x runtime. With the removal of the 4.x runtime, the OpenSSL FIPS module is no longer available.
+* To use an unsupported version of the Node.js runtime, you must now specify the exact version. Non-numeric characters, including but not limited to `~ ^ > x *`, can no longer be used to specify a range of versions.  
+* Due to differences in how the community buildpack handles dependencies, it is recommended that you [vendor your dependencies](../common/ts_runtimes.html#ts_nodejs) to avoid deployment failures.
 
-The SDK for Node.js buildpack v3.23 provides Node.js community versions 6.14.3, 6.14.4, 8.11.3 and 8.11.4. The default is latest 6.x, so it is currently 6.14.4.
+The SDK for Node.js buildpack v3.23 is based on the community buildpack v1.6.32 and fixes an issue with having more than one Dynatrace service bound to an application.
+
+The SDK for Node.js buildpack v3.23 provides Node.js community versions 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0, and 10.10.0. The default is latest 6.x, so it is currently 6.14.4.
 
 ## September 7, 2018: Updated Node.js buildpack v3.22
 {:#fips-deprecation}

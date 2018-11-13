@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-12"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -25,6 +25,8 @@ A list of the latest updates in the sdk-for-nodejs buildpack.
 The SDK for Node.js buildpack v3.23 is based on the community buildpack v1.6.32 and fixes an issue with having more than one Dynatrace service bound to an application.
 
 The SDK for Node.js buildpack v3.23 provides Node.js community versions 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0, and 10.10.0. The default is latest 6.x, so it is currently 6.14.4.
+
+**Note:** The [DB2 Node.js module ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/ibm_db) does not yet support Node.js version 10. To use DB2 on the buildpack, do not upgrade to Node.js version 10.
 
 ## September 7, 2018: Updated Node.js buildpack v3.22
 {:#fips-deprecation}

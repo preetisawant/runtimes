@@ -10,18 +10,18 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Working with a proxy](../common/workingWithProxy.html)
+    [Working with a proxy](runtimes/common/workingWithProxy.html)
     [Enforce HTTPS on all pages](index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Starter applications and buildpacks
-        [Using the starter apps](../common/starter_app_usage.html)
-        [Using community buildpacks](../common/byob.html)
+        [Using the starter apps](runtimes/common/starter_app_usage.html)
+        [Using community buildpacks](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Troubleshooting for runtimes](../common/ts_runtimes.html)
-    [Buildpack support statement](../common/buildpackSupport.html)
+    [Troubleshooting for runtimes](runtimes/common/ts_runtimes.html)
+    [Buildpack support statement](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

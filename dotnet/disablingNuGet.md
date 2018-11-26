@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-11-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,15 +12,16 @@ lastupdated: "2018-06-27"
 # Disable the NuGet Package Cache
 {: #disabling_the_nuget_package_cache}
 
-In some situations it may be necessary to clear the NuGet package cache for your application.  Doing so will clear any existing cached NuGet packages and prevent the buildpack from caching any new packages.
+In some situations, it might be necessary to clear the NuGet package cache for your application.  Doing so clears any existing cached NuGet packages and prevent the buildpack from caching any new packages.
 
-You can do this by setting the `CACHE_NUGET_PACKAGES` environment variable to `false` using the {{site.data.keyword.Bluemix_notm}} CLI:
+You can clear the cache by setting the `CACHE_NUGET_PACKAGES` environment variable to `false` using the {{site.data.keyword.Bluemix_notm}} CLI:
 
 ```shell
   ibmcloud cf set-env <app_name> CACHE_NUGET_PACKAGES false
 ```
+{: codeblock}
 
-Alternatively, you can set the `CACHE_NUGET_PACKAGES` environment variable to `false` in your application's manifest.yml file:
+Alternatively, you can set the `CACHE_NUGET_PACKAGES` environment variable to `false` in your application's `manifest.yml` file:
 
 ```yml
 ---
@@ -30,3 +31,4 @@ applications:
   env:
     CACHE_NUGET_PACKAGES: false
 ```
+{: codeblock}

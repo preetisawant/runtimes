@@ -11,25 +11,26 @@ ASP.NET Core
 
     {: .navgroup id="howto"}
     disablingNuGet.md
+    usingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    [Working with a proxy](../common/workingWithProxy.html)
+    [Working with a proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     buildOutputfiles.md
     usingCustomLib.md
-    usingNuGet.md
+
 
     {: .topicgroup}
     Starter applications and community buildpacks
-        [Using the starter apps](../common/starter_app_usage.html)
-        [Using community buildpacks](../common/byob.html)
+        [Using the starter apps](runtimes/common/starter_app_usage.html)
+        [Using community buildpacks](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    [Buildpack support statement](../common/buildpackSupport.html)
+    [Buildpack support statement](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

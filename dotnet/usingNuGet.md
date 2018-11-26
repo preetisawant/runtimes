@@ -10,9 +10,10 @@ lastupdated: "2017-05-31"
 {:codeblock: .codeblock}
 
 
-# About customizing NuGet package sources
+# Customize NuGet package sources
 {: #customizing_nuget}
-You can use the NuGet.Config file in the application's root directory to control where the application downloads dependencies. In the following example, configuring the `<packageSources>` property defines any keys and API URLs for the application to retrieve packages.
+
+You can use the `NuGet.Config` file in the application's root directory to control where the application downloads dependencies. In the following example, configuring the `<packageSources>` property defines any keys and API URLs for the application to retrieve packages.
 ```
    <?xml version="1.0" encoding="utf-8"?>
    <configuration>

@@ -22,14 +22,14 @@ Liberty for Java
     using_own_jre.md
     installFeatures.md
     usingBetaFeatures.md
-    [Opt out of bound services](autoConfig.html#opting_out)
+    [Opt out of bound services](runtimes/liberty/autoConfig.html#opting_out)
 
     {: .topicgroup}
     Monitor Liberty in IBM Cloud
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
-        [Getting started with Availability Monitoring](../../services/AvailabilityMonitoring/index.html)
+        [Getting started with Availability Monitoring](services/AvailabilityMonitoring/index.html)
 
     {: .topicgroup}
     Work offline or with a proxy
@@ -54,7 +54,7 @@ Liberty for Java
 
     {: .navgroup id="help"}
     ts_index.md
-    [Getting started with IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html)
+    [Getting started with IBM Cloud Log Analysis](services/CloudLogAnalysis/index.html)
     updates.md
     [Buildpack support statement](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

@@ -22,6 +22,6 @@ Tomcat
 
     {: .navgroup id="help"}
     [Troubleshooting for runtimes](runtimes/common/ts_runtimes.html)
-    [Runtime versions](index.html#runtime_versions)
+    [Runtime versions](runtimes/tomcat/index.html#runtime_versions)
     [Buildpack support statement](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

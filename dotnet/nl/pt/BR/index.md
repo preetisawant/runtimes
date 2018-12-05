@@ -31,10 +31,3 @@ saída do comando *dotnet publish*.
 O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do ASP.NET Core.  O aplicativo iniciador do ASP.NET Core é um app simples que fornece um modelo que pode ser usado. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
 {{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
-* [Visão geral do ASP.NET Core](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

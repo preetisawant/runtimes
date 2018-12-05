@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="PHP" audience="runtime" arm="385" href="/docs/runtimes/php/getting-started.html"}}
+{: .toc subcollection="PHP" audience="runtime" arm="385" href="/docs/runtimes/php/getting-started.html" path="runtimes/php"}
 PHP
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Utilisation d'un proxy](../common/workingWithProxy.html)
+    [Utilisation d'un proxy](runtimes/common/workingWithProxy.html)
     [Imposer l'utilisation de HTTPS sur toutes les pages](index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Applications de démarrage et packs de construction
-        [Utilisation des applications de démarrage](../common/starter_app_usage.html)
-        [Utilisation de packs de construction de communauté](../common/byob.html)
+        [Utilisation des applications de démarrage](runtimes/common/starter_app_usage.html)
+        [Utilisation de packs de construction de communauté](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html)
-    [Déclaration de support pour les packs de construction](../common/buildpackSupport.html)
+    [Traitement des incidents liés aux contextes d'exécution](runtimes/common/ts_runtimes.html)
+    [Déclaration de support pour les packs de construction](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

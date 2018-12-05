@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -24,11 +24,7 @@ licença beta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/was
 
 | Recursos |
 | ------ |
-| `audit-1.0` |
 | `logstashCollector-1.1` |
-| `mpConfig-1.3` |
-| `mpFaultTolerance-1.1` |
-| `usageMetering-1.0` |
 | `validator-1.0` |
 {: caption="Tabela 1. Recursos do Liberty Beta disponíveis no Liberty for Java em{{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
@@ -40,8 +36,7 @@ Para usar os recursos beta do Liberty no {{site.data.keyword.Bluemix_notm}}, ser
   ```
 <server>
     <featureManager>
-        <feature>usageMetering-1.0</feature>
-        <feature>validator-1.0</feature>
+        <feature>logstashCollector-1.1</feature>
     </featureManager>
 </server>
   ```

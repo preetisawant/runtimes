@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-09-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,9 +12,6 @@ lastupdated: "2018-05-08"
 
 # Versões de runtime
 {: #runtime_versions}
-
-
-{: shortdesc}
 
 ## Versões suportadas
 {: #supported_versions}
@@ -31,20 +28,30 @@ Esse buildpack suporta as versões a seguir; aquelas marcadas como descontinuada
 
 | Versão SDK .NET        | Padrão          |
 |-------------------------|------------------|
+| 2.1.301                 |   Sim            |
+| 2.1.300                 |   Não             |
+| 2.1.201                 |   Não             |
+| 2.0.3                   |   Não             |
+| 2.0.2                   |   Não             |
+| 1.1.9                   |   Não             |
 | 1.0.4                   |   Não             |
-| 1.1.0                   |   Sim (somente F#)  |
-| 2.0.0                   |   Sim            |
+
 
 ### Versões de runtime do .NET Core
 
 | Versão do runtime do .NET Core | Tipo de Release      |
 |---------------------------|-------------------|
-| 1.0.4 (descontinuado)        | LTS               |
-| 1.0.5                     | LTS               |
-| 1.1.1 (descontinuado)        | LTS               |
+| 2.1.1                     | LTS               |
+| 2.1.0                     | LTS               |
+| 2.0.7                     | LTS               |
+| 2.0.3                     | Atual           |
+| 2.0.2                     | Atual           |
+| 2.0.0                     | LTS               |
+| 1.1.8                     | LTS               |
 | 1.1.2                     | LTS               |
-| 2.0.0-preview2-25407-01   | Atual (pré-visualização) |
-| 2.0.0                     | Atual           |
+| 1.0.11                    | LTS               |
+| 1.0.5                     | LTS               |
+| 1.0.4                     | LTS               |
 
 ## Especificando a versão SDK .NET
 
@@ -52,7 +59,7 @@ Controle a versão do .NET SDK com um arquivo `global.json` opcional no diretór
 ```
    {
       "sdk": {
-        "version": "2.0.0"
+        "version": "2.1.301"
       }
    }
 ```

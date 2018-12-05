@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -18,11 +18,7 @@ Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로
 
 |기능 |
 | ------ |
-| `audit-1.0` |
 | `logstashCollector-1.1` |
-| `mpConfig-1.3` |
-| `mpFaultTolerance-1.1` |
-| `usageMetering-1.0` |
 | `validator-1.0` |
 {: caption="표 1. {{site.data.keyword.Bluemix_notm}}의 Liberty for Java에서 사용 가능한 Liberty 베타 기능" caption-side="top"}
 
@@ -33,8 +29,7 @@ Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로
   ```
 <server>
     <featureManager>
-        <feature>usageMetering-1.0</feature>
-        <feature>validator-1.0</feature>
+        <feature>logstashCollector-1.1</feature>
     </featureManager>
 </server>
   ```

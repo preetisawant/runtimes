@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-13"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -16,15 +16,16 @@ sdk-for-nodejs ビルドパックの最新更新のリスト。
 
 ## 2018 年 9 月 7 日: 更新された Node.js ビルドパック v3.22
 {:#fips-deprecation}
-**重要:** このビルドパック以降、SDK for Node.js ビルドパックには、バージョン 6.x および 8.x の Node.js コミュニティー・リリース・ランタイムが含まれています。この変更により、Node.js OpenSSL FIPS モジュールは、ビルドパックのこれらのバージョンには含まれなくなりました。バージョン4.x にのみ、引き続き OpenSSL FIPS モジュールが含まれます。  
 
-SDK for Node.js ビルドパック v3.22 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、および Node.js コミュニティー・バージョン 6.14.3、6.14.4、8.11.3、8.11.4 が提供されます。デフォルトは最新の 6.x です。したがって、現在は 6.14.4 です。
+**重要:** このビルドパック以降、SDK for Node.js ビルドパックには、バージョン 6.x および 8.x の Node.js コミュニティー・リリース・ランタイムが含まれています。 この変更により、Node.js OpenSSL FIPS モジュールは、ビルドパックのこれらのバージョンには含まれなくなりました。 バージョン4.x にのみ、引き続き OpenSSL FIPS モジュールが含まれます。  
+
+SDK for Node.js ビルドパック v3.22 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、および Node.js コミュニティー・バージョン 6.14.3、6.14.4、8.11.3、8.11.4 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.14.4 です。
 
 このリリースには、以下のセキュリティー脆弱性に対する修正も含まれます。
 * [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 2018 年 7 月 24 日: 更新された Node.js ビルドパック v3.21
-{:#fips-deprecation}
+
 **重要:** このリリースの最新の Node.js 6.x および 8.x のバージョンから、SDK for Node.js ビルドパックは、Node.js コミュニティー・リリースに基づきます。 この変更により、ビルドパック内の Node.js OpenSSL FIPS モジュールは更新されなくなります。 現在の OpenSSL FIPS モジュールおよび IBM SDK for Node.js ビルドは、2018 年 8 月 24 日現在、削除の対象です。 詳しくは、[Aligning the Node.js Buildpack to Community Runtimes (Node.js ビルドパックをコミュニティー・ランタイムに合わせる)![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660)ブログ投稿を参照してください。
 
 SDK for Node.js ビルドパック v3.21 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.13.0、8.9.4、および Node.js コミュニティーのバージョン 6.14.3、8.11.3 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.14.3 です。
@@ -33,13 +34,13 @@ SDK for Node.js ビルドパック v3.21 では、IBM SDK for Node.js バージ�
 * [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
 
 ## 2018 年 6 月 1 日: 更新された Node.js ビルドパック v3.20.2
-SDK for Node.js ビルドパック v3.20.2 では、現行の Node.js ランタイムに対する Dynatrace Managed PaaS 統合が追加されます。 『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
+SDK for Node.js ビルドパック v3.20.2 では、現行の Node.js ランタイムに対する Dynatrace Managed PaaS 統合が追加されます。 
 
 ## 2018 年 5 月 17 日: 更新された Node.js ビルドパック v3.20.1
-SDK for Node.js ビルドパック v3.20.1 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が修正されます。 『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
+SDK for Node.js ビルドパック v3.20.1 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が修正されます。 
 
 ## 2018 年 4 月 9 日: 更新された Node.js ビルドパック v3.20
-SDK for Node.js ビルドパック v3.20 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が追加されます。 『[Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Node.js のモニター](dynatrace.html)』を参照してください。
+SDK for Node.js ビルドパック v3.20 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が追加されます。 
 
 ## 2018 年 3 月 16 日: 更新された Node.js ビルドパック v3.19
 SDK for Node.js ビルドパック v3.19 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.12.3、6.13.0、8.9.3、および 8.9.4 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.13.0 です。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -288,6 +288,24 @@ DigitCert ROOT CA を信頼するように、構成済みトラストストア�
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### アプリケーションが開始に失敗する: 一般的なトラブルシューティング
+
+{{site.data.keyword.runtime_nodejs_notm}} ビルドパック V3.23 以降の場合、トラブルシューティングの最初のステップとして、依存関係をベンダリングしてみてください。依存関係をベンダリングするとは、アプリケーションと同じソース・ファイル内に依存関係をパッケージすることです。これによって、依存関係がアプリケーションと同じベース・ディレクトリー内にあると想定している場合に発生する可能性のあるさまざまなエラーを解決できます。
+
+1. アプリケーションのルート・ディレクトリーから、以下のコマンドを実行して依存関係をインストールします。
+
+   ```bash
+   npm install
+   ```
+   {: codeblock}
+1. `.cfignore` ファイルに以下の行が含まれていないことを確認します。
+
+   ```
+   node_modules/
+   ```
+
+これで、別の場所に依存関係をダウンロードする代わりに、`ibmcloud cf push` コマンドを使用してアプリケーションをデプロイすると、依存関係はアプリケーションの残りと同じディレクトリーにコピーされるようになります。
+
 ### 「No space left on device」エラーでアプリケーションが開始に失敗する
 {: #no_space_left_on_device}
 
@@ -299,7 +317,7 @@ DigitCert ROOT CA を信頼するように、構成済みトラストストア�
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 NPM バージョン 3 より前のバージョンを使用している Node.js アプリケーションでは、依存関係のダウンロード時により多くのスペースを使用します。
 {: tsCauses}

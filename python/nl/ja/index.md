@@ -53,9 +53,3 @@ python-3.6.4
 * 3.6.4
 
 アプリケーションが、リストされていない Python バージョンを必要とする場合は、外部の [Python ビルドパック](https://github.com/cloudfoundry/python-buildpack)を使用してアプリケーションをデプロイできます。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Cloud Foundry buildpack for the Python Language](https://github.com/cloudfoundry/python-buildpack)

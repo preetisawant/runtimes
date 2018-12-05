@@ -294,10 +294,3 @@ Diego 셀에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일�
 {: codeblock}
 
 애플리케이션을 푸시하면 이 jar이 Java 런타임의 기본 정책 jar을 오버레이합니다. 이 프로세스를 통해 AES 256비트 암호화가 활성화됩니다.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Liberty 런타임](index.html)
-* [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

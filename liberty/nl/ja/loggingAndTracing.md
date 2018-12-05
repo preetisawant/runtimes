@@ -101,10 +101,3 @@ SSH フィーチャーを使用して {{site.data.keyword.Bluemix_notm}} CLI を
   {: codeblock}
 
 `scp` およびその他の類似ツールを使用してダンプ・ファイルの表示およびダウンロードを行うことも可能です。 詳しくは、[SSH を使用したアプリケーションへのアクセス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) を参照してください。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty ランタイム](index.html)
-* [Liberty の概要](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

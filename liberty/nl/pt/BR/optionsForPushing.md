@@ -271,10 +271,3 @@ do usuário é gerado automaticamente pelo Cloud Foundry, por exemplo, unHwANpjA
 gerada automaticamente pelo Cloud Foundry, por exemplo, pvyCY0YzX9pu5.
 
 Para serviços ligados que não sejam automaticamente configurados pelo buildpack do Liberty, o aplicativo precisa gerenciar o acesso do recurso de backend sozinho.
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

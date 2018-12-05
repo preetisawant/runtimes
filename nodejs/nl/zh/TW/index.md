@@ -33,10 +33,3 @@ var port = (process.env.PORT || 3000);
 ## 應用程式管理
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}} 提供若干公用程式來管理 Node.js 應用程式及進行除錯。如需完整的詳細資料，請參閱[應用程式管理](../common/app_mng.html)。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Node.js ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)

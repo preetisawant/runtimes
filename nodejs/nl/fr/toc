@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html"}
+{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html" path="runtimes/nodejs"}
 SDK for Node.js
 
     {: .navgroup id="learn"}
@@ -13,30 +13,29 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
-    dynatrace.md
+    hooks.md
 
     {: .topicgroup}
     Travailler en mode hors ligne ou avec un proxy
         offlineMode.md
-        [Utilisation d'un proxy](../common/workingWithProxy.html)
+        [Utilisation d'un proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    fipsMode.md
     ../common/app_mng.md
 
     {: .topicgroup}
     Applications de démarrage et packs de construction
-        [Utilisation des applications de démarrage](../common/starter_app_usage.html)
-        [Utilisation de packs de construction de communauté](../common/byob.html)
+        [Utilisation des applications de démarrage](common/starter_app_usage.html)
+        [Utilisation de packs de construction de communauté](common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [Déclaration de support pour les packs de construction](../common/buildpackSupport.html)
+    [Déclaration de support pour les packs de construction](common/buildpackSupport.html)
 
     {: .navgroup-end}

@@ -152,10 +152,3 @@ Liberty buildpack 会自动禁用一些属性。您无法覆盖这些属性。�
 </tr>
 </table>
 {: caption="表 1. Liberty for Java 禁用的属性" caption-side="top"}
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

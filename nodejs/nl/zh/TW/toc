@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html"}
+{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html" path="runtimes/nodejs"}
 SDK for Node.js
 
     {: .navgroup id="learn"}
@@ -13,30 +13,29 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
-    dynatrace.md
+    hooks.md
 
     {: .topicgroup}
     離線工作或使用 Proxy
         offlineMode.md
-        [使用 Proxy](../common/workingWithProxy.html)
+        [使用 Proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    fipsMode.md
     ../common/app_mng.md
 
     {: .topicgroup}
     入門範本應用程式及建置套件
-        [使用入門範本應用程式](../common/starter_app_usage.html)
-        [使用社群建置套件](../common/byob.html)
+        [使用入門範本應用程式](common/starter_app_usage.html)
+        [使用社群建置套件](common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [建置套件支援聲明](../common/buildpackSupport.html)
+    [建置套件支援聲明](common/buildpackSupport.html)
 
     {: .navgroup-end}

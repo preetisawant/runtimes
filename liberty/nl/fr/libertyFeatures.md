@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,26 +12,34 @@ lastupdated: "2018-03-16"
 # Fonctions Liberty prises en charge dans {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-L'environnement d'exécution instantané Liberty for Java inclut un sous-ensemble des fonctions de Liberty.  Certaines fonctions fournies par Liberty ne sont pas disponibles dans Liberty for Java, car elles ne s'appliquent pas à l'environnement cloud.
+L'environnement d'exécution Liberty for Java inclut un sous-ensemble des fonctions Liberty.  Pour utiliser une fonction ne faisant pas partie de cet environnement, voir [Installation de fonctions Liberty](installFeatures.html). Pour la liste complète des fonctions disponibles dans Liberty, ainsi que des versions de Java EE et d'autres informations, voir
+[Fonctions Liberty ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
 
-Les fonctions incluses suivantes sont spécifiques à {{site.data.keyword.Bluemix_notm}} :
+## Fonctions spécifiques au cloud
+{:#cloud-features}
+
+Les fonctions suivantes sont incluses et sont spécifiques à {{site.data.keyword.Bluemix_notm}} :
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-Un sous-ensemble des fonctions disponibles sont activées par défaut lors du déploiement des fichiers WAR ou EAR.  Voir [Applications autonomes](optionsForPushing.html#stand_alone_apps) pour plus de détails.
+Un sous-ensemble des fonctions disponibles sont activées par défaut lors du déploiement des fichiers WAR ou EAR. Voir [Applications autonomes](optionsForPushing.html#stand_alone_apps) pour plus de détails.
 
-L'exécution Liberty for Java met également à disposition quelques fonctions bêta Liberty, qui ne sont pas listées mais figurant dans [Utilisation des fonctions bêta](/docs/runtimes/liberty/usingBetaFeatures.html).
+L'exécution Liberty for Java met également à disposition quelques fonctions bêta Liberty, Ces fonctions sont répertoriées dans [Utilisation des fonctions bêta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
-Gardez à l'esprit qu'un serveur ne peut pas charger de fonctions incompatibles, assurez-vous donc qu'il est configuré pour n'activer que des fonctions qui sont compatibles. Voir
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinaisons de fonctions Java EE 6 et 7 prises en charge</a>.
+## Compatibilité des fonctions
+{:#feature-compatibility}
 
-Pour afficher une liste complète des fonctions disponibles dans Liberty accompagnée d'informations relatives aux versions Java EE versions et d'autres détails, voir [Fonctions Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html) dans IBM Knowledge Center.
+Certaines fonctions fournies par Liberty ne sont pas disponibles dans Liberty for Java, car elles ne s'appliquent pas à l'environnement cloud.
 
-Les applications qui utilisent des EJB distants peuvent être déployées dans {{site.data.keyword.Bluemix_notm}}. Toutefois, les EJB distants ne sont pas accessibles à distance avec le protocole CORBA/IIOP en raison de restrictions de port dans l'environnement {{site.data.keyword.Bluemix_notm}}.
+Gardez à l'esprit qu'un serveur ne peut pas charger de fonctions incompatibles, assurez-vous donc qu'il est configuré pour n'activer que des fonctions qui sont compatibles. Voir [Combinaisons de fonctions Java EE 6 et 7 prises en charge](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html").
+
+Les applications qui utilisent des EJB distants peuvent être déployées dans {{site.data.keyword.Bluemix_notm}}. Toutefois, les EJB distants ne sont pas accessibles à distance avec le protocole CORBA/IIOP
+en raison de restrictions de port dans l'environnement {{site.data.keyword.Bluemix_notm}}.
 
 ## Index des fonctionnalités Liberty
 {: #libertyfeat_index}
+
 Passez à la section appropriée de la liste des fonctionnalités en utilisant l'index suivant. Vous pouvez sinon parcourir la [Liste des fonctionnalités Liberty for Java](#libertyfeat_list).
 
 ### A à E
@@ -228,10 +236,3 @@ Passez à la section appropriée de la liste des fonctionnalités en utilisant l
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -73,7 +73,7 @@ New Relic 대시보드에 액세스하십시오.
 New Relic 계정과 라이센스 키가 이미 있으면 "사용자 제공 서비스"를 사용하여 기존의 New Relic 서비스를 애플리케이션에 바인드할 수 있습니다.
 
 1. 기존의 라이센스 키를 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오.  예를 들어, 기존의 라이센스 키가 1234567이면 {{site.data.keyword.Bluemix_notm}} CLI를 사용하여 "사용자 제공 서비스를 작성"하고 다음과 같이 프롬프트되면 라이센스 키 1234567을 제공합니다.
-  
+
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -104,10 +104,3 @@ New Relic 서비스의 자동 구성은 빌드팩 프레임워크를 통해 제�
 * 옵트 아웃이 옵션이 아닙니다.
 * 서비스 통합에 New Relic의 에이전트인 Java 에이전트가 사용됩니다. 따라서, server.xml 파일의 클라우드 변수가 아니라 Java 옵션을 통해 구성됩니다.
 * 구성에 VCAP_SERVICES 및 VCAP_APPLICATION이 사용됩니다.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Liberty 런타임](index.html)
-* [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

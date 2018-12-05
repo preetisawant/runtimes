@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -18,11 +18,7 @@ Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含
 
 |特性|
 | ------ |
-| `audit-1.0` |
 | `logstashCollector-1.1` |
-| `mpConfig-1.3` |
-| `mpFaultTolerance-1.1` |
-| `usageMetering-1.0` |
 | `validator-1.0` |
 {: caption="表 1. {{site.data.keyword.Bluemix_notm}} 中 Liberty for Java 可用的 Liberty 測試版特性" caption-side="top"}
 
@@ -34,8 +30,7 @@ Liberty 測試版特性可讓您提早存取未來 Liberty 版本中可能包含
   ```
 <server>
     <featureManager>
-        <feature>usageMetering-1.0</feature>
-        <feature>validator-1.0</feature>
+        <feature>logstashCollector-1.1</feature>
     </featureManager>
 </server>
   ```

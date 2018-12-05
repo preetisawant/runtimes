@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Dotnet" audience="runtime" arm="391" href="/docs/runtimes/dotnet/getting-started.html"}
+{: .toc subcollection="Dotnet" audience="runtime" arm="391" href="/docs/runtimes/dotnet/getting-started.html" path="runtimes/dotnet"}
 ASP.NET Core
 
     {: .navgroup id="learn"}
@@ -11,25 +11,26 @@ ASP.NET Core
 
     {: .navgroup id="howto"}
     disablingNuGet.md
+    usingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    [使用 Proxy](../common/workingWithProxy.html)
+    [使用 Proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     buildOutputfiles.md
     usingCustomLib.md
-    usingNuGet.md
+
 
     {: .topicgroup}
     入門範本應用程式及社群建置套件
-        [使用入門範本應用程式](../common/starter_app_usage.html)
-        [使用社群建置套件](../common/byob.html)
+        [使用入門範本應用程式](runtimes/common/starter_app_usage.html)
+        [使用社群建置套件](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    [建置套件支援聲明](../common/buildpackSupport.html)
+    [建置套件支援聲明](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

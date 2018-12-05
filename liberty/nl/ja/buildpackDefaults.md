@@ -53,11 +53,3 @@ Liberty フィーチャーのデフォルトの変更に影響されません。
 マイナー・バージョンは頻繁に更新されることがあります。 JRE のメジャー・バージョンの変更はアプリケーションに悪い影響を及ぼすことがあります。
 
 メジャー・バージョンの変更がアプリケーションに影響を及ぼさないことを確実にするには、[JRE のカスタマイズ](customizingJRE.html)に説明されているように、該当の JRE バージョンを指定して環境変数を設定します。 最高の結果を得るには、アプリケーションに対して Java 8 を採用してください。
-
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty ランタイム](index.html)
-* [Liberty プロファイル概要](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

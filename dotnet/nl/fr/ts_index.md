@@ -9,11 +9,11 @@ lastupdated: "2018-09-13"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Ressources de dépannage
+# Troubleshooting resources
 {: #ts_dotnet}
 
-Dépannez vos applications et packs de construction ASP.NET Core avec les ressources suivantes :
+Troubleshoot your ASP.NET Core applications and buildpacks with the following resources:
 
-* [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html#runtimes)
+* [Troubleshooting for runtimes](../common/ts_runtimes.html#runtimes)
 * [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
-* [Présentation d'ASP.NET Core](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}
+* [ASP.NET Core Overview](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

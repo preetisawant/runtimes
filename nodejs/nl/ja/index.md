@@ -33,10 +33,3 @@ var port = (process.env.PORT || 3000);
 ## アプリケーション管理
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}} には、Node.js アプリケーションを管理およびデバッグするために数多くのユーティリティーが用意されています。  詳しくは、[『アプリケーション管理』](../common/app_mng.html)を参照してください。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Node.js ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)

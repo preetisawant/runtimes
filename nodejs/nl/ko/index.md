@@ -33,10 +33,3 @@ var port = (process.env.PORT || 3000);
 ## App Management
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}}는 Node.js 앱을 관리하고 디버깅하는 몇 가지 유틸리티를 제공합니다.  전체 세부사항은 [App Management](../common/app_mng.html)를 참조하십시오.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Node.js ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)

@@ -123,7 +123,7 @@ When enabled, the buildpack starts a proxy agent that is located between your ap
 
 Some App Management utilities require you to use the *proxy* utility with your application, and can start *proxy* automatically.
 
-**Deprecation Note**: For Node.js, the {{{site.data.keyword.Bluemix_notm}} version of Cloud Foundry runs in Diego Cells. The *noproxy* feature is for non-Diego Cells.
+**Deprecation Note**: For Node.js, the {{site.data.keyword.Bluemix_notm}} version of Cloud Foundry runs in Diego Cells. The *noproxy* feature is for non-Diego Cells.
 
 #### noproxy (deprecated for Node.js)
 {: #noproxy}

@@ -53,9 +53,3 @@ Les versions de Python suivantes sont disponibles dans le [pack de construction 
 * 3.6.4
 
 Si votre application requiert une version de Python qui n'est pas répertoriée, vous pouvez utiliser le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack) externe pour la déployer.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

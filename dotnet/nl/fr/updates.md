@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-06"
+lastupdated: "2018-09-20"
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +11,31 @@ lastupdated: "2017-10-06"
 # Dernières mises à jour apportées au pack de construction ASP.NET Core
 {: #latest_updates}
 
+Liste des dernières mises à jour apportées au pack de construction ASP.NET Core.
 
-Liste des dernières mises à jour apportées au pack de construction aspnet.
+## 20 septembre 2018 : Mise à jour du pack de construction ASP.NET Core v2.0-20180918-1356
+
+**Important :** A compter de cette édition, le pack de construction ASP.NET Core est basé sur le [pack de construction Cloud Foundry .NET Core ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html). Cette édition inclut la version 2.1.3 du pack de construction dotnet-core Cloud Foundry.
+
+* Ajout de la prise en charge de .NET SDK 1.1.9
+* Ajout de la prise en charge de .NET SDK 2.0.2
+* Ajout de la prise en charge de .NET SDK 2.0.3
+* Ajout de la prise en charge de .NET SDK 2.1.201
+* Ajout de la prise en charge de .NET SDK 2.1.300
+* Ajout de la prise en charge de .NET SDK 2.1.301
+* Ajout de la prise en charge de .NET Framework 1.0.11
+* Ajout de la prise en charge de .NET Framework 1.1.8
+* Ajout de la prise en charge de .NET Framework 2.0.7
+* Ajout de la prise en charge de .NET Framework 2.1.0
+* Ajout de la prise en charge de .NET Framework 2.1.1
+* Retrait de la prise en charge de .NET Core SDK 1.1.0
+* Retrait de la prise en charge de .NET Core SDK 1.0.0-preview2-003156
+* Retrait de la prise en charge de .NET Core SDK 2.0.0
+* Retrait de la prise en charge de .NET Core SDK 2.0.0-preview2-006497
+* Retrait de la prise en charge de .NET Framework 1.0.4
+* Retrait de la prise en charge de .NET Framework 1.1.1
+* Mise à jour de Node.js vers la version 6.14.3
+* Changement du kit SDK par défaut .NET Core 2.1.301
 
 ## 6 octobre 2017 : Pack de construction ASP.NET Core v1.0.26-20170913-1346 mis à jour
 * Ajout de la prise en charge de .NET Core runtime 2.0.0
@@ -106,11 +129,11 @@ Cette version du pack de construction inclut les modifications suivantes :
 * Cette version du pack de construction prend en charge .NET CLI et .NET Core RC2.
 * Le pack de construction détecte des projets avec un fichier project.json ou des fichiers *.runtimeconfig.json issus de la sortie de publication.
 
-## 22 octobre 2105 : Pack de construction ASP.NET 5 v0.7-20151022-1257 mis à jour
+## 22 octobre 2015 : Pack de construction ASP.NET 5 v0.7-20151022-1257 mis à jour
 
 * Cette version du pack de construction retire Mono et prend en charge la version bêta 8 de CoreCLR à la place.
 
-## 18 septembre 2105 : Pack de construction ASP.NET 5 v0.6-20150916-1220 mis à jour
+## 18 septembre 2015 : Pack de construction ASP.NET 5 v0.6-20150916-1220 mis à jour
 
 * Cette version du pack de construction prend en charge les modifications de l'environnement DNX 7 bêta. De plus, elle peut exécuter des applications qui dépendent d'éditions bêta plus anciennes avec la commande de démarrage personnalisée suivante :
 
@@ -120,9 +143,3 @@ Cette version du pack de construction inclut les modifications suivantes :
 {: codeblock}
 
 * L'utilisation du serveur Web Nowin a été retirée de ce pack de construction et le serveur Web [Kestrel]{https://github.com/aspnet/KestrelHttpServer} est utilisé à la place.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Environnement d'exécution Dotnet Core](index.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -29,13 +29,3 @@ lastupdated: "2018-06-21"
 ## 스타터 애플리케이션
 {: #starter_application}
 {{site.data.keyword.Bluemix_notm}}에서는 몇 가지 Liberty 스타터 애플리케이션을 제공합니다.  Liberty 스타터 애플리케이션은 사용할 수 있는 템플리트를 제공하는 단순한 Liberty 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 {{site.data.keyword.Bluemix_notm}} 환경을 변경하고 변경사항을 푸시할 수 있습니다.  스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../common/starter_app_usage.html)을 참조하십시오.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-* [Liberty 앱 관리](../common/app_mng.html#Utilities)
-* [IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}로 앱 배치](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-* [{{site.data.keyword.loganalysislong_notm}} 시작하기](/docs/services/CloudLogAnalysis/index.html)
-* [{{site.data.keyword.prf_hublong}} 시작하기](/docs/services/AvailabilityMonitoring/index.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -312,6 +312,24 @@ Modifique o armazenamento confiável configurado para confiar na autoridade de c
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### O aplicativo falha ao ser iniciado: resolução de problemas gerais
+
+Para o buildpack V3.23 ou mais recente do {{site.data.keyword.runtime_nodejs_notm}}, tente enviar as suas dependências ao fornecedor como uma primeira etapa da resolução de problemas. O envio de dependências ao fornecedor significa que você empacota as dependências nos mesmos arquivos de origem do aplicativo. Isso pode resolver vários erros que podem ocorrer quando as dependências assumem que estão no mesmo diretório base que o aplicativo.
+
+1. No diretório-raiz do aplicativo, instale as dependências executando o comando a seguir.
+
+   ```bash
+   npm install
+   ```
+   {: codeblock}
+1. Assegure-se de que o arquivo `.cfignore` não inclua a linha a seguir:
+
+   ```
+   node_modules/
+   ```
+
+Agora, ao implementar o aplicativo com o comando `ibmcloud cf push`, em vez de as dependências serem transferidas por download para um local separado, elas são copiadas no mesmo diretório do restante do aplicativo.
+
 ### O aplicativo falha ao iniciar com um erro "Não há mais espaço no dispositivo"
 {: #no_space_left_on_device}
 
@@ -324,7 +342,7 @@ erro nos logs pode ser semelhante ao seguinte:
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 Os aplicativos Node.js que usam versões do NPM anteriores à versão 3 consomem mais espaço ao fazer download de dependências.
 {: tsCauses}
@@ -345,7 +363,7 @@ Modifique o arquivo package.json de seu aplicativo para usar uma versão NPM 3 o
 ```
 {: codeblock}
 
-### Reinicializações do aplicativo devido a restrições de memória
+### O aplicativo reinicia devido a restrições de memória
 {: #oom}
 
 O Node.js não sabe quanta memória está disponível para o aplicativo, portanto o coletor de lixo pode não ser executado antes de a memória estar esgotada.

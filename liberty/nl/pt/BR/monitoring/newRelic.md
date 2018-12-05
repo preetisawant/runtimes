@@ -81,7 +81,7 @@ New Relic existente ao seu aplicativo usando um "serviço fornecido pelo usuári
 1. Crie uma instância de serviço fornecida pelo usuário usando sua chave de licença
 existente.  Por exemplo, se a sua chave de licença existente for 1234567, será possível usar a CLI do
 {{site.data.keyword.Bluemix_notm}} para "create-user-provided-service" e fornecer a chave de licença 1234567 no prompt como no seguinte:
-  
+
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -113,10 +113,3 @@ da estrutura, a configuração automática desse serviço difere de outros servi
 * Fazer opt-out não é uma opção.
 * A integração de serviço depende do agente do New Relic, um agente Java. Portanto, ela é configurada por meio de opções Java, em vez de variáveis de nuvem no arquivo server.xml.
 * A configuração depende de VCAP_SERVICES e VCAP_APPLICATION.
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

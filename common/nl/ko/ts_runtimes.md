@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -288,6 +288,24 @@ DigitCert ROOT CA를 신뢰하도록 구성된 신뢰 저장소를 수정하십�
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### 애플리케이션 시작 실패: 일반적인 문제점 해결
+
+{{site.data.keyword.runtime_nodejs_notm}} 빌드팩 V3.23 이상의 경우 첫 번째 단계로 종속성 벤더링을 시도하십시오. 종속성 벤더링은 애플리케이션과 동일한 소스 파일에서 종속성을 패키지하는 것을 의미합니다. 이를 통해 종속성이 애플리케이션과 동일한 기본 디렉토리에 있다고 가정할 때 발생할 수 있는 다양한 오류를 해결할 수 있습니다. 
+
+1. 애플리케이션 루트 디렉토리에서 다음 명령을 실행하여 종속성을 설치하십시오.
+
+   ```bash
+npm install
+   ```
+   {: codeblock}
+1. `.cfignore` 파일에 다음 행이 포함되어 있지 않은지 확인하십시오.
+
+   ```
+   node_modules/
+   ```
+
+이제 `ibmcloud cf push` 명령을 사용하여 애플리케이션을 배치하는 경우 종속성을 별도의 위치에 다운로드하는 대신 애플리케이션의 나머지 항목과 동일한 디렉토리에 복사됩니다. 
+
 ### 애플리케이션 시작이 실패하며 "No space left on device" 오류 발생
 {: #no_space_left_on_device}
 
@@ -299,7 +317,7 @@ Node.js 애플리케이션이 시작에 실패하며 "No space left on device" �
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 버전 3 이전의 NPM 버전을 사용하는 Node.js 애플리케이션은 종속 항목 다운로드에 추가 영역을 사용합니다.
 {: tsCauses}

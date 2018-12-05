@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -288,6 +288,24 @@ ibmcloud cf set-env myApp JBP_CONFIG_LIBERTY "app_state: false"
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### 應用程式無法啟動：一般疑難排解
+
+若為 {{site.data.keyword.runtime_nodejs_notm}} 建置套件 3.23 版或更新版本，請嘗試將您的相依關係供應為第一個疑難排解步驟。供應相依關係意思是您將相依關係包裝在與應用程式相同的原始檔中。這樣能夠解決在相依關係假設它們在與應用程式相同基礎目錄中時可能發生的各種錯誤。
+
+1. 從您的應用程式根目錄，執行下列指令來安裝相依關係。
+
+   ```bash
+   npm install
+   ```
+   {: codeblock}
+1. 確定您的 `.cfignore` 檔不包含以下這行：
+
+   ```
+   node_modules/
+   ```
+
+現在，當您使用 `ibmcloud cf push` 指令部署應用程式時，相依關係會複製到與其餘應用程式相同的目錄中，而不是下載到個別的位置。
+
 ### 應用程式無法啟動，錯誤為「裝置上沒有可用的空間」
 {: #no_space_left_on_device}
 
@@ -299,7 +317,7 @@ Node.js 應用程式無法啟動，錯誤為「裝置上沒有可用的空間」
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 下載相依關係時，使用第 3 版之前 NPM 版本的 Nodejs 應用程式會耗用更多空間。
 {: tsCauses}

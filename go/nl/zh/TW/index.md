@@ -59,11 +59,3 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 * 1.10
 
 如果您的應用程式需要未列出的 Go 版本，則可以使用外部 [Go 建置套件](https://github.com/cloudfoundry/go-buildpack.git){: new_window}來部署該應用程式。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Cloud Foundry buildpack for the Go Language](https://github.com/cloudfoundry/go-buildpack){: new_window}

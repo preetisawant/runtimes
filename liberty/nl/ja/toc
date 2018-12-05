@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html"}
+{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html" path="runtimes/liberty"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -17,14 +17,10 @@ Liberty for Java
     secureWebApp.md
     loggingAndTracing.md
 
-    {: .topicgroup}
-    IBM Eclipse Tools for IBM Cloud の使用
-        eclipseDevelop.md
-        [IBM Eclipse Tools for IBM Cloud を使用したアプリのデプロイ](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-
     autoConfig.md
     customizingJRE.md
     using_own_jre.md
+    installFeatures.md
     usingBetaFeatures.md
     [バインドされたサービスのオプトアウト](autoConfig.html#opting_out)
 
@@ -36,9 +32,9 @@ Liberty for Java
         [Availability Monitoring の概説](../../services/AvailabilityMonitoring/index.html)
 
     {: .topicgroup}
-    オフラインの処理またはプロキシーの処理
+    オフラインでの作業またはプロキシーの処理
         offlineMode.md
-        [プロキシーの処理](../common/workingWithProxy.html)
+        [プロキシーの処理](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,8 +45,8 @@ Liberty for Java
 
     {: .topicgroup}
     スターター・アプリケーションおよびビルドパック
-        [スターター・アプリの使用](../common/starter_app_usage.html)
-        [コミュニティー・ビルドパックの使用](../common/byob.html)
+        [スターター・アプリケーションの使用](runtimes/common/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](runtimes/common/byob.html)
 
     buildpackDefaults.md
     ../common/app_mng.md
@@ -60,5 +56,5 @@ Liberty for Java
     ts_index.md
     [IBM Cloud Log Analysis の概説](../../services/CloudLogAnalysis/index.html)
     updates.md
-    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
+    [ビルドパックのサポート・ステートメント](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

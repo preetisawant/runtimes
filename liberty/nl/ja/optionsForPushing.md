@@ -254,10 +254,3 @@ Liberty ビルドパックが server.xml ファイル内のサービス・バイ
 * connection.password: このアプリケーションをサービスに対して認証するために使用されるパスワード。 パスワードは Cloud Foundry によって自動生成されます (例: pvyCY0YzX9pu5)。
 
 バインドされたサービスが Liberty ビルドパックによって自動構成されないサービスの場合、アプリケーション自体がバックエンド・リソースのアクセスを管理する必要があります。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty ランタイム](index.html)
-* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

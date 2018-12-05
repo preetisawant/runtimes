@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-26"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2017-10-26"
 * https://download.run.pivotal.io 和 https://java-buildpack.cloudfoundry.org 用于访问以下产品的组件：
   * [AppDynamics 代理程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.appdynamics.com/)
   * [MariaDB JDBC 驱动程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://mariadb.com/)
-  * [New Relic 代理程序](newRelic.html)
+  * [New Relic 代理程序](monitoring/newRelic.html)
   * [OpenJDK](customizingJRE.html#OpenJDK)
   * [PostgreSQL JDBC 驱动程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.postgresql.org)
 * https://dl.zeroturnaround.com/jrebel/ 用于访问 [JRebel ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://zeroturnaround.com/software/jrebel/) 的组件。
@@ -31,12 +31,4 @@ lastupdated: "2017-10-26"
 {: #working_with_proxy}
 
 在某些环境（如 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 和
-[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local)）中，可以配置代理。
-有关更多详细信息，请参阅[使用代理](/docs/runtimes/common/workingWithProxy.html)。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local)）中，可以配置代理。有关更多详细信息，请参阅[使用代理](/docs/runtimes/common/workingWithProxy.html)。

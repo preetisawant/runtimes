@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,29 +12,33 @@ lastupdated: "2018-03-16"
 # {{site.data.keyword.cloud_notm}} 中支持的 Liberty 功能
 {: #liberty_features}
 
-Liberty for Java 即时运行时包含 Liberty 功能的子集。Liberty 提供的某些功能在 Liberty for Java 即时运行时中不可用，因为这些功能在云环境中不适用。
+Liberty for Java 运行时包含 Liberty 功能的子集。要使用运行时中不包含的功能，请参阅[安装 Liberty 功能](installFeatures.html)。有关 Liberty 中可用功能的完整列表，以及 Java EE 版本和其他信息，请参阅
+[Liberty 功能部件 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)。
 
-其中包含特定于 {{site.data.keyword.Bluemix_notm}} 的以下功能：
+## 云特定的功能
+{:#cloud-features}
+
+其中包含以下功能，这些功能特定于 {{site.data.keyword.Bluemix_notm}}：
 * appstate-2.0
 * cloudAutowiring-1.0 
 * logAnalysis-1.0
 
 缺省情况下，部署 WAR 或 EAR 文件时，将启用可用的功能子集。请参阅[独立应用程序](optionsForPushing.html#stand_alone_apps)，以获取详细信息。
 
-Liberty for Java 运行时还提供了某些 Liberty Beta 功能。这些功能未列出，但可在[使用 Beta 功能](/docs/runtimes/liberty/usingBetaFeatures.html)中找到。
+Liberty for Java 运行时还提供了某些 Liberty Beta 功能。[使用 Beta 功能](/docs/runtimes/liberty/usingBetaFeatures.html)中列出了这些功能。
 
-请记住，服务器无法装入不兼容的功能，因此请确保将其配置为仅启用兼容的功能。请参阅
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Supported Java EE 6 and 7 feature combinations</a>。
+## 功能兼容性
+{:#feature-compatibility}
 
+Liberty 提供的某些功能在 Liberty for Java 运行时中不可用，因为这些功能在云环境中不适用。
 
-
-要查看 Liberty 中可用的完整功能列表以及 Java EE 版本和其他信息，请参阅
-IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)。
+请记住，服务器无法装入不兼容的功能，因此请确保将其配置为仅启用兼容的功能。请参阅 [Supported Java EE 6 and 7 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html")。
 
 使用远程 EJB 的应用程序可以部署到 {{site.data.keyword.Bluemix_notm}}，但是，由于 {{site.data.keyword.Bluemix_notm}} 环境中的端口限制，不可通过 CORBA/IIOP 协议来远程访问远程 EJB。
 
 ## Liberty 功能索引
 {: #libertyfeat_index}
+
 可以使用以下索引跳至功能列表的相应部分，也可以浏览整个 [Liberty for Java 功能列表](#libertyfeat_list)。
 
 ### A-E
@@ -231,10 +235,3 @@ IBM Knowledge Center 中的 [Liberty Features](https://www.ibm.com/support/knowl
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

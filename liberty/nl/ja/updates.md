@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-11-02"
 
 ---
 
@@ -14,6 +14,17 @@ lastupdated: "2018-08-10"
 
 ## Liberty ビルドパックの最新更新のリスト。
 
+### 2018 年 10 月 29 日: 更新された Liberty ビルドパック v3.26-20181023-1545
+
+* デフォルトの Liberty ランタイム・バージョン `18.0.0.3` が [CVE-2014-7810 セキュリティー脆弱性 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055) についてのフィックスを含むように更新されました。
+* 月次 Liberty ランタイム・バージョンが 2018.10.0.0 リリースに更新されました。
+* IBM JRE バージョンが 8 SR5 FP22 に更新されました。
+
+### 2018 年 9 月 21 日: 更新された Liberty ビルドパック v3.25-20180918-1034
+* ビルドパックは Java Platform, Enterprise Edition 8.0 をサポートするようになりました。Java EE 8 を使用するには、アプリをプッシュするときに `javaee-8.0` Liberty フィーチャーをインストールします。詳しくは、『[Liberty フィーチャーのインストール](installFeatures.html)』を参照してください。
+* デフォルトの Liberty ランタイム・バージョンが 18.0.0.3 リリースに更新されました。
+* 月次 Liberty ランタイム・バージョンが [2018.8.0.1 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/) リリースに更新されました。
+* IBM JRE バージョンが 8 SR5 FP20 に更新されました。
 
 ### 2018 年 8 月 10 日: 更新された Liberty ビルドパック v3.24-20180806-1313
 * 月次 Liberty ランタイム・バージョンが 2018.8.0.0 に更新されました。
@@ -353,10 +364,3 @@ beta](https://developer.ibm.com/wasdev/blog/2014/11/07/announcing-liberty-profil
   * 新規 CouchDB フィーチャーを使用可能にすると、Cloudant® サービスは自動的にそれを構成でき、コネクター・オブジェクトを簡単に使用できるようになりました。 VCAP_SERVICES の構文解析および ektorp の提供により、クライアント jar は不要になりました。
 * IBM SDK for Java のバージョンが新しくなりました。
   * アプリケーションは、再プッシュされると IBM SDK for Java バージョン 7.1-1.0 を使用します。 これに伴って性能が大幅に向上します。 アプリケーションのスループットが改善され、メモリー使用量は減少します。 IBM Java SDK について詳しくは、[ここ](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)を参照してください。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-  * [Liberty ランタイム](index.html)
-  * [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

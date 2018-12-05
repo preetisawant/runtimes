@@ -248,10 +248,3 @@ http://<yourappname>.mybluemix.net/acme/
 * connection.password：用于向服务认证此应用程序的密码。密码由 Cloud Foundry 自动生成，例如 pvyCY0YzX9pu5。
 
 对于 Liberty buildpack 未自动配置的绑定服务，应用程序需要自己管理后端资源的访问。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

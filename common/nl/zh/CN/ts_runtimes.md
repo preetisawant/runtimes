@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -288,6 +288,24 @@ ibmcloud cf set-env myApp JBP_CONFIG_LIBERTY "app_state: false"
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### 应用程序无法启动：一般故障诊断
+
+对于 {{site.data.keyword.runtime_nodejs_notm}} buildpack V3.23 或更高版本，请尝试将供应依赖关系作为故障诊断的第一步。供应依赖关系表示将依赖关系与应用程序一起打包在相同的源文件中。这可以解决假定依赖关系与应用程序位于相同基本目录时发生的各种错误。
+
+1. 从应用程序根目录，通过运行以下命令安装依赖关系。
+
+   ```bash
+npm install
+```
+   {: codeblock}
+1. 确保 `.cfignore` 文件不包含以下行：
+
+   ```
+   node_modules/
+   ```
+
+现在，使用 `ibmcloud cf push` 命令部署应用程序时，不是将依赖关系下载到单独的位置，而是将依赖关系复制到与其余应用程序相同的目录中。
+
 ### 应用程序启动失败，错误为“设备上没有剩余空间”
 {: #no_space_left_on_device}
 
@@ -299,7 +317,7 @@ Node.js 应用程序启动失败，错误为“设备上没有剩余空间”。
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 Node.js 应用程序使用的 NPM 版本如果早于 V3，下载依赖项所消耗的空间就会更多。
 {: tsCauses}

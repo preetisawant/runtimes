@@ -54,10 +54,3 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 * 2.5.0
 
 アプリケーションが、リストされていないバージョンの Ruby を必要とする場合は、外部の [Ruby ビルドパック](https://github.com/cloudfoundry/ruby-buildpack)を使用してアプリケーションをデプロイできます。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Cloud Foundry buildpack for Ruby, Sinatra and Rails](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://api.rubyonrails.org/)

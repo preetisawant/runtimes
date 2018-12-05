@@ -294,10 +294,3 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 {: codeblock}
 
 當您推送應用程式時，這些 Jar 會重疊 Java 運行環境中的預設原則 Jar。這個處理程序會啟用 AES 256 位元加密。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

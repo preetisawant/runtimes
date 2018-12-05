@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-11-02"
 
 ---
 
@@ -14,6 +14,17 @@ lastupdated: "2018-08-10"
 
 ## Liberty buildpack 中最新更新的列表。
 
+### 2018 年 10 月 29 日：更新了 Liberty buildpack V3.26-20181023-1545
+
+* 缺省 Liberty 运行时版本 `18.0.0.3` 已更新为包含对 [CVE-2014-7810 安全漏洞 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055) 的修订。
+* 每月 Liberty 运行时版本已更新为 2018.10.0.0 发行版。
+* IBM JRE 版本已更新为 8 SR5 FP22。
+
+### 2018 年 9 月 21 日：更新了 Liberty buildpack V3.25-20180918-1034
+* buildpack 现在支持 Java Platform Enterprise Edition 8.0。要使用 Java EE 8，请在推送应用程序时安装 `javaee-8.0` Liberty 功能。在[安装 Liberty 功能](installFeatures.html)中了解更多信息。
+* 缺省 Liberty 运行时版本已更新为 18.0.0.3 发行版。
+* 每月 Liberty 运行时版本已更新为 [2018.8.0.1 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/) 发行版。
+* IBM JRE 版本已更新为 8 SR5 FP20。
 
 ### 2018 年 8 月 10 日：更新了 Liberty buildpack V3.24-20180806-1313
 * 每月 Liberty 运行时版本已更新为 2018.8.0.0。
@@ -346,10 +357,3 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
   * 由于提供了新的 CouchDB 功能，因此 Cloudant® 服务现在可以自动对其进行配置，使连接器对象方便可用！无需再通过 VCAP_SERVICES 进行解析并提供 ektorp 客户机 jar。
 * 这是 IBM SDK for Java 的新版本！
   * 重新推送应用程序时，应用程序将使用 IBM SDK for Java V7.1-1.0。此版本已进行显著的性能升级。应用程序的吞吐量更大，而内存使用量更少。请参阅[此处](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)，以获取有关 IBM Java SDK 的更多信息。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-  * [Liberty 运行时](index.html)
-  * [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

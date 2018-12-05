@@ -252,10 +252,3 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 * connection.password: 이 애플리케이션을 서비스에 인증하는 데 사용되는 비밀번호입니다. Cloud Foundry에서 비밀번호를 자동 생성합니다(예: pvyCY0YzX9pu5).
 
 Liberty 빌드팩을 통해 자동으로 구성되지 않는 바인드된 서비스의 경우, 애플리케이션에서 자체적으로 백엔드 리소스의 액세스를 관리해야 합니다.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Liberty 런타임](index.html)
-* [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

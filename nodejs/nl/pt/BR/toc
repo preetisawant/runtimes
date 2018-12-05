@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html"}
+{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html" path="runtimes/nodejs"}
 SDK for Node.js
 
     {: .navgroup id="learn"}
@@ -13,30 +13,29 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
-    dynatrace.md
+    hooks.md
 
     {: .topicgroup}
     Trabalhar off-line ou com um proxy
         offlineMode.md
-        [Trabalhando com um proxy](../common/workingWithProxy.html)
+        [Trabalhando com um proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    fipsMode.md
     ../common/app_mng.md
 
     {: .topicgroup}
     Aplicativos iniciadores e buildpacks
-        [Usando os aplicativos iniciadores](../common/starter_app_usage.html)
-        [Usando os buildpacks de comunidade](../common/byob.html)
+        [Usando os aplicativos iniciadores](common/starter_app_usage.html)
+        [Usando os buildpacks de comunidade](common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [Instrução de suporte do buildpack](../common/buildpackSupport.html)
+    [Instrução de suporte do buildpack](common/buildpackSupport.html)
 
     {: .navgroup-end}

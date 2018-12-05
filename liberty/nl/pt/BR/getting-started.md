@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-24"
 
 ---
 
@@ -16,6 +16,7 @@ lastupdated: "2018-07-03"
 {:app_name: data-hd-keyref="app_name"}
 
 # Tutorial Introdução
+{: #getting-started}
 
 * {: download} Parabéns, você implementou um aplicativo de amostra Hello World no {{site.data.keyword.Bluemix}}!  Para iniciar, siga este guia passo a passo. Ou <a class="xref" href="http://bluemix.net" target="_blank" title="(Fazer download de código de amostra)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Fazer download de código do aplicativo" />faça download do código de amostra</a> e explore você mesmo.
 
@@ -31,7 +32,7 @@ Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualiz
 
 Você precisará das contas e ferramentas a seguir:
 * [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://maven.apache.org/download.cgi){: new_window}
 
@@ -150,11 +151,14 @@ Ibmcloud cf apps
 Em seguida, incluiremos um banco de dados NoSQL do {{site.data.keyword.cloudant_short_notm}} nesse aplicativo e configuraremos o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
 1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
-2. Escolha a seção **Dados e análise de dados**, selecione o **{{site.data.keyword.cloudant_short_notm}}** e crie o seu serviço.
-3. Acesse a visualização **Conexões**, selecione seu aplicativo e, em seguida, **Criar conexão**.
-4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
+1. Procure **{{site.data.keyword.cloudant_short_notm}}** e selecione o serviço.
+1. Para os **Métodos de autenticação disponíveis**, selecione **Usar as credenciais anteriores e o IAM**. É possível deixar as configurações padrão para os outros campos. Clique em **Criar** para criar o serviço.
+1. Na navegação, acesse **Conexões**. Selecione seu aplicativo e clique em **Criar conexão**.
+1. Conecte-se ao seu aplicativo usando os valores padrão e clique em **Conectar e remontar app**. Em seguida, clique em **Remontar** quando for solicitado.
 
-As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte.
+   O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
+
+As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente referenciada no código-fonte.
 {: tip}
 
 ## Etapa 6: usar o banco de dados

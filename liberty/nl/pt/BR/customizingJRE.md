@@ -325,10 +325,3 @@ Faça o download dos arquivos de políticas sem restrições apropriados e inclu
 {: codeblock}
 
 Ao enviar seu aplicativo por push, esses jars sobrepõem os jars de política padrão no tempo de execução do Java. Esse processo ativa a criptografia AES de 256 bits.
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

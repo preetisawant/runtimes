@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Ruby" audience="runtime" arm="389" href="/docs/runtimes/ruby/getting-started.html"}}
+{: .toc subcollection="Ruby" audience="runtime" arm="389" href="/docs/runtimes/ruby/getting-started.html" path="runtimes/ruby"}
 Ruby
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ Ruby
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [使用代理](../common/workingWithProxy.html)
+    [使用代理](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     入门模板应用程序和社区 buildpack
-        [使用入门模板应用程序](../common/starter_app_usage.html)
-        [使用社区 buildpack](../common/byob.html)
+        [使用入门模板应用程序](runtimes/common/starter_app_usage.html)
+        [使用社区 buildpack](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [运行时的故障诊断](../common/ts_runtimes.html)
+    [运行时的故障诊断](runtimes/common/ts_runtimes.html)
     [运行时版本](index.html#runtime_versions)
-    [Buildpack 支持语句](../common/buildpackSupport.html)
+    [Buildpack 支持语句](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

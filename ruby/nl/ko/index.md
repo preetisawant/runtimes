@@ -60,10 +60,3 @@ ruby_buildpack은 앱의 루트 디렉토리에 Gemfile이 있는 경우 사용�
 외부
 [Ruby 빌드팩](https://github.com/cloudfoundry/ruby-buildpack)을
 사용하여 애플리케이션을 배치할 수 있습니다.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Ruby에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://api.rubyonrails.org/)

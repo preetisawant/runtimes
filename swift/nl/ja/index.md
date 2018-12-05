@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -72,7 +72,7 @@ macOS ユーザーの場合は、{{site.data.keyword.Bluemix_notm}} で実行さ
 - [SwiftMetrics ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant および CouchDB ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 アプリケーションに含める他の Swift パッケージを見つけるには、[Kitura.io](https://www.kitura.io/packages.html)の「パッケージ」セクションに進んでください。 パッケージは、パッケージの Git URL とバージョンの詳細をアプリケーションの `Package.swift` ファイルに含めることで Swift アプリケーションに追加することができます。 パッケージ管理の詳細については、[Swift.org の『Package Manager』セクション](https://swift.org/package-manager/)を参照してください。

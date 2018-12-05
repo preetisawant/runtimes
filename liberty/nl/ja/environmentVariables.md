@@ -152,10 +152,3 @@ Liberty ビルドパックによって自動的に使用不可にされる属性
 </tr>
 </table>
 {: caption="表 1. Liberty for Java で使用不可の属性" caption-side="top"}
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty ランタイム](index.html)
-* [Liberty の概要](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

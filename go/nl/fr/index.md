@@ -58,11 +58,3 @@ Les versions de Go suivantes sont disponibles dans le [pack de construction Go](
 * 1.10
 
 Si votre application requiert une version de Go qui n'est pas répertoriée ci-dessus, vous pouvez utiliser le [pack de construction Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externe pour déployer l'application.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Cloud Foundry buildpack for Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

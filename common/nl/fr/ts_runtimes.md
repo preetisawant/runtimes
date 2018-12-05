@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -288,6 +288,24 @@ Modifiez le magasin de clés de confiance configuré afin d'approuver l'autorit�
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### L'application ne démarre pas : Traitement général des incidents
+
+Pour le pack de construction {{site.data.keyword.runtime_nodejs_notm}} version 3.23 ou ultérieure, essayer de fournir vos dépendances constitue la première étape d'identification et de résolution de problème. En d'autres termes, vous packagez les dépendances dans les mêmes fichiers source que votre application. Cela permet de résoudre diverses erreurs pouvant se produire quand des dépendances considèrent qu'elles se trouvent dans le même répertoire que l'application.
+
+1. Depuis le répertoire racine de votre application, installez les dépendances en exécutant la commande suivante. 
+
+   ```bash
+   npm install
+   ```
+   {: codeblock}
+1. Assurez-vous que le fichier `.cfignore` ne comporte pas les lignes suivantes :
+
+   ```
+   node_modules/
+   ```
+
+A présent, lorsque vous déployez votre application avec la commande `ibmcloud cf push`, les dépendances sont copiées dans le même répertoire que le reste de l'application, au lie d'un emplacement distinct.
+
 ### L'application ne démarre pas et affiche une erreur de type "Plus d'espace sur l'unité"
 {: #no_space_left_on_device}
 
@@ -299,7 +317,7 @@ Une application Node.js ne démarre pas et affiche une erreur de type "Plus d'es
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 Les applications Node.js utilisant des versions NPM antérieures à la version 3 consomment plus d'espace pour le téléchargement des dépendances.
 {: tsCauses}

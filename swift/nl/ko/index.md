@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -72,7 +72,7 @@ macOS 사용자는 {{site.data.keyword.Bluemix_notm}}에서 실행되는 서버 
 - [SwiftMetrics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant and CouchDB ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 애플리케이션에 포함할 추가 Swift 패키지를 찾으려면 [Kitura.io](https://www.kitura.io/packages.html)의 패키지 섹션으로 이동하십시오. 패키지의 Git URL 및 버전 세부사항을 앱의 `Package.swift` 파일에 포함시킴으로써 Swift 애플리케이션에 패키지를 추가할 수 있습니다. 패키지 관리에 대한 세부사항은 [Swift.org의 Package Manager 섹션](https://swift.org/package-manager/)을 참조하십시오.

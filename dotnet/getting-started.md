@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-30"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -124,6 +124,8 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
+You can also go to the {{site.data.keyword.Bluemix_notm}} [Resource List](https://cloud.ibm.com/resources) to view your app.
+
 ## Step 5: Add a database
 {: #add_database}
 
@@ -132,8 +134,8 @@ Next, we'll add an {{site.data.keyword.cloudant_short_notm}} NoSQL database to t
 1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create resource**.
 1. Search for **{{site.data.keyword.cloudant_short_notm}}**, and select the service.
 1. For **Available authentication methods**, select **Use both legacy credentials and IAM**. You can leave the default settings for the other fields. Click **Create** to create the service.
-1. In the navigation, go to **Connections**. Select your application, and click **Create connection**.
-1. Connect to your application using the default values, and click **Connect & restage app**. Then, click **Restage** when prompted.
+1. In the navigation, go to **Connections**, then click **Create connection**. Select your application, and click **Connect**.
+1. Using the default values, click **Connect & restage app** to connect the database to your application. Click **Restage** when prompted.
 
    {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 
@@ -165,7 +167,7 @@ We're now going to update your local code to point to this database. We'll store
    ```
    {: codeblock}
 
-1. In your browser, go to the {{site.data.keyword.Bluemix_notm}} dashboard and select **_your app_ > Connections**. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&vellip;**) and select **View credentials**.
+1. Find your app in the {{site.data.keyword.Bluemix_notm}} [Resource List](https://cloud.ibm.com/resources). On the Service Details page for your app, click **Connections** in the sidebar. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&hellip;**) and select **View credentials**.
 
 1. Copy and paste just the `url` value from the credentials to the `url` field of the `vcap-local.json` file, replacing `CLOUDANT_DATABASE_URL`.
 

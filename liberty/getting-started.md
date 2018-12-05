@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -125,21 +125,23 @@ ibmcloud target --cf
   If you don't have an org or a space set up, see [Adding orgs and spaces](https://console.bluemix.net/docs/account/orgs_spaces.html).
   {: tip}
 
-1. From within the `get-started-java` directory, push your application to  {{site.data.keyword.Bluemix_notm}}.
+1. From within the `get-started-java` directory, push your application to {{site.data.keyword.Bluemix_notm}}.
 
   ```
 ibmcloud cf push
   ```
   {: codeblock}
 
-Deploying your application can take a few minutes. When deployment completes, you'll see a message that your app is running. View your app at the URL listed in the output of the push command, or view both the app deployment status and the URL by running the following command:
+Deploying your application can take a few minutes. When deployment completes, a message shows that your app is running. View your app at the URL listed in the output of the push command with "/GetStartedJava" appended to the end, or view both the app deployment status and the URL by running the following command:
 
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
 
-You can troubleshoot errors in the deployment process by using the `ibmcloud cf logs <Your-App-Name> --recent` command.
+You can also go to the {{site.data.keyword.Bluemix_notm}} [Resource List](https://cloud.ibm.com/resources) to view your app. If you click **Visit App URL**, remember to append "/GetStartedJava" to the URL.
+
+You can troubleshoot errors in the deployment process by using the `ibmcloud cf logs GetStartedJava --recent` command.
 {: tip}  
 
 ## Step 5: Add a database
@@ -150,8 +152,8 @@ Next, we'll add an {{site.data.keyword.cloudant_short_notm}} NoSQL database to t
 1. In your browser, log in to {{site.data.keyword.Bluemix_notm}} and go to the Dashboard. Select **Create resource**.
 1. Search for **{{site.data.keyword.cloudant_short_notm}}**, and select the service.
 1. For **Available authentication methods**, select **Use both legacy credentials and IAM**. You can leave the default settings for the other fields. Click **Create** to create the service.
-1. In the navigation, go to **Connections**. Select your application, and click **Create connection**.
-1. Connect to your application using the default values, and click **Connect & restage app**. Then, click **Restage** when prompted.
+1. In the navigation, go to **Connections**, then click **Create connection**. Select your application, and click **Connect**.
+1. Using the default values, click **Connect & restage app** to connect the database to your application. Click **Restage** when prompted.
 
    {{site.data.keyword.Bluemix_notm}} will restart your application and provide the database credentials to your application using the `VCAP_SERVICES` environment variable. This environment variable is available to the application only when it is running on {{site.data.keyword.Bluemix_notm}}.
 
@@ -162,7 +164,7 @@ Environment variables enable you to separate deployment settings from your sourc
 {: #use_database}
 We're now going to update your local code to point to this database. We'll store the credentials for the services in a properties file. This file will get used ONLY when the application is running locally. When running in {{site.data.keyword.Bluemix_notm}}, the credentials will be read from the `VCAP_SERVICES` environment variable.
 
-1. In your browser, go to the {{site.data.keyword.Bluemix_notm}} dashboard and select **_your app_ > Connections**. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&vellip;**) and select **View credentials**.
+1. Find your app in the {{site.data.keyword.Bluemix_notm}} [Resource List](https://cloud.ibm.com/resources). On the Service Details page for your app, click **Connections** in the sidebar. Click the {{site.data.keyword.cloudant_short_notm}} menu icon (**&hellip;**) and select **View credentials**.
 
 2. Copy and paste just the `url` from the credentials to the `url` field of the `src/main/resources/cloudant.properties` file, and save the changes.
 

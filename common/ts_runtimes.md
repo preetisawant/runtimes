@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-09"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -197,7 +197,7 @@ A Liberty application fails to start with a "_Failed to start accepting connecti
 ```
 {: #codeblock}
 
-{{site.data.keyword.Bluemix_notm}} performs a health check on the application to see if it has successfully started. The health check tests if the application is listening on the port assigned to the application. The default timeout for this check is 60 seconds and some applications might take longer than 60 seconds to start.  There are a number of reasons why the application might take longer to start. For example, binding services such as [Monitoring and Analytics](/docs/services/monana/index.html#gettingstartedtemplate) or [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html) or [enabling the debugger](/docs/runtimes/common/app_mng.html#debug) will increase the start up time. The application might also perform initialization steps that may take a long time to finish.
+{{site.data.keyword.Bluemix_notm}} performs a health check on the application to see if it has successfully started. The health check tests if the application is listening on the port assigned to the application. The default timeout for this check is 60 seconds and some applications might take longer than 60 seconds to start.  There are a number of reasons why the application might take longer to start. For example, binding services such as [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html) will increase the start-up time. The application might also perform initialization steps that may take a long time to finish.
 {: tsCauses}
 
 First, examine the logs for any obvious errors that might have caused the Liberty application to fail. If no obvious errors are found then try the following:
@@ -261,7 +261,7 @@ The following errors are visible in the logs and the application may fail to sta
 ```
 {: codeblock}
 
-The errors can be generated once the Monitoring & Analytics service is bound to a Liberty application and the Liberty application was deployed as a server directory or packaged server that contains server.xml that configures the Liberty ssl-1.0 feature. Binding the Monitoring & Analytics service to the Liberty application causes the runtime to connect to the service over a secure connection. That secure connection is established using the default SSL settings. Since, the default SSL settings are specified in the Liberty's server.xml, the configured trust store may not trust the certificate used by the  Monitoring & Analytics service.
+The errors can be generated when a secure service is bound to a Liberty application and the Liberty application was deployed as a server directory or packaged server that contains server.xml that configures the Liberty ssl-1.0 feature. Binding the secure service to the Liberty application causes the runtime to connect to the service over a secure connection. That secure connection is established using the default SSL settings. Since, the default SSL settings are specified in the Liberty's server.xml, the configured trust store may not trust the certificate used by the secure service.
 {: tsCauses}
 
 Modify configuration to use the JVM's trust store with one of the options that follow.  Be sure to restage your application after making the change.

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Go" audience="runtime" arm="392" href="/docs/runtimes/go/getting-started.html"}}
+{: .toc subcollection="Go" audience="runtime" arm="392" href="/docs/runtimes/go/getting-started.html" path="runtimes/go"}
 Go
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [使用 Proxy](../common/workingWithProxy.html)
+    [使用 Proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     入門範本應用程式及社群建置套件
-        [使用入門範本應用程式](../common/starter_app_usage.html)
-        [使用社群建置套件](../common/byob.html)
+        [使用入門範本應用程式](runtimes/common/starter_app_usage.html)
+        [使用社群建置套件](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [運行環境的疑難排解](../common/ts_runtimes.html)
+    [運行環境的疑難排解](runtimes/common/ts_runtimes.html)
     [可用的版本](index.html#runtime_versions)
-    [建置套件支援聲明](../common/buildpackSupport.html)
+    [建置套件支援聲明](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

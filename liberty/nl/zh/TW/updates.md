@@ -2,18 +2,29 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-11-02"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Liberty 建置套件的最新更新項目
+# Liberty 建置套件的最新更新
 {: #latest_updates}
 
-## Liberty 建置套件中的最新更新項目清單。
+## Liberty 建置套件中的最新更新清單。
 
+### 2018 年 10 月 29 日：已更新 Liberty 建置套件 v3.26-20181023-1545
+
+* 預設 Liberty 運行環境版本 `18.0.0.3` 已更新為包含 [CVE-2014-7810 安全漏洞 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055)的修正程式。
+* 每月 Liberty 運行環境版本已更新至 2018.10.0.0 版。
+* IBM JRE 版本已更新至 8 SR5 FP22。
+
+### 2018 年 9 月 21 日：已更新 Liberty 建置套件 v3.25-20180918-1034
+* 建置套件現在支援 Java 平台企業版 8.0。若要使用 Java EE 8，請在推送應用程式時安裝 `javaee-8.0` Liberty 特性。若要進一步瞭解，請參閱[安裝 Liberty 特性](installFeatures.html)。
+* 預設 Liberty 運行環境版本已更新至 18.0.0.3 版。
+* 每月 Liberty 運行環境版本已更新至 [2018.8.0.1 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/) 版。
+* IBM JRE 版本已更新至 8 SR5 FP20。
 
 ### 2018 年 8 月 10 日：已更新 Liberty 建置套件 v3.24-20180806-1313
 * 每月 Liberty 運行環境版本已更新至 2018.8.0.0。
@@ -152,7 +163,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * 建置套件也包含若干與應用程式性能檢查相關的 [Diego ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) 增進功能及[應用程式管理](../common/app_mng.html)功能。
 
 ### 2016 年 9 月 16 日：已更新 Liberty 建置套件 v3.3-20160912-1729
-* 預設 Liberty 運行環境版本已更新至 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 版。每月 Liberty 運行環境版本已更新至 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 版。在這些更新中，先前以測試版功能提供的 `cloudant-1.0` 及 `passwordUtilities-1.0` Liberty 功能，現在以可用於正式作業的功能提供。
+* 預設 Liberty 運行環境版本已更新至 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 版。每月 Liberty 運行環境版本已更新至 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 版。在這些更新中，先前以測試版特性提供的 `cloudant-1.0` 及 `passwordUtilities-1.0` Liberty 特性，現在以可用於正式作業的特性提供。
 * 包括 Liberty 運行環境的[安全修正程式](http://www-01.ibm.com/support/docview.wss?uid=swg21990527)。
 * 建置套件也包含已更新的 IBM JRE 8.0: SR3 FP11 版本。
 * 由於最新的 1.5.x 驅動程式發生問題，所以建置套件已調整為在執行[自動配置 MySQL 類型服務](autoConfig.html)時，下載最新的 1.4.x [MariaDB Connector/J JDBC 驅動程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
@@ -352,10 +363,3 @@ Liberty 設定檔運行環境的改良整合。
   * 有了新的 CouchDB 特性之後，Cloudant® 服務現在可以自動配置它，讓連接器物件變得垂手可得！不再需要剖析 VCAP_SERVICES 及提供 ektorp 用戶端 jar。
 * 現在 IBM SDK for Java 已有新版本！
   * 重新推送您的應用程式時，它們會使用 IBM SDK for Java 7.1-1.0 版。這具有顯著的效能升級。您的應用程式產量會變更好，且使用更少的記憶體。如需進一步瞭解 IBM Java SDK，請查看[這裡](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-  * [Liberty 運行環境](index.html)
-  * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

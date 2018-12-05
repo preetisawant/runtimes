@@ -298,10 +298,3 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 {: codeblock}
 
 推送应用程序时，这些 jar 会覆盖 Java 运行时中的缺省策略 jar。此过程会启用 AES 256 位加密。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

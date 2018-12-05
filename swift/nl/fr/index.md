@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -13,7 +13,8 @@ lastupdated: "2018-07-12"
 # IBM Cloud Runtime for Swift
 {: #swift_runtime}
 
-L'exécution pour Swift sur {{site.data.keyword.Bluemix}} repose sur le [pack de construction {{site.data.keyword.Bluemix_notm}} pour Swift](https://github.com/IBM-Swift/swift-buildpack) (swift_buildpack). Ce pack de construction fournit un environnement d'exécution complet pour les applications Swift.
+L'exécution pour Swift sur {{site.data.keyword.Bluemix}} repose sur le [pack de construction {{site.data.keyword.Bluemix_notm}} pour Swift](https://github.com/IBM-Swift/swift-buildpack) (swift_buildpack).
+Ce pack de construction fournit un environnement d'exécution complet pour les applications Swift.
 {: shortdesc}
 
 ## Application de démarrage
@@ -71,7 +72,7 @@ L'utilisation de l'[infrastructure Web Kitura](http://ibm-swift.github.io/Kitura
 - [SwiftMetrics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant et CouchDB ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 Pour trouver d'autres packages Swift à inclure dans votre application, allez à la section Packages de [Kitura.io](https://www.kitura.io/packages.html). Les packages peuvent être ajoutés à une application Swift en incluant l'URL Git du package et les détails de version dans le fichier `Package.swift` de l'application. Pour plus de détails sur la gestion des packages, voir la [section Package Manager de Swift.org](https://swift.org/package-manager/).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-24"
 
 ---
 
@@ -16,6 +16,7 @@ lastupdated: "2018-07-03"
 {:app_name: data-hd-keyref="app_name"}
 
 # 入门教程
+{: #getting-started}
 
 * {: download}恭喜您，您已在 {{site.data.keyword.Bluemix}} 上部署了 Hello World 样本应用程序！要开始使用，请按照本逐步指南进行操作。或者，<a class="xref" href="http://bluemix.net" target="_blank" title="（下载样本代码）"><img class="hidden" src="../../images/btn_starter-code.svg" alt="下载应用程序代码" />下载样本代码</a>并自行探究。
 
@@ -27,7 +28,7 @@ lastupdated: "2018-07-03"
 ## 开始之前
 {: #prereqs}
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
 * 适用于您平台的 [Swift 编译器 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://swift.org/download/)。
 
 ## 步骤 1：克隆样本应用程序
@@ -147,14 +148,17 @@ ibmcloud cf apps
 ## 步骤 5：添加数据库
 {: #add_database}
 
-接下来，我们要将 {{site.data.keyword.cloudant_short_notm}} 数据库添加到此应用程序中，并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
+接下来，我们要将 {{site.data.keyword.cloudant_short_notm}} NoSQL 数据库添加到此应用程序中，并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
 1. 在浏览器中，登录到 {{site.data.keyword.Bluemix_notm}}，然后转至“仪表板”。选择**创建资源**。
-2. 选择**数据和分析**部分，选择 **{{site.data.keyword.cloudant_short_notm}}**，然后创建该服务。
-3. 转至**连接**视图，选择应用程序，然后选择**创建连接**。
-4. 出现提示时，选择**重新编译打包**。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
+1. 搜索 **{{site.data.keyword.cloudant_short_notm}}**，并选择服务。
+1. 针对**可用的认证方法**，选择**使用旧凭证和 IAM**。可以将其他字段保留缺省设置。单击**创建**来创建服务。
+1. 在导航中，转至**连接**。选择应用程序，并单击**创建连接**。
+1. 使用缺省值连接到应用程序，并单击**连接并重新编译打包应用程序**。然后，在系统提示时单击**重新编译打包**。
 
-通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
+   {{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
+
+通过环境变量，可以将部署设置与源代码分开。例如，您可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
 {: tip}
 
 ## 步骤 6：使用数据库

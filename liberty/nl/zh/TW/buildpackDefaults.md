@@ -55,11 +55,3 @@ JRE。JRE 的主要或次要版本可能會視建置套件版本不同而變更�
 
 
 為確保應用程式不受主要版本變更的影響，請以適當的 JRE 版本來設定環境變數，如[自訂 JRE](customizingJRE.html) 中所述。為求最佳結果，請針對您的應用程式採用 Java 8。
-
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

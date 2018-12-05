@@ -66,7 +66,7 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 如果现有 New Relic 帐户和许可证密钥，那么可以使用“用户提供的服务”将现有 New Relic 服务绑定到应用程序。
 
 1. 使用现有许可证密钥来创建用户提供的服务实例。例如，如果现有许可证密钥为 1234567，那么可以使用 {{site.data.keyword.Bluemix_notm}} CLI 来执行“create-user-provided-service”命令，并在提示时提供许可证密钥 1234567，如下所示：
-  
+
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -94,10 +94,3 @@ New Relic 服务的自动配置与其他服务的自动配置不同，因为该�
 * 选择退出不是一个选项。
 * 服务集成依赖于 New Relic 代理程序，而它是一种 Java 代理程序。因此，这种代理程序是通过 Java 选项进行配置的，与 server.xml 文件中的云变量完全不同。
 * 配置依赖于 VCAP_SERVICES 和 VCAP_APPLICATION。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

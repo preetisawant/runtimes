@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -18,11 +18,7 @@ Les fonctions bêta de Liberty sont destinées à faciliter l'accès aux nouvell
 
 | Fonctionnalités |
 | ------ |
-| `audit-1.0` |
 | `logstashCollector-1.1` |
-| `mpConfig-1.3` |
-| `mpFaultTolerance-1.1` |
-| `usageMetering-1.0` |
 | `validator-1.0` |
 {: caption="Tableau 1. Fonctions bêta Liberty disponibles dans Liberty for Java sous {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
@@ -33,8 +29,7 @@ Pour utiliser les fonctions bêta de Liberty dans {{site.data.keyword.Bluemix_no
   ```
 <server>
     <featureManager>
-        <feature>usageMetering-1.0</feature>
-        <feature>validator-1.0</feature>
+        <feature>logstashCollector-1.1</feature>
     </featureManager>
 </server>
   ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-06"
+lastupdated: "2018-09-20"
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +11,31 @@ lastupdated: "2017-10-06"
 # ASP.NET Core ビルドパックに対する最新の更新
 {: #latest_updates}
 
+ASP.NET Core ビルドパックの最新更新のリスト。
 
-aspnet ビルドパックの最新更新のリスト。
+## 2018 年 9 月 20 日: ASP.NET Core ビルドパック v2.0-20180918-1356 の更新
+
+**重要:** このリリース以降、ASP.NET Core ビルドパックは [Cloud Foundry .NET Core ビルドパック ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html) をベースにします。このリリースには、バージョン 2.1.3 の dotnet-core Cloud Foundry ビルドパックが含まれています。
+
+* .NET Core SDK 1.1.9 のサポートを追加
+* .NET Core SDK 2.0.2 のサポートを追加
+* .NET Core SDK 2.0.3 のサポートを追加
+* .NET Core SDK 2.1.201 のサポートを追加
+* .NET Core SDK 2.1.300 のサポートを追加
+* .NET Core SDK 2.1.301 のサポートを追加
+* .NET Framework 1.0.11 のサポートを追加
+* .NET Framework 1.1.8 のサポートを追加
+* .NET Framework 2.0.7 のサポートを追加
+* .NET Framework 2.1.0 のサポートを追加
+* .NET Framework 2.1.1 のサポートを追加
+* .NET Core SDK 1.1.0 のサポートを削除
+* .NET Core SDK 1.0.0-preview2-003156 のサポートを削除
+* .NET Core SDK 2.0.0 のサポートを削除
+* .NET Core SDK 2.0.0-preview2-006497 のサポートを削除
+* .NET Framework 1.0.4 のサポートを削除
+* .NET Framework 1.1.1 のサポートを削除
+* Node.js バージョンを 6.14.3 に更新
+* デフォルトの .NET Core SDK を 2.1.301 に変更
 
 ## 2017 年 10 月 6 日: ASP.NET Core ビルドパック v1.0.26-20170913-1346 の更新
 * .NET Core ランタイム 2.0.0 のサポートを追加
@@ -120,9 +143,3 @@ aspnet ビルドパックの最新更新のリスト。
 {: codeblock}
 
 * Nowin Web サーバーの使用はこのビルドパックから削除され、代わりに [Kestrel]{https://github.com/aspnet/KestrelHttpServer} Web サーバーが使用されます。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Dotnet Core ランタイム](index.html)

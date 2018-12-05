@@ -155,10 +155,3 @@ variáveis de ambiente e os atributos a seguir são desativados.
 </tr>
 </table>
 {: caption="Tabela 1. Atributos desativados pelo Liberty for Java" caption-side="top"}
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

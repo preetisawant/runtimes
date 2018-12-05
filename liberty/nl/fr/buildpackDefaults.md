@@ -47,11 +47,3 @@ Les applications qui sont déployées en tant que répertoire de serveur ou pack
 Le pack de construction met à disposition un environnement d'exécution Java (JRE) par défaut pour l'application. La version majeure ou mineure de l'environnement d'exécution Java (JRE) peut changer d'une édition de pack de construction à l'autre. La version mineure de l'environnement d'exécution Java peut être mise à jour souvent alors que la version majeure l'est rarement. La modification de la version majeure de l'environnement d'exécution Java (JRE) peut avoir un impact négatif sur l'application.
 
 Pour faire en sorte que l'application ne soit pas affectée par la modification de version majeure, affectez à la variable d'environnement la version JRE appropriée, comme indiqué dans la section [Personnalisation de l'environnement d'exécution Java](customizingJRE.html). Pour de meilleurs résultats, adoptez Java 8 pour vos applications.
-
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

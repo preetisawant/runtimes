@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-04-11"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -21,7 +21,7 @@ Pour [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/d
 
 Pour [{{site.data.keyword.Bluemix_notm}} Runtime for Swift](/docs/runtimes/swift/index.html), IBM fournit la prise en charge pour le pack de construction correspondant à la version la plus récente de Swift disponible sur [Swift.org](http://swift.org). Les mises à jour du pack de construction sont synchronisées avec la version publiée de Swift la plus récente disponible.
 
-Les problèmes ou questions que vous pourriez avoir peuvent être signalés pour toute version du pack de construction IBM intégré actuellement pris en charge dans {{site.data.keyword.Bluemix_notm}}. Toutefois, leur pertinence dans la version la plus récente devra être vérifiée. Si un incident est trouvé, IBM fournira un correctif dans un niveau ultérieur du contexte d'exécution et du pack de construction correspondant. Elle ne fournira pas de correctif pour les versions principales et secondaires antérieures (N-1, n-1). Elle n'assurera pas non plus le support des contextes d'exécution de communauté, même s'ils utilisent des packs de construction IBM, comme par exemple Open JDK avec le pack de construction Liberty. Ces contextes d'exécution suivent la même stratégie de support que les packs de construction de communauté intégrés, comme décrit à la section suivante.
+Les problèmes ou questions que vous pourriez avoir peuvent être signalés pour toute version du pack de construction IBM intégré actuellement pris en charge dans {{site.data.keyword.Bluemix_notm}}, mais leur pertinence sera vérifiée dans la version la plus récente. Si un incident est trouvé, IBM fournira un correctif dans un niveau ultérieur du contexte d'exécution et du pack de construction correspondant. Elle ne fournira pas de correctif pour les versions principales et secondaires antérieures (N-1, n-1). Elle n'assurera pas non plus le support des contextes d'exécution de communauté, même s'ils utilisent des packs de construction IBM, comme par exemple Open JDK avec le pack de construction Liberty. Ces contextes d'exécution suivent la même stratégie de support que les packs de construction de communauté intégrés, comme décrit à la section suivante.
 
 ## Packs de construction de communauté intégrés
 {: #built-in_community_buildpacks}

@@ -27,7 +27,7 @@ Node.js 建置套件可以存取下列外部網站。您可能需要在 [{{site.
 * https://iojs.org 可用來擷取建置套件中沒有包含，或是 https://semver.herokuapp.com 沒有提供的舊版 node。
 * https://registry.npmjs.org 可用來擷取 Express 之類的 node 模組。
 
-若要盡量精簡白名單網站集，請將您的應用程式配置為使用 SDK for Node.js 建置套件中包含的 Node 引擎版本。請參閱[最新更新項目](./updates.html)，以取得建置套件中包含的 Node 引擎版本集。如果您將應用程式配置為使用這些 Node 引擎版本，則只需要 https://registry.npmjs.org 網站即可下載模組。
+若要盡量精簡白名單網站集，請將您的應用程式配置為使用 SDK for Node.js 建置套件中包含的 Node 引擎版本。請參閱[最新更新](./updates.html)，以取得建置套件中包含的 Node 引擎版本集。如果您將應用程式配置為使用這些 Node 引擎版本，則只需要 https://registry.npmjs.org 網站即可下載模組。
 
 請注意，安裝新版本的 SDK for Node.js 建置套件後，可用的引擎版本集通常就會變更為較新的版本。您可能需要重新配置您的應用程式，以指定建置套件中包含的較新 Node 引擎版本。
 

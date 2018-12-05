@@ -298,10 +298,3 @@ Diego セルで実行されているアプリケーションの `jvm.options` �
 {: codeblock}
 
 アプリケーションをプッシュすると、これらの jar が Java ランタイムのデフォルトのポリシー jar をオーバーレイします。 このプロセスにより、AES 256 ビット暗号化が有効になります。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty ランタイム](index.html)
-* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

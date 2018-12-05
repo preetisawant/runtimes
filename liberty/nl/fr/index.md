@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -29,13 +29,3 @@ Le pack de construction Liberty est utilisé lorsque les types d'applications su
 ## Application de démarrage
 {: #starter_application}
 {{site.data.keyword.Bluemix_notm}} fournit plusieurs applications de démarrage Liberty.  Les applications de démarrage Liberty sont des applications Liberty simples qui fournissent un modèle que vous pouvez utiliser. Vous pouvez expérimenter ces applications de démarrage, puis effectuer des changements et les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}.  Pour obtenir de l'aide sur l'utilisation des applications de démarrage, voir [Utilisation des applications de démarrage](../common/starter_app_usage.html).
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-* [Gestion des applications Liberty](../common/app_mng.html#Utilities)
-* [Déploiement d'applications avec IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-* [Initiation à {{site.data.keyword.loganalysislong_notm}}](/docs/services/CloudLogAnalysis/index.html)
-* [Initiation à {{site.data.keyword.prf_hublong}}](/docs/services/AvailabilityMonitoring/index.html)

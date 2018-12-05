@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-11-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,15 +12,16 @@ lastupdated: "2018-06-27"
 # NuGet パッケージのキャッシュの無効化
 {: #disabling_the_nuget_package_cache}
 
-場合によっては、アプリケーションの NuGet パッケージのキャッシュをクリアする必要が生じることがあります。  そうすることにより、キャッシュに入れられている既存の NuGet パッケージがクリアされ、ビルドパックで新規パッケージがキャッシュに入れられなくなります。
+場合によっては、アプリケーション用の NuGet パッケージのキャッシュをクリアする必要が生じることがあります。そうすることにより、キャッシュに入れられている既存の NuGet パッケージは消去され、ビルドパックが新規パッケージをキャッシュに入れるのが防止されます。
 
-これを行うには、{{site.data.keyword.Bluemix_notm}} CLI を使用して以下のように `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定します。
+以下のように {{site.data.keyword.Bluemix_notm}} CLI で `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定することによって、キャッシュをクリアすることができます。
 
 ```shell
   ibmcloud cf set-env <app_name> CACHE_NUGET_PACKAGES false
 ```
+{: codeblock}
 
-あるいは、アプリケーションの manifest.yml ファイルで、以下のように `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定することもできます。
+あるいは、以下のようにアプリケーションの `manifest.yml` ファイルで `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定することもできます。
 
 ```yml
 ---
@@ -30,3 +31,4 @@ applications:
   env:
     CACHE_NUGET_PACKAGES: false
 ```
+{: codeblock}

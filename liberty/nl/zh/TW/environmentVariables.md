@@ -152,10 +152,3 @@ Liberty 建置套件會自動停用一些您無法置換的屬性。已停用下
 </tr>
 </table>
 {: caption="表 1. Liberty for Java 已停用的屬性" caption-side="top"}
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty 運行環境](index.html)
-* [Liberty 概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

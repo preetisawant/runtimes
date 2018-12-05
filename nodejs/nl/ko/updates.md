@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-13"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -16,7 +16,8 @@ sdk-for-nodejs 빌드팩의 최신 업데이트 목록
 
 ## 2018년 9월 7일: Node.js 빌드팩 v3.22 업데이트
 {:#fips-deprecation}
-**중요:** 이 빌드팩부터 SDK for Node.js 빌드팩에 버전 6.x 및 8.x용 Node.js 커뮤니티 릴리스 런타임이 포함됩니다. 이와 같이 변경되었으므로 Node.js OpenSSL FIPS 모듈이 이러한 버전의 빌드팩에 더 이상 포함되지 않습니다 .버전 4.x에만 OpenSSL FIPS 모듈이 계속 포함됩니다.  
+
+**중요:** 이 빌드팩부터 SDK for Node.js 빌드팩에 버전 6.x 및 8.x용 Node.js 커뮤니티 릴리스 런타임이 포함됩니다. 이와 같이 변경되었으므로 Node.js OpenSSL FIPS 모듈이 이러한 버전의 빌드팩에 더 이상 포함되지 않습니다 . 버전 4.x에만 OpenSSL FIPS 모듈이 계속 포함됩니다.  
 
 SDK for Node.js 빌드팩 v3.22에서는 IBM SDK for Node.js 버전 4.8.5 및 4.8.7과 Node.js 커뮤니티 버전 6.14.3, 6.14.4, 8.11.3 및 8.11.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.14.4입니다.
 
@@ -24,7 +25,7 @@ SDK for Node.js 빌드팩 v3.22에서는 IBM SDK for Node.js 버전 4.8.5 및 4.
 * [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 2018년 7월 24일: Node.js 빌드팩 v3.21 업데이트
-{:#fips-deprecation}
+
 **중요:** 이 릴리스의 최신 Node.js 6.x 및 8.x 버전부터 SDK for Node.js 빌드팩은 Node.js 커뮤니티 릴리스를 기반으로 합니다. 이와 같이 변경되었으므로 빌드팩의 Node.js OpenSSL FIPS 모듈은 더 이상 업데이트되지 않습니다. 현재 OpenSSL FIPS 모듈과 IBM SDK for Node.js 빌드는 2018년 8월 24일에 제거할 수 있습니다. 자세한 정보는 [커뮤니티 런타임에 Node.js 빌드팩 맞추기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660) 블로그 게시물을 참조하십시오.
 
 SDK for Node.js 빌드팩 v3.21에서는 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.13.0 및 8.9.4와 Node.js 커뮤니티 버전 6.14.3 및 8.11.3을 제공합니다. 기본값이 최신 6.x이므로 현재 6.14.3입니다.
@@ -33,13 +34,13 @@ SDK for Node.js 빌드팩 v3.21에서는 IBM SDK for Node.js 버전 4.8.5, 4.8.7
 * [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
 
 ## 2018년 7월 1일: Node.js 빌드팩 v3.20.2 업데이트
-SDK for Node.js 빌드팩 v3.20.2에서는 현재 Node.js 런타임에 대한 Dynatrace Managed PaaS 통합을 추가합니다. [Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링](dynatrace.html)을 참조하십시오.
+SDK for Node.js 빌드팩 v3.20.2에서는 현재 Node.js 런타임에 대한 Dynatrace Managed PaaS 통합을 추가합니다.
 
 ## 2018년 5월 17일: Node.js 빌드팩 v3.20.1 업데이트
-SDK for Node.js 빌드팩 v3.20.1에서는 현재 Node.js 런타임에 대한 Dynatrace PaaS 통합을 수정합니다. [Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링](dynatrace.html)을 참조하십시오.
+SDK for Node.js 빌드팩 v3.20.1에서는 현재 Node.js 런타임에 대한 Dynatrace PaaS 통합을 수정합니다.
 
 ## 2018년 4월 9일: Node.js 빌드팩 v3.20 업데이트
-SDK for Node.js 빌드팩 v3.20에서는 현재 Node.js 런타임에 대한 Dynatrace PaaS 통합을 추가합니다. [Dynatrace를 사용하여 {{site.data.keyword.cloud_notm}}의 Node.js 모니터링](dynatrace.html)을 참조하십시오.
+SDK for Node.js 빌드팩 v3.20에서는 현재 Node.js 런타임에 대한 Dynatrace PaaS 통합을 추가합니다.
 
 ## 2018년 3월 16일: Node.js 빌드팩 v3.19 업데이트
 SDK for Node.js 빌드팩 v3.19에서는 IBM SDK for Node.js 버전 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 및 8.9.4를 제공합니다. 기본값이 최신 6.x이므로 현재 6.13.0입니다.

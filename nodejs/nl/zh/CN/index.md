@@ -33,10 +33,3 @@ var port = (process.env.PORT || 3000);
 ## 应用程序管理
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}} 提供若干用于管理和调试 Node.js 应用程序的实用程序。请参阅[应用程序管理](../common/app_mng.html)，以获取完整详细信息。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Node.js ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)

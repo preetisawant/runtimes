@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-06-27"
 * [Liberty for Java](/docs/runtimes/liberty/getting-started.html)
 * [SDK for Node.js](/docs/runtimes/nodejs/getting-started.html)
 * [ASP.NET Core](/docs/runtimes/dotnet/getting-started.html)
-* [Runtime for Swift](/docs/runtimes/nodejs/getting-started.html)
+* [Runtime for Swift](/docs/runtimes/swift/getting-started.html)
 * [XPages](/docs/starters/xpages/index.html)
 * [Go](/docs/runtimes/go/getting-started.html)
 * [PHP](/docs/runtimes/php/getting-started.html)

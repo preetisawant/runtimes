@@ -250,10 +250,3 @@ L'ensemble d'informations habituel est le suivant :
 * connection.password : mot de passe utilisé pour authentification de cette application auprès du service. Le mot de passe est généré automatiquement par Cloud Foundry, par exemple, pvyCY0YzX9pu5.
 
 Pour les services liés qui ne sont pas configurés automatiquement par le pack de construction Liberty, l'application doit gérer elle-même l'accès à la ressource back end.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

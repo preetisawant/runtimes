@@ -59,9 +59,3 @@ As seguintes versões do Python estão disponíveis no
 
 Se seu aplicativo requerer uma versão do Python não listada, é possível usar o
 [buildback Python](https://github.com/cloudfoundry/python-buildpack) externo para implementar o app.
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Buildpack do Cloud Foundry para Python](https://github.com/cloudfoundry/python-buildpack)

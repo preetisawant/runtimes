@@ -53,9 +53,3 @@ python-3.6.4
 * 3.6.4
 
 如果您的應用程式需要未列出的 Python 版本，可以使用外部 [Python 建置套件](https://github.com/cloudfoundry/python-buildpack)來部署該應用程式。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Cloud Foundry buildpack for the Python Language](https://github.com/cloudfoundry/python-buildpack)

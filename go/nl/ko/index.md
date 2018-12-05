@@ -63,11 +63,3 @@ go_buildpack은 애플리케이션에 *.go 파일이 포함된 경우에 사용�
 애플리케이션에 필요한 경우
 외부 [Go 빌드팩](https://github.com/cloudfoundry/go-buildpack.git){: new_window}을
 사용하여 애플리케이션을 배치할 수 있습니다.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Go에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/go-buildpack){: new_window}

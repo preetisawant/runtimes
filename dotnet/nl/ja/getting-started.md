@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -27,9 +27,9 @@ lastupdated: "2018-07-03"
 
 以下が必要です。
 * [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
-* [dot.net Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.microsoft.com/net/download/core) の説明に従って .NET Core 1.1 SDK 1.0.4 をインストールします。
+* [.NET Core ダウンロード Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.microsoft.com/net/download/core) から .NET Core 2.1.1 SDK 2.1.301 をインストールします。
 
 ## ステップ 1: サンプル・アプリケーションを複製する
 {: #clone}
@@ -124,51 +124,61 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-## ステップ 5: MySQL データベースを接続する
-{: connect_mysql}
+## ステップ 5: データベースを追加する
+{: #add_database}
 
-次に、ClearDB MySQL データベースをこのアプリケーションに追加し、ローカルおよび {{site.data.keyword.Bluemix_notm}} で実行できるようにアプリケーションをセットアップします。
+次に、{{site.data.keyword.cloudant_short_notm}} NoSQL データベースをこのアプリケーションに追加して、ローカルおよび {{site.data.keyword.Bluemix_notm}} 上で実行できるようにアプリケーションをセットアップします。
 
 1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
-2. **「データおよび分析」**セクションを選択し、**「ClearDB 管理対象 MySQL データベース (ClearDB Managed MySQL Database)」** を選択してサービスを作成します。
-3. **「接続」**ビューに移動し、アプリケーションを選択してから**「接続の作成」**を選択します。
-4. プロンプトが出されたら**「再ステージ」**を選択します。 {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
+1. 検索して **{{site.data.keyword.cloudant_short_notm}}** を見つけて、このサービスを選択します。
+1. **「使用可能な認証方式 (Available authentication methods)」**で、**「レガシー資格情報と IAM の両方を使用する (Use both legacy credentials and IAM)」**を選択します。他のフィールドについては、デフォルト設定のままでかまいません。**「作成」**をクリックしてサービスを作成します。
+1. ナビゲーションで、**「接続」**に移動します。アプリケーションを選択し、**「接続の作成」**をクリックします。
+1. デフォルト値を使用してアプリケーションに接続し、**「アプリの接続および再ステージ」**をクリックします。次に、プロンプトが出されたら**「再ステージ」**をクリックします。
 
-環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。 例えば、データベース・パスワードをハードコーディングする代わりに、環境変数にそれを保管して、ソース・コードではその環境変数を参照するようにできます。
+   {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
+
+環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。 例えば、データベース・パスワードをハードコーディングする代わりに、それを環境変数に保管して、ソース・コードではその環境変数を参照するようにできます。
 {: tip}
 
 ## ステップ 6: ローカルでデータベースを使用する
 {: #use_database}
 
-次に、このデータベースを指すようにローカル・コードを更新します。 サービスの資格情報を JSON ファイルに保管します。 このファイルは、アプリケーションがローカルで実行されている場合にのみ使用されます。 {{site.data.keyword.Bluemix_notm}} で実行されているときには、資格情報は VCAP_SERVICES 環境変数から読み取られます。
+次に、このデータベースを指すようにローカル・コードを更新します。 サービスの資格情報を JSON ファイルに保管します。 このファイルは、アプリケーションがローカルで実行されている場合にのみ使用されます。 {{site.data.keyword.Bluemix_notm}} で実行されているときには、資格情報は `VCAP_SERVICES` 環境変数から読み取られます。
 
-1. ファイル src/GetStartedDotnet/vcap-local.json を作成します。
+1. `src/GetStartedDotnet` ディレクトリー内に `vcap-local.json` ファイルを作成します。
 
-2. ブラウザーで、{{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、**「_your app_」>「接続」**を選択します。 {{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&vellip;**) をクリックし、**「資格情報の表示」**を選択します。
+1. 以下の JSON オブジェクトをコピーして `vcap-local.json` ファイルに貼り付け、変更を保存します。
 
-3. 資格情報の json オブジェクト全体を `vcap-local.json` ファイルにコピー・アンド・ペーストし、変更を保存します。  結果は次の例のようになります。
-  ```
-  {
-  "cleardb": [
-    {
-      "credentials": {
-        ...
-        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
-        ...
-      },
-      ...
-      "name": "My ClearDB service instance name",
-      ...
-    }
-  ]
-}
-  ```
+   ```json
+   {
+     "services": {
+       "cloudantNoSQLDB": [
+        {
+           "credentials": {
+             "url":"CLOUDANT_DATABASE_URL"
+           },
+          "label": "cloudantNoSQLDB"
+        }
+       ]
+     }
+   }
+   ```
+   {: codeblock}
 
-4. `get-started-aspnet-core/src/GetStartedDotnet` ディレクトリーで `dotnet run` コマンドを使用して、アプリケーションを再始動します。
+1. ブラウザーで、{{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、**「_your app_」>「接続」**を選択します。 {{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&vellip;**) をクリックし、**「資格情報の表示」**を選択します。
 
-http://localhost:5000/ のブラウザー・ビューを最新表示します。 アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
+1. 資格情報から `url` 値のみをコピーして `vcap-local.json` ファイルの `url` フィールドに貼り付けて、`CLOUDANT_DATABASE_URL` を置き換えます。
 
-ローカル・アプリケーションと {{site.data.keyword.Bluemix_notm}} アプリケーションは、データベースを共有しています。  上の push コマンドの出力にリストされている URL で {{site.data.keyword.Bluemix_notm}} アプリケーションを表示します。  いずれかのアプリケーションから追加した名前は、ブラウザーを最新表示すると両方に表示されます。
+1. `get-started-aspnet-core/src/GetStartedDotnet` ディレクトリーから以下のコマンドを実行してアプリケーションを再始動します。
+
+   ```
+   dotnet run
+   ```
+   {: codeblock}
+
+1. http://localhost:5000/ でブラウザー・ビューを最新表示します。アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
+
+ローカル・アプリケーションと {{site.data.keyword.Bluemix_notm}} アプリケーションはデータベースを共有します。`ibmcloud cf push` コマンドの出力にリストされている URL で {{site.data.keyword.Bluemix_notm}} アプリを表示してください。いずれかのアプリケーションから追加した名前は、ブラウザーを最新表示すると両方に表示されます。
 
 予期しない課金が発生しないように、アプリケーションを稼働中にしておく必要がない場合は停止することを忘れないでください。
 {: tip}

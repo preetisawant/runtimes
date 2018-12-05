@@ -59,9 +59,3 @@ python-3.6.4
 외부
 [Python 빌드팩](https://github.com/cloudfoundry/python-buildpack)을 사용하여 애플리케이션을 배치할 수
 있습니다.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Python에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/python-buildpack)

@@ -10,87 +10,90 @@ lastupdated: "2018-09-13"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Mode FIPS
+# FIPS Mode
 {: #fips_mode}
 
-Les packs de construction Node.js versions v3.2-20160315-1257 à v3.20.2-20180523-1639 prennent en charge [FIPS![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
+Node.js buildpack versions v3.2-20160315-1257 through v3.20.2-20180523-1639 support [FIPS ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
 
-**Le module FIPS OpenSSL est obsolète :** comme le pack de construction Node.js v3.22, le module FIPS OpenSSL n'est plus disponible en versions 6.x et 8.x du contexte d'd'exécution. Seule la version 4.x inclut toujours le module FIPS OpenSSL.Pour en savoir plus, consultez la section [Dernières mises à jour du pack de construction Node.js](updates.html#fips-deprecation).
+**The OpenSSL FIPS module is deprecated:** As of Node.js buildpack v3.22, the OpenSSL FIPS module is no longer available in version 6.x and 8.x of the runtime. Only version 4.x continues to include the OpenSSL FIPS module. Learn more in [Latest updates to the Node.js buildpack](updates.html#fips-deprecation).
 
-Pour utiliser un moteur de noeud activé par FIPS, affectez la valeur true à la variable d'environnement FIPS_MODE.
-Par exemple :
+To use a FIPS-enabled node engine set the environment variable FIPS_MODE to true.
+For example:
 
 ```
     ibmcloud cf set-env myapp FIPS_MODE true
 ```
 {: codeblock}
 
-Il est important de comprendre que lorsque la variable d'environnement FIPS_MODE a pour valeur true, certains modules de noeud peuvent ne pas fonctionner.  Par exemple, les **modules de noeud qui utilisent [MD5 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://en.wikipedia.org/wiki/MD5) échoueront**, par exemple, [Express![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://expressjs.com/).  Pour Express, le fait d'affecter la valeur false à [etag![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://expressjs.com/en/api.html) dans votre application Express peut vous permettre de contourner ce problème. Ainsi, vous pouvez introduire la commande suivante dans votre code :
+It is important to understand that when FIPS_MODE is true some node modules may not work.  For example, **node modules which use [MD5 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://en.wikipedia.org/wiki/MD5) will fail**, such as [Express ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://expressjs.com/).  For Express, setting [etag ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://expressjs.com/en/api.html) to false in your
+Expess app may help work around that. For example you can do the following in your code:
 ```
     app.set('etag', false);
 ```
 {: codeblock}
-Pour plus d'informations, consultez cet [article (post) stackoverflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js).
+See this [stackoverflow post ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/questions/15191511/disable-etag-header-in-express-node-js)
+for more information.
 
-**REMARQUE** : Les variables d'environnement [App Management](../common/app_mng.html) et FIPS_MODE *NE PEUVENT PAS* être utilisées en même temps.  Si la variable d'environnement BLUEMIX_APP_MGMT_ENABLE est définie et que la variable d'environnement FIPS_MODE a pour valeur true, la reconstitution de l'application échoue.
+**NOTE** [App Management](../common/app_mng.html) and FIPS_MODE are *NOT* simultaneously supported.  If the BLUEMIX_APP_MGMT_ENABLE environment variable is set and the FIPS_MODE environment variables is set to true, the app will fail to stage.
 
-Il existe diverses méthodes permettant de vérifier l'état de FIPS_MODE :
+There are various methods of checking the state of FIPS_MODE:
 <ul>
-<li> Vous pouvez rechercher, dans les fichiers journaux de votre application, un message semblable au suivant :    
+<li> You can check the logs for your application for a message similar to the following:    
 
   <pre>
   Installing FIPS-enabled IBM SDK for Node.js (4.4.3) from cache
   </pre>
   {: codeblock}
 
-Ce message indique qu'un moteur node.js activé par FIPS est en cours d'exécution, ce qui ne signifie pas nécessairement que FIPS est actif.
+This message indicates that a FIPS enabled node.js engine is running but not necessarily that FIPS is running
 </li>
 
-<li> Vous pouvez vérifier la valeur de **process.versions.openssl**. Par exemple :
+<li> You can check the value of **process.versions.openssl**. For example:
 
   <pre>
   console.log('ssl version is [' +process.versions.openssl +']');
   </pre>
   {: codeblock}
 
-Si la version de SSL contient "fips", la version de SSL utilisée prend en charge FIPS.  
+If the SSL version contains "fips", then the version of SSL that is in use supports FIPS.  
 </li>
 
-<li> Pour node.js version 6 ou ultérieure, vous pouvez vérifier la valeur renvoyée par crypto.fips dans du code tel que le suivant :
+<li> For node.js verion 6 and greater, you can check the value returned by crypto.fips in code like the following:
 
   <pre>
   console.log('crypto.fips== [' +crypto.fips +']');
   </pre>
   {: codeblock}
 
-Si la valeur renvoyée est 1, cela signifie que FIPS est utilisé. Notez que crypto.fips renverra *undefined* pour les versions de node.js antérieures à la version 6.
+If the returned value is 1, then FIPS is in use. Note that crypto.fips will return *undefined* for node.js versions prior to 6.
 </li>
 </ul>
 
 ## Nodejs v4
 {: #nodejs_v4_fips}
 
-Le tableau suivant explique le comportement de node.js V4 avec FIPS :
+The following table explains the behavior of node.js v4 with FIPS:
 
-|                 | Résultat        |
+|                 | Result        |
 | :-------------- | :------------ |
 |FIPS_MODE=true   |success (1)    |
 |FIPS_MODE !=true |success (2)    |
 
 * success (1)
-  * FIPS est utilisé.
-  * Les journaux contiendront le message *Installing FIPS-enabled IBM SDK for Node.js*.
-  * La valeur renvoyée par process.versions.openssl contiendra "fips".
+  * FIPS is in use.
+  * The logs will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The value returned by process.versions.openssl will contain "fips".
 * success (2)
-  * FIPS n'est *PAS* utilisé.
-  * Les journaux ne contiendront *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
-  * La valeur renvoyée par process.versions.openssl ne contiendra *PAS* "fips".
+  * FIPS is *NOT* in use.
+  * The logs will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The value returned by process.versions.openssl will *NOT* contain "fips".
 
-## Node.js versions 6 et ultérieures
+## Node.js v6 and greater
 {: #nodejs_v6_fips}
 
-Pour exécuter le mode FIPS avec Node.js version 6 ou ultérieure en plus de définir **FIPS_MODE=true**, vous devez également inclure **--enable-fips** dans votre commande start, comme dans l'exemple suivant :
+To run in FIPS mode with Node.js version 6 and greater in addition to setting **FIPS_MODE=true**, you must also include
+**--enable-fips** in your start command as in the following example:
 ```
 {
     ...   
@@ -101,7 +104,7 @@ Pour exécuter le mode FIPS avec Node.js version 6 ou ultérieure en plus de dé
 ```
 {: codeblock}
 
-Le tableau suivant explique le comportement de node.js versions 6 et ultérieures avec FIPS :
+The following table explains the behavior of node.js v6 and greater with FIPS.
 
 |                 |--enable-fips  |NO --enable-fips |
 | :-------------- | :------------ | :-------------- |
@@ -109,21 +112,21 @@ Le tableau suivant explique le comportement de node.js versions 6 et ultérieure
 |FIPS_MODE !=true |failure (3)    |success (4)      |
 
 * success (1)
-  * FIPS est utilisé.
-  * Les journaux contiendront le message *Installing FIPS-enabled IBM SDK for Node.js*.
-  * La valeur renvoyée par process.versions.openssl contiendra "fips".
-  * crypto.fips renverra 1 pour indiquer que FIPS est utilisé.
+  * FIPS is in use.
+  * The logs will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The value returned by process.versions.openssl will contain "fips"
+  * crypto.fips will return 1, indicating FIPS is in use
 * success (2)
-  * FIPS n'est *PAS* utilisé.
-  * Les journaux contiendront le message *Installing FIPS-enabled IBM SDK for Node.js*.
-  * La valeur renvoyée par process.versions.openssl contiendra "fips".
-  * crypto.fips renverra 0 pour indiquer que FIPS n'est *PAS* utilisé.
+  * FIPS is *NOT* in use.
+  * The logs will include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The value returned by process.versions.openssl will contain "fips"
+  * crypto.fips will return 0, indicating FIPS is *NOT* in use
 * failure (3)
-  * FIPS n'est *PAS* utilisé.
-  * Les journaux ne contiendront *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
-  * La reconstitution échouera avec le message "ERR node: bad option: --enable-fips".
+  * FIPS is *NOT* in use.
+  * The logs will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * staging will fail with msg "ERR node: bad option: --enable-fips"
 * success (4)
-  * FIPS n'est *PAS* utilisé.
-  * Les journaux ne contiendront *PAS* le message *Installing FIPS-enabled IBM SDK for Node.js*.
-  * La valeur renvoyée par process.versions.openssl ne contiendra *PAS* "fips".
-  * crypto.fips renverra 0 pour indiquer que FIPS n'est *PAS* utilisé.
+  * FIPS is *NOT* in use.
+  * The logs will *NOT* include the message *Installing FIPS-enabled IBM SDK for Node.js*.
+  * The value returned by process.versions.openssl will *NOT* contain "fips"
+  * crypto.fips will return 0, indicating FIPS is *NOT* in use

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -29,13 +29,3 @@ lastupdated: "2018-06-21"
 ## 入門範本應用程式
 {: #starter_application}
 {{site.data.keyword.Bluemix_notm}} 提供數個 Liberty 入門範本應用程式。Liberty 入門範本應用程式是簡單的 Liberty 應用程式，提供可以讓您使用的範本。您可以使用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../common/starter_app_usage.html)。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-* [管理 Liberty 應用程式](../common/app_mng.html#Utilities)
-* [使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署應用程式](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-* [開始使用 {{site.data.keyword.loganalysislong_notm}}](/docs/services/CloudLogAnalysis/index.html)
-* [開始使用 {{site.data.keyword.prf_hublong}}](/docs/services/AvailabilityMonitoring/index.html)

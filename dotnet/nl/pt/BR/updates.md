@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-06"
+lastupdated: "2018-09-20"
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +11,31 @@ lastupdated: "2017-10-06"
 # Atualizações mais recentes para o buildpack do ASP.NET Core
 {: #latest_updates}
 
+Uma lista de atualizações mais recentes no buildpack do ASP.NET Core.
 
-Uma lista das atualizações mais recentes no buildpack do aspnet.
+## 20 de setembro de 2018: buildpack do ASP.NET Core atualizado v2.0-20180918-1356
+
+**Importante:** iniciando com esta liberação, o buildpack do ASP.NET Core é baseado no [buildpack do Cloud Foundry .NET Core ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html). Essa liberação inclui a versão 2.1.3 do buildpack dotnet-core do Cloud Foundry.
+
+* Incluir suporte para o .NET Core SDK 1.1.9
+* Incluir suporte para o .NET Core SDK 2.0.2
+* Incluir suporte para o .NET Core SDK 2.0.3
+* Incluir suporte para o .NET Core SDK 2.1.201
+* Incluir suporte para o .NET Core SDK 2.1.300
+* Incluir suporte para o .NET Core SDK 2.1.301
+* Incluir suporte para o .NET Framework 1.0.11
+* Incluir suporte para o .NET Framework 1.1.8
+* Incluir suporte para o .NET Framework 2.0.7
+* Incluir suporte para o .NET Framework 2.1.0
+* Incluir suporte para o .NET Framework 2.1.1
+* Remover suporte para o .NET Core SDK 1.1.0
+* Remover suporte para o .NET Core SDK 1.0.0-preview2-003156
+* Remover suporte para o .NET Core SDK 2.0.0
+* Remover suporte para o .NET Core SDK 2.0.0-preview2-006497
+* Remover suporte para o .NET Framework 1.0.4
+* Remover suporte para o .NET Framework 1.1.1
+* Atualizar a versão do Node.js para a 6.14.3
+* Mudar o .NET Core SDK 2.1.301 padrão
 
 ## 6 de outubro de 2017: buildpack do ASP.NET Core atualizado v1.0.26-20170913-1346
 * Incluir suporte para o .NET Core runtime 2.0.0
@@ -123,9 +146,3 @@ com o comando inicial customizado a seguir:
 {: codeblock}
 
 * O uso do servidor da web Nowin foi removido deste buildpack; em seu lugar, é usado o servidor da web [Kestrel]{https://github.com/aspnet/KestrelHttpServer}.
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [tempo de execução Dotnet core](index.html)

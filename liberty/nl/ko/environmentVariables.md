@@ -152,10 +152,3 @@ Liberty for Java에서 지원하는 환경 변수
 </tr>
 </table>
 {: caption="표 1. Liberty for Java에서 사용 안함으로 설정한 속성" caption-side="top"}
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Liberty 런타임](index.html)
-* [Liberty 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

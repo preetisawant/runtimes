@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
 
 ---
 
@@ -107,7 +107,7 @@ O trabalho com a [estrutura da web Kitura](http://ibm-swift.github.io/Kitura/) f
 - [IBM Cloudant e CouchDB
 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 Para localizar mais pacotes do Swift a serem incluídos no aplicativo, acesse a seção Pacotes de [Kitura.io](https://www.kitura.io/packages.html). Os pacotes podem ser incluídos em um aplicativo Swift incluindo a URL do Git e os detalhes da versão do pacote no arquivo `Package.swift` do app. Para obter mais detalhes sobre gerenciamento de pacote, consulte a [seção Package Manager do Swift.org](https://swift.org/package-manager/).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-11-02"
 
 ---
 
@@ -14,6 +14,17 @@ lastupdated: "2018-08-10"
 
 ## Uma lista das atualizações mais recentes no buildpack do Liberty.
 
+### 29 de outubro de 2018: buildpack do Liberty atualizado v3.26-20181023-1545
+
+* A versão de runtime do Liberty padrão, `18.0.0.3`, foi atualizada para incluir uma correção para a [vulnerabilidade de segurança CVE-2014-7810 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055).
+* A versão de runtime mensal do Liberty foi atualizada para a liberação 2018.10.0.0.
+* A versão do IBM JRE foi atualizada para a 8 SR5 FP22.
+
+### 21 de setembro de 2018: buildpack do Liberty atualizado v3.25-20180918-1034
+* Agora, o buildpack suporta o Java Platform, Enterprise Edition 8.0. Para usar o Java EE 8, instale o recurso `javaee-8.0` do Liberty quando enviar por push o aplicativo. Saiba mais em [Instalar os recursos do Liberty](installFeatures.html).
+* A versão de runtime do Liberty padrão foi atualizada para a liberação 18.0.0.3.
+* A versão de runtime mensal do Liberty foi atualizada para a liberação [2018.8.0.1 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/).
+* A versão do IBM JRE foi atualizada para a 8 SR5 FP20.
 
 ### 10 de agosto de 2018: buildpack do Liberty atualizado v3.24-20180806-1313
 * A versão de runtime do Liberty mensal foi atualizada para 2018.8.0.0.
@@ -361,10 +372,3 @@ serviços do {{site.data.keyword.Bluemix_notm}} em aplicativos Liberty.
   * Com o novo recurso CouchDB disponível, o serviço Cloudant® agora pode configurá-lo automaticamente para que um objeto do conector fique disponível com facilidade! Não é mais necessário analisar através do VCAP_SERVICES e fornecer os jars de cliente ektorp.
 * A nova versão do IBM SDK for Java está aqui!
   * Quando seus aplicativos forem enviados por push novamente, eles usarão o IBM SDK for Java Versão 7.1-1.0. Isso é fornecido com um upgrade de desempenho substancial. Seu aplicativo mostra melhor rendimento e uso de memória reduzido. Saiba mais sobre o IBM Java SDK [aqui](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-  * [Tempo de execução do Liberty](index.html)
-  * [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

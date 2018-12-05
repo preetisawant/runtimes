@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-10-04"
 
 ---
 
@@ -31,13 +31,3 @@ EAR](optionsForPushing.html#stand_alone_apps)
 ## Aplicativo iniciador
 {: #starter_application}
 O {{site.data.keyword.Bluemix_notm}} fornece vários aplicativos iniciadores Liberty.  Os aplicativos iniciadores Liberty são apps Liberty simples que fornecem um modelo que pode ser usado. É possível experimentar os aplicativos iniciadores e fazer e enviar mudanças por push para o ambiente {{site.data.keyword.Bluemix_notm}}.  Veja [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso dos aplicativos iniciadores.
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
-* [Gerenciando apps Liberty](../common/app_mng.html#Utilities)
-* [Implementando aplicativos com o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-* [ Introdução ao  {{site.data.keyword.loganalysislong_notm}} ](/docs/services/CloudLogAnalysis/index.html)
-* [ Introdução ao  {{site.data.keyword.prf_hublong}} ](/docs/services/AvailabilityMonitoring/index.html)

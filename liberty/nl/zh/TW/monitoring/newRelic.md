@@ -66,7 +66,7 @@ New Relic 是協力廠商服務，可為您的應用程式提供監視度量值�
 如果您有現有的 New Relic 帳戶和授權碼，可以利用「使用者提供的服務」，將現有的 New Relic 服務連結至應用程式。
 
 1. 使用現有的授權碼來建立使用者提供的服務實例。例如，如果您現有的授權碼是 1234567，則可以使用 {{site.data.keyword.Bluemix_notm}} CLI 來進行 "create-user-provided-service"，並在系統提示時提供授權碼 1234567，如下所示：
-  
+
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -94,10 +94,3 @@ New Relic 服務的自動配置不同於其他服務的自動配置，因為它�
 * 無法選擇拒絕。
 * 服務整合仰賴 New Relic 的代理程式，這是一個 Java 代理程式。因此，它是透過 Java 選項來配置，而不是 server.xml 檔案中的雲端變數。
 * 配置同時仰賴 VCAP_SERVICES 和 VCAP_APPLICATION。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

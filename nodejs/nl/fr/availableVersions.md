@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-26"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -22,7 +22,7 @@ Le pack de construction IBM Node.js met en cache les versions de l'environnement
 
 * Utilisez le paramètre **node** de la section **engines** du fichier **package.json** pour définir la version de l'environnement d'exécution Node.js à exécuter.
 
-* Si vous devez spécifier une version de NPM différente de la version fournie avec Node.js, utilisez le paramètre **npm** dans la section **engines** du fichier **package.json**.  
+* Si vous devez spécifier une version de `npm` différente de la version fournie avec Node.js, utilisez le paramètre `npm` dans la section `engines` du fichier `package.json`.  
 
 Voir l'exemple suivant :
 
@@ -39,4 +39,4 @@ Voir l'exemple suivant :
 ```
 {: codeblock}
 
-**Remarque :** Une version de Node doit toujours être précisée dans le fichier **package.json**. Si elle est omise, la version la plus récente est utilisée.
+**Remarque :** Indiquez toujours une version de noeud dans le fichier `package.json`. Si aucune version n'est spécifiée, la version de noeud la plus récente est utilisée. 

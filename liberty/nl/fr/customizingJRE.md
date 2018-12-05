@@ -294,10 +294,3 @@ Téléchargez les fichiers de règles non restreintes appropriées et ajoutez-le
 {: codeblock}
 
 Lorsque vous envoyez votre application par commande push, ces fichiers JAR se surimposent aux fichiers JAR de règles par défaut dans l'environnement d'exécution Java. Ce processus active le chiffrement AES 256 bits.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

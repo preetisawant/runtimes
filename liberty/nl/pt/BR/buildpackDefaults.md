@@ -65,11 +65,3 @@ afetar de modo adverso o aplicativo.
 
 Para assegurar que o aplicativo não seja afetado pela mudança da versão principal, configure a variável de ambiente com a versão apropriada do JRE, conforme descrito em [Customizando o JRE](customizingJRE.html). Para obter os melhores resultados,
 adote o Java 8 para seus aplicativos.
-
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

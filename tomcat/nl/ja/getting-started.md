@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-24"
 
 ---
 
@@ -30,8 +30,7 @@ lastupdated: "2018-07-03"
 
 以下が必要です。
 * [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
-* [Eclipse IDE for Java EE Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://maven.apache.org/download.cgi){: new_window}
 * [Apache Tomcat バージョン 8.0.41 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://tomcat.apache.org/download-80.cgi#8.0.41 ){: new_window}
@@ -144,14 +143,17 @@ ibmcloud cf apps
 ## ステップ 5: データベースを追加する
 {: #add_database}
 
-次に、{{site.data.keyword.cloudant_short_notm}} データベースをこのアプリケーションに追加して、ローカルおよび {{site.data.keyword.Bluemix_short}} 上で実行できるようにアプリケーションをセットアップします。
+次に、{{site.data.keyword.cloudant_short_notm}} NoSQL データベースをこのアプリケーションに追加して、ローカルおよび {{site.data.keyword.Bluemix_notm}} 上で実行できるようにアプリケーションをセットアップします。
 
-1. ブラウザーで {{site.data.keyword.Bluemix_short}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
-2. **「データおよび分析」**セクションを選択し、**{{site.data.keyword.cloudant_short_notm}}** を選択してサービスを作成します。
-3. **「接続」**ビューに移動し、アプリケーションを選択してから**「接続の作成」**を選択します。
-4. プロンプトが出されたら**「再ステージ」**を選択します。 {{site.data.keyword.Bluemix_short}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_short}} で実行されている場合のみです。
+1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
+1. 検索して **{{site.data.keyword.cloudant_short_notm}}** を見つけて、このサービスを選択します。
+1. **「使用可能な認証方式 (Available authentication methods)」**で、**「レガシー資格情報と IAM の両方を使用する (Use both legacy credentials and IAM)」**を選択します。他のフィールドについては、デフォルト設定のままでかまいません。**「作成」**をクリックしてサービスを作成します。
+1. ナビゲーションで、**「接続」**に移動します。アプリケーションを選択し、**「接続の作成」**をクリックします。
+1. デフォルト値を使用してアプリケーションに接続し、**「アプリの接続および再ステージ」**をクリックします。次に、プロンプトが出されたら**「再ステージ」**をクリックします。
 
-環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。 例えば、データベース・パスワードをハードコーディングする代わりに、環境変数にそれを保管して、ソース・コードではその環境変数を参照するようにできます。
+   {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
+
+環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。 例えば、データベース・パスワードをハードコーディングする代わりに、それを環境変数に保管して、ソース・コードではその環境変数を参照するようにできます。
 {: tip}
 
 ## ステップ 6: データベースを使用する

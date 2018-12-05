@@ -2,17 +2,40 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-06"
+lastupdated: "2018-09-20"
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# ASP.NET Core 建置套件的最新更新項目
+# ASP.NET Core 建置套件的最新更新
 {: #latest_updates}
 
+ASP.NET Core 建置套件中的最新更新清單。
 
-aspnet 建置套件中的最新更新項目清單。
+## 2018 年 9 月 20 日：已更新 ASP.NET Core 建置套件 v2.0-20180918-1356
+
+**重要事項：**從此版本開始，ASP.NET Core 建置套件是以 [Cloud Foundry .NET Core 建置套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html) 為基礎。此版本包含 2.1.3 版的 dotnet-core Cloud Foundry 建置套件。
+
+* 新增 .NET Core SDK 1.1.9 支援
+* 新增 .NET Core SDK 2.0.2 支援
+* 新增 .NET Core SDK 2.0.3 支援
+* 新增 .NET Core SDK 2.1.201 支援
+* 新增 .NET Core SDK 2.1.300 支援
+* 新增 .NET Core SDK 2.1.301 支援
+* 新增 .NET Framework 1.0.11 支援
+* 新增 .NET Framework 1.1.8 支援
+* 新增 .NET Framework 2.0.7 支援
+* 新增 .NET Framework 2.1.0 支援
+* 新增 .NET Framework 2.1.1 支援
+* 移除 .NET Core SDK 1.1.0 支援
+* 移除 .NET Core SDK 1.0.0-preview2-003156 支援
+* 移除 .NET Core SDK 2.0.0 支援
+* 移除 .NET Core SDK 2.0.0-preview2-006497 支援
+* 移除 .NET Framework 1.0.4 2.0.0-preview2-006497 支援
+* 移除 .NET Framework 1.1.1 2.0.0-preview2-006497 支援
+* 將 Node.js 版本更新為 6.14.3
+* 變更預設 .NET Core SDK 2.1.301
 
 ## 2017 年 10 月 6 日：已更新 ASP.NET Core 建置套件 v1.0.26-20170913-1346
 * 新增 .NET Core 運行環境 2.0.0 支援
@@ -120,9 +143,3 @@ dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 {: codeblock}
 
 * 這個建置套件已經不再使用 Nowin Web 伺服器，改為使用 [Kestrel]{https://github.com/aspnet/KestrelHttpServer} Web 伺服器。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Dotnet 核心運行環境](index.html)

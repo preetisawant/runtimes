@@ -47,11 +47,3 @@ Liberty buildpack 在 {{site.data.keyword.Bluemix}} 中会频繁更新。每个�
 buildpack 为应用程序提供了缺省 JRE。JRE 的主版本或次版本可能会在不同 buildpack 发行版中有所更改。JRE 次版本可能会频繁更新，而主版本很少更新。JRE 主版本的更改可能会对应用程序产生不利影响。
 
 要确保应用程序不受主版本更改的影响，请如[定制 JRE](customizingJRE.html) 中所述，使用相应的 JRE 版本设置环境变量。为了获得最佳结果，请对应用程序采用 Java 8。
-
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概要文件概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Tomcat" audience="runtime" arm="390" href="/docs/runtimes/tomcat/getting-started.html"}}
+{: .toc subcollection="Tomcat" audience="runtime" arm="390" href="/docs/runtimes/tomcat/getting-started.html" path="runtimes/tomcat"}
 Tomcat
 
     {: .navgroup id="learn"}
@@ -10,19 +10,18 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    eclipseTomcat.md
-    [プロキシーの処理](../common/workingWithProxy.html)
+    [プロキシーの処理](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     スターター・アプリケーションおよびコミュニティー・ビルドパック
-        [スターター・アプリの使用](../common/starter_app_usage.html)
-        [コミュニティー・ビルドパックの使用](../common/byob.html)
+        [スターター・アプリケーションの使用](runtimes/common/starter_app_usage.html)
+        [コミュニティー・ビルドパックの使用](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [ランタイムに関するトラブルシューティング](../common/ts_runtimes.html)
+    [ランタイムに関するトラブルシューティング](runtimes/common/ts_runtimes.html)
     [ランタイム・バージョン](index.html#runtime_versions)
-    [ビルドパックのサポート・ステートメント](../common/buildpackSupport.html)
+    [ビルドパックのサポート・ステートメント](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

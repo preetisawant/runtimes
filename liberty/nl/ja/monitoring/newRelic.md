@@ -68,7 +68,7 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
 既存の New Relic アカウントとライセンス・キーがある場合は、「ユーザー提供のサービス」を使用して既存の New Relic サービスをアプリケーションにバインドできます。
 
 1. 既存のライセンス・キーを使用してユーザー提供のサービス・インスタンスを作成します。  例えば、既存のライセンス・キーが 1234567 の場合、「create-user-provided-service」に {{site.data.keyword.Bluemix_notm}} CLI を使用して、以下のプロンプトでライセンス・キー 1234567 を入力できます。
-  
+
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -96,10 +96,3 @@ New Relic サービスの自動構成は、ビルドバックのフレームワ�
 * オプトアウトはオプションではありません。
 * サービス統合は Java エージェントである New Relic エージェントに依存します。 したがって、server.xml ファイルのクラウド変数とは対照的に、これは Java オプションから構成されます。
 * 構成は VCAP_SERVICES および VCAP_APPLICATION の両方に依存します。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty ランタイム](index.html)
-* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -61,11 +61,3 @@ lastupdated: "2018-09-05"
 * 1.10
 
 如果您应用程序所需的 Go 版本没有列在上述列表中，那么可以使用外部 [Go buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} 来部署应用程序。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [用于 Go 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/go-buildpack){: new_window}

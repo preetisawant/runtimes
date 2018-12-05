@@ -26,10 +26,3 @@ Le pack de construction {{site.data.keyword.Bluemix}} ASP.NET Core est utilisé 
 {: #starter_application}
 
 {{site.data.keyword.Bluemix_notm}} fournit une application de démarrage ASP.NET Core.  L'application de démarrage ASP.NET Core est une application simple qui fournit un modèle que vous pouvez utiliser. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}.  Voir [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
-* [Présentation d'ASP.NET Core](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

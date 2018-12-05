@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-24"
 
 ---
 
@@ -30,8 +30,7 @@ lastupdated: "2018-07-03"
 
 您将需要以下内容：
 * [{{site.data.keyword.Bluemix_notm}} 帐户](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
-* [Eclipse IDE for Java EE Developers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://maven.apache.org/download.cgi){: new_window}
 * [Apache Tomcat V8.0.41 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://tomcat.apache.org/download-80.cgi#8.0.41 ){: new_window}
@@ -144,14 +143,17 @@ ibmcloud cf apps
 ## 步骤 5：添加数据库
 {: #add_database}
 
-接下来，我们要将 {{site.data.keyword.cloudant_short_notm}} 数据库添加到此应用程序中，并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_short}} 上运行。
+接下来，我们要将 {{site.data.keyword.cloudant_short_notm}} NoSQL 数据库添加到此应用程序中，并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
-1. 在浏览器中，登录到 {{site.data.keyword.Bluemix_short}}，然后转至“仪表板”。选择**创建资源**。
-2. 选择**数据和分析**部分，选择 **{{site.data.keyword.cloudant_short_notm}}**，然后创建该服务。
-3. 转至**连接**视图，选择应用程序，然后选择**创建连接**。
-4. 出现提示时，选择**重新编译打包**。{{site.data.keyword.Bluemix_short}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_short}} 上运行的应用程序。
+1. 在浏览器中，登录到 {{site.data.keyword.Bluemix_notm}}，然后转至“仪表板”。选择**创建资源**。
+1. 搜索 **{{site.data.keyword.cloudant_short_notm}}**，并选择服务。
+1. 针对**可用的认证方法**，选择**使用旧凭证和 IAM**。可以将其他字段保留缺省设置。单击**创建**来创建服务。
+1. 在导航中，转至**连接**。选择应用程序，并单击**创建连接**。
+1. 使用缺省值连接到应用程序，并单击**连接并重新编译打包应用程序**。然后，在系统提示时单击**重新编译打包**。
 
-通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
+   {{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
+
+通过环境变量，可以将部署设置与源代码分开。例如，您可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
 {: tip}
 
 ## 步骤 6：使用数据库

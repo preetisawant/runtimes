@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -15,50 +15,50 @@ lastupdated: "2018-06-27"
 
 Vous pouvez lier divers services à votre application Liberty for Java. Les services peuvent être gérés par le conteneur, gérés par l'application, ou les deux, selon le souhait du développeur.
 
-Un service géré par l'application est un service entièrement géré par l'application, sans aucune assistance de Liberty. L'application lit normalement la variable VCAP_SERVICES pour obtenir des informations sur le service lié et accède directement au service. L'application fournit tout le code d'accès client nécessaire. Il n'existe aucune dépendance par rapport aux fonctions Liberty ou à la configuration du fichier server.xml. La configuration automatique par le pack de construction Liberty ne s'applique pas aux services de ce type.
+Un service géré par application est un service entièrement géré par l'application, sans aucune assistance de Liberty. L'application lit normalement la variable VCAP_SERVICES pour obtenir des informations sur le service lié et accède directement au service. L'application fournit tout le code d'accès client nécessaire. Il n'existe aucune dépendance par rapport aux fonctions Liberty ou à la configuration du fichier `server.xml`. La configuration automatique par le pack de construction Liberty ne s'applique pas aux services de ce type.
 
-Un service géré par le conteneur est un service qui est géré par l'exécution Liberty. Dans certains cas, l'application peut rechercher le service lié dans JNDI, alors que dans d'autres cas, le service est utilisé directement par Liberty lui-même. Le pack de construction Liberty lit VCAP_SERVICES afin d'obtenir des informations sur les services liés. Pour chaque service géré par le conteneur, le pack de construction effectue trois opérations :
+Un service géré par conteneur est un service qui est géré par l'exécution Liberty. Dans certains cas, l'application peut rechercher le service lié dans JNDI, alors que dans d'autres cas, le service est utilisé directement par Liberty lui-même. Le pack de construction Liberty lit VCAP_SERVICES afin d'obtenir des informations sur les services liés. Pour chaque service géré par conteneur, le pack de construction effectue trois opérations :
 
 * Il génère des [variables cloud](optionsForPushing.html#accessing_info_of_bound_services) pour le service lié.
 * Il installe les fonctions Liberty et les codes d'accès client requis pour permettre l'accès au service lié.
-* Il génère ou met à jour les sections du fichier server.xml qui sont requises par le service.
+* Il génère ou met à jour les sections du fichier `server.xml` qui sont requises par le service.
 
 Ce processus est dénommé configuration automatique.
 
 Le pack de construction Liberty se charge de la configuration automatique des types de service suivants :
 
-* [Auto-Scaling](/docs/services/Auto-Scaling/index.html#autoscaling)
+* [{{site.data.keyword.autoscaling}}](/docs/services/Auto-Scaling/index.html#autoscaling)
 * [Base de données ClearDB MySQL ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.cleardb.com/developers)
-* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html#Cloudant)
-* [Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html)
-* [Compose for MySQL](/docs/services/ComposeForMySQL/index.html)
-* [Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html)
-* [dashDB](/docs/services/dashDB/index.html#dashDB)
-* [ElephantSQL](docs/services/ElephantSQL/index.html)
-* [Single Sign On](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
+* [{{site.data.keyword.cloudant}}](/docs/services/Cloudant/index.html#Cloudant)
+* [{{site.data.keyword.composeForMongoDB}}](/docs/services/ComposeForMongoDB/index.html)
+* [{{site.data.keyword.composeForMySQL}}](/docs/services/ComposeForMySQL/index.html)
+* [{{site.data.keyword.composeForPostgreSQL}}](/docs/services/ComposeForPostgreSQL/index.html)
+* [{{site.data.keyword.dashdbshort}}](/docs/services/dashDB/index.html#dashDB)
+* [ElephantSQL](/docs/services/ElephantSQL/index.html)
+* [{{site.data.keyword.ssoshort}}](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
 Les services Compose peuvent être gérés par le conteneur ou gérés par l'application. Par défaut, le pack de construction Liberty suppose que ces services sont gérés par le conteneur et les configure automatiquement. Si vous souhaitez que le service soit géré par l'application, vous pouvez résilier sa configuration automatique par Liberty en configurant la variable d'environnement `services_autoconfig_excludes`. Pour plus d'informations, voir [Résiliation de la configuration automatique des services](autoConfig.html#opting_out).
 
 ## Installation des fonctions Liberty et du code d'accès client
 {: #installation_of_liberty_features}
 
-Lorsque vous créez une liaison à un service géré par le conteneur, le service peut nécessiter une configuration de fonctions Liberty dans la section featureManager du fichier server.xml. Le pack de construction Liberty met à jour la section featureManager et installe les fichiers binaires de support requis. Si le service requiert des fichiers Jar de pilote client, ces fichiers Jar sont téléchargés à un emplacement prédéterminé dans le répertoire d'installation de Liberty.
+Lorsque vous créez une liaison à un service géré par conteneur, le service peut nécessiter une configuration de fonctions Liberty dans la section `featureManager` du fichier `server.xml`. Le pack de construction Liberty met à jour la section `featureManager` et installe les fichiers binaires de support requis. Si le service requiert des fichiers JAR de pilote client, ces fichiers sont téléchargés à un emplacement prédéterminé de l'installation de Liberty.
 
 Voir la section [Résiliation de la configuration automatique des services](#opting_out) pour obtenir plus de détails sur les types de service lié.
 
 ## Génération ou mise à jour des sections de configuration dans le fichier server.xml
 {: #generating_or_updating_serverxml}
 
-Lorsque vous envoyer une application autonome par commande push, en fonction de la manière dont elle est liée aux services et selon que vous avez ou non un fichier server.xml existant, le pack de construction Liberty peut générer automatiquement les sections de configuration ou mettre à jour des sections existantes.
+Lorsque vous envoyer une application autonome par commande push, en fonction de la manière dont elle est liée aux services et selon que vous avez ou non un fichier `server.xml` existant, le pack de construction Liberty peut générer automatiquement les sections de configuration ou mettre à jour des sections existantes.
 
-Lorsque vous envoyez une application autonome par commande push, le pack de construction Liberty génère, pour le fichier server.xml, la section de configuration appropriée, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing), sur {{site.data.keyword.Bluemix_notm}}.
+Lorsque vous envoyez une application autonome par commande push, le pack de construction Liberty génère, pour le fichier `server.xml`, la section de configuration appropriée, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing), sur {{site.data.keyword.Bluemix_notm}}.
 
-Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections server.xml requises pour les services liés.
+Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections `server.xml` requises pour les services liés.
 
-Lorsque vous fournissez un fichier server.xml et que vous créez une liaison avec des services gérés par le conteneur, le pack de construction Liberty génère les sections de configuration ou met à jour les sections existantes.
+Lorsque vous fournissez un fichier `server.xml` et que vous créez une liaison avec des services gérés par conteneur, le pack de construction Liberty génère les sections de configuration ou met à jour les sections existantes.
 
-* Si le fichier server.xml fourni ne comporte pas de sections de configuration pour les services liés, Liberty les génère.
-* Si le fichier server.xml fourni comporte déjà des sections de configuration pour les services liés, Liberty les met à jour.
+* Si le fichier `server.xml` fourni ne comporte pas de sections de configuration pour les services liés, Liberty les génère.
+* Si le fichier `server.xml` fourni comporte déjà des sections de configuration pour les services liés, Liberty les met à jour.
 
 Pour plus d'informations, consultez la documentation relative au type de service lié.
 
@@ -67,20 +67,20 @@ Pour plus d'informations, consultez la documentation relative au type de service
 
 Dans certains cas, vous ne souhaiterez peut-être pas que le pack de construction Liberty configure automatiquement les services qui ont été liés. Considérez les scénarios suivants :
 
-* Votre application utilise *dashDB*, mais vous souhaitez qu'elle gère directement la connexion à la base de données. L'application contient le fichier Jar de pilote client requis. Vous ne voulez pas que le pack de construction Liberty configure automatiquement le service *dashDB*.
-* Vous avez soumis un fichier server.xml comportant les sections de configuration pour l'instance *cloudant* car vous avez besoin d'une configuration de source de données non standard. Vous ne voulez pas que le pack de construction Liberty mette à jour le fichier server.xml, mais vous souhaitez tout de même qu'il vérifie que le logiciel de prise en charge est installé.
+* Votre application utilise *dashDB*, mais vous souhaitez qu'elle gère directement la connexion à la base de données. L'application contient le fichier JAR de pilote client requis. Vous ne voulez pas que le pack de construction Liberty configure automatiquement le service *dashDB*.
+* Vous avez soumis un fichier `server.xml` comportant les sections de configuration pour l'instance *cloudant* car vous avez besoin d'une configuration de source de données non standard. Vous ne voulez pas que le pack de construction Liberty mette à jour le fichier `server.xml`, mais vous souhaitez tout de même qu'il vérifie que le logiciel de prise en charge est installé.
 
 Pour résilier la configuration automatique des services, utilisez alors la variable d'environnement services_autoconfig_excludes. Vous pouvez inclure cette variable d'environnement dans un fichier manifest.yml ou la définir à l'aide du client {{site.data.keyword.Bluemix_notm}}.
 
-Vous pouvez résilier la configuration automatique des services sur une base individuelle. Vous pouvez opter pour une résiliation complète (comme dans le scénario *dashDB*) ou seulement des mises à jour du fichier de configuration server.xml (comme dans le scénario *cloudant*). La valeur que vous spécifiez pour la variable d'environnement services_autoconfig_excludes est une chaîne ayant les caractéristiques suivantes :
+Vous pouvez résilier la configuration automatique des services sur une base individuelle. Vous pouvez opter pour une résiliation complète (comme dans le scénario *dashDB*) ou seulement des mises à jour du fichier de configuration `server.xml` (comme dans le scénario *cloudant*). La valeur que vous spécifiez pour la variable d'environnement services_autoconfig_excludes est une chaîne ayant les caractéristiques suivantes :
 
 * La chaîne peut contenir des spécifications de résiliation pour un ou plusieurs services.
 * La spécification de la résiliation pour un service donné est type_service=option, où :
   * type_service est le label du service tel que mentionné dans VCAP_SERVICES.
-  * option est soit "all", soit "config" (sans les guillemets).
+  * L'option est soit `all` soit `config`.
 * Si la chaîne contient une spécification de résiliation pour plusieurs services, les spécifications individuelles doivent être séparées par un espace unique.
 
-Examinez cet exemple de grammaire pour la chaîne services_autoconfig_excludes :
+Examinez cet exemple de grammaire pour la chaîne `services_autoconfig_excludes` :
 
 ```
     Opt_out_string :: <spécification_type_service[<delimiter>spécification_type_service]*
@@ -96,7 +96,7 @@ Examinez cet exemple de grammaire pour la chaîne services_autoconfig_excludes :
 
 Utilisez l'option **all** pour résilier toutes les actions de configuration automatique d'un service donné, comme dans le scénario *dashDB* ci-dessus. Utilisez l'option **config** pour résilier uniquement les actions de mise à jour de la configuration, comme dans le scénario *cloudant* ci-dessus.
 
-Voici quelques exemples de résiliation de configuration automatique dans un fichier manifest.yml pour les scénarios *dashDB* et *cloudant*.
+Voici quelques exemples de résiliation de configuration automatique dans un fichier `manifest.yml` pour les scénarios *dashDB* et *cloudant*.
 
 ```
     env:
@@ -110,7 +110,7 @@ Voici quelques exemples de résiliation de configuration automatique dans un fic
 ```
 {: codeblock}
 
-Ci-dessous figurent des exemples de définition de la variable d'environnement services_autoconfig_excludes pour l'application myapp à l'aide de l'interface de ligne de commande.
+Ci-dessous figurent des exemples de définition de la variable d'environnement `services_autoconfig_excludes` pour l'application `myapp` à l'aide de l'interface de ligne de commande.
 
 ```
     ibmcloud cf set-env myapp services_autoconfig_excludes cloudant=config
@@ -125,7 +125,7 @@ Pour trouver le *label* d'un service dans VCAP_SERVICES, émettez une commande c
 ```
 {: codeblock}
 
-La sortie inclut un texte similaire au suivant, dans lequel vous pouvez voir le champ **label** avec la valeur **elephantsql** :
+La sortie inclut un texte similaire au suivant, dans lequel vous pouvez voir le champ `label` avec la valeur **elephantsql** :
 
 ```
    "elephantsql": [
@@ -228,12 +228,3 @@ Le tableau suivant indique la syntaxe permettant de remplacer certaines options 
 <td>"{driver: { version: x.y.z }}"</td>
 </tr>
 </table>
-
-
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty Profile](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

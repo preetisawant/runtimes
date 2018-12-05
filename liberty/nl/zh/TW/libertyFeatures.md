@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,28 +12,33 @@ lastupdated: "2018-03-16"
 # {{site.data.keyword.cloud_notm}} 中支援的 Liberty 特性
 {: #liberty_features}
 
-Liberty for Java 即時運行環境包括 Liberty 特性的子集。Liberty 提供的部分功能無法在 Liberty for Java 即時運行環境中使用，因為它們不適用於雲端環境。
+Liberty for Java 運行環境包括 Liberty 特性的子集。若要使用運行環境中未包含的特性，請參閱[安裝 Liberty 特性](installFeatures.html)。如需 Liberty 中可用特性的完整清單，以及 Java EE 版本及其他資訊，請參閱
+[Liberty features ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)。
 
-下列是 {{site.data.keyword.Bluemix_notm}} 特有的功能：
+## 雲端特定的特性
+{:#cloud-features}
+
+下列是已包含且 {{site.data.keyword.Bluemix_notm}} 特有的特性：
 * appstate-2.0
 * cloudAutowiring-1.0 
 * logAnalysis-1.0
 
-當部署 WAR 或 EAR 檔案時，依預設會啟用可用功能的子集。如需詳細資料，請參閱[獨立式應用程式](optionsForPushing.html#stand_alone_apps)。
+當部署 WAR 或 EAR 檔案時，依預設會啟用可用特性的子集。如需詳細資料，請參閱[獨立式應用程式](optionsForPushing.html#stand_alone_apps)。
 
-Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用。那些特性未列出，但可在[使用測試版特性](/docs/runtimes/liberty/usingBetaFeatures.html)中找到。
+Liberty for Java 運行環境也會讓部分 Liberty 測試版特性可供使用。這些特性列在[使用測試版特性](/docs/runtimes/liberty/usingBetaFeatures.html)。
 
-請記住，伺服器無法載入不相容的特性，因此務必將它配置為僅啟用相容的特性。請參閱
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">支援的 Java EE 6 及 7 功能組合</a>。
+## 特性相容性
+{:#feature-compatibility}
 
+Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，因為它們不適用於雲端環境。
 
-
-若要查看 Liberty 中可用功能的完整清單，以及 Java EE 版本及其他資訊，請參閱 IBM Knowledge Center 中的 [Liberty 功能](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)。
+請記住，伺服器無法載入不相容的特性，因此務必將它配置為僅啟用相容的特性。請參閱 [Supported Java EE 6 and 7 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html)。
 
 使用遠端 EJB 的應用程式可以部署至 {{site.data.keyword.Bluemix_notm}}，不過，由於 {{site.data.keyword.Bluemix_notm}} 環境中的埠限制，無法使用 CORBA/IIOP 通訊協定來遠端存取這些遠端 EJB。
 
 ## Liberty 特性索引
 {: #libertyfeat_index}
+
 您可以使用下列索引以跳過特性清單一節，也可以瀏覽 [Liberty for Java 特性清單](#libertyfeat_list)。
 
 ### A-E
@@ -230,10 +235,3 @@ Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty 運行環境](index.html)
-* [Liberty 概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

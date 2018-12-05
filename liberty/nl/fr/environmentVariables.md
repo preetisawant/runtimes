@@ -152,10 +152,3 @@ Certains attributs sont automatiquement désactivés par le pack de construction
 </tr>
 </table>
 {: caption="Tableau 1. Attributs désactivés par Liberty for Java" caption-side="top"}
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

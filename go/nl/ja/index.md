@@ -58,11 +58,3 @@ go_buildpack は、アプリケーションに *.go という名前のファイ�
 * 1.10
 
 アプリケーションが、リストされていないバージョンの Go を必要とする場合は、外部の [Go ビルドパック](https://github.com/cloudfoundry/go-buildpack.git){: new_window}を使用してアプリケーションをデプロイできます。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-
-* [The Go Programming Language](http://golang.org/){: new_window}
-* [Cloud Foundry buildpack for the Go Language](https://github.com/cloudfoundry/go-buildpack){: new_window}

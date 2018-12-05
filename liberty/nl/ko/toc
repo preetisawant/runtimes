@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html"}
+{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html" path="runtimes/liberty"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -17,14 +17,10 @@ Liberty for Java
     secureWebApp.md
     loggingAndTracing.md
 
-    {: .topicgroup}
-    IBM Eclipse Tools for IBM Cloud 사용
-        eclipseDevelop.md
-        [IBM Eclipse Tools for IBM Cloud를 사용하여 앱 배치](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-
     autoConfig.md
     customizingJRE.md
     using_own_jre.md
+    installFeatures.md
     usingBetaFeatures.md
     [바인딩된 서비스 사용하지 않음](autoConfig.html#opting_out)
 
@@ -38,7 +34,7 @@ Liberty for Java
     {: .topicgroup}
     오프라인 작업 또는 프록시 작업
         offlineMode.md
-        [프록시 작업](../common/workingWithProxy.html)
+        [프록시 작업](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,8 +45,8 @@ Liberty for Java
 
     {: .topicgroup}
     스타터 애플리케이션 및 빌드팩
-        [스타터 앱 사용](../common/starter_app_usage.html)
-        [커뮤니티 빌드팩 사용](../common/byob.html)
+        [스타터 앱 사용](runtimes/common/starter_app_usage.html)
+        [커뮤니티 빌드팩 사용](runtimes/common/byob.html)
 
     buildpackDefaults.md
     ../common/app_mng.md
@@ -60,5 +56,5 @@ Liberty for Java
     ts_index.md
     [IBM Cloud Log Analysis 시작하기](../../services/CloudLogAnalysis/index.html)
     updates.md
-    [빌드팩 지원 구문](../common/buildpackSupport.html)
+    [빌드팩 지원 구문](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

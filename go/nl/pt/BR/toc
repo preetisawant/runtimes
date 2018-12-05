@@ -1,8 +1,8 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Go" audience="runtime" arm="392" href="/docs/runtimes/go/getting-started.html"}}
-Go
+{: .toc subcollection="Go" audience="runtime" arm="392" href="/docs/runtimes/go/getting-started.html" path="runtimes/go"}
+Ir
 
     {: .navgroup id="learn"}
     getting-started.md
@@ -10,18 +10,18 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Trabalhando com um proxy](../common/workingWithProxy.html)
+    [Trabalhando com um proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Aplicativos iniciadores e buildpacks de comunidade
-        [Usando os aplicativos iniciadores](../common/starter_app_usage.html)
-        [Usando os buildpacks de comunidade](../common/byob.html)
+        [Usando os aplicativos iniciadores](runtimes/common/starter_app_usage.html)
+        [Usando os buildpacks de comunidade](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Resolução de problemas para tempos de execução](../common/ts_runtimes.html)
+    [Resolução de problemas para tempos de execução](runtimes/common/ts_runtimes.html)
     [Versões disponíveis](index.html#runtime_versions)
-    [Instrução de suporte de buildpack](../common/buildpackSupport.html)
+    [Instrução de suporte de buildpack](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

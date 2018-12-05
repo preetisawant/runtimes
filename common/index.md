@@ -24,7 +24,7 @@ lastupdated: "2018-09-21"
 * [Ruby](/docs/runtimes/ruby/getting-started.html)
 * [Tomcat](/docs/runtimes/tomcat/getting-started.html)
 
-# About the Buildpacks
+## About the Buildpacks
 {: #about_buildpacks}
 
 Cloud Foundry buildpacks provide the runtime support for applications in the Cloud Foundry environment. When you deploy an application to {{site.data.keyword.cloud}}, it starts a buildpack that supports your application type. {{site.data.keyword.cloud_notm}} provides Cloud Foundry buildpack support for Java EE, Node.js, ASP.Net, Swift, and other application types.

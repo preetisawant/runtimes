@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-04"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -195,7 +195,7 @@ A Liberty application fails to start with a "_Failed to start accepting connecti
    2016-11-14T14:44:58.45+0000 [API/0]      OUT App instance exited with guid 21ac63eb-9595-428a-94c7-b0b02aaf77cc payload: {"cc_partition"=>"default", "droplet"=>"21ac63eb-9595-428a-94c7-b0b02aaf77cc", "version"=>"b2772438-92de-4d47-b680-ea772ac2288a", "instance"=>"f4799c8c89214bbd8067883c3ffe23e0", "index"=>0, "reason"=>"CRASHED", "exit_status"=>255, "exit_description"=>"failed to accept connections within health check timeout", "crash_timestamp"=>1479134698}
    2016-11-14T14:45:07.50+0000 [DEA/4]      ERR Instance (index 0) failed to start accepting connections
 ```
-{: #codeblock}
+{: codeblock}
 
 {{site.data.keyword.Bluemix_notm}} performs a health check on the application to see if it has successfully started. The health check tests if the application is listening on the port assigned to the application. The default timeout for this check is 60 seconds and some applications might take longer than 60 seconds to start.  There are a number of reasons why the application might take longer to start. For example, binding services such as [New Relic](/docs/runtimes/liberty/monitoring/newRelic.html) will increase the start-up time. The application might also perform initialization steps that may take a long time to finish.
 {: tsCauses}
@@ -210,14 +210,14 @@ First, examine the logs for any obvious errors that might have caused the Libert
         ```
 	ibmcloud cf push myApp -t 180
         ```
-	{: #codeblock}
+	{: codeblock}
 
 * The health check timeout can also be specified in the manifest.yml file. For example:
 
         ---
            ...
            timeout: 180
-        {: #codeblock}
+        {: codeblock}
 
 #### Disable the appstate feature
 
@@ -226,7 +226,7 @@ The appstate feature integrates with the {{site.data.keyword.Bluemix_notm}} heal
 ```
 ibmcloud cf set-env myApp JBP_CONFIG_LIBERTY "app_state: false"
 ```
-{: #codeblock}
+{: codeblock}
 
 #### Consider re-factoring the application
 
@@ -239,12 +239,12 @@ If your application takes a long time to initialize, you might have to re-factor
         ```
 	ibmcloud cf push myApp –no-route
         ```
-	{: #codeblock}
+	{: codeblock}
 
 2. Once the application is initialized, map a route to the application. For example:
 
         ibmcloud cf map-route myApp mybluemix.net
-        {: #codeblock}
+        {: codeblock}
 
 ### SSL errors with IBM's gateway
 {: #ssl_handshake_failure}

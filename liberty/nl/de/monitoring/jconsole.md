@@ -89,10 +89,3 @@ Sie können auch <b>&dash;J&dash;Djavax.net.debug=ssl</b> zum Befehl 'jconsole' 
     <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
 ```
 {: codeblock}
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

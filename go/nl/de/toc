@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Go" audience="runtime" arm="392" href="/docs/runtimes/go/getting-started.html"}}
+{: .toc subcollection="Go" audience="runtime" arm="392" href="/docs/runtimes/go/getting-started.html" path="runtimes/go"}
 Go
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Mit einem Proxy arbeiten](../common/workingWithProxy.html)
+    [Mit einem Proxy arbeiten](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Starteranwendungen und Community-Buildpacks
-        [Starteranwendungen verwenden](../common/starter_app_usage.html)
-        [Community-Buildpacks verwenden](../common/byob.html)
+        [Starteranwendungen verwenden](runtimes/common/starter_app_usage.html)
+        [Community-Buildpacks verwenden](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Fehlerbehebung für Laufzeiten](../common/ts_runtimes.html)
+    [Fehlerbehebung für Laufzeiten](runtimes/common/ts_runtimes.html)
     [Verfügbare Versionen](index.html#runtime_versions)
-    [Unterstützung für Buildpacks](../common/buildpackSupport.html)
+    [Unterstützung für Buildpacks](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-24"
 ---
 
 {:shortdesc: .shortdesc}
@@ -16,6 +16,7 @@ lastupdated: "2018-07-03"
 
 
 # Lernprogramm 'Einführung'
+{: #getting-started}
 
 * {: download} Herzlichen Glückwunsch! Sie haben die Hello World-Beispielanwendung unter {{site.data.keyword.Bluemix}} bereitgestellt!  Befolgen Sie diese schrittweise Anleitung, um zu starten. Oder laden Sie den <a class="xref" href="http://bluemix.net" target="_blank" title="(Beispielcode herunterladen)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Anwendungscode herunterladen" />Beispielcode herunter</a> und beginnen Sie auf eigene Faust.
 
@@ -140,11 +141,14 @@ Sie können nach Fehlern im Bereitstellungsprozess suchen, indem Sie den Befehl 
 Als Nächstes werden Sie dieser Anwendung eine {{site.data.keyword.cloudant_short_notm}} NoSQL-Datenbank hinzufügen und die Anwendung so einrichten, dass sie lokal und unter {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann.
 
 1. Melden Sie sich in Ihrem Browser bei {{site.data.keyword.Bluemix_notm}} an und wechseln Sie zum Dashboard. Wählen Sie **Ressource erstellen** aus.
-2. Wählen Sie den Abschnitt **Daten und Analyse** und anschließend **{{site.data.keyword.cloudant_short_notm}}** aus und erstellen Sie Ihren Service.
-3. Rufen Sie die Ansicht **Verbindungen** auf. Wählen Sie Ihre Anwendung und anschließend **Verbindung erstellen** aus.
-4. Wählen Sie **Erneutes Staging** aus, wenn Sie dazu aufgefordert werden. {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und stellt die Datenbankberechtigungsnachweise für Ihre Anwendung durch die Umgebungsvariable `VCAP_SERVICES` bereit. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
+1. Suchen Sie nach **{{site.data.keyword.cloudant_short_notm}}** und wählen Sie den Service aus.
+1. Wählen Sie für **Verfügbare Authentifizierungsmethoden** die Option **Sowohl traditionelle Berechtigungsnachweise als auch IAM verwenden** aus. Sie können die Standardeinstellungen für die anderen Felder belassen. Klicken Sie auf **Erstellen**, um den Service zu erstellen.
+1. Rufen Sie in der Navigation die Option **Verbindungen** auf. Wählen Sie Ihre Anwendung aus und klicken Sie auf **Verbindung erstellen**.
+1. Stellen Sie mit den Standardwerten eine Verbindung zu Ihrer Anwendung her und klicken Sie auf **Verbinden & Erneutes Staging für App**. Klicken Sie anschließend auf **Erneutes Staging**, wenn Sie dazu aufgefordert werden.
 
-Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Anstelle der festen Codierung eines Datenbankkennworts können Sie dieses in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen.
+   {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und stellt die Datenbankberechtigungsnachweise für Ihre Anwendung durch die Umgebungsvariable `VCAP_SERVICES` bereit. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
+
+Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Beispiel: Anstelle der festen Codierung eines Datenbankkennworts können Sie es in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen.
 {: tip}
 
 ## Schritt 6: Verwenden Sie die Datenbank.

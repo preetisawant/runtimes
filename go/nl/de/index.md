@@ -58,11 +58,3 @@ Folgende Go-Versionen stehen im [Go-Buildpack](https://github.com/cloudfoundry/g
 * 1.10
 
 Wenn für Ihre App eine Go-Version erforderlich ist, die nicht aufgelistet ist, können Sie die Anwendung mit dem externen [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} implementieren.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Cloud Foundry-Buildpack für Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

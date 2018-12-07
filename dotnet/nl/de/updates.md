@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-06"
+lastupdated: "2018-09-20"
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +11,31 @@ lastupdated: "2017-10-06"
 # Neueste Aktualisierungen für das Buildpack 'ASP.NET Core'
 {: #latest_updates}
 
+Liste mit den neuesten Aktualisierungen im Buildpack 'ASP.NET Core'
 
-Eine Liste mit den neuesten Aktualisierungen im aspnet-Buildpack.
+## 20. September 2018: ASP.NET Core Buildpack v2.0-20180918-1356 aktualisiert
+
+**Wichtig:** Ab diesem Release basiert das Buildpack 'ASP.NET Core' auf dem [Cloud Foundry-Buildpack .NET Core ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html). Dieses Release beinhaltet Version 2.1.3 des .NET Core-Cloud Foundry-Buildpacks.
+
+* Unterstützung für .NET Core SDK 1.1.9 hinzugefügt
+* Unterstützung für .NET Core SDK 2.0.2 hinzugefügt
+* Unterstützung für .NET Core SDK 2.0.3 hinzugefügt
+* Unterstützung für .NET Core SDK 2.1.201 hinzugefügt
+* Unterstützung für .NET Core SDK 2.1.300 hinzugefügt
+* Unterstützung für .NET Core SDK 2.1.301 hinzugefügt
+* Unterstützung für .NET Framework 1.0.11 hinzugefügt
+* Unterstützung für .NET Framework 1.1.8 hinzugefügt
+* Unterstützung für .NET Framework 2.0.7 hinzugefügt
+* Unterstützung für .NET Framework 2.1.0 hinzugefügt
+* Unterstützung für .NET Framework 2.1.1 hinzugefügt
+* Unterstützung für .NET Core SDK 1.1.0 entfernt
+* Unterstützung für .NET Core SDK 1.0.0-preview2-003156 entfernt
+* Unterstützung für .NET Core SDK 2.0.0 entfernt
+* Unterstützung für .NET Core SDK 2.0.0-preview2-006497 entfernt
+* Unterstützung für .NET Framework 1.0.4 entfernt
+* Unterstützung für .NET Framework 1.1.1 entfernt
+* Aktualisierung der Node.js-Version auf 6.14.3
+* Standardversion .NET Core SDK 2.1.301 geändert
 
 ## 6. Oktober 2017: ASP.NET Core-Buildpack v1.0.26-20170913-1346 aktualisiert
 * Unterstützung für .NET Core-Laufzeit 2.0.0 hinzugefügt
@@ -120,9 +143,3 @@ Diese Version des Buildpacks enthält die folgenden Änderungen:
 {: codeblock}
 
 * Die Verwendung des Nowin-Web-Servers wurde in diesem Buildpack entfernt. Dafür wird der [Kestrel]{https://github.com/aspnet/KestrelHttpServer}-Web-Server verwendet.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Dotnet Core-Laufzeit](index.html)

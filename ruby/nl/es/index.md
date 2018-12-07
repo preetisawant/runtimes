@@ -59,10 +59,3 @@ Si la app requiere una versión de Ruby que no aparece en la lista,
 puede utilizar el
 [paquete de compilación de Ruby](https://github.com/cloudfoundry/ruby-buildpack) externo para
 desplegar la app.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Paquete de compilación de Cloud Foundry para Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Documentación de Ruby on Rails ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://api.rubyonrails.org/)

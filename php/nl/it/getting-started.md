@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-24"
 
 ---
 
@@ -30,7 +30,7 @@ In questi documenti, i riferimenti alla CLI Cloud Foundry sono ora aggiornati al
 
 Avrai bisogno di quanto segue:
 * [Account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
+* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
 * [PHP ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://php.net/downloads.php){: new_window}
 * [Composer ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://getcomposer.org/download/){: new_window}
@@ -137,11 +137,14 @@ ibmcloud cf apps
 Successivamente, aggiungeremo un database NoSQL {{site.data.keyword.cloudant_short_notm}} a questa applicazione e la configureremo in modo che possa essere eseguita localmente e su {{site.data.keyword.Bluemix_notm}}.
 
 1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Crea risorsa**.
-2. Scegli la sezione **Data and Analytics** e seleziona **{{site.data.keyword.cloudant_short_notm}}** e crea il tuo servizio.
-3. Passa alla vista **Connessioni** e seleziona la tua applicazione, quindi **Crea connessione**.
-4. Seleziona **Riprepara** quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+1. Cerca **{{site.data.keyword.cloudant_short_notm}}** e seleziona il servizio.
+1. Per **Metodi di autenticazione disponibili**, seleziona **Utilizza sia credenziali legacy che IAM**. Puoi lasciare le impostazioni predefinite per gli altri campi. Fai clic su **Crea** per creare il servizio.
+1. Nella navigazione, vai a **Connessioni**. Seleziona la tua applicazione e fai clic su **Crea connessione**.
+1. Connetti la tua applicazione utilizzando i valori predefiniti e fai clic su **Collega e riprepara l'applicazione**. Quindi, quando ti viene richiesto, fai clic su **Riprepara**.
 
-Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi archiviarla in una variabile di ambiente di riferimento nel tuo codice di origine.
+   {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+
+Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice sorgente. Ad esempio, invece di impostare come hardcoded una password del database, puoi memorizzarla in una variabile di ambiente a cui fai riferimento nel tuo codice sorgente.
 {: tip}
 
 ## Passo 6: Utilizza il database
@@ -152,8 +155,8 @@ Ora aggiorneremo il tuo codice locale per puntare a questo database. Creeremo un
 
   ```
 CLOUDANT_HOST=
-  CLOUDANT_USERNAME=
-  CLOUDANT_PASSWORD=
+CLOUDANT_USERNAME=
+CLOUDANT_PASSWORD=
   ```
   {: codeblock}
 
@@ -163,8 +166,8 @@ CLOUDANT_HOST=
 
   ```
 CLOUDANT_HOST=abc...yz.cloudant.com
-  CLOUDANT_USERNAME=abc...yz
-  CLOUDANT_PASSWORD=445d...d1a
+CLOUDANT_USERNAME=abc...yz
+CLOUDANT_PASSWORD=445d...d1a
   ```
   {: codeblock}
 

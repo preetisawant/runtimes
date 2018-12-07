@@ -61,11 +61,3 @@ Das Buildpack stellt eine Standard-JRE für die Anwendung bereit. Die übergeord
 während die übergeordnete Version nur selten aktualisiert wird. Änderungen an der übergeordneten Version der JRE können sich nachteilig auf die Anwendung auswirken.
 
 Damit sichergestellt ist, dass die Anwendung nicht durch Änderungen an der übergeordneten Version beeinträchtigt wird, legen Sie die Umgebungsvariable wie in [JRE anpassen](customizingJRE.html) beschrieben auf die entsprechende JRE-Version fest. Die besten Ergebnisse erzielen Sie, wenn Sie für Ihre Anwendungen Java 8 verwenden.
-
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-08-10"
+lastupdated: "2018-11-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,13 +13,14 @@ lastupdated: "2017-08-10"
 # Erforderliche Dateien in den Buildausgabeordner kopieren
 {: #copy_files_build_output}
 
-Sie können entweder project.json-Tools oder MSBuild-Tools verwenden um sicherzustellen, dass Ihre Anwendung über alle erforderlichen Dateien im Buildausgabeordner verfügt.
-{: #shortdesc}
+Sie können entweder project.json-Tools oder MSBuild-Tools verwenden, um sicherzustellen, dass Ihre Anwendung über alle erforderlichen Dateien im Buildausgabeordner verfügt.
+{: shortdesc}
 
 
 ## project.json-Tools verwenden
+{: #projectjson}
 
-Fügen Sie die folgende Eigenschaft zum Abschnitt `buildOptions` in der Datei 'project.json' hinzu:
+Fügen Sie die folgende Eigenschaft zum Abschnitt `buildOptions` in der Datei `project.json` hinzu:
 ```
   "copyToOutput": {
     "include": [
@@ -32,23 +33,24 @@ Fügen Sie die folgende Eigenschaft zum Abschnitt `buildOptions` in der Datei 'p
 ```
 {: codeblock}
 
-Entfernen Sie folgende Zeile in der `Startup`-Methode Startup.cs:
+Entfernen Sie folgende Zeile in der `Startup`-Methode Startup.cs.
 ```
   .SetBasePath(env.ContentRootPath)
 ```
 {: codeblock}
 
-Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs:
+Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs.
 ```
   .UseContentRoot(Directory.GetCurrentDirectory())
 ```
 {: codeblock}
 
-Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet run` ausgeführt wird.  Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese zum Abschnitt `include` von `copyToOutput` in der Datei 'project.json' für Ihr Projekt hinzufügen.
+Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet run` ausgeführt wird.  Wenn Ihre Anwendung über andere Dateien wie beispielsweise JSON-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann müssen Sie auch diese zum Abschnitt `include` von `copyToOutput` in der Datei `project.json` für Ihr Projekt hinzufügen.
 
 ## MSBuild-Tools verwenden
+{: #msbuild}
 
-Fügen Sie ein Element `<Content>` zum Element `<ItemGroup>` Ihrer .csproj-Datei hinzu:
+Fügen Sie ein Element `<Content>` zum Element `<ItemGroup>` Ihrer Datei mit der Endung `.csproj` hinzu.
 ```
   <ItemGroup>
     <Content Include="wwwroot/**/*;Areas/**/Views/*;Views/*;appsettings.json">
@@ -59,16 +61,16 @@ Fügen Sie ein Element `<Content>` zum Element `<ItemGroup>` Ihrer .csproj-Datei
 ```
 {: codeblock}
 
-Entfernen Sie folgende Zeile in der `Startup`-Methode Startup.cs:
+Entfernen Sie folgende Zeile in der `Startup`-Methode `Startup.cs`.
 ```
   .SetBasePath(env.ContentRootPath)
 ```
 {: codeblock}
 
-Entfernen Sie folgende Zeile in der `Main`-Methode Program.cs:
+Entfernen Sie folgende Zeile in der `Main`-Methode `Program.cs`.
 ```
   .UseContentRoot(Directory.GetCurrentDirectory())
 ```
 {: codeblock}
 
-Diese Änderungen sollte der .NET-CLI ermöglichen, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet publish` ausgeführt wird.  Wenn Ihre Anwendung über andere Dateien wie beispielsweise json-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann sollten Sie auch diese durch Semikolons getrennt zur Eigenschaft `Include` des Elements `Content` in der .csproj-Datei Ihres Projekts hinzufügen.
+Diese Änderungen ermöglichen der .NET-CLI, die `Sichten` Ihrer Anwendung zu finden, da diese jetzt in die Buildausgabe kopiert werden, wenn der Befehl `dotnet publish` ausgeführt wird.  Wenn Ihre Anwendung über andere Dateien wie beispielsweise JSON-Konfigurationsdateien verfügt, die zur Laufzeit erforderlich sind, dann müssen Sie auch diese durch Semikolons getrennt zur Eigenschaft `Include` des Elements `Content` in der .csproj-Datei Ihres Projekts hinzufügen.

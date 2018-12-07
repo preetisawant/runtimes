@@ -58,9 +58,3 @@ installato in {{site.data.keyword.Bluemix_notm}}:
 Se la tua applicazione richiede una versione di Python che non è elencata, puoi utilizzare
 il [pacchetto di build Python](https://github.com/cloudfoundry/python-buildpack) esterno
 per distribuire l'applicazione.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Pacchetto di build Cloud Foundry per Python](https://github.com/cloudfoundry/python-buildpack)

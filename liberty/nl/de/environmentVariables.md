@@ -152,10 +152,3 @@ Es gibt einige Attribute, die durch das Liberty-Buildpack automatisch inaktivier
 </tr>
 </table>
 {: caption="Tabelle 1. Von Liberty for Java inaktivierte Attribute" caption-side="top"}
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

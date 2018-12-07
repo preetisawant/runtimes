@@ -44,7 +44,7 @@ En el método `Main` de Program.cs, elimine la siguiente línea:
 ```
 {: codeblock}
 
-Estos cambios deben permitir que .NET CLI encuentre las `Views` de la aplicación porque ahora se copiarán en la salida de la compilación cuando se ejecute el mandato `dotnet run`.  Si la aplicación tiene otros archivos, como los archivos de configuración json, que son necesarios en el tiempo de ejecución, también deberá añadirlos a la sección `include` de `copyToOutput` del archivo project.json correspondiente a su proyecto.
+Estos cambios deben permitir que la CLI de .NET encuentre las `Vistas` de la aplicación porque ahora se copiarán en la salida de la compilación cuando se ejecute el mandato `dotnet run`.  Si la aplicación tiene otros archivos, como los archivos de configuración json, que son necesarios en el tiempo de ejecución, también deberá añadirlos a la sección `include` de `copyToOutput` del archivo project.json correspondiente a su proyecto.
 
 #### Utilización de herramientas MSBuild
 
@@ -71,4 +71,4 @@ En el método `Main` de Program.cs, elimine la siguiente línea:
 ```
 {: codeblock}
 
-Estos cambios deben permitir que .NET CLI encuentre las `Views` de la aplicación porque ahora se copiarán en la salida de la compilación cuando se ejecute el mandato `dotnet publish`.  Si la aplicación tiene otros archivos, como los archivos de configuración json, que son necesarios en el tiempo de ejecución, también deberá añadirlos a la propiedad `Include` del elemento `Content` del archivo project.json correspondiente a su proyecto, separados por signos de punto y coma.
+Estos cambios deben permitir que la CLI de .NET encuentre las `Vistas` de la aplicación porque ahora se copiarán en la salida de la compilación cuando se ejecute el mandato `dotnet publish`.  Si la aplicación tiene otros archivos, como los archivos de configuración json, que son necesarios en el tiempo de ejecución, también deberá añadirlos a la propiedad `Include` del elemento `Content` del archivo project.json correspondiente a su proyecto, separados por signos de punto y coma.

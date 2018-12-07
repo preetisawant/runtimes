@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -288,6 +288,24 @@ Modifique el almacén de confianza configurado para que confíe en la entidad em
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### La aplicación no se puede iniciar: resolución de problemas generales
+
+Para el paquete de compilación de {{site.data.keyword.runtime_nodejs_notm}} V3.23 o posterior, intente vendorizar las dependencias como primer paso de la resolución de problemas. Vendorizar dependencias significa empaquetar las dependencias en los mismos archivos de origen que la aplicación. Esto puede resolver varios errores que se pueden producir cuando las dependencias presuponen que están en el mismo directorio base que la aplicación.
+
+1. Desde el directorio raíz de la aplicación, instale las dependencias con el mandato siguiente.
+
+   ```bash
+   npm install
+   ```
+   {: codeblock}
+1. Asegúrese de que el archivo `.cfignore` no incluya la línea siguiente:
+
+   ```
+   node_modules/
+   ```
+
+Ahora, cuando despliegue la aplicación con el mandato `ibmcloud cf push`, en lugar de descargar las dependencias en una ubicación distinta, las dependencias se copian en el mismo directorio que el resto de la aplicación.
+
 ### La aplicación no se inicia con el error "No queda espacio en el dispositivo"
 {: #no_space_left_on_device}
 
@@ -296,10 +314,10 @@ Una aplicación Node.js no se inicia con el error "No queda espacio en el dispos
 {: tsSymptoms}
 
 ```
-   2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: No se puede grabar: No queda espacio en el dispositivo
+   2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: No se puede escribir: No queda espacio en el dispositivo
 
 ```
-{: #codeblock}
+{: codeblock}
 
 Las aplicaciones Node.js que utilizan versiones de NPM anteriores a la versión 3 consumen más espacio al descargar dependencias.
 {: tsCauses}

@@ -69,7 +69,7 @@ Führen Sie die folgenden Schritte aus, um eine bereits vorhandene Java-Anwendun
 Wenn Sie über ein vorhandenes New Relic-Konto und den zugehörigen Lizenzschlüssel verfügen, können Sie den vorhandenen New Relic-Service mit einem vom Benutzer bereitgestellten Service an Ihre Anwendung binden.
 
 1. Erstellen Sie eine vom Benutzer bereitgestellte Serviceinstanz und verwenden Sie dazu den bereits vorhandenen Lizenzschlüssel.  Wenn Ihr vorhandener Lizenzschlüssel '1234567' lautet, können Sie die {{site.data.keyword.Bluemix_notm}}-CLI zum Erstellen eines vom Benutzer bereitgestellten Service (create-user-provided-service) verwenden und an der Eingabeaufforderung wie im folgenden Beispiel den Lizenzschlüssel '1234567' angeben:
-  
+
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -97,10 +97,3 @@ Die automatische Konfiguration des New Relic-Service unterscheidet sich von der 
 * Der Ausschluss (Opt-out) kann nicht verwendet werden.
 * Die Serviceintegration basiert auf dem New Relic-Agenten, bei dem es sich um einen Java-Agenten handelt. Aus diesem Grund erfolgt die Konfiguration in der Datei 'server.xml' mithilfe von Java-Optionen und nicht mit Cloudvariablen.
 * Die Konfiguration basiert auf den Umgebungsvariablen VCAP_SERVICES und VCAP_APPLICATION.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

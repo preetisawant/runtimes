@@ -152,10 +152,3 @@ Ci sono alcuni attributi che sono automaticamente disabilitati dal pacchetto di 
 </tr>
 </table>
 {: caption="Tabella 1. Attributi disabilitati da Liberty for Java" caption-side="top"}
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Runtime Liberty](index.html)
-* [Liberty Overview](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

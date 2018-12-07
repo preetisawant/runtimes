@@ -101,10 +101,3 @@ De forma predeterminada, los diversos archivos de volcado se colocan en el direc
   {: codeblock}
 
 También se puede utilizar `scp` y otras herramientas similares para ver y descargar los archivos de volcado. Consulte el apartado sobre [Acceso a apps con SSH  ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) para obtener más información.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

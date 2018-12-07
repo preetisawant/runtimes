@@ -63,11 +63,3 @@ Si la app requiere una versión de Go que no aparece en la lista,
 puede utilizar el
 [paquete de compilación de Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externo para
 desplegar la aplicación.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Paquete de compilación de Cloud Foundry para Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

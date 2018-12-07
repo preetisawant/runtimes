@@ -64,11 +64,3 @@ secundaria del JRE podría actualizarse con frecuencia, cosa que no sucede con l
 en una versión principal del JRE podría afectar negativamente a la aplicación.
 
 Para asegurarse de que la aplicación no se vea afectada por el cambio de versión principal, establezca la variable de entorno con la versión JRE adecuada según se describe en [Personalización del JRE](customizingJRE.html). Se obtendrán los mejores resultados si usa Java 8 en sus aplicaciones.
-
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

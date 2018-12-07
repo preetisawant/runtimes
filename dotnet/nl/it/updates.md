@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-06"
+lastupdated: "2018-09-20"
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +11,31 @@ lastupdated: "2017-10-06"
 # Aggiornamenti più recenti al pacchetto di build ASP.NET Core
 {: #latest_updates}
 
+Un elenco degli aggiornamenti più recenti nel pacchetto di build ASP.NET Core.
 
-Un elenco degli aggiornamenti più recenti nel pacchetto di build aspnet.
+## 20 settembre 2018: aggiornamento del pacchetto di build ASP.NET Core v2.0-20180918-1356
+
+**Importante:** a partire da questa release, il pacchetto di build ASP.NET Core è basato sul [pacchetto di build Cloud Foundry .NET Core ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html). Questa release include la versione 2.1.3 del pacchetto di build Cloud Foundry dotnet-core.
+
+* Aggiunto il supporto per l'SDK .NET Core 1.1.9
+* Aggiunto il supporto per l'SDK .NET Core 2.0.2
+* Aggiunto il supporto per l'SDK .NET Core 2.0.3
+* Aggiunto il supporto per l'SDK .NET Core 2.1.201
+* Aggiunto il supporto per l'SDK .NET Core 2.1.300
+* Aggiunto il supporto per l'SDK .NET Core 2.1.301
+* Aggiunto il supporto per .NET Framework 1.0.11
+* Aggiunto il supporto per .NET Framework 1.1.8
+* Aggiunto il supporto per .NET Framework 2.0.7
+* Aggiunto il supporto per .NET Framework 2.1.0
+* Aggiunto il supporto per .NET Framework 2.1.1
+* Rimosso il supporto per l'SDK .NET Core 1.1.0
+* Rimosso il supporto per l'SDK .NET Core 1.0.0-preview2-003156
+* Rimosso il supporto per l'SDK .NET Core 2.0.0
+* Rimosso il supporto per l'SDK .NET Core 2.0.0-preview2-006497
+* Rimosso il supporto per .NET Framework 1.0.4
+* Rimosso il supporto per .NET Framework 1.1.1
+* Aggiornamento della versione di Node.js alla 6.14.3
+* Modificato il valore predefinito di .NET Core SDK 2.1.301
 
 ## 6 ottobre, 2017: aggiornamento del pacchetto di build ASP.NET Core v1.0.26-20170913-1346
 * Aggiunto il supporto per il runtime .NET Core 2.0.0
@@ -39,8 +62,8 @@ Un elenco degli aggiornamenti più recenti nel pacchetto di build aspnet.
 * Aggiunto il supporto per il runtime .NET Core 2.0.0 Preview 1
 * Aggiunto il supporto per l'SDK .NET Core 2.0.0-preview1-005977
 * Aggiornamento di Node alla versione 6.10.3
-* Rimosso il supporto per la versione di runtime .NET Core 1.0.0
-* Rimosso il supporto per la versione di runtime .NET Core 1.0.1
+* Rimosso il supporto per la versione del runtime .NET Core 1.0.0
+* Rimosso il supporto per la versione del runtime .NET Core 1.0.1
 * Rimosso il supporto per la versione SDK .NET Core 1.0.0-preview2-1-003177
 * Aggiunto il file staging_task.log al contenitore dell'applicazione
 * Basso utilizzo del disco quando si memorizzano nella cache le dipendenze
@@ -120,9 +143,3 @@ Questa versione del pacchetto di build include le seguenti modifiche:
 {: codeblock}
 
 * L'utilizzo del server web Nowin è stato rimosso da questo pacchetto di build e viene invece utilizzato il server [Kestrel]{https://github.com/aspnet/KestrelHttpServer}.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Runtime Dotnet core](index.html)

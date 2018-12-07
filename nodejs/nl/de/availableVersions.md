@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-26"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -22,7 +22,7 @@ Das IBM Node.js-Buildpack stellt die {{site.data.keyword.IBM_notm}} Laufzeitvers
 
 * Verwenden Sie den Parameter **node** im Abschnitt **engines** der Datei **package.json**, um die Version der Node.js-Laufzeit anzugeben, die Sie ausführen möchten.
 
-* Wenn Sie eine andere als die mit Node.js im Paket vorhandene Version von npm angeben müssen, verwenden Sie den Parameter **npm** im Abschnitt **engines** der Datei **package.json**.  
+* Wenn Sie eine andere als die mit Node.js im Paket vorhandene Version von `npm` angeben müssen, verwenden Sie den Parameter `npm` im Abschnitt `engines` der Datei `package.json`.  
 
 Lesen Sie folgendes Beispiel:
 
@@ -39,4 +39,4 @@ Lesen Sie folgendes Beispiel:
 ```
 {: codeblock}
 
-**Hinweis:** Für 'node' muss in der Datei **package.json** stets eine Version angegeben werden. Ist das nicht der Fall, wird die neueste Knotenversion verwendet.
+**Hinweis:** Geben Sie immer eine Knotenversion in der Datei `package.json` an. Wenn keine Version angegeben ist, wird die aktuelle Knotenversion verwendet.

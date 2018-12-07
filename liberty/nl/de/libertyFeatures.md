@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,29 +12,34 @@ lastupdated: "2018-03-16"
 # In {{site.data.keyword.cloud_notm}} unterstützte Liberty-Features
 {: #liberty_features}
 
-Die Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java umfasst eine Untergruppe von Liberty-Features.  Einige Features, die Liberty anbietet, stehen in der Ad-hoc-Laufzeit (Instant Runtime) von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können.
+Die Laufzeit von Liberty for Java umfasst eine Untergruppe von Liberty-Features. Wenn Sie ein Feature verwenden möchten, das nicht in der Laufzeitumgebung enthalten ist, lesen Sie die Informationen unter [Liberty-Features installieren](installFeatures.html). Eine vollständige Liste der in Liberty verfügbaren Features sowie der Java-EE-Versionen und andere Informationen finden Sie unter
+[Liberty-Features ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
+
+## Cloudspezifische Features
+{:#cloud-features}
 
 Die folgenden für {{site.data.keyword.Bluemix_notm}} spezifischen Features sind enthalten:
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-Eine Untergruppe verfügbarer Funktionen wird standardmäßig aktiviert, wenn WAR- oder EAR-Dateien implementiert werden.  Details finden Sie unter [Eigenständige Apps](optionsForPushing.html#stand_alone_apps).
+Eine Untergruppe der verfügbaren Features wird standardmäßig aktiviert, wenn WAR- oder EAR-Dateien bereitgestellt werden. Details finden Sie unter [Eigenständige Apps](optionsForPushing.html#stand_alone_apps).
 
-Die Liberty for Java-Laufzeit stellt ferner einige Funktionen der Liberty-Betaversion zur Verfügung. Diese Funktionen werden nicht aufgelistet, können jedoch unter [Beta-Features verwenden](/docs/runtimes/liberty/usingBetaFeatures.html) gefunden werden.
+Die Liberty for Java-Laufzeit stellt ferner einige Features der Liberty-Betaversion zur Verfügung. Diese Features sind in [Beta-Features verwenden](/docs/runtimes/liberty/usingBetaFeatures.html) aufgeführt.
 
-Bedenken Sie, dass ein Server keine inkompatiblen Funktionen laden kann. Stellen Sie daher sicher, dass er so konfiguriert ist, dass nur kompatible Funktionen aktiviert werden. Siehe auch den Abschnitt zu unterstützten Kombinationen von Funktionen von Java EE 6 und 7
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">(Supported Java EE 6 and 7 feature combinations)</a>.
+## Featurekompatibilität
+{:#feature-compatibility}
 
-Eine vollständige Liste der in Liberty verfügbaren Funktionen mit Java EE-Versionen und anderen Informationen finden Sie im Abschnitt über Liberty-Funktionen ([Liberty Features](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html))
-im IBM Knowledge Center.
+Einige Features, die Liberty anbietet, stehen in der Laufzeit von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können.
 
-Anwendungen, die ferne EJBs verwenden, können in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden.
-Es kann jedoch aufgrund von Porteinschränkungen in der {{site.data.keyword.Bluemix_notm}}-Umgebung nicht mit dem
+Bedenken Sie, dass ein Server keine inkompatiblen Funktionen laden kann. Stellen Sie daher sicher, dass er so konfiguriert ist, dass nur kompatible Funktionen aktiviert werden. Weitere Informationen finden Sie in 'Unterstützte Kombinationen der Features für Java EE 6 und Java EE 7' (https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html).
+
+Anwendungen, die ferne EJBs verwenden, können in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. Es kann jedoch aufgrund von Porteinschränkungen in der {{site.data.keyword.Bluemix_notm}}-Umgebung nicht mit dem
 CORBA/IIOP-Protokoll auf die fernen EJBs zugegriffen werden.
 
 ## Index der Liberty-Features
 {: #libertyfeat_index}
+
 Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Featureliste oder blättern Sie die [Liste der Liberty for Java-Features](#libertyfeat_list) durch.
 
 ### A-E
@@ -231,10 +236,3 @@ Springen Sie mithilfe des folgenden Index zum gewünschten Abschnitt der Feature
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -253,7 +253,7 @@ sono sensibili al maiuscolo/minuscolo.
 ### Accesso alle informazioni dei servizi di cui è stato eseguito il bind
 {: #accessing_info_of_bound_services}
 
-Quando desideri eseguire il bind di un servizio alla tua applicazione, le informazioni sul servizio, come le credenziali di connessione, sono incluse nella [variabile di ambiente VCAP_SERVICES ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) che Cloud Foundry imposta per l'applicazione. Per i [servizi configurati automaticamente](autoConfig.html), il pacchetto di build Liberty genera o aggiorna le voci di bind di servizio nel file  server.xml. Il contenuto delle voci di bind di
+Quando desideri eseguire il bind di un servizio alla tua applicazione, le informazioni sul servizio, come le credenziali di connessione, sono incluse nella [variabile di ambiente VCAP_SERVICES ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) che Cloud Foundry imposta per l'applicazione. Per i [servizi configurati automaticamente](autoConfig.html), il pacchetto di build Liberty genera o aggiorna le voci di bind di servizio nel file server.xml. Il contenuto delle voci di bind di
 				servizio può essere in uno dei seguenti formati:
 
 * cloud.services.&lt;nome-servizio&gt;.&lt;proprietà&gt;, che descrive informazioni quali il nome, il tipo e il piano del servizio.
@@ -272,10 +272,3 @@ L'insieme di informazioni tipico è il seguente:
 * connection.password: la password utilizzata per autenticare questa applicazione presso il servizio. La password viene generata automaticamente da Cloud Foundry, ad esempio, pvyCY0YzX9pu5.
 
 Per i servizi di cui è stato eseguito il bind che non sono configurati automaticamente dal pacchetto di build Liberty, l'applicazione deve gestire direttamente l'accesso della risorsa di backend.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

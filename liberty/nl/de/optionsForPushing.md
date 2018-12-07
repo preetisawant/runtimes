@@ -258,10 +258,3 @@ Die typischen Informationen lauten wie folgt:
 * connection.password: Das Kennwort zur Authentifizierung dieser Anwendung für den Service. Das Kennwort wird automatisch von Cloud Foundry generiert; zum Beispiel pvyCY0YzX9pu5.
 
 Bei gebundenen Services, die nicht automatisch vom Liberty-Buildpack konfiguriert werden, muss die Anwendung den Zugriff der Back-End-Ressource selbst verwalten.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

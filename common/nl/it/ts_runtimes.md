@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -284,18 +284,36 @@ Modifica il truststore configurato per rendere attendibile la CA RADICE DigitCer
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### Impossibile avviare l'applicazione: risoluzione dei problemi generale
+
+Per il pacchetto di build {{site.data.keyword.runtime_nodejs_notm}} V3.23 o successive, prova a eseguire il vendoring delle tue dipendenze come primo passo per la risoluzione dei problemi. Eseguire il vendoring delle dipendenze significa impacchettare le dipendenze negli stessi file di origine della tua applicazione. Tale operazione può risolvere diversi errori che possono verificarsi quando le dipendenze presumono che ti trovi nella stessa directory di base dell'applicazione.
+
+1. Dalla tua directory root dell'applicazione, installa le dipendenze eseguendo il comando di seguito indicato.
+
+   ```bash
+   npm install
+   ```
+   {: codeblock}
+1. Assicurati che il tuo file `.cfignore` non includa la seguente riga:
+
+   ```
+   node_modules/
+   ```
+
+Ora, quando distribuisci la tua applicazione con il comando `ibmcloud cf push`, invece di essere scaricate in una ubicazione separata, le tue dipendenze vengono copiate nella stessa directory del resto dell'applicazione.
+
 ### Impossibile avviare l'applicazione con un errore di spazio insufficiente sul dispositivo
 {: #no_space_left_on_device}
 
 
-Impossibile avviare un'applicazione Node.js  con un errore di spazio insufficiente sul dispositivo. Ad esempio, l'errore nei log può essere simile al seguente:
+Impossibile avviare un'applicazione Node.js con un errore di spazio insufficiente sul dispositivo. Ad esempio, l'errore nei log può essere simile al seguente:
 {: tsSymptoms}
 
 ```
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 Le applicazioni Node.js che utilizzano le versioni di NPM precedenti alla 3 utilizzano più spazio per lo scaricamento delle dipendenze.
 {: tsCauses}
@@ -351,7 +369,7 @@ Se ricevi un messaggio simile quando esegui il push della tua applicazione ASP.n
 La distribuzione dell'applicazione non riesce con il messaggio: `Failed to compress droplet: signal: broken pipe` o `No space left on device`.  In che modo è possibile correggere l'errore?
 {: tsSymptoms}
 
-I progetti di cui viene eseguito il push dal codice sorgente che contiene un ampio numero di dipendenze del pacchetto NuGet possono a volte causare questo errore quando la cache del pacchetto NuGet è abilitata.  Imposta la variabile di ambiente `CACHE_NUGET_PACKAGES` su `false` per disabilitare la cache. Per ulteriori informazioni, consulta le istruzioni su come [Disabilitare il pacchetto NuGet](../runtimes/dotnet/diablingNuGet.md).
+I progetti di cui viene eseguito il push dal codice sorgente che contiene un ampio numero di dipendenze del pacchetto NuGet possono a volte causare questo errore quando la cache dei pacchetti NuGet è abilitata.  Imposta la variabile di ambiente `CACHE_NUGET_PACKAGES` su `false` per disabilitare la cache. Per ulteriori informazioni, consulta le istruzioni su come [Disabilitare il pacchetto NuGet](../runtimes/dotnet/diablingNuGet.md).
 {: tsCauses}
 
 ### Link utili
@@ -384,7 +402,7 @@ error_log stderr notice;
 pid @{HOME}/nginx/logs/nginx.pid;
 ```
 
-I messaggi  ` NOTICE `  sono informativi e potrebbero non indicare un problema. Puoi arrestare la registrazione di questi messaggi modificando il livello di registrazione da `stderr notice` a `stderr error` nel file nginx-defaults.conf del tuo pacchetto di build. Ad esempio: 	
+I messaggi ` NOTICE ` sono informativi e potrebbero non indicare un problema. Puoi arrestare la registrazione di questi messaggi modificando il livello di registrazione da `stderr notice` a `stderr error` nel file nginx-defaults.conf del tuo pacchetto di build. Ad esempio: 	
 {: tsResolve}
 
 ```

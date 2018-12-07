@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-24"
 
 ---
 
@@ -16,6 +16,7 @@ lastupdated: "2018-07-03"
 {:app_name: data-hd-keyref="app_name"}
 
 # Esercitazione introduttiva
+{: #getting-started}
 
 * {: download} Congratulazioni, hai distribuito un'applicazione di esempio Hello World su {{site.data.keyword.Bluemix}}!  Per iniziare, segui questa guida dettagliata. O <a class="xref" href="http://bluemix.net" target="_blank" title="(Scarica il codice di esempio)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Scarica codice di esempio" />scarica codice di esempio</a> o esplora da solo.
 
@@ -27,7 +28,7 @@ In questi documenti, i riferimenti alla CLI Cloud Foundry sono ora aggiornati al
 ## Prima di cominciare
 {: #prereqs}
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
-* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
+* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/ibmcloud/download_cli.html)
 * [Swift compiler ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://swift.org/download/) per la tua piattaforma.
 
 ## Passo 1: Clona l'applicazione di esempio
@@ -147,14 +148,17 @@ ibmcloud cf apps
 ## Passo 5: Aggiungi un database
 {: #add_database}
 
-Successivamente, aggiungeremo un database {{site.data.keyword.cloudant_short_notm}} a questa applicazione e la configureremo in modo che possa essere eseguita localmente e su {{site.data.keyword.Bluemix_notm}}.
+Successivamente, aggiungeremo un database NoSQL {{site.data.keyword.cloudant_short_notm}} a questa applicazione e la configureremo in modo che possa essere eseguita localmente e su {{site.data.keyword.Bluemix_notm}}.
 
 1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Crea risorsa**.
-2. Scegli la sezione **Data and Analytics** e seleziona **{{site.data.keyword.cloudant_short_notm}}** e crea il tuo servizio.
-3. Passa alla vista **Connessioni** e seleziona la tua applicazione, quindi **Crea connessione**.
-4. Seleziona **Riprepara** quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+1. Cerca **{{site.data.keyword.cloudant_short_notm}}** e seleziona il servizio.
+1. Per **Metodi di autenticazione disponibili**, seleziona **Utilizza sia credenziali legacy che IAM**. Puoi lasciare le impostazioni predefinite per gli altri campi. Fai clic su **Crea** per creare il servizio.
+1. Nella navigazione, vai a **Connessioni**. Seleziona la tua applicazione e fai clic su **Crea connessione**.
+1. Connetti la tua applicazione utilizzando i valori predefiniti e fai clic su **Collega e riprepara l'applicazione**. Quindi, quando ti viene richiesto, fai clic su **Riprepara**.
 
-Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi archiviarla in una variabile di ambiente di riferimento nel tuo codice di origine.
+   {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+
+Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice sorgente. Ad esempio, invece di impostare come hardcoded una password del database, puoi memorizzarla in una variabile di ambiente a cui fai riferimento nel tuo codice sorgente.
 {: tip}
 
 ## Passo 6: Utilizza il database

@@ -33,10 +33,3 @@ var port = (process.env.PORT || 3000);
 ## App-Management
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}} stellt eine Anzahl Dienstprogramme für das Management und das Debugging Ihrer Node.js-App zur Verfügung.  Vollständige Details finden Sie in [App-Management](../common/app_mng.html).
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Node.js ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)

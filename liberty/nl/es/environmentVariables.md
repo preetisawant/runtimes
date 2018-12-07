@@ -152,10 +152,3 @@ Existen algunos atributos inhabilitados automáticamente por el paquete de compi
 </tr>
 </table>
 {: caption="Tabla 1. Atributos inhabilitados por Liberty for Java" caption-side="top"}
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

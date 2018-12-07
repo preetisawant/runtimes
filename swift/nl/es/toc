@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Swift" audience="runtime" arm="393" href="/docs/runtimes/swift/getting-started.html"}}
+{: .toc subcollection="Swift" audience="runtime" arm="393" href="/docs/runtimes/swift/getting-started.html" path="runtimes/swift"}
 Swift
 
     {: .navgroup id="learn"}
@@ -10,17 +10,17 @@ Swift
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Cómo trabajar con un proxy](../common/workingWithProxy.html)
+    [Cómo trabajar con un proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Aplicaciones de inicio y compilaciones de la comunidad
-        [Utilización de las apps de inicio](../common/starter_app_usage.html)
-        [Utilización de compilación de la comunidad](../common/byob.html)
+        [Utilización de las apps de inicio](runtimes/common/starter_app_usage.html)
+        [Utilización de compilación de la comunidad](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html)
-    [Declaración de soporte de paquete de compilación](../common/buildpackSupport.html)
+    [Resolución de problemas de tiempos de ejecución](runtimes/common/ts_runtimes.html)
+    [Declaración de soporte de paquete de compilación](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-09-19"
 
 ---
 
@@ -18,11 +18,7 @@ Die Beta-Features von Liberty ermöglichen den vorzeitigen Zugriff auf die neuen
 
 | Features |
 | ------ |
-| `audit-1.0` |
 | `logstashCollector-1.1` |
-| `mpConfig-1.3` |
-| `mpFaultTolerance-1.1` |
-| `usageMetering-1.0` |
 | `validator-1.0` |
 {: caption="Tabelle 1. In Liberty for Java verfügbare Liberty-Beta-Features in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
@@ -33,8 +29,7 @@ Zur Verwendung der Liberty-Beta-Features in {{site.data.keyword.Bluemix_notm}} m
   ```
 <server>
     <featureManager>
-        <feature>usageMetering-1.0</feature>
-        <feature>validator-1.0</feature>
+        <feature>logstashCollector-1.1</feature>
     </featureManager>
 </server>
   ```

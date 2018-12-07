@@ -60,7 +60,7 @@ Das Liberty-Buildpack konfiguriert die JVM-Standardoptionen unter Berücksichtig
   * Speicherbegrenzung einer Anwendung, wie in [Speicherbegrenzungen und das Liberty-Buildpack](memoryLimits.html#memory_limits) erläutert.
   * JRE-Typ, da die auf den Heapspeicher bezogenen Optionen für die JVM in Abhängigkeit von den unterstützten JRE-Optionen variieren.
 
-* Die in {{site.data.keyword.Bluemix_notm}} unterstützten [Liberty-Features](libertyFeatures.html#libertyfeatures).
+* Die in [{{site.data.keyword.Bluemix_notm}} unterstützten Liberty-Features](libertyFeatures.html#libertyfeatures).
   * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in {{site.data.keyword.Bluemix_notm}} nicht unterstützt und deshalb durch die Einstellung -Dcom.ibm.tx.jta.disable2PC=true inaktiviert.
 
 * Die {{site.data.keyword.Bluemix_notm}}-Umgebung.
@@ -295,10 +295,3 @@ herunter und fügen Sie sie Ihrer Anwendung wie folgt hinzu:
 {: codeblock}
 
 Bei Durchführung einer Push-Operation für Ihre Anwendung überschreiben diese JAR-Dateien die JAR-Standardrichtliniendateien in der Java-Laufzeit. Dieser Prozess aktiviert die 256-Bit-AES-Verschlüsselung.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

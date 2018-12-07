@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-10-06"
+  years: 2015, 2018
+lastupdated: "2018-09-20"
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +11,31 @@ lastupdated: "2017-10-06"
 # Últimas actualizaciones para el paquete de compilación de ASP.NET Core
 {: #latest_updates}
 
+Una lista de las últimas actualizaciones del paquete de compilación ASP.NET Core.
 
-Una lista de las últimas actualizaciones del paquete de compilación de aspnet.
+## 20 de septiembre de 2018: Se ha actualizado el paquete de compilación de ASP.NET Core v2.0-20180918-1356
+
+**Importante:** a partir de este release, el paquete de compilación ASP.NET Core se basa en el [paquete de compilación de Cloud Foundry .NET Core ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html). Este release incluye la versión 2.1.3 del paquete de compilación dotnet-core de Cloud Foundry.
+
+* Adición de soporte para .NET Core SDK 1.1.9
+* Adición de soporte para .NET Core SDK 2.0.2
+* Adición de soporte para .NET Core SDK 2.0.3
+* Adición de soporte para .NET Core SDK 2.1.201
+* Adición de soporte para .NET Core SDK 2.1.300
+* Adición de soporte para .NET Core SDK 2.1.301
+* Adición de soporte para .NET Framework 1.0.11
+* Adición de soporte para .NET Framework 1.1.8
+* Adición de soporte para .NET Framework 2.0.7
+* Adición de soporte para .NET Framework 2.1.0
+* Adición de soporte para .NET Framework 2.1.1
+* Retirada del soporte para .NET Core SDK 1.1.0
+* Remove support for Retirada del soporte para .NET Core SDK 1.0.0-preview2-003156
+* Retirada del soporte para .NET Core SDK 2.0.0
+* Retirada del soporte para .NET Core SDK 2.0.0-preview2-006497
+* Retirada del soporte para .NET Framework 1.0.4
+* Retirada del soporte para .NET Framework 1.1.1
+* Actualización de la versión de Node.js a 6.14.3
+* Cambio de .NET Core SDK 2.1.301 predeterminado
 
 ## 6 de octubre de 2017: Se ha actualizado el paquete de compilación de ASP.NET Core v1.0.26-20170913-1346
 * Adición de soporte para el tiempo de ejecución de .NET Core 2.0.0
@@ -120,9 +143,3 @@ Esta versión del paquete de compilación incluye los siguientes cambios:
 {: codeblock}
 
 * El uso del servidor web Nowin se ha eliminado del paquete de compilación y en su lugar se utiliza el servidor web [Kestrel]{https://github.com/aspnet/KestrelHttpServer}.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de núcleo de Dotnet](index.html)

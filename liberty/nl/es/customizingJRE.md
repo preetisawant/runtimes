@@ -295,10 +295,3 @@ Descargue los archivos de política sin restricciones adecuados y añádalos a s
 {: codeblock}
 
 Cuando envíe la aplicación, estos archivos jar solaparán los archivos jar de política predeterminados en el tiempo de ejecución de Java. Este proceso habilita el cifrado AES de 256 bits.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

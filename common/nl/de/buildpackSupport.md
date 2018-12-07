@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2018-04-11"
+lastupdated: "2018-11-20"
 
 ---
 
@@ -21,7 +21,7 @@ Für [Liberty for Java](/docs/runtimes/liberty/index.html), [SDK for Node.js](/d
 
 Für die [{{site.data.keyword.Bluemix_notm}} Runtime for Swift](/docs/runtimes/swift/index.html) stellt IBM Unterstützung für das Buildpack bereit, das der neuesten Swift-Version auf [Swift.org](http://swift.org) entspricht. Updates für das Buildpack sind mit der neusten verfügbaren, freigegebenen Version von Swift synchron.
 
-Probleme/Fehler können für jede Version des integrierten IBM Buildpacks gemeldet werden, die zurzeit in {{site.data.keyword.Bluemix_notm}} unterstützt wird; sie müssen jedoch an der neuesten Version überprüft werden. Wenn ein Fehler gefunden wird, stellt IBM in einer zukünftigen Version der Laufzeit und des entsprechenden Buildpacks eine Korrektur zur Verfügung. IBM stellt keine Korrekturen für niedrigere Haupt- und Unterversionen (N-1, n-1) zur Verfügung. IBM stellt keine Unterstützung für Community-Laufzeiten bereit, selbst wenn IBM Buildpacks verwendet werden. Ein Beispiel ist die Verwendung von Open JDK mit dem Liberty-Buildpack. Für diese Community-Laufzeiten gilt dieselbe Unterstützungsrichtlinie wie für die integrierten Community-Buildpacks, wie dies im folgenden Abschnitt beschrieben wird.
+Probleme und Fehler können für jede Version des integrierten IBM Buildpacks gemeldet werden, die zurzeit in {{site.data.keyword.Bluemix_notm}} unterstützt wird; sie müssen jedoch gegenüber der neuesten Version überprüft werden. Wenn ein Fehler gefunden wird, stellt IBM in einer zukünftigen Version der Laufzeit und des entsprechenden Buildpacks eine Korrektur zur Verfügung. IBM stellt keine Korrekturen für niedrigere Haupt- und Unterversionen (N-1, n-1) zur Verfügung. IBM stellt keine Unterstützung für Community-Laufzeiten bereit, selbst wenn IBM Buildpacks verwendet werden. Ein Beispiel ist die Verwendung von Open JDK mit dem Liberty-Buildpack. Für diese Community-Laufzeiten gilt dieselbe Unterstützungsrichtlinie wie für die integrierten Community-Buildpacks, wie dies im folgenden Abschnitt beschrieben wird.
 
 ## Integrierte Community-Buildpacks
 {: #built-in_community_buildpacks}
@@ -35,7 +35,7 @@ Die folgenden integrierten Community-Buildpacks werden von der Cloud Foundry-Com
 * [Python](/docs/runtimes/python/index.html)
 * [Go](/docs/runtimes/go/index.html)
 
-Diese Buildpacks werden aktualisiert, wenn {{site.data.keyword.Bluemix_notm}} auf eine neue Version von Cloud Foundry aktualisiert wird. Probleme oder Fehler bei diesen Laufzeiten unter {{site.data.keyword.Bluemix_notm}} können IBM gemeldet werden. IBM hilft Ihnen, zu ermitteln, ob {{site.data.keyword.Bluemix_notm}} die Ursache des Problems ist. Für Probleme, die mit {{site.data.keyword.Bluemix_notm}} in Zusammenhang stehen, stellt IBM eine Korrektur zur Verfügung. Betrifft der Fehler jedoch das Buildpack oder die Laufzeit selbst, ist IBM Ihnen bei der Meldung an die entsprechende Community behilflich. Für diese Buildpacks und Laufzeiten stellt IBM keine Korrekturen zur Verfügung.
+Diese Buildpacks werden aktualisiert, wenn {{site.data.keyword.Bluemix_notm}} auf eine neue Version von Cloud Foundry aktualisiert wird. Probleme oder Fehler bei diesen Laufzeiten unter {{site.data.keyword.Bluemix_notm}} können IBM gemeldet werden. IBM hilft Ihnen, zu ermitteln, ob {{site.data.keyword.Bluemix_notm}} die Ursache des Problems ist. Für Probleme, die mit {{site.data.keyword.Bluemix_notm}} in Zusammenhang stehen, stellt IBM ein Fix zur Verfügung. Betrifft der Fehler jedoch das Buildpack oder die Laufzeit selbst, ist IBM Ihnen bei der Meldung an die entsprechende Community behilflich. Für diese Buildpacks und Laufzeiten stellt IBM keine Korrekturen zur Verfügung.
 
 ## Externe Buildpacks
 {: #external_buildpacks}

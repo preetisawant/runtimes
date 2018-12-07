@@ -250,10 +250,3 @@ El conjunto de información típico es el siguiente:
 * connection.password: la contraseña que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente la contraseña, por ejemplo pvyCY0YzX9pu5.
 
 Para los servicios enlazados que el paquete de compilación de Liberty no configura automáticamente, la aplicación tiene que gestionar por su cuenta el acceso del recurso de fondo.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

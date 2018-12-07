@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -12,29 +12,34 @@ lastupdated: "2018-03-16"
 # Características de Liberty que reciben soporte en {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-El tiempo de ejecución instantáneo de Liberty for Java incluye un subconjunto de características de Liberty.  Algunas características que proporciona Liberty no están disponibles en el tiempo de ejecución instantáneo de Liberty for Java porque no son aplicables en el entorno de nube.
+El tiempo de ejecución de Liberty for Java incluye un subconjunto de características de Liberty. Para utilizar una característica que no está incluida en el tiempo de ejecución, consulte [Instalar características de Liberty](installFeatures.html). Para ver una lista completa de las características disponibles en Liberty, junto con las versiones de Java EE y otra información, consulte [Características de Liberty ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") ](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
 
-Se incluyen las siguientes características que son específicas para {{site.data.keyword.Bluemix_notm}}:
+## Características específicas de la nube
+{:#cloud-features}
+
+Se incluyen las siguientes características que son específicas de {{site.data.keyword.Bluemix_notm}}:
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-Un subconjunto de características disponibles está habilitado de forma predeterminada al desplegar archivos WAR o EAR.  Consulte [Apps autónomas](optionsForPushing.html#stand_alone_apps) para obtener más detalles.
+Un subconjunto de características disponibles está habilitado de forma predeterminada al desplegar archivos WAR o EAR. Consulte [Apps autónomas](optionsForPushing.html#stand_alone_apps) para obtener más detalles.
 
-El tiempo de ejecución de Liberty for Java también hace que algunas características beta de Liberty estén disponibles. Estas características no aparecen en la lista, pero pueden encontrarse en [Utilización de las características beta](/docs/runtimes/liberty/usingBetaFeatures.html).
+El tiempo de ejecución de Liberty for Java también hace que algunas características beta de Liberty estén disponibles. Estas características se muestran en el apartado [Utilización de las características beta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
-Tenga en cuenta que un servidor no puede cargar características incompatibles, por lo que debe asegurarse de que se configura para habilitar únicamente características que son compatibles. Consulte
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinaciones de características de Java EE 6 y 7 soportadas</a>.
+## Compatibilidad de características
+{:#feature-compatibility}
 
-Para ver una lista completa de las características disponibles en Liberty junto con las versiones de Java EE y otra información, consulte
-[Características de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html) en IBM Knowledge Center.
+Algunas características que proporciona Liberty no están disponibles en el tiempo de ejecución de Liberty for Java porque no son aplicables en el entorno de nube.
 
-Las aplicaciones que utilizan los EJB remotos se pueden desplegar en {{site.data.keyword.Bluemix_notm}};
-no obstante, los EJB remotos no están accesibles con el protocolo CORBA/IIOP
-debido a restricciones de puerto en el entorno de {{site.data.keyword.Bluemix_notm}}.
+Tenga en cuenta que un servidor no puede cargar características incompatibles, por lo que debe asegurarse de que se configura para habilitar únicamente características que son compatibles. Consulte [Combinaciones admitidas de características de Java EE 6 y 7](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html").
+
+Las aplicaciones que utilizan los EJB remotos se pueden desplegar en {{site.data.keyword.Bluemix_notm}}, pero
+los EJB remotos no están accesibles con el protocolo CORBA/IIOP
+debido a las restricciones de puerto en el entorno de {{site.data.keyword.Bluemix_notm}}.
 
 ## Índice de características de Liberty
 {: #libertyfeat_index}
+
 Salte a la sección de la lista de características mediante el índice siguiente, o bien puede buscar a través de la [lista de características de Liberty for Java](#libertyfeat_list).
 
 ### A-E
@@ -231,10 +236,3 @@ Salte a la sección de la lista de características mediante el índice siguient
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

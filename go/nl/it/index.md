@@ -62,11 +62,3 @@ attualmente installato in {{site.data.keyword.Bluemix_notm}}:
 Se la tua applicazione richiede una versione di Go che non è elencata, puoi utilizzare
 il [pacchetto di build Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window}
 esterno per distribuire l'applicazione.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Pacchetto di build Cloud Foundry per Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

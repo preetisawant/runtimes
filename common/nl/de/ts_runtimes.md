@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-28"
+lastupdated: "2018-11-09"
 
 ---
 
@@ -288,6 +288,24 @@ Aktualisieren Sie die Datei 'server.xml', um die Datei 'cacerts' der JVM als Tru
 ## SDK for Node.js
 {: #ts_nodejs}
 
+### Anwendung kann nicht gestartet werden: Allgemeine Fehlerbehebung
+
+Versuchen Sie bei {{site.data.keyword.runtime_nodejs_notm}} Buildpack V3.23 oder einer späteren Version als ersten Fehlerbehebungsschritt, Ihre Abhängigkeiten in dieselben Quellendateien zu paketieren wie Ihre Anwendung. Dadurch können unterschiedliche Fehler gelöst werden, die möglicherweise auftreten, wenn Abhängigkeiten annehmen, dass sie sich im selben Basisverzeichnis befinden wie die Anwendung.
+
+1. Installieren Sie in Ihrem Anwendungsstammverzeichnis die Abhängigkeiten, indem Sie den folgenden Befehl ausführen.
+
+   ```bash
+   npm install
+   ```
+   {: codeblock}
+1. Stellen Sie sicher, dass die Datei mit der Endung `.cfignore ` die folgende Zeile nicht enthält:
+
+   ```
+   node_modules/
+   ```
+
+Wenn Sie jetzt Ihre Anwendung mit dem Befehl `ibmcloud cf push` bereitstellen anstatt Ihre Abhängigkeiten an eine separate Position herunterzuladen, werden die Abhängigkeiten in dasselbe Verzeichnis wie der Rest der Anwendung kopiert.
+
 ### Anwendungsstart schlägt mit Fehler "No space left on device" fehl
 {: #no_space_left_on_device}
 
@@ -299,7 +317,7 @@ Der Start einer Node.js-Anwendung schlägt mit dem Fehler "No space left on devi
    2017-01-16T14:25:14.61-0500 [CELL/0]     ERR tar: ./app/node_modules/pm2/node_modules/cron/node_modules/moment-timezone/LICENSE: Cannot write: No space left on device
 
 ```
-{: #codeblock}
+{: codeblock}
 
 Node.js-Anwendungen mit NPM-Versionen vor Version 3 belegen mehr Speicherplatz beim Herunterladen von Abhängigkeiten.
 {: tsCauses}

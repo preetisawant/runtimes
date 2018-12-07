@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-10-30"
 
 ---
 
@@ -27,9 +27,9 @@ Si sigue esta guía de aprendizaje de iniciación, configurará un entorno de de
 
 Necesitará lo siguiente:
 * [Cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
+* [CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git-scm.com/downloads){: new_window}
-* Instale .NET Core 1.1 SDK 1.0.4 desde las instrucciones del sitio web [dot.net ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.microsoft.com/net/download/core).
+* Instale .NET Core 2.1.1 SDK 2.1.301 desde el [sitio web de descargas de .NET Core ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.microsoft.com/net/download/core).
 
 ## Paso 1: Clone la app de ejemplo
 {: #clone}
@@ -124,51 +124,61 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-## Paso 5: Conecte una base de datos MySQL
-{: connect_mysql}
+## Paso 5: Añada una base de datos
+{: #add_database}
 
-A continuación, añadiremos una base de datos ClearDB MySQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
+A continuación, añadiremos una base de datos de {{site.data.keyword.cloudant_short_notm}} NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
 1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione **Crear recurso**.
-2. Elija la sección **Datos y análisis** y, a continuación, seleccione **Base de datos ClearDB MySQL gestionada** y cree el servicio.
-3. Vaya a la vista de **Conexiones** y seleccione su aplicación y, a continuación a **Crear conexión**.
-4. Seleccione **Volver a transferir** cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
+1. Busque **{{site.data.keyword.cloudant_short_notm}}** y seleccione el servicio.
+1. Para **Métodos de autenticación disponibles**, seleccione **Utilizar tanto credenciales antiguas como IAM**. Puede dejar los valores predeterminados para los demás campos. Pulse **Crear** para crear el servicio.
+1. En el área de navegación, vaya a **Conexiones**. Seleccione la aplicación y pulse **Crear conexión**.
+1. Conéctese a la aplicación utilizando los valores predeterminados y pulse **Conectar y volver a transferir la app**. Luego pulse **Volver a transferir** cuando se le solicite.
 
-Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente.
+   {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
+
+Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar de codificar una contraseña de base de datos, puede almacenarla en una variable de entorno a la que hace referencia en el código fuente.
 {: tip}
 
 ## Paso 6: Utilice la base de datos localmente
 {: #use_database}
 
-Ahora vamos a actualizar el código local para que apunte a esta base de datos. Guardaremos las credenciales correspondientes a los servicios en un archivo JSON. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno VCAP_SERVICES.
+Ahora vamos a actualizar el código local para que apunte a esta base de datos. Guardaremos las credenciales correspondientes a los servicios en un archivo JSON. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno `VCAP_SERVICES`.
 
-1. Cree el archivo src/GetStartedDotnet/vcap-local.json
+1. En el directorio `src/GetStartedDotnet`, cree un archivo `vcap-local.json`.
 
-2. En su navegador, vaya al panel de control de {{site.data.keyword.Bluemix_notm}} y seleccione **_su app_ > Conexiones**. Pulse el icono de menú de {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) y seleccione **Ver credenciales**.
+1. Copie y pegue el siguiente objeto JSON en el archivo `vcap-local.json` y guarde los cambios.
 
-3. Copie y pegue todo el objeto json de las credenciales en el archivo `vcap-local.json` y guarde los cambios.  El resultado se parecerá al siguiente ejemplo:
-  ```
-  {
-  "cleardb": [
-    {
-      "credentials": {
-        ...
-        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
-        ...
-      },
-      ...
-      "name": "My ClearDB service instance name",
-      ...
-    }
-  ]
-}
-  ```
+   ```json
+   {
+     "services": {
+       "cloudantNoSQLDB": [
+        {
+           "credentials": {
+             "url":"CLOUDANT_DATABASE_URL"
+           },
+          "label": "cloudantNoSQLDB"
+        }
+       ]
+     }
+   }
+   ```
+   {: codeblock}
 
-4. Desde el directorio `get-started-aspnet-core/src/GetStartedDotnet`, reinicie la aplicación con el mandato `dotnet run`.
+1. En su navegador, vaya al panel de control de {{site.data.keyword.Bluemix_notm}} y seleccione **_su app_ > Conexiones**. Pulse el icono de menú de {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) y seleccione **Ver credenciales**.
 
-Renueve la vista del navegador en http://localhost:5000/. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
+1. Copie y pegue solo el valor `url` de las credenciales en el campo `url` del archivo `vcap-local.json`, sustituyendo `CLOUDANT_DATABASE_URL`.
 
-La app local y la app {{site.data.keyword.Bluemix_notm}} comparten la base de datos.  Visualice la app {{site.data.keyword.Bluemix_notm}} en el URL que aparece en la salida del mandato push anterior.  Los nombres que añada desde cualquiera de las apps deberían aparecer cuando renueve los navegadores.
+1. En el directorio `get-started-aspnet-core/src/GetStartedDotnet`, reinicie la aplicación con el siguiente mandato:
+
+   ```
+   dotnet run
+   ```
+   {: codeblock}
+
+1. Renueve la vista del navegador en http://localhost:5000/. Cualquier nombre que especifique en la app se añadirá ahora a la base de datos.
+
+La app local y la app {{site.data.keyword.Bluemix_notm}} comparten la base de datos.  Visualice la app {{site.data.keyword.Bluemix_notm}} en el URL que aparece en la salida del mandato `ibmcloud cf push`.  Los nombres que añada desde cualquiera de las apps deberían aparecer cuando renueve los navegadores.
 
 Recuerde que, si no necesita la app en directo, debe detenerla para no incurrir en cargos inesperado.
 {: tip}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-11-02"
 
 ---
 
@@ -14,6 +14,17 @@ lastupdated: "2018-08-10"
 
 ## Liste mit den neuesten Aktualisierungen im Liberty-Buildpack
 
+### 29. Oktober 2018: Liberty-Buildpack v3.26-20181023-1545 aktualisiert
+
+* Die Standardversion der Liberty-Laufzeit `18.0.0.3` wurde aktualisiert und enthält einen Fix für die [Sicherheitslücke CVE-2014-7810 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055).
+* Die monatliche Version der Liberty-Laufzeit wurde auf Release 2018.10.0.0 aktualisiert.
+* Die IBM JRE-Version wurde auf 8 SR5 FP22 aktualisiert.
+
+### 21. September 2018: Liberty-Buildpack v3.25-20180918-1034 aktualisiert
+* Das Buildpack unterstützt nun Java Platform, Enterprise Edition 8.0. Zur Verwendung von Java EE 8 müssen Sie das Liberty-Feature `javaee-8.0` installieren, wenn Sie Ihre App per Push-Operation übertragen. Weitere Informationen finden Sie im Abschnitt zur [Installation von Liberty-Features](installFeatures.html).
+* Die Standardversion der Liberty-Laufzeit wurde auf das Release 18.0.0.3 aktualisiert.
+* Die monatliche Version der Liberty-Laufzeit wurde auf das Release [2018.8.0.1 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/) aktualisiert.
+* Die IBM JRE-Version wurde auf 8 SR5 FP20 aktualisiert.
 
 ### 10. August 2018: Liberty-Buildpack v3.24-20180806-1313 aktualisiert
 * Die monatliche Liberty-Laufzeitversion wurde auf 2018.8.0.0 aktualisiert.
@@ -346,10 +357,3 @@ Die aktualisierten JREs enthalten die [neuesten Sicherheitskorrekturen](http://w
   * Mit dem neuen Feature 'CouchDB' kann der Cloudant®-Service nun eine automatische Konfiguration der Liberty-Anwendung vornehmen, sodass Ihnen nun ein Connectorobjekt zur Verfügung steht. Das Parsing durch VCAP_SERVICES und die Angabe der Ektorp-Client-JAR-Dateien ist nicht mehr erforderlich.
 * Die neue Version von IBM SDK for Java ist da!
   * Wenn Sie nun eine weitere Push-Operation für Ihre Anwendungen durchführen, wird IBM SDK for Java Version 7.1-1.0 verwendet. Dies führt zu einer deutlichen Leistungsverbesserung. Der Durchsatz Ihrer Anwendung wird sich erhöhen und die Speicherbelegung wird reduziert. Weitere Informationen zu IBM Java SDK finden Sie [hier](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-  * [Liberty-Laufzeit](index.html)
-  * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

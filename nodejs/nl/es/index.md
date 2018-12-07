@@ -33,10 +33,3 @@ var port = (process.env.PORT || 3000);
 ## App Management
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}} proporciona un número de programas de utilidad para gestionar y depurar la app de Node.js.  Consulte [Gestión de app](../common/app_mng.html) para ver más detalles.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Node.js ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)

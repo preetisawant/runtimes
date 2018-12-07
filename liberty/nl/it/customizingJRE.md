@@ -23,7 +23,7 @@ sono configurate per essere eseguite con una versione leggera di {{site.data.key
 leggero è semplificato per fornire una funzionalità di base ed essenziale con
 un ingombro su disco e in memoria decisamente ridotto. Per ulteriori informazioni sui contenuti del JRE leggero, consulta [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
- Per impostazione predefinita, viene utilizzato {{site.data.keyword.IBM_notm}}JRE versione 8. Utilizza la variabile di ambiente JBP_CONFIG_IBMJDK per specificare una versione alternativa di {{site.data.keyword.IBM_notm}} JRE. Ad esempio, per utilizzare {{site.data.keyword.IBM_notm}} JRE 7.1  più recente, imposta la seguente variabile di ambiente:
+ Per impostazione predefinita, viene utilizzato {{site.data.keyword.IBM_notm}}JRE versione 8. Utilizza la variabile di ambiente JBP_CONFIG_IBMJDK per specificare una versione alternativa di {{site.data.keyword.IBM_notm}} JRE. Ad esempio, per utilizzare {{site.data.keyword.IBM_notm}} JRE 7.1 più recente, imposta la seguente variabile di ambiente:
 ```
     ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
@@ -44,7 +44,7 @@ lo strumento riga di comando {{site.data.keyword.Bluemix_notm}}, esegui il coman
 ```
 {: codeblock}
 
-Se abilitato, viene utilizzato OpenJDK versione 8 per impostazione predefinita. Utilizza la variabile di ambiente JBP_CONFIG_OPENJDK  per specificare una versione alternativa di OpenJDK. Ad
+Se abilitato, viene utilizzato OpenJDK versione 8 per impostazione predefinita. Utilizza la variabile di ambiente JBP_CONFIG_OPENJDK per specificare una versione alternativa di OpenJDK. Ad
 				esempio, per utilizzare l'OpenJDK 7 più recente, imposta la seguente variabile di
 				ambiente:
 ```
@@ -315,10 +315,3 @@ Scarica i file di politica senza limitazioni appropriati e aggiungili all'applic
 {: codeblock}
 
 Quando esegui il push dell'applicazione, questi jar si sovrappongono ai jar di politica predefiniti nel runtime Java. Questi processo abilita la crittografia AES a 256 bit.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

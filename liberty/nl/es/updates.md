@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-10"
+lastupdated: "2018-11-02"
 
 ---
 
@@ -14,6 +14,17 @@ lastupdated: "2018-08-10"
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
 
+### 29 de octubre de 2018: se ha actualizado el paquete de compilación de Liberty v3.26-20181023-1545
+
+* La versión del tiempo de ejecución predeterminada de Liberty, `18.0.0.3`, se ha actualizado para incluir un arreglo para la [vulnerabilidad de seguridad CVE-2014-7810 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") ](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055).
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release 2018.10.0.0.
+* La versión de IBM JRE se ha actualizado a 8 SR5 FP22.
+
+### 21 de septiembre de 2018: se ha actualizado el paquete de compilación de Liberty v3.25-20180918-1034
+* Ahora el paquete de compilación da soporte a Java Platform, Enterprise Edition 8.0. Para utilizar Java EE 8, instale la característica de Liberty `javaee-8.0` cuando envíe por push la app. Encontrará más información en [Instalar características de Liberty](installFeatures.html).
+* La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release 18.0.0.3.
+* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2018.8.0.1 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/).
+* La versión de IBM JRE se ha actualizado a 8 SR5 FP20.
 
 ### 10 de agosto de 2018: Se ha actualizado el paquete de compilación de Liberty v3.24-20180806-1313
 * La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2018.8.0.0.
@@ -357,10 +368,3 @@ algunas características como por ejemplo los EJB remotos no se admiten totalmen
 * La versión nueva de IBM SDK para Java ya ha llegado.
   * Cuando las aplicaciones se envíen de nuevo, utilizarán IBM SDK para Java Versión 7.1-1.0. Se acompaña
 de una mejora sustancia en rendimiento. Su aplicación muestra mejor rendimiento y un menor uso de la memoria. Consulte más información sobre IBM Java SDK [aquí](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-  * [Tiempo de ejecución de Liberty](index.html)
-  * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

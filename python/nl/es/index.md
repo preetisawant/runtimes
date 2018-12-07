@@ -58,9 +58,3 @@ Si la aplicación requiere una versión de Python que no aparece en la lista,
 puede utilizar el
 [paquete de compilación de Python](https://github.com/cloudfoundry/python-buildpack) externo para
 desplegar la app.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Paquete de compilación de Cloud Foundry for Python](https://github.com/cloudfoundry/python-buildpack)

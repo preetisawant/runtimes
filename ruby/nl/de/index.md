@@ -54,10 +54,3 @@ Folgende Ruby-Versionen stehen im [Ruby-Buildpack](https://github.com/cloudfound
 * 2.5.0
 
 Wenn für Ihre App eine Ruby-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack) implementieren.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Cloud Foundry-Buildpack für Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Dokumentation zu Ruby on Rails ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://api.rubyonrails.org/)

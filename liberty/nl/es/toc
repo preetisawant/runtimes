@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html"}
+{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html" path="runtimes/liberty"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -17,16 +17,12 @@ Liberty for Java
     secureWebApp.md
     loggingAndTracing.md
 
-    {: .topicgroup}
-    Utilizar IBM Eclipse Tools for IBM Cloud
-        eclipseDevelop.md
-        [Desplegar apps con IBM Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-
     autoConfig.md
     customizingJRE.md
     using_own_jre.md
+    installFeatures.md
     usingBetaFeatures.md
-    [Renunciar a servicios enlazados](autoConfig.html#opting_out)
+    [Renuncia de servicios enlazados](autoConfig.html#opting_out)
 
     {: .topicgroup}
     Supervisar Liberty en IBM Cloud
@@ -38,7 +34,7 @@ Liberty for Java
     {: .topicgroup}
     Trabajar fuera de línea o con un proxy
         offlineMode.md
-        [Cómo trabajar con un proxy](../common/workingWithProxy.html)
+        [Cómo trabajar con un proxy](runtimes/common/workingWithProxy.html)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -49,8 +45,8 @@ Liberty for Java
 
     {: .topicgroup}
     Aplicaciones de inicio y compilaciones
-        [Utilización de las apps de inicio](../common/starter_app_usage.html)
-        [Utilización de compilación de la comunidad](../common/byob.html)
+        [Utilización de las apps de inicio](runtimes/common/starter_app_usage.html)
+        [Utilización de compilación de la comunidad](runtimes/common/byob.html)
 
     buildpackDefaults.md
     ../common/app_mng.md
@@ -59,5 +55,5 @@ Liberty for Java
     {: .navgroup id="help"}
     ts_index.md
     [Iniciación a IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html) updates.md
-    [Declaración de soporte de paquete de compilación](../common/buildpackSupport.html)
+    [Declaración de soporte de paquete de compilación](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-09-21"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-06-27"
 * [Liberty for Java](/docs/runtimes/liberty/getting-started.html)
 * [SDK for Node.js](/docs/runtimes/nodejs/getting-started.html)
 * [ASP.NET core](/docs/runtimes/dotnet/getting-started.html)
-* [Runtime for Swift](/docs/runtimes/nodejs/getting-started.html)
+* [Runtime for Swift](/docs/runtimes/swift/getting-started.html)
 * [XPages](/docs/starters/xpages/index.html)
 * [Go](/docs/runtimes/go/getting-started.html)
 * [PHP](/docs/runtimes/php/getting-started.html)
@@ -32,13 +32,11 @@ Puoi utilizzare i pacchetti di build inclusi con {{site.data.keyword.cloud_notm}
 
 *  Cloud Foundry
 
-    Cloud Foundry è una piattaforma open source per l'automazione del ciclo di vita dell'applicazione.  {{site.data.keyword.Bluemix}}
-     è creato con la PaaS (Platform as a Service) Cloud Foundry. Per ulteriori informazioni, controlla la [documentazione Cloud Foundry](https://www.cloudfoundry.org/learn/).
+    Cloud Foundry è una piattaforma open source per l'automazione del ciclo di vita dell'applicazione.  {{site.data.keyword.Bluemix}} è creato con la PaaS (Platform as a Service) Cloud Foundry. Per ulteriori informazioni, controlla la [documentazione Cloud Foundry](https://www.cloudfoundry.org/learn/).
 
 *  Applicazione Cloud Foundry
 
-   Un'applicazione cloud foundry, è una qualsiasi applicazione progettata per essere istanziata da uno dei pacchetti di build forniti da
-     {{site.data.keyword.Bluemix_notm}}.
+   Un'applicazione cloud foundry, è una qualsiasi applicazione progettata per essere istanziata da uno dei pacchetti di build forniti da {{site.data.keyword.Bluemix_notm}}.
 
 *  Pacchetto di build
 
@@ -57,5 +55,4 @@ Puoi utilizzare i pacchetti di build inclusi con {{site.data.keyword.cloud_notm}
 
 *  Servizio
 
-   Un servizio è una funzione fornita da {{site.data.keyword.Bluemix_notm}}
-     che può essere associata a un'applicazione.
+   Un servizio è una funzione fornita da {{site.data.keyword.Bluemix_notm}} che può essere associata a un'applicazione.

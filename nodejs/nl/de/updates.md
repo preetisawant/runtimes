@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-13"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -16,7 +16,8 @@ Eine Liste mit den neuesten Aktualisierungen im Buildpack 'sdk-for-nodejs'.
 
 ## 7. September 2018: Node.js-Buildpack v3.22 aktualisiert
 {:#fips-deprecation}
-**Wichtig:** Beginnend mit diesem Buildpack enthält das SDK für das Node.js-Buildpack die Community-Release-Laufzeiten von Node.js für Version 6.x und 8.x. Mit dieser Änderung ist das OpenSSL-FIPS-Modul für Node.js in diesen Versionen des Buildpacks nicht mehr enthalten. Nur Version 4.x enthält das OpenSSL-FIPS-Modul weiterhin.   
+
+**Wichtig:** Beginnend mit diesem Buildpack enthält das SDK für das Node.js-Buildpack die Community-Release-Laufzeiten von Node.js für Version 6.x und 8.x. Mit dieser Änderung ist das OpenSSL-FIPS-Modul für Node.js in diesen Versionen des Buildpacks nicht mehr enthalten. Nur Version 4.x enthält das OpenSSL-FIPS-Modul weiterhin.  
 
 Das SDK for Node.js-Buildpack v3.22 stellt die IBM SDK for Node.js-Versionen 4.8.5 und 4.8.7 sowie die Node.js-Community-Versionen 6.14.3, 6.14.4, 8.11.3 und 8.11.4. bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.14.4.
 
@@ -24,7 +25,7 @@ Dieses Release umfasst auch Fixes für die folgende Sicherheitslücke:
 * [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
 
 ## 24. Juli 2018: Node.js-Buildpack v3.21 aktualisiert
-{:#fips-deprecation}
+
 **Wichtig:** Beginnend mit den neuesten 6.x- und 8.x-Versionen von Node.js in diesem Release basiert das SDK for Node.js-Buildpack auf dem Node.js-Community-Release. Mit dieser Änderung wird das OpenSSL-FIPS-Modul für Node.js im Buildpack nicht mehr aktualisiert. Das aktuelle OpenSSL-FIPS-Modul und die IBM SDK for Node.js-Builds können ab 24. August 2018 entfernt werden. Weitere Informationen finden Sie im Blogbeitrag [Abstimmung des Node.js-Buildpacks mit Community-Laufzeiten![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660).
 
 Das SDK for Node.js-Buildpack v3.21 stellt die IBM SDK for Node.js-Versionen 4.8.5, 4.8.7, 6.13.0 und 8.9.4 sowie die Node.js-Community-Versionen 6.14.3 und 8.11.3 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.14.3.
@@ -33,13 +34,13 @@ Dieses Release umfasst auch Fixes für die folgende Sicherheitslücke:
 * [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
 
 ## 1. Juni 2018: Node.js-Buildpack v3.20.2 aktualisiert
-Das SDK for Node.js-Buildpack v3.20.2 fügt die Integration von Dynatrace Managed PaaS für die aktuellen Node.js-Laufzeiten hinzu. Siehe [Dynatrace zur Überwachung von Node.js in {{site.data.keyword.cloud_notm}} verwenden](dynatrace.html).
+Das SDK for Node.js-Buildpack v3.20.2 fügt die Integration von Dynatrace Managed PaaS für die aktuellen Node.js-Laufzeiten hinzu.
 
 ## 17. Mai 2018: Node.js-Buildpack v3.20.1 aktualisiert
-Das SDK for Node.js-Buildpack v3.20.1 korrigiert die Integration von Dynatrace PaaS für die aktuellen Node.js-Laufzeiten. Siehe [Dynatrace zur Überwachung von Node.js in {{site.data.keyword.cloud_notm}} verwenden](dynatrace.html).
+Das SDK for Node.js-Buildpack v3.20.1 korrigiert die Integration von Dynatrace PaaS für die aktuellen Node.js-Laufzeiten.
 
 ## 9. April 2018: Node.js-Buildpack v3.20 aktualisiert
-Das SDK for Node.js-Buildpack v3.20 fügt die Integration von Dynatrace PaaS für die aktuellen Node.js-Laufzeiten hinzu. Siehe [Dynatrace zur Überwachung von Node.js in {{site.data.keyword.cloud_notm}} verwenden](dynatrace.html).
+Das SDK for Node.js-Buildpack v3.20 fügt die Integration von Dynatrace PaaS für die aktuellen Node.js-Laufzeiten hinzu.
 
 ## 16. März 2018: Node.js-Buildpack v3.19 aktualisiert
 Das SDK for Node.js-Buildpack v3.19 stellt die IBM SDK for Node.js-Versionen 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 und 8.9.4 bereit. Die Standardversion ist die neueste Version 6.x, also zurzeit 6.13.0.

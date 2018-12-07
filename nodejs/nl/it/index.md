@@ -33,10 +33,3 @@ var port = (process.env.PORT || 3000);
 ## Gestione applicazioni
 {: #app_management}
 {{site.data.keyword.Bluemix_notm}} fornisce diversi programmi di utilità per la gestione e il debug della tua applicazione Node.js.  Consulta [Gestione applicazioni](../common/app_mng.html) per i dettagli completi.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Node.js ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)

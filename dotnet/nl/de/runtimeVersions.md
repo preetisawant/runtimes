@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-08"
+lastupdated: "2018-09-20"
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,9 +12,6 @@ lastupdated: "2018-05-08"
 
 # Laufzeitversionen
 {: #runtime_versions}
-
-
-{: shortdesc}
 
 ## Unterstützte Versionen
 {: #supported_versions}
@@ -31,20 +28,30 @@ Dieses Buildpack unterstützt die folgenden Versionen. Versionen, die als veralt
 
 | .NET SDK-Version        | Standard          |
 |-------------------------|------------------|
+| 2.1.301                 |   Ja            |
+| 2.1.300                 |   Nein             |
+| 2.1.201                 |   Nein             |
+| 2.0.3                   |   Nein             |
+| 2.0.2                   |   Nein             |
+| 1.1.9                   |   Nein             |
 | 1.0.4                   |   Nein             |
-| 1.1.0                   |   Ja (nur F#)  |
-| 2.0.0                   |   Ja            |
+
 
 ### .NET Core-Laufzeitversionen
 
 | .NET Core-Laufzeitversion | Releasetyp      |
 |---------------------------|-------------------|
-| 1.0.4 (veraltet)        | LTS               |
-| 1.0.5                     | LTS               |
-| 1.1.1 (veraltet)        | LTS               |
+| 2.1.1                     | LTS               |
+| 2.1.0                     | LTS               |
+| 2.0.7                     | LTS               |
+| 2.0.3                     | Current           |
+| 2.0.2                     | Current           |
+| 2.0.0                     | LTS               |
+| 1.1.8                     | LTS               |
 | 1.1.2                     | LTS               |
-| 2.0.0-preview2-25407-01   | Current (Vorschau) |
-| 2.0.0                     | Current           |
+| 1.0.11                    | LTS               |
+| 1.0.5                     | LTS               |
+| 1.0.4                     | LTS               |
 
 ## .NET SDK-Version angeben
 
@@ -52,7 +59,7 @@ Steuern Sie die .NET SDK-Version mit der optionalen Datei `global.json` im Stamm
 ```
    {
       "sdk": {
-        "version": "2.0.0"
+        "version": "2.1.301"
       }
    }
 ```

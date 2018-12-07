@@ -70,11 +70,3 @@ del JRE potrebbe avere un impatto negativo sull'applicazione.
 
 Per garantire che l'applicazione non sia influenzata dalla modifica della versione principale, imposta la variabile di ambiente con la versione JRE appropriata come descritto in [Customizing the JRE](customizingJRE.html). Per dei risultati
 ottimali, adotta Java 8 per le tue applicazioni.
-
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

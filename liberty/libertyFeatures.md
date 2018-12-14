@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-21"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -19,6 +19,7 @@ The Liberty for Java runtime includes a subset of Liberty features. To use a fea
 {:#cloud-features}
 
 The following features are included and are specific to {{site.data.keyword.Bluemix_notm}}:
+* appstate-1.0
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
@@ -32,7 +33,8 @@ The Liberty for Java runtime also makes some Liberty beta features available. Th
 
 Some features that Liberty provides are not available in the Liberty for Java runtime because they are not applicable in the cloud environment.
 
-Keep in mind that a server cannot load incompatible features, so be sure it is configured to enable only features that are compatible. See [Supported Java EE 6 and 7 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html").
+Keep in mind that a server cannot load incompatible features, so be sure it is configured to enable only features that are compatible. See [Supported Java EE 6 and 7 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html) 
+and [Supported Java EE 7 and 8 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html).
 
 Applications that use remote EJBs can be deployed to {{site.data.keyword.Bluemix_notm}}, but the remote EJBs are not remotely accessible with the CORBA/IIOP
 protocol because of port restrictions in the {{site.data.keyword.Bluemix_notm}} environment.
@@ -77,6 +79,7 @@ Skip to the section of the feature list by using the following index, or you can
 * apiDiscovery-1.0
 * appSecurity-1.0
 * appSecurity-2.0
+* appSecurity-3.0
 * appstate-1.0
 * appstate-2.0
 
@@ -94,6 +97,7 @@ Skip to the section of the feature list by using the following index, or you can
 
 * cdi-1.0
 * cdi-1.2
+* cdi-2.0
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
@@ -124,11 +128,13 @@ Skip to the section of the feature list by using the following index, or you can
 * jacc-1.5
 * jaspic-1.1
 * javaee-7.0
+* javaee-8.0
 * javaMail-1.5
+* javaMail-1.6
 * jaxb-2.2
 * jaxrs-1.1
 * jaxrs-2.0
-* jaxrsClient-2.0
+* jaxrs-2.1
 * jaxws-2.2
 * jca-1.6
 * jca-1.7
@@ -143,11 +149,15 @@ Skip to the section of the feature list by using the following index, or you can
 * jndi-1.0
 * jpa-2.0
 * jpa-2.1
+* jpa-2.2
 * jsf-2.0
 * jsf-2.2
+* jsf-2.3
 * jsfContainer-2.2
 * json-1.0
+* jsonb-1.0
 * jsonp-1.0
+* jsonp-1.1
 * jsp-2.2
 * jsp-2.3
 * jwt-1.0
@@ -168,13 +178,10 @@ Skip to the section of the feature list by using the following index, or you can
 * microProfile-1.0
 * microProfile-1.2
 * microProfile-1.3
+* microProfile-1.4
+* microProfile-2.0
 * mongodb-2.0
 * monitor-1.0
-* mpConfig-1.1
-* mpFaultTolerance-1.0
-* mpHealth-1.0
-* mpJwt-1.0
-* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
@@ -208,6 +215,7 @@ Skip to the section of the feature list by using the following index, or you can
 * scim-1.0
 * servlet-3.0
 * servlet-3.1
+* servlet-4.0
 * sessionDatabase-1.0
 * sipServlet-1.1
 * socialLogin-1.0
@@ -229,6 +237,7 @@ Skip to the section of the feature list by using the following index, or you can
 * webCache-1.0
 * webProfile-6.0
 * webProfile-7.0
+* webProfile-8.0
 * websocket-1.0
 * websocket-1.1
 * wmqJmsClient-1.1

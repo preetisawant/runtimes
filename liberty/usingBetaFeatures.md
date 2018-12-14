@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-19"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -18,6 +18,7 @@ The Liberty beta features provide early access to new functionality and programm
 
 | Features |
 | ------ |
+| `jdbc-4.3` |
 | `logstashCollector-1.1` |
 | `validator-1.0` |
 {: caption="Table 1. Liberty Beta features available in Liberty for Java in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
@@ -29,7 +30,7 @@ To use the Liberty beta features in {{site.data.keyword.Bluemix_notm}}, you will
   ```
 <server>
     <featureManager>
-        <feature>logstashCollector-1.1</feature>
+        <feature>jdbc-4.3</feature>
     </featureManager>
 </server>
   ```

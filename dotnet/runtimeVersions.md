@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-20"
+lastupdated: "2018-12-12"
 ---
 
 {:shortdesc: .shortdesc}
@@ -18,22 +18,16 @@ lastupdated: "2018-09-20"
 
 This buildpack supports the following versions, those marked as deprecated will be removed in a future buildpack release.  See [Microsoft's support statement for LTS and Current releases](https://www.microsoft.com/net/core/support).
 
-### project.json tooling (deprecated)
 
-| .NET SDK version        | Default |
-|-------------------------|---------|
-| 1.0.0-preview2-003156   |   No    |
-
-### MSBuild SDK tooling
+### .NET SDK version
 
 | .NET SDK version        | Default          |
 |-------------------------|------------------|
-| 2.1.301                 |   Yes            |
-| 2.1.300                 |   No             |
-| 2.1.201                 |   No             |
+| 2.1.403                 |   Yes            |
+| 2.1.302                 |   No             |
 | 2.0.3                   |   No             |
-| 2.0.2                   |   No             |
-| 1.1.9                   |   No             |
+| 1.1.11                  |   No             |
+| 1.1.10                  |   No             |
 | 1.0.4                   |   No             |
 
 
@@ -41,17 +35,26 @@ This buildpack supports the following versions, those marked as deprecated will 
 
 | .NET Core runtime version | Release type      |
 |---------------------------|-------------------|
-| 2.1.1                     | LTS               |
-| 2.1.0                     | LTS               |
+| 2.1.5                     | Current           |  
+| 2.1.4                     | LTS               |
+| 2.1.2                     | LTS               |
+| 2.0.9                     | LTS               |
 | 2.0.7                     | LTS               |
-| 2.0.3                     | Current           |
-| 2.0.2                     | Current           |
-| 2.0.0                     | LTS               |
-| 1.1.8                     | LTS               |
-| 1.1.2                     | LTS               |
+| 1.1.10                    | LTS               |
+| 1.1.9                     | LTS               |
+| 1.0.12                    | LTS               |
 | 1.0.11                    | LTS               |
-| 1.0.5                     | LTS               |
-| 1.0.4                     | LTS               |
+
+
+### .NET aspnetcore versions
+
+| .NET aspnetcore version | Release type      |
+|---------------------------|-------------------|
+| 2.1.5                     | Current           |  
+| 2.1.4                     | LTS               |
+| 2.1.2                     | LTS               |
+
+
 
 ## Specifying the .NET SDK version
 

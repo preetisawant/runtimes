@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-05"
+  years: 2015, 2019
+lastupdated: "2019-01-07"
 
 ---
 
@@ -13,6 +13,10 @@ lastupdated: "2018-12-05"
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+
+## January 7, 2019: Updated Node.js buildpack v3.25
+
+The SDK for Node.js buildpack v3.25 provides IBM SDK for Node.js versions 4.8.5, 4.8.7 and Node.js community versions 6.14.4, 6.15.0, 8.11.4, 8.14.0, 10.10.0 and 10.14.0. The default is latest 6.x, so it is currently 6.14.4. The buildpack also fixes a minor bug in the Dynatrace hook.
 
 ## December 5, 2018: Updated Node.js buildpack v3.24
 

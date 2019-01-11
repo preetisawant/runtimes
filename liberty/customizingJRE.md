@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-10"
+lastupdated: "2019-01-11"
 
 ---
 
@@ -41,7 +41,7 @@ If enabled, OpenJDK version 8 is used by default. Use the JBP_CONFIG_OPENJDK env
 ```
 {: codeblock}
 
-The version property can be set to a version range such as 1.7.+, 1.8.+, 1.11.+ or any specific version listed on the [list of available OpenJDK versions](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). For best results, use Java 8.
+The version property can be set to a version range such as 1.7.+, 1.8.+ or any specific version listed on the [list of available OpenJDK versions](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). For best results, use Java 8.
 
 ## Oracle JRE
 {: #oracle_jre}

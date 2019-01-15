@@ -11,7 +11,7 @@ PHP
 
     {: .navgroup id="howto"}
     [Trabalhando com um proxy](runtimes/common/workingWithProxy.html)
-    [Impor HTTPS em todas as páginas](index.html#enforce_https)
+    [Impor HTTPS em todas as páginas](runtimes/php/index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

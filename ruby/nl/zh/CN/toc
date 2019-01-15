@@ -22,6 +22,6 @@ Ruby
 
     {: .navgroup id="help"}
     [运行时的故障诊断](runtimes/common/ts_runtimes.html)
-    [运行时版本](index.html#runtime_versions)
+    [运行时版本](runtimes/ruby/index.html#runtime_versions)
     [Buildpack 支持语句](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

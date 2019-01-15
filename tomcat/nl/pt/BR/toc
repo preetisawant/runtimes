@@ -22,6 +22,6 @@ Tomcat
 
     {: .navgroup id="help"}
     [Resolução de problemas para tempos de execução](runtimes/common/ts_runtimes.html)
-    [Versões do tempo de execução](index.html#runtime_versions)
+    [Versões do tempo de execução](runtimes/tomcat/index.html#runtime_versions)
     [Instrução de suporte de buildpack](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

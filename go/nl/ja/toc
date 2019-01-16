@@ -22,6 +22,6 @@ Go
 
     {: .navgroup id="help"}
     [ランタイムに関するトラブルシューティング](runtimes/common/ts_runtimes.html)
-    [使用可能なバージョン](index.html#runtime_versions)
+    [使用可能なバージョン](runtimes/go/index.html#runtime_versions)
     [ビルドパックのサポート・ステートメント](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

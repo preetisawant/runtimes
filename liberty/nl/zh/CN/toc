@@ -22,7 +22,7 @@ Liberty for Java
     using_own_jre.md
     installFeatures.md
     usingBetaFeatures.md
-    [选择退出绑定的服务](autoConfig.html#opting_out)
+    [选择退出绑定的服务](runtimes/liberty/autoConfig.html#opting_out)
 
     {: .topicgroup}
     在 IBM Cloud 中监视 Liberty

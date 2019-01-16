@@ -22,7 +22,7 @@ Liberty for Java
     using_own_jre.md
     installFeatures.md
     usingBetaFeatures.md
-    [Résiliation de services liés](autoConfig.html#opting_out)
+    [Résiliation de services liés](runtimes/liberty/autoConfig.html#opting_out)
 
     {: .topicgroup}
     Surveiller Liberty dans IBM Cloud

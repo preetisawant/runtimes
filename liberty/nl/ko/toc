@@ -22,7 +22,7 @@ Liberty for Java
     using_own_jre.md
     installFeatures.md
     usingBetaFeatures.md
-    [바인딩된 서비스 사용하지 않음](autoConfig.html#opting_out)
+    [바인딩된 서비스 사용하지 않음](runtimes/liberty/autoConfig.html#opting_out)
 
     {: .topicgroup}
     IBM Cloud에서 Liberty 모니터링

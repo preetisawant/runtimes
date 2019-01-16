@@ -22,7 +22,7 @@ Liberty for Java
     using_own_jre.md
     installFeatures.md
     usingBetaFeatures.md
-    [Renuncia de servicios enlazados](autoConfig.html#opting_out)
+    [Renuncia de servicios enlazados](runtimes/liberty/autoConfig.html#opting_out)
 
     {: .topicgroup}
     Supervisar Liberty en IBM Cloud

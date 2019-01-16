@@ -22,6 +22,6 @@ Go
 
     {: .navgroup id="help"}
     [運行環境的疑難排解](runtimes/common/ts_runtimes.html)
-    [可用的版本](index.html#runtime_versions)
+    [可用的版本](runtimes/go/index.html#runtime_versions)
     [建置套件支援聲明](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

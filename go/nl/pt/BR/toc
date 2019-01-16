@@ -22,6 +22,6 @@ Ir
 
     {: .navgroup id="help"}
     [Resolução de problemas para tempos de execução](runtimes/common/ts_runtimes.html)
-    [Versões disponíveis](index.html#runtime_versions)
+    [Versões disponíveis](runtimes/go/index.html#runtime_versions)
     [Instrução de suporte de buildpack](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

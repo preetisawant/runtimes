@@ -22,7 +22,7 @@ Liberty for Java
     using_own_jre.md
     installFeatures.md
     usingBetaFeatures.md
-    [Fazer opt-out de serviços de limite](autoConfig.html#opting_out)
+    [Fazer opt-out de serviços de limite](runtimes/liberty/autoConfig.html#opting_out)
 
     {: .topicgroup}
     Monitore o Liberty no IBM Cloud

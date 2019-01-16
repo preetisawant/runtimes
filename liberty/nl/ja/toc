@@ -22,7 +22,7 @@ Liberty for Java
     using_own_jre.md
     installFeatures.md
     usingBetaFeatures.md
-    [バインドされたサービスのオプトアウト](autoConfig.html#opting_out)
+    [バインドされたサービスのオプトアウト](runtimes/liberty/autoConfig.html#opting_out)
 
     {: .topicgroup}
     IBM Cloud 内の Liberty のモニター

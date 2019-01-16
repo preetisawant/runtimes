@@ -22,7 +22,7 @@ Liberty for Java
     using_own_jre.md
     installFeatures.md
     usingBetaFeatures.md
-    [Gebundene Services ausschließen](autoConfig.html#opting_out)
+    [Gebundene Services ausschließen](runtimes/liberty/autoConfig.html#opting_out)
 
     {: .topicgroup}
     Liberty in IBM Cloud überwachen

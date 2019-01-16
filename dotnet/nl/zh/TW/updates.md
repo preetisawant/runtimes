@@ -142,4 +142,4 @@ dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 ```
 {: codeblock}
 
-* 這個建置套件已經不再使用 Nowin Web 伺服器，改為使用 [Kestrel]{https://github.com/aspnet/KestrelHttpServer} Web 伺服器。
+* 這個建置套件已經不再使用 Nowin Web 伺服器，改為使用 [Kestrel](https://github.com/aspnet/KestrelHttpServer) Web 伺服器。

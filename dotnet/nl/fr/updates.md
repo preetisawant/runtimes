@@ -142,4 +142,4 @@ Cette version du pack de construction inclut les modifications suivantes :
 ```
 {: codeblock}
 
-* L'utilisation du serveur Web Nowin a été retirée de ce pack de construction et le serveur Web [Kestrel]{https://github.com/aspnet/KestrelHttpServer} est utilisé à la place.
+* L'utilisation du serveur Web Nowin a été retirée de ce pack de construction et le serveur Web [Kestrel](https://github.com/aspnet/KestrelHttpServer) est utilisé à la place.

@@ -145,4 +145,4 @@ com o comando inicial customizado a seguir:
 ```
 {: codeblock}
 
-* O uso do servidor da web Nowin foi removido deste buildpack; em seu lugar, é usado o servidor da web [Kestrel]{https://github.com/aspnet/KestrelHttpServer}.
+* O uso do servidor da web Nowin foi removido deste buildpack; em seu lugar, é usado o servidor da web [Kestrel](https://github.com/aspnet/KestrelHttpServer).

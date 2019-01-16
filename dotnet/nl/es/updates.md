@@ -142,4 +142,4 @@ Esta versión del paquete de compilación incluye los siguientes cambios:
 ```
 {: codeblock}
 
-* El uso del servidor web Nowin se ha eliminado del paquete de compilación y en su lugar se utiliza el servidor web [Kestrel]{https://github.com/aspnet/KestrelHttpServer}.
+* El uso del servidor web Nowin se ha eliminado del paquete de compilación y en su lugar se utiliza el servidor web [Kestrel](https://github.com/aspnet/KestrelHttpServer).

@@ -142,4 +142,4 @@ Questa versione del pacchetto di build include le seguenti modifiche:
 ```
 {: codeblock}
 
-* L'utilizzo del server web Nowin è stato rimosso da questo pacchetto di build e viene invece utilizzato il server [Kestrel]{https://github.com/aspnet/KestrelHttpServer}.
+* L'utilizzo del server web Nowin è stato rimosso da questo pacchetto di build e viene invece utilizzato il server [Kestrel](https://github.com/aspnet/KestrelHttpServer).

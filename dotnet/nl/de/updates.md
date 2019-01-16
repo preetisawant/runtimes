@@ -142,4 +142,4 @@ Diese Version des Buildpacks enthält die folgenden Änderungen:
 ```
 {: codeblock}
 
-* Die Verwendung des Nowin-Web-Servers wurde in diesem Buildpack entfernt. Dafür wird der [Kestrel]{https://github.com/aspnet/KestrelHttpServer}-Web-Server verwendet.
+* Die Verwendung des Nowin-Web-Servers wurde in diesem Buildpack entfernt. Dafür wird der [Kestrel](https://github.com/aspnet/KestrelHttpServer)-Web-Server verwendet.

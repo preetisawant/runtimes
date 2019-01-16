@@ -142,4 +142,4 @@ ASP.NET Core ビルドパックの最新更新のリスト。
 ```
 {: codeblock}
 
-* Nowin Web サーバーの使用はこのビルドパックから削除され、代わりに [Kestrel]{https://github.com/aspnet/KestrelHttpServer} Web サーバーが使用されます。
+* Nowin Web サーバーの使用はこのビルドパックから削除され、代わりに [Kestrel](https://github.com/aspnet/KestrelHttpServer) Web サーバーが使用されます。

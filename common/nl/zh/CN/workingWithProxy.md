@@ -14,7 +14,7 @@ lastupdated: "2018-01-23"
 # 使用代理
 {: #working_with_proxy}
 
-在某些环境（例如，[{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated) 和 [{{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html#local)）中，代理的配置可能会影响应用程序在编译打包和运行时期间的行为。
+在某些环境（例如，[{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated) 和 [{{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html#local)中，代理的配置可能会影响应用程序在编译打包和运行时期间的行为。
 
 可以通过使用以下环境变量，将应用程序配置为使用相应代理：
   * [http_proxy ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}

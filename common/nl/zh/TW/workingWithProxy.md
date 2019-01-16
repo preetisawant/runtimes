@@ -15,7 +15,7 @@ lastupdated: "2018-01-23"
 {: #working_with_proxy}
 
 在某些環境（例如 [{{site.data.keyword.Bluemix_notm}} Dedicated](/docs/dedicated/index.html#dedicated) 及
-[{{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html#local)）中，配置的 Proxy 可能會影響應用程式在編譯打包及運行期間的行為。
+[{{site.data.keyword.Bluemix_notm}} Local](/docs/local/index.html#local)中，配置的 Proxy 可能會影響應用程式在編譯打包及運行期間的行為。
 
 您可以使用下列環境變數，以配置應用程式來使用 Proxy：
   * [http_proxy ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/buildpacks/proxy-usage.html){: new_window}

@@ -373,7 +373,7 @@ If you receive a similar message when you push your ASP.net application, it is m
 The application fails to deploy with the message: `Failed to compress droplet: signal: broken pipe` or `No space left on device`.  How can I fix this?
 {: tsSymptoms}
 
-Projects pushed from source code that contains a large number of NuGet package dependencies can sometimes cause this error when the NuGet package cache is enabled.  Set the `CACHE_NUGET_PACKAGES` environment variable to `false` to disable the cache. See the instructions about how to [Disable the NuGet package](../runtimes/dotnet/diablingNuGet.md) for more information.
+Projects pushed from source code that contains a large number of NuGet package dependencies can sometimes cause this error when the NuGet package cache is enabled.  Set the `CACHE_NUGET_PACKAGES` environment variable to `false` to disable the cache. See the instructions about how to [Disable the NuGet package](/docs/runtimes/dotnet/disablingNuGet.md) for more information.
 {: tsCauses}
 
 ### Helpful links

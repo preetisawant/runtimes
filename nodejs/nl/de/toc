@@ -28,14 +28,13 @@ SDK for Node.js
 
     {: .topicgroup}
     Starteranwendungen und Buildpacks
-        [Starteranwendungen verwenden](common/starter_app_usage.html)
-        [Community-Buildpacks verwenden](common/byob.html)
+        [Starteranwendungen verwenden](runtimes/common/starter_app_usage.html)
+        [Community-Buildpacks verwenden](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [Unterstützung für Buildpacks](common/buildpackSupport.html)
-
+    [Unterstützung für Buildpacks](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

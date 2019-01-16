@@ -28,14 +28,13 @@ SDK for Node.js
 
     {: .topicgroup}
     Aplicaciones de inicio y compilaciones
-        [Utilización de las apps de inicio](common/starter_app_usage.html)
-        [Utilización de compilación de la comunidad](common/byob.html)
+        [Utilización de las apps de inicio](runtimes/common/starter_app_usage.html)
+        [Utilización de compilación de la comunidad](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [Declaración de soporte de paquete de compilación](common/buildpackSupport.html)
-
+    [Declaración de soporte de paquete de compilación](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

@@ -28,14 +28,13 @@ SDK for Node.js
 
     {: .topicgroup}
     入門範本應用程式及建置套件
-        [使用入門範本應用程式](common/starter_app_usage.html)
-        [使用社群建置套件](common/byob.html)
+        [使用入門範本應用程式](runtimes/common/starter_app_usage.html)
+        [使用社群建置套件](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [建置套件支援聲明](common/buildpackSupport.html)
-
+    [建置套件支援聲明](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

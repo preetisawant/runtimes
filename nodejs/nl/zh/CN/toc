@@ -28,14 +28,13 @@ SDK for Node.js
 
     {: .topicgroup}
     入门模板应用程序和 buildpack
-        [使用入门模板应用程序](common/starter_app_usage.html)
-        [使用社区 buildpack](common/byob.html)
+        [使用入门模板应用程序](runtimes/common/starter_app_usage.html)
+        [使用社区 buildpack](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [Buildpack 支持语句](common/buildpackSupport.html)
-
+    [Buildpack 支持语句](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

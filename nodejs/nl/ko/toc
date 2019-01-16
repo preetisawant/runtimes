@@ -28,14 +28,13 @@ SDK for Node.js
 
     {: .topicgroup}
     스타터 애플리케이션 및 빌드팩
-        [스타터 앱 사용](common/starter_app_usage.html)
-        [커뮤니티 빌드팩 사용](common/byob.html)
+        [스타터 앱 사용](runtimes/common/starter_app_usage.html)
+        [커뮤니티 빌드팩 사용](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [빌드팩 지원 구문](common/buildpackSupport.html)
-
+    [빌드팩 지원 구문](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

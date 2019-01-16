@@ -28,14 +28,13 @@ SDK for Node.js
 
     {: .topicgroup}
     Applications de démarrage et packs de construction
-        [Utilisation des applications de démarrage](common/starter_app_usage.html)
-        [Utilisation de packs de construction de communauté](common/byob.html)
+        [Utilisation des applications de démarrage](runtimes/common/starter_app_usage.html)
+        [Utilisation de packs de construction de communauté](runtimes/common/byob.html)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [Déclaration de support pour les packs de construction](common/buildpackSupport.html)
-
+    [Déclaration de support pour les packs de construction](runtimes/common/buildpackSupport.html)
     {: .navgroup-end}

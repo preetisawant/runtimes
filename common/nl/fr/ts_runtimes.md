@@ -373,7 +373,7 @@ Si vous recevez un message similaire lorsque vous envoyez votre application ASP.
 Echec du déploiement de l'application avec le message `Failed to compress droplet: signal: broken pipe` ou `No space left on device`.  Comment corriger le problème ?
 {: tsSymptoms}
 
-Les projets envoyés par commande push depuis le code source contenant un grand nombre de dépendances de package NuGet peuvent parfois provoquer cette erreur quand la mise en cache du package NuGet est activée.  Définissez la variable d'environnement `CACHE_NUGET_PACKAGES` sur `false` pour désactiver le cache. Voir les instructions sur la [désactivation du cache de packages NuGet](../runtimes/dotnet/diablingNuGet.md) pour plus d'informations.
+Les projets envoyés par commande push depuis le code source contenant un grand nombre de dépendances de package NuGet peuvent parfois provoquer cette erreur quand la mise en cache du package NuGet est activée.  Définissez la variable d'environnement `CACHE_NUGET_PACKAGES` sur `false` pour désactiver le cache. Voir les instructions sur la [désactivation du cache de packages NuGet](/docs/runtimes/dotnet/disablingNuGet.md) pour plus d'informations.
 {: tsCauses}
 
 ### Liens utiles

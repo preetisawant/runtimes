@@ -373,7 +373,7 @@ ASP.net 애플리케이션을 푸시할 때 이와 비슷한 메시지를 받는
 내 애플리케이션이 배치에 실패하며 다음 메시지가 표시됩니다. `Failed to compress droplet: signal: broken pipe` 또는 `No space left on device`.  이 문제의 해결 방법은 무엇입니까?
 {: tsSymptoms}
 
-많은 수의 NuGet 패키지 종속 항목이 포함된 소스 코드에서 푸시된 프로젝트로 인해 NuGet 패키지 캐시를 사용할 때 종종 이 오류가 발생합니다.  캐시를 사용 안함으로 설정하려면 `CACHE_NUGET_PACKAGES` 환경 변수를 `false`로 설정하십시오. 자세한 정보는 [NuGet 패키지를 사용 안함](../runtimes/dotnet/diablingNuGet.md)으로 설정하는 방법에 대한 지시사항을 참조하십시오.
+많은 수의 NuGet 패키지 종속 항목이 포함된 소스 코드에서 푸시된 프로젝트로 인해 NuGet 패키지 캐시를 사용할 때 종종 이 오류가 발생합니다.  캐시를 사용 안함으로 설정하려면 `CACHE_NUGET_PACKAGES` 환경 변수를 `false`로 설정하십시오. 자세한 정보는 [NuGet 패키지를 사용 안함](/docs/runtimes/dotnet/disablingNuGet.md)으로 설정하는 방법에 대한 지시사항을 참조하십시오.
 {: tsCauses}
 
 ### 유용한 링크

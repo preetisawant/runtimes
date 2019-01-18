@@ -373,7 +373,7 @@ ASP.net アプリケーションのプッシュ時にも同様のメッセージ
 アプリケーションがデプロイに失敗し、「`Failed to compress droplet: signal: broken pipe`」または「`No space left on device`」というメッセージが出されます。  これを修正する方法を教えてください。
 {: tsSymptoms}
 
-多数の NuGet パッケージ依存関係が含まれているソース・コードからプッシュされるプロジェクトでは、NuGet パッケージのキャッシュが有効になっている場合に、このエラーが発生することがあります。  `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定して、キャッシュを無効にしてください。 詳しくは、[NuGet パッケージの無効化](../runtimes/dotnet/diablingNuGet.md)の方法についての説明を参照してください。
+多数の NuGet パッケージ依存関係が含まれているソース・コードからプッシュされるプロジェクトでは、NuGet パッケージのキャッシュが有効になっている場合に、このエラーが発生することがあります。  `CACHE_NUGET_PACKAGES` 環境変数を `false` に設定して、キャッシュを無効にしてください。 詳しくは、[NuGet パッケージの無効化](/docs/runtimes/dotnet/disablingNuGet.md)の方法についての説明を参照してください。
 {: tsCauses}
 
 ### 役に立つリンク

@@ -373,7 +373,7 @@ Node.js 不知道應用程式可以使用多少記憶體，因此記憶體回收
 應用程式無法部署，訊息為：`Failed to compress droplet: signal: broken pipe` 或 `No space left on device`。如何修正這個問題？
 {: tsSymptoms}
 
-若已啟用 NuGet 套件快取，則從包含大量 NuGet 套件相依關係的原始碼推送的專案有時可能會導致此錯誤。將 `CACHE_NUGET_PACKAGES` 環境變數設為 `false`，以停用快取。如需相關資訊，請參閱如何[停用 NuGet 套件](../runtimes/dotnet/diablingNuGet.md)的指示。
+若已啟用 NuGet 套件快取，則從包含大量 NuGet 套件相依關係的原始碼推送的專案有時可能會導致此錯誤。將 `CACHE_NUGET_PACKAGES` 環境變數設為 `false`，以停用快取。如需相關資訊，請參閱如何[停用 NuGet 套件](/docs/runtimes/dotnet/disablingNuGet.md)的指示。
 {: tsCauses}
 
 ### 有用的鏈結

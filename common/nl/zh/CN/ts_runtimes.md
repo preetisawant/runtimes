@@ -373,7 +373,7 @@ Node.js 不知道有多少内存可用于应用程序，因此在内存耗尽前
 应用程序部署失败，消息为：`未能压缩 Droplet：信号：管道中断`或`设备上没有剩余空间`。我可以如何修复此问题？
 {: tsSymptoms}
 
-从包含大量 NuGet 数据包依赖项的源代码推送的项目，有时可能会在启用 NuGet 数据包高速缓存时导致此错误。可以将 `CACHE_NUGET_PACKAGES` 环境变量设置为 `false` 以禁用高速缓存。有关更多信息，请参阅有关如何[禁用 NuGet 数据包](../runtimes/dotnet/diablingNuGet.md)的指示信息。
+从包含大量 NuGet 数据包依赖项的源代码推送的项目，有时可能会在启用 NuGet 数据包高速缓存时导致此错误。可以将 `CACHE_NUGET_PACKAGES` 环境变量设置为 `false` 以禁用高速缓存。有关更多信息，请参阅有关如何[禁用 NuGet 数据包](/docs/runtimes/dotnet/disablingNuGet.md)的指示信息。
 {: tsCauses}
 
 ### 有用的链接

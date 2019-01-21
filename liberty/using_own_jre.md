@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-06-27"
+  years: 2017, 2019
+lastupdated: "2019-01-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-06-27"
 # Use your own JRE
 {: #using_own_jre}
 
-You can run your Liberty application on {{site.data.keyword.Bluemix}} with your own JRE. You must complete the following to make your JRE available for your application.
+You can run your Liberty application on {{site.data.keyword.Bluemix}} with your own JRE. The liberty-for-java buildpack provides support for the [runtimes supported by WebSphere Liberty](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13), but cannot guarantee full functionality of unsupported versions. You must complete the following to make your JRE available for your application.
 * Host the JRE in a location that the buildpack can download it from.
 * Host an `index.yml` file that provides the location of the JRE.
 * Configure your application to use your JRE.
@@ -20,11 +20,11 @@ You can run your Liberty application on {{site.data.keyword.Bluemix}} with your 
 ## Host the JRE and `index.yml`
 {: #hosting_jre}
 
-You must host the JRE file on a web server that the Liberty buildpack can download from. You can host the file on {{site.data.keyword.Bluemix_notm}} with any of the available server facilities, or you can host it in a publicly available location. The server must be configured with an `index.yml` file that specifies details about the JRE file.
+You must host the JRE file on a web server that the liberty-for-java buildpack can download from. You can host the file on {{site.data.keyword.Bluemix_notm}} with any of the available server facilities, or you can host it in a publicly available location. The server must be configured with an `index.yml` file that specifies details about the JRE file.
 
 Complete the following steps to host the JRE and the `index.yml` file:
   1. Acquire the JRE, which must be the version for use on a UNIX 64-bit OS, and must be a `tar.gz` file.
-  2. Host the JRE file in a location from which the Liberty buildpack can download it.
+  2. Host the JRE file in a location from which the liberty-for-java buildpack can download it.
   3. Provide an `index.yml` file at the hosting location. The `index.yml` file must include an entry that contains a version ID of the JRE followed by a colon and the complete JRE file location URL.
     * Define the JRE version in the `index.yml` file.
 

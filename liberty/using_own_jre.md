@@ -12,7 +12,7 @@ lastupdated: "2019-01-21"
 # Use your own JRE
 {: #using_own_jre}
 
-You can run your Liberty application on {{site.data.keyword.Bluemix}} with your own JRE. The liberty-for-java buildpack  provides support for the [runtimes supported by WebSphere Liberty](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13), but cannot guarantee full functionality of unsupported versions. You must complete the following to make your JRE available for your application.
+You can run your Liberty application on {{site.data.keyword.Bluemix}} with your own JRE. The liberty-for-java buildpack provides support for the [runtimes supported by WebSphere Liberty](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13), but cannot guarantee full functionality of unsupported versions. You must complete the following to make your JRE available for your application.
 * Host the JRE in a location that the buildpack can download it from.
 * Host an `index.yml` file that provides the location of the JRE.
 * Configure your application to use your JRE.

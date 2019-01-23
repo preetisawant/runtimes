@@ -24,7 +24,7 @@ SDK for Node.js
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    ../common/app_mng.md
+    [Gestión de apps de Liberty y Node.js](runtimes/common/app_mng.html)
 
     {: .topicgroup}
     Aplicaciones de inicio y compilaciones

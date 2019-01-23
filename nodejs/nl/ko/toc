@@ -24,7 +24,7 @@ SDK for Node.js
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    ../common/app_mng.md
+    [Liberty 및 Node.js 앱 관리](runtimes/common/app_mng.html)
 
     {: .topicgroup}
     스타터 애플리케이션 및 빌드팩

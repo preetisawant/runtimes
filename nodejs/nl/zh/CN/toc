@@ -24,7 +24,7 @@ SDK for Node.js
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    ../common/app_mng.md
+    [管理 Liberty 和 Node.js 应用程序](runtimes/common/app_mng.html)
 
     {: .topicgroup}
     入门模板应用程序和 buildpack

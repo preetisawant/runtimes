@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-08-10"
+  years: 2016, 2019
+lastupdated: "2019-01-22"
 
 ---
 
@@ -16,15 +16,15 @@ lastupdated: "2018-08-10"
 # Using the starter apps
 {: #using_starter_apps}
 
-{{site.data.keyword.Bluemix}} provides starter apps, called boilerplates. Boilerplates are templates that include one application, its associated runtime environment, and predefined services for a particular domain. Follow these steps to select a boilerplate and begin working.
+{{site.data.keyword.cloud}} provides starter apps, called boilerplates. Boilerplates are templates that include one application, its associated runtime environment, and predefined services for a particular domain. Follow these steps to select a boilerplate and begin working.
 {:shortdesc}
 
 ## Choosing a boilerplate
 
-1. From the [{{site.data.keyword.Bluemix_notm}} Catalog](https://console.{DomainName}/catalog/),
+1. From the [{{site.data.keyword.cloud_notm}} Catalog](https://cloud.ibm.com/catalog/),
 navigate to the Starter Kits section.
 2. Click the boilerplate you want to use.
-3. Enter a name for your app, modify the host name if required, and click **Create**. Your app begins staging, and the Getting started tutorial for your app on the {{site.data.keyword.Bluemix_notm}} Dashboard displays.
+3. Enter a name for your app, modify the host name if required, and click **Create**. Your app begins staging, and the Getting started tutorial for your app on the {{site.data.keyword.cloud_notm}} Dashboard displays.
 4. Follow the steps in the tutorial to:  
   * Download the software you need to build your app.
   * Download the sample app.

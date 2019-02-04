@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-06"
+  years: 2015, 2019
+lastupdated: "2018-02-01"
 
 ---
 
@@ -33,8 +33,8 @@ Environment variables supported by Liberty for Java.
 </tr>
 
 <tr>
-<td>IBM_LIBERTY_BETA</td>
-<td>Enable [Liberty beta features/](usingBetaFeatures.html)</td>
+<td>IBM_LIBERTY_MONTHLY</td>
+<td>Enable [Liberty monthly release runtime/](usingMonthlyRuntime.html)</td>
 </tr>
 
 <tr>

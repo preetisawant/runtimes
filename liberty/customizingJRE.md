@@ -43,6 +43,27 @@ If enabled, OpenJDK version 8 is used by default. Use the JBP_CONFIG_OPENJDK env
 
 The version property can be set to a version range such as 1.7.+, 1.8.+ or any specific version listed on the [list of available OpenJDK versions](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). For best results, use Java 8.
 
+## OpenJ9
+{: #openj9}
+
+Optionally, applications can be configured to run with OpenJ9 as the JRE or JDK. To enable an application to run with OpenJ9 set the JVM environment variable to "openj9". For example, using the {{site.data.keyword.Bluemix_notm}} command line tool, run the command:
+```
+    ibmcloud cf set-env myapp JVM 'openj9'
+```
+{: codeblock}
+
+If enabled, OpenJ9 version 11 is used by default. Use the JBP_CONFIG_OPENJ9 environment variable to specify an alternative version of OpenJ9. For example, to use the latest OpenJ9 8, set the following environment variable:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 8.+"
+```
+{: codeblock}
+
+If enabled, the OpenJ9 JRE is used by default. Use the JBP_CONFIG_OPENJ9 environment variable to use the JDK version of OpenJ9. For example, to use the OpenJ9 JDK, set the following environment variable:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "type: jdk"
+```
+{: codeblock}
+
 ## Oracle JRE
 {: #oracle_jre}
 

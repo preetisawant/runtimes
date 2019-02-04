@@ -21,15 +21,16 @@ The buildpack has default values for settings such as the Java version or Libert
 {: #liberty_versions}
 
 The buildpack provides two versions of the Liberty runtime:
-1. The stable release
+1. A long-term stable release
   * It is the default Liberty runtime.
   * It does not provide any [beta features](usingBetaFeatures.html).
   * Typically updated on a quarterly basis.
 
 2. The monthly release
-  * It must be explicity enabled by setting the **JBP_CONFIG_LIBERTY** environment variable with the **"version: +"** value.
-  * It provides [beta features](usingBetaFeatures.html).
-  * Typically updated on a monthly basis.
+  * It must be explicity enabled by setting the **JBP_CONFIG_LIBERTY** environment variable with the **"version: +"** value and
+  the **IBM_LIBERTY_MONTHLY** environment variable with **true**.
+  * It provides [monthly features](usingMonthlyRuntime.html).
+  * Typically updated every 4 weeks.
 
 ## Liberty features
 {: #liberty_features}

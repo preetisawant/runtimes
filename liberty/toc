@@ -21,20 +21,21 @@ Liberty for Java
     customizingJRE.md
     using_own_jre.md
     installFeatures.md
+    usingMonthlyRuntime.md
     usingBetaFeatures.md
-    [Opt out of bound services](runtimes/liberty/autoConfig.html#opting_out)
+    [Opt out of bound services](/runtimes/liberty/liberty-auto_config#opting_out)
 
     {: .topicgroup}
     Monitor Liberty in IBM Cloud
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
-        [Getting started with Availability Monitoring](services/AvailabilityMonitoring/index.html)
+        [Getting started with Availability Monitoring](/AvailabilityMonitoring/AvailabilityMonitoring-avmon_gettingstarted)
 
     {: .topicgroup}
     Work offline or with a proxy
         offlineMode.md
-        [Working with a proxy](runtimes/common/workingWithProxy.html)
+        /runtimes/common/runtime-common-working_with_proxy
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

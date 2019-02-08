@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-14"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,6 +11,8 @@ lastupdated: "2018-12-14"
 
 # Use the beta features
 {: #using_beta_features}
+
+**Important**:  Starting with Liberty for Java buildpack v3.28, the beta runtime is no longer included.  
 
 The Liberty beta features provide early access to new functionality and programming models that might be included in a future Liberty release. Most of the beta features can also be used in applications deployed to {{site.data.keyword.Bluemix}}.
 

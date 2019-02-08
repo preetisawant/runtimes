@@ -54,13 +54,13 @@ Optionally, applications can be configured to run with OpenJ9 as the JRE or JDK.
 
 If enabled, OpenJ9 version 11 is used by default. Use the JBP_CONFIG_OPENJ9 environment variable to specify an alternative version of OpenJ9. For example, to use the latest OpenJ9 8, set the following environment variable:
 ```
-    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "version: 8.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
 ```
 {: codeblock}
 
 If enabled, the OpenJ9 JRE is used by default. Use the JBP_CONFIG_OPENJ9 environment variable to use the JDK version of OpenJ9. For example, to use the OpenJ9 JDK, set the following environment variable:
 ```
-    ibmcloud cf set-env myapp JBP_CONFIG_OPENJDK "type: jdk"
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
 ```
 {: codeblock}
 

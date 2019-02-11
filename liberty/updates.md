@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-14"
+  years: 2015, 2019
+lastupdated: "2019-01-01"
 
 ---
 
@@ -13,6 +13,16 @@ lastupdated: "2018-12-14"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### February 1, 2019: Updated Liberty buildpack v3.28-20190127-1723
+
+* The default Liberty runtime GA version is the 18.0.0.4 release.
+* The alternate Liberty runtime GA version 19.0.0.1 was added.  
+* The monthly Liberty beta release has been removed.  
+* The IBM JRE version was updated to 8 SR5 FP7.
+* The MQ client was updated to the 9.1.0.0 release.
+* The auto-scaling agent was updated.
+
 
 ### December 14, 2018: Updated Liberty buildpack v3.27-20181130-1702
 

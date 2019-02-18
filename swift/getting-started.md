@@ -28,7 +28,7 @@ Throughout these docs, references to the Cloud Foundry CLI are now updated to th
 ## Before you begin
 {: #prereqs}
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Swift compiler ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://swift.org/download/) for your platform.
 
 ## Step 1: Clone the sample app
@@ -115,7 +115,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  If you have a federated user ID, instead use the following command to log in with your single sign-on ID. See [Logging in with a federated ID](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) to learn more.
+  If you have a federated user ID, instead use the following command to log in with your single sign-on ID. See [Logging in with a federated ID](/docs/cli/login_federated_id.html) to learn more.
 
   ```
 ibmcloud login --sso
@@ -128,7 +128,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  If you don't have an org or a space set up, see [Adding orgs and spaces](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  If you don't have an org or a space set up, see [Adding orgs and spaces](/docs/account/orgs_spaces.html).
   {: tip}
 
 1. From within the *get-started-swift* directory, push your app to {{site.data.keyword.Bluemix_notm}}

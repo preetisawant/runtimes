@@ -32,7 +32,7 @@ More information on JVM memory usage can be found at the developerWorks article 
 
 When you deploy an application, the memory usage of the entire process is monitored. If memory usage exceeds the memory limit that you specified when the application was deployed, the kernel stops the process. This action happens without warning and might be manifested in several ways.
 
- If the Memory Limit is exceeded during application deployment, you receive a message that a failure occured and you might see any the following.
+ If the Memory Limit is exceeded during application deployment, you receive a message that a failure occurred and you might see any the following.
 
   * You might see that the application is flapping.
   * You might see that the application attempted to start multiple times, always unsuccessfully.
@@ -73,4 +73,4 @@ You can set the heap memory size by using environment variables or by changing t
 ```
 {: codeblock}
 
-* Specify the -Xmx argument in the jvm.options file if your application is a [server directory](optionsForPushing.html#server_directory) or a [packaged server](optionsForPushing.html#packaged_server). For more inofrmation on usig the `jvm.options` file with the Liberty runtime, see [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  
+* Specify the -Xmx argument in the jvm.options file if your application is a [server directory](/docs/runtimes/liberty/optionsForPushing.html#server_directory) or a [packaged server](/docs/runtimes/liberty/optionsForPushing.html#packaged_server). For more inofrmation on usig the `jvm.options` file with the Liberty runtime, see [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  

@@ -24,42 +24,42 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Enable [App Management utilities](../common/app_mng.html)</td>
+<td>Enable [App Management utilities](/docs/runtimes-common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Install [App Management utilities](../common/app_mng.html)</td>
+<td>Install [App Management utilities](/docs/runtimes-common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>IBM_LIBERTY_MONTHLY</td>
-<td>Enable [Liberty monthly release runtime/](usingMonthlyRuntime.html)</td>
+<td>Enable [Liberty monthly release runtime/](/docs/runtimes/liberty/usingMonthlyRuntime.html)</td>
 </tr>
 
 <tr>
 <td>JAVA_OPTS</td>
-<td>Set [Java options](customizingJRE.html)</td>
+<td>Set [Java options](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
-<td>Configure the [Dynatrace agent location information](dynatrace.html#configuring_liberty_app)</td>
+<td>Configure the [Dynatrace agent location information](/docs/runtimes/liberty/monitoring/dynatrace.html#configuring_liberty_app)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_IBMJDK </td>
-<td>Configure the [IBM JRE version](customizingJRE.html)</td>
+<td>Configure the [IBM JRE version](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>Configure a variety of Liberty runtime options including [features for WAR or EAR files](optionsForPushing.html#stand_alone_apps)</td>
+<td>Configure a variety of Liberty runtime options including [features for WAR or EAR files](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>Configure the [OpenJDK version](customizingJRE.html)</td>
+<td>Configure the [OpenJDK version](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
@@ -74,17 +74,17 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>JVM</td>
-<td>Select the [JRE type](customizingJRE.html)</td>
+<td>Select the [JRE type](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JVM_ARGS</td>
-<td>Set the [JVM arguments](customizingJRE.html)</td>
+<td>Set the [JVM arguments](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>LBP_SERVICE_CONFIG_xxxx</td>
-<td>[Override service configuration](autoConfig.html#override_service_config)</td>
+<td>[Override service configuration](/docs/runtimes/liberty/autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>
@@ -99,7 +99,7 @@ Environment variables supported by Liberty for Java.
 
 <tr>
 <td>services_autoconfig_excludes</td>
-<td>Disable service [auto-configuration.](autoConfig.html#opting_out)</td>
+<td>Disable service [auto-configuration.](/docs/runtimes/liberty/autoConfig.html#opting_out)</td>
 </tr>
 </table>
 {: caption="Table 1. Environment variables available for Liberty for Java" caption-side="top"}

@@ -21,8 +21,8 @@ to acquire artifacts required by the application.  The following are the externa
 * https://download.run.pivotal.io, and https://java-buildpack.cloudfoundry.org are used to access components for:
   * [AppDynamics agent ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.appdynamics.com/)
   * [MariaDB JDBC driver ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://mariadb.com/)
-  * [New Relic agent](monitoring/newRelic.html)
-  * [OpenJDK](customizingJRE.html#OpenJDK)
+  * [New Relic agent](/docs/runtimes/liberty/monitoring/newRelic.html)
+  * [OpenJDK](/docs/runtimes/liberty/customizingJRE.html#OpenJDK)
   * [PostgreSQL JDBC driver ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.postgresql.org)
 * https://dl.zeroturnaround.com/jrebel/ is used to access components for [JRebel ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://zeroturnaround.com/software/jrebel/).
 * https://download.ruxit.com/agent/paas/cloudfoundry/java is used to access components for [Dynatrace Ruxit agent](dynatrace.html).
@@ -33,4 +33,4 @@ to acquire artifacts required by the application.  The following are the externa
 
 In some environments, such as [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) and
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), a proxy can be configured. See
-[Working with a proxy](/docs/runtimes/common/workingWithProxy.html) for more details.
+[Working with a proxy](/docs/runtimes-common/workingWithProxy.html) for more details.

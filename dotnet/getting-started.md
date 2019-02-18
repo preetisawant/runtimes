@@ -27,7 +27,7 @@ By following this getting started tutorial, you'll set up a development environm
 
 You'll need the following:
 * [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * Install .NET Core 2.1.1 SDK 2.1.301 from the [.NET Core downloads website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core).
 
@@ -95,7 +95,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  If you have a federated user ID, instead use the following command to log in with your single sign-on ID. See [Logging in with a federated ID](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) to learn more.
+  If you have a federated user ID, instead use the following command to log in with your single sign-on ID. See [Logging in with a federated ID](/docs/cli/login_federated_id.html) to learn more.
  ```
 ibmcloud login --sso
   ```
@@ -107,7 +107,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  If you don't have an org or a space set up, see [Adding orgs and spaces](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  If you don't have an org or a space set up, see [Adding orgs and spaces](/docs/account/orgs_spaces.html).
   {: tip}
 
 1. **Be sure you are in the main directory, `get-started-aspnet-core`, for your application**  then push your application to {{site.data.keyword.Bluemix_notm}}:

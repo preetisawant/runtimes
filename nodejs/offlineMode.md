@@ -29,7 +29,7 @@ The Node.js buildpack can access the following external sites. You might need to
 * https://iojs.org is used to retrieve older version of node which are either not contained in the buildpack or not available at  https://semver.herokuapp.com.
 * https://registry.npmjs.org is used to retrieve node modules such as express.
 
-To minimize the set of whitelisted sites, configure your applications to use a Node engine version which is included in the SDK for Node.js buildpack.  See [latest updates](./updates.html) for the set of Node engine versions included in the buildpack.  If you configure your application to use these Node engine versions, then only the https://registry.npmjs.org site is required to download modules.
+To minimize the set of whitelisted sites, configure your applications to use a Node engine version which is included in the SDK for Node.js buildpack.  See [latest updates](/docs/runtimes/nodejs/updates.html) for the set of Node engine versions included in the buildpack.  If you configure your application to use these Node engine versions, then only the https://registry.npmjs.org site is required to download modules.
 
 Be aware that when new versions of the SDK for Node.js buildpack are installed, the set of available engine versions often changes to more recent versions.  You might be required to reconfigure your app to specify a more recent Node engine version included in the buildpack.
 
@@ -65,4 +65,4 @@ Whenever you make a change to dependencies in the `package.json` file , rerun th
 
 In some environments such as [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) and
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), a proxy can be configured. See
-[Working with a proxy](/docs/manageapps/workingWithProxy.html) for more details.
+[Working with a proxy](/docs/runtimes-common/workingWithProxy.html) for more details.

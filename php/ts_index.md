@@ -14,5 +14,5 @@ lastupdated: "2018-02-22"
 
 Troubleshoot your PHP applications and buildpacks with the following resources:
 
-* [Troubleshooting for runtimes](../common/ts_runtimes.html#runtimes)
-* [Troubleshooting for runtimes: PHP](../common/ts_runtimes.html#ts_php)
+* [Troubleshooting for runtimes](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Troubleshooting for runtimes: PHP](docs/runtimes-common/ts_runtimes.html#ts_php)

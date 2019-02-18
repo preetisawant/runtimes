@@ -134,8 +134,8 @@ lastupdated: "2019-01-01"
 * The default Liberty runtime also includes the PI75512 WebSockets iFix.
 * The monthly Liberty runtime version was updated to the [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) release.
 * The IBM JRE versions 8 and 7.1 were updated to SR4 FP1.
-* The auto-configuration support was also extended to work with [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
-* The auto-configuration support for [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) was updated to provide the option of using the Cloudant Java Library instead of org.ektorp. To enable the use of the Cloudant Java Library you must set the following environment variable:    
+* The auto-configuration support was also extended to work with [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
+* The auto-configuration support for [Cloudant NoSQL Database](/docs/services/Cloudant/index.html) was updated to provide the option of using the Cloudant Java Library instead of org.ektorp. To enable the use of the Cloudant Java Library you must set the following environment variable:    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -146,12 +146,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### January 23, 2017: Updated Liberty buildpack v3.7-20170118-2046
 * The monthly Liberty runtime version was updated to the [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) release.
 * The IBM JRE version 8 was updated to SR3 FP22 version.
-* The [auto-configuration](autoConfig.html) support was also extended to work with the [Compose for MongoDB service](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (Currently only available with the monthly Liberty runtime).
+* The [auto-configuration](autoConfig.html) support was also extended to work with the [Compose for MongoDB service](/docs/services/ComposeForMongoDB/index.html) (Currently only available with the monthly Liberty runtime).
 
 ### December 13, 2016: Updated Liberty buildpack v3.6-20161209-1351
 * The default Liberty runtime version was updated to the [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) release.
 * The IBM JRE version 8 was updated to SR3 FP21 version.
-* The [auto-configuration](autoConfig.html) support was also extended to work with the [Compose for PostgreSQL service](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html).
+* The [auto-configuration](autoConfig.html) support was also extended to work with the [Compose for PostgreSQL service](/docs/services/ComposeForPostgreSQL/index.html).
 * The buildpack also provides an updated version of the agent for the [Auto-Scaling service](/docs/services/Auto-Scaling/index.html).
 * The buildpack was updated to support environment variables as part of the include locations in the `server.xml` files.
 
@@ -163,7 +163,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * The Monitoring and Analytics service integration was fixed to work with [Diego ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html).
 * The [Dynatrace](dynatrace.html) service integrations were updated to work better with the Dynatrace service offerings.
 * The [auto-configuration](autoConfig.html) support for PostgreSQL and MySQL type of services was improved to work better when deploying a server directory or packaged server.
-* The Node.js runtime that is used by the [devconsole and shell App Management utilities](../common/app_mng.html#app_management) was updated to the latest `0.12.17` version.
+* The Node.js runtime that is used by the [devconsole and shell App Management utilities](docs/runtimes-common/app_mng.html#app_management) was updated to the latest `0.12.17` version.
 * [Security fixes](http://www.ibm.com/support/docview.wss?uid=swg21994945) for the Liberty runtime are included.
 
 ### November 1, 2016: Updated Liberty buildpack v3.4.1-20161030-2241

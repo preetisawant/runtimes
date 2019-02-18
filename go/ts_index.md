@@ -14,4 +14,4 @@ lastupdated: "2018-02-22"
 
 Troubleshoot your Go applications and buildpacks with the following resource:
 
-* [Troubleshooting for runtimes](../common/ts_runtimes.html#runtimes)
+* [Troubleshooting for runtimes](docs/runtimes-common/ts_runtimes.html#runtimes)

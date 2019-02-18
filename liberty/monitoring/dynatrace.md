@@ -12,7 +12,7 @@ lastupdated: "2018-06-27"
 # Use Dynatrace to monitor Liberty in {{site.data.keyword.cloud_notm}}
 {: #using_dynatrace}
 
-Dynatrace is a third-party service that provides monitoring for your app. You can integrate Dynatrace with your Liberty application, but IBM does not provide support for third-party services. See [Third-party services](../../common/buildpackSupport.html#third-party) for more information.
+Dynatrace is a third-party service that provides monitoring for your app. You can integrate Dynatrace with your Liberty application, but IBM does not provide support for third-party services. See [Third-party services](/docs/runtimes-common/buildpackSupport.html#third-party) for more information.
 
 For more information about Dynatrace and its licensing, see [Dynatrace Application Monitoring ![External link icon](../../../icons/launch-glyph.svg "External link icon")](http://www.dynatrace.com/en/products/application-monitoring.html).
 

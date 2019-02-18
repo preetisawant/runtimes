@@ -19,13 +19,13 @@ Liberty for Java applications on {{site.data.keyword.Bluemix}} are powered by th
 ## Detection
 {: #detection}
 The Liberty buildpack is used when the following kinds of applications are deployed:
-* [WAR files](optionsForPushing.html#stand_alone_apps)
-* [EAR files](optionsForPushing.html#stand_alone_apps)
-* [Liberty server directory](optionsForPushing.html#server_directory)
-* [Liberty packaged server](optionsForPushing.html#packaged_server)
+* [WAR files](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [EAR files](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [Liberty server directory](/docs/runtimes/liberty/optionsForPushing.html#server_directory)
+* [Liberty packaged server](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)
 * Java main
 * [Distzip](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/container-distZip.md)
 
 ## Starter application
 {: #starter_application}
-{{site.data.keyword.Bluemix_notm}} provides several Liberty starter applications.  The Liberty starter applications are simple Liberty apps that provide a template that you can use. You can experiment with the starter apps, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment.  See [Using the starter applications](../common/starter_app_usage.html) for help with using the starter applications.
+{{site.data.keyword.Bluemix_notm}} provides several Liberty starter applications.  The Liberty starter applications are simple Liberty apps that provide a template that you can use. You can experiment with the starter apps, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment.  See [Using the starter applications](/docs/runtimes-common/starter_app_usage.html) for help with using the starter applications.

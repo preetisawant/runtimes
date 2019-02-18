@@ -21,14 +21,14 @@ See the following links:
 ## JConsole
 {: #jconsole notoc}
 
-To monitor Liberty with *JConsole* see [Monitoring Liberty in Bluemix with JConsole](jconsole.html)
+To monitor Liberty with *JConsole* see [Monitoring Liberty in Bluemix with JConsole](/docs/runtimes/liberty/monitoring/jconsole.html)
 
 ## Dynatrace
 {: #dynatrace notoc}
 
-To monitor Liberty with *Dynatrace* see [Using Dynatrace](dynatrace.html)
+To monitor Liberty with *Dynatrace* see [Using Dynatrace](/docs/runtimes/liberty/monitoring/dynatrace.html)
 
 ## New Relic
 {: #newrelic notoc}
 
-To monitor Liberty with *New Relic* see [Using New Relic](newRelic.html)
+To monitor Liberty with *New Relic* see [Using New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)

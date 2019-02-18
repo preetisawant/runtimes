@@ -27,7 +27,7 @@ The Liberty beta features provide early access to new functionality and programm
 
 To use the Liberty beta features in {{site.data.keyword.Bluemix_notm}}, you will need to do the following:
 
-1. [Deploy a server directory or a packaged server](optionsForPushing.html) with one or more beta features enabled in the server.xml file as in the example that follows:
+1. [Deploy a server directory or a packaged server](/docs/runtimes/liberty/optionsForPushing.html) with one or more beta features enabled in the server.xml file as in the example that follows:
 
   ```
 <server>
@@ -39,7 +39,7 @@ To use the Liberty beta features in {{site.data.keyword.Bluemix_notm}}, you will
   {: .codeblock}
 
 2.  Set the `IBM_LIBERTY_BETA` environment variable to `true`. This variable directs the Liberty buildpack to install and enable the beta features for your application.  For example:
-  * Using the [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html):
+  * Using the [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html):
     ```
     ibmcloud cf set-env <yourappname> IBM_LIBERTY_BETA true
     ```
@@ -52,7 +52,7 @@ To use the Liberty beta features in {{site.data.keyword.Bluemix_notm}}, you will
     ```
     {: .codeblock}
 
-3. Set the `JBP_CONFIG_LIBERTY` environment variable to `"version: +"`. This variable enables the [Liberty monthly runtime](buildpackDefaults.html#liberty_versions), which supports beta features. For example:
+3. Set the `JBP_CONFIG_LIBERTY` environment variable to `"version: +"`. This variable enables the [Liberty monthly runtime](/docs/runtimes/liberty/buildpackDefaults.html#liberty_versions), which supports beta features. For example:
   * Using the {{site.data.keyword.Bluemix_notm}} CLI tool:
     ```
     ibmcloud cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"

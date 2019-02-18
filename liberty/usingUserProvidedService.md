@@ -28,13 +28,13 @@ and create a user-provided service to connect to it.
 ## Step 1: Push the Getting-Started application
 {: #follow_getting_started}
 
-Follow the steps in the [Getting started tutorial](https://console.bluemix.net/docs/runtimes/liberty/getting-started.html) up through pushing
+Follow the steps in the [Getting started tutorial](/docs/runtimes/liberty/getting-started.html) up through pushing
 the application to {{site.data.keyword.Bluemix_notm}}.  Stop before connecting the database.
 
 ## Step 2: Create a CloudantNoSQLDB instance
 {: #create_cloudantnosqldb}
 
-Follow the steps in the [Getting started tutorial](https://console.bluemix.net/docs/runtimes/liberty/getting-started.html) to
+Follow the steps in the [Getting started tutorial](/docs/runtimes/liberty/getting-started.html) to
 create a CloudantNoSqLDB instance
 
 Use the view credentials option to copy the credentials from the CloudandNoSQLDB. Save those credentials in a local file, for example, cloudant-creds.

@@ -10,18 +10,17 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Working with a proxy](runtimes/common/workingWithProxy.html)
+	{: .topicgroup}
+    Starter applications and community buildpacks
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
-    Starter applications and community buildpacks
-        [Using the starter apps](runtimes/common/starter_app_usage.html)
-        [Using community buildpacks](runtimes/common/byob.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Troubleshooting for runtimes](runtimes/common/ts_runtimes.html)
-    [Runtime versions](runtimes/tomcat/index.html#runtime_versions)
-    [Buildpack support statement](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-runtimes
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

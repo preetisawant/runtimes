@@ -13,7 +13,7 @@ lastupdated: "2018-11-09"
 # Integrate third-party services using hooks
 {: #hooks}
 
-You can use hooks to easily integrate third-party services in the SDK for Node.js buildpack. Note that IBM does not provide support for any third-party services that you integrate. For more information about support, see [Third-party services](../common/buildpackSupport.html#third-party).
+You can use hooks to easily integrate third-party services in the SDK for Node.js buildpack. Note that IBM does not provide support for any third-party services that you integrate. For more information about support, see [Third-party services](/docs/runtimes-common/buildpackSupport.html#third-party).
 
 The SDK for Node.js buildpack includes the Dynatrace hook. Dynatrace enables application monitoring of Node.js applications. Learn more about using the Dynatrace hook in the buildpack in the [Dynatrace documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")]( https://www.dynatrace.com/support/help/cloud-platforms/cloud-foundry/application-only/deploy-oneagent-on-cloud-foundry-for-application-only-monitoring/){: new_window}.
 

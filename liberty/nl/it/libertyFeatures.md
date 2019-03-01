@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-21"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -12,17 +12,18 @@ lastupdated: "2018-09-21"
 # Funzioni Liberty supportate in {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-Il runtime Liberty for Java include un sottoinsieme di funzioni Liberty. Per utilizzare una funzione che non è inclusa nel runtime, vedi [Installa le funzioni Liberty](installFeatures.html). Per un elenco completo delle funzioni disponibili in Liberty, insieme alle versioni Java EE e altre informazioni, vedi [Liberty features ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
+Il runtime Liberty for Java include un sottoinsieme di funzioni Liberty. Per utilizzare una funzione che non è inclusa nel runtime, vedi [Installa le funzioni Liberty](/docs/runtimes/liberty/installFeatures.html). Per un elenco completo delle funzioni disponibili in Liberty, insieme alle versioni Java EE e altre informazioni, vedi [Liberty features ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
 
 ## Funzioni specifiche per il cloud
 {:#cloud-features}
 
 Le seguenti funzioni sono incluse e sono specifiche per {{site.data.keyword.Bluemix_notm}}:
+* appstate-1.0
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-Una sottoserie di funzioni disponibili vengono abilitate per impostazione predefinita quando si distribuiscono file WAR o EAR. Consulta [Applicazioni autonome](optionsForPushing.html#stand_alone_apps) per i dettagli.
+Una sottoserie di funzioni disponibili vengono abilitate per impostazione predefinita quando si distribuiscono file WAR o EAR. Consulta [Applicazioni autonome](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps) per i dettagli.
 
 Il runtime Liberty for Java rende inoltre disponibili alcune funzioni beta di Liberty. Queste funzioni sono elencate in [Utilizzo delle funzioni beta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
@@ -31,7 +32,8 @@ Il runtime Liberty for Java rende inoltre disponibili alcune funzioni beta di Li
 
 Alcune funzioni fornite da Liberty non sono disponibili nel runtime Liberty for Java perché non sono applicabili nell'ambiente cloud.
 
-Tieni presente che un server non può caricare funzioni non compatibili, assicurati che sia configurato per abilitare solo le funzioni che sono compatibili. Vedi [Supported Java EE 6 and 7 feature combinations] (https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html").
+Tieni presente che un server non può caricare funzioni non compatibili, assicurati che sia configurato per abilitare solo le funzioni che sono compatibili. Vedi [Supported Java EE 6 and 7 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html)
+e [Supported Java EE 7 and 8 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html).
 
 Le applicazioni che utilizzano EJB remoti possono essere distribuite a {{site.data.keyword.Bluemix_notm}} ma gli EJB remoti non sono accessibili in remoto con il protocollo CORBA/IIOP a causa di limitazioni delle porte nell'ambiente {{site.data.keyword.Bluemix_notm}}.
 
@@ -75,6 +77,7 @@ Passa alla sezione dell'elenco di funzioni utilizzando il seguente indice o puoi
 * apiDiscovery-1.0
 * appSecurity-1.0
 * appSecurity-2.0
+* appSecurity-3.0
 * appstate-1.0
 * appstate-2.0
 
@@ -84,6 +87,7 @@ Passa alla sezione dell'elenco di funzioni utilizzando il seguente indice o puoi
 * batch-1.0
 * batchManagement-1.0
 * beanValidation-1.1
+* beanValidation-2.0
 * bells-1.0
 * blueprint-1.0
 
@@ -92,6 +96,7 @@ Passa alla sezione dell'elenco di funzioni utilizzando il seguente indice o puoi
 
 * cdi-1.0
 * cdi-1.2
+* cdi-2.0
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
@@ -122,11 +127,13 @@ Passa alla sezione dell'elenco di funzioni utilizzando il seguente indice o puoi
 * jacc-1.5
 * jaspic-1.1
 * javaee-7.0
+* javaee-8.0
 * javaMail-1.5
+* javaMail-1.6
 * jaxb-2.2
 * jaxrs-1.1
 * jaxrs-2.0
-* jaxrsClient-2.0
+* jaxrs-2.1
 * jaxws-2.2
 * jca-1.6
 * jca-1.7
@@ -141,11 +148,15 @@ Passa alla sezione dell'elenco di funzioni utilizzando il seguente indice o puoi
 * jndi-1.0
 * jpa-2.0
 * jpa-2.1
+* jpa-2.2
 * jsf-2.0
 * jsf-2.2
+* jsf-2.3
 * jsfContainer-2.2
 * json-1.0
+* jsonb-1.0
 * jsonp-1.0
+* jsonp-1.1
 * jsp-2.2
 * jsp-2.3
 * jwt-1.0
@@ -166,13 +177,11 @@ Passa alla sezione dell'elenco di funzioni utilizzando il seguente indice o puoi
 * microProfile-1.0
 * microProfile-1.2
 * microProfile-1.3
+* microProfile-1.4
+* microProfile-2.0
+* microProfile-2.1
 * mongodb-2.0
 * monitor-1.0
-* mpConfig-1.1
-* mpFaultTolerance-1.0
-* mpHealth-1.0
-* mpJwt-1.0
-* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
@@ -206,6 +215,7 @@ Passa alla sezione dell'elenco di funzioni utilizzando il seguente indice o puoi
 * scim-1.0
 * servlet-3.0
 * servlet-3.1
+* servlet-4.0
 * sessionDatabase-1.0
 * sipServlet-1.1
 * socialLogin-1.0
@@ -227,6 +237,7 @@ Passa alla sezione dell'elenco di funzioni utilizzando il seguente indice o puoi
 * webCache-1.0
 * webProfile-6.0
 * webProfile-7.0
+* webProfile-8.0
 * websocket-1.0
 * websocket-1.1
 * wmqJmsClient-1.1

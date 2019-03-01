@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -36,37 +36,9 @@ Liberty para la aplicación:
 ```
 {: codeblock}
 
-## Añada un servicio New Relic
-{: #add_new_relic}
 
-Para una aplicación Java existente que se vaya a supervisar con New Relic en {{site.data.keyword.Bluemix_notm}}, siga los pasos siguientes.
-1. Cree una instancia de servicio de New Relic en {{site.data.keyword.Bluemix_notm}}.
-
-  ```
-  ibmcloud cf create-service newrelic standard mynewrelic
-  ```
-  {: codeblock}
-
-2. Despliegue la aplicación en {{site.data.keyword.Bluemix_notm}} con el servicio de New Relic.  Consulte el siguiente manifiesto de aplicación de ejemplo:
-
-  <pre>
-        &dash;&dash;&dash;
-        applications:
-        - name: myapp
-         memory: 1G
-         instances: 1
-         host: myapp
-         domain: mybluemix.net
-         path: myapp.war
-         services:
-         - mynewrelic
-  </pre>
-  {: codeblock}
-
-3. Acceda al panel de control de New Relic correspondiente a la aplicación directamente desde el panel de control de {{site.data.keyword.Bluemix_notm}} de la aplicación.
-
-### Añada un servicio New Relic proporcionado por el usuario
-{: #add_user_provided_new_relic}
+## Añada un servicio New Relic proporcionado por el usuario
+{: #add_user_provided_new_relic} 
 
 Si ya dispone de una clave de licencia y de una cuenta de New Relic, debe enlazar el servicio
 New Relic existente a la aplicación mediante un "servicio proporcionado por el usuario".

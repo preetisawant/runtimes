@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-13"
+  years: 2015, 2019
+lastupdated: "2019-01-07"
 
 ---
 
@@ -13,6 +13,18 @@ lastupdated: "2018-11-13"
 {: #latest_updates}
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build sdk-for-nodejs.
+
+## 23 gennaio 2019: pacchetto di build Node.js aggiornato v3.25.1
+
+Il pacchetto di build SDK for Node.js v3.25 fornisce le versioni IBM SDK for Node.js 4.8.5, 4.8.7 e le versioni della community Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 e 10.15.0. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.16.0.Le versioni 6.15.0, 8.14.0 e 10.14.0 che erano state incluse nell'ultimo pacchetto di buildk hanno avuto una regressione. Le regressioni sono state corrette in 6.16.0, 8.15.0 e 10.15.0 che sono invece incluse ora.
+
+## 7 gennaio 2019: pacchetto di build Node.js aggiornato v3.25
+
+Il pacchetto di build SDK for Node.js v3.25 fornisce le versioni IBM SDK for Node.js 4.8.5, 4.8.7 e le versioni della community Node.js 6.14.4, 6.15.0, 8.11.4, 8.14.0, 10.10.0 e 10.14.0. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.15.0.Il pacchetto di build corregge anche un bug minore nell'hook Dynatrace.
+
+## 5 dicembre 2018: pacchetto di build Node.js aggiornato v3.24
+
+Il pacchetto di build SDK for Node.js v3.24 fornisce le versioni IBM SDK for Node.js 4.8.5, 4.8.7 e le versioni della community Node.js 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0 e 10.10.0. Il valore predefinito è l'ultimo 6.x, quindi al momento è 6.14.4. Il pacchetto di build corregge anche un bug minore nell'hook Dynatrace.
 
 ## 7 settembre 2018: pacchetto di build Node.js aggiornato v3.22
 {:#fips-deprecation}

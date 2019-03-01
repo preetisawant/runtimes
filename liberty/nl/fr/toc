@@ -21,20 +21,21 @@ Liberty for Java
     customizingJRE.md
     using_own_jre.md
     installFeatures.md
+    usingMonthlyRuntime.md
     usingBetaFeatures.md
-    [Résiliation de services liés](runtimes/liberty/autoConfig.html#opting_out)
+    [Résiliation de services liés](/runtimes/liberty/liberty-auto_config#opting_out)
 
     {: .topicgroup}
     Surveiller Liberty dans IBM Cloud
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
-        [Initiation à la surveillance de la disponibilité](../../services/AvailabilityMonitoring/index.html)
+        [Initiation à la surveillance de la disponibilité](/AvailabilityMonitoring/AvailabilityMonitoring-avmon_gettingstarted)
 
     {: .topicgroup}
-    Travailler en mode hors ligne ou avec un proxy
+    Travailler hors ligne avec un proxy
         offlineMode.md
-        [Utilisation d'un proxy](runtimes/common/workingWithProxy.html)
+		/runtimes-common/runtimes-common-working_with_proxy
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -43,18 +44,17 @@ Liberty for Java
     libertyFeatures.md
     environmentVariables.md
 
-    {: .topicgroup}
-    Applications de démarrage et packs de construction
-        [Utilisation des applications de démarrage](runtimes/common/starter_app_usage.html)
-        [Utilisation de packs de construction de communauté](runtimes/common/byob.html)
-
+	{: .topicgroup}
+    Applications de démarrage et packs de construction de communauté
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     buildpackDefaults.md
-    ../common/app_mng.md
+    /runtimes-common/runtimes-common-app_management
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
-    [Initiation à IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html)
+    [Initiation à IBM Cloud Log Analysis](services/CloudLogAnalysis/index.html)
     updates.md
-    [Déclaration de support pour les packs de construction](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

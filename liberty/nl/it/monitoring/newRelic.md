@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -35,39 +35,9 @@ Vedi la configurazione di esempio generata dal pacchetto di build Liberty per l'
 ```
 {: codeblock}
 
-## Aggiungi un servizio New Relic
-{: #add_new_relic}
 
-Per fare in modo che un'applicazione Java esistente sia monitorata con New Relic in {{site.data.keyword.Bluemix_notm}}, attieniti alla seguente procedura.
-1. Crea un'istanza del servizio New Relic in {{site.data.keyword.Bluemix_notm}}.
-
-  ```
-  ibmcloud cf create-service newrelic standard mynewrelic
-  ```
-  {: codeblock}
-
-2. Distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} con il servizio New Relic.  Consulta il seguente manifest dell'applicazione
-di esempio:
-
-  <pre>
-        &dash;&dash;&dash;
-        applications:
-        - name: myapp
-         memory: 1G
-         instances: 1
-         host: myapp
-         domain: mybluemix.net
-         path: myapp.war
-         services:
-         - mynewrelic
-  </pre>
-  {: codeblock}
-
-3. Accedi al dashboard New Relic dalla tua applicazione direttamente dal dashboard {{site.data.keyword.Bluemix_notm}}
-della tua applicazione.
-
-### Aggiungi un servizio New Relic fornito dall'utente
-{: #add_user_provided_new_relic}
+## Aggiungi un servizio New Relic fornito dall'utente
+{: #add_user_provided_new_relic} 
 
 Se hai un account e una chiave di licenza New Relic esistenti, puoi eseguire il bind del servizio New Relic esistente alla tua applicazione utilizzando un "servizio fornito dall'utente".
 

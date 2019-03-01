@@ -14,7 +14,7 @@ ASP.NET Core
     usingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    [Cómo trabajar con un proxy](runtimes/common/workingWithProxy.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -23,14 +23,14 @@ ASP.NET Core
 
 
     {: .topicgroup}
-    Aplicaciones de inicio y compilaciones de la comunidad
-        [Utilización de las apps de inicio](runtimes/common/starter_app_usage.html)
-        [Utilización de compilación de la comunidad](runtimes/common/byob.html)
+    Aplicaciones de inicio y buildpacks de la comunidad
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    [Declaración de soporte de paquete de compilación](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

@@ -19,7 +19,7 @@ Un service géré par application est un service entièrement géré par l'appli
 
 Un service géré par conteneur est un service qui est géré par l'exécution Liberty. Dans certains cas, l'application peut rechercher le service lié dans JNDI, alors que dans d'autres cas, le service est utilisé directement par Liberty lui-même. Le pack de construction Liberty lit VCAP_SERVICES afin d'obtenir des informations sur les services liés. Pour chaque service géré par conteneur, le pack de construction effectue trois opérations :
 
-* Il génère des [variables cloud](optionsForPushing.html#accessing_info_of_bound_services) pour le service lié.
+* Il génère des [variables cloud](/docs/runtimes/liberty/optionsForPushing.html#accessing_info_of_bound_services) pour le service lié.
 * Il installe les fonctions Liberty et les codes d'accès client requis pour permettre l'accès au service lié.
 * Il génère ou met à jour les sections du fichier `server.xml` qui sont requises par le service.
 
@@ -37,7 +37,7 @@ Le pack de construction Liberty se charge de la configuration automatique des ty
 * [ElephantSQL](/docs/services/ElephantSQL/index.html)
 * [{{site.data.keyword.ssoshort}}](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Les services Compose peuvent être gérés par le conteneur ou gérés par l'application. Par défaut, le pack de construction Liberty suppose que ces services sont gérés par le conteneur et les configure automatiquement. Si vous souhaitez que le service soit géré par l'application, vous pouvez résilier sa configuration automatique par Liberty en configurant la variable d'environnement `services_autoconfig_excludes`. Pour plus d'informations, voir [Résiliation de la configuration automatique des services](autoConfig.html#opting_out).
+Les services Compose peuvent être gérés par le conteneur ou gérés par l'application. Par défaut, le pack de construction Liberty suppose que ces services sont gérés par le conteneur et les configure automatiquement. Si vous souhaitez que le service soit géré par l'application, vous pouvez résilier sa configuration automatique par Liberty en configurant la variable d'environnement `services_autoconfig_excludes`. Pour plus d'informations, voir [Résiliation de la configuration automatique des services](/docs/runtimes/liberty/autoConfig.html#opting_out).
 
 ## Installation des fonctions Liberty et du code d'accès client
 {: #installation_of_liberty_features}
@@ -51,7 +51,7 @@ Voir la section [Résiliation de la configuration automatique des services](#opt
 
 Lorsque vous envoyer une application autonome par commande push, en fonction de la manière dont elle est liée aux services et selon que vous avez ou non un fichier `server.xml` existant, le pack de construction Liberty peut générer automatiquement les sections de configuration ou mettre à jour des sections existantes.
 
-Lorsque vous envoyez une application autonome par commande push, le pack de construction Liberty génère, pour le fichier `server.xml`, la section de configuration appropriée, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](optionsForPushing.html#options_for_pushing), sur {{site.data.keyword.Bluemix_notm}}.
+Lorsque vous envoyez une application autonome par commande push, le pack de construction Liberty génère, pour le fichier `server.xml`, la section de configuration appropriée, comme décrit dans la rubrique [Options pour l'envoi par commande push d'applications Liberty](/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing), sur {{site.data.keyword.Bluemix_notm}}.
 
 Lorsque vous envoyez une application autonome par commande push et que vous la liez à des services gérés par conteneur, le pack de construction Liberty génère les sections `server.xml` requises pour les services liés.
 

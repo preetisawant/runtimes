@@ -37,7 +37,7 @@ Ao implementar
 um aplicativo, o uso de memória do processo inteiro é monitorado. Se o uso de memória exceder o limite de memória
 que você especificou quando o aplicativo foi implementado, o kernel irá parar o processo. Esta ação acontece sem aviso e pode ser manifestada de várias maneiras.
 
- Se o Limite de memória for excedido durante a implementação do aplicativo, você receberá uma mensagem de que uma falha ocorreu e poderá ver qualquer uma destas a seguir.
+ Se o Limite de memória for excedido durante a implementação do aplicativo, você receberá uma mensagem de que ocorreu uma falha e poderá ver qualquer um dos seguintes.
 
   * Talvez
 veja que o aplicativo está oscilando.
@@ -82,4 +82,4 @@ use o comando a seguir e, em seguida, remonte seu app.
 ```
 {: codeblock}
 
-* Especifique o argumento -Xmx no arquivo jvm.options se seu aplicativo for um [diretório do servidor](optionsForPushing.html#server_directory) ou um [servidor em pacote](optionsForPushing.html#packaged_server). Para obter mais informações sobre o uso do arquivo `jvm.options` com o tempo de execução do Liberty, veja [Configurando uma JVM genérica](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  
+* Especifique o argumento -Xmx no arquivo jvm.options se seu aplicativo for um [diretório do servidor](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou um [servidor em pacote](/docs/runtimes/liberty/optionsForPushing.html#packaged_server). Para obter mais informações sobre o uso do arquivo `jvm.options` com o tempo de execução do Liberty, veja [Configurando uma JVM genérica](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  

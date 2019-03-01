@@ -19,7 +19,7 @@ Ein anwendungsverwalteter Service ist ein Service, der ohne Unterstützung von L
 
 Ein containerverwalteter Service ist ein Service, der von der Liberty-Laufzeit verwaltet wird. In manchen Fällen kann es vorkommen, dass die Anwendung den gebundenen Service in JNDI sucht, während der Service in anderen Fällen direkt von Liberty selbst genutzt wird. Das Liberty-Buildpack liest VCAP_SERVICES, um Informationen zu den gebundenen Services zu erhalten. Für jeden containerverwalteten Service führt das Buildpack drei Funktionen aus.
 
-* Generieren von [Cloudvariablen](optionsForPushing.html#accessing_info_of_bound_services) für den gebundenen Service.
+* Generieren von [Cloudvariablen](/docs/runtimes/liberty/optionsForPushing.html#accessing_info_of_bound_services) für den gebundenen Service.
 * Installieren der Liberty-Features und Clientzugriffscodes, die für den Zugriff auf den gebundenen Service erforderlich sind.
 * Generieren oder Aktualisieren der Zeilengruppen der Datei `server.xml`, die für den Service erforderlich sind.
 
@@ -37,7 +37,7 @@ Das Liberty-Buildpack bietet automatische Konfiguration für die folgenden Servi
 * [ElephantSQL](/docs/services/ElephantSQL/index.html)
 * [{{site.data.keyword.ssoshort}}](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Die Compose-Services können entweder containerverwaltet oder anwendungsverwaltet sein. Das Liberty-Buildpack geht standardmäßig davon aus, dass diese Services containerverwaltet sind, und konfiguriert sie automatisch. Wenn die Anwendung den Service verwalten soll, können Sie die automatische Konfiguration für den Service ausschließen (Opt-out), indem Sie die Umgebungsvariable `services_autoconfig_excludes` definieren. Weitere Informationen finden Sie in [Automatische Konfiguration von Services ausschließen](autoConfig.html#opting_out).
+Die Compose-Services können entweder containerverwaltet oder anwendungsverwaltet sein. Das Liberty-Buildpack geht standardmäßig davon aus, dass diese Services containerverwaltet sind, und konfiguriert sie automatisch. Wenn die Anwendung den Service verwalten soll, können Sie die automatische Konfiguration für den Service ausschließen (Opt-out), indem Sie die Umgebungsvariable `services_autoconfig_excludes` definieren. Weitere Informationen finden Sie in [Automatische Konfiguration von Services ausschließen](/docs/runtimes/liberty/autoConfig.html#opting_out).
 
 ## Installation von Liberty-Features und Clientzugriffscode
 {: #installation_of_liberty_features}
@@ -51,7 +51,7 @@ Weitere Informationen zu den gebundenen Servicetypen finden Sie in [Automatische
 
 Das Liberty-Buildpack kann Konfigurationszeilengruppen in Ihrer Datei `server.xml` automatisch generieren oder aktualisieren, wenn Sie eine Push-Operation für eine eigenständige Anwendung durchführen. Dieses Verhalten ist davon abhängig, wie Ihre Anwendung an Services gebunden ist und ob eine Datei `server.xml` vorhanden ist.
 
-Wenn Sie eine Push-Operation für eine eigenständige Anwendung durchführen, generiert das Liberty-Buildpack die Konfigurationszeilengruppe in der Datei `server.xml` gemäß der Beschreibung in [Optionen zur Durchführung von Push-Operationen für Liberty-Anwendungen](optionsForPushing.html#options_for_pushing) zur Übertragung in {{site.data.keyword.Bluemix_notm}}.
+Wenn Sie eine Push-Operation für eine eigenständige Anwendung durchführen, generiert das Liberty-Buildpack die Konfigurationszeilengruppe in der Datei `server.xml` gemäß der Beschreibung in [Optionen zur Durchführung von Push-Operationen für Liberty-Anwendungen](/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) zur Übertragung in {{site.data.keyword.Bluemix_notm}}.
 
 Wenn Sie eine eigenständige Anwendung mit einer Push-Operation übertragen und an containerverwaltete Services binden, generiert das Liberty-Buildpack die erforderlichen Zeilengruppen der Datei `server.xml` für die gebundenen Services.
 

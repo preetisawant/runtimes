@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -23,14 +23,14 @@ Para obtener información sobre cómo utilizar los hooks previos al tiempo de ej
 
 1. En el directorio `.profile.d`, cree un archivo de script que ejecute el mandato `installUtility` tal como se muestra en el ejemplo siguiente.
 
-   Este ejemplo instala la característica `javaee-8.0`.
+   Este ejemplo instala la característica `audit-1.0`.
 
    ```
    #!/bin/sh
-   echo "Installing javaee-8.0"
+   echo "Instalando audit-1.0"
    export PATH=$PATH:$HOME/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
+   $HOME/.liberty/bin/installUtility install audit-1.0 --acceptLicense
    ```
    {: codeblock}
 
@@ -56,7 +56,7 @@ Para obtener información sobre cómo utilizar los hooks previos al tiempo de ej
     Si la característica se ha instalado, la salida muestra los siguientes mensajes:
 
     ```
-    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Instalando javaee-8.0
+    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Instalando audit-1.0
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Estableciendo una conexión con los repositorios configurados...
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Este proceso podría tardar varios minutos en completarse.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Se ha conectado correctamente con todos los repositorios configurados.

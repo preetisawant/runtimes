@@ -19,13 +19,13 @@ lastupdated: "2018-10-04"
 ## 検出
 {: #detection}
 Liberty ビルドパックは、以下のような種類のアプリケーションがデプロイされた場合に使用されます。
-* [WAR ファイル](optionsForPushing.html#stand_alone_apps)
-* [EAR ファイル](optionsForPushing.html#stand_alone_apps)
-* [Liberty サーバー・ディレクトリー](optionsForPushing.html#server_directory)
-* [パッケージされた Liberty サーバー](optionsForPushing.html#packaged_server)
+* [WAR ファイル](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [EAR ファイル](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [Liberty サーバー・ディレクトリー](/docs/runtimes/liberty/optionsForPushing.html#server_directory)
+* [パッケージされた Liberty サーバー](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)
 * Java メイン
 * [Distzip](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/container-distZip.md)
 
 ## スターター・アプリケーション
 {: #starter_application}
-{{site.data.keyword.Bluemix_notm}} には、いくつかの Liberty スターター・アプリケーションが用意されています。  Liberty スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルな Liberty アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../common/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、いくつかの Liberty スターター・アプリケーションが用意されています。  Liberty スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルな Liberty アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/runtimes-common/starter_app_usage.html)を参照してください。

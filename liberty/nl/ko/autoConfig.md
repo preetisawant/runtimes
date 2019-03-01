@@ -19,7 +19,7 @@ lastupdated: "2018-11-20"
 
 컨테이너 관리 서비스는 Liberty 런타임에 의해 관리되는 서비스입니다. 경우에 따라 애플리케이션이 JNDI에서 바인드된 서비스를 찾을 때도 있고, 서비스가 Liberty 자체에 바로 사용되는 때도 있습니다. Liberty 빌드팩은 VCAP_SERVICES를 읽어 바인드된 서비스에 대한 정보를 가져옵니다. 각 컨테이너 관리 서비스에 대해 빌드팩은 다음 세 가지 기능을 수행합니다.
 
-* 바인딩된 서비스의 [클라우드 변수](optionsForPushing.html#accessing_info_of_bound_services)를 생성합니다.
+* 바인딩된 서비스의 [클라우드 변수](/docs/runtimes/liberty/optionsForPushing.html#accessing_info_of_bound_services)를 생성합니다.
 * 바인드된 서비스에 액세스하는 데 필요한 클라이언트 액세스 코드 및 Liberty 기능을 설치합니다.
 * 서비스에 필요한 `server.xml` 파일 스탠자를 생성하거나 업데이트합니다.
 
@@ -37,9 +37,7 @@ Liberty 빌드팩은 다음 서비스 유형에 대해 자동 구성을 제공�
 * [ElephantSQL](/docs/services/ElephantSQL/index.html)
 * [{{site.data.keyword.ssoshort}}](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Compose 서비스는 컨테이너 관리형 또는 애플리케이션 관리형 중 하나일 수 있습니다. 기본적으로, Liberty 빌드팩은 이러한 서비스가 컨테이너 관리형이라고 가정하며 이를 자동으로 구성합니다. 애플리케이션이 서비스를 관리하게
-하려면 `services_autoconfig_excludes` 환경 변수를 설정하여
-서비스에 대한 자동 구성을 사용하지 않습니다. 자세한 정보는 [서비스 자동 구성 사용하지 않음](autoConfig.html#opting_out)을 참조하십시오.
+Compose 서비스는 컨테이너 관리형 또는 애플리케이션 관리형 중 하나일 수 있습니다. 기본적으로, Liberty 빌드팩은 이러한 서비스가 컨테이너 관리형이라고 가정하며 이를 자동으로 구성합니다. 애플리케이션이 서비스를 관리하게 하려면 `services_autoconfig_excludes` 환경 변수를 설정하여 서비스에 대한 자동 구성을 사용하지 않습니다. 자세한 정보는 [서비스 자동 구성 사용하지 않음](/docs/runtimes/liberty/autoConfig.html#opting_out)을 참조하십시오.
 
 ## Liberty 기능 및 클라이언트 액세스 코드 설치
 {: #installation_of_liberty_features}
@@ -53,7 +51,7 @@ Compose 서비스는 컨테이너 관리형 또는 애플리케이션 관리형 
 
 Liberty 빌드팩은 애플리케이션이 서비스에 바인드된 방법과 사용자에게 기존 `server.xml` 파일이 있는지 여부에 따라 사용자가 독립형 애플리케이션을 푸시할 때 `server.xml` 파일의 구성 스탠자를 자동으로 생성하거나 업데이트할 수 있습니다.
 
-독립형 애플리케이션을 푸시하는 경우, Liberty 빌드팩은 [Liberty 애플리케이션 푸시를 위한 옵션](optionsForPushing.html#options_for_pushing)에 설명된 대로 `server.xml` 구성 스탠자를 {{site.data.keyword.Bluemix_notm}}에 생성합니다.
+독립형 애플리케이션을 푸시하는 경우, Liberty 빌드팩은 [Liberty 애플리케이션 푸시를 위한 옵션](/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)에 설명된 대로 `server.xml` 구성 스탠자를 {{site.data.keyword.Bluemix_notm}}에 생성합니다.
 
 독립형 애플리케이션을 푸시하고 컨테이너 관리 서비스에 바인드하면 Liberty 빌드팩에서 바인드된 서비스에 필요한 `server.xml` 스탠자를 생성합니다.
 
@@ -79,7 +77,7 @@ Liberty 빌드팩을 통해 바인드된 서비스를 자동으로 구성하지 
 * 문자열에는 하나 이상의 서비스에 대한 옵트 아웃 명세가 포함될 수 있습니다.
 * 특정 서비스의 옵트 아웃 명세는 service_type=option입니다. 여기서,
   * service_type은 VCAP_SERVICES에 표시된 서비스의 레이블입니다.
-  * 옵션은 `all` 또는 `config`입니다. 
+  * 옵션은 `all` 또는 `config`입니다.
 * 문자열에 두 개 이상 서비스에 대한 옵트 아웃 명세가 포함되어 있는 경우, 공백 문자 하나를 사용해 개별 옵트 아웃 명세를 구분해야 합니다.
 
 `services_autoconfig_excludes` 문자열 문법의 다음 예를 참조하십시오.

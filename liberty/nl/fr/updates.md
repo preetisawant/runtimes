@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-02"
+  years: 2015, 2019
+lastupdated: "2019-01-01"
 
 ---
 
@@ -14,6 +14,23 @@ lastupdated: "2018-11-02"
 
 ## Liste des dernières mises à jour apportées au pack de construction Liberty.
 
+### 1er février 2019 : Mise à jour du pack de construction Liberty v3.28-20190127-1723
+
+* La version GA d'exécution Liberty par défaut est l'édition 18.0.0.4.
+* La version GA d'exécution Liberty de remplacement 19.0.0.1 a été ajoutée.  
+* L'édition bêta Liberty mensuelle a été retirée.  
+* La version de l'IBM JRE est passée au niveau 8 SR5 FP7.
+* Le client MQ a été mis à jour vers l'édition 9.1.0.0.
+* L'agent de mise à l'échelle automatique a été mis à jour.
+
+
+### 14 décembre 2018 : Mise à jour du pack de construction Liberty v3.27-20181130-1702.
+
+* Le pack de construction inclut désormais Java Platform, Enterprise Edition 8.0. Il n'est plus nécessaire d'installer Java EE 8 lorsqu'une application est envoyée par commande push.  
+* La version d'exécution par défaut de Liberty a été mise à jour vers l'édition 18.0.0.4.
+* La version d'exécution Liberty mensuelle a été mise à jour vers l'édition 2018.11.0.0.
+* La version d'IBM JRE a été mise à jour vers 8 SR5 FP26.
+
 ### 29 octobre 2018 : Mise à jour du pack de construction Liberty v3.26-20181023-1545
 
 * La version d'exécution par défaut de Liberty, `18.0.0.3`, a été mise à jour afin d'inclure un correctif pour la [vulnérabilité en matière de sécurité CVE-2014-7810 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055).
@@ -23,7 +40,7 @@ lastupdated: "2018-11-02"
 ### 21 septembre 2018 : Mise à jour du pack de construction Liberty v3.25-20180918-1034
 * Le pack de construction prend désormais en charge Java Platform, Enterprise Edition 8.0. Pour utiliser Java EE 8, installez la fonction Liberty `javaee-8.0` lorsque vous envoyez votre application par commande push. En savoir plus : [Installation de fonctions Liberty](installFeatures.html).
 * La version d'exécution par défaut de Liberty a été mise à jour vers l'édition 18.0.0.3.
-* La version d'exécution mensuelle de Liberty a été mise à jour vers l'édition [2018.8.0.1 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/). 
+* La version d'exécution mensuelle de Liberty a été mise à jour vers l'édition [2018.8.0.1 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/).
 * La version JRE d'IBM JRE a été mise à jour vers 8 SR5 FP20.
 
 ### 10 août 2018 : Mise à jour du pack de construction v3.24-20180806-1313
@@ -117,8 +134,8 @@ lastupdated: "2018-11-02"
 * La version par défaut de l'exécution Liberty inclut également le correctif temporaire (iFix) PI75512 pour la fonctionnalité WebSockets.
 * La version mensuelle de l'exécution Liberty est passée à l'édition [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/).
 * Les versions 8 et 7.1 de l'IBM JRE sont passées au niveau SR4 FP1.
-* Le support de configuration automatique a été étendu pour fonctionner avec [ibm-websphere-extreme-scale (IBM Container)](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
-* Le support de configuration automatique pour [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) a été mis à jour pour permettre l'utilisation de la bibliothèque Cloudant pour Java à la place de org.ektorp. Pour activer l'utilisation de cette bibliothèque, vous devez configurer la variable d'environnement suivante :    
+* Le support de configuration automatique a été étendu pour fonctionner avec [ibm-websphere-extreme-scale (IBM Container)](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
+* Le support de configuration automatique pour [Cloudant NoSQL Database](/docs/services/Cloudant/index.html) a été mis à jour pour permettre l'utilisation de la bibliothèque Cloudant pour Java à la place de org.ektorp. Pour activer l'utilisation de cette bibliothèque, vous devez configurer la variable d'environnement suivante :    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -129,12 +146,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 23 janvier 2017 : Mise à jour du pack de construction Liberty v3.7-20170118-2046
 * La version mensuelle de l'exécution Liberty est passée à l'édition [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/).
 * L'IBM JRE version 8 est passé au niveau SR3 FP22.
-* Le support de [configuration automatique](autoConfig.html) a également été étendu pour fonctionner avec le [service Compose for MongoDB](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (actuellement seulement disponible avec l'exécution Liberty mensuelle).
+* Le support de [configuration automatique](autoConfig.html) a également été étendu pour fonctionner avec le [service Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (actuellement seulement disponible avec l'exécution Liberty mensuelle).
 
 ### 13 décembre 2016 : Mise à jour du pack de construction Liberty v3.6-20161209-1351
 * La version par défaut de l'exécution Liberty est passée à l'édition[16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661).
 * L'IBM JRE version 8 est passé au niveau SR3 FP21.
-* Le support de [configuration automatique](autoConfig.html) a également été étendu pour fonctionner avec le [service Compose for PostgreSQL](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html).
+* Le support de [configuration automatique](autoConfig.html) a également été étendu pour fonctionner avec le [service Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html).
 * Le pack de construction fournit aussi une version mise à jour de l'agent pour le [service de mise à l'échelle automatique](/docs/services/Auto-Scaling/index.html).
 * Le pack de construction a été mis à jour pour fonctionner avec les fichiers de variables d'environnement inclus dans le fichier `server.xml` (via une entrée spécifique 'include location').
 
@@ -146,7 +163,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * L'intégration du service Monitoring and Analytics a été corrigée pour fonctionner avec [Diego ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html).
 * Les intégrations de service [Dynatrace](dynatrace.html) ont été mises à jour de manière à améliorer leur fonctionnement avec les offres de service Dynatrace.
 * Le support de [configuration automatique](autoConfig.html) pour les types de services PostgreSQL et MySQL a été amélioré de manière à mieux fonctionner lors du déploiement d'un répertoire de serveur ou d'un serveur en package.
-* L'exécution Node.js avec laquelle fonctionnent les [utilitaires devconsole et shell d'App Management](../common/app_mng.html#app_management) est passée à la dernière version, `0.12.17`.
+* L'exécution Node.js avec laquelle fonctionnent les [utilitaires devconsole et shell d'App Management](docs/runtimes-common/app_mng.html#app_management) est passée à la dernière version, `0.12.17`.
 * Les [correctifs de sécurité](http://www.ibm.com/support/docview.wss?uid=swg21994945) de l'environnement d'exécution Liberty sont inclus.
 
 ### 1 novembre 2016 : Mise à jour du pack de construction Liberty v3.4.1-20161030-2241
@@ -211,7 +228,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * Le pack de construction contient une version mise à jour de WebSphere Liberty qui repose sur la [version bêta de février](https://developer.ibm.com/wasdev/blog/2016/02/12/beta-websphere-liberty-and-tools-february/). La version mise à jour du profil Liberty met à disposition la fonction GA apiDiscovery-1.0 dans {{site.data.keyword.Bluemix_notm}}.
 
 ### 4 février 2016 : Mise à jour du pack de construction Liberty v2.4-20160127-1437
-* Le pack de construction contient une version mise à jour de WebSphere Liberty qui repose sur la version bêta de janvier. Avec cette mise à jour, la fonction Liberty scim-1.0, auparavant disponible en tant que fonction bêta, est désormais disponible en tant que fonction prêtes pour la production. La version mise à jour de Liberty met également à disposition la fonction bêta passwordUtilities-1.0 dans {{site.data.keyword.Bluemix_notm}}.
+* Le pack de construction contient une version mise à jour de WebSphere Liberty qui repose sur la version bêta de janvier. Avec cette mise à jour, la fonction Liberty scim-1.0, auparavant disponible en tant que fonction bêta, est désormais disponible en tant que fonction prête pour la production. La version mise à jour de Liberty met également à disposition la fonction bêta passwordUtilities-1.0 dans {{site.data.keyword.Bluemix_notm}}.
 * Le pack de construction contient également les environnements d'exécution Java IBM JRE 7.1 SF3 FP20 et IBM JRE 8 SR2 FP10 mis à jour.
 * Le pack de construction a été mis à jour pour télécharger le dernier niveau du [pilote JDBC MariaDB Connector/J![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/) 1.x lors de l'exécution de la [configuration automatique du type de service MySQL](autoConfig.html).
 

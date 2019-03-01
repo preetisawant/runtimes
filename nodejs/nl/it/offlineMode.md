@@ -30,7 +30,7 @@ negli ambienti [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/in
 * https://iojs.org è utilizzato per richiamare la vecchia versione del nodo che non era contenuta nel pacchetto di build o non era disponibile all'indirizzo  https://semver.herokuapp.com.
 * https://registry.npmjs.org è utilizzato per richiamare i moduli del nodo come express.
 
-Per ridurre la serie di siti consentiti, configura le tue applicazioni in modo da utilizzare una versione del motore Node inclusa nel pacchetto di build SDK for Node.js.  Consulta gli [ultimi aggiornamenti](./updates.html) per la serie delle versioni del motore Node incluse nel pacchetto di build.  Se configuri la tua applicazione per utilizzare queste versioni del motore Node, è necessario solo il sito https://registry.npmjs.org per scaricare i moduli.
+Per ridurre la serie di siti consentiti, configura le tue applicazioni in modo da utilizzare una versione del motore Node inclusa nel pacchetto di build SDK for Node.js.  Consulta gli [ultimi aggiornamenti](/docs/runtimes/nodejs/updates.html) per la serie delle versioni del motore Node incluse nel pacchetto di build.  Se configuri la tua applicazione per utilizzare queste versioni del motore Node, è necessario solo il sito https://registry.npmjs.org per scaricare i moduli.
 
 Fai attenzione che quando vengono installate le nuove versioni del pacchetto di build SDK for Node.js la serie di versioni del motore viene spesso modificata con le versioni più recenti.  Potrebbe essere necessario riconfigurare la tua applicazione per specificare una versione del motore Node più recente inclusa nel pacchetto di build.
 
@@ -61,9 +61,9 @@ npm shrinkwrap
 Questo può modificare il tuo `package.json` e aggiungere `npm-shrinkwrap.json` nella tua directory root.
 Ogni volta che effettui una modifica alle dipendenze nel file `package.json`, riesegui i comandi `npm dedupe` e `shrinkwrap`.
 
-## Gestione di un proxy
+## Utilizzo di un proxy
 {: #working_with_proxy}
 
 In alcuni ambienti come [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), può essere configurato un proxy. Consulta
-[Gestione di un proxy](/docs/manageapps/workingWithProxy.html) per ulteriori dettagli.
+[Gestione di un proxy](/docs/runtimes-common/workingWithProxy.html) per ulteriori dettagli.

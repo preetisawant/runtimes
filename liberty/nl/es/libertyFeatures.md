@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-21"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -12,17 +12,18 @@ lastupdated: "2018-09-21"
 # Características de Liberty que reciben soporte en {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-El tiempo de ejecución de Liberty for Java incluye un subconjunto de características de Liberty. Para utilizar una característica que no está incluida en el tiempo de ejecución, consulte [Instalar características de Liberty](installFeatures.html). Para ver una lista completa de las características disponibles en Liberty, junto con las versiones de Java EE y otra información, consulte [Características de Liberty ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") ](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
+El tiempo de ejecución de Liberty for Java incluye un subconjunto de características de Liberty. Para utilizar una característica que no está incluida en el tiempo de ejecución, consulte [Instalar características de Liberty](/docs/runtimes/liberty/installFeatures.html). Para ver una lista completa de las características disponibles en Liberty, junto con las versiones de Java EE y otra información, consulte [Características de Liberty ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
 
 ## Características específicas de la nube
 {:#cloud-features}
 
 Se incluyen las siguientes características que son específicas de {{site.data.keyword.Bluemix_notm}}:
+* appstate-1.0
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-Un subconjunto de características disponibles está habilitado de forma predeterminada al desplegar archivos WAR o EAR. Consulte [Apps autónomas](optionsForPushing.html#stand_alone_apps) para obtener más detalles.
+Un subconjunto de características disponibles está habilitado de forma predeterminada al desplegar archivos WAR o EAR. Consulte [Apps autónomas](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps) para obtener más detalles.
 
 El tiempo de ejecución de Liberty for Java también hace que algunas características beta de Liberty estén disponibles. Estas características se muestran en el apartado [Utilización de las características beta](/docs/runtimes/liberty/usingBetaFeatures.html).
 
@@ -31,7 +32,8 @@ El tiempo de ejecución de Liberty for Java también hace que algunas caracterí
 
 Algunas características que proporciona Liberty no están disponibles en el tiempo de ejecución de Liberty for Java porque no son aplicables en el entorno de nube.
 
-Tenga en cuenta que un servidor no puede cargar características incompatibles, por lo que debe asegurarse de que se configura para habilitar únicamente características que son compatibles. Consulte [Combinaciones admitidas de características de Java EE 6 y 7](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html").
+Tenga en cuenta que un servidor no puede cargar características incompatibles, por lo que debe asegurarse de que se configura para habilitar únicamente características que son compatibles. Consulte [Combinaciones de características de Java EE 6 y 7 soportadas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html)
+and [Combinaciones de características de Java EE 7 y 8 soportadas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html).
 
 Las aplicaciones que utilizan los EJB remotos se pueden desplegar en {{site.data.keyword.Bluemix_notm}}, pero
 los EJB remotos no están accesibles con el protocolo CORBA/IIOP
@@ -77,6 +79,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 * apiDiscovery-1.0
 * appSecurity-1.0
 * appSecurity-2.0
+* appSecurity-3.0
 * appstate-1.0
 * appstate-2.0
 
@@ -86,6 +89,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 * batch-1.0
 * batchManagement-1.0
 * beanValidation-1.1
+* beanValidation-2.0
 * bells-1.0
 * blueprint-1.0
 
@@ -94,6 +98,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 
 * cdi-1.0
 * cdi-1.2
+* cdi-2.0
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
@@ -124,11 +129,13 @@ Salte a la sección de la lista de características mediante el índice siguient
 * jacc-1.5
 * jaspic-1.1
 * javaee-7.0
+* javaee-8.0
 * javaMail-1.5
+* javaMail-1.6
 * jaxb-2.2
 * jaxrs-1.1
 * jaxrs-2.0
-* jaxrsClient-2.0
+* jaxrs-2.1
 * jaxws-2.2
 * jca-1.6
 * jca-1.7
@@ -143,11 +150,15 @@ Salte a la sección de la lista de características mediante el índice siguient
 * jndi-1.0
 * jpa-2.0
 * jpa-2.1
+* jpa-2.2
 * jsf-2.0
 * jsf-2.2
+* jsf-2.3
 * jsfContainer-2.2
 * json-1.0
+* jsonb-1.0
 * jsonp-1.0
+* jsonp-1.1
 * jsp-2.2
 * jsp-2.3
 * jwt-1.0
@@ -168,13 +179,11 @@ Salte a la sección de la lista de características mediante el índice siguient
 * microProfile-1.0
 * microProfile-1.2
 * microProfile-1.3
+* microProfile-1.4
+* microProfile-2.0
+* microProfile-2.1
 * mongodb-2.0
 * monitor-1.0
-* mpConfig-1.1
-* mpFaultTolerance-1.0
-* mpHealth-1.0
-* mpJwt-1.0
-* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
@@ -208,6 +217,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 * scim-1.0
 * servlet-3.0
 * servlet-3.1
+* servlet-4.0
 * sessionDatabase-1.0
 * sipServlet-1.1
 * socialLogin-1.0
@@ -229,6 +239,7 @@ Salte a la sección de la lista de características mediante el índice siguient
 * webCache-1.0
 * webProfile-6.0
 * webProfile-7.0
+* webProfile-8.0
 * websocket-1.0
 * websocket-1.1
 * wmqJmsClient-1.1

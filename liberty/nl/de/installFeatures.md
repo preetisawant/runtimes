@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -23,14 +23,14 @@ Informationen zur Verwendung von Vor-Laufzeit-Hooks finden Sie in der Cloud Foun
 
 1. Erstellen Sie im Verzeichnis `.profile.d` eine Scriptdatei, die den Befehl `installUtility` ausführt, wie im folgenden Beispiel gezeigt.
 
-   In diesem Beispiel wird das Feature `javaee-8.0` installiert.
+   In diesem Beispiel wird das Feature `audit-1.0` installiert.
 
    ```
    #!/bin/sh
-   echo "Installing javaee-8.0"
+   echo "Installing audit-1.0"
    export PATH=$PATH:$HOME/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
+   $HOME/.liberty/bin/installUtility install audit-1.0 --acceptLicense
    ```
    {: codeblock}
 
@@ -56,7 +56,7 @@ Informationen zur Verwendung von Vor-Laufzeit-Hooks finden Sie in der Cloud Foun
     Wurde das Feature installiert, werden in der Ausgabe die folgenden Nachrichten angezeigt:
 
     ```
-    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing javaee-8.0
+    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing audit-1.0
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Establishing a connection to the configured repositories ...
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT This process might take several minutes to complete.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Successfully connected to all configured repositories.

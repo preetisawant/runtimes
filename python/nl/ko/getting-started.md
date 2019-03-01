@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -30,7 +30,7 @@ Python 시작하기 튜토리얼에 따라 개발 환경을 설정하고, 앱을
 
 다음이 필요합니다.
 * [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}
 * [Python ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.python.org/downloads/){: new_window}
 
@@ -113,7 +113,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  연합 사용자 ID가 있는 경우 대신 다음 명령을 사용하여 싱글 사인온 ID로 로그인하십시오. 자세한 정보는 [연합 ID로 로그인](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)을 참조하십시오.
+  연합 사용자 ID가 있는 경우 대신 다음 명령을 사용하여 싱글 사인온 ID로 로그인하십시오. 자세한 정보는 [연합 ID로 로그인](/docs/cli/login_federated_id.html)을 참조하십시오.
 
   ```
 ibmcloud login --sso
@@ -127,7 +127,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](https://console.bluemix.net/docs/account/orgs_spaces.html)를 참조하십시오.
+  조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](/docs/account/orgs_spaces.html)를 참조하십시오.
   {: tip}
 
 1. *get-started-python* 디렉토리에서 {{site.data.keyword.Bluemix_notm}}에 앱 푸시
@@ -146,6 +146,8 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
+{{site.data.keyword.Bluemix_notm}} [리소스 목록](https://cloud.ibm.com/resources)으로 이동하여 앱을 볼 수도 있습니다. 
+
 ## 5단계: 데이터베이스 추가
 {: #add_database}
 
@@ -153,9 +155,9 @@ ibmcloud cf apps
 
 1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하고 대시보드로 이동하십시오. **리소스 작성**을 선택하십시오.
 1. **{{site.data.keyword.cloudant_short_notm}}**를 검색한 후 서비스를 선택하십시오.
-1. **사용 가능한 인증 방법**의 경우 **레거시 인증 정보 및 IAM 모두 사용**을 선택하십시오. 다른 필드에서는 기본 설정을 유지할 수 있습니다. **작성**을 클릭하여 서비스를 작성하십시오. 
-1. 탐색에서 **연결**로 이동하십시오. 애플리케이션을 선택한 후 **연결 작성**을 클릭하십시오.
-1. 기본값을 사용하여 애플리케이션에 연결한 후 **연결 & 앱 다시 스테이징**을 클릭하십시오. 그런 다음 프롬프트가 표시되면 **다시 스테이징**을 클릭하십시오. 
+1. **사용 가능한 인증 방법**의 경우 **레거시 인증 정보 및 IAM 모두 사용**을 선택하십시오. 다른 필드에서는 기본 설정을 유지할 수 있습니다. **작성**을 클릭하여 서비스를 작성하십시오.
+1. 탐색에서 **연결**로 이동한 후 **연결 작성**을 클릭하십시오. 애플리케이션을 선택한 후 **연결**을 클릭하십시오. 
+1. 기본값을 사용하고 **연결 & 앱 다시 스테이징**을 클릭하여 데이터베이스를 애플리케이션에 연결하십시오. 프롬프트가 표시되면 **다시 스테이징**을 클릭하십시오. 
 
    {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 인증 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
 
@@ -186,7 +188,7 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-2. 브라우저에서 {{site.data.keyword.Bluemix_notm}} 대시보드로 이동하고 **_앱_ > 연결**을 선택하십시오. {{site.data.keyword.cloudant_short_notm}} 메뉴 아이콘(**&vellip;**)을 클릭하고 **인증 정보**를 선택하십시오.
+2. {{site.data.keyword.Bluemix_notm}} [리소스 목록](https://cloud.ibm.com/resources)에서 앱을 찾으십시오. 앱의 서비스 세부사항 페이지에 있는 사이드바에서 **연결**을 클릭하십시오. {{site.data.keyword.cloudant_short_notm}} 메뉴 아이콘(**&hellip;**)을 클릭하고 **인증 정보**를 선택하십시오.
 
 3. 인증 정보의 `username`, `password` 및 `host`를 복사하여 `vcap-local.json` 파일의 동일한 필드에 붙여넣어 **CLOUDANT_DATABASE_USERNAME**, **CLOUDANT_DATABASE_PASSWORD** 및 **CLOUDANT_DATABASE_URL**을 바꾸십시오.
 

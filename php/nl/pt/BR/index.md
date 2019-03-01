@@ -29,7 +29,7 @@ um diretório existente dentro de seu app.
 
 O {{site.data.keyword.Bluemix}} fornece um app iniciador em PHP.  O aplicativo iniciador em PHP é um app em PHP simples que fornece um modelo
 que pode ser usado para seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
-{{site.data.keyword.Bluemix}}.  Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para
+{{site.data.keyword.Bluemix}}.  Consulte [Usando os aplicativos iniciadores](docs/runtimes-common/starter_app_usage.html) para
 obter ajuda sobre o uso do app iniciador.
 
 ## Impingir HTTPS em todas as páginas em seu aplicativo

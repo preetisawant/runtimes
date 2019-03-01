@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-06"
+  years: 2015, 2019
+lastupdated: "2018-02-01"
 
 ---
 
@@ -24,42 +24,42 @@ Variables de entorno admitidas por Liberty para Java.
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>Habilitar [Utilidades de App Management](../common/app_mng.html)</td>
+<td>Habilitar [Utilidades de App Management](/docs/runtimes-common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>Instalar [Utilidades de App Management](../common/app_mng.html)</td>
+<td>Instalar [Utilidades de App Management](/docs/runtimes-common/app_mng.html)</td>
 </tr>
 
 <tr>
-<td>IBM_LIBERTY_BETA</td>
-<td>Habilitar [funciones beta de Liberty/](usingBetaFeatures.html)</td>
+<td>IBM_LIBERTY_MONTHLY</td>
+<td>Habilitar [tiempo de ejecución de release mensual de Liberty/](/docs/runtimes/liberty/usingMonthlyRuntime.html)</td>
 </tr>
 
 <tr>
 <td>JAVA_OPTS</td>
-<td>Establecer [Opciones de Java](customizingJRE.html)</td>
+<td>Establecer [Opciones de Java](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
-<td>Configurar la [información sobre ubicación del agente de Dynatrace](dynatrace.html#configuring_liberty_app)</td>
+<td>Configurar la [información sobre ubicación del agente de Dynatrace](/docs/runtimes/liberty/monitoring/dynatrace.html#configuring_liberty_app)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_IBMJDK </td>
-<td>Configurar la [versión de IBM JRE](customizingJRE.html)</td>
+<td>Configurar la [versión de IBM JRE](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>Configurar una variedad de opciones de tiempo de ejecución de Liberty incluidas las [características para archivos WAR o EAR](optionsForPushing.html#stand_alone_apps)</td>
+<td>Configurar una variedad de opciones de tiempo de ejecución de Liberty incluidas las [características para archivos WAR o EAR](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>Configurar la [versión de OpenJDK](customizingJRE.html)</td>
+<td>Configurar la [versión de OpenJDK](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
@@ -74,17 +74,17 @@ Variables de entorno admitidas por Liberty para Java.
 
 <tr>
 <td>JVM</td>
-<td>Seleccionar el [Tipo de JRE](customizingJRE.html)</td>
+<td>Seleccionar el [Tipo de JRE](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JVM_ARGS</td>
-<td>Establecer los [argumentos de JVM](customizingJRE.html)</td>
+<td>Establecer los [argumentos de JVM](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>LBP_SERVICE_CONFIG_xxxx</td>
-<td>[Sustituir configuración de servicio](autoConfig.html#override_service_config)</td>
+<td>[Sustituir configuración de servicio](/docs/runtimes/liberty/autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>
@@ -99,7 +99,7 @@ Variables de entorno admitidas por Liberty para Java.
 
 <tr>
 <td>services_autoconfig_excludes</td>
-<td>Inhabilitar el servicio de [autoconfiguración.](autoConfig.html#opting_out)</td>
+<td>Inhabilitar el servicio de [autoconfiguración.](/docs/runtimes/liberty/autoConfig.html#opting_out)</td>
 </tr>
 </table>
 {: caption="Tabla 1. Variables de entorno disponibles para Liberty for Java" caption-side="top"}

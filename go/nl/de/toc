@@ -10,18 +10,17 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Mit einem Proxy arbeiten](runtimes/common/workingWithProxy.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     Starteranwendungen und Community-Buildpacks
-        [Starteranwendungen verwenden](runtimes/common/starter_app_usage.html)
-        [Community-Buildpacks verwenden](runtimes/common/byob.html)
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Fehlerbehebung für Laufzeiten](runtimes/common/ts_runtimes.html)
-    [Verfügbare Versionen](runtimes/go/index.html#runtime_versions)
-    [Unterstützung für Buildpacks](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-runtimes
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

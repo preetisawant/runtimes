@@ -14,27 +14,24 @@ SDK for Node.js
     runningLocally.md
     enforceHTTPS.md
     hooks.md
+	{: .topicgroup}
+    Applications de démarrage et packs de construction de communauté
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
+    
 
-    {: .topicgroup}
-    Travailler en mode hors ligne ou avec un proxy
-        offlineMode.md
-        [Utilisation d'un proxy](runtimes/common/workingWithProxy.html)
-    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    [Gestion des applications Liberty et Node.js](runtimes/common/app_mng.html)
-
-    {: .topicgroup}
-    Applications de démarrage et packs de construction
-        [Utilisation des applications de démarrage](runtimes/common/starter_app_usage.html)
-        [Utilisation de packs de construction de communauté](runtimes/common/byob.html)
+    /runtimes-common/runtimes-common-app_management
+    /runtimes-common/runtimes-common-working_with_proxy 
+    offline.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [Déclaration de support pour les packs de construction](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

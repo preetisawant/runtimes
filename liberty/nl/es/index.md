@@ -19,13 +19,13 @@ Las aplicaciones Liberty for Java de {{site.data.keyword.Bluemix}} se basan en e
 ## Detección
 {: #detection}
 El paquete de compilación de Liberty se utiliza cuando se despliegan los siguientes tipos de aplicaciones:
-* [Archivos WAR](optionsForPushing.html#stand_alone_apps)
-* [Archivos EAR](optionsForPushing.html#stand_alone_apps)
-* [Directorio del servidor de Liberty](optionsForPushing.html#server_directory)
-* [Servidor empaquetado de Liberty](optionsForPushing.html#packaged_server)
+* [Archivos WAR](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [Archivos EAR](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [Directorio del servidor de Liberty](/docs/runtimes/liberty/optionsForPushing.html#server_directory)
+* [Servidor empaquetado de Liberty](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)
 * Principal de Java
 * [Distzip](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/container-distZip.md)
 
 ## Aplicación de inicio
 {: #starter_application}
-{{site.data.keyword.Bluemix_notm}} proporciona varias aplicaciones de inicio de Liberty.  Las aplicaciones de inicio de Liberty son apps de Liberty sencillas que proporcionan una plantilla que puede utilizar. Puede experimentar con las apps de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html) para obtener ayuda con el uso de las aplicaciones de inicio.
+{{site.data.keyword.Bluemix_notm}} proporciona varias aplicaciones de inicio de Liberty.  Las aplicaciones de inicio de Liberty son apps de Liberty sencillas que proporcionan una plantilla que puede utilizar. Puede experimentar con las apps de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](/docs/runtimes-common/starter_app_usage.html) para obtener ayuda con el uso de las aplicaciones de inicio.

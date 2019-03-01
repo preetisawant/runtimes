@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-03"
+  years: 2015, 2019
+lastupdated: "2019-01-11"
 
 ---
 
@@ -41,12 +41,33 @@ Si está habilitado, se utiliza OpenJDK versión 8 de forma predeterminada. Util
 ```
 {: codeblock}
 
-La propiedad de la versión se puede establecer en un rango de versiones como 1.7.+ o cualquier versión específica listada en la [lista de versiones de OpenJDK disponibles](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Para obtener los mejores resultados, utilice Java 8.
+La propiedad de la versión se puede establecer en un rango de versiones como 1.7.+, 1.8.+ o cualquier versión específica listada en la [lista de versiones de OpenJDK disponibles](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Para obtener los mejores resultados, utilice Java 8.
+
+## OpenJ9
+{: #openj9}
+
+De forma opcional, las aplicaciones se pueden configurar para ejecutarse con OpenJ9 como JRE o JDK. Para permitir que una aplicación se ejecute con OpenJ9, establezca la variable de entorno JVM en "openj9". Por ejemplo, con la herramienta de línea de mandatos de {{site.data.keyword.Bluemix_notm}}, ejecute el mandato:
+```
+    ibmcloud cf set-env myapp JVM 'openj9'
+```
+{: codeblock}
+
+Si está habilitado, se utiliza OpenJ9 versión 11 de forma predeterminada. Utilice la variable de entorno JBP_CONFIG_OPENJ9 para especificar una versión alternativa de OpenJ9. Por ejemplo, para utilizar la versión más reciente de OpenJ9 8, establezca la siguiente variable de entorno:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
+```
+{: codeblock}
+
+Si está habilitado, se utiliza el entorno de tiempo de ejecución Java de OpenJ9 de forma predeterminada. Utilice la variable de entorno JBP_CONFIG_OPENJ9 para utilizar la versión JDK de OpenJ9. Por ejemplo, para utilizar el JDK de OpenJ9, establezca la siguiente variable de entorno:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
+```
+{: codeblock}
 
 ## Oracle JRE
 {: #oracle_jre}
 
-Consulte [Uso de Oracle JRE](oracle_jre.html) para obtener información sobre cómo utilizar el Oracle JRE.
+Consulte [Uso de su propio JRE](/docs/runtimes/liberty/using_own_jre.html) para obtener información sobre cómo utilizar el Oracle JRE.
 
 ## Configuración de las opciones de JRE
 {: #configuring_jre}
@@ -57,10 +78,10 @@ Consulte [Uso de Oracle JRE](oracle_jre.html) para obtener información sobre c�
 El paquete de compilación de Liberty configura las opciones predeterminadas de JVM teniendo en cuenta los siguientes aspectos:
 
 * Límite de memoria de una aplicación.  Los valores aplicados del almacenamiento dinámico de JVM se calculan en función de:
-  * el límite de memoria de una aplicación, tal y como se detalla en [Límites de memoria y el paquete de compilación de Liberty](memoryLimits.html#memory_limits)
+  * el límite de memoria de una aplicación, tal y como se detalla en [Límites de memoria y el paquete de compilación de Liberty](/docs/runtimes/liberty/memoryLimits.html#memory_limits)
   * el tipo de JRE, ya que las opciones del almacenamiento dinámico de la JVM pueden variar en función de las opciones admitidas de JRE.
 
-* Las [ características de Liberty soportadas en {{site.data.keyword.Bluemix_notm}}](libertyFeatures.html#libertyfeatures).
+* Las [características de Liberty soportadas en {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures).
   * No se admiten las transacciones de bases de datos globales de confirmación en dos fases en {{site.data.keyword.Bluemix_notm}} y, por lo tanto, quedan inhabilitadas mediante el valor -Dcom.ibm.tx.jta.disable2PC=true.
 
 * El entorno de {{site.data.keyword.Bluemix_notm}}.
@@ -238,7 +259,7 @@ Despliegue de una aplicación con las opciones personalizadas de JVM para habili
 ```
 {: codeblock}
 
- Consulte la documentación sobre [Registro y rastreo](loggingAndTracing.html#download_dumps) para ver más información sobre cómo visualizar y descargar los archivos de volcado generados.
+ Consulte la documentación sobre [Registro y rastreo](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps) para ver más información sobre cómo visualizar y descargar los archivos de volcado generados.
 
 ### Superposición del JRE
 {: #overlaying_jre}

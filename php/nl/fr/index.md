@@ -25,7 +25,7 @@ Le pack php_buildpack est utilisé dans les conditions suivantes :
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} propose une application de démarrage PHP.  L'application de démarrage PHP est une appli PHP simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix}} propose une application de démarrage PHP.  L'application de démarrage PHP est une appli PHP simple qui fournit un modèle que vous pouvez utiliser pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix}}.  Voir [Utilisation des applications de démarrage](docs/runtimes-common/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Imposer l'utilisation de HTTPS sur toutes les pages dans votre application
 {: #enforce_https}

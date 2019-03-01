@@ -32,7 +32,7 @@ JVM 메모리 사용에 대한 자세한 정보는 developerWorks 문서 [Thanks
 
 애플리케이션을 배치할 때 전체 프로세스의 메모리 사용량이 모니터링됩니다. 메모리 사용량이 애플리케이션 배치 시 사용자가 지정한 메모리 한계를 초과하는 경우, 커널에서 프로세스가 중지됩니다. 이 조치는 경고 없이 발생하므로 여러 방법으로 알 수 있습니다.
 
- 애플리케이션을 배치하는 동안 메모리 한계를 초과하면 오류가 발생했다는 메시지가 표시될 수 있습니다. 메시지는 다음과 같습니다.
+ 애플리케이션을 배치하는 동안 메모리 한계를 초과하면 오류가 발생했다는 메시지를 수신하며 다음과 같은 상황이 발생할 수 있습니다. 
 
   * 애플리케이션이 불안정하게 작동하는 것을 느낄 수 있습니다.
   * 애플리케이션에서 여러 차례 시작하려고 시도했지만 항상 실패하는 경우도 있습니다.
@@ -73,4 +73,4 @@ JVM 메모리 사용에 대한 자세한 정보는 developerWorks 문서 [Thanks
 ```
 {: codeblock}
 
-* 애플리케이션이 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server)인 경우 jvm.options 파일에서 -Xmx 인수를 지정하십시오. Liberty 런타임과 함께 `jvm.options` 파일 사용에 대한 자세한 정보는 [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474)을 참조하십시오.  
+* 애플리케이션이 [서버 디렉토리](/docs/runtimes/liberty/optionsForPushing.html#server_directory) 또는 [패키지된 서버](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)인 경우 jvm.options 파일에서 -Xmx 인수를 지정하십시오. Liberty 런타임과 함께 `jvm.options` 파일 사용에 대한 자세한 정보는 [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474)을 참조하십시오.  

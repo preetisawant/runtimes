@@ -14,27 +14,23 @@ SDK for Node.js
     runningLocally.md
     enforceHTTPS.md
     hooks.md
+	{: .topicgroup}
+        スターター・アプリケーションとコミュニティーのビルドパック
+	    /runtimes-common/runtimes-common-using_buildpacks
+            /runtimes-common/runtimes-common-using_starter_apps
 
-    {: .topicgroup}
-    オフラインでの作業またはプロキシーの処理
-        offlineMode.md
-        [プロキシーの処理](runtimes/common/workingWithProxy.html)
-    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    [Liberty アプリケーションおよび Node.js アプリケーションの管理](runtimes/common/app_mng.html)
-
-    {: .topicgroup}
-    スターター・アプリケーションおよびビルドパック
-        [スターター・アプリケーションの使用](runtimes/common/starter_app_usage.html)
-        [コミュニティー・ビルドパックの使用](runtimes/common/byob.html)
+    /runtimes-common/runtimes-common-app_management
+    /runtimes-common/runtimes-common-working_with_proxy 
+    offline.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [ビルドパックのサポート・ステートメント](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

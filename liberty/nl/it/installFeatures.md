@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -23,14 +23,14 @@ Per informazioni sull'utilizzo degli hook di pre-runtime, vedi [Configure Pre-Ru
 
 1. Nella directory `.profile.d`, crea un file script che esegue il comando `installUtility` come mostrato nel seguente esempio.
 
-   Questo esempio installa la funzione `javaee-8.0`.
+   Questo esempio installa la funzione `audit-1.0`.
 
    ```
    #!/bin/sh
-   echo "Installing javaee-8.0"
+   echo "Installing audit-1.0"
    export PATH=$PATH:$HOME/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
+   $HOME/.liberty/bin/installUtility install audit-1.0 --acceptLicense
    ```
    {: codeblock}
 
@@ -56,7 +56,7 @@ Per informazioni sull'utilizzo degli hook di pre-runtime, vedi [Configure Pre-Ru
     Se la funzione è stata installata, l'output mostra i seguenti messaggi:
 
     ```
-    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing javaee-8.0
+    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing audit-1.0
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Establishing a connection to the configured repositories ...
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT This process might take several minutes to complete.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Successfully connected to all configured repositories.

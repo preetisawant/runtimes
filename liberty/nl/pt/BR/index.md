@@ -20,14 +20,14 @@ buildpack liberty-for-java fornece um ambiente de tempo de execução completo p
 ## Detecção
 {: #detection}
 O buildpack do Liberty é usado quando os tipos de aplicativos a seguir são implementados:
-* [Arquivos WAR](optionsForPushing.html#stand_alone_apps)
+* [Arquivos WAR](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
 * [Arquivos
-EAR](optionsForPushing.html#stand_alone_apps)
-* [Diretório do servidor Liberty](optionsForPushing.html#server_directory)
-* [Servidor em pacote Liberty](optionsForPushing.html#packaged_server)
+EAR](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [Diretório do servidor Liberty](/docs/runtimes/liberty/optionsForPushing.html#server_directory)
+* [Servidor em pacote Liberty](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)
 * Java principal
 * [Distzip](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/container-distZip.md)
 
 ## Aplicativo iniciador
 {: #starter_application}
-O {{site.data.keyword.Bluemix_notm}} fornece vários aplicativos iniciadores Liberty.  Os aplicativos iniciadores Liberty são apps Liberty simples que fornecem um modelo que pode ser usado. É possível experimentar os aplicativos iniciadores e fazer e enviar mudanças por push para o ambiente {{site.data.keyword.Bluemix_notm}}.  Veja [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso dos aplicativos iniciadores.
+O {{site.data.keyword.Bluemix_notm}} fornece vários aplicativos iniciadores Liberty.  Os aplicativos iniciadores Liberty são apps Liberty simples que fornecem um modelo que pode ser usado. É possível experimentar os aplicativos iniciadores e fazer e enviar mudanças por push para o ambiente {{site.data.keyword.Bluemix_notm}}.  Veja [Usando os aplicativos iniciadores](/docs/runtimes-common/starter_app_usage.html) para obter ajuda sobre o uso dos aplicativos iniciadores.

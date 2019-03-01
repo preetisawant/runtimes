@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -30,7 +30,7 @@ Liberty for Java 시작하기 튜토리얼에 따라 개발 환경을 설정하�
 
 다음 계정과 도구가 필요합니다.
 * [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}
 * [Maven ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://maven.apache.org/download.cgi){: new_window}
 
@@ -108,7 +108,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  연합 사용자 ID가 있는 경우 대신 다음 명령을 사용하여 싱글 사인온 ID로 로그인하십시오. 자세한 정보는 [연합 ID로 로그인](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)을 참조하십시오.
+  연합 사용자 ID가 있는 경우 대신 다음 명령을 사용하여 싱글 사인온 ID로 로그인하십시오. 자세한 정보는 [연합 ID로 로그인](/docs/cli/login_federated_id.html)을 참조하십시오.
 
   ```
 ibmcloud login --sso
@@ -122,7 +122,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](https://console.bluemix.net/docs/account/orgs_spaces.html)를 참조하십시오.
+  조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](/docs/account/orgs_spaces.html)를 참조하십시오.
   {: tip}
 
 1. `get-started-java` 디렉토리 내에서 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 푸시하십시오.
@@ -132,14 +132,16 @@ ibmcloud cf push
   ```
   {: codeblock}
 
-애플리케이션 배치에 몇 분이 소요될 수 있습니다. 배치가 완료되면 앱이 실행 중이라는 메시지가 표시됩니다. push 명령의 출력에 나열된 URL에서 앱을 보거나, 다음 명령을 실행하여 앱 배치 상태 및 URL을 확인하십시오.
+애플리케이션 배치에 몇 분이 소요될 수 있습니다. 배치가 완료되면 앱이 실행 중이라는 메시지가 표시됩니다. push 명령의 출력에 나열된 URL 중 끝에 "/GetStartedJava"가 추가된 URL에서 앱을 보거나, 다음 명령을 실행하여 앱 배치 상태 및 URL을 보십시오. 
 
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
 
-`ibmcloud cf logs <Your-App-Name> --recent` 명령을 사용하여 배치 프로세스에서 오류를 해결할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} [리소스 목록](https://cloud.ibm.com/resources)으로 이동하여 앱을 볼 수도 있습니다. **앱 URL 방문**을 클릭하는 경우에는 URL에 "/GetStartedJava"를 추가하는 것을 잊지 마십시오. 
+
+`ibmcloud cf logs GetStartedJava --recent` 명령을 사용하여 배치 프로세스의 오류를 해결할 수 있습니다.
 {: tip}  
 
 ## 5단계: 데이터베이스 추가
@@ -149,9 +151,9 @@ ibmcloud cf apps
 
 1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하고 대시보드로 이동하십시오. **리소스 작성**을 선택하십시오.
 1. **{{site.data.keyword.cloudant_short_notm}}**를 검색한 후 서비스를 선택하십시오.
-1. **사용 가능한 인증 방법**의 경우 **레거시 인증 정보 및 IAM 모두 사용**을 선택하십시오. 다른 필드에서는 기본 설정을 유지할 수 있습니다. **작성**을 클릭하여 서비스를 작성하십시오. 
-1. 탐색에서 **연결**로 이동하십시오. 애플리케이션을 선택한 후 **연결 작성**을 클릭하십시오.
-1. 기본값을 사용하여 애플리케이션에 연결한 후 **연결 & 앱 다시 스테이징**을 클릭하십시오. 그런 다음 프롬프트가 표시되면 **다시 스테이징**을 클릭하십시오. 
+1. **사용 가능한 인증 방법**의 경우 **레거시 인증 정보 및 IAM 모두 사용**을 선택하십시오. 다른 필드에서는 기본 설정을 유지할 수 있습니다. **작성**을 클릭하여 서비스를 작성하십시오.
+1. 탐색에서 **연결**로 이동한 후 **연결 작성**을 클릭하십시오. 애플리케이션을 선택한 후 **연결**을 클릭하십시오. 
+1. 기본값을 사용하고 **연결 & 앱 다시 스테이징**을 클릭하여 데이터베이스를 애플리케이션에 연결하십시오. 프롬프트가 표시되면 **다시 스테이징**을 클릭하십시오. 
 
    {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 인증 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
 
@@ -162,7 +164,7 @@ ibmcloud cf apps
 {: #use_database}
 이제 이 데이터베이스를 가리키도록 로컬 코드를 업데이트합니다. 특성 파일에 서비스의 인증 정보를 저장합니다. 이 파일은 애플리케이션이 로컬에서 실행 중인 경우에만 사용됩니다. {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우 인증 정보는 `VCAP_SERVICES` 환경 변수에서 읽습니다.
 
-1. 브라우저에서 {{site.data.keyword.Bluemix_notm}} 대시보드로 이동하고 **_앱_ > 연결**을 선택하십시오. {{site.data.keyword.cloudant_short_notm}} 메뉴 아이콘(**&vellip;**)을 클릭하고 **인증 정보**를 선택하십시오.
+1. {{site.data.keyword.Bluemix_notm}} [리소스 목록](https://cloud.ibm.com/resources)에서 앱을 찾으십시오. 앱의 서비스 세부사항 페이지에 있는 사이드바에서 **연결**을 클릭하십시오. {{site.data.keyword.cloudant_short_notm}} 메뉴 아이콘(**&hellip;**)을 클릭하고 **인증 정보**를 선택하십시오.
 
 2. 인증 정보의 `url`을 복사하여 `src/main/resources/cloudant.properties` 파일의 `url` 필드에 붙여넣고 변경사항을 저장하십시오.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-20"
+lastupdated: "2018-12-12"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +12,37 @@ lastupdated: "2018-09-20"
 {: #latest_updates}
 
 Liste des dernières mises à jour apportées au pack de construction ASP.NET Core.
+
+## 12 décembre 2018 : Mise à jour du pack de construction ASP.NET Core v2.1-20181205-1536
+Cette édition inclut la version 2.2.0 du pack de construction dotnet-core Cloud Foundry.
+
+* Ajout de la prise en charge de .NET Aspnetcore 2.1.2
+* Ajout de la prise en charge de .NET Aspnetcore 2.1.4
+* Ajout de la prise en charge de .NET Aspnetcore 2.1.5
+* Ajout de la prise en charge de .NET Runtime 1.0.11
+* Ajout de la prise en charge de .NET Runtime 1.0.12
+* Ajout de la prise en charge de .NET Runtime 1.1.9
+* Ajout de la prise en charge de .NET Runtime 1.1.10
+* Ajout de la prise en charge de .NET Runtime 2.0.7
+* Ajout de la prise en charge de .NET Runtime 2.0.9
+* Ajout de la prise en charge de .NET Runtime 2.1.2
+* Ajout de la prise en charge de .NET Runtime 2.1.5
+* Ajout de la prise en charge de .NET SDK 1.0.4
+* Ajout de la prise en charge de .NET SDK 1.1.10
+* Ajout de la prise en charge de .NET SDK 1.1.11
+* Ajout de la prise en charge de .NET SDK 2.0.3
+* Ajout de la prise en charge de .NET SDK 2.1.302
+* Ajout de la prise en charge de .NET SDK 2.1.403
+* Retrait de la prise en charge de .NET Framework 2.1.0
+* Retrait de la prise en charge de .NET Framework 2.1.1
+* Retrait de la prise en charge de .NET Framework 1.1.8
+* Retrait de la prise en charge de .NET Core SDK 2.0.2
+* Retrait de la prise en charge de .NET Core SDK 2.0.3
+* Retrait de la prise en charge de .NET Core SDK 2.1.201
+* Retrait de la prise en charge de .NET Core SDK 2.1.300
+* Retrait de la prise en charge de .NET Core SDK 2.1.301
+* Mise à jour de Node.js vers la version 6.14.4
+
 
 ## 20 septembre 2018 : Mise à jour du pack de construction ASP.NET Core v2.0-20180918-1356
 
@@ -142,4 +173,5 @@ Cette version du pack de construction inclut les modifications suivantes :
 ```
 {: codeblock}
 
-* L'utilisation du serveur Web Nowin a été retirée de ce pack de construction et le serveur Web [Kestrel](https://github.com/aspnet/KestrelHttpServer) est utilisé à la place.
+* L'utilisation du serveur Web Nowin a été retirée de ce pack de construction. Le serveur Web [Kestrel](https://github.com/aspnet/KestrelHttpServer) est utilisé à la place.
+

@@ -21,7 +21,7 @@ Liberty 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려
 * 서버 디렉토리 푸시
 * 패키지된 서버 푸시
 
-중요: Liberty 빌드팩으로 애플리케이션을 배치하는 경우, 애플리케이션의 메모리 한계로 최소 512M을 지정하십시오. 자세한 정보는 [메모리 한계 및 Liberty 빌드팩](memoryLimits.html)을 참조하십시오.
+중요: Liberty 빌드팩으로 애플리케이션을 배치하는 경우, 애플리케이션의 메모리 한계로 최소 512M을 지정하십시오. 자세한 정보는 [메모리 한계 및 Liberty 빌드팩](/docs/runtimes/liberty/memoryLimits.html)을 참조하십시오.
 
 ## 독립형 앱
 {: #stand_alone_apps}
@@ -62,7 +62,7 @@ Liberty 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려
 ```
 {: codeblock}
 
-참고: 최상의 결과를 얻으려면 JBP_CONFIG_LIBERTY 환경 변수로 Liberty 기능을 설정하거나 사용자 정의 server.xml 파일로 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server)로서 애플리케이션을 배치하십시오. 이 환경 변수를 설정하면 애플리케이션이 필요한 기능만 사용하며 빌드팩의 기본 Liberty 기능 설정 변경사항의 영향을 받지 않도록 합니다. 기능 세트 외에도 추가 Liberty 구성을 제공해야 하는 경우에는 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server) 옵션을 사용하여 애플리케이션을 배치하십시오.
+참고: 최상의 결과를 얻으려면 JBP_CONFIG_LIBERTY 환경 변수로 Liberty 기능을 설정하거나 사용자 정의 server.xml 파일로 [서버 디렉토리](/docs/runtimes/liberty/optionsForPushing.html#server_directory) 또는 [패키지된 서버](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)로서 애플리케이션을 배치하십시오. 이 환경 변수를 설정하면 애플리케이션이 필요한 기능만 사용하며 빌드팩의 기본 Liberty 기능 설정 변경사항의 영향을 받지 않도록 합니다. 기능 세트 외에도 추가 Liberty 구성을 제공해야 하는 경우에는 [서버 디렉토리](/docs/runtimes/liberty/optionsForPushing.html#server_directory) 또는 [패키지된 서버](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) 옵션을 사용하여 애플리케이션을 배치하십시오.
 
 WAR 파일을 배치한 경우, 웹 애플리케이션은 임베디드 ibm-web-ext.xml 파일에 설정된 대로 컨텍스트 루트에서 액세스 가능합니다. ibm-web-ext.xml 파일이 존재하지 않거나 컨텍스트 루트를 지정하지 않는 경우에는 애플리케이션이 루트 컨텍스트에서 액세스 가능합니다. 예를 들어, 다음과 같습니다.
 
@@ -167,8 +167,7 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 ```
 {: codeblock}
 
-서버 디렉토리가 준비되면,
-{{site.data.keyword.Bluemix_notm}}에 배치할 수 있습니다.
+서버 디렉토리가 준비되면, {{site.data.keyword.Bluemix_notm}}에 배치할 수 있습니다.
 
 ```
     ibmcloud cf push <yourappname> -p defaultServer
@@ -185,8 +184,7 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 ## 패키지된 서버
 {: #packaged_server}
 
-패키지된 서버 파일을
-{{site.data.keyword.Bluemix_notm}}에 푸시할 수도 있습니다. 패키지된 서버 파일은 Liberty의 서버 패키지 명령을 사용하여 작성됩니다. 패키지된 서버 파일에는 애플리케이션과 구성 파일 외에 애플리케이션에 필요한 공유 리소스 및 Liberty 사용자 기능이 포함되어 있습니다.
+패키지된 서버 파일을 {{site.data.keyword.Bluemix_notm}}에 푸시할 수도 있습니다. 패키지된 서버 파일은 Liberty의 서버 패키지 명령을 사용하여 작성됩니다. 패키지된 서버 파일에는 애플리케이션과 구성 파일 외에 애플리케이션에 필요한 공유 리소스 및 Liberty 사용자 기능이 포함되어 있습니다.
 
 Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/server package` 명령을 사용하십시오. 서버 이름을 지정하고 `--include=usr` 옵션을 포함하십시오.
 예를 들어, Liberty 서버가 `defaultServer`이면 다음 명령을 실행하십시오.

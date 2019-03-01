@@ -21,14 +21,14 @@ lastupdated: "2017-02-08"
 ## JConsole
 {: #jconsole notoc}
 
-*JConsole* を使用して Liberty をモニターする場合は、『[JConsole を使用した Bluemix での Liberty のモニタリング](jconsole.html)』を参照してください。
+*JConsole* を使用して Liberty をモニターする場合は、『[JConsole を使用した Bluemix での Liberty のモニタリング](/docs/runtimes/liberty/monitoring/jconsole.html)』を参照してください。
 
 ## Dynatrace
 {: #dynatrace notoc}
 
-*Dynatrace* を使用して Liberty をモニターする場合は、『[Dynatrace の使用](dynatrace.html)』を参照してください。
+*Dynatrace* を使用して Liberty をモニターする場合は、『[Dynatrace の使用](/docs/runtimes/liberty/monitoring/dynatrace.html)』を参照してください。
 
 ## New Relic
 {: #newrelic notoc}
 
-*New Relic* を使用して Liberty をモニターする場合は、『[New Relic の使用](newRelic.html)』を参照してください。
+*New Relic* を使用して Liberty をモニターする場合は、『[New Relic の使用](/docs/runtimes/liberty/monitoring/newRelic.html)』を参照してください。

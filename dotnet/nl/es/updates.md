@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-20"
+lastupdated: "2018-12-12"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +12,37 @@ lastupdated: "2018-09-20"
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación ASP.NET Core.
+
+## 12 de diciembre de 2018: Actualizado el paquete de compilación ASP.NET Core v2.1-20181205-1536
+Este release incluye la versión 2.2.0 del paquete de compilación dotnet-core de Cloud Foundry.
+
+* Adición de soporte para .NET Aspnetcore 2.1.2
+* Adición de soporte para .NET Aspnetcore 2.1.4
+* Adición de soporte para .NET Aspnetcore 2.1.5
+* Adición de soporte para .NET Runtime 1.0.11
+* Adición de soporte para .NET Runtime 1.0.12
+* Adición de soporte para .NET Runtime 1.1.9
+* Adición de soporte para .NET Runtime 1.1.10
+* Adición de soporte para .NET Runtime 2.0.7
+* Adición de soporte para .NET Runtime 2.0.9
+* Adición de soporte para .NET Runtime 2.1.2
+* Adición de soporte para .NET Runtime 2.1.5
+* Adición de soporte para .NET Core SDK 1.0.4
+* Adición de soporte para .NET Core SDK 1.1.10
+* Adición de soporte para .NET Core SDK 1.1.11
+* Adición de soporte para .NET Core SDK 2.0.3
+* Adición de soporte para .NET Core SDK 2.1.302
+* Adición de soporte para .NET Core SDK 2.1.403
+* Retirada del soporte para .NET Framework 2.1.0
+* Retirada del soporte para .NET Framework 2.1.1
+* Retirada del soporte para .NET Framework 1.1.8
+* Retirada del soporte para .NET Core SDK 2.0.2
+* Retirada del soporte para .NET Core SDK 2.0.3
+* Retirada del soporte para .NET Core SDK 2.1.201
+* Retirada del soporte para .NET Core SDK 2.1.300
+* Retirada del soporte para .NET Core SDK 2.1.301
+* Actualización de la versión de Node.js a 6.14.4
+
 
 ## 20 de septiembre de 2018: Se ha actualizado el paquete de compilación de ASP.NET Core v2.0-20180918-1356
 
@@ -142,4 +173,5 @@ Esta versión del paquete de compilación incluye los siguientes cambios:
 ```
 {: codeblock}
 
-* El uso del servidor web Nowin se ha eliminado del paquete de compilación y en su lugar se utiliza el servidor web [Kestrel](https://github.com/aspnet/KestrelHttpServer).
+* Se ha eliminado el uso del servidor web Nowin de este paquete de compilación y se ha utilizado el servidor web [Kestrel](https://github.com/aspnet/KestrelHttpServer)
+en su lugar.

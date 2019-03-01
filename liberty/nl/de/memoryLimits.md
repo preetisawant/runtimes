@@ -82,4 +82,4 @@ führen anschließend ein erneutes Staging Ihrer App durch.
 ```
 {: codeblock}
 
-* Geben Sie das Argument -Xmx in der Datei jvm.options an, wenn Ihre Anwendung ein [Serververzeichnis](optionsForPushing.html#server_directory) oder ein [paketierter Server](optionsForPushing.html#packaged_server) ist. Weitere Informationen zur Verwendung der Datei `jvm.options` mit der Liberty-Laufzeit finden Sie unter [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  
+* Geben Sie das Argument -Xmx in der Datei jvm.options an, wenn Ihre Anwendung ein [Serververzeichnis](/docs/runtimes/liberty/optionsForPushing.html#server_directory) oder ein [paketierter Server](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) ist. Weitere Informationen zur Verwendung der Datei `jvm.options` mit der Liberty-Laufzeit finden Sie unter [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  

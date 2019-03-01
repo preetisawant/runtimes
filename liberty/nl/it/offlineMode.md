@@ -20,16 +20,16 @@ Quando viene eseguito il push di un'applicazione Liberty a {{site.data.keyword.B
 * https://download.run.pivotal.io e https://java-buildpack.cloudfoundry.org sono utilizzati per accedere ai componenti di:
   * [AppDynamics agent ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.appdynamics.com/)
   * [MariaDB JDBC driver ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://mariadb.com/)
-  * [New Relic agent](monitoring/newRelic.html)
-  * [OpenJDK ](customizingJRE.html#OpenJDK)
+  * [New Relic agent](/docs/runtimes/liberty/monitoring/newRelic.html)
+  * [OpenJDK ](/docs/runtimes/liberty/customizingJRE.html#OpenJDK)
   * [PostgreSQL JDBC driver ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.postgresql.org)
 * https://dl.zeroturnaround.com/jrebel/ è utilizzato per accedere ai componenti di [JRebel ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://zeroturnaround.com/software/jrebel/).
 * https://download.ruxit.com/agent/paas/cloudfoundry/java è utilizzato per accedere ai componenti di [Dynatrace Ruxit agent](dynatrace.html).
 * http://downloads.dynatracesaas.com/cloudfoundry/buildpack/java/  è utilizzato per accedere a [Dynatrace agent](dynatrace.html).
 
-## Gestione di un proxy
+## Utilizzo di un proxy
 {: #working_with_proxy}
 
 In alcuni ambienti, come ad esempio [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), può essere configurato un proxy. Consulta
-[Gestione di un proxy](/docs/runtimes/common/workingWithProxy.html) per ulteriori dettagli.
+[Gestione di un proxy](/docs/runtimes-common/workingWithProxy.html) per ulteriori dettagli.

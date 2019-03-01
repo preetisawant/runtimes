@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-21"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -12,18 +12,19 @@ lastupdated: "2018-09-21"
 # {{site.data.keyword.cloud_notm}}에서 지원되는 Liberty 기능
 {: #liberty_features}
 
-Liberty for Java 런타임에는 Liberty 기능의 서브세트가 포함됩니다.  런타임에 포함되지 않은 기능을 사용하려면 [Liberty 기능 설치](installFeatures.html)를 참조하십시오. Java EE 버전 및 기타 정보가 포함된 Liberty에 사용 가능한 기능의 전체 목록은
+Liberty for Java 런타임에는 Liberty 기능의 서브세트가 포함됩니다. 런타임에 포함되지 않은 기능을 사용하려면 [Liberty 기능 설치](/docs/runtimes/liberty/installFeatures.html)를 참조하십시오. Java EE 버전 및 기타 정보가 포함된 Liberty에 사용 가능한 기능의 전체 목록은
 [Liberty 기능 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)을 참조하십시오.
 
 ## 클라우드 특정 기능
 {:#cloud-features}
 
-다음 기능이 포함되며 {{site.data.keyword.Bluemix_notm}}에만 해당됩니다. 
+다음 기능이 포함되며 {{site.data.keyword.Bluemix_notm}}에만 해당됩니다.
+* appstate-1.0
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-WAR 또는 EAR 파일을 배치하면 사용 가능한 기능 서브세트가 기본적으로 사용됩니다. 세부사항은 [독립형 앱](optionsForPushing.html#stand_alone_apps)을 참조하십시오.
+WAR 또는 EAR 파일을 배치하면 사용 가능한 기능 서브세트가 기본적으로 사용됩니다. 세부사항은 [독립형 앱](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)을 참조하십시오.
 
 Liberty for Java 런타임에서는 일부 Liberty 베타 기능도 사용 가능합니다. 이 기능은 [베타 기능 사용](/docs/runtimes/liberty/usingBetaFeatures.html)에 나열되어 있습니다.
 
@@ -32,7 +33,8 @@ Liberty for Java 런타임에서는 일부 Liberty 베타 기능도 사용 가�
 
 Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 수 없기 때문에 Liberty for Java 런타임에서 사용할 수 없습니다.
 
-서버는 호환 불가능한 기능은 로드할 수 없으므로 호환 가능한 기능만 사용하도록 구성해야 합니다. [지원되는 Java EE 6 및 7 기능 결합](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html")을 참조하십시오.
+서버는 호환 불가능한 기능은 로드할 수 없으므로 호환 가능한 기능만 사용하도록 구성해야 합니다. [Supported Java EE 6 and 7 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html)
+및 [Supported Java EE 7 and 8 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html)를 참조하십시오. 
 
 원격 EJB를 사용하는 애플리케이션은 {{site.data.keyword.Bluemix_notm}}에 배치될 수 있습니다.
 그러나 원격 EJB는 {{site.data.keyword.Bluemix_notm}} 환경의 포트 제한사항 때문에 CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.
@@ -77,6 +79,7 @@ Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 
 * apiDiscovery-1.0
 * appSecurity-1.0
 * appSecurity-2.0
+* appSecurity-3.0
 * appstate-1.0
 * appstate-2.0
 
@@ -86,6 +89,7 @@ Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 
 * batch-1.0
 * batchManagement-1.0
 * beanValidation-1.1
+* beanValidation-2.0
 * bells-1.0
 * blueprint-1.0
 
@@ -94,6 +98,7 @@ Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 
 
 * cdi-1.0
 * cdi-1.2
+* cdi-2.0
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
@@ -124,11 +129,13 @@ Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 
 * jacc-1.5
 * jaspic-1.1
 * javaee-7.0
+* javaee-8.0
 * javaMail-1.5
+* javaMail-1.6
 * jaxb-2.2
 * jaxrs-1.1
 * jaxrs-2.0
-* jaxrsClient-2.0
+* jaxrs-2.1
 * jaxws-2.2
 * jca-1.6
 * jca-1.7
@@ -143,11 +150,15 @@ Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 
 * jndi-1.0
 * jpa-2.0
 * jpa-2.1
+* jpa-2.2
 * jsf-2.0
 * jsf-2.2
+* jsf-2.3
 * jsfContainer-2.2
 * json-1.0
+* jsonb-1.0
 * jsonp-1.0
+* jsonp-1.1
 * jsp-2.2
 * jsp-2.3
 * jwt-1.0
@@ -168,13 +179,11 @@ Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 
 * microProfile-1.0
 * microProfile-1.2
 * microProfile-1.3
+* microProfile-1.4
+* microProfile-2.0
+* microProfile-2.1
 * mongodb-2.0
 * monitor-1.0
-* mpConfig-1.1
-* mpFaultTolerance-1.0
-* mpHealth-1.0
-* mpJwt-1.0
-* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
@@ -208,6 +217,7 @@ Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 
 * scim-1.0
 * servlet-3.0
 * servlet-3.1
+* servlet-4.0
 * sessionDatabase-1.0
 * sipServlet-1.1
 * socialLogin-1.0
@@ -229,6 +239,7 @@ Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 
 * webCache-1.0
 * webProfile-6.0
 * webProfile-7.0
+* webProfile-8.0
 * websocket-1.0
 * websocket-1.1
 * wmqJmsClient-1.1

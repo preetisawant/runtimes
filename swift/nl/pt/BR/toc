@@ -10,17 +10,15 @@ Swift
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Trabalhando com um proxy](runtimes/common/workingWithProxy.html)
+	{: .topicgroup}
+    Aplicativos Starter e buildpacks da comunidade 	 /runtimes-common/runtimes-common-using_buildpacks
+/runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
-    Aplicativos iniciadores e buildpacks de comunidade
-        [Usando os aplicativos iniciadores](runtimes/common/starter_app_usage.html)
-        [Usando os buildpacks de comunidade](runtimes/common/byob.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Resolução de problemas para tempos de execução](runtimes/common/ts_runtimes.html)
-    [Instrução de suporte de buildpack](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-runtimes /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

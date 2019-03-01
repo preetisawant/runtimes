@@ -21,8 +21,8 @@ Quand une application Liberty est envoyée par commande push vers {{site.data.ke
 * https://download.run.pivotal.io et https://java-buildpack.cloudfoundry.org sont utilisés pour accéder aux composants pour :
   * [l'agent AppDynamics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.appdynamics.com/)
   * [le pilote JDBC MariaDB ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://mariadb.com/)
-  * [l'agent New Relic](monitoring/newRelic.html)
-  * [OpenJDK](customizingJRE.html#OpenJDK)
+  * [l'agent New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)
+  * [OpenJDK](/docs/runtimes/liberty/customizingJRE.html#OpenJDK)
   * [le pilote JDBC PostgreSQL ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.postgresql.org)
 * https://dl.zeroturnaround.com/jrebel/ est utilisé pour accéder aux composants pour [JRebel ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://zeroturnaround.com/software/jrebel/).
 * https://download.ruxit.com/agent/paas/cloudfoundry/java est utilisé pour accéder aux composants pour l'[agent Dynatrace Ruxit](dynatrace.html).
@@ -33,4 +33,4 @@ Quand une application Liberty est envoyée par commande push vers {{site.data.ke
 
 Dans certains environnements tels que [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), un proxy peut être configuré. Voir
-[Utilisation d'un proxy](/docs/runtimes/common/workingWithProxy.html) pour plus de détails.
+[Utilisation d'un proxy](/docs/runtimes-common/workingWithProxy.html) pour plus de détails.

@@ -12,7 +12,7 @@ lastupdated: "2018-11-20"
 # Desativar o cache de pacotes NuGet
 {: #disabling_the_nuget_package_cache}
 
-Em algumas situações, pode ser necessário limpar o cache de pacotes NuGet para o aplicativo. Isso limpa qualquer pacotes NuGet existente armazenado em cache e impede que o buildpack armazene em cache qualquer novo pacote.
+Em algumas situações, pode ser necessário limpar o cache de pacotes NuGet para o aplicativo.  Isso limpa qualquer pacotes NuGet existente armazenado em cache e impede que o buildpack armazene em cache qualquer novo pacote.
 
 É possível limpar o cache definindo a variável de ambiente `CACHE_NUGET_PACKAGES` como `false` usando a CLI do {{site.data.keyword.Bluemix_notm}}:
 

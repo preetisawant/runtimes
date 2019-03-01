@@ -14,5 +14,5 @@ lastupdated: "2018-02-22"
 
 Dépannez vos applications et packs de construction PHP avec les ressources suivantes :
 
-* [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html#runtimes)
-* [Traitement des incidents liés aux contextes d'exécution : PHP](../common/ts_runtimes.html#ts_php)
+* [Traitement des incidents liés aux contextes d'exécution](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Traitement des incidents liés aux contextes d'exécution : PHP](docs/runtimes-common/ts_runtimes.html#ts_php)

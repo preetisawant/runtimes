@@ -14,4 +14,4 @@ lastupdated: "2018-02-22"
 
 Tomcat アプリケーションおよびビルドパックのトラブルシューティングには、以下の資料を使用できます。
 
-* [ランタイムに関するトラブルシューティング](../common/ts_runtimes.html#runtimes)
+* [ランタイムに関するトラブルシューティング](/docs/runtimes-common/ts_runtimes.html#runtimes)

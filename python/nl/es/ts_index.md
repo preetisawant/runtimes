@@ -9,10 +9,10 @@ lastupdated: "2018-02-22"
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Recursos para la resolución de problemas
+# Ressources de dépannage
 {: #ts_python}
 
-Resuelva los problemas de los paquetes de compilación y las aplicaciones Python con los siguientes recursos:
+Dépannez vos applications et packs de construction Python avec les ressources suivantes :
 
-* [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html#runtimes)
-* [Resolución de problemas de tiempos de ejecución: Python](../common/ts_runtimes.html#ts_python)
+* [Traitement des incidents liés aux contextes d'exécution](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Traitement des incidents liés aux contextes d'exécution : Python](docs/runtimes-common/ts_runtimes.html#ts_python)

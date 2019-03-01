@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -30,7 +30,7 @@ In questi documenti, i riferimenti alla CLI Cloud Foundry sono ora aggiornati al
 
 Ti serviranno i seguenti account e strumenti:
 * [Account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
+* [CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
 * [Node ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://nodejs.org/en/){: new_window}
 
@@ -102,7 +102,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
+  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
   ```
 ibmcloud login --sso
   ```
@@ -115,7 +115,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](/docs/account/orgs_spaces.html).
     {: tip}
 
 1. Dall'interno della directory *get-started-node*, trasmetti la tua applicazione a {{site.data.keyword.Bluemix_notm}}.
@@ -132,6 +132,8 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
+Puoi anche andare all'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources) per visualizzare la tua applicazione.
+
 Puoi risolvere gli errori nel processo di distribuzione eseguendo il comando `ibmcloud cf logs <Your-App-Name> --recent`.
 {: tip}
 
@@ -143,8 +145,8 @@ Successivamente, aggiungeremo un database NoSQL {{site.data.keyword.cloudant_sho
 1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Crea risorsa**.
 1. Cerca **{{site.data.keyword.cloudant_short_notm}}** e seleziona il servizio.
 1. Per **Metodi di autenticazione disponibili**, seleziona **Utilizza sia credenziali legacy che IAM**. Puoi lasciare le impostazioni predefinite per gli altri campi. Fai clic su **Crea** per creare il servizio.
-1. Nella navigazione, vai a **Connessioni**. Seleziona la tua applicazione e fai clic su **Crea connessione**.
-1. Connetti la tua applicazione utilizzando i valori predefiniti e fai clic su **Collega e riprepara l'applicazione**. Quindi, quando ti viene richiesto, fai clic su **Riprepara**.
+1. Nella navigazione, vai a **Connessioni** e fai clic su **Crea connessione**. Seleziona la tua applicazione e fai clic su **Connetti**.
+1. Utilizzando i valori predefiniti, fai clic su **Collega e riprepara l'applicazione** per connettere il database alla tua applicazione. Fai clic su **Riprepara** quando ti viene richiesto.
 
    {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
 
@@ -172,7 +174,7 @@ Ora aggiorneremo il tuo codice locale per puntare a questo database. Creeremo un
   ```
   {: codeblock}
 
-2. Nel tuo browser, vai al dashboard {{site.data.keyword.Bluemix_notm}} e seleziona **_la_tua_applicazione_ > Connessioni**. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e seleziona **Visualizza credenziali**.
+2. Trova la tua applicazione nell'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources). Nella pagina Dettagli servizio per la tua applicazione, fai clic su **Connessioni** nella barra laterale. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) e seleziona **Visualizza credenziali**.
 
 3. Copia e incolla solo l'`url` dalle credenziali nel campo `url` del file `vcap-local.json`, sostituendo `CLOUDANT_DATABASE_URL`.
 

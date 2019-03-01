@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-02"
+  years: 2015, 2019
+lastupdated: "2019-01-01"
 
 ---
 
@@ -14,6 +14,23 @@ lastupdated: "2018-11-02"
 
 ## Liberty ビルドパックの最新更新のリスト。
 
+### 2019 年 2 月 1 日: Liberty ビルドパック v3.28-20190127-1723 の更新
+
+* デフォルトの Liberty ランタイム GA バージョンは 18.0.0.4 リリースです。
+* 代替 Liberty ランタイム GA バージョン 19.0.0.1 が追加されました。  
+* 月次 Liberty ベータ・リリースが削除されました。  
+* IBM JRE バージョンが 8 SR5 FP7 に更新されました。
+* MQ クライアントが 9.1.0.0 リリースに更新されました。
+* 自動スケーリング・エージェントが更新されました。
+
+
+### 2018 年 12 月 14 日: 更新された Liberty ビルドパック v3.27-20181130-1702
+
+* ビルドパックに Java Platform, Enterprise Edition 8.0 が組み込まれるようになりました。アプリケーションがプッシュされるときに Java EE 8 をインストールする必要がなくなりました。  
+* デフォルトの Liberty ランタイム・バージョンが 18.0.0.4 リリースに更新されました。
+* 月次 Liberty ランタイム・バージョンが 2018.11.0.0 リリースに更新されました。
+* IBM JRE バージョンが 8 SR5 FP26 に更新されました。
+
 ### 2018 年 10 月 29 日: 更新された Liberty ビルドパック v3.26-20181023-1545
 
 * デフォルトの Liberty ランタイム・バージョン `18.0.0.3` が [CVE-2014-7810 セキュリティー脆弱性 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055) についてのフィックスを含むように更新されました。
@@ -21,7 +38,7 @@ lastupdated: "2018-11-02"
 * IBM JRE バージョンが 8 SR5 FP22 に更新されました。
 
 ### 2018 年 9 月 21 日: 更新された Liberty ビルドパック v3.25-20180918-1034
-* ビルドパックは Java Platform, Enterprise Edition 8.0 をサポートするようになりました。Java EE 8 を使用するには、アプリをプッシュするときに `javaee-8.0` Liberty フィーチャーをインストールします。詳しくは、『[Liberty フィーチャーのインストール](installFeatures.html)』を参照してください。
+* ビルドパックは Java Platform, Enterprise Edition 8.0 をサポートするようになりました。 Java EE 8 を使用するには、アプリをプッシュするときに `javaee-8.0` Liberty フィーチャーをインストールします。 詳しくは、『[Liberty フィーチャーのインストール](installFeatures.html)』を参照してください。
 * デフォルトの Liberty ランタイム・バージョンが 18.0.0.3 リリースに更新されました。
 * 月次 Liberty ランタイム・バージョンが [2018.8.0.1 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/) リリースに更新されました。
 * IBM JRE バージョンが 8 SR5 FP20 に更新されました。
@@ -117,8 +134,8 @@ lastupdated: "2018-11-02"
 * デフォルトの Liberty ランタイムには PI75512 WebSockets iFix も含まれます。
 * 月次 Liberty ランタイム・バージョンが [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) リリースに更新されました。
 * IBM JRE バージョン 8 および 7.1 が SR4 FP1 に更新されました。
-* 自動構成サポートも [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html) を処理できるように拡張されました。
-* [Cloudant NoSQL データベース](https://console.ng.bluemix.net/docs/services/Cloudant/index.html)の自動構成サポートが更新され、org.ektorp の代わりに Cloudant Java Library を使用するオプションが提供されるようになりました。 Cloudant Java Library の使用を有効にするには、次の環境変数を設定する必要があります。    
+* 自動構成サポートも [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html) を処理できるように拡張されました。
+* [Cloudant NoSQL データベース](/docs/services/Cloudant/index.html)の自動構成サポートが更新され、org.ektorp の代わりに Cloudant Java Library を使用するオプションが提供されるようになりました。 Cloudant Java Library の使用を有効にするには、次の環境変数を設定する必要があります。    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -129,12 +146,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 2017 年 1 月 23 日: 更新された Liberty ビルドパック v3.7-20170118-2046
 * 月次 Liberty ランタイム・バージョンが [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) リリースに更新されました。
 * IBM JRE バージョン 8 が SR3 FP22 バージョンに更新されました。
-* [自動構成](autoConfig.html)サポートも [Compose for MongoDB サービス](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (現在は月次 Liberty ランタイムでのみ使用可能) を処理できるように拡張されました。
+* [自動構成](autoConfig.html)サポートも [Compose for MongoDB サービス](/docs/services/ComposeForMongoDB/index.html) (現在は月次 Liberty ランタイムでのみ使用可能) を処理できるように拡張されました。
 
 ### 2016 年 12 月 13 日: 更新された Liberty ビルドパック v3.6-20161209-1351
 * デフォルトの Liberty ランタイム・バージョンが [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) リリースに更新されました。
 * IBM JRE バージョン 8 が SR3 FP21 バージョンに更新されました。
-* [自動構成](autoConfig.html)サポートも [Compose for PostgreSQL サービス](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html)を処理できるように拡張されました。
+* [自動構成](autoConfig.html)サポートも [Compose for PostgreSQL サービス](/docs/services/ComposeForPostgreSQL/index.html)を処理できるように拡張されました。
 * このビルドパックでは、[Auto-Scaling サービス](/docs/services/Auto-Scaling/index.html)用の更新版のエージェントも提供されます。
 * このビルドパックは、`server.xml` ファイル内のインクルード・ロケーションの一部として環境変数をサポートするように更新されました。
 
@@ -146,7 +163,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * Monitoring and Analytics サービス統合が [Diego ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) を処理できるように修正されました。
 * [Dynatrace](dynatrace.html) サービス統合が更新され、Dynatrace サービス・オファリングの処理が改善されました。
 * PostgreSQL および MySQL タイプのサービス用の[自動構成](autoConfig.html)サポートが、サーバー・ディレクトリーまたはパッケージされたサーバーのデプロイ時により良く機能するように改善されました。
-* [アプリケーション管理ユーティリティー devconsole および shell](../common/app_mng.html#app_management) によって使用される Node.js ランタイムは最新の `0.12.17` バージョンに更新されました。
+* [アプリケーション管理ユーティリティー devconsole および shell](docs/runtimes-common/app_mng.html#app_management) によって使用される Node.js ランタイムは最新の `0.12.17` バージョンに更新されました。
 * Liberty ランタイムの[セキュリティー修正](http://www.ibm.com/support/docview.wss?uid=swg21994945)が含まれています。
 
 ### 2016 年 11 月 1 日: Liberty ビルドパック v3.4.1-20161030-2241 の更新

@@ -21,7 +21,7 @@ Vous pouvez utiliser les méthodes suivantes pour déployer vos applications Lib
 * Envoi par commande push d'un répertoire de serveur
 * Envoi par commande push d'un package de serveur
 
-Important : quand vous déployez une application avec le pack de construction Liberty, attribuez une valeur d'au moins 512 Mo comme limite de mémoire pour vos applications. Pour plus d'informations, voir [Limites mémoire et pack de construction Liberty](memoryLimits.html).
+Important : quand vous déployez une application avec le pack de construction Liberty, attribuez une valeur d'au moins 512 Mo comme limite de mémoire pour vos applications. Pour plus d'informations, voir [Limites mémoire et pack de construction Liberty](/docs/runtimes/liberty/memoryLimits.html).
 
 ## Applications autonomes
 {: #stand_alone_apps}
@@ -62,7 +62,7 @@ Ces fonctions correspondent aux fonctions du profil Web Java EE 7. Vous pouvez s
 ```
 {: codeblock}
 
-Remarque : Pour optimiser vos résultats, définissez les fonctions Liberty avec la variable d'environnement JBP_CONFIG_LIBERTY ou déployez votre application en tant que [répertoire de serveur](optionsForPushing.html#server_directory) ou [package de serveur](optionsForPushing.html#packaged_server) avec un fichier server.xml personnalisé. La définition de cette variable d'environnement garantit que votre application n'utilisera que la fonction dont elle a besoin et qu'elle ne sera pas affectée par les modifications apportées au jeu de fonctions Liberty par défaut du pack de construction. Si vous devez fournir une configuration Liberty supplémentaire en plus du jeu de fonctions, utilisez l'option de [répertoire de serveur](optionsForPushing.html#server_directory) ou de [package de serveur](optionsForPushing.html#packaged_server) pour déployer votre application.
+Remarque : Pour optimiser vos résultats, définissez les fonctions Liberty avec la variable d'environnement JBP_CONFIG_LIBERTY ou déployez votre application en tant que [répertoire de serveur](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou [package de serveur](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) avec un fichier server.xml personnalisé. La définition de cette variable d'environnement garantit que votre application n'utilisera que la fonction dont elle a besoin et qu'elle ne sera pas affectée par les modifications apportées au jeu de fonctions Liberty par défaut du pack de construction. Si vous devez fournir une configuration Liberty supplémentaire en plus du jeu de fonctions, utilisez l'option de [répertoire de serveur](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou de [package de serveur](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) pour déployer votre application.
 
 Si vous avez déployé un fichier WAR, l'application Web est accessible sous la racine de contexte, telle que définie dans le fichier ibm-web-ext.xml imbriqué. Si le fichier ibm-web-ext.xml n'existe pas ou ne spécifie pas de racine de contexte, l'application est accessible sous le contexte racine. Exemple :
 

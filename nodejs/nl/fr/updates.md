@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-13"
+  years: 2015, 2019
+lastupdated: "2019-01-07"
 
 ---
 
@@ -13,6 +13,18 @@ lastupdated: "2018-11-13"
 {: #latest_updates}
 
 Liste des dernières mises à jour apportées au pack de construction sdk-for-nodejs.
+
+## 23 janvier 2019 : Mise à jour du pack de construction Node.js v3.25.1
+
+Le pack de construction SDK for Node.js v3.25 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 et 10.15.0. La valeur par défaut est la version 6.x la plus récente, soit la 6.16.0 actuellement. Les versions 6.15.0, 8.14.0 et 10.14.0 incluses dans le dernier pack de construction comportaient une régression. Les régressions ont été corrigées dans les versions 6.16.0, 8.15.0 et 10.15.0 qui les remplacent désormais.
+
+## 7 janvier 2019 : Mise à jour du pack de construction Node.js v3.25
+
+Le pack de construction SDK for Node.js v3.25 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.14.4, 6.15.0, 8.11.4, 8.14.0, 10.10.0 et 10.14.0. La valeur par défaut est la version 6.x la plus récente, soit la 6.15.0 actuellement. Ce pack de construction corrige également un bogue mineur du point d'ancrage Dynatrace.
+
+## 5 décembre 2018 : Mise à jour du pack de construction Node.js v3.24
+
+Le pack de construction SDK for Node.js v3.24 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0 et 10.10.0. La valeur par défaut est la version 6.x la plus récente, soit la 6.14.4 actuellement. Ce pack de construction corrige également un bogue mineur du point d'ancrage Dynatrace.
 
 ## 7 septembre 2018 : Mise à jour du pack de construction Node.js v3.22
 {:#fips-deprecation}

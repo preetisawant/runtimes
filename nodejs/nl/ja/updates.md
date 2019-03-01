@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-13"
+  years: 2015, 2019
+lastupdated: "2019-01-07"
 
 ---
 
@@ -13,6 +13,18 @@ lastupdated: "2018-11-13"
 {: #latest_updates}
 
 sdk-for-nodejs ビルドパックの最新更新のリスト。
+
+## 2019 年 1 月 23 日: 更新された Node.js ビルドパック v3.25.1
+
+SDK for Node.js buildpack v3.25 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7 および Node.js コミュニティー・バージョン 6.14.4、6.16.0、8.11.4、8.15.0、10.10.0、および 10.15.0 が提供されます。デフォルトは最新の 6.x です。したがって、現在は 6.16.0 です。最後のビルドパックに組み込まれていたバージョン 6.15.0、8.14.0、および 10.14.0 は回帰がありました。この回帰は、現在代わりに組み込まれた 6.16.0、8.15.0、および 10.15.0 で修正されています。
+
+## 2019 年 1 月 7 日: 更新された Node.js ビルドパック v3.25
+
+SDK for Node.js buildpack v3.25 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7 および Node.js コミュニティー・バージョン 6.14.4、6.15.0、8.11.4、8.14.0、10.10.0、および 10.14.0 が提供されます。デフォルトは最新の 6.x です。したがって、現在は 6.15.0 です。このビルドパックでは、Dynatrace フックの小さいバグも修正されます。
+
+## 2018 年 12 月 5 日: 更新された Node.js ビルドパック v3.24
+
+SDK for Node.js ビルドパック v3.24 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7 および Node.js コミュニティー・バージョン 6.14.3、6.14.4、8.11.3、8.11.4、10.9.0、および 10.10.0 が提供されます。デフォルトは最新の 6.x です。したがって、現在は 6.14.4 です。このビルドパックでは、Dynatrace フックの小さいバグも修正されます。
 
 ## 2018 年 9 月 7 日: 更新された Node.js ビルドパック v3.22
 {:#fips-deprecation}
@@ -34,13 +46,13 @@ SDK for Node.js ビルドパック v3.21 では、IBM SDK for Node.js バージ�
 * [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
 
 ## 2018 年 6 月 1 日: 更新された Node.js ビルドパック v3.20.2
-SDK for Node.js ビルドパック v3.20.2 では、現行の Node.js ランタイムに対する Dynatrace Managed PaaS 統合が追加されます。 
+SDK for Node.js ビルドパック v3.20.2 では、現行の Node.js ランタイムに対する Dynatrace Managed PaaS 統合が追加されます。
 
 ## 2018 年 5 月 17 日: 更新された Node.js ビルドパック v3.20.1
-SDK for Node.js ビルドパック v3.20.1 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が修正されます。 
+SDK for Node.js ビルドパック v3.20.1 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が修正されます。
 
 ## 2018 年 4 月 9 日: 更新された Node.js ビルドパック v3.20
-SDK for Node.js ビルドパック v3.20 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が追加されます。 
+SDK for Node.js ビルドパック v3.20 では、現行の Node.js ランタイムに対する Dynatrace PaaS 統合が追加されます。
 
 ## 2018 年 3 月 16 日: 更新された Node.js ビルドパック v3.19
 SDK for Node.js ビルドパック v3.19 では、IBM SDK for Node.js バージョン 4.8.5、4.8.7、6.12.3、6.13.0、8.9.3、および 8.9.4 が提供されます。 デフォルトは最新の 6.x です。したがって、現在は 6.13.0 です。

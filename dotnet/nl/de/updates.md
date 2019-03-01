@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-20"
+lastupdated: "2018-12-12"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +12,37 @@ lastupdated: "2018-09-20"
 {: #latest_updates}
 
 Liste mit den neuesten Aktualisierungen im Buildpack 'ASP.NET Core'
+
+## 12. Dezember 2018: ASP.NET Core Buildpack v2.1-20181205-1536 aktualisiert
+Dieses Release enthält Version 2.2.0 des .NET Core-Cloud Foundry-Buildpacks.
+
+* Unterstützung für .NET Aspnetcore 2.1.2 hinzugefügt
+* Unterstützung für .NET Aspnetcore 2.1.4 hinzugefügt
+* Unterstützung für .NET Aspnetcore 2.1.5 hinzugefügt
+* Unterstützung für .NET Runtime 1.0.11 hinzugefügt
+* Unterstützung für .NET Runtime 1.0.12 hinzugefügt
+* Unterstützung für .NET Runtime 1.1.9 hinzugefügt
+* Unterstützung für .NET Runtime 1.1.10 hinzugefügt
+* Unterstützung für .NET Runtime 2.0.7 hinzugefügt
+* Unterstützung für .NET Runtime 2.0.9 hinzugefügt
+* Unterstützung für .NET Runtime 2.1.2 hinzugefügt
+* Unterstützung für .NET Runtime 2.1.5 hinzugefügt
+* Unterstützung für .NET SDK 1.0.4 hinzugefügt
+* Unterstützung für .NET SDK 1.1.10 hinzugefügt
+* Unterstützung für .NET SDK 1.1.11 hinzugefügt
+* Unterstützung für .NET SDK 2.0.3 hinzugefügt
+* Unterstützung für .NET SDK 2.1.302 hinzugefügt
+* Unterstützung für .NET SDK 2.1.403 hinzugefügt
+* Unterstützung für .NET Framework 2.1.0 entfernt
+* Unterstützung für .NET Framework 2.1.1 entfernt
+* Unterstützung für .NET Framework 1.1.8 entfernt
+* Unterstützung für .NET Core SDK 2.0.2 entfernt
+* Unterstützung für .NET Core SDK 2.0.3 entfernt
+* Unterstützung für .NET Core SDK 2.1.201 entfernt
+* Unterstützung für .NET Core SDK 2.1.300 entfernt
+* Unterstützung für .NET Core SDK 2.1.301 entfernt
+* Node.js auf Version 6.14.4 aktualisiert
+
 
 ## 20. September 2018: ASP.NET Core Buildpack v2.0-20180918-1356 aktualisiert
 
@@ -142,4 +173,4 @@ Diese Version des Buildpacks enthält die folgenden Änderungen:
 ```
 {: codeblock}
 
-* Die Verwendung des Nowin-Web-Servers wurde in diesem Buildpack entfernt. Dafür wird der [Kestrel](https://github.com/aspnet/KestrelHttpServer)-Web-Server verwendet.
+* Die Verwendung des Nowin-Web-Servers wurde in diesem Buildpack entfernt. Stattdessen wird der [Kestrel](https://github.com/aspnet/KestrelHttpServer)-Web-Server verwendet. 

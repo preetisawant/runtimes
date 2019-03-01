@@ -28,8 +28,8 @@ var port = (process.env.PORT || 3000);
 ## Applicazione starter
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} Fornisce un'applicazione starter Node.js.  L'applicazione starter Node.js è un'applicazione Node.js semplice che fornisce un template che puoi utilizzare per la tua applicazione. Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente {{site.data.keyword.Bluemix_notm}} Consulta [Utilizzo di applicazioni starter](../common/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+{{site.data.keyword.Bluemix_notm}} Fornisce un'applicazione starter Node.js.  L'applicazione starter Node.js è un'applicazione Node.js semplice che fornisce un template che puoi utilizzare per la tua applicazione. Puoi sperimentare l'applicazione starter ed effettuare e inviare modifiche all'ambiente {{site.data.keyword.Bluemix_notm}} Consulta [Utilizzo di applicazioni starter](/docs/runtimes-common/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
 
 ## Gestione applicazioni
 {: #app_management}
-{{site.data.keyword.Bluemix_notm}} fornisce diversi programmi di utilità per la gestione e il debug della tua applicazione Node.js.  Consulta [Gestione applicazioni](../common/app_mng.html) per i dettagli completi.
+{{site.data.keyword.Bluemix_notm}} fornisce diversi programmi di utilità per la gestione e il debug della tua applicazione Node.js.  Consulta [Gestione applicazioni](/docs/runtimes-common/app_mng.html) per i dettagli completi.

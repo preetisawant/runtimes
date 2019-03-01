@@ -13,7 +13,7 @@ lastupdated: "2018-11-09"
 # Intégration de services tiers à l'aide de points d'ancrage
 {: #hooks}
 
-Vous pouvez utiliser des points d'ancrage pour facilement intégrer des services tiers au kit SDK pour le pack de construction Node.js. Notez qu'IBM ne fournit pas de prise en charge pour les services tiers que vous intégrez. Pour plus d'informations sur la prise en charge, voir [Services tiers](../common/buildpackSupport.html#third-party).
+Vous pouvez utiliser des points d'ancrage pour facilement intégrer des services tiers au kit SDK pour le pack de construction Node.js. Notez qu'IBM ne fournit pas de prise en charge pour les services tiers que vous intégrez. Pour plus d'informations sur la prise en charge, voir [Services tiers](/docs/runtimes-common/buildpackSupport.html#third-party).
 
 Le kit SDK pour le pack de construction Node.js inclut le point d'ancrage Dynatrace. Dynatrace active la surveillance pour les applications Node.js. Vous trouverez davantage d'informations sur l'utilisation du point d'ancrage Dynatrace dans le pack de construction dans la [documentation Dynatrace ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")]( https://www.dynatrace.com/support/help/cloud-platforms/cloud-foundry/application-only/deploy-oneagent-on-cloud-foundry-for-application-only-monitoring/){: new_window}.
 

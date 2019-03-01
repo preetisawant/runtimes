@@ -14,6 +14,6 @@ lastupdated: "2018-09-13"
 
 Resuelva los problemas de los paquetes de compilación y las aplicaciones ASP.NET Core con los siguientes recursos:
 
-* [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html#runtimes)
+* [Resolución de problemas de tiempos de ejecución](runtimes-common/ts_runtimes.html#runtimes)
 * [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
 * [Visión general de ASP.NET Core](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

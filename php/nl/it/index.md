@@ -26,7 +26,7 @@ Il php_buildpack viene utilizzato nelle seguenti condizioni:
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}} fornisce un'applicazione starter PHP.  L'applicazione starter PHP è una semplice applicazione PHP che fornisce un template che puoi utilizzare per la tua applicazione. Puoi fare delle prove con l'applicazione starter, apportare modifiche ed eseguirne il push
-all'ambiente {{site.data.keyword.Bluemix}}.  Consulta il documento relativo all'[utilizzo delle applicazioni starter](../common/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
+all'ambiente {{site.data.keyword.Bluemix}}.  Consulta il documento relativo all'[utilizzo delle applicazioni starter](docs/runtimes-common/starter_app_usage.html) per assistenza nell'utilizzo dell'applicazione starter.
 
 ## Forza HTTPS in tutte le pagine della tua applicazione
 {: #enforce_https}

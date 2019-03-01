@@ -10,18 +10,17 @@ Ruby
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [プロキシーの処理](runtimes/common/workingWithProxy.html)
+	{: .topicgroup}
+    スターター・アプリケーションとコミュニティーのビルドパック
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
-    スターター・アプリケーションおよびコミュニティー・ビルドパック
-        [スターター・アプリケーションの使用](runtimes/common/starter_app_usage.html)
-        [コミュニティー・ビルドパックの使用](runtimes/common/byob.html)
+	/runtimes-common/runtimes-common-working_with_proxy
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [ランタイムに関するトラブルシューティング](runtimes/common/ts_runtimes.html)
-    [ランタイム・バージョン](runtimes/ruby/index.html#runtime_versions)
-    [ビルドパックのサポート・ステートメント](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-runtimes
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

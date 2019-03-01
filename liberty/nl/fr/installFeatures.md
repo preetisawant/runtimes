@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -21,16 +21,16 @@ Pour des informations sur l'utilisation de points d'ancrage de pré-exécution, 
 
 1. Dans le répertoire racine de l'application à envoyer par commande push à {{site.data.keyword.cloud_notm}}, créez un répertoire `.profile.d`.
 
-1. Dans le répertoire `.profile.d`, créez un fichier script qui exécute la commande `installUtility`, comme illustré dans l'exemple suivant. 
+1. Dans le répertoire `.profile.d`, créez un fichier script qui exécute la commande `installUtility`, comme illustré dans l'exemple suivant.
 
-   Cet exemple installe la fonction `javaee-8.0`.
+   Cet exemple installe la fonction `audit-1.0`.
 
    ```
    #!/bin/sh
-   echo "Installing javaee-8.0"
+   echo "Installing audit-1.0"
    export PATH=$PATH:$HOME/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
+   $HOME/.liberty/bin/installUtility install audit-1.0 --acceptLicense
    ```
    {: codeblock}
 
@@ -56,7 +56,7 @@ Pour des informations sur l'utilisation de points d'ancrage de pré-exécution, 
     Si la fonction est installée, la sortie comporte les messages suivants :
 
     ```
-    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing javaee-8.0
+    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing audit-1.0
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Establishing a connection to the configured repositories ...
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT This process might take several minutes to complete.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Successfully connected to all configured repositories.

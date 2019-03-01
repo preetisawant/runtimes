@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-20"
+lastupdated: "2018-12-12"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +12,37 @@ lastupdated: "2018-09-20"
 {: #latest_updates}
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build ASP.NET Core.
+
+## 12 dicembre 2018: aggiornamento del pacchetto di build ASP.NET Core v2.1-20181205-1536
+Questa release include la versione 2.2.0 del pacchetto di build Cloud Foundry dotnet-core.
+
+* Aggiunto il supporto per .NET Aspnetcore 2.1.2
+* Aggiunto il supporto per .NET Aspnetcore 2.1.4
+* Aggiunto il supporto per .NET Aspnetcore 2.1.5
+* Aggiunto il supporto per .NET Runtime 1.0.11
+* Aggiunto il supporto per .NET Runtime 1.0.12
+* Aggiunto il supporto per .NET Runtime 1.1.9
+* Aggiunto il supporto per .NET Runtime 1.1.10
+* Aggiunto il supporto per .NET Runtime 2.0.7
+* Aggiunto il supporto per .NET Runtime 2.0.9
+* Aggiunto il supporto per .NET Runtime 2.1.2
+* Aggiunto il supporto per .NET Runtime 2.1.5
+* Aggiunto il supporto per .NET SDK 1.0.4
+* Aggiunto il supporto per .NET SDK 1.1.10
+* Aggiunto il supporto per .NET SDK 1.1.11
+* Aggiunto il supporto per .NET SDK 2.0.3
+* Aggiunto il supporto per .NET SDK 2.1.302
+* Aggiunto il supporto per .NET SDK 2.1.403
+* Rimosso il supporto per .NET Framework 2.1.0
+* Rimosso il supporto per .NET Framework 2.1.1
+* Rimosso il supporto per .NET Framework 1.1.8
+* Rimosso il supporto per l'SDK .NET Core 2.0.2
+* Rimosso il supporto per l'SDK .NET Core 2.0.3
+* Rimosso il supporto per l'SDK .NET Core 2.1.201
+* Rimosso il supporto per l'SDK .NET Core 2.1.300
+* Rimosso il supporto per l'SDK .NET Core 2.1.301
+* Aggiornamento della versione di Node.js alla 6.14.4
+
 
 ## 20 settembre 2018: aggiornamento del pacchetto di build ASP.NET Core v2.0-20180918-1356
 
@@ -142,4 +173,4 @@ Questa versione del pacchetto di build include le seguenti modifiche:
 ```
 {: codeblock}
 
-* L'utilizzo del server web Nowin è stato rimosso da questo pacchetto di build e viene invece utilizzato il server [Kestrel](https://github.com/aspnet/KestrelHttpServer).
+* L'utilizzo del server Web Nowin è stato rimosso da questo pacchetto di build. Viene invece utilizzato il server Web [Kestrel](https://github.com/aspnet/KestrelHttpServer).

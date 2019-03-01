@@ -28,7 +28,7 @@ Le pack de construction Node.js peut accéder aux sites externes suivants. Il es
 * https://iojs.org permet d'extraire une version antérieure d'un noeud qui n'est pas contenue dans le pack de construction ou non disponible sur https://semver.herokuapp.com.
 * https://registry.npmjs.org est utilisé pour extraire des modules de noeud comme express.
 
-Pour minimiser l'ensemble de sites mis en liste blanche, configurez vos applications afin qu'elles utilisent une version du moteur Node qui soit incluse dans le pack de construction de SDK for Node.js.  Consultez [Dernières mises à jour](./updates.html) pour connaître l'ensemble des versions de moteur Node incluses dans le pack de construction.  Si vous configurez votre application de telle sorte qu'elle utilise ces versions de moteur Node, seul le site https://registry.npmjs.org est nécessaire au téléchargement des modules.
+Pour minimiser l'ensemble de sites mis en liste blanche, configurez vos applications afin qu'elles utilisent une version du moteur Node qui soit incluse dans le pack de construction de SDK for Node.js.  Consultez [Dernières mises à jour](/docs/runtimes/nodejs/updates.html) pour connaître l'ensemble des versions de moteur Node incluses dans le pack de construction.  Si vous configurez votre application de telle sorte qu'elle utilise ces versions de moteur Node, seul le site https://registry.npmjs.org est nécessaire au téléchargement des modules.
 
 Sachez que quand de nouvelles versions du pack de construction de SDK for Node.js sont installées, l'ensemble des versions de moteur est souvent remplacé par un ensemble de versions plus récentes.  Il est possible que vous deviez reconfigurer votre application pour spécifier une version plus récente du moteur Node incluse dans le pack de construction.
 
@@ -63,4 +63,4 @@ Dès que vous effectuez un changement dans les dépendances du fichier `package.
 
 Dans certains environnements tels que [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) et
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), un proxy peut être configuré. Voir
-[Utilisation d'un proxy](/docs/manageapps/workingWithProxy.html) pour plus de détails.
+[Utilisation d'un proxy](/docs/runtimes-common/workingWithProxy.html) pour plus de détails.

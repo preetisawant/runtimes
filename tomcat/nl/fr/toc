@@ -10,18 +10,17 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Utilisation d'un proxy](runtimes/common/workingWithProxy.html)
+	{: .topicgroup}
+    Applications de démarrage et packs de construction de communauté
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
-    Applications de démarrage et packs de construction de la communauté
-        [Utilisation des applications de démarrage](runtimes/common/starter_app_usage.html)
-        [Utilisation de packs de construction de communauté](runtimes/common/byob.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Traitement des incidents liés aux contextes d'exécution](runtimes/common/ts_runtimes.html)
-    [Versions d'environnement d'exécution](runtimes/tomcat/index.html#runtime_versions)
-    [Déclaration de support pour les packs de construction](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-runtimes
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

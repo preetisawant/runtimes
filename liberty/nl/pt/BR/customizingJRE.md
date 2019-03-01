@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-03"
+  years: 2015, 2019
+lastupdated: "2019-01-11"
 
 ---
 
@@ -52,12 +52,33 @@ configure a variável de ambiente a seguir:
 ```
 {: codeblock}
 
-A propriedade da versão pode ser configurada para um intervalo de versão como 1.7.+ ou qualquer versão específica listada na [lista de versões do OpenJDK disponíveis](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Para obter os melhores resultados, use Java 8.
+A propriedade da versão pode ser configurada para um intervalo de versão como 1.7.+, 1.8.+ ou qualquer versão específica listada na [lista de versões disponíveis do OpenJDK](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Para obter os melhores resultados, use Java 8.
+
+## OpenJ9
+{: #openj9}
+
+Opcionalmente, os aplicativos podem ser configurados para execução com o OpenJ9, como o JRE ou o JDK. Para permitir que um aplicativo seja executado com o OpenJ9, configure a variável de ambiente da JVM como "openj9". Por exemplo, usando a ferramenta de linha de comandos {{site.data.keyword.Bluemix_notm}}, execute o comando:
+```
+    ibmcloud cf set-env myapp JVM 'openj9'
+```
+{: codeblock}
+
+Se ativado, o OpenJ9 versão 11 será usado por padrão. Use a variável de ambiente JBP_CONFIG_OPENJ9 para especificar uma versão alternativa do OpenJ9. Por exemplo, para usar o OpenJ9 8 mais recente, configure a variável de ambiente a seguir:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
+```
+{: codeblock}
+
+Se ativado, o OpenJ9 JRE será usado por padrão. Use a variável de ambiente JBP_CONFIG_OPENJ9 para usar a versão JDK do OpenJ9. Por exemplo, para usar o JDK do OpenJ9, configure a variável de ambiente a seguir:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
+```
+{: codeblock}
 
 ## Oracle JRE
 {: #oracle_jre}
 
-Consulte [Usando o Oracle JRE](oracle_jre.html) para obter informações sobre como usar o Oracle JRE.
+Consulte [Usando seu próprio JRE](/docs/runtimes/liberty/using_own_jre.html) para obter informações sobre o uso do Oracle JRE.
 
 ## Configurando as opções do JRE
 {: #configuring_jre}
@@ -70,11 +91,11 @@ padrão considerando:
 
 * Um limite de memória de um aplicativo.  As configurações de heap da JVM aplicadas
 são calculadas com base em:
-  * o limite de memória de um aplicativo, conforme explicado em [Limites de memória e o buildpack do Liberty](memoryLimits.html#memory_limits)
+  * o limite de memória de um aplicativo, conforme explicado em [Limites de memória e o buildpack do Liberty](/docs/runtimes/liberty/memoryLimits.html#memory_limits)
   * o tipo de JRE, uma vez que as opções relacionadas ao heap para a JVM variam de acordo
 com as opções suportadas do JRE.
 
-* Os [recursos do Liberty suportados no {{site.data.keyword.Bluemix_notm}}](libertyFeatures.html#libertyfeatures).
+* Os [recursos do Liberty suportados no {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures).
   * As transações do banco de dados global two-phase commit não são suportadas no {{site.data.keyword.Bluemix_notm}} e, portanto, são desativadas configurando -Dcom.ibm.tx.jta.disable2PC=true.
 
 * O ambiente do {{site.data.keyword.Bluemix_notm}}.
@@ -268,7 +289,7 @@ Implementando um aplicativo com opções customizadas da JVM para ativar a cria�
 ```
 {: codeblock}
 
- Veja a documentação de [Criação de log e rastreio](loggingAndTracing.html#download_dumps) para obter detalhes sobre como visualizar e fazer download de arquivos de dump gerados.
+ Veja a documentação de [Criação de log e rastreio](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps) para obter detalhes sobre como visualizar e fazer download de arquivos de dump gerados.
 
 ### Sobrepondo o JRE
 {: #overlaying_jre}

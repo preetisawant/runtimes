@@ -19,14 +19,14 @@ Le applicazioni Liberty for Java su {{site.data.keyword.Bluemix}} si avvalgono d
 ## Rilevamento
 {: #detection}
 Il pacchetto di build Liberty viene utilizzato quando i seguenti tipi di applicazioni sono distribuiti:
-* [File WAR](optionsForPushing.html#stand_alone_apps)
-* [File EAR](optionsForPushing.html#stand_alone_apps)
-* [Directory server Liberty](optionsForPushing.html#server_directory)
-* [Server in pacchetto Liberty](optionsForPushing.html#packaged_server)
+* [File WAR](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [File EAR](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [Directory server Liberty](/docs/runtimes/liberty/optionsForPushing.html#server_directory)
+* [Server in pacchetto Liberty](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)
 * Java principale
 * [Distzip](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/container-distZip.md)
 
 ## Applicazione starter
 {: #starter_application}
 {{site.data.keyword.Bluemix_notm}} fornisce diverse applicazioni starter Liberty.  Le applicazioni starter Liberty sono applicazioni Liberty semplici che forniscono un template che puoi utilizzare. Puoi fare delle prove con le applicazioni di avvio, apportare modifiche ed eseguirne il push
-all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicazioni starter](../common/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.
+all'ambiente {{site.data.keyword.Bluemix_notm}}.  Consulta [Utilizzo di applicazioni starter](/docs/runtimes-common/starter_app_usage.html) per informazioni sull'utilizzo dell'applicazione starter.

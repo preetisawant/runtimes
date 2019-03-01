@@ -73,4 +73,4 @@ Puede establecer el tamaño de la memoria de almacenamiento dinámico utilizando
 ```
 {: codeblock}
 
-* Especifique el argumento -Xmx en el archivo jvm.options si la aplicación es un [directorio de servidor](optionsForPushing.html#server_directory) o un [servidor empaquetado](optionsForPushing.html#packaged_server). Para obtener más información sobre el uso del archivo `jvm.options` con archivo con el tiempo de ejecución de Liberty, consulte [Establecer argumentos JVM genéricos](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  
+* Especifique el argumento -Xmx en el archivo jvm.options si la aplicación es un [directorio de servidor](/docs/runtimes/liberty/optionsForPushing.html#server_directory) o un [servidor empaquetado](/docs/runtimes/liberty/optionsForPushing.html#packaged_server). Para obtener más información sobre el uso del archivo `jvm.options` con archivo con el tiempo de ejecución de Liberty, consulte [Establecer argumentos JVM genéricos](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -23,14 +23,14 @@ Para obter informações sobre como usar os ganchos de pré-tempo de execução,
 
 1. No diretório `.profile.d`, crie um arquivo de script que executa o comando `installUtility` conforme mostrado no exemplo a seguir.
 
-   Este exemplo instala o recurso `javaee-8.0`.
+   Este exemplo instala o recurso  ` audit-1.0 ` .
 
    ```
    #!/bin/sh
-   echo "Installing javaee-8.0"
+   echo "Installing audit-1.0"
    export PATH=$PATH:$HOME/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
+   $HOME/ .liberty/bin/installUtility install audit-1.0 -- acceptLicense
    ```
    {: codeblock}
 
@@ -56,8 +56,8 @@ Para obter informações sobre como usar os ganchos de pré-tempo de execução,
     Se o recurso foi instalado, a saída mostrará as mensagens a seguir:
 
     ```
-    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing javaee-8.0
-    2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Establishing a connection to the configured repositories ...
+    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Instalando o audit-1.0
+    2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Estabelecendo uma conexão com os repositórios configurados...
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT This process might take several minutes to complete.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Successfully connected to all configured repositories.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Preparing assets for installation. This process might take several minutes to complete.

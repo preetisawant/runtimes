@@ -27,7 +27,7 @@ Node.js ビルドパックは、以下の外部サイトにアクセスする可
 * https://iojs.org は、ビルドパックに含まれておらず、https://semver.herokuapp.com でも入手できない、旧バージョンのノードを取得するために使用します。
 * https://registry.npmjs.org は、express などのノード・モジュールを取得するために使用します。
 
-ホワイトリストに登録される一連のサイトを最小限にするために、SDK for Node.js ビルドパックに含まれている Node エンジン・バージョンを使用するようにアプリケーションを構成してください。  ビルドパックに含まれている一連の Node エンジン・バージョンについては、[最新の更新](./updates.html)を参照してください。  これらの Node エンジン・バージョンを使用するようにアプリケーションを構成する場合、モジュールのダウンロードに必要なのは https://registry.npmjs.org サイトのみです。
+ホワイトリストに登録される一連のサイトを最小限にするために、SDK for Node.js ビルドパックに含まれている Node エンジン・バージョンを使用するようにアプリケーションを構成してください。  ビルドパックに含まれている一連の Node エンジン・バージョンについては、[最新の更新](/docs/runtimes/nodejs/updates.html)を参照してください。  これらの Node エンジン・バージョンを使用するようにアプリケーションを構成する場合、モジュールのダウンロードに必要なのは https://registry.npmjs.org サイトのみです。
 
 新しいバージョンの SDK for Node.js ビルドパックをインストールすると、多くの場合、使用可能な一連のエンジン・バージョンが新しいバージョンに変更されることに注意してください。  ビルドパックに含まれる新しい Node エンジン・バージョンを指定するように、アプリケーションの再構成が必要な場合があります。
 
@@ -60,4 +60,4 @@ npm shrinkwrap
 ## プロキシーの処理
 {: #working_with_proxy}
 
-[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) や [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) などの一部の環境では、プロキシーを構成できます。 詳しくは、[『プロキシーの処理』](/docs/manageapps/workingWithProxy.html)を参照してください。
+[{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) や [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) などの一部の環境では、プロキシーを構成できます。 詳しくは、[『プロキシーの処理』](/docs/runtimes-common/workingWithProxy.html)を参照してください。

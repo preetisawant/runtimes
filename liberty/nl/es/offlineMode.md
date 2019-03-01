@@ -20,8 +20,8 @@ Cuando una aplicación de Liberty se envía por push a {{site.data.keyword.Bluem
 * https://download.run.pivotal.io y https://java-buildpack.cloudfoundry.org se utilizan para acceder a componentes para:
   * [Agente AppDynamics ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.appdynamics.com/)
   * [Controlador JDBC MariaDB ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://mariadb.com/)
-  * [Agente New Relic](monitoring/newRelic.html)
-  * [OpenJDK](customizingJRE.html#OpenJDK)
+  * [Agente New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)
+  * [OpenJDK](/docs/runtimes/liberty/customizingJRE.html#OpenJDK)
   * [Controlador JDBC PostgreSQL ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.postgresql.org)
 * https://dl.zeroturnaround.com/jrebel/ se utiliza para acceder a componentes para [JRebel ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://zeroturnaround.com/software/jrebel/).
 * https://download.ruxit.com/agent/paas/cloudfoundry/java se utiliza para acceder a componentes para el [Agente de Dynatrace Ruxit](dynatrace.html).
@@ -30,4 +30,4 @@ Cuando una aplicación de Liberty se envía por push a {{site.data.keyword.Bluem
 ## Cómo trabajar con un proxy
 {: #working_with_proxy}
 
-En algunos entornos, como por ejemplo [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) y [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), se puede configurar un proxy. Consulte [Cómo trabajar con un proxy](/docs/runtimes/common/workingWithProxy.html) para obtener más detalles.
+En algunos entornos, como por ejemplo [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) y [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), se puede configurar un proxy. Consulte [Cómo trabajar con un proxy](/docs/runtimes-common/workingWithProxy.html) para obtener más detalles.

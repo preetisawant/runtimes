@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -33,37 +33,9 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
 ```
 {: codeblock}
 
-## New Relic サービスの追加
-{: #add_new_relic}
 
-{{site.data.keyword.Bluemix_notm}} 内で New Relic を使用して既存の Java アプリケーションをモニターするには、以下のステップに従ってください。
-1. {{site.data.keyword.Bluemix_notm}} に New Relic サービス・インスタンスを作成します。
-
-  ```
-  ibmcloud cf create-service newrelic standard mynewrelic
-  ```
-  {: codeblock}
-
-2. New Relic サービスを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。  以下のサンプル・アプリケーション・マニフェストを参照してください。
-
-  <pre>
-        &dash;&dash;&dash;
-        applications:
-        - name: myapp
-         memory: 1G
-         instances: 1
-         host: myapp
-         domain: mybluemix.net
-         path: myapp.war
-         services:
-         - mynewrelic
-  </pre>
-  {: codeblock}
-
-3. アプリケーションの {{site.data.keyword.Bluemix_notm}} ダッシュボードからアプリケーションの New Relic ダッシュボードに直接アクセスします。
-
-### ユーザー提供の New Relic サービスの追加
-{: #add_user_provided_new_relic}
+## ユーザー提供の New Relic サービスの追加
+{: #add_user_provided_new_relic} 
 
 既存の New Relic アカウントとライセンス・キーがある場合は、「ユーザー提供のサービス」を使用して既存の New Relic サービスをアプリケーションにバインドできます。
 

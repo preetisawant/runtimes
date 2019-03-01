@@ -37,8 +37,7 @@ Ulteriori informazioni sull'utilizzo della memoria JVM sono disponibili nell'art
 
 Quando distribuisci un'applicazione, viene monitorato l'utilizzo della memoria dell'intero processo. Se l'utilizzo della memoria supera il limite di memoria da te specificato quando è stata distribuita l'applicazione, il kernel arresta il processo. Questa azione si verifica senza alcuna avvertenza e potrebbe manifestarsi in diversi modi.
 
- Se il limite di memoria viene superato durante la distribuzione dell'applicazione, ricevi un messaggio che segnala
-che si è verificato un errore e potresti visualizzare quanto segue.
+ Se il limite di memoria viene superato durante la distribuzione dell'applicazione, ricevi un messaggio che segnala che si è verificato un errore e potresti visualizzare quanto segue.
 
   * Potresti notare che l'applicazione è instabile.
   * Potresti vedere che l'applicazione ha provato l'avvio più volte, sempre con esito negativo.
@@ -82,4 +81,4 @@ metà della memoria disponibile all'heap (50% o 0.50), immetti il seguente coman
 ```
 {: codeblock}
 
-* Specifica l'argomento -Xmx nel file jvm.options se la tua applicazione è una [directory server](optionsForPushing.html#server_directory) o un [server in pacchetto](optionsForPushing.html#packaged_server). Per ulteriori informazioni sull'utilizzo del file `jvm.options` con il runtime Liberty, consulta [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  
+* Specifica l'argomento -Xmx nel file jvm.options se la tua applicazione è una [directory server](/docs/runtimes/liberty/optionsForPushing.html#server_directory) o un [server in pacchetto](/docs/runtimes/liberty/optionsForPushing.html#packaged_server). Per ulteriori informazioni sull'utilizzo del file `jvm.options` con il runtime Liberty, consulta [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  

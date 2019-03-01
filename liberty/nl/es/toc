@@ -21,20 +21,21 @@ Liberty for Java
     customizingJRE.md
     using_own_jre.md
     installFeatures.md
+    usingMonthlyRuntime.md
     usingBetaFeatures.md
-    [Renuncia de servicios enlazados](runtimes/liberty/autoConfig.html#opting_out)
+    [Renunciar a servicios enlazados](/runtimes/liberty/liberty-auto_config#opting_out)
 
     {: .topicgroup}
     Supervisar Liberty en IBM Cloud
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
-        [Iniciación a Availability Monitoring](../../services/AvailabilityMonitoring/index.html)
+        [Iniciación a Availability Monitoring](/AvailabilityMonitoring/AvailabilityMonitoring-avmon_gettingstarted)
 
     {: .topicgroup}
     Trabajar fuera de línea o con un proxy
         offlineMode.md
-        [Cómo trabajar con un proxy](runtimes/common/workingWithProxy.html)
+		/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -43,17 +44,17 @@ Liberty for Java
     libertyFeatures.md
     environmentVariables.md
 
-    {: .topicgroup}
-    Aplicaciones de inicio y compilaciones
-        [Utilización de las apps de inicio](runtimes/common/starter_app_usage.html)
-        [Utilización de compilación de la comunidad](runtimes/common/byob.html)
-
+	{: .topicgroup}
+    Aplicaciones de inicio y paquetes de compilación de la comunidad
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     buildpackDefaults.md
-    ../common/app_mng.md
+    /runtimes-common/runtimes-common-app_management
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
-    [Iniciación a IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html) updates.md
-    [Declaración de soporte de paquete de compilación](runtimes/common/buildpackSupport.html)
+    [Cómo empezar con IBM Cloud Log Analysis](services/CloudLogAnalysis/index.html)
+    updates.md
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

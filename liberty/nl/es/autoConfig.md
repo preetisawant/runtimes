@@ -19,7 +19,7 @@ Un servicio gestionado por la aplicación es un servicio que gestionan por compl
 
 Un servicio gestionado por contenedor es un servicio que está gestionado por el tiempo de ejecución de Liberty. En algunos casos, es posible que la aplicación busque el servicio enlazado en JNDI, mientras que en otros el propio Liberty utiliza directamente el servicio. El paquete de compilación de Liberty lee VCAP_SERVICES para obtener información sobre los servicios enlazados. Para cada servicio gestionado por contenedor, el paquete de compilación lleva a cabo tres funciones.
 
-* Genera [variables de nube](optionsForPushing.html#accessing_info_of_bound_services) para el servicio enlazado.
+* Genera [variables de nube](/docs/runtimes/liberty/optionsForPushing.html#accessing_info_of_bound_services) para el servicio enlazado.
 * Instala las características de Liberty y el acceso de cliente códigos que son necesarios para acceder al servicio enlazado.
 * Genera o actualiza las stanzas del archivo `server.xml` que requiere el servicio.
 
@@ -37,7 +37,7 @@ El paquete de compilación de Liberty proporciona configuración automática par
 * [ElephantSQL](/docs/services/ElephantSQL/index.html)
 * [{{site.data.keyword.ssoshort}}](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Los servicios Compose pueden ser gestionados por contenedor o por aplicación. De forma predeterminada, el paquete de compilación de Liberty da por supuesto que estos servicios se gestionan mediante contenedor, y los configura automáticamente. Si desea que la aplicación gestione el servicio, puede renunciar a la configuración automática del servicio estableciendo la variable de entorno. `services_autoconfig_excludes`. Para obtener más información, consulte [Renuncia a la configuración automática del servicio](autoConfig.html#opting_out).
+Los servicios Compose pueden ser gestionados por contenedor o por aplicación. De forma predeterminada, el paquete de compilación de Liberty da por supuesto que estos servicios se gestionan mediante contenedor, y los configura automáticamente. Si desea que la aplicación gestione el servicio, puede renunciar a la configuración automática del servicio estableciendo la variable de entorno. `services_autoconfig_excludes`. Para obtener más información, consulte [Renuncia a la configuración automática del servicio](/docs/runtimes/liberty/autoConfig.html#opting_out).
 
 ## Instalación de las características de Liberty y del código de acceso de cliente
 {: #installation_of_liberty_features}
@@ -51,7 +51,7 @@ Consulte la sección [Renuncia a la configuración automática del servicio](#op
 
 El paquete de compilación de Liberty puede generar o actualizar automáticamente las stanzas de configuración en el archivo `server.xml` cuando se envía una aplicación autónoma, dependiendo de cómo se enlace la aplicación a los servicios y si ya tiene un archivo `server.xml`.
 
-Cuando envía una aplicación autónoma, el paquete de compilación de Liberty genera la stanza de configuración de `server.xml`, tal como se describe en [Opciones para enviar aplicaciones Liberty](optionsForPushing.html#options_for_pushing), {{site.data.keyword.Bluemix_notm}}.
+Cuando envía una aplicación autónoma, el paquete de compilación de Liberty genera la stanza de configuración de `server.xml`, tal como se describe en [Opciones para enviar aplicaciones Liberty](/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing), {{site.data.keyword.Bluemix_notm}}.
 
 Cuando envía una aplicación autónoma y la enlaza a servicios gestionados por contenedor, el paquete de compilación de Liberty genera las stanzas necesarias de `server.xml` para los servicios enlazados.
 

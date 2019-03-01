@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -16,96 +16,70 @@ lastupdated: "2018-10-24"
 {:app_name: data-hd-keyref="app_name"}
 
 # Tutorial Introdução
-{: #getting-started}
+{: #getting_started}
 
 * {: download} Parabéns, você implementou um aplicativo de amostra Hello World no {{site.data.keyword.Bluemix}}!  Para iniciar, siga este guia passo a passo. Ou <a class="xref" href="http://bluemix.net" target="_blank" title="(Fazer download de código de amostra)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Fazer download de código do aplicativo" />faça download do código de amostra</a> e explore você mesmo.
 
-Seguindo este tutorial de introdução, você configurará um ambiente de desenvolvimento, implementará um aplicativo localmente e
-no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados do {{site.data.keyword.Bluemix_notm}} em
-seu aplicativo.
-
-Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualizadas para a CLI do {{site.data.keyword.Bluemix_notm}}! A CLI do {{site.data.keyword.Bluemix_notm}} tem os mesmos comandos conhecidos do Cloud Foundry, mas com uma melhor integração com as contas do {{site.data.keyword.Bluemix_notm}} e outros serviços. Saiba mais sobre como começar a usar a CLI do {{site.data.keyword.Bluemix_notm}} neste tutorial.
-{: tip}
+Seguindo este tutorial de introdução, você configurará um ambiente de desenvolvimento, implementará um aplicativo localmente
+e no {{site.data.keyword.Bluemix}} e integrará um serviço de banco de dados do {{site.data.keyword.Bluemix}} em seu
+aplicativo.
 
 ## Antes de Começar
 {: #prereqs}
 
 Você precisará do seguinte:
 * [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
-* [Go ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://golang.org/dl/){: new_window}
+* Instale o .NET Core 2.1.1 SDK 2.1.301 por meio do [website de downloads do .NET Core ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.microsoft.com/net/download/core).
 
 ## Etapa 1: clonar o aplicativo de amostra
 {: #clone}
 
-1. Primeiro, vamos configurar o ambiente local, assegurando que todas as variáveis de ambiente do GO sejam configuradas
-corretamente. Por exemplo:
-
+Primeiro, clone o repositório GitHub do app de amostra.
   ```
-mkdir $HOME/work
-export GOPATH=$HOME/work
-export PATH=$PATH:$GOPATH/bin
+git clone https://github.com/IBM-Cloud/get-iniciado-aspnet-core
   ```
   {: codeblock}
 
-1. Mude o caminho para $GOPATH/src
-
-  ```
-mkdir $GOPATH/src
-cd $GOPATH/src
-  ```
-  {: codeblock}
-
-  Agora você está pronto para começar a trabalhar com o app simples *hello world* de Go.
-1. Clone o repositório e mude para o diretório no qual o app de amostra está localizado.
-
-  ```
-go get github.com/IBM-Cloud/get-iniciado-go
-  ```
-  {: codeblock}
-
-  ```
-cd github.com/IBM-Cloud/get-iniciado-go
-  ```
-  {: codeblock}
-
-1. Examine os arquivos no diretório **`get-started-go`** para familiarizar-se com o conteúdo.
 
 ## Etapa 2: executar o app localmente
 {: #run_locally}
 
-1. Construa e execute o aplicativo localmente, executando os comandos a seguir.
+1. Na linha de comandos, mude o diretório para onde o app de amostra está localizado.
 
   ```
-make
+  cd get-iniciado-aspnet-core/src/GetStartedDotnet
+  ```
+  {: codeblock}
+
+1. Execute o app localmente executando os comandos a seguir.
+
+  ```
+dotnet restore
   ```
   {: codeblock}
 
   ```
-go run main.go
+dotnet run
   ```
-  {: pre}
+  {: codeblock}
 
-1. Visualize o seu app na URL a seguir: http://localhost:8080
-
-Pressione *Ctrl-C* para parar o seu aplicativo na mesma janela em que você iniciou o aplicativo.
-{: tip}
+1. Visualize seu app em: http://localhost: 5000/.
 
 ## Etapa 3: preparar o app para implementação
 {: #prepare}
 
-Para implementar no {{site.data.keyword.Bluemix_notm}}, poderá ser útil configurar um arquivo manifest.yml. O manifest.yml inclui informações básicas sobre seu app, como o nome, quanta memória alocar para cada instância e a rota. Nós fornecemos um arquivo manifest.yml de amostra no diretório `get-started-go`.
+Para implementar no {{site.data.keyword.Bluemix_notm}}, poderá ser útil configurar um arquivo manifest.yml. O manifest.yml inclui informações básicas sobre seu app, como o nome, quanta memória alocar para cada instância e a rota. Nós fornecemos um arquivo manifest.yml de amostra no diretório `get-started-dotnet`.
 
-Abra o arquivo manifest.yml e mude o `nome` de `GetStartedGo` para o nome de seu app, <var class="keyword varname" data-hd-keyref="app_name">app_name</var>.
+Abra o arquivo manifest.yml e mude o `nome` de `GetStartedDotnet` para o nome de seu app, <var class="keyword varname" data-hd-keyref="app_name">app_name</var>.
 {: download}
 
   ```
  applications:
- - name: GetStartedGo
+ - name: GetStartedDotnet
    random-route: true
-   memory: 128M
-   buildpack: go_buildpack
+   memory: 512M
   ```
   {: codeblock}
 
@@ -118,31 +92,28 @@ Nesse arquivo manifest.yml, **`random-route: true`** gera uma rota aleatória pa
 É possível usar a CLI do {{site.data.keyword.Bluemix_notm}} para implementar apps.
 
 1. Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}} e selecione um terminal de API.
-
   ```
 ibmcloud login
   ```
   {: codeblock}
 
-  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
-
-  ```
+  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](/docs/cli/login_federated_id.html) para saber mais.
+ ```
 ibmcloud login --sso
   ```
   {: codeblock}
 
 1. Tenha como destino uma organização e um espaço do Cloud Foundry:
-
-  ```	  
+  ```
 ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](/docs/account/orgs_spaces.html).
   {: tip}
 
-1. De dentro do diretório **`get-sstarted-go`**, envie o seu aplicativo por push para o {{site.data.keyword.Bluemix_notm}}
-
+1. **Certifique-se de estar no diretório principal, `get-started-aspnet-core`, para
+o seu aplicativo ** e, então, envie o seu aplicativo por push para o {{site.data.keyword.Bluemix_notm}}:
   ```
 ibmcloud cf push
   ```
@@ -150,12 +121,14 @@ ibmcloud cf push
 
   Isso pode levar um minuto. Se houver um erro no processo de implementação, será possível usar o comando `ibmcloud cf logs <Your-App-Name> --recent` para solucionar problemas.
 
-Quando a implementação for concluída, você deverá ver uma mensagem indicando que o app está em execução.  Visualize o app na URL listada na saída do comando push. Também é possível emitir o comando a seguir para visualizar o status de seu aplicativo e ver a URL.
-
+Quando a implementação for concluída, será necessário ver uma mensagem indicando que o seu aplicativo está em
+execução.  Visualize o app na URL listada na saída do comando push.  Também é possível emitir o comando a seguir para visualizar o status de seu aplicativo e ver a URL.
   ```
 Ibmcloud cf apps
   ```
   {: codeblock}
+
+Também é possível acessar a [Lista de recursos](https://cloud.ibm.com/resources) do {{site.data.keyword.Bluemix_notm}} para visualizar o seu aplicativo.
 
 ## Etapa 5: incluir um banco de dados
 {: #add_database}
@@ -165,48 +138,57 @@ Em seguida, incluiremos um banco de dados NoSQL do {{site.data.keyword.cloudant_
 1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
 1. Procure **{{site.data.keyword.cloudant_short_notm}}** e selecione o serviço.
 1. Para os **Métodos de autenticação disponíveis**, selecione **Usar as credenciais anteriores e o IAM**. É possível deixar as configurações padrão para os outros campos. Clique em **Criar** para criar o serviço.
-1. Na navegação, acesse **Conexões**. Selecione seu aplicativo e clique em **Criar conexão**.
-1. Conecte-se ao seu aplicativo usando os valores padrão e clique em **Conectar e remontar app**. Em seguida, clique em **Remontar** quando for solicitado.
+1. Na navegação, acesse **Conexões** e, em seguida, clique em **Criar conexão**. Selecione o seu aplicativo e clique em **Conectar**.
+1. Usando os valores padrão, clique em **Conectar e remontar aplicativo** para conectar o
+banco de dados ao seu aplicativo. Clique em **Remontar** quando solicitado.
 
    O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
 As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente referenciada no código-fonte.
 {: tip}
 
-## Etapa 6: usar o banco de dados
+## Etapa 6: usar o banco de dados localmente
 {: #use_database}
-Vamos agora atualizar seu código local para apontar para esse banco de dados. Nós criaremos um arquivo .env que armazenará as
-credenciais para os serviços que o aplicativo usará. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente VCAP_SERVICES.
 
-1. Crie um arquivo chamado `.env` no diretório `get-started-go` com o conteúdo a seguir:
+Vamos agora atualizar seu código local para apontar para esse banco de dados. Nós armazenaremos as credenciais para os
+serviços em um arquivo JSON. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente `VCAP_SERVICES`.
 
-  ```
-CLOUDANT_URL=
-  ```
-  {: codeblock}
+1. No diretório `src/GetStartedDotnet`, crie um arquivo `vcap-local.json`.
 
-2. Em seu navegador, acesse o painel do {{site.data.keyword.Bluemix_notm}} e selecione **_seu app_ > Conexões**. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e selecione **Visualizar credenciais**.
+1. Copie e cole o objeto JSON a seguir no arquivo `vcap-local.json` e salve as mudanças.
 
-3. Copie e cole apenas a `URL` das credenciais no campo `CLOUDANT_URL` do arquivo `.env` e salve as mudanças.  O resultado será algo como:
+   ```json
+   {
+     "services": {
+       "cloudantNoSQLDB": [
+        {
+           "credentials": {
+             "url":"CLOUDANT_DATABASE_URL"
+           },
+          "label": "cloudantNoSQLDB"
+        }
+       ]
+     }
+   }
+   ```
+   {: codeblock}
 
-  ```
-CLOUDANT_URL=https://123456789 ... bluemix.cloudant.com
-  ```
-  {: codeblock}
+1. Localize o seu aplicativo na [Lista de recursos](https://cloud.ibm.com/resources) do {{site.data.keyword.Bluemix_notm}}. Na página Detalhes do serviço para o seu aplicativo, clique em **Conexões** na barra lateral. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) e selecione **Visualizar credenciais**.
 
-4. Execute seu aplicativo localmente.
+1. Copie e cole apenas o valor `url` das credenciais para o campo `url` do arquivo `vcap-local.json`, substituindo `CLOUDANT_DATABASE_URL`.
 
-  ```
-go run main.go
-  ```
-  {: codeblock}
+1. No diretório `get-started-aspnet-core/src/GetStartedDotnet`, reinicie o aplicativo executando o comando a seguir.
 
-  Visualize seu app em: http://localhost:8080. Os nomes que você inserir no app serão agora incluídos no banco de dados.
+   ```
+   dotnet run
+   ```
+   {: codeblock}
 
-Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados.  Visualize o app {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando push acima.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
+1. Atualize a visualização do navegador em http://localhost:5000/. Os nomes que você inserir no app serão agora incluídos no banco de dados.
 
+O aplicativo local e o aplicativo {{site.data.keyword.Bluemix_notm}} compartilham o banco de dados.  Visualize o aplicativo {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando `ibmcloud cf push`.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
 
-Se você não precisar de seu app em tempo real, pare-o para que você não incorra em nenhum encargo inesperado.
+Lembre-se: se você não precisar de seu app em tempo real, pare-o para que você não incorra em nenhum encargo inesperado.
 {: tip}
 
 ## Próximas Etapas

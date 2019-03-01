@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-03"
+  years: 2015, 2019
+lastupdated: "2019-01-11"
 
 ---
 
@@ -41,12 +41,33 @@ lastupdated: "2018-07-03"
 ```
 {: codeblock}
 
-버전 특성은 1.7.+ 등의 버전 범위 또는 [사용 가능한 OpenJDK 버전 목록](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)에 나열된 특정 버전으로 설정될 수 있습니다. 최상의 결과를 얻으려면 Java 8을 사용하십시오.
+버전 특성은 1.7.+, 1.8.+, 또는 [사용 가능한 OpenJDK 버전 목록](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)에 나열된 버전 범위로 설정될 수 있습니다. 최상의 결과를 얻으려면 Java 8을 사용하십시오.
+
+## OpenJ9
+{: #openj9}
+
+선택적으로, OpenJ9을 JRE 또는 JDK로 하여 실행되도록 애플리케이션을 구성할 수 있습니다. OpenJ9을 사용하여 애플리케이션이 실행되도록 하려면 JVM 환경 변수를 "openj9"으로 설정하십시오. 예를 들어, {{site.data.keyword.Bluemix_notm}} 명령행 도구를 사용하여 다음 명령을 실행하십시오.
+```
+    ibmcloud cf set-env myapp JVM 'openj9'
+```
+{: codeblock}
+
+사용으로 설정되는 경우 기본적으로 OpenJ9 버전 11이 사용됩니다. OpenJ9의 대체 버전을 지정하려면 JBP_CONFIG_OPENJ9 환경 변수를 사용하십시오. 예를 들어, 최신 OpenJ9 8을 사용하려면 다음 환경 변수를 설정하십시오. 
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
+```
+{: codeblock}
+
+사용으로 설정되는 경우 기본적으로 OpenJ9 버전 11이 사용됩니다. OpenJ9의 JDK 버전을 사용하려면 JBP_CONFIG_OPENJ9 환경 변수를 사용하십시오. 예를 들어, OpenJ9 JDK를 사용하려면 다음 환경 변수를 설정하십시오. 
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
+```
+{: codeblock}
 
 ## Oracle JRE
 {: #oracle_jre}
 
-Oracle JRE 사용에 대한 정보는 [Oracle JRE 사용](oracle_jre.html)을 참조하십시오.
+Oracle JRE 사용에 대한 정보는 [자신의 JRE 사용](/docs/runtimes/liberty/using_own_jre.html)을 참조하십시오. 
 
 ## JRE 옵션 구성
 {: #configuring_jre}
@@ -57,10 +78,10 @@ Oracle JRE 사용에 대한 정보는 [Oracle JRE 사용](oracle_jre.html)을 �
 Liberty 빌드팩은 다음을 고려하여 기본 JVM 옵션을 구성합니다.
 
 * 애플리케이션의 메모리 한계.  적용되는 JVM 힙 설정은 다음을 기준으로 계산됩니다.
-  * [메모리 한계 및 Liberty 빌드팩](memoryLimits.html#memory_limits)에 설명된 애플리케이션의 메모리 한계
+  * [메모리 한계 및 Liberty 빌드팩](/docs/runtimes/liberty/memoryLimits.html#memory_limits)에 설명된 애플리케이션의 메모리 한계
   * JRE 유형. JVM의 힙 관련 옵션은 JRE의 지원 옵션에 따라 다릅니다.
 
-* [{{site.data.keyword.Bluemix_notm}}에서 지원되는 Liberty 기능](libertyFeatures.html#libertyfeatures).
+* [{{site.data.keyword.Bluemix_notm}}에서 지원되는 Liberty 기능](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures). 
   * 2단계 커미트 글로벌 데이터베이스 트랜잭션이 {{site.data.keyword.Bluemix_notm}}에서 지원되지 않으므로 -Dcom.ibm.tx.jta.disable2PC=true 설정으로 사용되지 않습니다.
 
 * {{site.data.keyword.Bluemix_notm}} 환경.
@@ -237,7 +258,7 @@ Diego 셀에서 실행 중인 애플리케이션에 대한 `jvm.options` 파일�
 ```
 {: codeblock}
 
- 생성된 덤프 파일 표시 및 다운로드에 대한 세부사항은 [로깅 및 추적](loggingAndTracing.html#download_dumps) 문서를 참조하십시오.
+ 생성된 덤프 파일 표시 및 다운로드에 대한 세부사항은 [로깅 및 추적](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps) 문서를 참조하십시오.
 
 ### JRE 오버레이
 {: #overlaying_jre}

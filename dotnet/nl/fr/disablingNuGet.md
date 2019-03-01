@@ -12,7 +12,7 @@ lastupdated: "2018-11-20"
 # Désactiver le cache de packages NuGet
 {: #disabling_the_nuget_package_cache}
 
-Dans certains cas de figure, il peut s'avérer nécessaire d'effacer le cache de packages NuGet de votre application. Cela a pour effet d'effacer du cache tous les packages NuGet existants, mais aussi d'empêcher le pack de construction d'en mémoriser d'autres.
+Dans certains cas de figure, il peut s'avérer nécessaire d'effacer le cache de packages NuGet de votre application.  Cela a pour effet d'effacer du cache tous les packages NuGet existants, mais aussi d'empêcher le pack de construction d'en mémoriser d'autres.
 
 Vous pouvez effacer le cache en définissant sur `false` la variable d'environnement `CACHE_NUGET_PACKAGES` à l'aide du client de ligne de commande pour {{site.data.keyword.Bluemix_notm}} :
 

@@ -22,7 +22,7 @@ python_buildpack は、アプリケーションのルート・ディレクトリ
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} には、Python スターター・アプリケーションが用意されています。  Python スターター・アプリケーションは、アプリケーションに使用できるテンプレートを提供する、シンプルな Python アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../common/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Python スターター・アプリケーションが用意されています。  Python スターター・アプリケーションは、アプリケーションに使用できるテンプレートを提供する、シンプルな Python アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](docs/runtimes-common/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}

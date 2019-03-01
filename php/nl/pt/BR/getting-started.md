@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-10-24"
+  years: 2017, 20180
+lastupdated: "2018-12-05"
 
 ---
 
@@ -30,7 +30,7 @@ Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualiz
 
 Você precisará do seguinte:
 * [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [PHP ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://php.net/downloads.php){: new_window}
 * [Composer ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://getcomposer.org/download/){: new_window}
@@ -99,7 +99,7 @@ ibmcloud login
    ```
    {: codeblock}
 
-  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
+  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](/docs/cli/login_federated_id.html) para saber mais.
   ```
 ibmcloud login --sso
   ```
@@ -112,7 +112,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](/docs/account/orgs_spaces.html).
   {: tip}
 
 1. No diretório *get-started-php*, envie seu app por push para o {{site.data.keyword.Bluemix_notm}}
@@ -131,6 +131,8 @@ Ibmcloud cf apps
   ```
   {: codeblock}
 
+Também é possível acessar a [Lista de recursos](https://cloud.ibm.com/resources) do {{site.data.keyword.Bluemix_notm}} para visualizar o seu aplicativo.
+
 ## Etapa 5: incluir um banco de dados
 {: #add_database}
 
@@ -139,8 +141,9 @@ Em seguida, incluiremos um banco de dados NoSQL do {{site.data.keyword.cloudant_
 1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
 1. Procure **{{site.data.keyword.cloudant_short_notm}}** e selecione o serviço.
 1. Para os **Métodos de autenticação disponíveis**, selecione **Usar as credenciais anteriores e o IAM**. É possível deixar as configurações padrão para os outros campos. Clique em **Criar** para criar o serviço.
-1. Na navegação, acesse **Conexões**. Selecione seu aplicativo e clique em **Criar conexão**.
-1. Conecte-se ao seu aplicativo usando os valores padrão e clique em **Conectar e remontar app**. Em seguida, clique em **Remontar** quando for solicitado.
+1. Na navegação, acesse **Conexões** e, em seguida, clique em **Criar conexão**. Selecione o seu aplicativo e clique em **Conectar**.
+1. Usando os valores padrão, clique em **Conectar e remontar aplicativo** para conectar o
+banco de dados ao seu aplicativo. Clique em **Remontar** quando solicitado.
 
    O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
@@ -161,7 +164,7 @@ CLOUDANT_HOST=
   ```
   {: codeblock}
 
-2. Em seu navegador, acesse o painel do {{site.data.keyword.Bluemix_notm}} e selecione **_seu app_ > Conexões**. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e selecione **Visualizar credenciais**.
+2. Localize o seu aplicativo na [Lista de recursos](https://cloud.ibm.com/resources) do {{site.data.keyword.Bluemix_notm}}. Na página Detalhes do serviço para o seu aplicativo, clique em **Conexões** na barra lateral. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) e selecione **Visualizar credenciais**.
 
 3. Copie e cole os valores dos campos `CLOUDANT_HOST`, `CLOUDANT_USERNAME` e `CLOUDANT_PASSWORD` no arquivo `.env` e salve as mudanças.  O resultado será algo como:
 

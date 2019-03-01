@@ -32,7 +32,7 @@ uma *lista de desbloqueio* nos ambientes [{{site.data.keyword.Bluemix_dedicated_
 
 Para minimizar o conjunto de sites incluídos na lista de desbloqueio, configure os aplicativos para que eles usem uma versão do
 mecanismo do Node incluída no buildpack do SDK for Node.js.  Consulte as [atualizações mais
-recentes](./updates.html) para o conjunto de versões do mecanismo de nó incluídas no buildpack.  Se você configurar seu aplicativo para usar
+recentes](/docs/runtimes/nodejs/updates.html) para o conjunto de versões do mecanismo de nó incluídas no buildpack.  Se você configurar seu aplicativo para usar
 essas versões do mecanismo de nó, então apenas o site https://registry.npmjs.org será necessário para fazer download dos módulos.
 
 Quando novas versões do buildpack do SDK for Node.js forem instaladas, o conjunto de versões disponíveis
@@ -75,4 +75,4 @@ Sempre que você fizer uma mudança nas dependências do arquivo `package.json`,
 Em alguns ambientes como
 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), um proxy pode ser configurado. Consulte
-[Trabalhando com um proxy](/docs/manageapps/workingWithProxy.html) para obter mais detalhes.
+[Trabalhando com um proxy](/docs/runtimes-common/workingWithProxy.html) para obter mais detalhes.

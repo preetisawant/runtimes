@@ -21,20 +21,21 @@ Liberty for Java
     customizingJRE.md
     using_own_jre.md
     installFeatures.md
+    usingMonthlyRuntime.md
     usingBetaFeatures.md
-    [바인딩된 서비스 사용하지 않음](runtimes/liberty/autoConfig.html#opting_out)
+    [바인딩된 서비스 사용하지 않음](/runtimes/liberty/liberty-auto_config#opting_out)
 
     {: .topicgroup}
     IBM Cloud에서 Liberty 모니터링
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
-        [Availability Monitoring 시작하기](../../services/AvailabilityMonitoring/index.html)
+        [Availability Monitoring 시작하기](/AvailabilityMonitoring/AvailabilityMonitoring-avmon_gettingstarted)
 
     {: .topicgroup}
     오프라인 작업 또는 프록시 작업
         offlineMode.md
-        [프록시 작업](runtimes/common/workingWithProxy.html)
+		/runtimes-common/runtimes-common-working_with_proxy
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -43,18 +44,17 @@ Liberty for Java
     libertyFeatures.md
     environmentVariables.md
 
-    {: .topicgroup}
-    스타터 애플리케이션 및 빌드팩
-        [스타터 앱 사용](runtimes/common/starter_app_usage.html)
-        [커뮤니티 빌드팩 사용](runtimes/common/byob.html)
-
+	{: .topicgroup}
+    스타터 애플리케이션 및 커뮤니티 빌드팩
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     buildpackDefaults.md
-    ../common/app_mng.md
+    /runtimes-common/runtimes-common-app_management
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
-    [IBM Cloud Log Analysis 시작하기](../../services/CloudLogAnalysis/index.html)
+    [IBM Cloud Log Analysis 시작하기](services/CloudLogAnalysis/index.html)
     updates.md
-    [빌드팩 지원 구문](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

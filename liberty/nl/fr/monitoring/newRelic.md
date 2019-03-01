@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-12-12"
 
 ---
 
@@ -32,37 +32,9 @@ Voici un exemple de configuration généré par le pack de construction Liberty 
 ```
 {: codeblock}
 
-## Ajout d'un service New Relic
-{: #add_new_relic}
 
-Pour une application Java existante à surveiller avec New Relic dans {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
-1. Créez une instance de service New Relic dans {{site.data.keyword.Bluemix_notm}}.
-
-  ```
-  ibmcloud cf create-service newrelic standard mynewrelic
-  ```
-  {: codeblock}
-
-2. Déployez l'application dans {{site.data.keyword.Bluemix_notm}} avec le service New Relic.  Consultez l'exemple de manifeste d'application suivant :
-
-  <pre>
-        &dash;&dash;&dash;
-        applications:
-        - name: myapp
-         memory: 1G
-         instances: 1
-         host: myapp
-         domain: mybluemix.net
-         path: myapp.war
-         services:
-         - mynewrelic
-  </pre>
-  {: codeblock}
-
-3. Accédez au tableau de bord New Relic de votre application directement à partir du tableau de bord {{site.data.keyword.Bluemix_notm}} de l'application.
-
-### Ajout d'un service New Relic fourni par l'utilisateur
-{: #add_user_provided_new_relic}
+## Ajout d'un service New Relic fourni par l'utilisateur
+{: #add_user_provided_new_relic} 
 
 Si vous disposez d'un compte New Relic existant et d'une clé de licence, vous pouvez lier le service New Relic existant à l'application à l'aide d'un "service fourni par l'utilisateur".
 

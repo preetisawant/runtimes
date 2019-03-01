@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-30"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-10-30"
 
 다음이 필요합니다.
 * [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}
 * [.NET Core 다운로드 웹 사이트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.microsoft.com/net/download/core)에서 .NET Core 2.1.1 SDK 2.1.301을 설치하십시오.
 
@@ -95,7 +95,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  연합 사용자 ID가 있는 경우 대신 다음 명령을 사용하여 싱글 사인온 ID로 로그인하십시오. 자세한 정보는 [연합 ID로 로그인](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)을 참조하십시오.
+  연합 사용자 ID가 있는 경우 대신 다음 명령을 사용하여 싱글 사인온 ID로 로그인하십시오. 자세한 정보는 [연합 ID로 로그인](/docs/cli/login_federated_id.html)을 참조하십시오.
  ```
 ibmcloud login --sso
   ```
@@ -107,7 +107,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](https://console.bluemix.net/docs/account/orgs_spaces.html)를 참조하십시오.
+  조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](/docs/account/orgs_spaces.html)를 참조하십시오.
   {: tip}
 
 1. **현재 애플리케이션의 기본 디렉토리 `get-started-aspnet-core`에 있는지 확인**한 다음 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 푸시하십시오.
@@ -124,6 +124,8 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
+{{site.data.keyword.Bluemix_notm}} [리소스 목록](https://cloud.ibm.com/resources)으로 이동하여 앱을 볼 수도 있습니다. 
+
 ## 5단계: 데이터베이스 추가
 {: #add_database}
 
@@ -131,9 +133,9 @@ ibmcloud cf apps
 
 1. 브라우저에서 {{site.data.keyword.Bluemix_notm}}에 로그인하고 대시보드로 이동하십시오. **리소스 작성**을 선택하십시오.
 1. **{{site.data.keyword.cloudant_short_notm}}**를 검색한 후 서비스를 선택하십시오.
-1. **사용 가능한 인증 방법**의 경우 **레거시 인증 정보 및 IAM 모두 사용**을 선택하십시오. 다른 필드에서는 기본 설정을 유지할 수 있습니다. **작성**을 클릭하여 서비스를 작성하십시오. 
-1. 탐색에서 **연결**로 이동하십시오. 애플리케이션을 선택한 후 **연결 작성**을 클릭하십시오.
-1. 기본값을 사용하여 애플리케이션에 연결한 후 **연결 & 앱 다시 스테이징**을 클릭하십시오. 그런 다음 프롬프트가 표시되면 **다시 스테이징**을 클릭하십시오. 
+1. **사용 가능한 인증 방법**의 경우 **레거시 인증 정보 및 IAM 모두 사용**을 선택하십시오. 다른 필드에서는 기본 설정을 유지할 수 있습니다. **작성**을 클릭하여 서비스를 작성하십시오.
+1. 탐색에서 **연결**로 이동한 후 **연결 작성**을 클릭하십시오. 애플리케이션을 선택한 후 **연결**을 클릭하십시오. 
+1. 기본값을 사용하고 **연결 & 앱 다시 스테이징**을 클릭하여 데이터베이스를 애플리케이션에 연결하십시오. 프롬프트가 표시되면 **다시 스테이징**을 클릭하십시오. 
 
    {{site.data.keyword.Bluemix_notm}}가 애플리케이션을 다시 시작하고, `VCAP_SERVICES` 환경 변수를 사용하여 애플리케이션에 데이터베이스 인증 정보를 제공합니다. 이 환경 변수는 {{site.data.keyword.Bluemix_notm}}에서 실행 중인 경우에만 애플리케이션에서 사용 가능합니다.
 
@@ -147,7 +149,7 @@ ibmcloud cf apps
 
 1. `src/GetStartedDotnet` 디렉토리에서 `vcap-local.json` 파일을 작성하십시오.
 
-1. 다음 JSON 오브젝트를 복사하여 `vcap-local.json` 파일에 붙여넣고 변경사항을 저장하십시오. 
+1. 다음 JSON 오브젝트를 복사하여 `vcap-local.json` 파일에 붙여넣고 변경사항을 저장하십시오.
 
    ```json
    {
@@ -165,11 +167,11 @@ ibmcloud cf apps
    ```
    {: codeblock}
 
-1. 브라우저에서 {{site.data.keyword.Bluemix_notm}} 대시보드로 이동하고 **_앱_ > 연결**을 선택하십시오. {{site.data.keyword.cloudant_short_notm}} 메뉴 아이콘(**&vellip;**)을 클릭하고 **인증 정보**를 선택하십시오.
+1. {{site.data.keyword.Bluemix_notm}} [리소스 목록](https://cloud.ibm.com/resources)에서 앱을 찾으십시오. 앱의 서비스 세부사항 페이지에 있는 사이드바에서 **연결**을 클릭하십시오. {{site.data.keyword.cloudant_short_notm}} 메뉴 아이콘(**&hellip;**)을 클릭하고 **인증 정보**를 선택하십시오.
 
 1. 인증 정보의 `url` 값을 복사하고 `vcap-local.json` 파일의 `url` 필드에 붙여넣어 `CLOUDANT_DATABASE_URL`을 대체하십시오.
 
-1. `get-started-aspnet-core/src/GetStartedDotnet` 디렉토리에서 다음 명령을 실행하여 애플리케이션을 다시 시작하십시오. 
+1. `get-started-aspnet-core/src/GetStartedDotnet` 디렉토리에서 다음 명령을 실행하여 애플리케이션을 다시 시작하십시오.
 
    ```
 dotnet run
@@ -178,7 +180,7 @@ dotnet run
 
 1. http://localhost:5000/에서 브라우저 보기를 새로 고치십시오. 이제 앱에 입력한 이름이 데이터베이스에 추가됩니다.
 
-로컬 앱과 {{site.data.keyword.Bluemix_notm}} 앱은 데이터베이스를 공유합니다. `ibmcloud cf push` 명령의 출력에 나열된 URL에서 {{site.data.keyword.Bluemix_notm}} 앱을 확인하십시오. 이 중 하나의 앱에서 추가하는 이름은 브라우저를 새로 고치면 두 앱에 모두 표시됩니다.
+로컬 앱과 {{site.data.keyword.Bluemix_notm}} 앱은 데이터베이스를 공유합니다.  `ibmcloud cf push` 명령의 출력에 나열된 URL에서 {{site.data.keyword.Bluemix_notm}} 앱을 확인하십시오.  이 중 하나의 앱에서 추가하는 이름은 브라우저를 새로 고치면 두 앱에 모두 표시됩니다.
 
 앱을 지속할 필요가 없는 경우 예상치 않은 비용이 발생하지 않도록 앱을 중지하십시오.
 {: tip}

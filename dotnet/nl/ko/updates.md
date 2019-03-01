@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-20"
+lastupdated: "2018-12-12"
 ---
 
 {:new_window: target="_blank"}
@@ -13,9 +13,40 @@ lastupdated: "2018-09-20"
 
 ASP.NET Core 빌드팩의 최신 업데이트 목록
 
+## 2018년 12월 12일: ASP.NET Core 빌드팩 v2.1-20181205-1536 업데이트
+이 릴리스는 Dotnet Core Cloud Foundry 빌드팩의 버전 2.2.0을 포함합니다. 
+
+* .NET Aspnetcore 2.1.2에 대한 지원 추가
+* .NET Aspnetcore 2.1.4에 대한 지원 추가
+* .NET Aspnetcore 2.1.5에 대한 지원 추가
+* .NET Runtime 1.0.11에 대한 지원 추가
+* .NET Runtime 1.0.12에 대한 지원 추가
+* .NET Runtime 1.1.9에 대한 지원 추가
+* .NET Runtime 1.1.10에 대한 지원 추가
+* .NET Runtime 2.0.7에 대한 지원 추가
+* .NET Runtime 2.0.9에 대한 지원 추가
+* .NET Runtime 2.1.2에 대한 지원 추가
+* .NET Runtime 2.1.5에 대한 지원 추가
+* .NET SDK 1.0.4에 대한 지원 추가
+* .NET SDK 1.1.10에 대한 지원 추가
+* .NET SDK 1.1.11에 대한 지원 추가
+* .NET SDK 2.0.3에 대한 지원 추가
+* .NET SDK 2.1.302에 대한 지원 추가
+* .NET SDK 2.1.403에 대한 지원 추가
+* .NET Framework 2.1.0에 대한 지원 제거
+* .NET Framework 2.1.1에 대한 지원 제거
+* .NET Framework 1.1.8에 대한 지원 제거
+* .NET Core SDK 2.0.2에 대한 지원 제거
+* .NET Core SDK 2.0.3에 대한 지원 제거
+* .NET Core SDK 2.1.201에 대한 지원 제거
+* .NET Core SDK 2.1.300에 대한 지원 제거
+* .NET Core SDK 2.1.301에 대한 지원 제거
+* Node.js 버전을 6.14.4로 업데이트
+
+
 ## 2018년 9월 20일: ASP.NET Core 빌드팩 v2.0-20180918-1356 업데이트
 
-**중요:** 이 릴리스부터 ASP.NET Core 빌드팩은 [Cloud Foundry .NET Core 빌드팩 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html)을 기반으로 합니다. 이 릴리스에는 Dotnet Core Cloud Foundry 빌드팩의 버전 2.1.3이 포함됩니다. 
+**중요:** 이 릴리스부터 ASP.NET Core 빌드팩은 [Cloud Foundry .NET Core 빌드팩 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html)을 기반으로 합니다. 이 릴리스에는 Dotnet Core Cloud Foundry 빌드팩의 버전 2.1.3이 포함됩니다.
 
 * .NET Core SDK 1.1.9에 대한 지원 추가
 * .NET Core SDK 2.0.2에 대한 지원 추가
@@ -142,4 +173,4 @@ ASP.NET Core 빌드팩의 최신 업데이트 목록
 ```
 {: codeblock}
 
-* Nowin 웹 서버의 사용이 이 빌드팩에서 제거되었으며 그 대신 [Kestrel](https://github.com/aspnet/KestrelHttpServer) 웹 서버가 사용됩니다.
+* Nowin 웹 서버의 사용이 이 빌드팩에서 제거되었으며 [Kestrel](https://github.com/aspnet/KestrelHttpServer) 웹 서버가 대신 사용됩니다. 

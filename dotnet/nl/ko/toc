@@ -14,7 +14,7 @@ ASP.NET Core
     usingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    [Working with a proxy](runtimes/common/workingWithProxy.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -24,13 +24,13 @@ ASP.NET Core
 
     {: .topicgroup}
     스타터 애플리케이션 및 커뮤니티 빌드팩
-        [스타터 앱 사용](runtimes/common/starter_app_usage.html)
-        [커뮤니티 빌드팩 사용](runtimes/common/byob.html)
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    [빌드팩 지원 구문](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

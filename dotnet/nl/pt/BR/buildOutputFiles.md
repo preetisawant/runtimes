@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-20"
+  years: 2018, 2019
+lastupdated: "2019-02-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -75,4 +75,4 @@ No método `Main` de `Program.cs`, remove a linha a seguir.
 ```
 {: codeblock}
 
-Essas mudanças permitem que a CLI do .NET localize as `Views` do aplicativo, uma vez que elas são copiadas para a saída de construção quando o comando `dotnet publish` é executado. Se o aplicativo tiver outros arquivos, como os arquivos de configuração JSON, que são necessários no tempo de execução, também os inclua na propriedade `Include` do elemento `Content` no arquivo .csproj para o projeto, separado por ponto e vírgulas.
+Essas mudanças permitem que a CLI do .NET localize as `Views` do aplicativo, uma vez que elas são copiadas para a saída de construção quando o comando `dotnet publish` é executado.  Se o aplicativo tiver outros arquivos, como os arquivos de configuração JSON, que são necessários no tempo de execução, também os inclua na propriedade `Include` do elemento `Content` no arquivo .csproj para o projeto, separado por ponto e vírgulas.

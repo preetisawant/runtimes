@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-20"
+  years: 2018, 2019
+lastupdated: "2019-02-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,7 +20,7 @@ Vous pouvez utiliser les outils project.json ou MSBuild pour garantir que votre 
 ## Utiliser les outils project.json
 {: #projectjson}
 
-Ajoutez la propriété suivante dans la section `buildOptions` du fichier `project.json`. 
+Ajoutez la propriété suivante dans la section `buildOptions` du fichier `project.json`.
 ```
   "copyToOutput": {
     "include": [
@@ -61,16 +61,16 @@ Ajoutez un élément `<Content>` à l'élément `<ItemGroup>` de votre fichier `
 ```
 {: codeblock}
 
-Dans la méthode `Startup.cs` `Startup`, retirez la ligne suivante. 
+Dans la méthode `Startup.cs` `Startup`, retirez la ligne suivante.
 ```
   .SetBasePath(env.ContentRootPath)
 ```
 {: codeblock}
 
-Dans la méthode `Program.cs` `Main`, retirez la ligne suivante. 
+Dans la méthode `Program.cs` `Main`, retirez la ligne suivante.
 ```
   .UseContentRoot(Directory.GetCurrentDirectory())
 ```
 {: codeblock}
 
-Ces changements permettent à .NET CLI de trouver les `Vues` de votre application, car elles sont maintenant copiées dans la sortie de la génération lorsque la commande `dotnet publish` est exécutée. Si votre application a besoin d'autres fichiers au moment de son exécution (par exemple, des fichiers de configuration JSON), ajoutez-les également, en les séparant par des points-virgules, à la propriété `Include` de l'élément `Content` dans le fichier .csproj de votre projet.
+Ces changements permettent à .NET CLI de trouver les `Vues` de votre application, car elles sont maintenant copiées dans la sortie de la génération lorsque la commande `dotnet publish` est exécutée.  Si votre application a besoin d'autres fichiers au moment de son exécution (par exemple, des fichiers de configuration JSON), ajoutez-les également, en les séparant par des points-virgules, à la propriété `Include` de l'élément `Content` dans le fichier .csproj de votre projet.

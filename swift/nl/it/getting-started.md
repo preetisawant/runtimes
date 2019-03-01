@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -28,7 +28,7 @@ In questi documenti, i riferimenti alla CLI Cloud Foundry sono ora aggiornati al
 ## Prima di cominciare
 {: #prereqs}
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
-* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/ibmcloud/download_cli.html)
+* [CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Swift compiler ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://swift.org/download/) per la tua piattaforma.
 
 ## Passo 1: Clona l'applicazione di esempio
@@ -115,7 +115,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
+  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](/docs/cli/login_federated_id.html) per ulteriori informazioni.
 
   ```
 ibmcloud login --sso
@@ -128,10 +128,11 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](/docs/account/orgs_spaces.html).
   {: tip}
 
 1. Dall'interno della directory *get-started-swift*, esegui il push della tua applicazione a {{site.data.keyword.Bluemix_notm}}
+
   ```
 ibmcloud cf push
   ```
@@ -140,10 +141,13 @@ ibmcloud cf push
   Ci può volere un minuto. Se si verifica un errore nel processo di distribuzione, puoi utilizzare il comando `ibmcloud cf logs. <Your-App-Name> --recent` per risolverlo.
 
 Quando la distribuzione è stata completata dovresti visualizzare un messaggio che indica che la tua applicazione è in esecuzione.  Visualizza la tua applicazione all'URL elencato nell'output del comando trasmesso.  Puoi anche immettere il seguente comando per visualizzare lo stato delle tue applicazioni e vedere l'URL.
+
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
+
+Puoi anche andare all'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources) per visualizzare la tua applicazione.
 
 ## Passo 5: Aggiungi un database
 {: #add_database}
@@ -153,12 +157,12 @@ Successivamente, aggiungeremo un database NoSQL {{site.data.keyword.cloudant_sho
 1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Crea risorsa**.
 1. Cerca **{{site.data.keyword.cloudant_short_notm}}** e seleziona il servizio.
 1. Per **Metodi di autenticazione disponibili**, seleziona **Utilizza sia credenziali legacy che IAM**. Puoi lasciare le impostazioni predefinite per gli altri campi. Fai clic su **Crea** per creare il servizio.
-1. Nella navigazione, vai a **Connessioni**. Seleziona la tua applicazione e fai clic su **Crea connessione**.
-1. Connetti la tua applicazione utilizzando i valori predefiniti e fai clic su **Collega e riprepara l'applicazione**. Quindi, quando ti viene richiesto, fai clic su **Riprepara**.
+1. Nella navigazione, vai a **Connessioni** e fai clic su **Crea connessione**. Seleziona la tua applicazione e fai clic su **Connetti**.
+1. Utilizzando i valori predefiniti, fai clic su **Collega e riprepara l'applicazione** per connettere il database alla tua applicazione. Fai clic su **Riprepara** quando ti viene richiesto.
 
    {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
 
-Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice sorgente. Ad esempio, invece di impostare come hardcoded una password del database, puoi memorizzarla in una variabile di ambiente a cui fai riferimento nel tuo codice sorgente.
+Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi memorizzarla in una variabile di ambiente a cui fai riferimento nel tuo codice sorgente.
 {: tip}
 
 ## Passo 6: Utilizza il database
@@ -197,7 +201,7 @@ Questa applicazione di esempio utilizza il pacchetto `CloudEnvironment` per inte
 Il segnaposto `cloudant` nella configurazione `cloudfoundry:cloudant` rende più facile associare un servizio Cloudant fornito dall'utente alla tua applicazione. Con la configurazione `cloudfoundry:cloudant`, puoi creare un servizio Cloudant che include la stringa, `cloudant` nel nome servizio e associarla alla tua applicazione, senza modificare il file `config.json`. Se modifichi questa configurazione e poi vuoi usare un servizio Cloudant fornito dall'utente, hai bisogno di modificare la configurazione in `cloudfoundry:cloudant` o di definire `cloudfoundry:` con il nome del tuo servizio fornito dall'utente.
 {: tip}
 
-Nel tuo browser, vai al dashboard {{site.data.keyword.Bluemix_notm}} e seleziona **_la_tua_applicazione_ > Connessioni**. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e seleziona **Visualizza credenziali**.
+Trova la tua applicazione nell'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources). Nella pagina Dettagli servizio per la tua applicazione, fai clic su **Connessioni** nella barra laterale. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) e seleziona **Visualizza credenziali**.
 
 Copia e incolla solo le credenziali nei campi corrispondenti nel tuo file config.json locale.
 

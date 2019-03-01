@@ -48,7 +48,7 @@ Cuando envía por push la aplicación, el archivo server.xml incluye las propied
 
 Consulte en [Enviar por push apps de Liberty con server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) para encontrar opciones para impulsar apps de Liberty con un archivo `server.xml` personalizado.
 
-Consulte [Control de actualizaciones dinámicas ](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para saber cómo configurar la actualización dinámica en el archivo server.xml.
+Consulte [Control de actualizaciones dinámicas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para saber cómo configurar la actualización dinámica en el archivo server.xml.
 
 Siga estos pasos para cambiar la configuración de rastreo:
 

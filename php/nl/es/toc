@@ -10,18 +10,18 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [Cómo trabajar con un proxy](runtimes/common/workingWithProxy.html)
-    [Aplicar HTTPS en todas las páginas](runtimes/php/index.html#enforce_https)
+	{: .topicgroup}
+    Aplicaciones de inicio y buildpacks de la comunidad
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
+     [Imponer HTTPS en todas las páginas](runtimes/php/index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
-    Aplicaciones de inicio y compilaciones
-        [Utilización de las apps de inicio](runtimes/common/starter_app_usage.html)
-        [Utilización de compilación de la comunidad](runtimes/common/byob.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Resolución de problemas de tiempos de ejecución](runtimes/common/ts_runtimes.html)
-    [Declaración de soporte de paquete de compilación](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-runtimes
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

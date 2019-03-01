@@ -1,18 +1,30 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-13"
+  years: 2015, 2019
+lastupdated: "2019-01-07"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Últimas actualizaciones en el paquete de complicación SDK for Node.js
+# Últimas actualizaciones en el paquete de compilación SDK for Node.js
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
+
+## 23 de enero de 2019: se ha actualizado el paquete de compilación de Node.js v3.25.1
+
+El paquete de compilación de SDK for Node.js v3.25 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 y 10.15.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.16.0. Las versiones 6.15.0, 8.14.0 y 10.14.0 que se incluían en el último paquete de compilación tenían una regresión. Las regresiones se han solucionado en las 6.16.0, 8.15.0 y 10.15.0 que se incluyen ahora en su lugar.
+
+## 7 de enero de 2019: se ha actualizado el paquete de compilación de Node.js v3.25
+
+El paquete de compilación de SDK for Node.js v3.25 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.4, 6.15.0, 8.11.4, 8.14.0, 10.10.0 y 10.14.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.15.0. El paquete de compilación también soluciona un error menor en el gancho de Dynatrace.
+
+## 5 de diciembre de 2018: se ha actualizado el paquete de compilación de Node.js v3.24
+
+El paquete de compilación de SDK for Node.js v3.24 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0 y 10.10.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.14.4. El paquete de compilación también soluciona un error menor en el gancho de Dynatrace.
 
 ## 7 de septiembre de 2018: se ha actualizado el paquete de compilación de Node.js v3.22
 {:#fips-deprecation}

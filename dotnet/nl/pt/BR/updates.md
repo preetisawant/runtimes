@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-20"
+lastupdated: "2018-12-12"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +12,37 @@ lastupdated: "2018-09-20"
 {: #latest_updates}
 
 Uma lista de atualizações mais recentes no buildpack do ASP.NET Core.
+
+## 12 de dezembro de 2018: buildpack v2.1 do ASP.NET Core atualizado - 20181205-1536
+Esta liberação inclui a versão 2.2.0 do buildpack dotnet-core Cloud Foundry.
+
+* Incluir suporte para o .NET Aspnetcore 2.1.2
+* Incluir suporte para o .NET Aspnetcore 2.1.4
+* Incluir suporte para o .NET Aspnetcore 2.1.5
+* Incluir suporte para o .NET Runtime 1.0.11
+* Incluir suporte para o .NET Runtime 1.0.12
+* Incluir suporte para o .NET Runtime 1.1.9
+* Incluir suporte para o .NET Runtime 1.1.10
+* Incluir suporte para o .NET Runtime 2.0.7
+* Incluir suporte para o .NET Runtime 2.0.9
+* Incluir suporte para o .NET Runtime 2.1.2
+* Incluir suporte para o .NET Runtime 2.1.5
+* Incluir suporte para o .NET SDK 1.0.4
+* Incluir suporte para o .NET SDK 1.1.10
+* Incluir suporte para o .NET SDK 1.1.11
+* Incluir suporte para o .NET SDK 2.0.3
+* Incluir suporte para o .NET SDK 2.1.302
+* Incluir suporte para o .NET SDK 2.1.403
+* Remover suporte para o .NET Framework 2.1.0
+* Remover suporte para o .NET Framework 2.1.1
+* Remover suporte para o .NET Framework 1.1.8
+* Remover o suporte para o .NET Core SDK 2.0.2
+* Remover o suporte para o .NET Core SDK 2.0.3
+* Remover o suporte para o .NET Core SDK 2.1.201
+* Remover o suporte para o .NET Core SDK 2.1.300
+* Remover o suporte para o .NET Core SDK 2.1.301
+* Atualizar a versão do Node.js para a 6.14.4
+
 
 ## 20 de setembro de 2018: buildpack do ASP.NET Core atualizado v2.0-20180918-1356
 
@@ -145,4 +176,5 @@ com o comando inicial customizado a seguir:
 ```
 {: codeblock}
 
-* O uso do servidor da web Nowin foi removido deste buildpack; em seu lugar, é usado o servidor da web [Kestrel](https://github.com/aspnet/KestrelHttpServer).
+* O uso do servidor da web Nowin foi removido deste buildpack e o servidor da web
+[Kestrel](https://github.com/aspnet/KestrelHttpServer) está sendo usado no lugar dele.

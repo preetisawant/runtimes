@@ -25,7 +25,7 @@ Node.js 빌드팩은 다음의 외부 사이트에 액세스할 수 있습니다
 * https://iojs.org 사이트가 빌드팩에 포함되어 있지 않거나 다음에서 사용 가능하지 않은 이전 버전의 노드를 검색하는 데 사용됩니다. https://semver.herokuapp.com
 * 다음은 express 등의 노드 모듈을 검색하는 데 사용됩니다. https://registry.npmjs.org
 
-화이트리스트에 추가된 사이트 세트를 최소화하려면 SDK for Node.js 빌드팩에 포함된 노드 엔진 버전을 사용하도록 애플리케이션을 구성하십시오.  빌드팩에 포함된 노드 엔진 버전 세트는 [최신 업데이트](./updates.html)를 참조하십시오.  이러한 노드 엔진 버전을 사용하도록 애플리케이션을 구성한 경우에는 https://registry.npmjs.org 사이트만 모듈 다운로드에 필요합니다.
+화이트리스트에 추가된 사이트 세트를 최소화하려면 SDK for Node.js 빌드팩에 포함된 노드 엔진 버전을 사용하도록 애플리케이션을 구성하십시오.  빌드팩에 포함된 노드 엔진 버전 세트는 [최신 업데이트](/docs/runtimes/nodejs/updates.html)를 참조하십시오.  이러한 노드 엔진 버전을 사용하도록 애플리케이션을 구성한 경우에는 https://registry.npmjs.org 사이트만 모듈 다운로드에 필요합니다.
 
 새 버전의 SDK for Node.js 빌드팩이 설치되면 사용 가능한 엔진 버전 세트가 종종 보다 최신 버전으로 변경된다는 점을 유념하십시오.  빌드팩에 포함된 보다 최신의 노드 엔진 버전을 지정하기 위해 앱을 재구성해야 할 수 있습니다.
 
@@ -59,4 +59,4 @@ npm shrinkwrap
 {: #working_with_proxy}
 
 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 및 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 등의 일부 환경에서는 프록시의 구성이 가능합니다. 자세한 내용은
-[프록시 작업](/docs/manageapps/workingWithProxy.html)을 참조하십시오.
+[프록시 작업](/docs/runtimes-common/workingWithProxy.html)을 참조하십시오.

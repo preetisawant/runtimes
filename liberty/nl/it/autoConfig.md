@@ -24,7 +24,7 @@ questo tipo.
 Un servizio gestito dal contenitore è un servizio gestito dal runtime Liberty. In alcuni casi, l'applicazione può cercare il servizio di cui è stato eseguito il bind in JNDI, mentre in altri casi il servizio viene utilizzato direttamente da Liberty stesso. Il pacchetto di build Liberty legge VCAP_SERVICES per ottenere
 informazioni sui servizi di cui è stato eseguito il bind. Per ogni servizio gestito dal contenitore, il pacchetto di build esegue tre funzioni.
 
-* Genera le [variabili cloud](optionsForPushing.html#accessing_info_of_bound_services) per il servizio di cui è stato eseguito il bind.
+* Genera le [variabili cloud](/docs/runtimes/liberty/optionsForPushing.html#accessing_info_of_bound_services) per il servizio di cui è stato eseguito il bind.
 * Installa le funzioni Liberty e i codici di accesso client richiesti per accedere al servizio di cui è stato eseguito il bind.
 * Genera o aggiorna le stanze del file `server.xml` richieste dal servizio.
 
@@ -45,7 +45,7 @@ Il pacchetto di build Liberty fornisce la configurazione automatica per i seguen
 I servizi Compose possono essere contenitori o applicazioni gestiti. Per impostazione predefinita,
 il pacchetto di build Liberty presume che questi servizi siano gestiti dal contenitore e li configura
 automaticamente. Se desideri che sia l'applicazione a gestire il servizio, puoi optare per l'esclusione della
-configurazione automatica per il servizio impostando la variabile di ambiente `services_autoconfig_excludes`. Per ulteriori informazioni, consulta [Opzione di esclusione dalla configurazione automatica del servizio](autoConfig.html#opting_out).
+configurazione automatica per il servizio impostando la variabile di ambiente `services_autoconfig_excludes`. Per ulteriori informazioni, consulta [Opzione di esclusione dalla configurazione automatica del servizio](/docs/runtimes/liberty/autoConfig.html#opting_out).
 
 ## Installazione delle funzioni Liberty e
 codice di accesso client
@@ -60,7 +60,7 @@ Consulta la sezione [Opzione di esclusione dalla configurazione automatica del s
 
 Il pacchetto di build Liberty può generare o aggiornare automaticamente le stanze di configurazione nel tuo file `server.xml` quando esegui il push di un'applicazione autonoma, a seconda di come la tua applicazione è unita mediante bind ai servizi e del fatto che tu abbia un file `server.xml` esistente.
 
-Quando esegui il push di un'applicazione autonoma, il pacchetto di build Liberty genera la stanza di configurazione `server.xml` come descritto in [Opzioni per eseguire il push delle applicazioni Liberty](optionsForPushing.html#options_for_pushing) a {{site.data.keyword.Bluemix_notm}}.
+Quando esegui il push di un'applicazione autonoma, il pacchetto di build Liberty genera la stanza di configurazione `server.xml` come descritto in [Opzioni per eseguire il push delle applicazioni Liberty](/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) a {{site.data.keyword.Bluemix_notm}}.
 
 Quando esegui il push di un'applicazione autonoma ed esegui il bind ai servizi gestiti dal contenitore, il pacchetto di build Liberty genera le stanze di `server.xml` necessarie per
 i servizi di cui è stato eseguito il bind.

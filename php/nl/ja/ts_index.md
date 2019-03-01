@@ -14,5 +14,5 @@ lastupdated: "2018-02-22"
 
 PHP アプリケーションおよびビルドパックのトラブルシューティングには、以下の資料を使用できます。
 
-* [ランタイムに関するトラブルシューティング](../common/ts_runtimes.html#runtimes)
-* [ランタイムに関するトラブルシューティング: PHP](../common/ts_runtimes.html#ts_php)
+* [ランタイムに関するトラブルシューティング](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [ランタイムに関するトラブルシューティング: PHP](docs/runtimes-common/ts_runtimes.html#ts_php)

@@ -14,5 +14,5 @@ lastupdated: "2018-02-21"
 
 SDK for Node.js アプリケーションおよびビルドパックのトラブルシューティングには、以下の資料を使用できます。
 
-* [ランタイムに関するトラブルシューティング](../common/ts_runtimes.html#runtimes)
-* [アプリケーション管理](../common/app_mng.html)
+* [ランタイムに関するトラブルシューティング](/docs/runtimes-common/ts_runtimes.html#runtimes)
+* [アプリケーション管理](/docs/runtimes-common/app_mng.html)

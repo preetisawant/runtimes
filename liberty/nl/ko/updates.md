@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-02"
+  years: 2015, 2019
+lastupdated: "2019-01-01"
 
 ---
 
@@ -14,9 +14,26 @@ lastupdated: "2018-11-02"
 
 ## Liberty 빌드팩의 최신 업데이트 목록
 
+### 2019년 2월 1일: Liberty 빌드팩 v3.28-20190127-1723 업데이트
+
+* 기본 Liberty 런타임 GA 버전은 18.0.0.4 릴리스입니다. 
+* 대체 Liberty 런타임 GA 버전 19.0.0.1이 추가되었습니다.   
+* 월별 Liberty 베타 릴리스가 제거되었습니다.   
+* IBM JRE 버전이 8 SR5 FP7로 업데이트되었습니다.
+* MQ 클라이언트가 9.1.0.0 릴리스로 업데이트되었습니다. 
+* Auto-Scaling 에이전트가 업데이트되었습니다.
+
+
+### 2018년 12월 14일: Liberty 빌드팩 v3.27-20181130-1702 업데이트
+
+* 빌드팩이 이제 Java Platform, Enterprise Edition 8.0을 포함합니다. 더 이상 애플리케이션이 푸시될 때 Java EE 8을 설치할 필요가 없습니다.   
+* 기본 Liberty 런타임 버전이 18.0.0.4 릴리스로 업데이트되었습니다. 
+* 월별 Liberty 런타임 버전이 2018.11.0.0 릴리스로 업데이트되었습니다. 
+* IBM JRE 버전이 8 SR5 FP26으로 업데이트되었습니다. 
+
 ### 2018년 10월 29일: Liberty 빌드팩 v3.26-20181023-1545 업데이트
 
-* 기본 Liberty 런타임 버전인 `18.0.0.3`은 [CVE-2014-7810 보안 취약성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055)에 대한 수정사항을 포함하도록 업데이트되었습니다. 
+* 기본 Liberty 런타임 버전인 `18.0.0.3`은 [CVE-2014-7810 보안 취약성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055)에 대한 수정사항을 포함하도록 업데이트되었습니다.
 * 월별 Liberty 런타임 버전이 2018.10.0.0 릴리스로 업데이트되었습니다.
 * IBM JRE 버전이 8 SR5 FP22로 업데이트되었습니다.
 
@@ -117,8 +134,8 @@ lastupdated: "2018-11-02"
 * 기본 Liberty 런타임에 PI75512 WebSockets iFix도 포함됩니다.
 * 월별 Liberty 런타임 버전이 [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) 릴리스로 업데이트되었습니다.
 * IBM JRE 버전 8 및 7.1이 SR4 FP1으로 업데이트되었습니다.
-* 자동 구성 지원이 [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html)에 대한 작업을 수행하도록 확장되었습니다.
-* [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html)에 대한 자동 구성 지원은 org.ektorp 대신 Cloudant Java Library 사용 옵션을 제공하도록 업데이트되었습니다. Cloudant Java Library를 사용하려면 다음 환경 변수를 설정해야 합니다.    
+* 자동 구성 지원이 [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html)에 대한 작업을 수행하도록 확장되었습니다.
+* [Cloudant NoSQL Database](/docs/services/Cloudant/index.html)에 대한 자동 구성 지원은 org.ektorp 대신 Cloudant Java Library 사용 옵션을 제공하도록 업데이트되었습니다. Cloudant Java Library를 사용하려면 다음 환경 변수를 설정해야 합니다.    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -129,12 +146,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 2017년 1월 23일: Liberty 빌드팩 v3.7-20170118-2046 업데이트
 * 월별 Liberty 런타임 버전이 [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) 릴리스로 업데이트되었습니다.
 * IBM JRE 버전 8이 SR3 FP22 버전으로 업데이트되었습니다.
-* [자동 구성](autoConfig.html) 지원이 [Compose for MongoDB 서비스](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html)(현재 월별 Liberty 런타임에서만 사용 가능)에 대한 작업을 수행하도록 확장되었습니다.
+* [자동 구성](autoConfig.html) 지원이 [Compose for MongoDB 서비스](/docs/services/ComposeForMongoDB/index.html)(현재 월별 Liberty 런타임에서만 사용 가능)에 대한 작업을 수행하도록 확장되었습니다.
 
 ### 2016년 12월 13일: Liberty 빌드팩 v3.6-20161209-1351 업데이트
 * 기본 Liberty 런타임 버전이 [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 릴리스로 업데이트되었습니다.
 * IBM JRE 버전 8이 SR3 FP21 버전으로 업데이트되었습니다.
-* [자동 구성](autoConfig.html) 지원이 [Compose for PostgreSQL 서비스](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html)에 대한 작업을 수행하도록 확장되었습니다.
+* [자동 구성](autoConfig.html) 지원이 [Compose for PostgreSQL 서비스](/docs/services/ComposeForPostgreSQL/index.html)에 대한 작업을 수행하도록 확장되었습니다.
 * 또한 빌드팩은 [Auto-Scaling 서비스](/docs/services/Auto-Scaling/index.html)를 위해 에이전트의 업데이트된 버전을 제공합니다.
 * 빌드팩이 `server.xml` 파일의 포함 위치의 일부로 환경 변수를 지원하도록 업데이트되었습니다.
 
@@ -146,7 +163,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * Monitoring and Analytics 서비스 통합이 [Diego ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html)에 대한 작업을 수행하도록 수정되었습니다.
 * [Dynatrace](dynatrace.html) 서비스 통합이 Dynatrace 서비스 오퍼링에 대한 작업을 효과적으로 수행하도록 업데이트되었습니다.
 * PostgreSQL 및 MySQL 유형의 서비스에 대한 [자동 구성](autoConfig.html) 지원이 서버 디렉토리 또는 패키지된 서버 배치 시 원활하게 이루어지도록 개선되었습니다.
-* [devconsole 및 shell App Management 유틸리티](../common/app_mng.html#app_management)에서 사용되는 Node.js 런타임이 최신 `0.12.17` 버전으로 업데이트되었습니다.
+* [devconsole 및 shell App Management 유틸리티](docs/runtimes-common/app_mng.html#app_management)에서 사용되는 Node.js 런타임이 최신 `0.12.17` 버전으로 업데이트되었습니다.
 * Liberty 런타임의 [보안 수정사항](http://www.ibm.com/support/docview.wss?uid=swg21994945)이 포함되었습니다.
 
 ### 2016년 11월 1일: Liberty 빌드팩 v3.4.1-20161030-2241 업데이트

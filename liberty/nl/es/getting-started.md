@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -30,7 +30,7 @@ A lo largo de estos documentos, las referencias a la CLI de Cloud Foundry se han
 
 Necesitará las siguientes cuentas y herramientas:
 * [Cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/reference/ibmcloud/download_cli.html)
+* [CLI de {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://maven.apache.org/download.cgi){: new_window}
 
@@ -108,7 +108,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Si tiene un ID de usuario federado, en su lugar utilice el siguiente mandato para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
+  Si tiene un ID de usuario federado, en su lugar utilice el siguiente mandato para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](/docs/cli/login_federated_id.html) para obtener más información.
 
   ```
 ibmcloud login --sso
@@ -122,7 +122,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Si no tiene una org o un espacio configurado, consulte [Adición de organizaciones y espacios](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Si no tiene una org o un espacio configurado, consulte [Adición de organizaciones y espacios](/docs/account/orgs_spaces.html).
   {: tip}
 
 1. Desde el directorio `get-started-java`, envíe por push la aplicación a {{site.data.keyword.Bluemix_notm}}.
@@ -132,14 +132,16 @@ ibmcloud cf push
   ```
   {: codeblock}
 
-El despliegue de la aplicación puede tardar unos minutos. Cuando finalice el despliegue, verá un mensaje que indica que la app se está ejecutando. Visualice su app en el URL que aparece en la salida del mandato push o bien visualice el estado de despliegue de la app y el URL con el siguiente mandato:
+El despliegue de la aplicación puede tardar unos minutos. Cuando finalice el despliegue, mensaje indicará que la app se está ejecutando. Visualice su app en el URL que aparece en la salida del mandato push con "/GetStartedJava" añadido al final, o bien visualice el estado de despliegue de la app y el URL con el siguiente mandato:
 
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
 
-Puede resolver errores en el proceso de despliegue mediante el mandato `ibmcloud cf logs <Your-App-Name> --recent`.
+También puede ir a la [Lista de recursos](https://cloud.ibm.com/resources) de {{site.data.keyword.Bluemix_notm}} para ver su app. Si pulsa en **URL para visitar la app**, recuerde añadir "/GetStartedJava" al URL.
+
+Puede resolver errores en el proceso de despliegue mediante el mandato `ibmcloud cf logs GetStartedJava --recent`.
 {: tip}  
 
 ## Paso 5: Añada una base de datos
@@ -150,8 +152,8 @@ A continuación, añadiremos una base de datos de {{site.data.keyword.cloudant_s
 1. En el navegador, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y vaya al panel de control. Seleccione **Crear recurso**.
 1. Busque **{{site.data.keyword.cloudant_short_notm}}** y seleccione el servicio.
 1. Para **Métodos de autenticación disponibles**, seleccione **Utilizar tanto credenciales antiguas como IAM**. Puede dejar los valores predeterminados para los demás campos. Pulse **Crear** para crear el servicio.
-1. En el área de navegación, vaya a **Conexiones**. Seleccione la aplicación y pulse **Crear conexión**.
-1. Conéctese a la aplicación utilizando los valores predeterminados y pulse **Conectar y volver a transferir la app**. Luego pulse **Volver a transferir** cuando se le solicite.
+1. En el área de navegación, vaya a **Conexiones** y pulse **Crear conexión**. Seleccione su aplicación y pulse **Conectar**.
+1. Utilizando los valores predeterminados, pulse en **Conectar y volver a transferir la app** para conectar la base de datos a su aplicación. Pulse en **Volver a transferir** cuando se le solicite.
 
    {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
@@ -162,7 +164,7 @@ Las variables de entorno le permiten separar valores de despliegue del código f
 {: #use_database}
 Ahora vamos a actualizar el código local para que apunte a esta base de datos. Guardaremos las credenciales correspondientes a los servicios en un archivo de propiedades. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno `VCAP_SERVICES`.
 
-1. En su navegador, vaya al panel de control de {{site.data.keyword.Bluemix_notm}} y seleccione **_su app_ > Conexiones**. Pulse el icono de menú de {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) y seleccione **Ver credenciales**.
+1. Busque la app en la [Lista de recursos](https://cloud.ibm.com/resources) de {{site.data.keyword.Bluemix_notm}}. En la página de Detalles del servicio de su app, pulse **Conexiones** en la barra lateral. Pulse el icono de menú de {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) y seleccione **Ver credenciales**.
 
 2. Copie y pegue sólo el `url` de las credenciales en el campo `url` del archivo `src/main/resources/cloudant.properties` y guarde los cambios.
 

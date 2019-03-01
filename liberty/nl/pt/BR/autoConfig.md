@@ -22,7 +22,7 @@ do Liberty não se aplica aos serviços deste tipo.
 
 Um serviço gerenciado por contêiner é um serviço gerenciado pelo tempo de execução do Liberty. Em alguns casos, o aplicativo pode consultar o serviço ligado em JNDI, enquanto em outros o serviço é usado diretamente pelo próprio  Liberty. O buildpack do Liberty lerá VCAP_SERVICES para obter informações sobre os serviços ligados. Para cada serviço gerenciado por contêiner, o buildpack executa três funções.
 
-* Gera [variáveis de nuvem](optionsForPushing.html#accessing_info_of_bound_services) para o serviço limite.
+* Gera [variáveis de nuvem](/docs/runtimes/liberty/optionsForPushing.html#accessing_info_of_bound_services) para o serviço limite.
 * Instala os recursos do Liberty e os códigos de acesso do cliente que são necessários para acessar o serviço de limite.
 * Gera ou atualiza sub-rotinas do arquivo `server.xml`
 que são necessárias pelo serviço.
@@ -44,7 +44,7 @@ O buildpack Liberty fornece configuração automática para os tipos de serviço
 Os serviços Compose podem ser gerenciados por contêiner ou gerenciados por aplicativo. Por padrão, o buildpack do Liberty
 assume que esses serviços são gerenciados por contêiner e os configura automaticamente. Se desejar que o aplicativo gerencie o serviço,
 você pode fazer opt-out da configuração automática para o serviço, configurando a variável
-de ambiente `services_autoconfig_excludes`. Para obter mais informações, veja [Fazendo opt-out da configuração automática de serviço](autoConfig.html#opting_out).
+de ambiente `services_autoconfig_excludes`. Para obter mais informações, veja [Fazendo opt-out da configuração automática de serviço](/docs/runtimes/liberty/autoConfig.html#opting_out).
 
 ## Instalação do código de acesso do cliente e dos recursos do Liberty
 {: #installation_of_liberty_features}
@@ -59,7 +59,7 @@ detalhes sobre os tipos de serviço de limite.
 
 O buildpack do Liberty pode gerar ou atualizar automaticamente as sub-rotinas de configuração no arquivo `server.xml` quando um aplicativo independente é enviado por push, dependendo de como o aplicativo está ligado aos serviços e se há um arquivo `server.xml` existente.
 
-Ao enviar por push um aplicativo independente, o buildpack do Liberty gera a sub-rotina de configuração `server.xml`, conforme descrito em [Opções para enviar por push os aplicativos do Liberty](optionsForPushing.html#options_for_pushing), para o {{site.data.keyword.Bluemix_notm}}.
+Ao enviar por push um aplicativo independente, o buildpack do Liberty gera a sub-rotina de configuração `server.xml`, conforme descrito em [Opções para enviar por push os aplicativos do Liberty](/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing), para o {{site.data.keyword.Bluemix_notm}}.
 
 Ao enviar por push um aplicativo independente e ligar aos serviços gerenciados por contêiner, o buildpack do Liberty gera as sub-rotinas `server.xml` necessárias para os serviços ligados.
 

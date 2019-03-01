@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-30"
+lastupdated: "2018-12-05"
 
 ---
 
@@ -27,7 +27,7 @@ lastupdated: "2018-10-30"
 
 以下が必要です。
 * [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
 * [.NET Core ダウンロード Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.microsoft.com/net/download/core) から .NET Core 2.1.1 SDK 2.1.301 をインストールします。
 
@@ -95,7 +95,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  フェデレーテッド・ユーザー ID をお持ちの場合は、代わりに次のコマンドを使用して、シングル・サインオン ID でログインしてください。 詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
+  フェデレーテッド・ユーザー ID をお持ちの場合は、代わりに次のコマンドを使用して、シングル・サインオン ID でログインしてください。 詳しくは、[『フェデレーテッド ID を使用したログイン』](/docs/cli/login_federated_id.html)を参照してください。
  ```
 ibmcloud login --sso
   ```
@@ -107,7 +107,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  組織およびスペースがセットアップされていない場合は、[組織およびスペースの追加](https://console.bluemix.net/docs/account/orgs_spaces.html)を参照してください。
+  組織およびスペースがセットアップされていない場合は、[組織およびスペースの追加](/docs/account/orgs_spaces.html)を参照してください。
   {: tip}
 
 1. **アプリケーションのルート・ディレクトリー `get-started-aspnet-core` で作業していることを確認し**、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュします。
@@ -124,6 +124,8 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
+また、{{site.data.keyword.Bluemix_notm}} [リソース・リスト](https://cloud.ibm.com/resources)にアクセスしてアプリケーションを表示することもできます。
+
 ## ステップ 5: データベースを追加する
 {: #add_database}
 
@@ -131,9 +133,9 @@ ibmcloud cf apps
 
 1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
 1. 検索して **{{site.data.keyword.cloudant_short_notm}}** を見つけて、このサービスを選択します。
-1. **「使用可能な認証方式 (Available authentication methods)」**で、**「レガシー資格情報と IAM の両方を使用する (Use both legacy credentials and IAM)」**を選択します。他のフィールドについては、デフォルト設定のままでかまいません。**「作成」**をクリックしてサービスを作成します。
-1. ナビゲーションで、**「接続」**に移動します。アプリケーションを選択し、**「接続の作成」**をクリックします。
-1. デフォルト値を使用してアプリケーションに接続し、**「アプリの接続および再ステージ」**をクリックします。次に、プロンプトが出されたら**「再ステージ」**をクリックします。
+1. **「使用可能な認証方式 (Available authentication methods)」**で、**「レガシー資格情報と IAM の両方を使用する (Use both legacy credentials and IAM)」**を選択します。 他のフィールドについては、デフォルト設定のままでかまいません。 **「作成」**をクリックしてサービスを作成します。
+1. ナビゲーションで、**「接続」**に移動して、**「接続の作成」**をクリックします。アプリケーションを選択し、**「接続」**をクリックします。
+1. デフォルト値を使用して、**「アプリの接続および再ステージ」**をクリックしてデータベースをアプリケーションに接続します。プロンプトが表示されたら、**「再ステージ」**をクリックします。
 
    {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
 
@@ -165,7 +167,7 @@ ibmcloud cf apps
    ```
    {: codeblock}
 
-1. ブラウザーで、{{site.data.keyword.Bluemix_notm}} ダッシュボードに移動し、**「_your app_」>「接続」**を選択します。 {{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&vellip;**) をクリックし、**「資格情報の表示」**を選択します。
+1. {{site.data.keyword.Bluemix_notm}} [リソース・リスト](https://cloud.ibm.com/resources)にアプリケーションが含まれているのを確認します。アプリケーションの「サービス詳細」ページで、サイドバーの**「接続」**をクリックします。{{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&hellip;**) をクリックし、**「資格情報の表示」**を選択します。
 
 1. 資格情報から `url` 値のみをコピーして `vcap-local.json` ファイルの `url` フィールドに貼り付けて、`CLOUDANT_DATABASE_URL` を置き換えます。
 
@@ -176,9 +178,9 @@ ibmcloud cf apps
    ```
    {: codeblock}
 
-1. http://localhost:5000/ でブラウザー・ビューを最新表示します。アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
+1. http://localhost:5000/ でブラウザー・ビューを最新表示します。 アプリケーションに入力するすべての名前がデータベースに追加されるようになります。
 
-ローカル・アプリケーションと {{site.data.keyword.Bluemix_notm}} アプリケーションはデータベースを共有します。`ibmcloud cf push` コマンドの出力にリストされている URL で {{site.data.keyword.Bluemix_notm}} アプリを表示してください。いずれかのアプリケーションから追加した名前は、ブラウザーを最新表示すると両方に表示されます。
+ローカル・アプリケーションと {{site.data.keyword.Bluemix_notm}} アプリケーションはデータベースを共有します。  `ibmcloud cf push` コマンドの出力にリストされている URL で {{site.data.keyword.Bluemix_notm}} アプリを表示してください。  いずれかのアプリケーションから追加した名前は、ブラウザーを最新表示すると両方に表示されます。
 
 予期しない課金が発生しないように、アプリケーションを稼働中にしておく必要がない場合は停止することを忘れないでください。
 {: tip}

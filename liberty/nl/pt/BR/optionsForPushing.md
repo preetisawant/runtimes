@@ -24,7 +24,7 @@ possível usar os métodos a seguir para implementar seus aplicativos Liberty no
 * Enviando um diretório de servidor por push
 * Enviando um servidor em pacote por push
 
-Importante: quando você implementa um aplicativo com o buildpack do Liberty, especifique um mínimo de 512 M como o limite de memória para seus aplicativos. Para obter mais informações, veja [Limites de memória e o buildpack do Liberty](memoryLimits.html).
+Importante: quando você implementa um aplicativo com o buildpack do Liberty, especifique um mínimo de 512 M como o limite de memória para seus aplicativos. Para obter mais informações, veja [Limites de memória e o buildpack do Liberty](/docs/runtimes/liberty/memoryLimits.html).
 
 ## Apps independentes
 {: #stand_alone_apps}
@@ -67,7 +67,7 @@ Esses recursos correspondem aos recursos do Java EE 7 Web Profile. É possível 
 ```
 {: codeblock}
 
-Nota: para obter resultados melhores, configure os recursos do Liberty com a variável de ambiente JBP_CONFIG_LIBERTY ou implemente o aplicativo como um [diretório do servidor](optionsForPushing.html#server_directory) ou [servidor em pacote](optionsForPushing.html#packaged_server) com um arquivo server.xml customizado. Configurar essa variável de ambiente assegura que seu aplicativo use somente o recurso necessário e não seja afetado pelas mudanças do conjunto de recursos padrão do Liberty do buildpack. Se você precisar fornecer configuração Liberty extra além do conjunto de recursos, use o [diretório do servidor](optionsForPushing.html#server_directory) ou a opção [servidor em pacote](optionsForPushing.html#packaged_server) para implementar o seu aplicativo.
+Nota: para obter resultados melhores, configure os recursos do Liberty com a variável de ambiente JBP_CONFIG_LIBERTY ou implemente o aplicativo como um [diretório do servidor](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou [servidor em pacote](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) com um arquivo server.xml customizado. Configurar essa variável de ambiente assegura que seu aplicativo use somente o recurso necessário e não seja afetado pelas mudanças do conjunto de recursos padrão do Liberty do buildpack. Se você precisar fornecer configuração Liberty extra além do conjunto de recursos, use o [diretório do servidor](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou a opção [servidor em pacote](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) para implementar o seu aplicativo.
 
 Se você implementou um arquivo WAR, o aplicativo da web ficará acessível sob a raiz de contexto conforme configurado no arquivo ibm-web-ext.xml integrado. Se o arquivo ibm-web-ext.xml não existir ou não especificar a raiz de contexto, o aplicativo ficará acessível sob o contexto-raiz. Por exemplo,
 

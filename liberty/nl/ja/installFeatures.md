@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-10-03"
 # Liberty フィーチャーのインストール
 {: #install-features}
 
-Liberty for Java ランタイムには、Liberty で使用可能な[フィーチャーのサブセット](libertyFeatures.html#liberty_features)が含まれています。アプリケーションが {{site.data.keyword.cloud_notm}} にプッシュされるときに Cloud Foundry のランタイム前のフックとして Liberty `installUtility` コマンドを実行することによって、ランタイムに含まれていないフィーチャーをインストールできます。
+Liberty for Java ランタイムには、Liberty で使用可能な[フィーチャーのサブセット](libertyFeatures.html#liberty_features)が含まれています。 アプリケーションが {{site.data.keyword.cloud_notm}} にプッシュされるときに Cloud Foundry のランタイム前のフックとして Liberty `installUtility` コマンドを実行することによって、ランタイムに含まれていないフィーチャーをインストールできます。
 
 使用可能なフィーチャーの完全なリストについては、[Liberty フィーチャー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html) を参照してください。
 
@@ -23,14 +23,14 @@ Liberty for Java ランタイムには、Liberty で使用可能な[フィーチ
 
 1. `.profile.d` ディレクトリーに、以下の例のように `installUtility` コマンドを実行するスクリプト・ファイルを作成します。
 
-   この例では、`javaee-8.0` フィーチャーがインストールされます。
+   この例は、`audit-1.0` フィーチャーをインストールします。
 
    ```
    #!/bin/sh
-   echo "Installing javaee-8.0"
+   echo "Installing audit-1.0"
    export PATH=$PATH:$HOME/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
+   $HOME/.liberty/bin/installUtility install audit-1.0 --acceptLicense
    ```
    {: codeblock}
 
@@ -56,7 +56,7 @@ Liberty for Java ランタイムには、Liberty で使用可能な[フィーチ
     フィーチャーがインストールされた場合、次のメッセージが出力されます。
 
     ```
-    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing javaee-8.0
+    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing audit-1.0
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Establishing a connection to the configured repositories ...
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT This process might take several minutes to complete.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Successfully connected to all configured repositories.

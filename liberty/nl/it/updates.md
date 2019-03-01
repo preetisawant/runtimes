@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-02"
+  years: 2015, 2019
+lastupdated: "2019-01-01"
 
 ---
 
@@ -13,6 +13,23 @@ lastupdated: "2018-11-02"
 {: #latest_updates}
 
 ## Un elenco degli aggiornamenti più recenti nel pacchetto di build Liberty.
+
+### 1° febbraio 2019: pacchetto di build Liberty aggiornato v3.28-20190127-1723
+
+* La versione GA del runtime Liberty predefinita è la release 18.0.0.4.
+* È stata aggiunta la versione GA del runtime di Liberty alternativa 19.0.0.1.  
+* La release beta di Liberty mensile è stata rimossa.  
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP7.
+* Il client MQ è stato aggiornato alla release 9.1.0.0.
+* L'agent di ridimensionamento automatico è stato aggiornato.
+
+
+### 14 dicembre 14, 2018: pacchetto di build Liberty aggiornato v3.27-20181130-1702
+
+* Il pacchetto di build ora include Java Platform, Enterprise Edition 8.0. Java EE 8 non deve più essere necessariamente installato quando viene eseguito il push di un'applicazione.  
+* La versione del runtime Liberty predefinita è stata aggiornata alla release 18.0.0.4.
+* La versione del runtime Liberty mensile è stata aggiornata alla release 2018.11.0.0.
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP26.
 
 ### 29 ottobre 2018: pacchetto di build Liberty aggiornato v3.26-20181023-1545
 
@@ -117,8 +134,8 @@ lastupdated: "2018-11-02"
 * Il runtime Liberty predefinito include la iFix PI75512 WebSockets.
 * La versione del runtime Liberty è stata aggiornata alla release [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/).
 * Le versioni di IBM JRE 8 e 7.1 sono state aggiornate a SR4 FP1.
-* Il supporto di configurazione automatica è stato esteso per utilizzare [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
-* Il supporto di configurazione automatica per [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) è stato aggiornato per fornire l'opzione di utilizzare la libreria Java Cloudant invece di org.ektorp. Per abilitare l'utilizzo della libreria Java Cloudant devi configurare la seguente variabile di ambiente:    
+* Il supporto di configurazione automatica è stato esteso per utilizzare [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
+* Il supporto di configurazione automatica per [Cloudant NoSQL Database](/docs/services/Cloudant/index.html) è stato aggiornato per fornire l'opzione di utilizzare la libreria Java Cloudant invece di org.ektorp. Per abilitare l'utilizzo della libreria Java Cloudant devi configurare la seguente variabile di ambiente:    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -129,12 +146,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 23 gennaio 2017: pacchetto di build Liberty aggiornato v3.7-20170118-2046
 * La versione del runtime Liberty è stata aggiornata alla release [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/).
 * La versione di IBM JRE 8 è stata aggiornata alla versione SR3 FP22.
-* Il supporto per la [configurazione automatica](autoConfig.html) è stato inoltre esteso per utilizzare il [servizio Compose for MongoDB](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (Al momento disponibile solo con il runtime Liberty mensile).
+* Il supporto per la [configurazione automatica](autoConfig.html) è stato inoltre esteso per utilizzare il [servizio Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Al momento disponibile solo con il runtime Liberty mensile).
 
 ### 13 dicembre, 2016: pacchetto di build Liberty aggiornato v3.6-20161209-1351
 * La versione del runtime Liberty predefinita è stata aggiornata alla release [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661).
 * La versione di IBM JRE 8 è stata aggiornata alla versione SR3 FP21.
-* Il supporto per la [configurazione automatica](autoConfig.html) è stato inoltre esteso per utilizzare il [servizio Compose for PostgreSQL](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html).
+* Il supporto per la [configurazione automatica](autoConfig.html) è stato inoltre esteso per utilizzare il [servizio Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html).
 * Il pacchetto di build fornisce inoltre una versione aggiornata dell'agent per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html).
 * Il pacchetto di build è stato aggiornato per supportare le variabili di ambiente come parte delle ubicazioni incluse nei file `server.xml`.
 
@@ -146,7 +163,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * L'integrazione del servizio Monitoring and Analytics è stata corretta per utilizzare [Diego ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html).
 * Le integrazioni del servizio [Dynatrace](dynatrace.html) sono state aggiornate per utilizzare in modo migliore le offerte del servizio Dynatrace.
 * Il supporto per la [configurazione automatica](autoConfig.html) per i tipi di servizio PostgreSQL e MySQL è stato migliorato per funzionare in modo migliore durante la distribuzione di una directory server o di un server in pacchetto.
-* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](../common/app_mng.html#app_management) è stato aggiornato alla versione `0.12.17` più recente.
+* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](docs/runtimes-common/app_mng.html#app_management) è stato aggiornato alla versione `0.12.17` più recente.
 * Sono state incluse [correzioni per la protezione](http://www.ibm.com/support/docview.wss?uid=swg21994945) per il runtime di Liberty.
 
 ### 1 novembre 2016: pacchetto di build Liberty aggiornato v3.4.1-20161030-2241

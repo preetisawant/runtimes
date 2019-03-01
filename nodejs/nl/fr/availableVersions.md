@@ -39,4 +39,4 @@ Voir l'exemple suivant :
 ```
 {: codeblock}
 
-**Remarque :** Indiquez toujours une version de noeud dans le fichier `package.json`. Si aucune version n'est spécifiée, la version de noeud la plus récente est utilisée. 
+**Remarque :** Indiquez toujours une version de noeud dans le fichier `package.json`. Si aucune version n'est spécifiée, la version de noeud la plus récente est utilisée.

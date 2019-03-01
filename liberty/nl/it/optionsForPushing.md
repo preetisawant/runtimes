@@ -28,7 +28,7 @@ Per distribuire le tue applicazioni Liberty a {{site.data.keyword.Bluemix_notm}}
 * Esecuzione del push di una directory server
 * Esecuzione del push di un server in pacchetto
 
-Importante: quando distribuisci un'applicazione con il pacchetto di build Liberty, specifica un minimo di 512M come limite di memoria per le tue applicazioni. Per ulteriori informazioni, consulta [Limiti di memoria e pacchetto di build Liberty](memoryLimits.html).
+Importante: quando distribuisci un'applicazione con il pacchetto di build Liberty, specifica un minimo di 512M come limite di memoria per le tue applicazioni. Per ulteriori informazioni, consulta [Limiti di memoria e pacchetto di build Liberty](/docs/runtimes/liberty/memoryLimits.html).
 
 ## Applicazioni autonome
 {: #stand_alone_apps}
@@ -71,12 +71,12 @@ nuovo l'applicazione:
 ```
 {: codeblock}
 
-Nota: per dei risultati ottimali, imposta le funzioni Liberty con la variabile di ambiente JBP_CONFIG_LIBERTY oppure distribuisci la tua applicazione come una [directory server](optionsForPushing.html#server_directory) o un [server in pacchetto](optionsForPushing.html#packaged_server) con un file server.xml personalizzato. L'impostazione di questa
+Nota: per dei risultati ottimali, imposta le funzioni Liberty con la variabile di ambiente JBP_CONFIG_LIBERTY oppure distribuisci la tua applicazione come una [directory server](/docs/runtimes/liberty/optionsForPushing.html#server_directory) o un [server in pacchetto](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) con un file server.xml personalizzato. L'impostazione di questa
 				variabile di ambiente garantisce che la tua applicazione utilizzi solo la funzione di cui
 				ha bisogno e che non risenta delle modifiche dell'insieme di funzioni Liberty predefinito del pacchetto di build. Se devi fornire una configurazione Liberty aggiuntiva oltre all'insieme di funzioni, utilizza
 					l'opzione [directory
-					server](optionsForPushing.html#server_directory) o [server
-					in pacchetto](optionsForPushing.html#packaged_server) per distribuire la tua applicazione.
+					server](/docs/runtimes/liberty/optionsForPushing.html#server_directory) o [server
+					in pacchetto](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) per distribuire la tua applicazione.
 
 Se hai distribuito un file WAR, l'applicazione web è accessibile sotto il root di contesto come impostato nel file ibm-web-ext.xml incorporato. Se il file ibm-web-ext.xml non esiste, o non specifica il root di contesto, l'applicazione è accessibile sotto la root di contesto. Ad esempio,
 

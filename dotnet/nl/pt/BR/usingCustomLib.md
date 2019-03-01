@@ -17,4 +17,4 @@ Algumas bibliotecas podem requerer o uso de um pacote NuGet e de alguns arquivos
 
 Para usar essas bibliotecas com o buildpack, coloque-as em uma pasta `ld_library_path` dentro da pasta raiz do aplicativo. O buildpack inclui automaticamente esse caminho na variável de ambiente `LD_LIBRARY_PATH` durante a preparação.  
 
-Como alternativa, é possível especificar a variável de ambiente `LD_LIBRARY_PATH` no arquivo `manifest.yml` do aplicativo ou usando o comando `ibmcloud cf set-env` para usar um nome de pasta diferente de `ld_library_path`. Neste caso, o buildpack anexa esse caminho customizado ao `LD_LIBRARY_PATH` gerado pelo buildpack.
+Como alternativa, é possível especificar a variável de ambiente `LD_LIBRARY_PATH` no arquivo `manifest.yml` do aplicativo ou usando o comando `ibmcloud cf set-env` para usar um nome de pasta diferente de `ld_library_path`.  Neste caso, o buildpack anexa esse caminho customizado ao `LD_LIBRARY_PATH` gerado pelo buildpack.

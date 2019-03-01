@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-03"
+  years: 2015, 2019
+lastupdated: "2019-01-11"
 
 ---
 
@@ -41,12 +41,33 @@ S'il est activé, OpenJDK version 8 est utilisé par défaut. Utilisez la variab
 ```
 {: codeblock}
 
-La propriété de version peut être définie avec une plage de versions, telle que 1.7.+, ou avec une version spécifique répertoriée dans la [liste des versions OpenJDK disponibles](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Pour de meilleurs résultats, utilisez Java 8.
+La propriété de version peut être définie avec une plage de versions, telle que 1.7.+, 1.8.+, ou avec une version spécifique répertoriée dans la [liste des versions OpenJDK disponibles](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Pour de meilleurs résultats, utilisez Java 8.
+
+## OpenJ9
+{: #openj9}
+
+Si vous le souhaitez, vous pouvez configurer des applications pour qu'elles s'exécutent avec OpenJ9 comme environnement d'exécution Java ou kit Java Development Kit. Pour qu'une application puisse s'exécuter avec OpenJ9, associez la variable d'environnement JVM à "openj9". Par exemple, avec l'outil de ligne de commande {{site.data.keyword.Bluemix_notm}} , exécutez la commande suivante :
+```
+    ibmcloud cf set-env myapp JVM 'openj9'
+```
+{: codeblock}
+
+S'il est activé, OpenJ9 version 11 est utilisé par défaut. Utilisez la variable d'environnement JBP_CONFIG_OPENJ9 afin de spécifier une autre version d'OpenJ9. Par exemple, pour utiliser la version la plus récente OpenJ9 8, définissez la variable d'environnement suivante :
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
+```
+{: codeblock}
+
+S'il est activé, OpenJ9 JRE est utilisé par défaut. Utilisez la variable d'environnement JBP_CONFIG_OPENJ9 pour utiliser la version JDK d'OpenJ9. Par exemple, pour utiliser le kit JDK d'OpenJ9, définissez la variable d'environnement suivante :
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
+```
+{: codeblock}
 
 ## Environnement JRE Oracle
 {: #oracle_jre}
 
-Voir [Utilisation de l'environnement JRE Oracle](oracle_jre.html) pour plus d'informations.
+Voir [Utilisation de votre environnement JRE](/docs/runtimes/liberty/using_own_jre.html) pour plus d'informations.
 
 ## Configuration des options de l'environnement d'exécution Java (JRE)
 {: #configuring_jre}
@@ -57,10 +78,10 @@ Voir [Utilisation de l'environnement JRE Oracle](oracle_jre.html) pour plus d'in
 Le pack de construction Liberty configure les options JVM par défaut en prenant en compte :
 
 * La limite de mémoire d'une application.  Les paramètres de segment de mémoire de machine virtuelle Java appliqués sont calculés en fonction de :
-  * La limite de mémoire d'une application, comme expliqué dans [Limites mémoire et pack de construction Liberty](memoryLimits.html#memory_limits)
+  * La limite de mémoire d'une application, comme expliqué dans [Limites mémoire et pack de construction Liberty](/docs/runtimes/liberty/memoryLimits.html#memory_limits)
   * Le type d'environnement d'exécution Java (JRE), étant donné que les options relatives au segment de mémoire pour la machine virtuelle Java varient selon les options prises en charge par l'environnement d'exécution Java (JRE)
 
-* Les [fonctions Liberty prises en charge dans Bluemix{{site.data.keyword.Bluemix_notm}}](libertyFeatures.html#libertyfeatures).
+* Les [fonctions Liberty prises en charge dans Bluemix{{site.data.keyword.Bluemix_notm}}](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures).
   * Les transactions de base de données globales en deux phases ne sont pas prises en charge dans {{site.data.keyword.Bluemix_notm}} et, par conséquent, sont désactivées avec -Dcom.ibm.tx.jta.disable2PC=true.
 
 * L'environnement {{site.data.keyword.Bluemix_notm}}.
@@ -186,7 +207,7 @@ Pour voir le fichier `staging_info.yml` sur une application lancée dans une cel
 ```
 {: codeblock}
 
-Les options de JVM pour les déploiements sous forme de fichier WAR ou EAR, sous forme de répertoire de serveur ou sous forme de package de serveur sont conservées dans un fichier `jvm.options`. Le fichier `jvm.options` se trouve dans le répertoire `app/wlp/usr/servers/<serverName>/`. Dans la plupart des cas `<serverName>` est défini sur `defaultServer`, à moins qu'un package de serveur n'ait été déployé avec un autre nom de serveur. Par exemple :
+Les options de JVM pour les déploiements sous forme de fichier WAR ou EAR, sous forme de répertoire de serveur ou sous forme de package de serveur sont conservées dans un fichier `jvm.options`. Le fichier `jvm.options` se trouve dans le répertoire `app/wlp/usr/servers/<serverName>/`. Dans la plupart des cas, `<serverName>` est défini sur `defaultServer`, sauf si un package de serveur a été déployé avec un nom de serveur différent. Par exemple :
 
 Pour voir le fichier `jvm.options` sur une application lancée dans un noeud DEA, exécutez :
 
@@ -237,7 +258,7 @@ Déploiement d'une application avec des options de JVM personnalisées pour acti
 ```
 {: codeblock}
 
- Consultez la documentation [Journalisation et traçage](loggingAndTracing.html#download_dumps) les détails concernant la visualisation et le téléchargement des fichiers de vidage générés.
+ Consultez la documentation [Journalisation et traçage](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps) les détails concernant la visualisation et le téléchargement des fichiers de vidage générés.
 
 ### Surimposition de l'environnement d'exécution Java (JRE)
 {: #overlaying_jre}

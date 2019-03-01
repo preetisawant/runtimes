@@ -28,8 +28,8 @@ var port = (process.env.PORT || 3000);
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} には、Node.js スターター・アプリケーションが用意されています。  Node.js スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Node.js アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../common/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Node.js スターター・アプリケーションが用意されています。  Node.js スターター・アプリケーションは、アプリケーションで使用可能なテンプレートを提供する、シンプルな Node.js アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](/docs/runtimes-common/starter_app_usage.html)を参照してください。
 
 ## アプリケーション管理
 {: #app_management}
-{{site.data.keyword.Bluemix_notm}} には、Node.js アプリケーションを管理およびデバッグするために数多くのユーティリティーが用意されています。  詳しくは、[『アプリケーション管理』](../common/app_mng.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Node.js アプリケーションを管理およびデバッグするために数多くのユーティリティーが用意されています。  詳しくは、[『アプリケーション管理』](/docs/runtimes-common/app_mng.html)を参照してください。

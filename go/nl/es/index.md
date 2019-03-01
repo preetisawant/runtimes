@@ -23,7 +23,7 @@ go_buildpack se utiliza si la aplicación contiene un archivo denominado *.go.
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Go.  La aplicación de inicio Go es una sencilla app Go que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de inicio y realizar y enviar cambios push al entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de iniciador](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de iniciador.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Go.  La aplicación de inicio Go es una sencilla app Go que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de inicio y realizar y enviar cambios push al entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de iniciador](docs/runtimes-common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de iniciador.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}

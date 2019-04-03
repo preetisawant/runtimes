@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-04-03"
+subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,11 +24,12 @@ This buildpack supports the following versions, those marked as deprecated will 
 
 | .NET SDK version        | Default          |
 |-------------------------|------------------|
-| 2.1.403                 |   Yes            |
-| 2.1.302                 |   No             |
+| 2.2.104                 |   Yes            |
+| 2.1.504                 |   No             |
+| 2.1.403                 |   No             |
 | 2.0.3                   |   No             |
+| 1.1.12                  |   No             |
 | 1.1.11                  |   No             |
-| 1.1.10                  |   No             |
 | 1.0.4                   |   No             |
 
 
@@ -35,24 +37,26 @@ This buildpack supports the following versions, those marked as deprecated will 
 
 | .NET Core runtime version | Release type      |
 |---------------------------|-------------------|
-| 2.1.5                     | Current           |  
-| 2.1.4                     | LTS               |
-| 2.1.2                     | LTS               |
+| 2.2.2                     | Current           |  
+| 2.2.1                     | LTS               |
+| 2.1.8                     | LTS               |
+| 2.1.7                     | LTS               |
 | 2.0.9                     | LTS               |
 | 2.0.7                     | LTS               |
+| 1.1.11                    | LTS               |
 | 1.1.10                    | LTS               |
-| 1.1.9                     | LTS               |
 | 1.0.12                    | LTS               |
 | 1.0.11                    | LTS               |
 
 
 ### .NET aspnetcore versions
 
-| .NET aspnetcore version | Release type      |
+| .NET aspnetcore version | Release type        |
 |---------------------------|-------------------|
-| 2.1.5                     | Current           |  
-| 2.1.4                     | LTS               |
-| 2.1.2                     | LTS               |
+| 2.2.2                     | Current           |  
+| 2.2.1                     | LTS               |
+| 2.1.8                     | LTS               |
+| 2.1.7                     | LTS               |
 
 
 
@@ -62,7 +66,7 @@ Control the .NET SDK version with an optional `global.json` file in the applicat
 ```
    {
       "sdk": {
-        "version": "2.1.301"
+        "version": "2.2.104"
       }
    }
 ```

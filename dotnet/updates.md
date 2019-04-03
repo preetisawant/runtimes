@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-04-03"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +13,32 @@ lastupdated: "2018-12-12"
 {: #latest_updates}
 
 A list of the latest updates in the ASP.NET Core buildpack.
+
+## March 20, 2019: Updated ASP.NET Core buildpack v2.2-20190319-1114
+This release includes version 2.2.7 of the dotnet-core Cloud Foundry buildpack.
+
+* Add support for .NET Aspnetcore 2.1.7
+* Add support for .NET Aspnetcore 2.1.8
+* Add support for .NET Aspnetcore 2.2.1
+* Add support for .NET Aspnetcore 2.2.2
+* Add support for .NET Runtime 1.1.11
+* Add support for .NET Runtime 2.1.7
+* Add support for .NET Runtime 2.1.8
+* Add support for .NET Runtime 2.2.1
+* Add support for .NET Runtime 2.2.2
+* Add support for .NET SDK 1.1.12
+* Add support for .NET SDK 2.1.504
+* Add support for .NET SDK 2.2.104
+* Remove support for .NET Aspnetcore 2.1.5
+* Remove support for .NET Aspnetcore 2.1.4
+* Remove support for .NET Aspnetcore 2.1.2
+* Remove support for .NET Runtime 1.1.9
+* Remove support for .NET Runtime 2.1.2
+* Remove support for .NET Runtime 2.1.4
+* Remove support for .NET Runtime 2.1.5
+* Remove support for .NET SDK 1.1.10
+* Remove support for .NET SDK 2.1.302
+* Update Node.js version to 6.17.0
 
 ## December 12, 2018: Updated ASP.NET Core buildpack v2.1-20181205-1536
 This release includes version 2.2.0 of the dotnet-core Cloud Foundry buildpack.

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-05"
+  years: 2017, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 
 ---
 
@@ -29,7 +30,7 @@ Vous aurez besoin des éléments suivants :
 * [Compte {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
 * [{{site.data.keyword.Bluemix_notm}} interface de ligne de commande](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}
-* Installez .NET Core 2.1.1 SDK 2.1.301 depuis le [site Web de téléchargement .NET Core ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.microsoft.com/net/download/core).
+* Installez .NET Core 2.2.2 SDK 2.2.104 depuis le [site Web de téléchargement .NET Core ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.microsoft.com/net/download/core).
 
 ## Etape 1 : Cloner l'application exemple
 {: #clone}
@@ -124,7 +125,7 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-Vous pouvez également accéder à la [liste de ressources](https://cloud.ibm.com/resources) {{site.data.keyword.Bluemix_notm}} pour afficher votre application. 
+Vous pouvez également accéder à la [liste de ressources](https://cloud.ibm.com/resources) {{site.data.keyword.Bluemix_notm}} pour afficher votre application.
 
 ## Etape 5 : Ajouter une base de données
 {: #add_database}
@@ -135,7 +136,7 @@ Nous allons à présent ajouter une base de données {{site.data.keyword.cloudan
 1. Recherchez **{{site.data.keyword.cloudant_short_notm}}** puis sélectionnez le service.
 1. Pour les **méthodes d'authentification disponibles**, sélectionnez **Utiliser les données d'identification existantes et IAM**. Vous pouvez conserver les paramètres par défaut pour les autres zones. Cliquez sur **Créer** pour créer le service.
 1. Dans la zone de navigation, accédez à **Connections**, puis cliquez sur **Créer une connexion**. Sélectionnez votre application, puis cliquez sur **Connecter**.
-1. En utilisant les valeurs par défaut, cliquez sur **Connecter et reconstituer l'application** pour connecter la base de données à votre application. Cliquez sur **Reconstituer** lorsque vous y êtes invité. 
+1. En utilisant les valeurs par défaut, cliquez sur **Connecter et reconstituer l'application** pour connecter la base de données à votre application. Cliquez sur **Reconstituer** lorsque vous y êtes invité.
 
    {{site.data.keyword.Bluemix_notm}} redémarre votre application et lui fournit les données d'identification pour l'accès à la base de données en utilisant la variable d'environnement `VCAP_SERVICES`. L'application n'a accès à cette variable d'environnement que lorsqu'elle fonctionne sur {{site.data.keyword.Bluemix_notm}}.
 

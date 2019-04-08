@@ -3,6 +3,8 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-09-05"
+subcollection: "Python"
+
 
 ---
 
@@ -21,7 +23,7 @@ lastupdated: "2018-09-05"
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} 提供了 Python 入门模板应用程序。Python 入门模板应用程序是一个简单的 Python 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../common/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供了 Python 入门模板应用程序。Python 入门模板应用程序是一个简单的 Python 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](docs/runtimes-common/starter_app_usage.html)。
 
 ## 运行时版本
 {: #runtime_versions}

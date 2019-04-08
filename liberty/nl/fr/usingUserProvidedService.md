@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-6-26"
+subcollection: "liberty"
 
 ---
 
@@ -17,7 +18,7 @@ qui ne sont pas nécessairement fournis par ou disponibles au sein de votre envi
 Cette fonction constitue les [services fournis par l'utilisateur](https://docs.cloudfoundry.org/devguide/services/user-provided.html).
 
 Le présent document implique que :
-  * vous disposez d'un service disponible, 
+  * vous disposez d'un service disponible,
   * vous pouvez obtenir des données d'identification pour ce service,
 et décrit la procédure requise pour se connecter à et utiliser le service en question avec l'exemple d'application
 Getting-Started-Liberty (initiation à Liberty)
@@ -25,17 +26,17 @@ Getting-Started-Liberty (initiation à Liberty)
 Pour cette discussion, nous allons utiliser l'instance CloudantNoSQLDB comme exemple de service,
 et créer un service fourni par l'utilisateur pour s'y connecter.
 
-## Etape 1 : Envoyer par commande push de l'application Getting-Started 
+## Etape 1 : Envoyer par commande push de l'application Getting-Started
 {: #follow_getting_started}
 
 Suivez les étapes du [tutoriel d'initiation](/docs/runtimes/liberty/getting-started.html) jusqu'à l'envoi par commande push
-de l'application à {{site.data.keyword.Bluemix_notm}}. Arrêtez-vous avant la connexion à la base de données.
+de l'application à {{site.data.keyword.Bluemix_notm}}.  Arrêtez-vous avant la connexion à la base de données.
 
-## Etape 2 : Créer une instance CloudantNoSQLDB 
+## Etape 2 : Créer une instance CloudantNoSQLDB
 {: #create_cloudantnosqldb}
 
 Suivez les étapes du [tutoriel d'initiation](/docs/runtimes/liberty/getting-started.html) pour
-créer une instance CloudantNoSqLDB. 
+créer une instance CloudantNoSqLDB.
 
 Utilisez l'option d'affichage des données d'identification pour copier les données depuis la base de données CloudandNoSQLDB. Sauvegardez ces données d'identification dans un fichier local, par exemple cloudant-creds.
 

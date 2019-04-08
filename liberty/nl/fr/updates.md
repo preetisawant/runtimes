@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-01"
+lastupdated: "2019-03-01"
+subcollection: "liberty"
 
 ---
 
@@ -14,15 +15,20 @@ lastupdated: "2019-01-01"
 
 ## Liste des dernières mises à jour apportées au pack de construction Liberty.
 
+### 1er mars 2019 : Mise à jour du pack de construction Liberty v3.29-20190223-2128
+
+* La version GA d'exécution Liberty par défaut est l'édition 18.0.0.4.
+* La version GA d'exécution Liberty de remplacement 19.0.0.2 a été ajoutée.  
+* Les bibliothèques client Cloudant ont été mises à jour vers la version 2.14.0.
+
 ### 1er février 2019 : Mise à jour du pack de construction Liberty v3.28-20190127-1723
 
 * La version GA d'exécution Liberty par défaut est l'édition 18.0.0.4.
 * La version GA d'exécution Liberty de remplacement 19.0.0.1 a été ajoutée.  
 * L'édition bêta Liberty mensuelle a été retirée.  
-* La version de l'IBM JRE est passée au niveau 8 SR5 FP7.
+* La version JRE d'IBM JRE a été mise à jour vers 8 SR5 FP27.
 * Le client MQ a été mis à jour vers l'édition 9.1.0.0.
 * L'agent de mise à l'échelle automatique a été mis à jour.
-
 
 ### 14 décembre 2018 : Mise à jour du pack de construction Liberty v3.27-20181130-1702.
 

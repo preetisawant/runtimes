@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +13,32 @@ lastupdated: "2018-12-12"
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación ASP.NET Core.
+
+## 20 de marzo de 2019: Se ha actualizado el paquete de compilación de ASP.NET Core v2.2-20190319-1114
+Este release incluye la versión 2.2.7 del paquete de compilación dotnet-core de Cloud Foundry.
+
+* Adición de soporte para .NET Aspnetcore 2.1.7
+* Adición de soporte para .NET Aspnetcore 2.1.8
+* Adición de soporte para .NET Aspnetcore 2.2.1
+* Adición de soporte para .NET Aspnetcore 2.2.2
+* Adición de soporte para .NET Runtime 1.1.11
+* Adición de soporte para .NET Runtime 2.1.7
+* Adición de soporte para .NET Runtime 2.1.8
+* Adición de soporte para .NET Runtime 2.2.1
+* Adición de soporte para .NET Runtime 2.2.2
+* Adición de soporte para .NET SDK 1.1.12
+* Adición de soporte para .NET SDK 2.1.504
+* Adición de soporte para .NET SDK 2.2.104
+* Adición de soporte para .NET Aspnetcore 2.1.5
+* Adición de soporte para .NET Aspnetcore 2.1.4
+* Adición de soporte para .NET Aspnetcore 2.1.2
+* Retirada del soporte para .NET Runtime 1.1.9
+* Retirada del soporte para .NET Runtime 2.1.2
+* Retirada del soporte para .NET Runtime 2.1.4
+* Retirada del soporte para .NET Runtime 2.1.5
+* Retirada del soporte para .NET SDK 1.1.10
+* Retirada del soporte para .NET SDK 2.1.302
+* Actualización de la versión de Node.js a 6.17.0
 
 ## 12 de diciembre de 2018: Actualizado el paquete de compilación ASP.NET Core v2.1-20181205-1536
 Este release incluye la versión 2.2.0 del paquete de compilación dotnet-core de Cloud Foundry.
@@ -27,12 +54,12 @@ Este release incluye la versión 2.2.0 del paquete de compilación dotnet-core d
 * Adición de soporte para .NET Runtime 2.0.9
 * Adición de soporte para .NET Runtime 2.1.2
 * Adición de soporte para .NET Runtime 2.1.5
-* Adición de soporte para .NET Core SDK 1.0.4
-* Adición de soporte para .NET Core SDK 1.1.10
-* Adición de soporte para .NET Core SDK 1.1.11
-* Adición de soporte para .NET Core SDK 2.0.3
-* Adición de soporte para .NET Core SDK 2.1.302
-* Adición de soporte para .NET Core SDK 2.1.403
+* Adición de soporte para .NET SDK 1.0.4
+* Adición de soporte para .NET SDK 1.1.10
+* Adición de soporte para .NET SDK 1.1.11
+* Adición de soporte para .NET SDK 2.0.3
+* Adición de soporte para .NET SDK 2.1.302
+* Adición de soporte para .NET SDK 2.1.403
 * Retirada del soporte para .NET Framework 2.1.0
 * Retirada del soporte para .NET Framework 2.1.1
 * Retirada del soporte para .NET Framework 1.1.8

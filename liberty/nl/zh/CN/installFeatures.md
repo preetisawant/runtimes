@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-12-14"
+subcollection: "liberty"
 
 ---
 
@@ -23,14 +24,14 @@ Liberty for Java 运行时包含 Liberty 中可用的[功能子集](libertyFeatu
 
 1. 在 `.profile.d` 目录中，创建运行 `installUtility` 命令的脚本文件，如以下示例所示。
 
-   此示例安装 `javaee-8.0` 功能。
+   此示例安装 `audit-1.0` 功能。
 
    ```
    #!/bin/sh
-   echo "Installing javaee-8.0"
+   echo "Installing audit-1.0"
    export PATH=$PATH:$HOME/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
+   $HOME/.liberty/bin/installUtility install audit-1.0 --acceptLicense
    ```
    {: codeblock}
 
@@ -56,7 +57,7 @@ Liberty for Java 运行时包含 Liberty 中可用的[功能子集](libertyFeatu
     如果已安装功能，那么输出会显示以下消息：
 
     ```
-    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing javaee-8.0
+    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing audit-1.0
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Establishing a connection to the configured repositories ...
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT This process might take several minutes to complete.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Successfully connected to all configured repositories.

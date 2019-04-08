@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-26"
+subcollection: "liberty"
 
 ---
 
@@ -21,23 +22,23 @@ Liberty buildpack 在 {{site.data.keyword.Bluemix}} 中会频繁更新。每个�
 {: #liberty_versions}
 
 该 buildpack 提供 Liberty 运行时的两个版本：
-1. 稳定的发行版
+1. 长期稳定的发行版
   * 这是缺省 Liberty 运行时。
-  * 该版本不提供任何 [Beta 功能](usingBetaFeatures.html)。
+  * 该版本不提供任何 [Beta 功能](/docs/runtimes/liberty/usingBetaFeatures.html)。
   * 通常按季度更新。
 
 2. 每月发行版
-  * 必须使用 **"version: +"** 值设置 **JBP_CONFIG_LIBERTY** 环境变量以明确启用该发行版。
-  * 提供 [Beta 功能](usingBetaFeatures.html)。
-  * 通常按月更新。
+  * 必须使用 **"version: +"** 值设置 **JBP_CONFIG_LIBERTY** 环境变量，并使用 **true** 设置 **IBM_LIBERTY_MONTHLY** 环境变量，从而明确启用该发行版。
+  * 提供[每月功能](/docs/runtimes/liberty/usingMonthlyRuntime.html)。
+  * 通常每 4 周更新一次。
 
 ## Liberty 功能
 {: #liberty_features}
 
 部署 WAR 或 EAR 文件时，buildpack 会使用一组缺省 Liberty 功能集为应用程序提供配置。缺省 Liberty 功能集可能会在不同 buildpack 发行版中有所更改，但是此类情况很少发生。缺省功能集的更改可能会对应用程序产生不利影响。有一些选项可确保应用程序不受功能缺省值更改的影响。
 
-* 设置 JBP_CONFIG_LIBERTY 环境变量以显式指定对应用程序启用的功能的列表。有关更多信息，请参阅[独立应用程序](optionsForPushing.html#stand_alone_apps)。
-* 将应用程序部署为[服务器目录](optionsForPushing.html#server_directory)或[打包服务器](optionsForPushing.html#packaged_server)。提供定制 server.xml 文件，以指定应用程序需要的准确功能集。
+* 设置 JBP_CONFIG_LIBERTY 环境变量以显式指定对应用程序启用的功能的列表。有关更多信息，请参阅[独立应用程序](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)。
+* 将应用程序部署为[服务器目录](/docs/runtimes/liberty/optionsForPushing.html#server_directory)或[打包服务器](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)。提供定制 server.xml 文件，以指定应用程序需要的准确功能集。
 
 部署为服务器目录或打包服务器的应用程序不受 Liberty 功能缺省值更改的影响。
 
@@ -46,4 +47,4 @@ Liberty buildpack 在 {{site.data.keyword.Bluemix}} 中会频繁更新。每个�
 
 buildpack 为应用程序提供了缺省 JRE。JRE 的主版本或次版本可能会在不同 buildpack 发行版中有所更改。JRE 次版本可能会频繁更新，而主版本很少更新。JRE 主版本的更改可能会对应用程序产生不利影响。
 
-要确保应用程序不受主版本更改的影响，请如[定制 JRE](customizingJRE.html) 中所述，使用相应的 JRE 版本设置环境变量。为了获得最佳结果，请对应用程序采用 Java 8。
+要确保应用程序不受主版本更改的影响，请如[定制 JRE](/docs/runtimes/liberty/customizingJRE.html) 中所述，使用相应的 JRE 版本设置环境变量。为了获得最佳结果，请对应用程序采用 Java 8。

@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-10-04"
+subcollection: "liberty"
 
 ---
 
@@ -19,13 +20,13 @@ lastupdated: "2018-10-04"
 ## 检测
 {: #detection}
 部署以下类型的应用程序时，将使用 Liberty buildpack：
-* [WAR 文件](optionsForPushing.html#stand_alone_apps)
-* [EAR 文件](optionsForPushing.html#stand_alone_apps)
-* [Liberty 服务器目录](optionsForPushing.html#server_directory)
-* [Liberty 打包服务器](optionsForPushing.html#packaged_server)
+* [WAR 文件](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [EAR 文件](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [Liberty 服务器目录](/docs/runtimes/liberty/optionsForPushing.html#server_directory)
+* [Liberty 打包服务器](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)
 * Java main
 * [Distzip](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/container-distZip.md)
 
 ## 入门模板应用程序
 {: #starter_application}
-{{site.data.keyword.Bluemix_notm}} 提供了几种 Liberty 入门模板应用程序。Liberty 入门模板应用程序是为您提供可使用模板的简单 Liberty 应用程序。您可以尝试使用入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../common/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供了几种 Liberty 入门模板应用程序。Liberty 入门模板应用程序是为您提供可使用模板的简单 Liberty 应用程序。您可以尝试使用入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](/docs/runtimes-common/starter_app_usage.html)。

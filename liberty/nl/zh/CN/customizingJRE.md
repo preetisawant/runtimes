@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-03"
+  years: 2015, 2019
+lastupdated: "2019-01-11"
+subcollection: "liberty"
 
 ---
 
@@ -43,12 +44,35 @@ version 属性可以设置为版本范围。支持两种版本范围：1.7.+ 和
 ```
 {: codeblock}
 
-version 属性可以设置为版本范围（例如，1.7.+）或[可用 OpenJDK 版本列表](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)上列出的任何特定版本。为了获得最佳结果，请使用 Java 8。
+version 属性可以设置为版本范围，例如 1.7.+、1.8.+ 或[可用 OpenJDK 版本列表](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)上列出的任何特定版本。为了获得最佳结果，请使用 Java 8。
+
+## OpenJ9
+{: #openj9}
+
+（可选）应用程序可以配置为在使用 OpenJ9 作为 JRE 或 JDK 的情况下运行。要支持应用程序使用 OpenJ9 运行，请将 JVM 环境变量设置为“openj9”。例如，使用 {{site.data.keyword.Bluemix_notm}} 命令行工具运行以下命令：
+
+```
+    ibmcloud cf set-env myapp JVM 'openj9'
+```
+{: codeblock}
+
+如果启用，缺省情况下，将使用 OpenJ9 V11。使用 JBP_CONFIG_OPENJ9 环境变量可指定 OpenJ9 的替代版本。例如，要使用最新版本的 OpenJ9 8，请设置以下环境变量：
+
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
+```
+{: codeblock}
+
+如果启用，缺省情况下，将使用 OpenJ9 JRE。使用 JBP_CONFIG_OPENJ9 环境变量可使用 OpenJ9 的 JDK 版本。例如，要使用 OpenJ9 JDK，请设置以下环境变量：
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
+```
+{: codeblock}
 
 ## Oracle JRE
 {: #oracle_jre}
 
-有关使用 Oracle JRE 的信息，请参阅[使用 Oracle JRE](oracle_jre.html)。
+有关使用 Oracle JRE 的信息，请参阅[使用自己的 JRE](/docs/runtimes/liberty/using_own_jre.html)。
 
 ## 配置 JRE 选项
 {: #configuring_jre}
@@ -59,10 +83,10 @@ version 属性可以设置为版本范围（例如，1.7.+）或[可用 OpenJDK 
 Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 
 * 应用程序的内存限制。所应用的 JVM 堆设置的计算依据是：
-  * 应用程序的内存限制，如[内存限制和 Liberty buildpack](memoryLimits.html#memory_limits) 中所述
+  * 应用程序的内存限制，如[内存限制和 Liberty buildpack](/docs/runtimes/liberty/memoryLimits.html#memory_limits) 中所述
   * JRE 类型（因为 JVM 的堆相关选项随 JRE 支持的选项不同而不同）。
 
-* [{{site.data.keyword.Bluemix_notm}} 中支持的 Liberty 功能](libertyFeatures.html#libertyfeatures)。
+* [{{site.data.keyword.Bluemix_notm}} 中支持的 Liberty 功能](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures)。
   * {{site.data.keyword.Bluemix_notm}} 中不支持两阶段落实全局数据库事务，因此已通过设置 -Dcom.ibm.tx.jta.disable2PC=true 禁用该功能。
 
 * {{site.data.keyword.Bluemix_notm}} 环境。
@@ -239,7 +263,7 @@ Liberty buildpack 在配置缺省 JVM 选项时会考虑以下内容：
 ```
 {: codeblock}
 
- 有关查看和下载生成的转储文件的详细信息，请参阅[日志记录和跟踪](loggingAndTracing.html#download_dumps)文档。
+ 有关查看和下载生成的转储文件的详细信息，请参阅[日志记录和跟踪](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps)文档。
 
 ### 覆盖 JRE
 {: #overlaying_jre}

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-01"
+lastupdated: "2019-03-01"
+subcollection: "liberty"
 
 ---
 
@@ -14,15 +15,20 @@ lastupdated: "2019-01-01"
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
 
+### 1 de marzo de 2019: Actualizado el paquete de compilación de Liberty v3.29-20190223-2128
+
+* La versión de disponibilidad general del tiempo de ejecución de Liberty predeterminada es el release 18.0.0.4.
+* Se ha añadido la versión alternativa de disponibilidad general del tiempo de ejecución de Liberty 19.0.0.2.  
+* Las bibliotecas de cliente de Cloudant se han actualizado a 2.14.0.
+
 ### 1 de febrero de 2019: Actualizado el paquete de compilación de Liberty v3.28-20190127-1723
 
 * La versión de disponibilidad general del tiempo de ejecución de Liberty predeterminada es el release 18.0.0.4.
 * Se ha añadido la versión alternativa de disponibilidad general del tiempo de ejecución de Liberty 19.0.0.1.  
 * Se ha eliminado el release beta de Liberty mensual.  
-* La versión de IBM JRE se ha actualizado a 8 SR5 FP7.
+* La versión de IBM JRE se ha actualizado a 8 SR5 FP27.
 * El cliente de MQ se ha actualizado al release 9.1.0.0.
 * Se ha actualizado el agente de escalado automático.
-
 
 ### 14 de diciembre de 2018: se ha actualizado el paquete de compilación de Liberty v3.27-20181130-1702
 

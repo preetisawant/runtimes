@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-02"
+  years: 2015, 2019
+lastupdated: "2019-03-01"
+subcollection: "liberty"
 
 ---
 
@@ -13,6 +14,28 @@ lastupdated: "2018-11-02"
 {: #latest_updates}
 
 ## Liberty 建置套件中的最新更新清單。
+
+### 2019 年 3 月 1 日：已更新 Liberty 建置套件 v3.29-20190223-2128
+
+* 預設 Liberty 運行環境 GA 版本是 18.0.0.4 版。
+* 已新增替代 Liberty 運行環境 GA 19.0.0.2 版。  
+* Cloudant 用戶端程式庫已更新至 2.14.0。
+
+### 2019 年 2 月 1 日：已更新 Liberty 建置套件 v3.28-20190127-1723
+
+* 預設 Liberty 運行環境 GA 版本是 18.0.0.4 版。
+* 已新增替代 Liberty 運行環境 GA 19.0.0.1 版。  
+* 已移除每月 Liberty 測試版。  
+* IBM JRE 版本已更新至 8 SR5 FP27。
+* MQ 用戶端已更新至 9.1.0.0 版。
+* 已更新自動擴充代理程式。
+
+### 2018 年 12 月 14 日：已更新 Liberty 建置套件 v3.27-20181130-1702
+
+* 建置套件現在包括 Java 平台企業版 8.0。推送應用程式時，不再需要安裝 Java EE 8。  
+* 預設 Liberty 運行環境版本已更新至 18.0.0.4 版。
+* 每月 Liberty 運行環境版本已更新至 2018.11.0.0 版。
+* IBM JRE 版本已更新至 8 SR5 FP26。
 
 ### 2018 年 10 月 29 日：已更新 Liberty 建置套件 v3.26-20181023-1545
 
@@ -117,8 +140,8 @@ lastupdated: "2018-11-02"
 * 預設 Liberty 運行環境也包括 PI75512 WebSockets iFix。
 * 每月 Liberty 運行環境版本已更新至 [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) 版。
 * IBM JRE 第 8 版及 7.1 版已更新至 SR4 FP1。
-* 自動配置支援也已延伸成使用 [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html)。
-* 已更新 [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) 的自動配置支援，可提供使用 Cloudant Java Library 的選項，而非 org.ektorp。若要啟用 Cloudant Java Library，您必須設定下列環境變數：    
+* 自動配置支援也已延伸成使用 [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html)。
+* 已更新 [Cloudant NoSQL Database](/docs/services/Cloudant/index.html) 的自動配置支援，可提供使用 Cloudant Java Library 的選項，而非 org.ektorp。若要啟用 Cloudant Java Library，您必須設定下列環境變數：    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -129,12 +152,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 2017 年 1 月 23 日：已更新 Liberty 建置套件 v3.7-20170118-2046
 * 每月 Liberty 運行環境版本已更新至 [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) 版。
 * IBM JRE 第 8 版已更新至 SR3 FP22 版。
-* [自動配置](autoConfig.html)支援也已延伸，以便使用 [Compose for MongoDB 服務](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html)（目前只有每月 Liberty 運行環境才提供）。
+* [自動配置](autoConfig.html)支援也已延伸，以便使用 [Compose for MongoDB 服務](/docs/services/ComposeForMongoDB/index.html)（目前只有每月 Liberty 運行環境才提供）。
 
 ### 2016 年 12 月 13 日：已更新 Liberty 建置套件 v3.6-20161209-1351
 * 預設 Liberty 運行環境版本已更新至 [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 版。
 * IBM JRE 第 8 版已更新至 SR3 FP21 版。
-* [自動配置](autoConfig.html)支援也已延伸，以便使用 [Compose for PostgreSQL 服務](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html)。
+* [自動配置](autoConfig.html)支援也已延伸，以便使用 [Compose for PostgreSQL 服務](/docs/services/ComposeForPostgreSQL/index.html)。
 * 建置套件也提供適用於 [Auto-Scaling 服務](/docs/services/Auto-Scaling/index.html)的代理程式更新版本。
 * 已更新建置套件，支援將環境變數作為 `server.xml` 檔案中 include 位置的一部分。
 
@@ -146,7 +169,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * 已修正 Monitoring and Analytics 服務整合，可使用 [Diego ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html)。
 * 已更新 [Dynatrace](dynatrace.html) 服務整合，可更適當地使用 Dynatrace 服務供應項目。
 * 已改進 PostgreSQL 及 MySQL 類型服務的[自動配置](autoConfig.html)支援，可在部署伺服器目錄或包裝伺服器時更適當地運作。
-* [devconsole 和 shell 應用程式管理公用程式](../common/app_mng.html#app_management)所使用的 Node.js 運行環境已更新至最新的 `0.12.17` 版。
+* [devconsole 和 shell 應用程式管理公用程式](docs/runtimes-common/app_mng.html#app_management)所使用的 Node.js 運行環境已更新至最新的 `0.12.17` 版。
 * 包括 Liberty 運行環境的[安全修正程式](http://www.ibm.com/support/docview.wss?uid=swg21994945)。
 
 ### 2016 年 11 月 1 日：已更新 Liberty 建置套件 v3.4.1-20161030-2241

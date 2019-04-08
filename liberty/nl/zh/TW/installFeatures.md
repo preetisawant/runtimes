@@ -2,7 +2,8 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-03"
+lastupdated: "2018-12-14"
+subcollection: "liberty"
 
 ---
 
@@ -23,14 +24,14 @@ Liberty for Java 運行環境包含 Liberty 所提供的[部分特性](libertyFe
 
 1. 在 `.profile.d` 目錄中，建立執行 `installUtility` 指令的 Script 檔，如下列範例中所示。
 
-   此範例會安裝 `javaee-8.0` 特性。
+   此範例會安裝 `audit-1.0` 特性。
 
    ```
    #!/bin/sh
-   echo "Installing javaee-8.0"
+   echo "Installing audit-1.0"
    export PATH=$PATH:$HOME/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install javaee-8.0 --acceptLicense
+   $HOME/.liberty/bin/installUtility install audit-1.0 --acceptLicense
    ```
    {: codeblock}
 
@@ -56,7 +57,7 @@ Liberty for Java 運行環境包含 Liberty 所提供的[部分特性](libertyFe
     如果已安裝特性，輸出會顯示下列訊息：
 
     ```
-    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing javaee-8.0
+    2018-09-18T13:01:17.61-0400 [APP/PROC/WEB/0] OUT Installing audit-1.0
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT Establishing a connection to the configured repositories ...
     2018-09-18T13:01:19.13-0400 [APP/PROC/WEB/0] OUT This process might take several minutes to complete.
     2018-09-18T13:01:21.28-0400 [APP/PROC/WEB/0] OUT Successfully connected to all configured repositories.

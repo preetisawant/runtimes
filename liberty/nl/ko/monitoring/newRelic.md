@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -34,7 +35,7 @@ New Relic은 애플리케이션에 모니터링 메트릭을 제공하는 서드
 
 
 ## 사용자 제공 New Relic 서비스 추가
-{: #add_user_provided_new_relic} 
+{: #add_user_provided_new_relic}
 
 New Relic 계정과 라이센스 키가 이미 있으면 "사용자 제공 서비스"를 사용하여 기존의 New Relic 서비스를 애플리케이션에 바인드할 수 있습니다.
 

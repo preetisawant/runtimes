@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-11-20"
+subcollection: "liberty"
 
 ---
 
@@ -19,7 +20,7 @@ lastupdated: "2018-11-20"
 
 容器管理的服務是由 Liberty 運行環境管理的服務。在某些情況下，應用程式可能會在 JNDI 中查閱已連結的服務，而在其他情況下，Liberty 會自己直接使用服務。Liberty 建置套件會讀取 VCAP_SERVICES，以取得已連結服務的相關資訊。針對每一個容器管理的服務，建置套件會執行三項功能。
 
-* 為連結的服務產生[雲端變數](optionsForPushing.html#accessing_info_of_bound_services)。
+* 為連結的服務產生[雲端變數](/docs/runtimes/liberty/optionsForPushing.html#accessing_info_of_bound_services)。
 * 安裝 Liberty 特性及存取連結服務所需的用戶端存取程式碼。
 * 產生或更新服務所需的 `server.xml` 檔案段落。
 
@@ -37,7 +38,7 @@ Liberty 建置套件提供下列服務類型的自動配置：
 * [ElephantSQL](/docs/services/ElephantSQL/index.html)
 * [{{site.data.keyword.ssoshort}}](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Compose 服務可以是由容器管理或由應用程式管理。依預設，Liberty 建置套件會假設這些服務是由容器管理，並自動加以配置。如果您要讓應用程式管理服務，可以設定 `services_autoconfig_excludes` 環境變數，拒絕自動配置服務。如需相關資訊，請參閱[拒絕服務自動配置](autoConfig.html#opting_out)。
+Compose 服務可以是由容器管理或由應用程式管理。依預設，Liberty 建置套件會假設這些服務是由容器管理，並自動加以配置。如果您要讓應用程式管理服務，可以設定 `services_autoconfig_excludes` 環境變數，拒絕自動配置服務。如需相關資訊，請參閱[拒絕服務自動配置](/docs/runtimes/liberty/autoConfig.html#opting_out)。
 
 ## 安裝 Liberty 特性及用戶端存取程式碼
 {: #installation_of_liberty_features}
@@ -51,7 +52,7 @@ Compose 服務可以是由容器管理或由應用程式管理。依預設，Lib
 
 當您推送獨立式應用程式時，Liberty 建置套件可以在 `server.xml` 檔案中自動產生還是更新配置段落，需視您的應用程式與服務的連結方式，以及您是否有現有的 `server.xml` 檔案而定。
 
-當您推送獨立式應用程式時，Liberty 建置套件會如[推送 Liberty 應用程式的選項](optionsForPushing.html#options_for_pushing)中所述，將 `server.xml` 配置段落產生到 {{site.data.keyword.Bluemix_notm}}。
+當您推送獨立式應用程式時，Liberty 建置套件會如[推送 Liberty 應用程式的選項](/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)中所述，將 `server.xml` 配置段落產生到 {{site.data.keyword.Bluemix_notm}}。
 
 當您推送獨立式應用程式並連結至容器管理的服務時，Liberty 建置套件會為已連結的服務產生必要的 `server.xml` 段落。
 

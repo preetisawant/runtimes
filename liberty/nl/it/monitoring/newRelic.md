@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -37,7 +38,7 @@ Vedi la configurazione di esempio generata dal pacchetto di build Liberty per l'
 
 
 ## Aggiungi un servizio New Relic fornito dall'utente
-{: #add_user_provided_new_relic} 
+{: #add_user_provided_new_relic}
 
 Se hai un account e una chiave di licenza New Relic esistenti, puoi eseguire il bind del servizio New Relic esistente alla tua applicazione utilizzando un "servizio fornito dall'utente".
 

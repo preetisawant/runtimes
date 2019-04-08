@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +13,32 @@ lastupdated: "2018-12-12"
 {: #latest_updates}
 
 ASP.NET Core ビルドパックの最新更新のリスト。
+
+## 2019 年 3 月 20 日: 更新された ASP.NET Core ビルドパック v2.2-20190319-1114
+このリリースには、バージョン 2.2.7 の dotnet-core Cloud Foundry ビルドパックが含まれています。
+
+* .NET Aspnetcore 2.1.7 のサポートを追加
+* .NET Aspnetcore 2.1.8 のサポートを追加
+* .NET Aspnetcore 2.2.1 のサポートを追加
+* .NET Aspnetcore 2.2.2 のサポートを追加
+* .NET Runtime 1.1.11 のサポートを追加
+* .NET Runtime 2.1.7 のサポートを追加
+* .NET Runtime 2.1.8 のサポートを追加
+* .NET Runtime 2.2.1 のサポートを追加
+* .NET Runtime 2.2.2 のサポートを追加
+* .NET SDK 1.1.12 のサポートを追加
+* .NET SDK 2.1.504 のサポートを追加
+* .NET SDK 2.2.104 のサポートを追加
+* .NET Aspnetcore 2.1.5 のサポートを削除
+* .NET Aspnetcore 2.1.4 のサポートを削除
+* .NET Aspnetcore 2.1.2 のサポートを削除
+* .NET Runtime 1.1.9 のサポートを削除
+* .NET Runtime 2.1.2 のサポートを削除
+* .NET Runtime 2.1.4 のサポートを削除
+* .NET Runtime 2.1.5 のサポートを削除
+* .NET SDK 1.1.10 のサポートを削除
+* .NET SDK 2.1.302 のサポートを削除
+* Node.js バージョンを 6.17.0 に更新
 
 ## 2018 年 12 月 12 日: ASP.NET Core ビルドパック v2.1-20181205-1536 の更新
 このリリースには、バージョン 2.2.0 の dotnet-core Cloud Foundry ビルドパックが含まれています。

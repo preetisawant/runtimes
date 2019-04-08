@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -34,7 +35,7 @@ Voici un exemple de configuration généré par le pack de construction Liberty 
 
 
 ## Ajout d'un service New Relic fourni par l'utilisateur
-{: #add_user_provided_new_relic} 
+{: #add_user_provided_new_relic}
 
 Si vous disposez d'un compte New Relic existant et d'une clé de licence, vous pouvez lier le service New Relic existant à l'application à l'aide d'un "service fourni par l'utilisateur".
 

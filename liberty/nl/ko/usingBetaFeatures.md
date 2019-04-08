@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2019-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -12,7 +13,7 @@ lastupdated: "2019-02-01"
 # 베타 기능 사용
 {: #using_beta_features}
 
-**중요**: Liberty for Java 빌드팩 v3.28부터는 베타 런타임이 더 이상 포함되지 않습니다.   
+**중요**: Liberty for Java 빌드팩 v3.28부터는 베타 런타임이 더 이상 포함되지 않습니다.  
 
 Liberty 베타 기능은 향후 Liberty 릴리스에 포함될 수 있는 새로운 기능과 프로그래밍 모델을 미리 사용해 볼 수 있도록 합니다. {{site.data.keyword.Bluemix}}에 배치된 애플리케이션에서도 대부분의 베타 기능을 사용할 수 있습니다.
 

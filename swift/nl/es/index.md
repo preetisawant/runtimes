@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-09-20"
+subcollection: "Swift"
 
 ---
 
@@ -13,7 +14,7 @@ lastupdated: "2018-09-20"
 # IBM Cloud Runtime for Swift
 {: #swift_runtime}
 
-Runtime for Swift en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de [{{site.data.keyword.Bluemix_notm}} for Swift](https://github.com/IBM-Swift/swift-buildpack) (es decir, swift_buildpack).
+Runtime for Swift en {{site.data.keyword.Bluemix}} está basado en el [paquete de compilación de {{site.data.keyword.Bluemix_notm}} para Swift](https://github.com/IBM-Swift/swift-buildpack) (es decir, swift_buildpack).
 El paquete de compilación proporciona un entorno de ejecución completo para aplicaciones Swift.
 {: shortdesc}
 

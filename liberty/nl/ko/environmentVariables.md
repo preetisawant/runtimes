@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2018-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -34,7 +35,7 @@ Liberty for Java에서 지원하는 환경 변수
 
 <tr>
 <td>IBM_LIBERTY_MONTHLY</td>
-<td>[Liberty 월별 릴리스 런타임](/docs/runtimes/liberty/usingMonthlyRuntime.html)을 사용으로 설정합니다. </td>
+<td>[Liberty 월별 릴리스 런타임](/docs/runtimes/liberty/usingMonthlyRuntime.html)을 사용으로 설정합니다.</td>
 </tr>
 
 <tr>
@@ -59,7 +60,7 @@ Liberty for Java에서 지원하는 환경 변수
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>[OpenJDK JRE 버전](/docs/runtimes/liberty/customizingJRE.html)을 구성합니다. </td>
+<td>[OpenJDK JRE 버전](/docs/runtimes/liberty/customizingJRE.html)을 구성합니다.</td>
 </tr>
 
 <tr>

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-09-20"
+  years: 2015, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +13,63 @@ lastupdated: "2018-09-20"
 {: #latest_updates}
 
 ASP.NET 核心 buildpack 中最新更新的列表。
+
+## 2019 年 3 月 20 日：更新了 ASP.NET Core buildpack v2.2-20190319-1114
+本发行版包含 dotnet-core Cloud Foundry buildpack V2.2.7。
+
+* 添加对 .NET Aspnetcore 2.1.7 的支持
+* 添加对 .NET Aspnetcore 2.1.8 的支持
+* 添加对 .NET Aspnetcore 2.2.1 的支持
+* 添加对 .NET Aspnetcore 2.2.2 的支持
+* 添加对 .NET Runtime 1.1.11 的支持
+* 添加对 .NET Runtime 2.1.7 的支持
+* 添加对 .NET Runtime 2.1.8 的支持
+* 添加对 .NET Runtime 2.2.1 的支持
+* 添加对 .NET Runtime 2.2.2 的支持
+* 添加对 .NET SDK 1.1.12 的支持
+* 添加对 .NET SDK 2.1.504 的支持
+* 添加对 .NET SDK 2.2.104 的支持
+* 除去对 .NET Aspnetcore 2.1.5 的支持
+* 除去对 .NET Aspnetcore 2.1.4 的支持
+* 除去对 .NET Aspnetcore 2.1.2 的支持
+* 除去对 .NET Runtime 1.1.9 的支持
+* 除去对 .NET Runtime 2.1.2 的支持
+* 除去对 .NET Runtime 2.1.4 的支持
+* 除去对 .NET Runtime 2.1.5 的支持
+* 除去对 .NET SDK 1.1.10 的支持
+* 除去对 .NET SDK 2.1.302 的支持
+* 将 Node.js 版本更新为 6.17.0
+
+## 2018 年 12 月 12 日：更新了 ASP.NET 核心 buildpack V2.1-20181205-1536
+本发行版包含 dotnet-core Cloud Foundry buildpack V2.2.0。
+
+* 添加对 .NET Aspnetcore 2.1.2 的支持
+* 添加对 .NET Aspnetcore 2.1.4 的支持
+* 添加对 .NET Aspnetcore 2.1.5 的支持
+* 添加对 .NET 运行时 1.0.11 的支持
+* 添加对 .NET 运行时 1.0.12 的支持
+* 添加对 .NET 运行时 1.1.9 的支持
+* 添加对 .NET 运行时 1.1.10 的支持
+* 添加对 .NET 运行时 2.0.7 的支持
+* 添加对 .NET 运行时 2.0.9 的支持
+* 添加对 .NET 运行时 2.1.2 的支持
+* 添加对 .NET 运行时 2.1.5 的支持
+* 添加对 .NET SDK 1.0.4 的支持
+* 添加对 .NET SDK 1.1.10 的支持
+* 添加对 .NET SDK 1.1.11 的支持
+* 添加对 .NET SDK 2.0.3 的支持
+* 添加对 .NET SDK 2.1.302 的支持
+* 添加对 .NET SDK 2.1.403 的支持
+* 除去对 .NET Framework 2.1.0 的支持
+* 除去对 .NET Framework 2.1.1 的支持
+* 除去对 .NET Framework 1.1.8 的支持
+* 除去对 .NET 核心 SDK 2.0.2 的支持
+* 除去对 .NET 核心 SDK 2.0.3 的支持
+* 除去对 .NET 核心 SDK 2.1.201 的支持
+* 除去对 .NET 核心 SDK 2.1.300 的支持
+* 除去对 .NET 核心 SDK 2.1.301 的支持
+* 将 Node.js 版本更新为 6.14.4
+
 
 ## 2018 年 9 月 20 日：更新了 ASP.NET 核心 buildpack V2.0-20180918-1356
 

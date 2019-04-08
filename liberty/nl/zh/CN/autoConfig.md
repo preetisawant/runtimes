@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-11-20"
+subcollection: "liberty"
 
 ---
 
@@ -19,7 +20,7 @@ lastupdated: "2018-11-20"
 
 容器管理的服务是由 Liberty 运行时管理的服务。在一些情况下，应用程序可能会在 JNDI 中查找绑定服务，而在另一些情况下，服务由 Liberty 本身直接使用。Liberty buildpack 会读取 VCAP_SERVICES 来获取有关绑定服务的信息。对于每个容器管理的服务，该 buildpack 会执行三个功能。
 
-* 为绑定服务生成[云变量](optionsForPushing.html#accessing_info_of_bound_services)。
+* 为绑定服务生成[云变量](/docs/runtimes/liberty/optionsForPushing.html#accessing_info_of_bound_services)。
 * 安装 Liberty 功能和为了访问绑定服务所需的客户机访问代码。
 * 生成或更新服务所需的 `server.xml` 文件节。
 
@@ -37,7 +38,7 @@ Liberty buildpack 提供以下服务类型的自动配置：
 * [ElephantSQL](/docs/services/ElephantSQL/index.html)
 * [{{site.data.keyword.ssoshort}}](/docs/services/SingleSignOn/index.html#sso_gettingstarted)
 
-Compose 服务可以是容器管理的服务，也可以是应用程序管理的服务。缺省情况下，Liberty buildpack 假定这些服务是容器管理的服务，并自动对其进行配置。如果希望应用程序来管理服务，那么可以通过设置 `services_autoconfig_excludes` 环境变量选择退出服务自动配置。有关更多信息，请参阅[选择退出服务自动配置](autoConfig.html#opting_out)。
+Compose 服务可以是容器管理的服务，也可以是应用程序管理的服务。缺省情况下，Liberty buildpack 假定这些服务是容器管理的服务，并自动对其进行配置。如果希望应用程序来管理服务，那么可以通过设置 `services_autoconfig_excludes` 环境变量选择退出服务自动配置。有关更多信息，请参阅[选择退出服务自动配置](/docs/runtimes/liberty/autoConfig.html#opting_out)。
 
 ## 安装 Liberty 功能和客户机访问代码
 {: #installation_of_liberty_features}
@@ -51,7 +52,7 @@ Compose 服务可以是容器管理的服务，也可以是应用程序管理的
 
 推送独立应用程序时，Liberty buildpack 可以自动生成或更新 `server.xml` 文件中的配置节，具体取决于应用程序绑定到服务的方式以及是否存在现有 `server.xml` 文件。
 
-向 {{site.data.keyword.Bluemix_notm}} 推送独立应用程序时，Liberty buildpack 会生成 `server.xml` 配置节，如[用于推送 Liberty 应用程序的选项](optionsForPushing.html#options_for_pushing)中所述。
+向 {{site.data.keyword.Bluemix_notm}} 推送独立应用程序时，Liberty buildpack 会生成 `server.xml` 配置节，如[用于推送 Liberty 应用程序的选项](/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)中所述。
 
 推送独立应用程序并绑定到容器管理的服务时，Liberty buildpack 会为绑定服务生成必要的 `server.xml` 节。
 

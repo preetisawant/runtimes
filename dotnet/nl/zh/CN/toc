@@ -14,7 +14,7 @@ ASP.NET 核心
     usingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    [使用代理](runtimes/common/workingWithProxy.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -24,13 +24,13 @@ ASP.NET 核心
 
     {: .topicgroup}
     入门模板应用程序和社区 buildpack
-        [使用入门模板应用程序](runtimes/common/starter_app_usage.html)
-        [使用社区 buildpack](runtimes/common/byob.html)
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    [Buildpack 支持语句](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-05"
+  years: 2017, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 
 ---
 
@@ -29,7 +30,7 @@ Avrai bisogno di quanto segue:
 * [Account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
 * [CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
-* Installa .NET Core 2.1.1 SDK 2.1.301 dal [sito web dei download di .NET Core ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.microsoft.com/net/download/core).
+* Installa .NET Core 2.2.2 SDK 2.2.104 dal [sito web dei download di .NET Core ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.microsoft.com/net/download/core).
 
 ## Passo 1: Clona l'applicazione di esempio
 {: #clone}

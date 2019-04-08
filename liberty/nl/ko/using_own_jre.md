@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
@@ -24,7 +25,7 @@ liberty-for-java 빌드팩이 다운로드할 수 있는 웹 서버에서 JRE �
 
 다음 단계를 완료하여 JRE 및 `index.yml` 파일을 호스팅하십시오.
   1. JRE를 얻으십시오. 이 JRE는 UNIX 64비트 OS에서 사용할 버전이어야 하며 `tar.gz` 파일이어야 합니다.
-  2. liberty-for-java 빌드팩이 다운로드할 수 있는 위치에서 JRE 파일을 호스팅하십시오. 
+  2. liberty-for-java 빌드팩이 다운로드할 수 있는 위치에서 JRE 파일을 호스팅하십시오.
   3. 호스팅 위치에서 `index.yml` 파일을 제공하십시오. `index.yml` 파일에는 JRE의 버전 ID를 포함하는 항목 다음에 콜론과 전체 JRE 파일 위치 URL이 포함되어야 합니다.
     * `index.yml` 파일에 JRE 버전을 정의하십시오.
 

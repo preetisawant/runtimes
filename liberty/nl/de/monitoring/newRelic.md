@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -36,7 +37,7 @@ dargestellt, die vom Liberty-Buildpack für die Anwendung generiert wird:
 
 
 ## Vom Benutzer bereitgestellten New Relic-Service hinzufügen
-{: #add_user_provided_new_relic} 
+{: #add_user_provided_new_relic}
 
 Wenn Sie über ein vorhandenes New Relic-Konto und den zugehörigen Lizenzschlüssel verfügen, können Sie den vorhandenen New Relic-Service mit einem vom Benutzer bereitgestellten Service an Ihre Anwendung binden.
 

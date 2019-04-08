@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-07"
+lastupdated: "2019-03-18"
+subcollection: "Nodejs"
 
 ---
 
@@ -14,9 +15,13 @@ lastupdated: "2019-01-07"
 
 Liste des dernières mises à jour apportées au pack de construction sdk-for-nodejs.
 
+## 18 mars 2019 : Mise à jour du pack de construction Node.js v3.26
+
+Le pack de construction SDK for Node.js v3.26 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.16.0, 6.17.0, 8.15.0, 8.15.1, 10.15.0 et 10.15.3. La valeur par défaut est la version 6.x la plus récente, soit la 6.17.0 actuellement. 
+
 ## 23 janvier 2019 : Mise à jour du pack de construction Node.js v3.25.1
 
-Le pack de construction SDK for Node.js v3.25 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 et 10.15.0. La valeur par défaut est la version 6.x la plus récente, soit la 6.16.0 actuellement. Les versions 6.15.0, 8.14.0 et 10.14.0 incluses dans le dernier pack de construction comportaient une régression. Les régressions ont été corrigées dans les versions 6.16.0, 8.15.0 et 10.15.0 qui les remplacent désormais.
+Le pack de construction SDK for Node.js v3.25.1 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 et 10.15.0. La valeur par défaut est la version 6.x la plus récente, soit la 6.16.0 actuellement. Les versions 6.15.0, 8.14.0 et 10.14.0 incluses dans le dernier pack de construction comportaient une régression. Les régressions ont été corrigées dans les versions 6.16.0, 8.15.0 et 10.15.0 qui les remplacent désormais.
 
 ## 7 janvier 2019 : Mise à jour du pack de construction Node.js v3.25
 

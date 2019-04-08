@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-25"
+subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,4 +24,4 @@ lastupdated: "2017-10-25"
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} 提供 ASP.NET Core 入門範本應用程式。ASP.NET Core 入門範本應用程式是簡單的應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../common/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供 ASP.NET Core 入門範本應用程式。ASP.NET Core 入門範本應用程式是簡單的應用程式，提供可以讓您使用的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](docs/runtimes-common/starter_app_usage.html)。

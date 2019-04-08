@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2019-01-11"
+subcollection: "liberty"
 
 ---
 
@@ -67,7 +68,7 @@ Bei entsprechender Aktivierung wird standardmäßig die OpenJ9-JRE verwendet. Mi
 ## Oracle JRE
 {: #oracle_jre}
 
-In [Eigene JRE verwenden](/docs/runtimes/liberty/using_own_jre.html) finden Sie Informationen zur Verwendung der Oracle-JRE. 
+In [Eigene JRE verwenden](/docs/runtimes/liberty/using_own_jre.html) finden Sie Informationen zur Verwendung der Oracle-JRE.
 
 ## JRE-Optionen konfigurieren
 {: #configuring_jre}
@@ -81,7 +82,7 @@ Das Liberty-Buildpack konfiguriert die JVM-Standardoptionen unter Berücksichtig
   * Speicherbegrenzung einer Anwendung, wie in [Speicherbegrenzungen und das Liberty-Buildpack](/docs/runtimes/liberty/memoryLimits.html#memory_limits) erläutert.
   * JRE-Typ, da die auf den Heapspeicher bezogenen Optionen für die JVM in Abhängigkeit von den unterstützten JRE-Optionen variieren.
 
-* Die in [{{site.data.keyword.Bluemix_notm}} unterstützten Liberty-Features](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures). 
+* Die in [{{site.data.keyword.Bluemix_notm}} unterstützten Liberty-Features](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures).
   * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in {{site.data.keyword.Bluemix_notm}} nicht unterstützt und deshalb durch die Einstellung -Dcom.ibm.tx.jta.disable2PC=true inaktiviert.
 
 * Die {{site.data.keyword.Bluemix_notm}}-Umgebung.

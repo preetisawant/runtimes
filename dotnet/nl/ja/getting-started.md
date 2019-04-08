@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-05"
+  years: 2017, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 
 ---
 
@@ -29,7 +30,7 @@ lastupdated: "2018-12-05"
 * [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/registration/)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
-* [.NET Core ダウンロード Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.microsoft.com/net/download/core) から .NET Core 2.1.1 SDK 2.1.301 をインストールします。
+* [.NET Core ダウンロード Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.microsoft.com/net/download/core) から .NET Core 2.2.2 SDK 2.2.104 をインストールします。
 
 ## ステップ 1: サンプル・アプリケーションを複製する
 {: #clone}
@@ -134,8 +135,8 @@ ibmcloud cf apps
 1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
 1. 検索して **{{site.data.keyword.cloudant_short_notm}}** を見つけて、このサービスを選択します。
 1. **「使用可能な認証方式 (Available authentication methods)」**で、**「レガシー資格情報と IAM の両方を使用する (Use both legacy credentials and IAM)」**を選択します。 他のフィールドについては、デフォルト設定のままでかまいません。 **「作成」**をクリックしてサービスを作成します。
-1. ナビゲーションで、**「接続」**に移動して、**「接続の作成」**をクリックします。アプリケーションを選択し、**「接続」**をクリックします。
-1. デフォルト値を使用して、**「アプリの接続および再ステージ」**をクリックしてデータベースをアプリケーションに接続します。プロンプトが表示されたら、**「再ステージ」**をクリックします。
+1. ナビゲーションで、**「接続」**に移動して、**「接続の作成」**をクリックします。 アプリケーションを選択し、**「接続」**をクリックします。
+1. デフォルト値を使用して、**「アプリの接続および再ステージ」**をクリックしてデータベースをアプリケーションに接続します。 プロンプトが表示されたら、**「再ステージ」**をクリックします。
 
    {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
 
@@ -167,7 +168,7 @@ ibmcloud cf apps
    ```
    {: codeblock}
 
-1. {{site.data.keyword.Bluemix_notm}} [リソース・リスト](https://cloud.ibm.com/resources)にアプリケーションが含まれているのを確認します。アプリケーションの「サービス詳細」ページで、サイドバーの**「接続」**をクリックします。{{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&hellip;**) をクリックし、**「資格情報の表示」**を選択します。
+1. {{site.data.keyword.Bluemix_notm}} [リソース・リスト](https://cloud.ibm.com/resources)にアプリケーションが含まれているのを確認します。 アプリケーションの「サービス詳細」ページで、サイドバーの**「接続」**をクリックします。 {{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&hellip;**) をクリックし、**「資格情報の表示」**を選択します。
 
 1. 資格情報から `url` 値のみをコピーして `vcap-local.json` ファイルの `url` フィールドに貼り付けて、`CLOUDANT_DATABASE_URL` を置き換えます。
 

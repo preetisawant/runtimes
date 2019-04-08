@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-05"
+subcollection: "liberty"
 
 ---
 
@@ -139,7 +140,7 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-Puoi anche andare all'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources) per visualizzare la tua applicazione.Se fai clic su **Visita URL applicazione**, ricordati di accodare "/GetStartedJava" all'URL.
+Puoi anche andare all'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources) per visualizzare la tua applicazione. Se fai clic su **Visita URL applicazione**, ricordati di accodare "/GetStartedJava" all'URL.
 
 Puoi risolvere gli errori nel processo di distribuzione utilizzando il comando `ibmcloud cf logs GetStartedJava --recent`.
 {: tip}  

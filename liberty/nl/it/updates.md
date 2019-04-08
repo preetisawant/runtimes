@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-01"
+lastupdated: "2019-03-01"
+subcollection: "liberty"
 
 ---
 
@@ -14,15 +15,20 @@ lastupdated: "2019-01-01"
 
 ## Un elenco degli aggiornamenti più recenti nel pacchetto di build Liberty.
 
+### 1° marzo 2019: pacchetto di build Liberty aggiornato v3.29-20190223-2128
+
+* La versione GA del runtime Liberty predefinita è la release 18.0.0.4.
+* È stata aggiunta la versione GA del runtime di Liberty alternativa 19.0.0.2.  
+* Le librerie client Cloudant sono state aggiornate alla 2.14.0.
+
 ### 1° febbraio 2019: pacchetto di build Liberty aggiornato v3.28-20190127-1723
 
 * La versione GA del runtime Liberty predefinita è la release 18.0.0.4.
 * È stata aggiunta la versione GA del runtime di Liberty alternativa 19.0.0.1.  
 * La release beta di Liberty mensile è stata rimossa.  
-* La versione di IBM JRE è stata aggiornata a 8 SR5 FP7.
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP27.
 * Il client MQ è stato aggiornato alla release 9.1.0.0.
 * L'agent di ridimensionamento automatico è stato aggiornato.
-
 
 ### 14 dicembre 14, 2018: pacchetto di build Liberty aggiornato v3.27-20181130-1702
 

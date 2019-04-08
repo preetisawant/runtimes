@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +13,32 @@ lastupdated: "2018-12-12"
 {: #latest_updates}
 
 Liste des dernières mises à jour apportées au pack de construction ASP.NET Core.
+
+## 20 mars 2019 : Mise à jour du pack de construction ASP.NET Core v2.2-20190319-1114
+Cette édition inclut la version 2.2.7 du pack de construction dotnet-core Cloud Foundry.
+
+* Ajout de la prise en charge de .NET Aspnetcore 2.1.7
+* Ajout de la prise en charge de .NET Aspnetcore 2.1.8
+* Ajout de la prise en charge de .NET Aspnetcore 2.2.1
+* Ajout de la prise en charge de .NET Aspnetcore 2.2.2
+* Ajout de la prise en charge de .NET Runtime 1.1.11
+* Ajout de la prise en charge de .NET Runtime 2.1.7
+* Ajout de la prise en charge de .NET Runtime 2.1.8
+* Ajout de la prise en charge de .NET Runtime 2.2.1
+* Ajout de la prise en charge de .NET Runtime 2.2.2
+* Ajout de la prise en charge de .NET SDK 1.1.12
+* Ajout de la prise en charge de .NET SDK 2.1.504
+* Ajout de la prise en charge de .NET SDK 2.2.104
+* Retrait de la prise en charge de .NET Aspnetcore 2.1.5
+* Retrait de la prise en charge de .NET Aspnetcore 2.1.4
+* Retrait de la prise en charge de .NET Aspnetcore 2.1.2
+* Retrait de la prise en charge de .NET Runtime 1.1.9
+* Retrait de la prise en charge de .NET Runtime 2.1.2
+* Retrait de la prise en charge de .NET Runtime 2.1.4
+* Retrait de la prise en charge de .NET Runtime 2.1.5
+* Retrait de la prise en charge de .NET SDK 1.1.10
+* Retrait de la prise en charge de .NET SDK 2.1.302
+* Mise à jour de Node.js vers la version 6.17.0
 
 ## 12 décembre 2018 : Mise à jour du pack de construction ASP.NET Core v2.1-20181205-1536
 Cette édition inclut la version 2.2.0 du pack de construction dotnet-core Cloud Foundry.
@@ -174,4 +201,3 @@ Cette version du pack de construction inclut les modifications suivantes :
 {: codeblock}
 
 * L'utilisation du serveur Web Nowin a été retirée de ce pack de construction. Le serveur Web [Kestrel](https://github.com/aspnet/KestrelHttpServer) est utilisé à la place.
-

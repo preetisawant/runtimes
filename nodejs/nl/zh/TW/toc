@@ -14,27 +14,23 @@ SDK for Node.js
     runningLocally.md
     enforceHTTPS.md
     hooks.md
+	{: .topicgroup}
+        入門範本應用程式及社群建置套件
+	    /runtimes-common/runtimes-common-using_buildpacks
+            /runtimes-common/runtimes-common-using_starter_apps
 
-    {: .topicgroup}
-    離線工作或使用 Proxy
-        offlineMode.md
-        [使用 Proxy](runtimes/common/workingWithProxy.html)
-    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    [管理 Liberty 及 Node.js 應用程式](runtimes/common/app_mng.html)
-
-    {: .topicgroup}
-    入門範本應用程式及建置套件
-        [使用入門範本應用程式](runtimes/common/starter_app_usage.html)
-        [使用社群建置套件](runtimes/common/byob.html)
+    /runtimes-common/runtimes-common-app_management
+    /runtimes-common/runtimes-common-working_with_proxy
+    offline.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    [建置套件支援聲明](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

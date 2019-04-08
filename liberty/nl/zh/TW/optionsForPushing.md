@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-03"
-
+subcollection: "liberty"
 ---
 
 {:shortdesc: .shortdesc}
@@ -23,7 +23,7 @@ Liberty 伺服器在 {{site.data.keyword.Bluemix}} 中的行為受 Liberty 建�
 * 推送伺服器目錄
 * 推送包裝伺服器
 
-重要事項：當您使用 Liberty 建置套件部署應用程式時，請至少指定 512M 作為應用程式的記憶體限制。如需相關資訊，請參閱[記憶體限制與 Liberty 建置套件](memoryLimits.html)。
+重要事項：當您使用 Liberty 建置套件部署應用程式時，請至少指定 512M 作為應用程式的記憶體限制。如需相關資訊，請參閱[記憶體限制與 Liberty 建置套件](/docs/runtimes/liberty/memoryLimits.html)。
 
 ## 獨立式應用程式
 {: #stand_alone_apps}
@@ -64,7 +64,7 @@ Liberty 伺服器在 {{site.data.keyword.Bluemix}} 中的行為受 Liberty 建�
 ```
 {: codeblock}
 
-附註：若要取得最佳結果，請使用 JBP_CONFIG_LIBERTY 環境變數設定 Liberty 特性，或使用自訂 server.xml 檔案，將應用程式部署為[伺服器目錄](optionsForPushing.html#server_directory)或[包裝伺服器](optionsForPushing.html#packaged_server)。設定此環境變數可確保您的應用程式只使用它需要的特性，且不受建置套件預設 Liberty 特性集變更的影響。如果您需要提供特性集以外的額外 Liberty 配置，請使用[伺服器目錄](optionsForPushing.html#server_directory)或[包裝伺服器](optionsForPushing.html#packaged_server)選項來部署應用程式。
+附註：若要取得最佳結果，請使用 JBP_CONFIG_LIBERTY 環境變數設定 Liberty 特性，或使用自訂 server.xml 檔案，將應用程式部署為[伺服器目錄](/docs/runtimes/liberty/optionsForPushing.html#server_directory)或[包裝伺服器](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)。設定此環境變數可確保您的應用程式只使用它需要的特性，且不受建置套件預設 Liberty 特性集變更的影響。如果您需要提供特性集以外的額外 Liberty 配置，請使用[伺服器目錄](/docs/runtimes/liberty/optionsForPushing.html#server_directory)或[包裝伺服器](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)選項來部署應用程式。
 
 如果您已部署 WAR 檔，則可以在內嵌的 ibm-web-ext.xml 檔案中所設定的環境定義根目錄下存取 Web 應用程式。如果 ibm-web-ext.xml 檔案不存在，或未指定環境定義根目錄，則可以在根環境定義下存取應用程式。例如，
 

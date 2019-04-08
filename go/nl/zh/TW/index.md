@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-09-05"
+subcollection: "Go"
 
 ---
 
@@ -22,7 +23,7 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} 提供 Go 入門範本應用程式。Go 入門範本應用程式是簡單的 Go 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../common/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供 Go 入門範本應用程式。Go 入門範本應用程式是簡單的 Go 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](docs/runtimes-common/starter_app_usage.html)。
 
 ## 運行環境版本
 {: #runtime_versions}

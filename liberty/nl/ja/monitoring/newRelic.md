@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -35,7 +36,7 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
 
 
 ## ユーザー提供の New Relic サービスの追加
-{: #add_user_provided_new_relic} 
+{: #add_user_provided_new_relic}
 
 既存の New Relic アカウントとライセンス・キーがある場合は、「ユーザー提供のサービス」を使用して既存の New Relic サービスをアプリケーションにバインドできます。
 

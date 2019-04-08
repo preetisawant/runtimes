@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-6-26"
+subcollection: "liberty"
 
 ---
 
@@ -12,7 +13,8 @@ lastupdated: "2018-6-26"
 #{{site.data.keyword.cloud_notm}} 内の Liberty でのユーザー提供サービスの使用
 {: #using_user_provided}
 
-Cloud Foundry には、{{site.data.keyword.Bluemix_notm}} 環境によって必ずしも提供されていない、または環境内で使用可能でないサービスに接続してそのサービスを使用するメカニズムが用意されています。その機能は、[ユーザー提供サービス](https://docs.cloudfoundry.org/devguide/services/user-provided.html)です。
+Cloud Foundry には、{{site.data.keyword.Bluemix_notm}} 環境によって必ずしも提供されていない、または環境内で使用可能でないサービスに接続してそのサービスを使用するメカニズムが用意されています。
+その機能は、[ユーザー提供サービス](https://docs.cloudfoundry.org/devguide/services/user-provided.html)です。
 
 本資料では、以下を想定しています。
   * 何らかの使用可能なサービスがある。
@@ -24,17 +26,17 @@ Cloud Foundry には、{{site.data.keyword.Bluemix_notm}} 環境によって必�
 ## ステップ 1: Getting-Started アプリケーションをプッシュする
 {: #follow_getting_started}
 
-[入門チュートリアル](/docs/runtimes/liberty/getting-started.html)のステップに従って、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュします。データベースに接続する前に停止します。
+[入門チュートリアル](/docs/runtimes/liberty/getting-started.html)のステップに従って、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュします。  データベースに接続する前に停止します。
 
 ## ステップ 2: CloudantNoSQLDB インスタンスを作成する
 {: #create_cloudantnosqldb}
 
 [入門チュートリアル](/docs/runtimes/liberty/getting-started.html)のステップに従って、CloudantNoSqLDB インスタンスを作成します。
 
-資格情報の表示オプションを使用して、CloudandNoSQLDB から資格情報をコピーします。それらの資格情報をローカル・ファイル (例えば、cloudant-creds) に保存します。
+資格情報の表示オプションを使用して、CloudandNoSQLDB から資格情報をコピーします。 それらの資格情報をローカル・ファイル (例えば、cloudant-creds) に保存します。
 
 ## ステップ 3: ユーザー提供サービスを作成する
-Getting-Started アプリケーションを操作するには、ユーザー提供サービスの名前に「cloudantNoSQLDB」が含まれている必要があります。Getting-Started アプリケーションは VCAP サービス変数を構文解析して、「cloudantNoSQLDB」を含む名前を持つユーザー提供サービスを探します。
+Getting-Started アプリケーションを操作するには、ユーザー提供サービスの名前に「cloudantNoSQLDB」が含まれている必要があります。  Getting-Started アプリケーションは VCAP サービス変数を構文解析して、「cloudantNoSQLDB」を含む名前を持つユーザー提供サービスを探します。
 
         ibmcloud cf cups my-cloudantNoSQLDB-ups -p cloudant-creds
 

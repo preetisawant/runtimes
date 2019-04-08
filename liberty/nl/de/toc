@@ -35,7 +35,7 @@ Liberty for Java
     {: .topicgroup}
     Offline oder mit einem Proxy arbeiten
         offlineMode.md
-		/runtimes-common/runtimes-common-working_with_proxy
+		/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

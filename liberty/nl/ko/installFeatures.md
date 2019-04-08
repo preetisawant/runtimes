@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-12-14"
+subcollection: "liberty"
 
 ---
 
@@ -13,7 +14,7 @@ lastupdated: "2018-12-14"
 # Liberty 기능 설치
 {: #install-features}
 
-Liberty for Java 런타임에는 Liberty 기능에 사용 가능한 [기능의 서브세트](libertyFeatures.html#liberty_features)가 포함됩니다. 애플리케이션이 {{site.data.keyword.cloud_notm}}에 푸시될 때 Cloud Foundry 사전 런타임 후크로 Liberty `installUtility` 명령을 실행하여 런타임에 포함되지 않는 기능을 설치할 수 있습니다.
+Liberty for Java 런타임에는 Liberty 기능에 사용 가능한 [기능의 서브세트](libertyFeatures.html#liberty_features)가 포함되어 있습니다. 애플리케이션이 {{site.data.keyword.cloud_notm}}에 푸시될 때 Cloud Foundry 사전 런타임 후크로 Liberty `installUtility` 명령을 실행하여 런타임에 포함되지 않는 기능을 설치할 수 있습니다.
 
 사용 가능한 기능의 전체 목록은 [Liberty 기능 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)을 참조하십시오.
 
@@ -23,7 +24,7 @@ Liberty for Java 런타임에는 Liberty 기능에 사용 가능한 [기능의 �
 
 1. `.profile.d` 디렉토리에서 다음 예제와 같이 `installUtility` 명령을 실행하는 스크립트 파일을 작성하십시오.
 
-   이 예는 `audit-1.0` 기능을 설치합니다. 
+   이 예는 `audit-1.0` 기능을 설치합니다.
 
    ```
    #!/bin/sh

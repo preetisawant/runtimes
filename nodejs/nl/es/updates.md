@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-07"
+lastupdated: "2019-03-18"
+subcollection: "Nodejs"
 
 ---
 
@@ -14,9 +15,13 @@ lastupdated: "2019-01-07"
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
 
+## 18 de marzo de 2019: se ha actualizado el paquete de compilación Node.js v3.26
+
+El paquete de compilación de SDK for Node.js v3.26 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.16.0, 6.17.0, 8.15.0, 8.15.1, 10.15.0 y 10.15.3. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.17.0.
+
 ## 23 de enero de 2019: se ha actualizado el paquete de compilación de Node.js v3.25.1
 
-El paquete de compilación de SDK for Node.js v3.25 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 y 10.15.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.16.0. Las versiones 6.15.0, 8.14.0 y 10.14.0 que se incluían en el último paquete de compilación tenían una regresión. Las regresiones se han solucionado en las 6.16.0, 8.15.0 y 10.15.0 que se incluyen ahora en su lugar.
+El paquete de compilación de SDK for Node.js v3.25.1 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 y 10.15.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.16.0. Las versiones 6.15.0, 8.14.0 y 10.14.0 que se incluían en el último paquete de compilación tenían una regresión. Las regresiones se han solucionado en las 6.16.0, 8.15.0 y 10.15.0 que se incluyen ahora en su lugar.
 
 ## 7 de enero de 2019: se ha actualizado el paquete de compilación de Node.js v3.25
 
@@ -109,7 +114,7 @@ Este release del paquete de compilación da soporte a las versiones de tiempo de
 
 Este release incluye arreglos de errores, incluidos los del [paquete de compilación Node.js de Cloud Foundry 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
 
-Esta versión elimina el soporte para el manejador de gestión de app strongpm, tal como se ha publicado en [{{site.data.keyword.Bluemix_notm}} Paquete de compilación de Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+Esta versión elimina el soporte para el manejador de gestión de app strongpm, tal como se ha publicado en [Paquete de compilación de {{site.data.keyword.Bluemix_notm}} Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
 Tenga en cuenta que es un problema conocido cuando se utiliza Node.js 6.x y la [modalidad de desarrollo](../common/app_mng.html#devmode). Como una solución provisional será necesario volver a transferir la aplicación después de habilitar la modalidad de desarrollo antes de poder empezar a utilizarla.
 
@@ -125,7 +130,7 @@ Se incluyen arreglos para las siguientes vulnerabilidades de seguridad:
 
 Este release del paquete de compilación añade el tiempo de ejecución de IBM SDK for Node.js versiones 4.4.5 y 6.2.0. El valor predeterminado es 4.4.5.
 
-Esta versión elimina el soporte para versiones de tiempo de ejecución anteriores, tal y como se ha publicado en [{{site.data.keyword.Bluemix_notm}} Paquete de compilación Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). El paquete de compilación ahora da soporte a 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 y 6.2.0.
+Esta versión elimina el soporte para versiones de tiempo de ejecución anteriores, tal y como se ha publicado en [Paquete de compilación de {{site.data.keyword.Bluemix_notm}} Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). El paquete de compilación ahora da soporte a 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 y 6.2.0.
 
 Este release incluye correcciones de errores del [paquete de compilación Node.js de Cloud Foundry 1.5.14](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.14).
 

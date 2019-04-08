@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -31,36 +32,8 @@ New Relic 是協力廠商服務，可為您的應用程式提供監視度量值�
 ```
 {: codeblock}
 
-## 新增 New Relic 服務
-{: #add_new_relic}
 
-對於要在 {{site.data.keyword.Bluemix_notm}} 中使用 New Relic 監視的現有 Java 應用程式，請遵循下列步驟。
-1. 在 {{site.data.keyword.Bluemix_notm}} 中建立 New Relic 服務實例。
-
-  ```
-  ibmcloud cf create-service newrelic standard mynewrelic
-  ```
-  {: codeblock}
-
-2. 使用 New Relic 服務，將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。請參閱下列範例應用程式資訊清單：
-
-  <pre>
-        &dash;&dash;&dash;
-        applications:
-        - name: myapp
-         memory: 1G
-         instances: 1
-         host: myapp
-         domain: mybluemix.net
-         path: myapp.war
-         services:
-         - mynewrelic
-  </pre>
-  {: codeblock}
-
-3. 直接從您應用程式的 {{site.data.keyword.Bluemix_notm}} 儀表板，存取應用程式的 New Relic 儀表板。
-
-### 新增使用者提供的 New Relic 服務
+## 新增使用者提供的 New Relic 服務
 {: #add_user_provided_new_relic}
 
 如果您有現有的 New Relic 帳戶和授權碼，可以利用「使用者提供的服務」，將現有的 New Relic 服務連結至應用程式。

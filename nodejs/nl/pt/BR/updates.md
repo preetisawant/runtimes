@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-07"
+lastupdated: "2019-03-18"
+subcollection: "Nodejs"
 
 ---
 
@@ -14,9 +15,13 @@ lastupdated: "2019-01-07"
 
 Uma lista das atualizações mais recentes no buildpack sdk-for-nodejs.
 
+## 18 de março de 2019: atualizado buildpack v3.26 do Node.js
+
+O buildpack v3.26 do SDK for Node.js fornece as versões 4.8.5, 4.8.7 do IBM SDK for Node.js e as versões de comunidade 6.16.0, 6.17.0, 8.15.0, 8.15.1, 10.15.0 e 10.15.3 do Node.js. O padrão é 6.x mais recente, portanto, é atualmente 6.17.0.
+
 ## 23 de janeiro de 2019: buildpack v3.25.1 do Node.js atualizado
 
-O buildpack v3.25 do SDK for Node.js fornece as versões do IBM SDK for Node.js 4.8.5, 4.8.7 e as versões de comunidade do Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 e 10.15.0. O padrão é 6.x mais recente, portanto, é atualmente 6.16.0. As versões 6.15.0, 8.14.0 e 10.14.0 que foram incluídas no último buildpack tiveram uma regressão. As regressões foram corrigidas em 6.16.0, 8.15.0 e 10.15.0 que agora estão incluídas no lugar.
+O buildpack v3.25.1 do SDK for Node.js fornece as versões 4.8.5, 4.8.7 do IBM SDK for Node.js e as versões de comunidade 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 e 10.15.0 do Node.js. O padrão é 6.x mais recente, portanto, é atualmente 6.16.0. As versões 6.15.0, 8.14.0 e 10.14.0 que foram incluídas no último buildpack tiveram uma regressão. As regressões foram corrigidas em 6.16.0, 8.15.0 e 10.15.0 que agora estão incluídas no lugar.
 
 ## 7 de janeiro de 2019: buildpack v3.25 do Node.js atualizado
 

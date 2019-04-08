@@ -3,6 +3,8 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-09-05"
+subcollection: "Python"
+
 
 ---
 
@@ -13,33 +15,35 @@ lastupdated: "2018-09-05"
 # Python
 {: #python_runtime}
 
-L'environnement d'exécution Python dans {{site.data.keyword.Bluemix}} repose sur le pack python_buildpack.
-Le pack python_buildpack fournit un environnement d'exécution complet pour les applications Python 2 et Python 3.
+El tiempo de ejecución de Python en {{site.data.keyword.Bluemix}} está basado en el python_buildpack.
+El python_buildpack proporciona un entorno de ejecución completo para apps Python 2 y Python 3.
 {: shortdesc}
 
-Le pack python_buildpack sera utilisé si le répertoire racine de votre appli contient un fichier requirements.txt ou setup.py.
+El python_buildpack se utilizará si el directorio raíz de la app contiene un archivo requirements.txt o un archivo setup.py.
 
-## Application de démarrage
+## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui peut servir de modèle pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}.  Voir [Utilisation des applications de démarrage](docs/runtimes-common/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Python.  La aplicación de inicio Python es una sencilla app Python que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](docs/runtimes-common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
-## Versions d'environnement d'exécution
+## Versiones de tiempo de ejecución
 {: #runtime_versions}
 
-Vous pouvez spécifier la version de Python à utiliser par votre appli en définissant python-versionnumber dans le fichier runtime.txt se trouvant à la racine de votre application. Par exemple :
+Puede especificar la versión de Python que va a utilizar la app estableciendo python-versionnumber en el archivo runtime.txt en la raíz de la aplicación. Por ejemplo:
 
 ```
 python-3.6.4
 ```
 {: codeblock}
 
-Si aucune version n'est spécifiée, la version 2.7.14 est sélectionnée par défaut.
+Cuando no se especifique una versión, se elegirá la versión 2.7.14 de forma predeterminada.
 
-### Versions disponibles :
+### Versiones disponibles:
 {: #available_versions}
 
-Les versions de Python suivantes sont disponibles dans le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.6.11) qui est installé dans {{site.data.keyword.Bluemix_notm}} :
+Las siguientes versiones de Python están disponibles en el
+[paquete de compilación de Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.6.11)
+actualmente instalado en {{site.data.keyword.Bluemix_notm}}:
 
 * 2.7.13
 * 2.7.14
@@ -52,4 +56,7 @@ Les versions de Python suivantes sont disponibles dans le [pack de construction 
 * 3.6.3
 * 3.6.4
 
-Si votre application requiert une version de Python qui n'est pas répertoriée, vous pouvez utiliser le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack) externe pour la déployer.
+Si la aplicación requiere una versión de Python que no aparece en la lista,
+puede utilizar el
+[paquete de compilación de Python](https://github.com/cloudfoundry/python-buildpack) externo para
+desplegar la app.

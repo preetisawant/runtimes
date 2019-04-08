@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-26"
+subcollection: "liberty"
 
 ---
 
@@ -28,9 +29,9 @@ Liberty 빌드팩은 {{site.data.keyword.Bluemix}}에서 자주 업데이트됩�
 
 2. 월별 릴리스
   * 이는 **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"** 값으로 설정하고
-  **IBM_LIBERTY_MONTHLY** 환경 변수를 **true**로 설정하여 명시적으로 사용 설정되어야 합니다. 
-  * 이는 [월별 기능](/docs/runtimes/liberty/usingMonthlyRuntime.html)을 제공합니다. 
-  * 일반적으로 4주마다 업데이트됩니다. 
+  **IBM_LIBERTY_MONTHLY** 환경 변수를 **true**로 설정하여 명시적으로 사용 설정되어야 합니다.
+  * 이는 [월별 기능](/docs/runtimes/liberty/usingMonthlyRuntime.html)을 제공합니다.
+  * 일반적으로 4주마다 업데이트됩니다.
 
 ## Liberty 기능
 {: #liberty_features}

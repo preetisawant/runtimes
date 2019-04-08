@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2019-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -33,7 +34,7 @@ Die Liberty for Java-Laufzeit stellt ferner einige Features der Liberty-Betavers
 
 Einige Features, die Liberty anbietet, stehen in der Laufzeit von Liberty for Java nicht zur Verfügung, weil sie nicht in der Cloudumgebung angewendet werden können.
 
-Bedenken Sie, dass ein Server keine inkompatiblen Funktionen laden kann. Stellen Sie daher sicher, dass er so konfiguriert ist, dass nur kompatible Funktionen aktiviert werden. [Unterstützte Kombinationen der Features von Java EE 6 und 7](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html) und [Unterstützte Kombinationen der Features von Java EE 7 und 8](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html) enthalten weitere Informationen hierzu. 
+Bedenken Sie, dass ein Server keine inkompatiblen Funktionen laden kann. Stellen Sie daher sicher, dass er so konfiguriert ist, dass nur kompatible Funktionen aktiviert werden. [Unterstützte Kombinationen der Features von Java EE 6 und 7](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html) und [Unterstützte Kombinationen der Features von Java EE 7 und 8](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html) enthalten weitere Informationen hierzu.
 
 Anwendungen, die ferne EJBs verwenden, können in {{site.data.keyword.Bluemix_notm}} bereitgestellt werden. Es kann jedoch aufgrund von Porteinschränkungen in der {{site.data.keyword.Bluemix_notm}}-Umgebung nicht mit dem
 CORBA/IIOP-Protokoll auf die fernen EJBs zugegriffen werden.

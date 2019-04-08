@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -38,7 +39,7 @@ Liberty para la aplicación:
 
 
 ## Añada un servicio New Relic proporcionado por el usuario
-{: #add_user_provided_new_relic} 
+{: #add_user_provided_new_relic}
 
 Si ya dispone de una clave de licencia y de una cuenta de New Relic, debe enlazar el servicio
 New Relic existente a la aplicación mediante un "servicio proporcionado por el usuario".

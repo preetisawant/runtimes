@@ -15,10 +15,9 @@ SDK for Node.js
     enforceHTTPS.md
     hooks.md
 	{: .topicgroup}
-    Applications de démarrage et packs de construction de communauté
+        Applications de démarrage et packs de construction de communauté
 	    /runtimes-common/runtimes-common-using_buildpacks
         /runtimes-common/runtimes-common-using_starter_apps
-    
 
 
     {: .navgroup id="reference"}

@@ -10,18 +10,17 @@ Go
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    [使用代理](runtimes/common/workingWithProxy.html)
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     {: .topicgroup}
     入门模板应用程序和社区 buildpack
-        [使用入门模板应用程序](runtimes/common/starter_app_usage.html)
-        [使用社区 buildpack](runtimes/common/byob.html)
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [运行时的故障诊断](runtimes/common/ts_runtimes.html)
-    [可用版本](runtimes/go/index.html#runtime_versions)
-    [Buildpack 支持语句](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-runtimes
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

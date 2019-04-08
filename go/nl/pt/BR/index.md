@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2017-10-25"
+lastupdated: "2018-09-05"
+subcollection: "Go"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,24 +12,54 @@ lastupdated: "2017-10-25"
 {:codeblock: .codeblock}
 
 
-# ASP.NET Core
-{: #dotnet_core}
+# Ir
+{: #go_runtime}
 
-O tempo de execução ASP.NET Core no {{site.data.keyword.Bluemix}} é desenvolvido com o buildpack ASP.NET Core. O ASP.NET Core
-é uma estrutura de software livre modular para a construção de aplicativos da web .NET.
-O .Net Core é um tempo de execução pequeno de plataforma cruzada que pode ser direcionado pelos aplicativos ASP.NET Core.
-Eles combinam para permitir aplicativos da web modernos, baseados em nuvem.
+O tempo de execução Go no {{site.data.keyword.Bluemix}} foi desenvolvido com o go_buildpack.
+O go_buildpack fornece um ambiente de tempo de execução completo para apps Go.
 {: shortdesc}
 
-## Detecção
-{: #detection}
-O {{site.data.keyword.Bluemix}} buildpack do ASP.NET Core é usado se houver uma ou mais pastas contendo um arquivo
-project.json e pelo menos um arquivo .cs em qualquer lugar no aplicativo ou se o aplicativo for enviado por push do diretório de
-saída do comando *dotnet publish*.
+O go_buildpack é usado se seu aplicativo contém um arquivo chamado *.go.
 
 ## Aplicativo iniciador
 {: #starter_application}
 
-O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do ASP.NET Core.  O aplicativo iniciador do ASP.NET Core é um app simples que fornece um modelo que pode ser usado. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
-{{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](docs/runtimes-common/starter_app_usage.html) para obter ajuda sobre o uso
-do aplicativo iniciador.
+O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do Go.  O aplicativo iniciador do Go é um app Go simples que fornece
+um modelo que você pode usar para seu app. É possível experimentar o app iniciador e fazer e enviar mudanças por push para o ambiente do {{site.data.keyword.Bluemix_notm}}. Veja [Usando os aplicativos iniciadores](docs/runtimes-common/starter_app_usage.html) para obter ajuda sobre o uso do aplicativo iniciador.
+
+## Versões de tempo de execução
+{: #runtime_versions}
+
+É possível especificar a versão do Go a ser usada por seu app, configurando a propriedade GoVersion no arquivo
+Godeps/Godeps.json na raiz de seu aplicativo. Por exemplo:
+
+```
+{
+	"ImportPath": "gohelloworld",
+	"GoVersion": "go1.10",
+	"Deps": []
+}
+```
+{: codeblock}
+Para obter mais informações, veja [godep](https://github.com/tools/godep){: new_window}.
+
+Quando uma versão não for especificada, a versão 1.8.7 será escolhida por padrão.
+
+### Versões disponíveis:
+{: #available_versions}
+
+As seguintes versões do Go estão disponíveis no [buildpack Go](https://github.com/cloudfoundry/go-buildpack/releases/tag/v1.8.20){: new_window}
+atualmente instalado no {{site.data.keyword.Bluemix_notm}}:
+
+* 1.6.3
+* 1.6.4
+* 1.7.5
+* 1.7.6
+* 1.8.6
+* 1.8.7
+* 1.9.3
+* 1.9.4
+* 1.10
+
+Se o seu app requer uma versão do Go não listada,
+é possível usar um [buildpack Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externo para implementar o aplicativo.

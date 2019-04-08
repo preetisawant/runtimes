@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
@@ -24,7 +25,7 @@ Sie müssen die JRE-Datei auf einem Web-Server hosten, von dem das Buildpack 'li
 
 Führen Sie die Schritte aus, die im Folgenden für das Hosten der JRE-Datei und der Datei `index.yml` angegeben sind:
   1. Fordern Sie die JRE an. Dabei muss es sich um eine JRE-Version für ein UNIX-64-Bit-Betriebssystem handeln, die als eine `tar.gz`-Datei vorliegt.
-  2. Hosten Sie die JRE-Datei an einer Position, von der das Buildpack 'liberty-for-java' sie herunterladen kann. 
+  2. Hosten Sie die JRE-Datei an einer Position, von der das Buildpack 'liberty-for-java' sie herunterladen kann.
   3. Stellen Sie eine Datei `index.yml` an der Hostingposition bereit. Die Datei `index.yml` muss einen Eintrag enthalten, der eine Versions-ID der JRE umfasst, gefolgt von einem Doppelpunkt und der vollständigen URL der JRE-Dateiposition.
     * Definieren Sie die JRE-Version in der Datei `index.yml`.
 

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-01"
+lastupdated: "2019-03-01"
+subcollection: "liberty"
 
 ---
 
@@ -14,19 +15,24 @@ lastupdated: "2019-01-01"
 
 ## Liste mit den neuesten Aktualisierungen im Liberty-Buildpack
 
+### 01. März 2019: Liberty-Buildpack v3.29-20190223-2128 aktualisiert
+
+* Die Standard-GA-Version der Liberty-Laufzeit ist das Release 18.0.0.4.
+* Die alternative GA-Version 19.0.0.2 der Liberty-Laufzeit wurde hinzugefügt.   
+* Die Cloudant-Clientbibliotheken wurden auf Version 2.14.0 aktualisiert. 
+
 ### 01. Februar 2019: Liberty-Buildpack v3.28-20190127-1723 aktualisiert
 
-* Die Standard-GA-Version der Liberty-Laufzeit ist das Release 18.0.0.4. 
-* Die alternative GA-Version 19.0.0.1 der Liberty-Laufzeit wurde hinzugefügt.   
-* Das monatliche Liberty-Beta-Release wurde entfernt.   
-* Die IBM JRE-Version wurde auf 8 SR5 FP7 aktualisiert.
-* Der MQ-Client wurde auf das Release 9.1.0.0 aktualisiert. 
+* Die Standard-GA-Version der Liberty-Laufzeit ist das Release 18.0.0.4.
+* Die alternative GA-Version 19.0.0.1 der Liberty-Laufzeit wurde hinzugefügt.  
+* Das monatliche Liberty-Beta-Release wurde entfernt.  
+* Die IBM JRE-Version wurde auf 8 SR5 FP27 aktualisiert.
+* Der MQ-Client wurde auf das Release 9.1.0.0 aktualisiert.
 * Der Agent für automatische Skalierung wurde aktualisiert.
-
 
 ### 14. Dezember 2018: Liberty-Buildpack v3.27-20181130-1702 aktualisiert
 
-* Das Buildpack enthält nun Java Platform, Enterprise Edition 8.0. Java EE 8 muss für die Bereitstellung einer Anwendung per Push-Operation nicht mehr installiert werden.   
+* Das Buildpack enthält nun Java Platform, Enterprise Edition 8.0. Java EE 8 muss für die Bereitstellung einer Anwendung per Push-Operation nicht mehr installiert werden.  
 * Die Standardversion der Liberty-Laufzeit wurde auf das Release 18.0.0.4 aktualisiert.
 * Die monatliche Version der Liberty-Laufzeit wurde auf Release 2018.11.0.0 aktualisiert.
 * Die IBM JRE-Version wurde auf 8 SR5 FP26 aktualisiert.

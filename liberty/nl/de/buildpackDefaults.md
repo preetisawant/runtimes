@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-26"
+subcollection: "liberty"
 
 ---
 
@@ -32,9 +33,9 @@ Das Buildpack stellt zwei Versionen der Liberty-Laufzeit bereit:
 
 2. Das monatliche Release
   * Es muss durch Festlegen des Werts **"version: +"** für die Umgebungsvariable **JBP_CONFIG_LIBERTY** und des Werts **true**
-  für die Umgebungsvariable **IBM_LIBERTY_MONTHLY** explizit aktiviert werden. 
-  * Es stellt [monatliche Features](/docs/runtimes/liberty/usingMonthlyRuntime.html) bereit. 
-  * Es wird normalerweise alle vier Wochen aktualisiert. 
+  für die Umgebungsvariable **IBM_LIBERTY_MONTHLY** explizit aktiviert werden.
+  * Es stellt [monatliche Features](/docs/runtimes/liberty/usingMonthlyRuntime.html) bereit.
+  * Es wird normalerweise alle vier Wochen aktualisiert.
 
 ## Liberty-Features
 {: #liberty_features}

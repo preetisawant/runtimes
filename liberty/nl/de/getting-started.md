@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-05"
+subcollection: "liberty"
 
 ---
 
@@ -132,14 +133,14 @@ ibmcloud cf push
   ```
   {: codeblock}
 
-Das Bereitstellen Ihrer Anwendung kann einige Minuten dauern. Wenn die Bereitstellung abgeschlossen ist, gibt eine Nachricht an, dass die App ausgeführt wird. Sie können die App anzeigen, indem Sie die in der Ausgabe des Push-Befehls aufgeführte URL aufrufen und "/GetStartedJava" an das Ende anfügen, oder Sie können sowohl den Bereitstellungsstatus der App als auch die URL mit dem folgenden Befehl anzeigen: 
+Das Bereitstellen Ihrer Anwendung kann einige Minuten dauern. Wenn die Bereitstellung abgeschlossen ist, gibt eine Nachricht an, dass die App ausgeführt wird. Sie können die App anzeigen, indem Sie die in der Ausgabe des Push-Befehls aufgeführte URL aufrufen und "/GetStartedJava" an das Ende anfügen, oder Sie können sowohl den Bereitstellungsstatus der App als auch die URL mit dem folgenden Befehl anzeigen:
 
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
 
-Sie können die App auch über die {{site.data.keyword.Bluemix_notm}} [Ressourcenliste](https://cloud.ibm.com/resources) anzeigen. Wenn Sie auf **App-URL aufrufen** klicken, denken Sie daran, "/GetStartedJava" an die URL anzufügen. 
+Sie können die App auch über die {{site.data.keyword.Bluemix_notm}} [Ressourcenliste](https://cloud.ibm.com/resources) anzeigen. Wenn Sie auf **App-URL aufrufen** klicken, denken Sie daran, "/GetStartedJava" an die URL anzufügen.
 
 Sie können nach Fehlern im Bereitstellungsprozess suchen, indem Sie den Befehl `ibmcloud cf logs GetStartedJava --recent` verwenden.
 {: tip}  
@@ -152,8 +153,8 @@ Als Nächstes werden Sie dieser Anwendung eine {{site.data.keyword.cloudant_shor
 1. Melden Sie sich in Ihrem Browser bei {{site.data.keyword.Bluemix_notm}} an und wechseln Sie zum Dashboard. Wählen Sie **Ressource erstellen** aus.
 1. Suchen Sie nach **{{site.data.keyword.cloudant_short_notm}}** und wählen Sie den Service aus.
 1. Wählen Sie für **Verfügbare Authentifizierungsmethoden** die Option **Sowohl traditionelle Berechtigungsnachweise als auch IAM verwenden** aus. Sie können die Standardeinstellungen für die anderen Felder belassen. Klicken Sie auf **Erstellen**, um den Service zu erstellen.
-1. Rufen Sie in der Navigation **Verbindungen** auf und klicken Sie dann auf **Verbindung erstellen**. Wählen Sie Ihre Anwendung aus und klicken Sie auf **Verbinden**. 
-1. Verwenden Sie die Standardwerte und klicken Sie auf **Verbinden & Erneutes Staging für App**, um eine Verbindung von der Datenbank zur Anwendung herzustellen. Klicken Sie auf **Erneutes Staging**, wenn Sie dazu aufgefordert werden. 
+1. Rufen Sie in der Navigation **Verbindungen** auf und klicken Sie dann auf **Verbindung erstellen**. Wählen Sie Ihre Anwendung aus und klicken Sie auf **Verbinden**.
+1. Verwenden Sie die Standardwerte und klicken Sie auf **Verbinden & Erneutes Staging für App**, um eine Verbindung von der Datenbank zur Anwendung herzustellen. Klicken Sie auf **Erneutes Staging**, wenn Sie dazu aufgefordert werden.
 
    {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und stellt die Datenbankberechtigungsnachweise für Ihre Anwendung durch die Umgebungsvariable `VCAP_SERVICES` bereit. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
 

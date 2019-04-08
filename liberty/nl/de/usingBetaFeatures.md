@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2019-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -12,7 +13,7 @@ lastupdated: "2019-02-01"
 # Beta-Features verwenden
 {: #using_beta_features}
 
-**Wichtig**: Ab Liberty for Java-Buildpack v3.28 ist die Beta-Laufzeit nicht mehr enthalten.   
+**Wichtig**: Ab Liberty for Java-Buildpack v3.28 ist die Beta-Laufzeit nicht mehr enthalten.  
 
 Die Beta-Features von Liberty ermöglichen den vorzeitigen Zugriff auf die neuen Funktionen und Programmiermodelle, die in einem zukünftigen Liberty-Release enthalten sein können. Die meisten Beta-Features können auch in Anwendungen verwendet werden, die in {{site.data.keyword.Bluemix}} implementiert sind.
 

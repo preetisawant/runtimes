@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -13,7 +14,33 @@ lastupdated: "2018-12-12"
 
 Uma lista de atualizações mais recentes no buildpack do ASP.NET Core.
 
-## 12 de dezembro de 2018: buildpack v2.1 do ASP.NET Core atualizado - 20181205-1536
+## 20 de março de 2019: atualizado buildpack do ASP.NET Core v2.2-20190319-1114
+Essa liberação inclui a versão 2.2.7 do buildpack dotnet-core do Cloud Foundry.
+
+* Incluir suporte para o .NET Aspnetcore 2.1.7
+* Incluir suporte para o .NET Aspnetcore 2.1.8
+* Incluir suporte para o .NET Aspnetcore 2.2.1
+* Incluir suporte para o .NET Aspnetcore 2.2.2
+* Incluir suporte para o .NET Runtime 1.1.11
+* Incluir suporte para o .NET Runtime 2.1.7
+* Incluir suporte para o .NET Runtime 2.1.8
+* Incluir suporte para o .NET Runtime 2.2.1
+* Incluir suporte para o .NET Runtime 2.2.2
+* Incluir suporte para o .NET SDK 1.1.12
+* Incluir suporte para o .NET SDK 2.1.504
+* Incluir suporte para o .NET SDK 2.2.104
+* Remover o suporte para o .NET Aspnetcore 2.1.5
+* Remover o suporte para o .NET Aspnetcore 2.1.4
+* Remover o suporte para o .NET Aspnetcore 2.1.2
+* Remover o suporte para o .NET Runtime 1.1.9
+* Remover o suporte para o .NET Runtime 2.1.2
+* Remover o suporte para o .NET Runtime 2.1.4
+* Remover o suporte para o .NET Runtime 2.1.5
+* Remover o suporte para o .NET SDK 1.1.10
+* Remover o suporte para o .NET SDK 2.1.302
+* Atualizar a versão do Node.js para 6.17.0
+
+## 12 de dezembro de 2018: atualizado buildpack do ASP.NET Core v2.1-20181205-1536
 Esta liberação inclui a versão 2.2.0 do buildpack dotnet-core Cloud Foundry.
 
 * Incluir suporte para o .NET Aspnetcore 2.1.2

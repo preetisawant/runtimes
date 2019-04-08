@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-12-05"
+subcollection: "Swift"
 
 ---
 
@@ -157,8 +158,8 @@ ibmcloud cf apps
 1. ブラウザーで {{site.data.keyword.Bluemix_notm}} にログインし、ダッシュボードに移動します。 **「リソースの作成」**を選択します。
 1. 検索して **{{site.data.keyword.cloudant_short_notm}}** を見つけて、このサービスを選択します。
 1. **「使用可能な認証方式 (Available authentication methods)」**で、**「レガシー資格情報と IAM の両方を使用する (Use both legacy credentials and IAM)」**を選択します。 他のフィールドについては、デフォルト設定のままでかまいません。 **「作成」**をクリックしてサービスを作成します。
-1. ナビゲーションで、**「接続」**に移動して、**「接続の作成」**をクリックします。アプリケーションを選択し、**「接続」**をクリックします。
-1. デフォルト値を使用して、**「アプリの接続および再ステージ」**をクリックしてデータベースをアプリケーションに接続します。プロンプトが表示されたら、**「再ステージ」**をクリックします。
+1. ナビゲーションで、**「接続」**に移動して、**「接続の作成」**をクリックします。 アプリケーションを選択し、**「接続」**をクリックします。
+1. デフォルト値を使用して、**「アプリの接続および再ステージ」**をクリックしてデータベースをアプリケーションに接続します。 プロンプトが表示されたら、**「再ステージ」**をクリックします。
 
    {{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。 アプリケーションに対してこの環境変数が使用可能なのは、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合のみです。
 
@@ -201,7 +202,7 @@ ibmcloud cf apps
 `cloudfoundry:cloudant` 構成内の `cloudant` プレースホルダーは、ユーザー提供の Cloudant サービスをアプリケーションに簡単にバインドできるようにします。 `cloudfoundry:cloudant` 構成を使用すると、`config.json` ファイルを編集せずに、サービス名にストリング `cloudant` を含む Cloudant サービスを作成して、このサービスをアプリケーションにバインドすることができます。 この構成を変更して、後でユーザー提供の Cloudant サービスを使用するには、この構成を `cloudfoundry:cloudant` に編集するか、ユーザー提供のサービスの名前で `cloudfoundry:` を定義する必要があります。
 {: tip}
 
-{{site.data.keyword.Bluemix_notm}} [リソース・リスト](https://cloud.ibm.com/resources)にアプリケーションが含まれているのを確認します。アプリケーションの「サービス詳細」ページで、サイドバーの**「接続」**をクリックします。{{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&hellip;**) をクリックし、**「資格情報の表示」**を選択します。
+{{site.data.keyword.Bluemix_notm}} [リソース・リスト](https://cloud.ibm.com/resources)にアプリケーションが含まれているのを確認します。 アプリケーションの「サービス詳細」ページで、サイドバーの**「接続」**をクリックします。 {{site.data.keyword.cloudant_short_notm}} メニュー・アイコン (**&hellip;**) をクリックし、**「資格情報の表示」**を選択します。
 
 資格情報のみをコピーして、ローカルの config.json ファイルの対応するフィールドに貼り付けます。
 

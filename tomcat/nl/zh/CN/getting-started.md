@@ -2,7 +2,8 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
+subcollection: "Tomcat"
 
 ---
 
@@ -30,7 +31,7 @@ lastupdated: "2018-10-24"
 
 您将需要以下内容：
 * [{{site.data.keyword.Bluemix_notm}} 帐户](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://maven.apache.org/download.cgi){: new_window}
 * [Apache Tomcat V8.0.41 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://tomcat.apache.org/download-80.cgi#8.0.41 ){: new_window}
@@ -109,7 +110,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  如果您有联合用户标识，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
+  如果您有联合用户标识，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](/docs/cli/login_federated_id.html)以了解更多信息。
 
   ```
 ibmcloud login --sso
@@ -122,10 +123,11 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  如果未设置组织或空间，请参阅[添加组织和空间](https://console.bluemix.net/docs/account/orgs_spaces.html)。
+  如果未设置组织或空间，请参阅[添加组织和空间](/docs/account/orgs_spaces.html)。
   {: tip}
 
 1. 从 *get-started-tomcat* 目录中，将应用程序推送到 {{site.data.keyword.Bluemix_notm}}
+
   ```
 ibmcloud cf push
   ```
@@ -134,11 +136,13 @@ ibmcloud cf push
   这可能需要大约两分钟。如果部署过程中发生错误，可以使用命令 `ibmcloud cf logs <Your-App-Name> --recent` 进行故障诊断。
 
 部署完成后，应该会看到一条消息，指示应用程序正在运行。可以通过 push 命令输出中列出的 URL 查看应用程序。还可以发出以下命令来查看应用程序状态和 URL。
+
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
 
+您还可以转至 {{site.data.keyword.Bluemix_notm}} [资源列表](https://cloud.ibm.com/resources)来查看应用程序。
 
 ## 步骤 5：添加数据库
 {: #add_database}
@@ -148,8 +152,8 @@ ibmcloud cf apps
 1. 在浏览器中，登录到 {{site.data.keyword.Bluemix_notm}}，然后转至“仪表板”。选择**创建资源**。
 1. 搜索 **{{site.data.keyword.cloudant_short_notm}}**，并选择服务。
 1. 针对**可用的认证方法**，选择**使用旧凭证和 IAM**。可以将其他字段保留缺省设置。单击**创建**来创建服务。
-1. 在导航中，转至**连接**。选择应用程序，并单击**创建连接**。
-1. 使用缺省值连接到应用程序，并单击**连接并重新编译打包应用程序**。然后，在系统提示时单击**重新编译打包**。
+1. 在导航中，转至**连接**，然后单击**创建连接**。选择应用程序，并单击**连接**。
+1. 使用缺省值，单击**连接并重新编译打包应用程序**以将数据库连接到应用程序。系统提示时，单击**重新编译打包**。
 
    {{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
 
@@ -161,7 +165,7 @@ ibmcloud cf apps
 
 现在，我们将更新本地代码以指向此数据库。我们将在属性文件中存储服务的凭证。仅当应用程序在本地运行时，才会使用此文件。在 {{site.data.keyword.Bluemix_notm}} 中运行时，将从 `VCAP_SERVICES` 环境变量中读取凭证。
 
-1. 在浏览器中，转至 {{site.data.keyword.Bluemix_notm}} 仪表板，然后选择**_您的应用程序_ > 连接**。单击 {{site.data.keyword.cloudant_short_notm}} 菜单图标 (**&vellip;**)，然后选择**查看凭证**。
+1. 在 {{site.data.keyword.Bluemix_notm}} [资源列表](https://cloud.ibm.com/resources)中查找应用程序。在应用程序的“服务详细信息”页面上，单击侧边栏中的**连接**。单击 {{site.data.keyword.cloudant_short_notm}} 菜单图标 (**&hellip;**)，然后选择**查看凭证**。
 
 2. 仅将凭证中的 `url` 复制并粘贴到 `cloudant.properties` 文件的 `url` 字段，然后保存更改。
   ```
@@ -171,7 +175,7 @@ ibmcloud cf apps
 
 3. 重新启动服务器
 
-刷新浏览器视图：http://localhost:8080/GetStartedTomcat/。现在，您输入到应用程序中的所有名称都已添加到数据库。
+刷新浏览器视图：`http://localhost:8080/GetStartedTomcat/`。现在，您输入到应用程序中的所有名称都已添加到数据库。
 
   本地应用程序和 {{site.data.keyword.Bluemix_notm}} 应用程序共享该数据库。在刷新浏览器后，从任一应用程序添加的名称都将同时出现在这两个应用程序中。
 

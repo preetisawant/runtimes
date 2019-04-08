@@ -14,7 +14,7 @@ ASP.NET Core
     usingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-    [使用 Proxy](runtimes/common/workingWithProxy.html)
+	/runtimes-common/runtimes-common-working_with_proxy
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -24,13 +24,13 @@ ASP.NET Core
 
     {: .topicgroup}
     入門範本應用程式及社群建置套件
-        [使用入門範本應用程式](runtimes/common/starter_app_usage.html)
-        [使用社群建置套件](runtimes/common/byob.html)
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    [建置套件支援聲明](runtimes/common/buildpackSupport.html)
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-07"
+lastupdated: "2019-03-18"
+subcollection: "Nodejs"
 
 ---
 
@@ -14,17 +15,21 @@ lastupdated: "2019-01-07"
 
 Eine Liste mit den neuesten Aktualisierungen im Buildpack 'sdk-for-nodejs'.
 
+## 18. März 2019: Node.js-Buildpack v3.26 aktualisiert
+
+Das SDK for Node.js-Buildpack v3.26 stellt die IBM SDK for Node.js-Versionen 4.8.5 und 4.8.7 sowie die Node.js-Community-Versionen 6.16.0, 6.17.0, 8.15.0, 8.15.1, 10.15.0 und 10.15.3 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.17.0. 
+
 ## 23. Januar 2019: Node.js-Buildpack v3.25.1 aktualisiert
 
-Das SDK for Node.js-Buildpack v3.25 stellt die IBM SDK for Node.js-Versionen 4.8.5 und 4.8.7 sowie die Node.js-Community-Versionen 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 und 10.15.0 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.16.0. Die Versionen 6.15.0, 8.14.0 und 10.14.0, die im letzten Buildpack enthalten waren, wiesen eine Regression auf. Die Regression wurde in den Versionen 6.16.0, 8.15.0 und 10.15.0, die nun stattdessen enthalten sind, behoben. 
+Das SDK for Node.js-Buildpack v3.25.1 stellt die IBM SDK for Node.js-Versionen 4.8.5 und 4.8.7 sowie die Node.js-Community-Versionen 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 und 10.15.0 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.16.0. Die Versionen 6.15.0, 8.14.0 und 10.14.0, die im letzten Buildpack enthalten waren, wiesen eine Regression auf. Die Regression wurde in den Versionen 6.16.0, 8.15.0 und 10.15.0, die nun stattdessen enthalten sind, behoben.
 
 ## 07. Januar 2019: Node.js-Buildpack v3.25 aktualisiert
 
-Das SDK for Node.js-Buildpack v3.25 stellt die IBM SDK for Node.js-Versionen 4.8.5 und 4.8.7 sowie die Node.js-Community-Versionen 6.14.4, 6.15.0, 8.11.4, 8.14.0, 10.10.0 und 10.14.0 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.15.0. Darüber hinaus wird mit dem Buildpack auch ein kleinerer Fehler im Dynatrace-Hook behoben. 
+Das SDK for Node.js-Buildpack v3.25 stellt die IBM SDK for Node.js-Versionen 4.8.5 und 4.8.7 sowie die Node.js-Community-Versionen 6.14.4, 6.15.0, 8.11.4, 8.14.0, 10.10.0 und 10.14.0 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.15.0. Darüber hinaus wird mit dem Buildpack auch ein kleinerer Fehler im Dynatrace-Hook behoben.
 
 ## 05. Dezember 2018: Node.js-Buildpack v3.24 aktualisiert
 
-Das SDK for Node.js-Buildpack v3.24 stellt die IBM SDK for Node.js-Versionen 4.8.5 und 4.8.7 sowie die Node.js-Community-Versionen 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0 und 10.10.0 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.14.4. Darüber hinaus wird mit dem Buildpack auch ein kleinerer Fehler im Dynatrace-Hook behoben. 
+Das SDK for Node.js-Buildpack v3.24 stellt die IBM SDK for Node.js-Versionen 4.8.5 und 4.8.7 sowie die Node.js-Community-Versionen 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0 und 10.10.0 bereit. Die Standardversion ist die neueste 6.x-Version. Dies ist aktuell Version 6.14.4. Darüber hinaus wird mit dem Buildpack auch ein kleinerer Fehler im Dynatrace-Hook behoben.
 
 ## 07. September 2018: Node.js-Buildpack v3.22 aktualisiert
 {:#fips-deprecation}

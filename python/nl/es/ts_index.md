@@ -3,16 +3,17 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
+subcollection: "Python"
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 
-# Ressources de dépannage
+# Recursos para la resolución de problemas
 {: #ts_python}
 
-Dépannez vos applications et packs de construction Python avec les ressources suivantes :
+Resuelva los problemas de los paquetes de compilación y las aplicaciones Python con los siguientes recursos:
 
-* [Traitement des incidents liés aux contextes d'exécution](docs/runtimes-common/ts_runtimes.html#runtimes)
-* [Traitement des incidents liés aux contextes d'exécution : Python](docs/runtimes-common/ts_runtimes.html#ts_python)
+* [Resolución de problemas de tiempos de ejecución](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Resolución de problemas de tiempos de ejecución: Python](docs/runtimes-common/ts_runtimes.html#ts_python)

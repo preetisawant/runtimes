@@ -11,7 +11,7 @@ Python
 
     {: .navgroup id="howto"}
 	{: .topicgroup}
-    Applications de démarrage et packs de construction de communauté
+    Aplicaciones de inicio y buildpacks de la comunidad
 	    /runtimes-common/runtimes-common-using_buildpacks
         /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}

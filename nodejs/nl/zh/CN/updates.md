@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-13"
+  years: 2015, 2019
+lastupdated: "2019-03-18"
+subcollection: "Nodejs"
 
 ---
 
@@ -13,6 +14,22 @@ lastupdated: "2018-11-13"
 {: #latest_updates}
 
 sdk-for-nodejs buildpack 中最新更新的列表。
+
+## 2019 年 3 月 18 日：更新了 Node.js buildpack V3.26
+
+SDK for Node.js buildpack V3.26 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.16.0、V6.17.0、V8.15.0、V8.15.1、V10.15.0 和 V10.15.3。缺省值是最新的 6.x，所以目前是 6.17.0。
+
+## 2019 年 1 月 23 日：更新了 Node.js buildpack V3.25.1
+
+SDK for Node.js buildpack V3.25.1 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.14.4、V6.16.0、V8.11.4、V8.15.0、V10.10.0 和 V10.15.0。缺省值是最新的 6.x，所以目前是 6.16.0。原先最新 buildpack 中包含的 V6.15.0、V8.14.0 和 V10.14.0 具有回归。现在改为包含 6.16.0、8.15.0 和 10.15.0，在这些版本中已修订这些回归。
+
+## 2019 年 1 月 7 日：更新了 Node.js buildpack V3.25
+
+SDK for Node.js buildpack V3.25 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.14.4、V6.15.0、V8.11.4、V8.14.0、V10.10.0 和 V10.14.0。缺省值是最新的 6.x，所以目前是 6.15.0。buildpack 还修订了 Dynatrace hook 中的小错误。
+
+## 2018 年 12 月 5 日：更新了 Node.js buildpack V3.24
+
+SDK for Node.js buildpack V3.24 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.14.3、V6.14.4、V8.11.3、V8.11.4、V10.9.0 和 V10.10.0。缺省值是最新的 6.x，所以目前是 6.14.4。buildpack 还修订了 Dynatrace hook 中的小错误。
 
 ## 2018 年 9 月 7 日：更新了 Node.js buildpack V3.22
 {:#fips-deprecation}

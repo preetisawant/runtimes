@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
@@ -20,7 +21,7 @@ Puoi eseguire la tua applicazione Liberty su {{site.data.keyword.Bluemix}} con i
 ## Ospitare il JRE e `index.yml`
 {: #hosting_jre}
 
-Devi ospitare il file JRE su un server web da cui il pacchetto di build liberty-for-java può scaricarlo.  Puoi ospitare il file in {{site.data.keyword.Bluemix_notm}} con una qualunque delle funzioni del server disponibili, oppure puoi ospitarlo nelle ubicazioni disponibili pubblicamente. Il server deve essere configurato con un file `index.yml` che specifica i dettagli sul file JRE.
+Devi ospitare il file JRE su un server web da cui il pacchetto di build liberty-for-java può scaricarlo. Puoi ospitare il file in {{site.data.keyword.Bluemix_notm}} con una qualunque delle funzioni del server disponibili, oppure puoi ospitarlo nelle ubicazioni disponibili pubblicamente. Il server deve essere configurato con un file `index.yml` che specifica i dettagli sul file JRE.
 
 Completa i seguenti passi per ospitare JRE e il file `index.yml`:
   1. Acquisisci il JRE, che deve essere la versione per l'utilizzo su un SO a 64-bit Unix e deve essere un file `tar.gz`.

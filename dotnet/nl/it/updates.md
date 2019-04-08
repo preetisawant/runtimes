@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-12"
+  years: 2015, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -12,6 +13,32 @@ lastupdated: "2018-12-12"
 {: #latest_updates}
 
 Un elenco degli aggiornamenti più recenti nel pacchetto di build ASP.NET Core.
+
+## 20 marzo 2019: aggiornamento del pacchetto di build ASP.NET Core v2.2-20190319-1114
+Questa release include la versione 2.2.7 del pacchetto di build Cloud Foundry dotnet-core.
+
+* Aggiunto il supporto per .NET Aspnetcore 2.1.7
+* Aggiunto il supporto per .NET Aspnetcore 2.1.8
+* Aggiunto il supporto per .NET Aspnetcore 2.2.1
+* Aggiunto il supporto per .NET Aspnetcore 2.2.2
+* Aggiunto il supporto per .NET Runtime 1.1.11
+* Aggiunto il supporto per .NET Runtime 2.1.7
+* Aggiunto il supporto per .NET Runtime 2.1.8
+* Aggiunto il supporto per .NET Runtime 2.2.1
+* Aggiunto il supporto per .NET Runtime 2.2.2
+* Aggiunto il supporto per .NET SDK 1.1.12
+* Aggiunto il supporto per .NET SDK 2.1.504
+* Aggiunto il supporto per .NET SDK 2.2.104
+* Rimosso il supporto per .NET Aspnetcore 2.1.5
+* Rimosso il supporto per .NET Aspnetcore 2.1.4
+* Rimosso il supporto per .NET Aspnetcore 2.1.2
+* Rimosso il supporto per .NET Runtime 1.1.9
+* Rimosso il supporto per .NET Runtime 2.1.2
+* Rimosso il supporto per .NET Runtime 2.1.4
+* Rimosso il supporto per .NET Runtime 2.1.5
+* Rimosso il supporto per .NET SDK 1.1.10
+* Rimosso il supporto per .NET SDK 2.1.302
+* Aggiornamento della versione di Node.js alla 6.17.0
 
 ## 12 dicembre 2018: aggiornamento del pacchetto di build ASP.NET Core v2.1-20181205-1536
 Questa release include la versione 2.2.0 del pacchetto di build Cloud Foundry dotnet-core.

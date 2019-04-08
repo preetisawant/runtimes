@@ -35,7 +35,7 @@ Liberty for Java
     {: .topicgroup}
     오프라인 작업 또는 프록시 작업
         offlineMode.md
-		/runtimes-common/runtimes-common-working_with_proxy
+		/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2019-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -12,7 +13,7 @@ lastupdated: "2019-02-01"
 # {{site.data.keyword.cloud_notm}}에서 지원되는 Liberty 기능
 {: #liberty_features}
 
-Liberty for Java 런타임에는 Liberty 기능의 서브세트가 포함됩니다. 런타임에 포함되지 않은 기능을 사용하려면 [Liberty 기능 설치](/docs/runtimes/liberty/installFeatures.html)를 참조하십시오. Java EE 버전 및 기타 정보가 포함된 Liberty에 사용 가능한 기능의 전체 목록은
+Liberty for Java 런타임에는 Liberty 기능의 서브세트가 포함되어 있습니다. 런타임에 포함되지 않은 기능을 사용하려면 [Liberty 기능 설치](/docs/runtimes/liberty/installFeatures.html)를 참조하십시오. Java EE 버전 및 기타 정보가 포함된 Liberty에 사용 가능한 기능의 전체 목록은
 [Liberty 기능 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)을 참조하십시오.
 
 ## 클라우드 특정 기능
@@ -34,7 +35,7 @@ Liberty for Java 런타임에서는 일부 Liberty 베타 기능도 사용 가�
 Liberty에서 제공하는 일부 기능은 클라우드 환경에서 적용할 수 없기 때문에 Liberty for Java 런타임에서 사용할 수 없습니다.
 
 서버는 호환 불가능한 기능은 로드할 수 없으므로 호환 가능한 기능만 사용하도록 구성해야 합니다. [Supported Java EE 6 and 7 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html)
-및 [Supported Java EE 7 and 8 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html)를 참조하십시오. 
+및 [Supported Java EE 7 and 8 feature combinations](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html)를 참조하십시오.
 
 원격 EJB를 사용하는 애플리케이션은 {{site.data.keyword.Bluemix_notm}}에 배치될 수 있습니다.
 그러나 원격 EJB는 {{site.data.keyword.Bluemix_notm}} 환경의 포트 제한사항 때문에 CORBA/IIOP 프로토콜로 원격 액세스가 가능하지 않습니다.

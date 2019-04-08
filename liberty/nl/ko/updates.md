@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-01"
+lastupdated: "2019-03-01"
+subcollection: "liberty"
 
 ---
 
@@ -14,22 +15,27 @@ lastupdated: "2019-01-01"
 
 ## Liberty 빌드팩의 최신 업데이트 목록
 
+### 2019년 3월 1일: Liberty 빌드팩 v3.29-20190223-2128 업데이트
+
+* 기본 Liberty 런타임 GA 버전은 18.0.0.4 릴리스입니다.
+* 대체 Liberty 런타임 GA 버전 19.0.0.2가 추가되었습니다.   
+* Cloudant 클라이언트 라이브러리가 2.14.0으로 업데이트되었습니다. 
+
 ### 2019년 2월 1일: Liberty 빌드팩 v3.28-20190127-1723 업데이트
 
-* 기본 Liberty 런타임 GA 버전은 18.0.0.4 릴리스입니다. 
-* 대체 Liberty 런타임 GA 버전 19.0.0.1이 추가되었습니다.   
-* 월별 Liberty 베타 릴리스가 제거되었습니다.   
-* IBM JRE 버전이 8 SR5 FP7로 업데이트되었습니다.
-* MQ 클라이언트가 9.1.0.0 릴리스로 업데이트되었습니다. 
+* 기본 Liberty 런타임 GA 버전은 18.0.0.4 릴리스입니다.
+* 대체 Liberty 런타임 GA 버전 19.0.0.1이 추가되었습니다.  
+* 월별 Liberty 베타 릴리스가 제거되었습니다.  
+* IBM JRE 버전이 8 SR5 FP27로 업데이트되었습니다. 
+* MQ 클라이언트가 9.1.0.0 릴리스로 업데이트되었습니다.
 * Auto-Scaling 에이전트가 업데이트되었습니다.
-
 
 ### 2018년 12월 14일: Liberty 빌드팩 v3.27-20181130-1702 업데이트
 
-* 빌드팩이 이제 Java Platform, Enterprise Edition 8.0을 포함합니다. 더 이상 애플리케이션이 푸시될 때 Java EE 8을 설치할 필요가 없습니다.   
-* 기본 Liberty 런타임 버전이 18.0.0.4 릴리스로 업데이트되었습니다. 
-* 월별 Liberty 런타임 버전이 2018.11.0.0 릴리스로 업데이트되었습니다. 
-* IBM JRE 버전이 8 SR5 FP26으로 업데이트되었습니다. 
+* 빌드팩이 이제 Java Platform, Enterprise Edition 8.0을 포함합니다. 더 이상 애플리케이션이 푸시될 때 Java EE 8을 설치할 필요가 없습니다.  
+* 기본 Liberty 런타임 버전이 18.0.0.4 릴리스로 업데이트되었습니다.
+* 월별 Liberty 런타임 버전이 2018.11.0.0 릴리스로 업데이트되었습니다.
+* IBM JRE 버전이 8 SR5 FP26으로 업데이트되었습니다.
 
 ### 2018년 10월 29일: Liberty 빌드팩 v3.26-20181023-1545 업데이트
 
@@ -103,14 +109,14 @@ lastupdated: "2019-01-01"
 
 ### 2017년 8월 14일: Liberty 빌드팩 v3.12-20170814-1322 업데이트
 * 월별 Liberty 런타임 버전이 [2017.8.0.0](https://developer.ibm.com/wasdev/blog/2017/08/04/beta-websphere-liberty-tools-august-2017/) 릴리스로 업데이트되었습니다.
-* 빌드팩에는 업데이트된 IBM JRE: 버전8 SR4 FP10 및 버전 7.1 SR4 FP10이 포함됩니다.
-* JRE 8에는 JCE(Java Cryptography Extension) 무제한 강도 관할 정책 파일이 포함됩니다.
+* 빌드팩에는 업데이트된 IBM JRE: 버전8 SR4 FP10 및 버전 7.1 SR4 FP10도 포함되어 있습니다.
+* JRE 8에는 JCE(Java Cryptography Extension) 무제한 강도 관할 정책 파일이 포함되어 있습니다.
 * Liberty 앱이 [정상적으로 시스템 종료](https://docs.cloudfoundry.org/devguide/deploy-apps/app-lifecycle.html#shutdown)되지 못하게 하는 빌드팩 버그가 수정되었습니다.
 
 ### 2017년 8월 14일: Liberty 빌드팩 v3.11-20170710-0312 업데이트
 * 기본 Liberty 런타임 버전 `17.0.0.2`가 IFPI83713 iFix를 포함하도록 업데이트되었습니다.
 * 월별 Liberty 런타임 버전이 [2017.7.0.0](https://developer.ibm.com/wasdev/blog/2017/07/07/beta-websphere-liberty-tools-july-2017/) 릴리스로 업데이트되었습니다.
-* 빌드팩에는 업데이트된 IBM JRE: 버전8 SR4 FP7 및 버전 7.1 SR4 FP5가 포함됩니다.
+* 빌드팩에는 업데이트된 IBM JRE: 버전8 SR4 FP7 및 버전 7.1 SR4 FP5가 포함되어 있습니다.
 * 기본 Cloudant Library는 이제 공식 [java-cloudant](https://github.com/cloudant/java-cloudant)이며, [Ektorp library](https://github.com/helun/Ektorp)는 계속해서 옵션으로 사용 가능합니다. 이 변경사항에 대한 세부사항은 [블로그 게시물](https://www.ibm.com/blogs/bluemix/2017/05/default-library-change-cloudant-auto-wiring-liberty-buildpack/)을 참조하십시오.
 * 애플리케이션의 메모리가 512MB 미만이면 이제 기본 힙 크기 비율은 50%입니다. 512MB보다 크면 기본 힙 크기 비율은 75%가 됩니다.
 * 이제 새 스테이징 태스크 로그가 생성되어 스테이징 오류를 더욱 쉽게 디버깅할 수 있습니다.
@@ -158,7 +164,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 2016년 11월 29일: Liberty 빌드팩 v3.5-20161114-1152 업데이트
 * 기본 Liberty 런타임 버전 `16.0.0.3`이 [PI62375](https://www-01.ibm.com/support/docview.wss?uid=swg24042712) iFix를 포함하고 `microProfile-1.0` 편의 기능을 제공하도록 업데이트되었습니다.
 * 월별 Liberty 런타임 버전이 `2016.11.0.0` 릴리스로 업데이트되었습니다.
-* 빌드팩에는 업데이트된 IBM JRE: 버전 8 SR3 FP20 및 버전 7.1 SR3 FP60이 포함됩니다.
+* 빌드팩에는 업데이트된 IBM JRE: 버전 8 SR3 FP20 및 버전 7.1 SR3 FP60이 포함되어 있습니다.
 * DB2 JDBC 드라이버가 `4.21.29` 버전으로 업데이트되었습니다.
 * Monitoring and Analytics 서비스 통합이 [Diego ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html)에 대한 작업을 수행하도록 수정되었습니다.
 * [Dynatrace](dynatrace.html) 서비스 통합이 Dynatrace 서비스 오퍼링에 대한 작업을 효과적으로 수행하도록 업데이트되었습니다.
@@ -177,7 +183,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * 빌드팩은 Monitoring and Analytics 서비스에 대한 업데이트된 데이터 콜렉터를 제공합니다.
 * 빌드팩이 [MySQL 유형의 서비스에 대한 자동 구성](autoConfig.html)을 수행할 때 최신 1.5.x [MariaDB 커넥터/J JDBC 드라이버 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)를 다운로드하도록 다시 변경되었습니다.
 * 이 빌드팩에는 `LBP_SERVICE_CONFIG_<serviceType>` 환경 변수를 통해 서비스 자동 구성 동작의 사용자 정의를 위한 지원이 도입되었습니다. 예를 들어, 이 빌드팩을 사용하여 MySQL 서비스를 위해 다운로드할 JDBC 드라이버의 버전 또는 위치를 변경할 수 있습니다. 자세한 정보는 [자동 구성을 지원하는 서비스](autoConfig.html) 문서를 참조하십시오.
-* 빌드팩에는 애플리케이션 상태 검사 및 [App Management](../common/app_mng.html) 기능과 관련된 많은 [Diego ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) 개선사항이 포함됩니다.
+* 빌드팩에는 애플리케이션 상태 검사 및 [App Management](../common/app_mng.html) 기능과 관련된 많은 [Diego ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) 개선사항도 포함되어 있습니다.
 
 ### 2016년 9월 16일: Liberty 빌드팩 v3.3-20160912-1729 업데이트
 * 기본 Liberty 런타임 버전이 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 릴리스로 업데이트되었습니다. 월별 Liberty 런타임 버전이 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 릴리스로 업데이트되었습니다. 이러한 업데이트로 인해 이전에는 베타 기능으로 사용 가능했던 `cloudant-1.0` 및 `passwordUtilities-1.0` Liberty 기능이 이제 프로덕션 준비 기능으로 사용 가능합니다.
@@ -199,7 +205,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 
 ### 2016년 6월 17일: Liberty 빌드팩 v3.0-20160608-1450 업데이트
 * 이 빌드팩은 이제 WebSphere Liberty의 두 버전인, 최신의 안정된 릴리스와 최신 월별 릴리스를 포함합니다. 특히, [16.0.0.2](http://www-01.ibm.com/support/docview.wss?uid=swg21984970) 안정된 릴리스와 [2016.6.0.0](https://developer.ibm.com/wasdev/blog/2016/06/03/beta-websphere-liberty-and-tools-june-2016/) 월별 릴리스를 제공합니다. 기본적으로 안정적 릴리스가 사용됩니다. 자세한 내용은 [Liberty 버전](buildpackDefaults.html#liberty_versions)을 참조하십시오.
-* 또한 이 빌드팩에는 [Apache Standard Taglibs 취약성](http://www-01.ibm.com/support/docview.wss?uid=swg21985531)의 보안 수정사항이 포함됩니다.
+* 또한 이 빌드팩에는 [Apache Standard Taglibs 취약성](http://www-01.ibm.com/support/docview.wss?uid=swg21985531)의 보안 수정사항도 포함되어 있습니다.
 
 ### 2016년 5월 25일: Liberty 빌드팩 v2.9-20160519-1249 업데이트
 * 이 빌드팩에는 [5월 베타](https://developer.ibm.com/wasdev/blog/2016/05/06/beta-websphere-liberty-and-tools-may-2016/)를 기반으로 하는 WebSphere Liberty의 업데이트된 버전이 포함되어 있습니다. Liberty의 업데이트된 버전을 이용하면 *bluemixLogCollector-1.1* 및 *logstashCollector-1.1* 베타 기능을 {{site.data.keyword.Bluemix_notm}}에서 사용할 수 있습니다.
@@ -216,7 +222,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * 이 빌드팩에는 [3월 베타](https://developer.ibm.com/wasdev/blog/2016/03/18/new-websphere-liberty-features-march-2016/)를 기반으로 하는 WebSphere Liberty의 업데이트된 버전이 포함되어 있습니다. Liberty의 업데이트된 버전을 이용하면 cloudant-1.0 베타 기능을 {{site.data.keyword.Bluemix_notm}}에서 사용할 수 있습니다.
 * 또한 이 빌드팩에는 IBM JRE: 8 SR2 FP12 및 7.1 SR3 FP32의 업데이트된 버전이 포함되어 있습니다.
 * 이 빌드팩은 [Auto-Scaling 서비스](/docs/services/Auto-Scaling/index.html)를 위해 업데이트된 버전의 에이전트를 제공합니다.
-* 이제 이 빌드팩에 Monitoring and Analytics 서비스를 위한 새로운 데이터 콜렉터가 제공됩니다. 새 콜렉터를 사용하면 모니터링 임계값을 구성할 수 있으며 몇 가지 버그 수정이 포함됩니다.
+* 이제 이 빌드팩에 Monitoring and Analytics 서비스를 위한 새로운 데이터 콜렉터가 제공됩니다. 새 콜렉터를 사용하면 모니터링 임계값을 구성할 수 있으며 몇 가지 버그 수정이 포함되어 있습니다.
 * 이 빌드팩은 업데이트된 DB2® JDBC 드라이버 버전 4.19.49를 제공합니다.
 * [devconsole 및 shell App Management 유틸리티](../common/app_mng.html#app_management)에서 사용되는 Node.js 런타임이 최신 0.12.12 버전으로 업데이트되었습니다.
 
@@ -239,7 +245,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 
 ### 2015년 11월 23일: Liberty 빌드팩 v2.2-20151119-1720 업데이트
 * 빌드팩에는 [Apache Commons Collection 취약성](http://www-01.ibm.com/support/docview.wss?uid=swg21971426)의 보안 수정사항이 포함된 WebSphere eXtreme Scale Client 및 Liberty 프로파일 런타임의 업데이트된 버전이 있습니다.
-* 빌드팩에는 [Java MongoDB 드라이버 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.mongodb.org/ecosystem/drivers/java/) v2.13.3의 업데이트된 버전이 포함됩니다. 새 드라이버는 MongoDB 버전 2.4, 2.6 및 3.0과 호환 가능합니다.
+* 빌드팩에는 [Java MongoDB 드라이버 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.mongodb.org/ecosystem/drivers/java/) v2.13.3의 업데이트된 버전도 포함되어 있습니다. 새 드라이버는 MongoDB 버전 2.4, 2.6 및 3.0과 호환 가능합니다.
 * 빌드팩에서는 Monitoring and Analytics 서비스에 대한 데이터 콜렉터의 업데이트된 버전도 제공합니다. 업데이트된 데이터 콜렉터에서는 메소드 추적 기능이 향상되었습니다.
 
 ### 2015년 10월 16일: Liberty 빌드팩 v2.1-20151006-0912 업데이트
@@ -271,10 +277,10 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 2015년 7월 21일: Liberty 빌드팩 v1.20-20150713-1450 업데이트
 * 빌드팩에는 [8.5.5.6 릴리스](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/)를 기반으로 하는 Liberty 프로파일의 업데이트된 버전이 포함되어 있습니다. 이 릴리스로 이전에는 베타 기능으로 사용 가능했던 모든 Java EE 7 Liberty 기능은 이제 프로덕션-준비 기능으로 사용 가능합니다. {{site.data.keyword.Bluemix_notm}}의 포트 및 기타 제한사항 때문에, 일부 기능(예: 원격 EJB)은 플랫폼에서 전체 지원되지 않습니다.
 * 빌드팩은 [distZip-style ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.gradle.org/current/userguide/application_plugin.html)로 패키지된 애플리케이션을 인식하고 실행합니다.
-* 빌드팩에는 새 Liberty 런타임 버전을 지원하는 WebSphere eXtreme Scale Client 및 Monitoring and Analytics 서비스에 대한 업데이트된 데이터 콜렉터가 포함됩니다.
+* 빌드팩에는 새 Liberty 런타임 버전을 지원하는 WebSphere eXtreme Scale Client 및 Monitoring and Analytics 서비스에 대한 업데이트된 데이터 콜렉터가 포함되어 있습니다.
 
 ### 2015년 6월 30일: Liberty 빌드팩 v1.19.1-20150622-1509 업데이트
-* 이 빌드팩 버전에는 [LogJam 취약성](http://www-01.ibm.com/support/docview.wss?uid=swg21961390)에 대한 보안 수정사항이 있는 업데이트된 IBM JRE가 포함됩니다.
+* 이 빌드팩 버전에는 [LogJam 취약성](http://www-01.ibm.com/support/docview.wss?uid=swg21961390)에 대한 보안 수정사항이 있는 업데이트된 IBM JRE가 포함되어 있습니다.
 * [New Relic](newRelic.html) 에이전트는 버전 3.17로 업데이트되었습니다. 새 버전은 Liberty 프로파일 런타임과의 개선된 통합을 제공합니다.
 
 ### 2015년 6월 14일: Liberty 빌드팩 v1.19-20150608-1717 업데이트

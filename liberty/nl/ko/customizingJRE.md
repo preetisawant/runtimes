@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2019-01-11"
+subcollection: "liberty"
 
 ---
 
@@ -52,13 +53,13 @@ lastupdated: "2019-01-11"
 ```
 {: codeblock}
 
-사용으로 설정되는 경우 기본적으로 OpenJ9 버전 11이 사용됩니다. OpenJ9의 대체 버전을 지정하려면 JBP_CONFIG_OPENJ9 환경 변수를 사용하십시오. 예를 들어, 최신 OpenJ9 8을 사용하려면 다음 환경 변수를 설정하십시오. 
+사용으로 설정되는 경우 기본적으로 OpenJ9 버전 11이 사용됩니다. OpenJ9의 대체 버전을 지정하려면 JBP_CONFIG_OPENJ9 환경 변수를 사용하십시오. 예를 들어, 최신 OpenJ9 8을 사용하려면 다음 환경 변수를 설정하십시오.
 ```
     ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
 ```
 {: codeblock}
 
-사용으로 설정되는 경우 기본적으로 OpenJ9 버전 11이 사용됩니다. OpenJ9의 JDK 버전을 사용하려면 JBP_CONFIG_OPENJ9 환경 변수를 사용하십시오. 예를 들어, OpenJ9 JDK를 사용하려면 다음 환경 변수를 설정하십시오. 
+사용으로 설정되는 경우 기본적으로 OpenJ9 버전 11이 사용됩니다. OpenJ9의 JDK 버전을 사용하려면 JBP_CONFIG_OPENJ9 환경 변수를 사용하십시오. 예를 들어, OpenJ9 JDK를 사용하려면 다음 환경 변수를 설정하십시오.
 ```
     ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
 ```
@@ -67,7 +68,7 @@ lastupdated: "2019-01-11"
 ## Oracle JRE
 {: #oracle_jre}
 
-Oracle JRE 사용에 대한 정보는 [자신의 JRE 사용](/docs/runtimes/liberty/using_own_jre.html)을 참조하십시오. 
+Oracle JRE 사용에 대한 정보는 [자신의 JRE 사용](/docs/runtimes/liberty/using_own_jre.html)을 참조하십시오.
 
 ## JRE 옵션 구성
 {: #configuring_jre}
@@ -81,7 +82,7 @@ Liberty 빌드팩은 다음을 고려하여 기본 JVM 옵션을 구성합니다
   * [메모리 한계 및 Liberty 빌드팩](/docs/runtimes/liberty/memoryLimits.html#memory_limits)에 설명된 애플리케이션의 메모리 한계
   * JRE 유형. JVM의 힙 관련 옵션은 JRE의 지원 옵션에 따라 다릅니다.
 
-* [{{site.data.keyword.Bluemix_notm}}에서 지원되는 Liberty 기능](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures). 
+* [{{site.data.keyword.Bluemix_notm}}에서 지원되는 Liberty 기능](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures).
   * 2단계 커미트 글로벌 데이터베이스 트랜잭션이 {{site.data.keyword.Bluemix_notm}}에서 지원되지 않으므로 -Dcom.ibm.tx.jta.disable2PC=true 설정으로 사용되지 않습니다.
 
 * {{site.data.keyword.Bluemix_notm}} 환경.

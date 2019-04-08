@@ -2,7 +2,9 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-24"
+lastupdated: "2018-12-05"
+subcollection: "Python"
+
 
 ---
 
@@ -30,7 +32,7 @@ Tout au long de ces documents, les références à l'interface CLI Cloud Foundry
 
 Vous aurez besoin des éléments suivants :
 * [Compte {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [Interface CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} interface de ligne de commande](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}
 * [Python ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.python.org/downloads/){: new_window}
 
@@ -113,7 +115,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Si vous possédez un ID utilisateur fédéré, utilisez la commande suivante à la place afin de vous connecter avec votre ID de connexion unique. Voir [Connexion à l'aide d'un ID fédéré](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) pour en savoir plus.
+  Si vous possédez un ID utilisateur fédéré, utilisez la commande suivante à la place afin de vous connecter avec votre ID de connexion unique. Voir [Connexion à l'aide d'un ID fédéré](/docs/cli/login_federated_id.html) pour en savoir plus.
 
   ```
 ibmcloud login --sso
@@ -127,7 +129,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Si vous ne disposez pas d'une organisation ou d'un espace configuré, voir [Ajout d'organisations et d'espaces](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Si vous ne disposez pas d'une organisation ou d'un espace configuré, voir [Ajout d'organisations et d'espaces](/docs/account/orgs_spaces.html).
   {: tip}
 
 1. Depuis le répertoire *get-started-python*, envoyez votre application par commande push vers {{site.data.keyword.Bluemix_notm}}
@@ -146,6 +148,8 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
+Vous pouvez également accéder à la [liste de ressources](https://cloud.ibm.com/resources) {{site.data.keyword.Bluemix_notm}} pour afficher votre application.
+
 ## Etape 5 : Ajouter une base de données
 {: #add_database}
 
@@ -154,8 +158,8 @@ Nous allons à présent ajouter une base de données {{site.data.keyword.cloudan
 1. Dans votre navigateur, connectez-vous à {{site.data.keyword.Bluemix_notm}} et allez au Tableau de bord. Sélectionnez **Créer une ressource**.
 1. Recherchez **{{site.data.keyword.cloudant_short_notm}}** puis sélectionnez le service.
 1. Pour les **méthodes d'authentification disponibles**, sélectionnez **Utiliser les données d'identification existantes et IAM**. Vous pouvez conserver les paramètres par défaut pour les autres zones. Cliquez sur **Créer** pour créer le service.
-1. Dans la zone de navigation, accédez à **Connexions**. Sélectionnez votre application, puis cliquez sur **Créer une connexion**.
-1. Connectez-vous à votre application en utilisant les valeurs par défaut, puis cliquez sur **Connecter et reconstituer l'application**. Cliquez ensuite sur **Reconstituer** lorsque vous y êtes invité. 
+1. Dans la zone de navigation, accédez à **Connections**, puis cliquez sur **Créer une connexion**. Sélectionnez votre application, puis cliquez sur **Connecter**.
+1. En utilisant les valeurs par défaut, cliquez sur **Connecter et reconstituer l'application** pour connecter la base de données à votre application. Cliquez sur **Reconstituer** lorsque vous y êtes invité.
 
    {{site.data.keyword.Bluemix_notm}} redémarre votre application et lui fournit les données d'identification pour l'accès à la base de données en utilisant la variable d'environnement `VCAP_SERVICES`. L'application n'a accès à cette variable d'environnement que lorsqu'elle fonctionne sur {{site.data.keyword.Bluemix_notm}}.
 
@@ -186,7 +190,7 @@ Nous allons à présent mettre à jour votre code local pour le faire pointer su
   ```
   {: codeblock}
 
-2. Dans votre navigateur, accédez au tableau de bord {{site.data.keyword.Bluemix_notm}} et sélectionnez **_votre appli_ > Connexions**. Cliquez sur l'icône de menu {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) et sélectionnez **Afficher les données d'identification**.
+2. Recherchez votre application dans la [liste de ressources](https://cloud.ibm.com/resources) {{site.data.keyword.Bluemix_notm}}. Sur la page de détails du service de votre application, cliquez sur **Connections** dans la barre d'options latérale. Cliquez sur l'icône de menu {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) et sélectionnez **Afficher les données d'identification**.
 
 3. Copiez les valeurs des champs `username`, `password` et `host` des données d'identification dans les mêmes champs du fichier `vcap-local.json`, en remplaçant **CLOUDANT_DATABASE_USERNAME**, **CLOUDANT_DATABASE_PASSWORD** et **CLOUDANT_DATABASE_URL**.
 

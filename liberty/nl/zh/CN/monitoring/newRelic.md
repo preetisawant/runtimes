@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -31,36 +32,8 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 ```
 {: codeblock}
 
-## 添加 New Relic 服务
-{: #add_new_relic}
 
-对于 {{site.data.keyword.Bluemix_notm}} 中要使用 New Relic 监视的现有 Java 应用程序，请遵循以下步骤。
-1. 在 {{site.data.keyword.Bluemix_notm}} 中创建 New Relic 服务实例。
-
-  ```
-  ibmcloud cf create-service newrelic standard mynewrelic
-  ```
-  {: codeblock}
-
-2. 使用 New Relic 服务将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。请参阅以下样本应用程序清单：
-
-  <pre>
-        &dash;&dash;&dash;
-        applications:
-        - name: myapp
-         memory: 1G
-         instances: 1
-         host: myapp
-         domain: mybluemix.net
-         path: myapp.war
-         services:
-         - mynewrelic
-  </pre>
-  {: codeblock}
-
-3. 直接从应用程序的 {{site.data.keyword.Bluemix_notm}} 仪表板访问应用程序的 New Relic 仪表板。
-
-### 添加用户提供的 New Relic 服务
+## 添加用户提供的 New Relic 服务
 {: #add_user_provided_new_relic}
 
 如果现有 New Relic 帐户和许可证密钥，那么可以使用“用户提供的服务”将现有 New Relic 服务绑定到应用程序。

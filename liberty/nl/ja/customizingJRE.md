@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2019
 lastupdated: "2019-01-11"
+subcollection: "liberty"
 
 ---
 
@@ -41,24 +42,24 @@ version プロパティーをバージョン範囲に設定することができ
 ```
 {: codeblock}
 
-version プロパティーは、1.7.+ や 1.8.+ などのバージョン範囲、または [使用可能な OpenJDK のバージョンのリスト](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)にリストされている特定のバージョンに設定できます。最高の結果を得るには Java 8 を使用してください。
+version プロパティーは、1.7.+ や 1.8.+ などのバージョン範囲、または [使用可能な OpenJDK のバージョンのリスト](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)にリストされている特定のバージョンに設定できます。 最高の結果を得るには Java 8 を使用してください。
 
 ## OpenJ9
 {: #openj9}
 
-オプションで、JRE または JDK として OpenJ9 で実行するようにアプリケーションを構成することができます。アプリケーションを OpenJ9 で実行できるようにするには、JVM 環境変数を「openj9」に設定します。例えば、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールを使用して、次のコマンドを実行します。
+オプションで、JRE または JDK として OpenJ9 で実行するようにアプリケーションを構成することができます。 アプリケーションを OpenJ9 で実行できるようにするには、JVM 環境変数を「openj9」に設定します。 例えば、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールを使用して、次のコマンドを実行します。
 ```
     ibmcloud cf set-env myapp JVM 'openj9'
 ```
 {: codeblock}
 
-有効な場合、OpenJ9 バージョン 11 がデフォルトで使用されます。OpenJ9 の代替バージョンを指定するには、JBP_CONFIG_OPENJ9 環境変数を使用します。例えば、最新の OpenJ9 8 を使用するには、次のように環境変数を設定します。
+有効な場合、OpenJ9 バージョン 11 がデフォルトで使用されます。 OpenJ9 の代替バージョンを指定するには、JBP_CONFIG_OPENJ9 環境変数を使用します。 例えば、最新の OpenJ9 8 を使用するには、次のように環境変数を設定します。
 ```
     ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
 ```
 {: codeblock}
 
-有効な場合、OpenJ9 JRE がデフォルトで使用されます。OpenJ9 の JDK バージョンを使用するには、JBP_CONFIG_OPENJ9 環境変数を使用します。例えば、OpenJ9 JDK を使用するには、次のように環境変数を設定します。
+有効な場合、OpenJ9 JRE がデフォルトで使用されます。 OpenJ9 の JDK バージョンを使用するには、JBP_CONFIG_OPENJ9 環境変数を使用します。 例えば、OpenJ9 JDK を使用するには、次のように環境変数を設定します。
 ```
     ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
 ```

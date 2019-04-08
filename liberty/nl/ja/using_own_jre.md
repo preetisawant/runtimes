@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
@@ -12,7 +13,7 @@ lastupdated: "2018-06-27"
 # 独自の JRE の使用
 {: #using_own_jre}
 
-独自の JRE を使用して {{site.data.keyword.Bluemix}} 上で Liberty アプリケーションを実行できます。 liberty-for-java ビルドパックは、[WebSphere Liberty でサポートされているランタイム](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13)のサポートを提供しますが、サポート対象でないバージョンの全機能を保証できるわけではありません。JRE をアプリケーションで使用可能にするには、以下のことを実行する必要があります。
+独自の JRE を使用して {{site.data.keyword.Bluemix}} 上で Liberty アプリケーションを実行できます。 liberty-for-java ビルドパックは、[WebSphere Liberty でサポートされているランタイム](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13)のサポートを提供しますが、サポート対象でないバージョンの全機能を保証できるわけではありません。 JRE をアプリケーションで使用可能にするには、以下のことを実行する必要があります。
 * ビルドパックによるダウンロードが可能なロケーションで JRE をホストする。
 * JRE のロケーションが指定されている `index.yml` ファイルをホストする。
 * JRE を使用するようにアプリケーションを構成する。
@@ -20,7 +21,7 @@ lastupdated: "2018-06-27"
 ## JRE および `index.yml` のホスト
 {: #hosting_jre}
 
-liberty-for-java ビルドパックがダウンロードできる Web サーバーで JRE ファイルをホストする必要があります。このファイルは、使用可能ないずれかのサーバー機能を使用して {{site.data.keyword.Bluemix_notm}} 上でホストすることも、パブリックに使用可能なロケーションでホストすることもできます。 サーバーは、JRE ファイルに関する詳細を指定する `index.yml` ファイルを使用して構成されている必要があります。
+liberty-for-java ビルドパックがダウンロードできる Web サーバーで JRE ファイルをホストする必要があります。 このファイルは、使用可能ないずれかのサーバー機能を使用して {{site.data.keyword.Bluemix_notm}} 上でホストすることも、パブリックに使用可能なロケーションでホストすることもできます。 サーバーは、JRE ファイルに関する詳細を指定する `index.yml` ファイルを使用して構成されている必要があります。
 
 JRE および `index.yml` ファイルをホストするには、以下の手順を実行します。
   1. JRE を取得します。これは、UNIX 64 ビット OS で使用するためのバージョンである必要があり、`tar.gz` ファイルでなければなりません。

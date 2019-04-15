@@ -16,8 +16,8 @@ Go
     {: .navgroup id="reference"}
     {: .topicgroup}
     Starter applications and community buildpacks
-	    /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
+		/runtimes-common/runtimes-common-using_buildpacks
+	/runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}

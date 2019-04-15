@@ -24,8 +24,8 @@ ASP.NET Core
 
     {: .topicgroup}
     스타터 애플리케이션 및 커뮤니티 빌드팩
-	    /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
+		/runtimes-common/runtimes-common-using_buildpacks
+	/runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}

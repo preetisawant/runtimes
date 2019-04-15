@@ -14,7 +14,7 @@ ASP.NET Core
     usingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-        /runtimes-common/runtimes-common-working_with_proxy 
+        /runtimes-common/nl/de/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -24,13 +24,13 @@ ASP.NET Core
 
     {: .topicgroup}
     Starteranwendungen und Community-Buildpacks
-        /runtimes-common/runtimes-common-using_buildpacks
-    /runtimes-common/runtimes-common-using_starter_apps
+        /runtimes-common/nl/de/runtimes-common-using_buildpacks
+    /runtimes-common/nl/de/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    /runtimes-common/nl/de/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

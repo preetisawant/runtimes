@@ -24,8 +24,8 @@ ASP.NET Core
 
     {: .topicgroup}
     入門範本應用程式及社群建置套件
-	    /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
+		/runtimes-common/runtimes-common-using_buildpacks
+	/runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}

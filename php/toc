@@ -10,15 +10,15 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-	{: .topicgroup}
+    {: .topicgroup}
     Starter applications and community buildpacks
-	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_buildpacks
         /runtimes-common/runtimes-common-using_starter_apps
     [Enforce HTTPS on all pages](runtimes/php/index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-	/runtimes-common/runtimes-common-working_with_proxy 
+    /runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="help"}

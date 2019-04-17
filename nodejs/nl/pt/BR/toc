@@ -14,10 +14,11 @@ SDK for Node.js
     runningLocally.md
     enforceHTTPS.md
     hooks.md
-	{: .topicgroup}
-        Aplicativos Starter e buildpacks da comunidade 	 /runtimes-common/runtimes-common-using_buildpacks
-/runtimes-common/runtimes-common-using_starter_apps
-
+    {: .topicgroup}
+    Aplicativos Starter e buildpacks da comunidade
+        /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
+    {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md

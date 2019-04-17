@@ -24,8 +24,8 @@ ASP.NET 核心
 
     {: .topicgroup}
     入门模板应用程序和社区 buildpack
-		/runtimes-common/runtimes-common-using_buildpacks
-	/runtimes-common/runtimes-common-using_starter_apps
+        /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}

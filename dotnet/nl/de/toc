@@ -5,21 +5,21 @@
 ASP.NET Core
 
     {: .navgroup id="learn"}
-    getting-started.md
-    index.md
+    nl/de/getting-started.md
+    inl/de/ndex.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    disablingNuGet.md
-    usingNuGet.md
-    compile_pub_deploy.md
-    enforceHTTPS.md
+    nl/de/disablingNuGet.md
+    nl/de/usingNuGet.md
+    nl/de/compile_pub_deploy.md
+    nl/de/enforceHTTPS.md
         /runtimes-common/nl/de/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    buildOutputfiles.md
-    usingCustomLib.md
+    nl/de/buildOutputfiles.md
+    nl/de/usingCustomLib.md
 
 
     {: .topicgroup}
@@ -29,8 +29,8 @@ ASP.NET Core
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
-    updates.md
-    runtimeVersions.md
+    nl/de/ts_index.md
+    nl/de/updates.md
+    nl/de/runtimeVersions.md
     /runtimes-common/nl/de/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

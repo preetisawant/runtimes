@@ -24,8 +24,8 @@ ASP.NET Core
 
     {: .topicgroup}
     Aplicaciones de inicio y buildpacks de la comunidad
-		/runtimes-common/runtimes-common-using_buildpacks
-	/runtimes-common/runtimes-common-using_starter_apps
+        /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}

@@ -14,6 +14,7 @@ SDK for Node.js
     runningLocally.md
     enforceHTTPS.md
     hooks.md
+
     {: .topicgroup}
     Starter applications and community buildpacks
         /runtimes-common/runtimes-common-using_buildpacks
@@ -24,7 +25,7 @@ SDK for Node.js
     nodejsBuildpacks.md
     configurationOptions.md
     /runtimes-common/runtimes-common-app_management
-    /runtimes-common/runtimes-common-working_with_proxy 
+    /runtimes-common/runtimes-common-working_with_proxy
     offline.md
     {: .navgroup-end}
 

@@ -24,7 +24,7 @@ você usar o tempo de execução do {{site.data.keyword.IBM_notm}} SDK para Node
 
 * Use o parâmetro **node** na seção **engines** no arquivo **package.json** para especificar a versão do tempo de execução Node.js que você deseja executar.
 
-* Se você precisar especificar uma versão do `npm` diferente da versão empacotada com o Node.js, use o parâmetro `npm` na seção `Mecanismos` no arquivo `package.json`.  
+* Se você precisar especificar uma versão do `npm` diferente da versão empacotada com o Node.js, use o parâmetro `npm` na seção `Mecanismos` no arquivo `package.json`.
 
 Consulte o exemplo a seguir:
 

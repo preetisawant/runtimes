@@ -29,7 +29,7 @@ lastupdated: "2018-07-03"
 * [Eclipse IDE for Java EE Developers ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 如果已完成[入門指導教學](getting-started.md)，您可能已有這些工具及帳戶。在開始之前，請確定您也已經安裝並登錄下列項目：
-* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://maven.apache.org/download.cgi){: new_window}
@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  如果您因具有聯合使用者 ID 而無法使用 `ibmcloud login` 登入，則請使用下列指令，以您的單一登入 ID 登入。若要進一步瞭解，請參閱[使用聯合 ID 登入](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)。
+  如果您因具有聯合使用者 ID 而無法使用 `ibmcloud login` 登入，則請使用下列指令，以您的單一登入 ID 登入。若要進一步瞭解，請參閱[使用聯合 ID 登入](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id)。
   ```
 ibmcloud login --sso
   ```
@@ -106,7 +106,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  如果您未設定組織或空間，請參閱[新增組織及空間](https://console.bluemix.net/docs/account/orgs_spaces.html)。
+  如果您未設定組織或空間，請參閱[新增組織及空間](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers)。
   {: tip}
 
 ## 步驟 5：使用 Eclipse 進行開發

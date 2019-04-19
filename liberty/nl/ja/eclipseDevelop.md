@@ -29,7 +29,7 @@ lastupdated: "2018-07-03"
 * [Eclipse IDE for Java EE Developers ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 [『入門チュートリアル』](getting-started.md)を完了した場合は、これらのツールとアカウントを既にお持ちである可能性があります。 また、開始前に、以下のものを必ずインストールおよび登録しておいてください。
-* [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} アカウント](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://maven.apache.org/download.cgi){: new_window}
@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  フェデレーテッド・ユーザー ID を使用しているために `ibmcloud login` を使用してログインできない場合は、以下のようにシングル・サインオン ID でログインしてください。 詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
+  フェデレーテッド・ユーザー ID を使用しているために `ibmcloud login` を使用してログインできない場合は、以下のようにシングル・サインオン ID でログインしてください。 詳しくは、[『フェデレーテッド ID を使用したログイン』](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id)を参照してください。
 
   ```
 ibmcloud login --sso
@@ -108,7 +108,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  組織およびスペースがセットアップされていない場合は、[組織およびスペースの追加](https://console.bluemix.net/docs/account/orgs_spaces.html)を参照してください。
+  組織およびスペースがセットアップされていない場合は、[組織およびスペースの追加](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers)を参照してください。
   {: tip}
 
 ## ステップ 5: Eclipse を使用して開発する

@@ -30,7 +30,7 @@ subcollection: "liberty"
 {: #prereqs}
 
 您需要下列帳戶及工具：
-* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://maven.apache.org/download.cgi){: new_window}

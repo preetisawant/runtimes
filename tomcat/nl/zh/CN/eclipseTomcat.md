@@ -94,7 +94,7 @@ ibmcloud login
 ```
   {: codeblock}
 
-  如果由于您具有联合用户标识而无法使用 `ibmcloud login` 登录，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
+  如果由于您具有联合用户标识而无法使用 `ibmcloud login` 登录，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id)以了解更多信息。
   ```
 ibmcloud login --sso
   ```
@@ -106,7 +106,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  如果未设置组织或空间，请参阅[添加组织和空间](https://console.bluemix.net/docs/account/orgs_spaces.html)。
+  如果未设置组织或空间，请参阅[添加组织和空间](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers)。
   {: tip}
 
 ## 步骤 5：使用 Eclipse 进行开发

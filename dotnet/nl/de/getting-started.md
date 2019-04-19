@@ -27,7 +27,7 @@ Indem Sie diesem Lernprogramm zur Einführung folgen, werden Sie eine Entwicklun
 {: #prereqs}
 
 Sie benötigen Folgendes:
-* [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}}-Konto](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}}-CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads){: new_window}
 * Installieren Sie .NET Core 2.2.2 SDK 2.2.104 von der [.NET Core-Download-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.microsoft.com/net/download/core).

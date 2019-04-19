@@ -26,7 +26,7 @@ By following this getting started tutorial, you'll set up a development environm
 {: #prereqs}
 
 You'll need the following:
-* [{{site.data.keyword.Bluemix_notm}} account](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} account](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * Install .NET Core 2.1.5 SDK 2.1.403 from the [.NET Core downloads website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core).

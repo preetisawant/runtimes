@@ -27,7 +27,7 @@ subcollection: "Dotnet"
 {: #prereqs}
 
 以下が必要です。
-* [{{site.data.keyword.Bluemix_notm}} アカウント](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} アカウント](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
 * [.NET Core ダウンロード Web サイト ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.microsoft.com/net/download/core) から .NET Core 2.2.2 SDK 2.2.104 をインストールします。

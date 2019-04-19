@@ -29,7 +29,7 @@ Vous aurez besoin des comptes et outils suivants :
 * [Eclipse IDE for Java EE Developers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 Si vous avez suivi le [Tutoriel Initiation](getting-started.md), vous avez peut-être déjà ces outils et comptes. Veillez également à ce que ce qui soit installé et enregistré avant de démarrer :
-* [Compte {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [Compte {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
 * [Interface CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://maven.apache.org/download.cgi){: new_window}
@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Si vous ne pouvez pas vous connecter via `ibmcloud login` car vous possédez un ID utilisateur fédéré, utilisez la commande suivante pour vous connecter à l'aide de votre ID de connexion unique. Voir [Connexion à l'aide d'un ID fédéré](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) pour en savoir plus.
+  Si vous ne pouvez pas vous connecter via `ibmcloud login` car vous possédez un ID utilisateur fédéré, utilisez la commande suivante pour vous connecter à l'aide de votre ID de connexion unique. Voir [Connexion à l'aide d'un ID fédéré](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id) pour en savoir plus.
 
   ```
 ibmcloud login --sso
@@ -108,7 +108,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Si vous ne disposez pas d'une organisation ou d'un espace configuré, voir [Ajout d'organisations et d'espaces](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Si vous ne disposez pas d'une organisation ou d'un espace configuré, voir [Ajout d'organisations et d'espaces](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers).
   {: tip}
 
 ## Etape 5 : Développer avec Eclipse

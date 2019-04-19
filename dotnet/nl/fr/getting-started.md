@@ -27,7 +27,7 @@ En suivant ce tutoriel d'initiation, vous allez configurer un environnement de d
 {: #prereqs}
 
 Vous aurez besoin des éléments suivants :
-* [Compte {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [Compte {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} interface de ligne de commande](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}
 * Installez .NET Core 2.2.2 SDK 2.2.104 depuis le [site Web de téléchargement .NET Core ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.microsoft.com/net/download/core).

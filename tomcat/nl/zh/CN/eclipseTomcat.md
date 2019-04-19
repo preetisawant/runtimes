@@ -29,7 +29,7 @@ lastupdated: "2018-07-03"
 * [Eclipse IDE for Java EE Developers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 如果已完成[入门教程](getting-started.md)，那么可能已具有这些工具和帐户。在开始之前，确保您还安装了并注册了以下帐户：
-* [{{site.data.keyword.Bluemix_notm}} 帐户](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 帐户](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://maven.apache.org/download.cgi){: new_window}

@@ -29,7 +29,7 @@ lastupdated: "2018-07-03"
 * [Eclipse IDE for Java EE Developers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 如果已完成[入门教程](getting-started.md)，那么可能已具有这些工具和帐户。在开始之前，确保您还安装了并注册了以下帐户：
-* [{{site.data.keyword.Bluemix_notm}} 帐户](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 帐户](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
 * [Maven ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://maven.apache.org/download.cgi){: new_window}
@@ -94,7 +94,7 @@ ibmcloud login
 ```
   {: codeblock}
 
-  如果由于您具有联合用户标识而无法使用 `ibmcloud login` 登录，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
+  如果由于您具有联合用户标识而无法使用 `ibmcloud login` 登录，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id)以了解更多信息。
   ```
 ibmcloud login --sso
   ```
@@ -106,7 +106,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  如果未设置组织或空间，请参阅[添加组织和空间](https://console.bluemix.net/docs/account/orgs_spaces.html)。
+  如果未设置组织或空间，请参阅[添加组织和空间](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers)。
   {: tip}
 
 ## 步骤 5：使用 Eclipse 进行开发

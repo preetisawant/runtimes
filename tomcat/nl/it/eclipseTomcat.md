@@ -29,7 +29,7 @@ Ti serviranno i seguenti account e strumenti:
 * [Eclipse IDE for Java EE Developers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 Se hai completato l'[Esercitazione introduttiva](getting-started.md), potresti già avere questi strumenti e account. Assicurati che anche quanto segue sia installato e registrato prima di iniziare:
-* [Account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [Account {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
 * [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://maven.apache.org/download.cgi){: new_window}
@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Se non puoi eseguire l'accesso utilizzando `ibmcloud login` perché hai un ID utente federato, utilizza quanto segue per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
+  Se non puoi eseguire l'accesso utilizzando `ibmcloud login` perché hai un ID utente federato, utilizza quanto segue per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id) per ulteriori informazioni.
   ```
 ibmcloud login --sso
   ```
@@ -106,7 +106,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers).
   {: tip}
 
 ## Passo 5: Sviluppa utilizzando Eclipse

@@ -30,7 +30,7 @@ subcollection: "Go"
 {: #prereqs}
 
 您需要下列各項：
-* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads){: new_window}
 * [Go ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://golang.org/dl/){: new_window}

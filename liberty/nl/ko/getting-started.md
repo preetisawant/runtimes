@@ -30,7 +30,7 @@ Liberty for Java 시작하기 튜토리얼에 따라 개발 환경을 설정하�
 {: #prereqs}
 
 다음 계정과 도구가 필요합니다.
-* [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 계정](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}
 * [Maven ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://maven.apache.org/download.cgi){: new_window}

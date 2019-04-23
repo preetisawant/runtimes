@@ -29,7 +29,7 @@ aplicativo.
 {: #prereqs}
 
 Você precisará do seguinte:
-* [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [Conta do {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * Instale o SDK 2.2.104 do .NET Core 2.2.2 do [Website de downloads do .NET Core ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de linkexterno")](https://www.microsoft.com/net/download/core).

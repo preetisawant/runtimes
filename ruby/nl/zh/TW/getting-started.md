@@ -29,7 +29,7 @@ subcollection: "Ruby"
 {: #prereqs}
 
 您需要下列各項：
-* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads){: new_window}
 * [Ruby ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ruby-lang.org/en/downloads/){: new_window}

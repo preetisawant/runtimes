@@ -31,7 +31,7 @@ In diesen Dokumenten wurden Verweise auf die Cloud Foundry-Befehlszeilenschnitts
 {: #prereqs}
 
 Sie benötigen Folgendes:
-* [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}}-Konto](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}}-CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads){: new_window}
 * [PHP ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://php.net/downloads.php){: new_window}

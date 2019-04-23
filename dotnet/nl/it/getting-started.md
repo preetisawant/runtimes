@@ -27,7 +27,7 @@ Seguendo questa esercitazione introduttiva, configurerai un ambiente di sviluppo
 {: #prereqs}
 
 Avrai bisogno di quanto segue:
-* [Account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [Account {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
 * [CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
 * Installa .NET Core 2.2.2 SDK 2.2.104 dal [sito web dei download di .NET Core ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.microsoft.com/net/download/core).

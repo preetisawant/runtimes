@@ -27,7 +27,7 @@ subcollection: "Dotnet"
 {: #prereqs}
 
 您需要下列各項：
-* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 帳戶](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads){: new_window}
 * 從 [.NET Core 下載網站 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.microsoft.com/net/download/core) 安裝 .NET Core 2.2.2 SDK 2.2.104。

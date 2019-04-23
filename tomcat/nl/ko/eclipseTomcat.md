@@ -29,7 +29,7 @@ lastupdated: "2018-07-03"
 * [Eclipse IDE for Java EE Developers ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 [시작하기 튜토리얼](getting-started.md)을 완료한 경우 이러한 도구와 계정을 이미 보유할 수 있습니다. 시작하기 전에 다음 항목도 설치되어 등록되어 있는지 확인하십시오.
-* [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 계정](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}
 * [Maven ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://maven.apache.org/download.cgi){: new_window}
@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  연합 사용자 ID가 있기 때문에 `ibmcloud login` 명령을 사용하여 로그인할 수 없는 경우 다음 명령을 사용하여 싱글 사인온 ID로 로그인하십시오. 자세한 정보는 [연합 ID로 로그인](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)을 참조하십시오.
+  연합 사용자 ID가 있기 때문에 `ibmcloud login` 명령을 사용하여 로그인할 수 없는 경우 다음 명령을 사용하여 싱글 사인온 ID로 로그인하십시오. 자세한 정보는 [연합 ID로 로그인](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id)을 참조하십시오.
   ```
 ibmcloud login --sso
   ```
@@ -106,7 +106,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](https://console.bluemix.net/docs/account/orgs_spaces.html)를 참조하십시오.
+  조직이나 영역이 설정되지 않은 경우 [조직 및 영역 추가](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers)를 참조하십시오.
   {: tip}
 
 ## 5단계: Eclipse를 사용하여 개발

@@ -31,7 +31,7 @@ subcollection: "PHP"
 {: #prereqs}
 
 다음이 필요합니다.
-* [{{site.data.keyword.Bluemix_notm}} 계정](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}} 계정](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://git-scm.com/downloads){: new_window}
 * [PHP ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://php.net/downloads.php){: new_window}

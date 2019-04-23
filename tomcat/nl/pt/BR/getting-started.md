@@ -30,7 +30,7 @@ Em todos esses docs, as referências à CLI do Cloud Foundry agora foram atualiz
 {: #prereqs}
 
 Você precisará do seguinte:
-* [Conta do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [Conta do {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://maven.apache.org/download.cgi){: new_window}

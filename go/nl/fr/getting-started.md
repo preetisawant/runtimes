@@ -30,7 +30,7 @@ Tout au long de ces documents, les références à l'interface CLI Cloud Foundry
 {: #prereqs}
 
 Vous aurez besoin des éléments suivants :
-* [Compte {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [Compte {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} interface de ligne de commande](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://git-scm.com/downloads){: new_window}
 * [Go ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://golang.org/dl/){: new_window}

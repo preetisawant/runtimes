@@ -20,8 +20,7 @@ lastupdated: "2018-12-05"
 
 Congratulations, you deployed a Hello World sample application on {{site.data.keyword.Bluemix}}!  To get started, follow this step-by-step guide. Or, download the sample code and explore on your own.
 
-<a class="xref" href="https://github.com/IBM-Cloud/get-started-node
-" target="_blank" title="(Download sample code)"><img class="hidden" src="../images/btn_starter-code.svg" alt="Download application code" /></a> 
+<a class="xref" href="https://github.com/IBM-Cloud/get-started-node" target="_blank" title="(Download sample code)"><img class="hidden" src="../images/btn_starter-code.svg" alt="Download application code" /></a> 
 
 By following this tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate an {{site.data.keyword.Bluemix_notm}} database service in your app.
 

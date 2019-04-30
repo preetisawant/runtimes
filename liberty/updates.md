@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
   
-lastupdated: "2019-04-01"
+lastupdated: "2019-04-30"
 
 ---
 
@@ -15,12 +15,21 @@ lastupdated: "2019-04-01"
 
 ## A list of the latest updates in the Liberty buildpack.
 
+### April 26, 2019: Updated Liberty buildpack v3.31-20190423-1354
+
+* The default Liberty runtime GA version is `19.0.0.3`.
+* The alternate Liberty runtime GA version `19.0.0.4` was added.  
+* The auto-scaling agent was updated.
+* The IBM JRE version was updated to 8 SR5 FP31.  
+* Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, you will need to add a httpDispatcher directive with the trustedSensitiveHeaderOrigin attribute set to "*". 
+
 ### April 1, 2019: Updated Liberty buildpack v3.30-20190325-1301
 
 * The default Liberty runtime GA version was changed to the `19.0.0.3` release.
 * The alternate Liberty runtime GA version is also the `19.0.0.3` release.  
 * The Cloudant client libraries were updated to 2.15.0.
 * The IBM JRE version was updated to 8 SR5 FP30.  
+* Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, you will need to add a httpDispatcher directive with the trustedSensitiveHeaderOrigin attribute set to "*". 
 
 ### March 1, 2019: Updated Liberty buildpack v3.29-20190223-2128
 

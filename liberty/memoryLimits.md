@@ -47,7 +47,7 @@ You can customize the maximum amount of heap memory your application is allocate
 
 ### Heap memory defaults
 {: .#heap_memory_defaults}
-To prevent errors that result from exceeding mamory limits, the Liberty for Java buildpack sets a default heap size ratio depending on the memory limit that you specify when you deploy your application.
+To prevent errors that result from exceeding memory limits, the Liberty for Java buildpack sets a default heap size ratio depending on the memory limit that you specify when you deploy your application.
 
 * Applications with memory limits of less than 512M have a heap size ratio of 50%
 * Applications that have memory limits greater than or equal to 512M have a heap size ratio of 75%

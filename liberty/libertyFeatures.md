@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-05-29"
+subcollection: "liberty"
 
 ---
 
@@ -222,6 +223,8 @@ Skip to the section of the feature list by using the following index, or you can
 * sipServlet-1.1
 * socialLogin-1.0
 * spnego-1.0
+* springBoot-1.5
+* springBoot-2.0
 * ssl-1.0
 
 ### T

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-11"
+lastupdated: "2019-05-29"
+subcollection: "liberty"
 
 ---
 
@@ -18,13 +19,14 @@ Applications run in a Java runtime environment (JRE) that is provided and config
 
 By default, applications are configured to run with a lightweight version of the {{site.data.keyword.IBM}} JRE. This lightweight JRE is stripped down to provide core, essential function with a much reduced disk and memory footprint. For more information about the contents of the lightweight JRE, see [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
- {{site.data.keyword.IBM_notm}}JRE version 8 is used by default. Use the JBP_CONFIG_IBMJDK environment variable to specify an alternative version of the {{site.data.keyword.IBM_notm}} JRE. For example, to use the latest {{site.data.keyword.IBM_notm}} JRE 7.1 set the following environment variable:
+ {{site.data.keyword.IBM_notm}}JRE version 8 is used by default.  The Liberty buildpack also includes the latest OpenJ9 11 JRE as an alternate JRE.  
+ Use the JBP_CONFIG_IBMJDK environment variable to specify an alternative JRE. For example, to use the latest OpenJ9 JRE provided by the Liberty buildpack set the following environment variable:
 ```
-    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
+    ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 11.+"
 ```
 {: codeblock}
 
-The version property can be set to a version range. There are two supported version ranges: 1.7.+ and 1.8.+. For best results, use Java 8.  Java 7 was removed from the Liberty buildpack in version 3.19.  
+The version property can be set to a version range. There are two supported version ranges: 1.8.+ and 11.+. For best results, use Java 8. 
 
 ## OpenJDK
 {: #openjdk}

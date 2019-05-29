@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2018-02-01"
+lastupdated: "2019-05-29"
+subcollection: "liberty"
 
 ---
 
@@ -60,6 +61,11 @@ Environment variables supported by Liberty for Java.
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
 <td>Configure the [OpenJDK version](/docs/runtimes/liberty/customizingJRE.html)</td>
+</tr>
+
+<tr>
+<td>JBP_CONFIG_OPENJ9</td>
+<td>Configure the [OpenJ9 version](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>

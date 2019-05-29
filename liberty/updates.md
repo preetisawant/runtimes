@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-29"
 
 ---
 
@@ -15,17 +15,24 @@ lastupdated: "2019-04-30"
 
 ## A list of the latest updates in the Liberty buildpack.
 
+### May 17, 2019: Updated Liberty buildpack v3.32-
+
+* The default Liberty runtime GA version is [19.0.0.3](https://openliberty.io/blog/2019/03/28/microprofile22-liberty-19003.html).
+* The alternate Liberty runtime GA version `19.0.0.5` was added.  
+* The IBM JRE version was updated to 8 SR5 FP35. 
+* The OpenJ9 version 11.03 was added  as an alternate JRE.  
+
 ### April 26, 2019: Updated Liberty buildpack v3.31-20190423-1354
 
-* The default Liberty runtime GA version is `19.0.0.3`.
-* The alternate Liberty runtime GA version `19.0.0.4` was added.  
+* The default Liberty runtime GA version is [19.0.0.3](https://openliberty.io/blog/2019/03/28/microprofile22-liberty-19003.html).
+* The alternate Liberty runtime GA version [19.0.0.4](https://openliberty.io/blog/2019/04/26/reactive-microservices-microprofile-19004.html) was added.  
 * The auto-scaling agent was updated.
 * The IBM JRE version was updated to 8 SR5 FP31.  
 * Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, you will need to add a httpDispatcher directive with the trustedSensitiveHeaderOrigin attribute set to "*" and enableWelcomePage set to "false" to the server.xml.
 
 ### April 1, 2019: Updated Liberty buildpack v3.30-20190325-1301
 
-* The default Liberty runtime GA version was changed to the `19.0.0.3` release.
+* The default Liberty runtime GA version was changed to the [19.0.0.3](https://openliberty.io/blog/2019/03/28/microprofile22-liberty-19003.html) release.
 * The alternate Liberty runtime GA version is also the `19.0.0.3` release.  
 * The Cloudant client libraries were updated to 2.15.0.
 * The IBM JRE version was updated to 8 SR5 FP30.  
@@ -33,14 +40,14 @@ lastupdated: "2019-04-30"
 
 ### March 1, 2019: Updated Liberty buildpack v3.29-20190223-2128
 
-* The default Liberty runtime GA version is the 18.0.0.4 release.
-* The alternate Liberty runtime GA version 19.0.0.2 was added.  
+* The default Liberty runtime GA version is the [18.0.0.4](https://openliberty.io/blog/2018/12/14/microprofile21-18004.html) release.
+* The alternate Liberty runtime GA version [19.0.0.2](https://openliberty.io/blog/2019/03/01/sharding-keys-jdbc43-19002.html) was added.  
 * The Cloudant client libraries were updated to 2.14.0.
 
 ### February 1, 2019: Updated Liberty buildpack v3.28-20190127-1723
 
-* The default Liberty runtime GA version is the 18.0.0.4 release.
-* The alternate Liberty runtime GA version 19.0.0.1 was added.  
+* The default Liberty runtime GA version is the [18.0.0.4](https://openliberty.io/blog/2018/12/14/microprofile21-18004.html) release.
+* The alternate Liberty runtime GA version [19.0.0.1](https://openliberty.io/blog/2019/02/01/open-liberty-19001.html) was added.  
 * The monthly Liberty beta release has been removed.  
 * The IBM JRE version was updated to 8 SR5 FP27.
 * The MQ client was updated to the 9.1.0.0 release.
@@ -49,7 +56,7 @@ lastupdated: "2019-04-30"
 ### December 14, 2018: Updated Liberty buildpack v3.27-20181130-1702
 
 * The buildpack now includes Java Platform, Enterprise Edition 8.0. Java EE 8 no longer needs to be installed when an application is pushed.  
-* The default Liberty runtime version was updated to the 18.0.0.4 release.
+* The default Liberty runtime version was updated to the [18.0.0.4](https://openliberty.io/blog/2018/12/14/microprofile21-18004.html) release.
 * The monthly Liberty runtime version was updated to the 2018.11.0.0 release.
 * The IBM JRE version was updated to 8 SR5 FP26.
 

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Dotnet" audience="runtime" arm="391" href="/docs/runtimes/dotnet/getting-started.html" path="runtimes/dotnet"}
+{: .toc subcollection="Dotnet" category="compute" audience="runtime" arm="391" href="/docs/runtimes/dotnet/getting-started.html" path="runtimes/dotnet"}
 ASP.NET Core
 
     {: .navgroup id="learn"}

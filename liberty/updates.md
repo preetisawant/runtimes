@@ -15,7 +15,7 @@ lastupdated: "2019-05-29"
 
 ## A list of the latest updates in the Liberty buildpack.
 
-### May 17, 2019: Updated Liberty buildpack v3.32-
+### May 17, 2019: Updated Liberty buildpack v3.32-20190523-1138
 
 * The default Liberty runtime GA version is [19.0.0.3](https://openliberty.io/blog/2019/03/28/microprofile22-liberty-19003.html).
 * The alternate Liberty runtime GA version `19.0.0.5` was added.  

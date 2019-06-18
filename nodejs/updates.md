@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-05-31"
 subcollection: "Nodejs"
 
 ---
@@ -14,6 +14,10 @@ subcollection: "Nodejs"
 {: #latest_updates}
 
 A list of the latest updates in the sdk-for-nodejs buildpack.
+
+## May 31, 2019: Updated Node.js buildpack v3.27
+
+The SDK for Node.js buildpack v3.27 provides IBM SDK for Node.js versions 4.8.5, 4.8.7 and Node.js community versions 6.17.0, 6.17.1, 8.15.1, 8.16.1, 10.15.0 and 10.15.3. The default is latest 6.x, so it is currently 6.17.1.  This is the last SDK for Node.js buildpack that includes v6.x runtimes.  
 
 ## March 18, 2019: Updated Node.js buildpack v3.26
 

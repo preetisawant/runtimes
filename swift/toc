@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Swift" audience="runtime" arm="393" href="/docs/runtimes/swift/getting-started.html" path="runtimes/swift"}
+{: .toc subcollection="Swift" category="compute" audience="runtime" arm="393" href="/docs/runtimes/swift/getting-started.html" path="runtimes/swift"}
 Swift
 
     {: .navgroup id="learn"}

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html" path="runtimes/nodejs"}
+{: .toc subcollection="Nodejs" category="compute" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html" path="runtimes/nodejs"}
 SDK for Node.js
 
     {: .navgroup id="learn"}

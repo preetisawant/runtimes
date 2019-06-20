@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="PHP" audience="runtime" arm="385" href="/docs/runtimes/php/getting-started.html" path="runtimes/php"}
+{: .toc subcollection="PHP" category="compute" audience="runtime" arm="385" href="/docs/runtimes/php/getting-started.html" path="runtimes/php"}
 PHP
 
     {: .navgroup id="learn"}

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Go" audience="runtime" arm="392" href="/docs/runtimes/go/getting-started.html" path="runtimes/go"}
+{: .toc subcollection="Go" category="compute" audience="runtime" arm="392" href="/docs/runtimes/go/getting-started.html" path="runtimes/go"}
 Go
 
     {: .navgroup id="learn"}

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Python" audience="runtime" arm="384" href="/docs/runtimes/python/getting-started.html" path="runtimes/python"}
+{: .toc subcollection="Python" category="compute" audience="runtime" arm="384" href="/docs/runtimes/python/getting-started.html" path="runtimes/python"}
 Python
 
     {: .navgroup id="learn"}

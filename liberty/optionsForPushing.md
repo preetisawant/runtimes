@@ -124,7 +124,7 @@ For example, to use Liberty's springBoot-2.0 feature:
 	ibmcloud cf set-env myapp LIBERTY_NATIVE_SPRINGBOOT 2.0
 ```
 
-The Liberty server is used to run the application if the LIBERTY_NATIVE_SPRINGBOOT environment variable is set to a valid Liberty springBoot feature version.
+The Liberty server runs the application if the LIBERTY_NATIVE_SPRINGBOOT environment variable is set to a valid Liberty springBoot feature version.
 
 
 ### CDI 1.2

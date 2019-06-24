@@ -117,7 +117,7 @@ The entire default Liberty server.xml configuration file is as follows:
 ### Java Main (for jars with a main() class)
 {: #java_main}
 
-Java applications, including SpringBoot applications, that contain a class with a main() method are executed using `java -jar`.  Liberty's native SpringBoot support can be enabled using the LIBERTY_NATIVE_SPRINGBOOT environment variable.
+Java applications, including SpringBoot applications, that contain a class with a main() method are executed using `java -jar`.  Liberty's native SpringBoot support is enabled by using the LIBERTY_NATIVE_SPRINGBOOT environment variable.
 For example, to use Liberty's springBoot-2.0 feature:
 
 ```

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-14"
+  years: 2018, 2019
+lastupdated: "2019-06-14"
+subcollection: "liberty"
 
 ---
 
@@ -28,9 +29,9 @@ For information on using pre-runtime hooks, see [Configure Pre-Runtime Hooks ![E
    ```
    #!/bin/sh
    echo "Installing audit-1.0"
-   export PATH=$PATH:$HOME/.java/jre/bin
+   export PATH=$PATH:$HOME/app/.java/jre/bin
 
-   $HOME/.liberty/bin/installUtility install audit-1.0 --acceptLicense
+   $HOME/app/.liberty/bin/installUtility install audit-1.0 --acceptLicense
    ```
    {: codeblock}
 

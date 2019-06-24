@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-06-21"
 subcollection: "Dotnet"
 ---
 
@@ -13,6 +13,48 @@ subcollection: "Dotnet"
 {: #latest_updates}
 
 A list of the latest updates in the ASP.NET Core buildpack.
+
+## June 21, 2019: Updated ASP.NET Core buildpack v2.3-20190609-2145
+This release includes version 2.2.12 of the dotnet-core Cloud Foundry buildpack.
+
+* Add support for .NET Aspnetcore 2.1.5
+* Add support for .NET Aspnetcore 2.1.10
+* Add support for .NET Aspnetcore 2.1.11
+* Add support for .NET Aspnetcore 2.2.4
+* Add support for .NET Aspnetcore 2.2.5
+* Add support for .NET Runtime 1.1.12
+* Add support for .NET Runtime 1.1.13
+* Add support for .NET Runtime 2.1.5
+* Add support for .NET Runtime 2.1.10
+* Add support for .NET Runtime 2.1.11
+* Add support for .NET Runtime 2.2.4
+* Add support for .NET Runtime 2.2.5
+* Add support for .NET SDK 1.1.13
+* Add support for .NET SDK 1.1.14
+* Add support for .NET SDK 2.1.507
+* Add support for .NET SDK 2.2.107
+* Add support for .NET SDK 2.2.203
+* Add support for .NET SDK 2.2.204
+* Remove support for .NET Aspnetcore 2.1.7
+* Remove support for .NET Aspnetcore 2.1.8
+* Remove support for .NET Aspnetcore 2.2.1
+* Remove support for .NET Aspnetcore 2.2.2
+* Remove support for .NET Runtime 1.0.11
+* Remove support for .NET Runtime 1.0.12
+* Remove support for .NET Runtime 1.1.10
+* Remove support for .NET Runtime 1.1.11
+* Remove support for .NET Runtime 2.0.7
+* Remove support for .NET Runtime 2.0.9
+* Remove support for .NET Runtime 2.1.7
+* Remove support for .NET Runtime 2.1.8
+* Remove support for .NET Runtime 2.2.1
+* Remove support for .NET Runtime 2.2.2
+* Remove support for .NET SDK 1.0.4
+* Remove support for .NET SDK 1.1.11
+* Remove support for .NET SDK 1.1.12
+* Remove support for .NET SDK 2.1.504
+* Remove support for .NET SDK 2.2.104
+* Update Node.js version to 10.15.2
 
 ## March 20, 2019: Updated ASP.NET Core buildpack v2.2-20190319-1114
 This release includes version 2.2.7 of the dotnet-core Cloud Foundry buildpack.

@@ -20,8 +20,8 @@ Liberty for Java applications on {{site.data.keyword.Bluemix}} are powered by th
 ## Detection
 {: #detection}
 The Liberty buildpack is used when the following kinds of applications are deployed:
-* [WAR files](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
-* [EAR files](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)
+* [WAR files](/docs/runtimes/liberty?topic=liberty-options_for_pushing#stand_alone_apps)
+* [EAR files](/docs/runtimes/liberty?topic=liberty-options_for_pushing#stand_alone_apps)
 * [Liberty server directory](/docs/runtimes/liberty/optionsForPushing.html#server_directory)
 * [Liberty packaged server](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)
 * [Java main](/docs/runtimes/liberty/optionsForPushing.html#java_main)

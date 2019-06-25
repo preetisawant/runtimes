@@ -24,7 +24,7 @@ The Liberty buildpack is used when the following kinds of applications are deplo
 * [EAR files](https://cloud.ibm.com/docs/runtimes/liberty?topic=liberty-options_for_pushing#stand_alone_apps)
 * [Liberty server directory](https://cloud.ibm.com/docs/runtimes/liberty?topic=liberty-options_for_pushing#server_directory)
 * [Liberty packaged server](https://cloud.ibm.com/docs/runtimes/liberty?topic=liberty-options_for_pushing#packaged_server)
-* [Java main](/docs/runtimes/liberty/optionsForPushing.html#java_main)
+* [Java main](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/java-main.md)
 * [Distzip](https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack/blob/master/docs/container-distZip.md)
 
 ## Starter application

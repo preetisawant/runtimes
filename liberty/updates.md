@@ -34,7 +34,7 @@ lastupdated: "2019-06-14"
 * The alternate Liberty runtime GA version [19.0.0.4](https://openliberty.io/blog/2019/04/26/reactive-microservices-microprofile-19004.html) was added.  
 * The auto-scaling agent was updated.
 * The IBM JRE version was updated to 8 SR5 FP31.  
-* Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, add an httpDispatcher directive with the trustedSensitiveHeaderOrigin attribute set to "*" and enableWelcomePage set to "false" to the server.xml.
+* Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, add an `httpDispatcher` directive to the `server.xml` file. Set the `trustedSensitiveHeaderOrigin` attribute to “*” and the `enableWelcomePage` parameter to “false”.
 
 ### April 1, 2019: Updated Liberty buildpack v3.30-20190325-1301
 
@@ -42,7 +42,7 @@ lastupdated: "2019-06-14"
 * The alternate Liberty runtime GA version is also the `19.0.0.3` release.  
 * The Cloudant client libraries were updated to 2.15.0.
 * The IBM JRE version was updated to 8 SR5 FP30.  
-* Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, add an httpDispatcher directive with the trustedSensitiveHeaderOrigin attribute set to "*" and enableWelcomePage set to "false" to the server.xml.
+* Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, add an `httpDispatcher` directive to the `server.xml` file. Set the `trustedSensitiveHeaderOrigin` attribute to “*” and the `enableWelcomePage` parameter to “false”.
 
 ### March 1, 2019: Updated Liberty buildpack v3.29-20190223-2128
 

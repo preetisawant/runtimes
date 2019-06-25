@@ -2,7 +2,8 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-21"
+subcollection: "Dotnet"
 
 ---
 
@@ -20,7 +21,7 @@ lastupdated: "2019-03-07"
 
 * {: download} Congratulations, you deployed a Hello World sample application on {{site.data.keyword.Bluemix}}!  To get started, follow this step-by-step guide. Or, download the sample code and explore on your own.
 
-<a class="xref" href="https://github.com/IBM-Cloud/get-started-aspnet-core" target="_blank" title="(Download sample code)"><img class="w3-image" src="docs/runtimes/images/btn_starter-code.svg" alt="Download application code" /></a> 
+<a class="xref" href="https://github.com/IBM-Cloud/get-started-aspnet-core" target="_blank" title="(Download sample code)"><img class="w3-image" src="docs/runtimes/images/btn_starter-code.svg" alt="Download application code" /></a>
 
 By following this getting started tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate an {{site.data.keyword.Bluemix}} database service in your app.
 
@@ -31,7 +32,7 @@ You'll need the following:
 * [{{site.data.keyword.Bluemix_notm}} account](https://cloud.ibm.com/registration)
 * [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
-* Install .NET Core 2.1.5 SDK 2.1.403 from the [.NET Core downloads website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core).
+* Install .NET Core 2.2.5 SDK 2.2.204 from the [.NET Core downloads website ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.microsoft.com/net/download/core).
 
 ## Step 1: Clone the sample app
 {: #clone}

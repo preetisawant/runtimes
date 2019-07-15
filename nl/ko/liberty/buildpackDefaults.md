@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-26"
-subcollection: "liberty"
 
 ---
 
@@ -22,24 +21,23 @@ Liberty 빌드팩은 {{site.data.keyword.Bluemix}}에서 자주 업데이트됩�
 {: #liberty_versions}
 
 이 빌드팩에서는 두 버전의 Liberty 런타임을 제공합니다.
-1. 장기 안정적 릴리스
+1. 안정적 릴리스
   * 기본 Liberty 런타임입니다.
-  * [베타 기능](/docs/runtimes/liberty/usingBetaFeatures.html)을 제공하지 않습니다.
+  * [베타 기능](usingBetaFeatures.html)을 제공하지 않습니다.
   * 일반적으로 분기별로 업데이트됩니다.
 
 2. 월별 릴리스
-  * 이는 **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"** 값으로 설정하고
-  **IBM_LIBERTY_MONTHLY** 환경 변수를 **true**로 설정하여 명시적으로 사용 설정되어야 합니다.
-  * 이는 [월별 기능](/docs/runtimes/liberty/usingMonthlyRuntime.html)을 제공합니다.
-  * 일반적으로 4주마다 업데이트됩니다.
+  * **JBP_CONFIG_LIBERTY** 환경 변수를 **"version: +"** 값으로 설정하여 명시적으로 사용으로 설정해야 합니다.
+  * [베타 기능](usingBetaFeatures.html)을 제공합니다.
+  * 일반적으로 월별로 업데이트됩니다.
 
 ## Liberty 기능
 {: #liberty_features}
 
 WAR 또는 EAR 파일을 배치하는 경우, 빌드팩은 Liberty 기능의 기본 설정으로 애플리케이션에 대한 구성을 제공합니다. 드문 일이긴 하지만, Liberty 기능의 해당 기본 설정은 빌드팩 릴리스 간에 변경이 가능합니다. 기본 기능 설정을 변경하면 애플리케이션에 부정적인 영향을 줄 수 있습니다. 애플리케이션이 기능 기본값의 변경에 의해 영향을 받지 않도록 보장하는 옵션이 있습니다.
 
-* 애플리케이션에 대해 사용되는 기능의 목록을 명시적으로 지정하려면 JBP_CONFIG_LIBERTY 환경 변수를 설정하십시오. 자세한 정보는 [독립형 애플리케이션](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)을 참조하십시오.
-* 애플리케이션을 [서버 디렉토리](/docs/runtimes/liberty/optionsForPushing.html#server_directory) 또는 [패키지된 서버](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)로서 배치하십시오. 애플리케이션에서 필요한 정확한 기능 설정을 지정하려면 사용자 정의 server.xml 파일을 제공하십시오.
+* 애플리케이션에 대해 사용되는 기능의 목록을 명시적으로 지정하려면 JBP_CONFIG_LIBERTY 환경 변수를 설정하십시오. 자세한 정보는 [독립형 애플리케이션](optionsForPushing.html#stand_alone_apps)을 참조하십시오.
+* 애플리케이션을 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server)로서 배치하십시오. 애플리케이션에서 필요한 정확한 기능 설정을 지정하려면 사용자 정의 server.xml 파일을 제공하십시오.
 
 서버 디렉토리 또는 패키지된 서버로서 배치된 애플리케이션은 Liberty 기능 기본값의 변경에 의해 영향을 받지 않습니다.
 
@@ -48,4 +46,12 @@ WAR 또는 EAR 파일을 배치하는 경우, 빌드팩은 Liberty 기능의 기
 
 빌드팩은 애플리케이션의 기본 JRE를 제공합니다. JRE의 주 버전 또는 부 버전은 빌드팩 릴리스 간에 변경될 수 있습니다. JRE의 부 버전은 빈번히 업데이트 가능한 반면 주 버전은 좀처럼 업데이트되지 않습니다. JRE의 주 버전을 변경하면 애플리케이션에 부정적인 영향을 줄 수 있습니다.
 
-주 버전 변경사항에 의해 애플리케이션이 영향을 받지 않도록 보장하려면, [JRE 사용자 정의](/docs/runtimes/liberty/customizingJRE.html)에 설명된 대로 적합한 JRE 버전으로 환경 변수를 설정하십시오. 최상의 결과를 얻으려면 애플리케이션에 대해 Java 8을 채택하십시오.
+주 버전 변경사항에 의해 애플리케이션이 영향을 받지 않도록 보장하려면, [JRE 사용자 정의](customizingJRE.html)에 설명된 대로 적합한 JRE 버전으로 환경 변수를 설정하십시오. 최상의 결과를 얻으려면 애플리케이션에 대해 Java 8을 채택하십시오.
+
+
+# 관련 링크
+{: #rellinks notoc}
+## 일반
+{: #general notoc}
+* [Liberty 런타임](index.html)
+* [Liberty 프로파일 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

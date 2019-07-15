@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Go"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -23,7 +22,7 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 ## 入門範本應用程式
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} 提供 Go 入門範本應用程式。Go 入門範本應用程式是簡單的 Go 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](docs/runtimes-common/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供 Go 入門範本應用程式。Go 入門範本應用程式是簡單的 Go 應用程式，提供可以讓您用於應用程式的範本。您可以用入門範本應用程式進行實驗，並進行及推送對 {{site.data.keyword.Bluemix_notm}} 環境的變更。如需關於使用入門範本應用程式的協助，請參閱[使用入門範本應用程式](../common/starter_app_usage.html)。
 
 ## 運行環境版本
 {: #runtime_versions}
@@ -33,7 +32,7 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.10",
+	"GoVersion": "go1.8.3",
 	"Deps": []
 }
 ```
@@ -60,3 +59,11 @@ go_buildpack 用於您的應用程式包含名為 *.go 的檔案的情況。
 * 1.10
 
 如果您的應用程式需要未列出的 Go 版本，則可以使用外部 [Go 建置套件](https://github.com/cloudfoundry/go-buildpack.git){: new_window}來部署該應用程式。
+
+# 相關鏈結
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+
+* [GoLang](http://golang.org/){: new_window}
+* [Cloud Foundry buildpack for the Go Language](https://github.com/cloudfoundry/go-buildpack){: new_window}

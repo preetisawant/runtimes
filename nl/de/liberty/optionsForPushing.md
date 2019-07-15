@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-03"
-subcollection: "liberty"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -21,7 +21,7 @@ Zur Implementierung Ihrer Liberty-Anwendungen in {{site.data.keyword.Bluemix_not
 * Serververzeichnis mit einer Push-Operation übertragen
 * Paketierten Server mit einer Push-Operation übertragen
 
-Wichtig: Wenn Sie eine Anwendung mit dem Liberty-Buildpack bereitstellen, müssen Sie als Speicherbegrenzung für Ihre Anwendung mindestens 512 MB angeben. Weitere Informationen finden Sie in [Speicherbegrenzungen und das Liberty-Buildpack](/docs/runtimes/liberty/memoryLimits.html).
+Wichtig: Wenn Sie eine Anwendung mit dem Liberty-Buildpack bereitstellen, müssen Sie als Speicherbegrenzung für Ihre Anwendung mindestens 512 MB angeben. Weitere Informationen finden Sie in [Speicherbegrenzungen und das Liberty-Buildpack](memoryLimits.html).
 
 ## Eigenständige Apps
 {: #stand_alone_apps}
@@ -64,11 +64,11 @@ Diese Features entsprechen den Java EE 7 Web Profile-Features. Sie können eine 
 ```
 {: codeblock}
 
-Hinweis: Die besten Ergebnisse erzielen Sie, wenn Sie die Liberty-Features mit der Umgebungsvariablen JBP_CONFIG_LIBERTY festlegen oder Ihre Anwendung als [Serververzeichnis](/docs/runtimes/liberty/optionsForPushing.html#server_directory) oder [paketierten Server](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) mit einer angepassten Datei 'server.xml' bereitstellen. Indem Sie diese Umgebungsvariable festlegen, stellen Sie sicher, dass Ihre Anwendung nur das Feature verwendet, das auch
+Hinweis: Die besten Ergebnisse erzielen Sie, wenn Sie die Liberty-Features mit der Umgebungsvariablen JBP_CONFIG_LIBERTY festlegen oder Ihre Anwendung als [Serververzeichnis](optionsForPushing.html#server_directory) oder [paketierten Server](optionsForPushing.html#packaged_server) mit einer angepassten Datei 'server.xml' bereitstellen. Indem Sie diese Umgebungsvariable festlegen, stellen Sie sicher, dass Ihre Anwendung nur das Feature verwendet, das auch
 benötigt wird, und dass sie nicht von den Änderungen am Liberty-Standard-Feature-Set des Buildpacks beeinträchtigt wird. Wenn die benötigte
 Liberty-Konfiguration über das Feature-Set hinausgeht, verwenden Sie die Optionen für
-[Serververzeichnisse](/docs/runtimes/liberty/optionsForPushing.html#server_directory) oder
-[paketierte Server](/docs/runtimes/liberty/optionsForPushing.html#packaged_server), um die Anwendung bereitzustellen.
+[Serververzeichnisse](optionsForPushing.html#server_directory) oder
+[paketierte Server](optionsForPushing.html#packaged_server), um die Anwendung bereitzustellen.
 
 Wenn Sie eine WAR-Datei bereitgestellt haben, können Sie über das Kontextstammverzeichnis, das in der eingebetteten Datei 'ibm-web-ext.xml' festgelegt ist, auf die Webanwendung zugreifen. Wenn die Datei 'ibm-web-ext.xml' nicht vorhanden ist oder das Kontextstammverzeichnis darin nicht angegeben ist, können Sie über den Stammkontext auf die Anwendung zugreifen. Beispiel:
 
@@ -258,3 +258,10 @@ Die typischen Informationen lauten wie folgt:
 * connection.password: Das Kennwort zur Authentifizierung dieser Anwendung für den Service. Das Kennwort wird automatisch von Cloud Foundry generiert; zum Beispiel pvyCY0YzX9pu5.
 
 Bei gebundenen Services, die nicht automatisch vom Liberty-Buildpack konfiguriert werden, muss die Anwendung den Zugriff der Back-End-Ressource selbst verwalten.
+
+# Zugehörige Links
+{: #rellinks notoc}
+## Allgemein
+{: #general notoc}
+* [Liberty-Laufzeit](index.html)
+* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

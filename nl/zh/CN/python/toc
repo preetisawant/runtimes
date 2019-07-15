@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Python" audience="runtime" arm="384" href="/docs/runtimes/python/getting-started.html" path="runtimes/python"}
+{: .toc subcollection="Python" audience="runtime" arm="384" href="/docs/runtimes/python/getting-started.html"}}
 Python
 
     {: .navgroup id="learn"}
@@ -10,17 +10,17 @@ Python
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-	{: .topicgroup}
-    入门模板应用程序和社区 buildpack
-	    /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
+    ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-	/runtimes-common/runtimes-common-working_with_proxy 
+    {: .topicgroup}
+    入门模板应用程序和社区 buildpack
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    /runtimes-common/runtimes-common-runtimes
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    ts_index.md
+    ../common/buildpackSupport.md
     {: .navgroup-end}

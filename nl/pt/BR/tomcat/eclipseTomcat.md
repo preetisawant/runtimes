@@ -29,8 +29,8 @@ Você precisará das contas e ferramentas a seguir:
 * [Eclipse IDE for Java EE Developers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 Se você concluiu o [Tutorial de introdução](getting-started.md), você pode já ter essas ferramentas e contas. Tenha certeza de ter os seguintes itens instalados e registrados antes de iniciar:
-* [Conta do {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [Conta do {{site.data.keyword.Bluemix_notm}} ](https://console.bluemix.net/registration/)
+* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://maven.apache.org/download.cgi){: new_window}
 * [Apache Tomcat versão 8.0.41 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://tomcat.apache.org/download-80.cgi#8.0.41 ){: new_window}
@@ -85,7 +85,7 @@ applications:
 Nesse arquivo manifest.yml, **random-route: true** gera uma rota aleatória para seu app para evitar que sua rota colida com outras.  Se você optar por isso, será possível substituir **random-route: true** por **host: myChosenHostName**, fornecendo um nome de host de sua preferência.
 {: tip}
 
-## Etapa 4: Efetuar login no {{site.data.keyword.Bluemix_notm}}
+## Etapa 4: Efetuar login no  {{site.data.keyword.Bluemix_notm}}
 {: #deploy}
 
 1. Efetue login em sua conta do {{site.data.keyword.Bluemix_notm}} e selecione um terminal de API.
@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Se não for possível efetuar login usando `ibmcloud login` porque você tem um ID do usuário federado, use o seguinte para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id) para saber mais.
+  Se não for possível efetuar login usando `ibmcloud login` porque você tem um ID do usuário federado, use o seguinte para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
   ```
 ibmcloud login --sso
   ```
@@ -106,7 +106,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers).
+  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://console.bluemix.net/docs/account/orgs_spaces.html).
   {: tip}
 
 ## Etapa 5: desenvolver usando o Eclipse

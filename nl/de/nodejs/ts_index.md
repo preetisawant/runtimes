@@ -3,7 +3,6 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-02-21"
-subcollection: "Nodejs"
 
 ---
 
@@ -15,5 +14,6 @@ subcollection: "Nodejs"
 
 Verwenden Sie die folgenden Ressourcen zur Fehlerbehebung bei Ihren SDK for Node.js-Anwendungen und -Buildpacks:
 
-* [Fehlerbehebung für Laufzeiten](/docs/runtimes-common/ts_runtimes.html#runtimes)
-* [Anwendungsmanagement](/docs/runtimes-common/app_mng.html)
+* [Fehlerbehebung für Laufzeiten](../common/ts_runtimes.html#runtimes)
+* [Fehlerbehebung für Laufzeiten: Node.js](../common/ts_runtimes.html#ts_nodejs)
+* [Anwendungsmanagement](../common/app_mng.html)

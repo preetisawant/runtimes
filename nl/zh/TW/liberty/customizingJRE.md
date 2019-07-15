@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-01-11"
-subcollection: "liberty"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -42,33 +41,12 @@ version 內容可以設成版本範圍。有兩個支援的版本範圍：1.7.+ 
 ```
 {: codeblock}
 
-version 內容可以設為 1.7.+、1.8.+ 這類的版本範圍，或[可用的 OpenJDK 版本清單](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)上所列出的任何特定版本。為求最佳結果，請使用 Java 8。
-
-## OpenJ9
-{: #openj9}
-
-應用程式可以選擇性地配置為使用 OpenJ9 作為 JRE 或 JDK 來執行。為了讓應用程式能使用 OpenJ9 執行，請將 JVM 環境變數設為 "openj9"。例如，使用 {{site.data.keyword.Bluemix_notm}} 指令行工具，執行下列指令：
-```
-    ibmcloud cf set-env myapp JVM 'openj9'
-```
-{: codeblock}
-
-如果啟用的話，依預設會使用 OpenJ9 第 11 版。請使用 JBP_CONFIG_OPENJ9 環境變數來指定 OpenJ9 的替代版本。例如，若要使用最新的 OpenJ9 8，請設定下列環境變數：
-```
-    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
-```
-{: codeblock}
-
-如果啟用的話，依預設會使用 OpenJ9 JRE。請使用 JBP_CONFIG_OPENJ9 環境變數來使用 OpenJ9 的 JDK 版本。例如，若要使用 OpenJ9 JDK，請設定下列環境變數：
-```
-    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
-```
-{: codeblock}
+version 內容可以設為 1.7.+ 之類的版本範圍，或[可用的 OpenJDK 版本清單](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)所列出的任何特定版本。為求最佳結果，請使用 Java 8。
 
 ## Oracle JRE
 {: #oracle_jre}
 
-如需使用 Oracle JRE 的相關資訊，請參閱[使用您自己的 JRE](/docs/runtimes/liberty/using_own_jre.html)。
+如需使用 Oracle JRE 的相關資訊，請參閱[使用 Oracle JRE](oracle_jre.html)。
 
 ## 配置 JRE 選項
 {: #configuring_jre}
@@ -79,10 +57,10 @@ version 內容可以設為 1.7.+、1.8.+ 這類的版本範圍，或[可用的 O
 Liberty 建置套件透過考慮下列項目來配置預設 JVM 選項：
 
 * 應用程式的記憶體限制。已套用的 JVM 資料堆設定是根據下列項目計算而來：
-  * 應用程式的記憶體限制，如[記憶體限制與 Liberty 建置套件](/docs/runtimes/liberty/memoryLimits.html#memory_limits)中所述。
+  * 應用程式的記憶體限制，如[記憶體限制與 Liberty 建置套件](memoryLimits.html#memory_limits)中所述。
   * JRE 類型，因為 JVM 的資料堆相關選項會根據 JRE 的支援選項而不同。
 
-* [{{site.data.keyword.Bluemix_notm}} 中支援的 Liberty 特性](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures)。
+* [{{site.data.keyword.Bluemix_notm}} 中支援的 Liberty 特性](libertyFeatures.html#libertyfeatures)。
   * {{site.data.keyword.Bluemix_notm}} 中不支援兩段式確定廣域資料庫交易，因此，透過設定 -Dcom.ibm.tx.jta.disable2PC=true 予以停用。
 
 * {{site.data.keyword.Bluemix_notm}} 環境。
@@ -259,7 +237,7 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 ```
 {: codeblock}
 
- 如需檢視及下載已產生之傾出檔案的詳細資料，請參閱[記載和追蹤](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps)文件。
+ 如需檢視及下載已產生之傾出檔案的詳細資料，請參閱[記載和追蹤](loggingAndTracing.html#download_dumps)文件。
 
 ### 重疊 JRE
 {: #overlaying_jre}
@@ -316,3 +294,10 @@ WAR、EAR、伺服器目錄及包裝伺服器部署的 JVM 選項會持續保存
 {: codeblock}
 
 當您推送應用程式時，這些 Jar 會重疊 Java 運行環境中的預設原則 Jar。這個處理程序會啟用 AES 256 位元加密。
+
+# 相關鏈結
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Liberty 運行環境](index.html)
+* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

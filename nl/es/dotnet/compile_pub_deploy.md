@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-06-27"
-subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -40,7 +39,7 @@ applications:
 ## Envío por push de una aplicación publicada
 {: #pushing_published_app}
 
-Si desea que la aplicación contenga todos sus binarios necesarios de modo que el paquete de compilación no descargue ningún binario externo, puede enviar por push una aplicación *autocontenida* publicada.  Consulte [Tipos de app de .NET Core](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} para obtener más información sobre aplicaciones autocontenidas.
+Si desea que la aplicación contenga todos sus binarios necesarios de modo que el paquete de compilación no descargue ningún binario externo, puede enviar por push una aplicación *autocontenida* publicada.  Consulte [Tipos de app de .NET Core ](https://docs.microsoft.com/en-us/dotnet/articles/core/app-types){: new_window} para obtener más información sobre aplicaciones autocontenidas.
 
 Para publicar un problema de aplicación, emita un mandato como el siguiente:
 ```

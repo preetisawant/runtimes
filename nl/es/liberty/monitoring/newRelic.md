@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-12"
-subcollection: "liberty"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -37,15 +36,43 @@ Liberty para la aplicación:
 ```
 {: codeblock}
 
+## Añada un servicio New Relic
+{: #add_new_relic}
 
-## Añada un servicio New Relic proporcionado por el usuario
+Para una aplicación Java existente que se vaya a supervisar con New Relic en {{site.data.keyword.Bluemix_notm}}, siga los pasos siguientes.
+1. Cree una instancia de servicio de New Relic en {{site.data.keyword.Bluemix_notm}}.
+
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
+  {: codeblock}
+
+2. Despliegue la aplicación en {{site.data.keyword.Bluemix_notm}} con el servicio de New Relic.  Consulte el siguiente manifiesto de aplicación de ejemplo:
+
+  <pre>
+        &dash;&dash;&dash;
+        applications:
+        - name: myapp
+         memory: 1G
+         instances: 1
+         host: myapp
+         domain: mybluemix.net
+         path: myapp.war
+         services:
+         - mynewrelic
+  </pre>
+  {: codeblock}
+
+3. Acceda al panel de control de New Relic correspondiente a la aplicación directamente desde el panel de control de {{site.data.keyword.Bluemix_notm}} de la aplicación.
+
+### Añada un servicio New Relic proporcionado por el usuario
 {: #add_user_provided_new_relic}
 
 Si ya dispone de una clave de licencia y de una cuenta de New Relic, debe enlazar el servicio
 New Relic existente a la aplicación mediante un "servicio proporcionado por el usuario".
 
 1. Cree una instancia de servicio proporcionada por el usuario utilización su clave de licencia existente.  Por ejemplo, si su clave de licencia existente es 1234567, puede utilizar la CLI de {{site.data.keyword.Bluemix_notm}} para crear el servicio proporcionado por el usuario ("create-user-provided-service") y proporcionar la clave de licencia 1234567 en el indicador como se muestra a continuación:
-
+  
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -73,3 +100,10 @@ La configuración automática del servicio New Relic es distinta de la configura
 * La exclusión no se ofrece como opción.
 * La integración del servicio se basa en el agente New Relic, un agente Java. Por lo tanto, se configura mediante opciones de Java, no mediante variables de nube en el archivo server.xml.
 * La configuración se basa tanto en VCAP_SERVICES como en VCAP_APPLICATION.
+
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
+* [Tiempo de ejecución de Liberty](index.html)
+* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

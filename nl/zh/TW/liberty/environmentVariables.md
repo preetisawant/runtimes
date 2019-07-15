@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2018-02-01"
-subcollection: "liberty"
+  years: 2015, 2018
+lastupdated: "2018-03-06"
 
 ---
 
@@ -25,42 +24,42 @@ Liberty for Java 支援的環境變數。
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>啟用[應用程式管理公用程式](/docs/runtimes-common/app_mng.html)</td>
+<td>啟用[應用程式管理公用程式](../common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>安裝[應用程式管理公用程式](/docs/runtimes-common/app_mng.html)</td>
+<td>安裝[應用程式管理公用程式](../common/app_mng.html)</td>
 </tr>
 
 <tr>
-<td>IBM_LIBERTY_MONTHLY</td>
-<td>啟用 [Liberty 每月版本運行環境](/docs/runtimes/liberty/usingMonthlyRuntime.html)</td>
+<td>IBM_LIBERTY_BETA</td>
+<td>啟用 [Liberty 測試版特性](usingBetaFeatures.html)</td>
 </tr>
 
 <tr>
 <td>JAVA_OPTS</td>
-<td>設定 [Java 選項](/docs/runtimes/liberty/customizingJRE.html)</td>
+<td>設定 [Java 選項](customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
-<td>配置 [Dynatrace 代理程式位置資訊](/docs/runtimes/liberty/monitoring/dynatrace.html#configuring_liberty_app)</td>
+<td>配置 [Dynatrace 代理程式位置資訊](dynatrace.html#configuring_liberty_app)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_IBMJDK </td>
-<td>配置 [IBM JRE 版本](/docs/runtimes/liberty/customizingJRE.html)</td>
+<td>配置 [IBM JRE 版本](customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>配置各種 Liberty 運行環境選項，包括 [WAR 檔或 EAR 檔的特性](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)</td>
+<td>配置各種 Liberty 運行環境選項，包括 [WAR 檔或 EAR 檔的特性](optionsForPushing.html#stand_alone_apps)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>配置 [OpenJDK 版本](/docs/runtimes/liberty/customizingJRE.html)</td>
+<td>配置 [OpenJDK 版本](customizingJRE.html)</td>
 </tr>
 
 <tr>
@@ -75,17 +74,17 @@ Liberty for Java 支援的環境變數。
 
 <tr>
 <td>JVM</td>
-<td>選取 [JRE 類型](/docs/runtimes/liberty/customizingJRE.html)</td>
+<td>選取 [JRE 類型](customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JVM_ARGS</td>
-<td>設定 [JVM 引數](/docs/runtimes/liberty/customizingJRE.html)</td>
+<td>設定 [JVM 引數](customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>LBP_SERVICE_CONFIG_xxxx</td>
-<td>[置換服務配置](/docs/runtimes/liberty/autoConfig.html#override_service_config)</td>
+<td>[置換服務配置](autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>
@@ -100,7 +99,7 @@ Liberty for Java 支援的環境變數。
 
 <tr>
 <td>services_autoconfig_excludes</td>
-<td>停用服務[自動配置](/docs/runtimes/liberty/autoConfig.html#opting_out)。</td>
+<td>停用服務[自動配置](autoConfig.html#opting_out)。</td>
 </tr>
 </table>
 {: caption="表 1. Liberty for Java 可用的環境變數" caption-side="top"}
@@ -153,3 +152,10 @@ Liberty 建置套件會自動停用一些您無法置換的屬性。已停用下
 </tr>
 </table>
 {: caption="表 1. Liberty for Java 已停用的屬性" caption-side="top"}
+
+# 相關鏈結
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Liberty 運行環境](index.html)
+* [Liberty 概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

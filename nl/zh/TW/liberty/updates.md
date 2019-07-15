@@ -1,53 +1,19 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-01"
-subcollection: "liberty"
+  years: 2015, 2018
+lastupdated: "2018-08-10"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Liberty 建置套件的最新更新
+# Liberty 建置套件的最新更新項目
 {: #latest_updates}
 
-## Liberty 建置套件中的最新更新清單。
+## Liberty 建置套件中的最新更新項目清單。
 
-### 2019 年 3 月 1 日：已更新 Liberty 建置套件 v3.29-20190223-2128
-
-* 預設 Liberty 運行環境 GA 版本是 18.0.0.4 版。
-* 已新增替代 Liberty 運行環境 GA 19.0.0.2 版。  
-* Cloudant 用戶端程式庫已更新至 2.14.0。
-
-### 2019 年 2 月 1 日：已更新 Liberty 建置套件 v3.28-20190127-1723
-
-* 預設 Liberty 運行環境 GA 版本是 18.0.0.4 版。
-* 已新增替代 Liberty 運行環境 GA 19.0.0.1 版。  
-* 已移除每月 Liberty 測試版。  
-* IBM JRE 版本已更新至 8 SR5 FP27。
-* MQ 用戶端已更新至 9.1.0.0 版。
-* 已更新自動擴充代理程式。
-
-### 2018 年 12 月 14 日：已更新 Liberty 建置套件 v3.27-20181130-1702
-
-* 建置套件現在包括 Java 平台企業版 8.0。推送應用程式時，不再需要安裝 Java EE 8。  
-* 預設 Liberty 運行環境版本已更新至 18.0.0.4 版。
-* 每月 Liberty 運行環境版本已更新至 2018.11.0.0 版。
-* IBM JRE 版本已更新至 8 SR5 FP26。
-
-### 2018 年 10 月 29 日：已更新 Liberty 建置套件 v3.26-20181023-1545
-
-* 預設 Liberty 運行環境版本 `18.0.0.3` 已更新為包含 [CVE-2014-7810 安全漏洞 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055)的修正程式。
-* 每月 Liberty 運行環境版本已更新至 2018.10.0.0 版。
-* IBM JRE 版本已更新至 8 SR5 FP22。
-
-### 2018 年 9 月 21 日：已更新 Liberty 建置套件 v3.25-20180918-1034
-* 建置套件現在支援 Java 平台企業版 8.0。若要使用 Java EE 8，請在推送應用程式時安裝 `javaee-8.0` Liberty 特性。若要進一步瞭解，請參閱[安裝 Liberty 特性](installFeatures.html)。
-* 預設 Liberty 運行環境版本已更新至 18.0.0.3 版。
-* 每月 Liberty 運行環境版本已更新至 [2018.8.0.1 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/) 版。
-* IBM JRE 版本已更新至 8 SR5 FP20。
 
 ### 2018 年 8 月 10 日：已更新 Liberty 建置套件 v3.24-20180806-1313
 * 每月 Liberty 運行環境版本已更新至 2018.8.0.0。
@@ -140,8 +106,8 @@ subcollection: "liberty"
 * 預設 Liberty 運行環境也包括 PI75512 WebSockets iFix。
 * 每月 Liberty 運行環境版本已更新至 [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) 版。
 * IBM JRE 第 8 版及 7.1 版已更新至 SR4 FP1。
-* 自動配置支援也已延伸成使用 [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html)。
-* 已更新 [Cloudant NoSQL Database](/docs/services/Cloudant/index.html) 的自動配置支援，可提供使用 Cloudant Java Library 的選項，而非 org.ektorp。若要啟用 Cloudant Java Library，您必須設定下列環境變數：    
+* 自動配置支援也已延伸成使用 [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html)。
+* 已更新 [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) 的自動配置支援，可提供使用 Cloudant Java Library 的選項，而非 org.ektorp。若要啟用 Cloudant Java Library，您必須設定下列環境變數：    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -152,12 +118,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 2017 年 1 月 23 日：已更新 Liberty 建置套件 v3.7-20170118-2046
 * 每月 Liberty 運行環境版本已更新至 [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) 版。
 * IBM JRE 第 8 版已更新至 SR3 FP22 版。
-* [自動配置](autoConfig.html)支援也已延伸，以便使用 [Compose for MongoDB 服務](/docs/services/ComposeForMongoDB/index.html)（目前只有每月 Liberty 運行環境才提供）。
+* [自動配置](autoConfig.html)支援也已延伸，以便使用 [Compose for MongoDB 服務](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html)（目前只有每月 Liberty 運行環境才提供）。
 
 ### 2016 年 12 月 13 日：已更新 Liberty 建置套件 v3.6-20161209-1351
 * 預設 Liberty 運行環境版本已更新至 [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 版。
 * IBM JRE 第 8 版已更新至 SR3 FP21 版。
-* [自動配置](autoConfig.html)支援也已延伸，以便使用 [Compose for PostgreSQL 服務](/docs/services/ComposeForPostgreSQL/index.html)。
+* [自動配置](autoConfig.html)支援也已延伸，以便使用 [Compose for PostgreSQL 服務](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html)。
 * 建置套件也提供適用於 [Auto-Scaling 服務](/docs/services/Auto-Scaling/index.html)的代理程式更新版本。
 * 已更新建置套件，支援將環境變數作為 `server.xml` 檔案中 include 位置的一部分。
 
@@ -169,7 +135,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * 已修正 Monitoring and Analytics 服務整合，可使用 [Diego ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html)。
 * 已更新 [Dynatrace](dynatrace.html) 服務整合，可更適當地使用 Dynatrace 服務供應項目。
 * 已改進 PostgreSQL 及 MySQL 類型服務的[自動配置](autoConfig.html)支援，可在部署伺服器目錄或包裝伺服器時更適當地運作。
-* [devconsole 和 shell 應用程式管理公用程式](docs/runtimes-common/app_mng.html#app_management)所使用的 Node.js 運行環境已更新至最新的 `0.12.17` 版。
+* [devconsole 和 shell 應用程式管理公用程式](../common/app_mng.html#app_management)所使用的 Node.js 運行環境已更新至最新的 `0.12.17` 版。
 * 包括 Liberty 運行環境的[安全修正程式](http://www.ibm.com/support/docview.wss?uid=swg21994945)。
 
 ### 2016 年 11 月 1 日：已更新 Liberty 建置套件 v3.4.1-20161030-2241
@@ -186,7 +152,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * 建置套件也包含若干與應用程式性能檢查相關的 [Diego ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) 增進功能及[應用程式管理](../common/app_mng.html)功能。
 
 ### 2016 年 9 月 16 日：已更新 Liberty 建置套件 v3.3-20160912-1729
-* 預設 Liberty 運行環境版本已更新至 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 版。每月 Liberty 運行環境版本已更新至 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 版。在這些更新中，先前以測試版特性提供的 `cloudant-1.0` 及 `passwordUtilities-1.0` Liberty 特性，現在以可用於正式作業的特性提供。
+* 預設 Liberty 運行環境版本已更新至 [16.0.0.3](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) 版。每月 Liberty 運行環境版本已更新至 [2016.9.0.0](https://developer.ibm.com/wasdev/blog/2016/08/26/beta-websphere-liberty-and-tools-september-2016/) 版。在這些更新中，先前以測試版功能提供的 `cloudant-1.0` 及 `passwordUtilities-1.0` Liberty 功能，現在以可用於正式作業的功能提供。
 * 包括 Liberty 運行環境的[安全修正程式](http://www-01.ibm.com/support/docview.wss?uid=swg21990527)。
 * 建置套件也包含已更新的 IBM JRE 8.0: SR3 FP11 版本。
 * 由於最新的 1.5.x 驅動程式發生問題，所以建置套件已調整為在執行[自動配置 MySQL 類型服務](autoConfig.html)時，下載最新的 1.4.x [MariaDB Connector/J JDBC 驅動程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mariadb.com/kb/en/mariadb/about-mariadb-connector-j/)。
@@ -386,3 +352,10 @@ Liberty 設定檔運行環境的改良整合。
   * 有了新的 CouchDB 特性之後，Cloudant® 服務現在可以自動配置它，讓連接器物件變得垂手可得！不再需要剖析 VCAP_SERVICES 及提供 ektorp 用戶端 jar。
 * 現在 IBM SDK for Java 已有新版本！
   * 重新推送您的應用程式時，它們會使用 IBM SDK for Java 7.1-1.0 版。這具有顯著的效能升級。您的應用程式產量會變更好，且使用更少的記憶體。如需進一步瞭解 IBM Java SDK，請查看[這裡](http://www-01.ibm.com/support/docview.wss?uid=swg21671466)。
+
+# 相關鏈結
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+  * [Liberty 運行環境](index.html)
+  * [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

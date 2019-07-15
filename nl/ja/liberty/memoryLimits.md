@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -79,4 +78,4 @@ JVM メモリー使用について詳しくは、developerWorks の記事[『Tha
 ```
 {: codeblock}
 
-* アプリケーションが[サーバー・ディレクトリー](/docs/runtimes/liberty/optionsForPushing.html#server_directory)または[パッケージされたサーバー](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)である場合、jvm.options ファイルに -Xmx 引数を指定します。 Liberty ランタイムでの `jvm.options` ファイルの使用について詳しくは、[Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474) を参照してください。  
+* アプリケーションが[サーバー・ディレクトリー](optionsForPushing.html#server_directory)または[パッケージされたサーバー](optionsForPushing.html#packaged_server)である場合、jvm.options ファイルに -Xmx 引数を指定します。 Liberty ランタイムでの `jvm.options` ファイルの使用について詳しくは、[Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474) を参照してください。  

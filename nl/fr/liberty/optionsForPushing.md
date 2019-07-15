@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-03"
-subcollection: "liberty"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -21,7 +21,7 @@ Vous pouvez utiliser les méthodes suivantes pour déployer vos applications Lib
 * Envoi par commande push d'un répertoire de serveur
 * Envoi par commande push d'un package de serveur
 
-Important : quand vous déployez une application avec le pack de construction Liberty, attribuez une valeur d'au moins 512 Mo comme limite de mémoire pour vos applications. Pour plus d'informations, voir [Limites mémoire et pack de construction Liberty](/docs/runtimes/liberty/memoryLimits.html).
+Important : quand vous déployez une application avec le pack de construction Liberty, attribuez une valeur d'au moins 512 Mo comme limite de mémoire pour vos applications. Pour plus d'informations, voir [Limites mémoire et pack de construction Liberty](memoryLimits.html).
 
 ## Applications autonomes
 {: #stand_alone_apps}
@@ -62,7 +62,7 @@ Ces fonctions correspondent aux fonctions du profil Web Java EE 7. Vous pouvez s
 ```
 {: codeblock}
 
-Remarque : Pour optimiser vos résultats, définissez les fonctions Liberty avec la variable d'environnement JBP_CONFIG_LIBERTY ou déployez votre application en tant que [répertoire de serveur](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou [package de serveur](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) avec un fichier server.xml personnalisé. La définition de cette variable d'environnement garantit que votre application n'utilisera que la fonction dont elle a besoin et qu'elle ne sera pas affectée par les modifications apportées au jeu de fonctions Liberty par défaut du pack de construction. Si vous devez fournir une configuration Liberty supplémentaire en plus du jeu de fonctions, utilisez l'option de [répertoire de serveur](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou de [package de serveur](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) pour déployer votre application.
+Remarque : Pour optimiser vos résultats, définissez les fonctions Liberty avec la variable d'environnement JBP_CONFIG_LIBERTY ou déployez votre application en tant que [répertoire de serveur](optionsForPushing.html#server_directory) ou [package de serveur](optionsForPushing.html#packaged_server) avec un fichier server.xml personnalisé. La définition de cette variable d'environnement garantit que votre application n'utilisera que la fonction dont elle a besoin et qu'elle ne sera pas affectée par les modifications apportées au jeu de fonctions Liberty par défaut du pack de construction. Si vous devez fournir une configuration Liberty supplémentaire en plus du jeu de fonctions, utilisez l'option de [répertoire de serveur](optionsForPushing.html#server_directory) ou de [package de serveur](optionsForPushing.html#packaged_server) pour déployer votre application.
 
 Si vous avez déployé un fichier WAR, l'application Web est accessible sous la racine de contexte, telle que définie dans le fichier ibm-web-ext.xml imbriqué. Si le fichier ibm-web-ext.xml n'existe pas ou ne spécifie pas de racine de contexte, l'application est accessible sous le contexte racine. Exemple :
 
@@ -250,3 +250,10 @@ L'ensemble d'informations habituel est le suivant :
 * connection.password : mot de passe utilisé pour authentification de cette application auprès du service. Le mot de passe est généré automatiquement par Cloud Foundry, par exemple, pvyCY0YzX9pu5.
 
 Pour les services liés qui ne sont pas configurés automatiquement par le pack de construction Liberty, l'application doit gérer elle-même l'accès à la ressource back end.
+
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
+* [Environnement d'exécution Liberty](index.html)
+* [Présentation de Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

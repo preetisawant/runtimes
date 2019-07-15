@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-10"
-subcollection: "liberty"
 
 ---
 
@@ -102,3 +101,10 @@ vi /app/wlp/usr/servers/defaultServer/server.xml
   {: codeblock}
 
 还可以使用 `scp` 和其他类似工具来查看并下载转储文件。有关更多信息，请参阅 [Accessing Apps with SSH ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html)。
+
+# 相关链接
+{: #rellinks notoc}
+## 常规
+{: #general notoc}
+* [Liberty 运行时](index.html)
+* [Liberty 概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

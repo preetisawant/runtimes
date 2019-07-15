@@ -3,7 +3,6 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -13,7 +12,7 @@ subcollection: "liberty"
 # Eigene JRE verwenden
 {: #using_own_jre}
 
-Sie können Ihre Liberty-Anwendung in {{site.data.keyword.Bluemix}} mit Ihrer eigenen JRE (Java Runtime Environment) verwenden. Das Buildpack 'liberty-for-java' stellt Unterstützung für die von [ WebSphere Liberty unterstützten Laufzeiten](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13) bereit, die vollständige Funktionalität nicht unterstützer Versionen kann jedoch nicht gewährleistet werden. Damit Ihre JRE für Ihre Anwendung verfügbar ist, müssen Sie die folgenden Schritte ausführen:
+Sie können Ihre Liberty-Anwendung in {{site.data.keyword.Bluemix}} mit Ihrer eigenen JRE (Java Runtime Environment) verwenden. Damit Ihre JRE für Ihre Anwendung verfügbar ist, müssen Sie die folgenden Schritte ausführen:
 * Die JRE an einer Position hosten, von der sie vom Buildpack heruntergeladen werden kann.
 * Eine Datei `index.yml` hosten, die die JRE-Position bereitstellt.
 * Ihre Anwendung für die Verwendung Ihrer JRE konfigurieren.
@@ -21,11 +20,11 @@ Sie können Ihre Liberty-Anwendung in {{site.data.keyword.Bluemix}} mit Ihrer ei
 ## JRE und `index.yml` hosten
 {: #hosting_jre}
 
-Sie müssen die JRE-Datei auf einem Web-Server hosten, von dem das Buildpack 'liberty-for-java' Dateien herunterladen kann. Sie können die Datei mithilfe einer beliebigen verfügbaren Serverfunktion in {{site.data.keyword.Bluemix_notm}} hosten, oder Sie können sie an einer öffentlich verfügbaren Position hosten. Der Server muss mit der Datei `index.yml` konfiguriert werden, die Details zu der JRE-Datei angibt.
+Sie müssen die JRE-Datei auf einem Web-Server hosten, von dem das Liberty-Buildpack Dateien herunterladen kann. Sie können die Datei mithilfe einer beliebigen verfügbaren Serverfunktion in {{site.data.keyword.Bluemix_notm}} hosten, oder Sie können sie an einer öffentlich verfügbaren Position hosten. Der Server muss mit der Datei `index.yml` konfiguriert werden, die Details zu der JRE-Datei angibt.
 
 Führen Sie die Schritte aus, die im Folgenden für das Hosten der JRE-Datei und der Datei `index.yml` angegeben sind:
   1. Fordern Sie die JRE an. Dabei muss es sich um eine JRE-Version für ein UNIX-64-Bit-Betriebssystem handeln, die als eine `tar.gz`-Datei vorliegt.
-  2. Hosten Sie die JRE-Datei an einer Position, von der das Buildpack 'liberty-for-java' sie herunterladen kann.
+  2. Hosten Sie die JRE-Datei an einer Position, von der das Liberty-Buildpack sie herunterladen kann.
   3. Stellen Sie eine Datei `index.yml` an der Hostingposition bereit. Die Datei `index.yml` muss einen Eintrag enthalten, der eine Versions-ID der JRE umfasst, gefolgt von einem Doppelpunkt und der vollständigen URL der JRE-Dateiposition.
     * Definieren Sie die JRE-Version in der Datei `index.yml`.
 

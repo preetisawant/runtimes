@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-20"
-subcollection: "Dotnet"
+  years: 2015, 2018
+lastupdated: "2018-05-08"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,51 +13,38 @@ subcollection: "Dotnet"
 # Laufzeitversionen
 {: #runtime_versions}
 
+
+{: shortdesc}
+
 ## Unterstützte Versionen
 {: #supported_versions}
 
 Dieses Buildpack unterstützt die folgenden Versionen. Versionen, die als veraltet markiert sind, werden in einem künftigen Release des Buildpacks entfernt.  Siehe [Microsoft Support Statement für LTS- und Current-Releases](https://www.microsoft.com/net/core/support).
 
+### project.json-Tools (veraltet)
 
-### .NET SDK-Version
+| .NET SDK-Version        | Standard |
+|-------------------------|---------|
+| 1.0.0-preview2-003156   |   Nein    |
+
+### MSBuild SDK-Tools
 
 | .NET SDK-Version        | Standard          |
 |-------------------------|------------------|
-| 2.2.104                 |   Ja            |
-| 2.1.504                 |   Nein             |
-| 2.1.403                 |   Nein             |
-| 2.0.3                   |   Nein             |
-| 1.1.12                  |   Nein             |
-| 1.1.11                  |   Nein             |
 | 1.0.4                   |   Nein             |
-
+| 1.1.0                   |   Ja (nur F#)  |
+| 2.0.0                   |   Ja            |
 
 ### .NET Core-Laufzeitversionen
 
 | .NET Core-Laufzeitversion | Releasetyp      |
 |---------------------------|-------------------|
-| 2.2.2                     | Current           |  
-| 2.2.1                     | LTS               |
-| 2.1.8                     | LTS               |
-| 2.1.7                     | LTS               |
-| 2.0.9                     | LTS               |
-| 2.0.7                     | LTS               |
-| 1.1.11                    | LTS               |
-| 1.1.10                    | LTS               |
-| 1.0.12                    | LTS               |
-| 1.0.11                    | LTS               |
-
-
-### .NET aspnetcore-Versionen
-
-| .NET aspnetcore-Version | Releasetyp        |
-|---------------------------|-------------------|
-| 2.2.2                     | Current           |  
-| 2.2.1                     | LTS               |
-| 2.1.8                     | LTS               |
-| 2.1.7                     | LTS               |
-
-
+| 1.0.4 (veraltet)        | LTS               |
+| 1.0.5                     | LTS               |
+| 1.1.1 (veraltet)        | LTS               |
+| 1.1.2                     | LTS               |
+| 2.0.0-preview2-25407-01   | Current (Vorschau) |
+| 2.0.0                     | Current           |
 
 ## .NET SDK-Version angeben
 
@@ -66,7 +52,7 @@ Steuern Sie die .NET SDK-Version mit der optionalen Datei `global.json` im Stamm
 ```
    {
       "sdk": {
-        "version": "2.2.104"
+        "version": "2.0.0"
       }
    }
 ```

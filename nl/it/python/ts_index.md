@@ -3,7 +3,6 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
-subcollection: "Python"
 
 ---
 
@@ -15,5 +14,5 @@ subcollection: "Python"
 
 Risoluzione dei problemi dei tuoi pacchetti di build e applicazioni Python con le seguenti risorse:
 
-* [Risoluzione dei problemi relativi ai runtime](docs/runtimes-common/ts_runtimes.html#runtimes)
-* [Risoluzione dei problemi relativi ai runtime: Python](docs/runtimes-common/ts_runtimes.html#ts_python)
+* [Risoluzione dei problemi relativi ai runtime](../common/ts_runtimes.html#runtimes)
+* [Risoluzione dei problemi relativi ai runtime: Python](../common/ts_runtimes.html#ts_python)

@@ -3,7 +3,6 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
-subcollection: "PHP"
 
 ---
 
@@ -15,5 +14,5 @@ subcollection: "PHP"
 
 使用以下资源对 PHP 应用程序和 buildpack 进行故障诊断：
 
-* [运行时的故障诊断](docs/runtimes-common/ts_runtimes.html#runtimes)
-* [运行时的故障诊断：PHP](docs/runtimes-common/ts_runtimes.html#ts_php)
+* [运行时的故障诊断](../common/ts_runtimes.html#runtimes)
+* [运行时的故障诊断：PHP](../common/ts_runtimes.html#ts_php)

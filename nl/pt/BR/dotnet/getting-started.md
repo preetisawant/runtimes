@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-03-20"
-subcollection: "Dotnet"
+  years: 2017, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -29,11 +28,12 @@ aplicativo.
 {: #prereqs}
 
 Você precisará do seguinte:
-* [Conta do {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
-* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
+* [ {{site.data.keyword.Bluemix_notm}}  conta ](https://console.bluemix.net/registration/)
+* [ {{site.data.keyword.Bluemix_notm}}  CLI ](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://git-scm.com/downloads){: new_window}
-* Instale o SDK 2.2.104 do .NET Core 2.2.2 do [Website de downloads do .NET Core ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de linkexterno")](https://www.microsoft.com/net/download/core).
-
+* Instale o .NET Core 1.1 SDK 1.0.4 de acordo com as instruções
+do [website do dot.net
+![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.microsoft.com/net/download/core).
 
 ## Etapa 1: clonar o aplicativo de amostra
 {: #clone}
@@ -99,7 +99,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](/docs/cli/login_federated_id.html) para saber mais.
+  Se você tiver um ID do usuário federado, em vez disso, use o comando a seguir para efetuar login com o seu ID de conexão única. Veja [Efetuando login com um ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para saber mais.
  ```
 ibmcloud login --sso
   ```
@@ -111,7 +111,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](/docs/account/orgs_spaces.html).
+  Se você não tiver uma organização nem uma configuração de espaço, veja [Incluindo organizações e espaços](https://console.bluemix.net/docs/account/orgs_spaces.html).
   {: tip}
 
 1. **Certifique-se de estar no diretório principal, `get-started-aspnet-core`, para
@@ -130,65 +130,55 @@ Ibmcloud cf apps
   ```
   {: codeblock}
 
-Também é possível acessar a [Lista de recursos](https://cloud.ibm.com/resources) do {{site.data.keyword.Bluemix_notm}} para visualizar o seu aplicativo.
+## Etapa 5: conectar um banco de dados MySQL
+{: connect_mysql}
 
-## Etapa 5: incluir um banco de dados
-{: #add_database}
-
-Em seguida, incluiremos um banco de dados NoSQL do {{site.data.keyword.cloudant_short_notm}} nesse aplicativo e configuraremos o aplicativo para que ele possa ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
+Em seguida, vamos incluir um banco de dados ClearDB MySQL para este aplicativo e configurar o aplicativo para que ele possa
+ser executado localmente e no {{site.data.keyword.Bluemix_notm}}.
 
 1. Em seu navegador, efetue login no {{site.data.keyword.Bluemix_notm}} e acesse o Painel. Selecione **Criar recurso**.
-1. Procure **{{site.data.keyword.cloudant_short_notm}}** e selecione o serviço.
-1. Para os **Métodos de autenticação disponíveis**, selecione **Usar as credenciais anteriores e o IAM**. É possível deixar as configurações padrão para os outros campos. Clique em **Criar** para criar o serviço.
-1. Na navegação, acesse **Conexões** e, em seguida, clique em **Criar conexão**. Selecione o seu aplicativo e clique em **Conectar**.
-1. Usando os valores padrão, clique em **Conectar e remontar aplicativo** para conectar o
-banco de dados ao seu aplicativo. Clique em **Remontar** quando solicitado.
+2. Escolha a seção **Dados e Análise de dados** e, em seguida, selecione **Banco de dados MySQL
+gerenciado por ClearDB** e crie o seu serviço.
+3. Acesse a visualização **Conexões**, selecione seu aplicativo e, em seguida, **Criar conexão**.
+4. Selecione **Remontar** quando solicitado. O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
 
-   O {{site.data.keyword.Bluemix_notm}} reiniciará o aplicativo e fornecerá as credenciais do banco de dados para ele usando a variável de ambiente `VCAP_SERVICES`. Essa variável de ambiente ficará disponível para o aplicativo somente quando ele estiver em execução no {{site.data.keyword.Bluemix_notm}}.
-
-As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente referenciada no código-fonte.
+As variáveis de ambiente permitem separar as configurações de implementação do seu código-fonte. Por exemplo, em vez de codificar permanentemente uma senha do banco de dados, é possível armazená-la em uma variável de ambiente que seja referenciada em seu código-fonte.
 {: tip}
 
 ## Etapa 6: usar o banco de dados localmente
 {: #use_database}
 
 Vamos agora atualizar seu código local para apontar para esse banco de dados. Nós armazenaremos as credenciais para os
-serviços em um arquivo JSON. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente `VCAP_SERVICES`.
+serviços em um arquivo JSON. Esse arquivo será usado SOMENTE quando o aplicativo estiver sendo executado localmente. Ao executar no {{site.data.keyword.Bluemix_notm}}, as credenciais serão lidas por meio da variável de ambiente VCAP_SERVICES.
 
-1. No diretório `src/GetStartedDotnet`, crie um arquivo `vcap-local.json`.
+1. Crie o arquivo src/GetStartedDotnet/vcap-local.json
 
-1. Copie e cole o objeto JSON a seguir no arquivo `vcap-local.json` e salve as mudanças.
+2. Em seu navegador, acesse o painel do {{site.data.keyword.Bluemix_notm}} e selecione **_seu app_ > Conexões**. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e selecione **Visualizar credenciais**.
 
-   ```json
-   {
-     "services": {
-       "cloudantNoSQLDB": [
-        {
-           "credentials": {
-             "url":"CLOUDANT_DATABASE_URL"
-           },
-          "label": "cloudantNoSQLDB"
-        }
-       ]
-     }
-   }
-   ```
-   {: codeblock}
+3. Copie e cole o objeto json inteiro das credenciais no arquivo `vcap-local.json` e salve as mudanças.  O
+resultado será algo como o exemplo a seguir:
+  ```
+  {
+  "cleardb": [
+    {
+      "credentials": {
+        ...
+        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
+        ...
+      },
+      ...
+      "name": "My ClearDB service instance name",
+      ...
+    }
+  ]
+}
+  ```
 
-1. Localize o seu aplicativo na [Lista de recursos](https://cloud.ibm.com/resources) do {{site.data.keyword.Bluemix_notm}}. Na página Detalhes do serviço para o seu aplicativo, clique em **Conexões** na barra lateral. Clique no ícone do menu do {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) e selecione **Visualizar credenciais**.
+4. No diretório `get-started-aspnet-core/src/GetStartedDotnet`, reinicie seu aplicativo com o comando	`dotnet run`.
 
-1. Copie e cole apenas o valor `url` das credenciais para o campo `url` do arquivo `vcap-local.json`, substituindo `CLOUDANT_DATABASE_URL`.
+Atualize seu navegador em: http://localhost:5000/. Os nomes que você inserir no app serão agora incluídos no banco de dados.
 
-1. No diretório `get-started-aspnet-core/src/GetStartedDotnet`, reinicie o aplicativo executando o comando a seguir.
-
-   ```
-   dotnet run
-   ```
-   {: codeblock}
-
-1. Atualize a visualização do navegador em http://localhost:5000/. Os nomes que você inserir no app serão agora incluídos no banco de dados.
-
-O aplicativo local e o aplicativo {{site.data.keyword.Bluemix_notm}} compartilham o banco de dados.  Visualize o aplicativo {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando `ibmcloud cf push`.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
+Seu app local e o app {{site.data.keyword.Bluemix_notm}} estão compartilhando o banco de dados.  Visualize o app {{site.data.keyword.Bluemix_notm}} na URL listada na saída do comando push acima.  Os nomes que você incluir de qualquer um dos apps deverão aparecer em ambos quando os navegadores forem atualizados.
 
 Lembre-se: se você não precisar de seu app em tempo real, pare-o para que você não incorra em nenhum encargo inesperado.
 {: tip}

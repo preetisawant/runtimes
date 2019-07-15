@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-02-01"
-subcollection: "liberty"
+  years: 2015, 2018
+lastupdated: "2018-03-16"
 
 ---
 
@@ -13,34 +12,28 @@ subcollection: "liberty"
 # {{site.data.keyword.cloud_notm}} 中支援的 Liberty 特性
 {: #liberty_features}
 
-Liberty for Java 運行環境包括 Liberty 特性的子集。若要使用運行環境中未包含的特性，請參閱[安裝 Liberty 特性](/docs/runtimes/liberty/installFeatures.html)。如需 Liberty 中可用特性的完整清單，以及 Java EE 版本及其他資訊，請參閱
-[Liberty features ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)。
+Liberty for Java 即時運行環境包括 Liberty 特性的子集。Liberty 提供的部分功能無法在 Liberty for Java 即時運行環境中使用，因為它們不適用於雲端環境。
 
-## 雲端特定的特性
-{:#cloud-features}
-
-下列是已包含且 {{site.data.keyword.Bluemix_notm}} 特有的特性：
-* appstate-1.0
+下列是 {{site.data.keyword.Bluemix_notm}} 特有的功能：
 * appstate-2.0
 * cloudAutowiring-1.0 
 * logAnalysis-1.0
 
-當部署 WAR 或 EAR 檔案時，依預設會啟用可用特性的子集。如需詳細資料，請參閱[獨立式應用程式](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)。
+當部署 WAR 或 EAR 檔案時，依預設會啟用可用功能的子集。如需詳細資料，請參閱[獨立式應用程式](optionsForPushing.html#stand_alone_apps)。
 
-Liberty for Java 運行環境也會讓部分 Liberty 測試版特性可供使用。這些特性列在[使用測試版特性](/docs/runtimes/liberty/usingBetaFeatures.html)。
+Liberty for Java 運行環境也會讓部分 Liberty 測試版功能可供使用。那些特性未列出，但可在[使用測試版特性](/docs/runtimes/liberty/usingBetaFeatures.html)中找到。
 
-## 特性相容性
-{:#feature-compatibility}
+請記住，伺服器無法載入不相容的特性，因此務必將它配置為僅啟用相容的特性。請參閱
+    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">支援的 Java EE 6 及 7 功能組合</a>。
 
-Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，因為它們不適用於雲端環境。
 
-請記住，伺服器無法載入不相容的特性，因此務必將它配置為僅啟用相容的特性。請參閱[支援的 Java EE 6 及 7 特性組合](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html)以及[支援的 Java EE 7 及 8 特性組合](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html)。
+
+若要查看 Liberty 中可用功能的完整清單，以及 Java EE 版本及其他資訊，請參閱 IBM Knowledge Center 中的 [Liberty 功能](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)。
 
 使用遠端 EJB 的應用程式可以部署至 {{site.data.keyword.Bluemix_notm}}，不過，由於 {{site.data.keyword.Bluemix_notm}} 環境中的埠限制，無法使用 CORBA/IIOP 通訊協定來遠端存取這些遠端 EJB。
 
 ## Liberty 特性索引
 {: #libertyfeat_index}
-
 您可以使用下列索引以跳過特性清單一節，也可以瀏覽 [Liberty for Java 特性清單](#libertyfeat_list)。
 
 ### A-E
@@ -78,7 +71,6 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 * apiDiscovery-1.0
 * appSecurity-1.0
 * appSecurity-2.0
-* appSecurity-3.0
 * appstate-1.0
 * appstate-2.0
 
@@ -88,7 +80,6 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 * batch-1.0
 * batchManagement-1.0
 * beanValidation-1.1
-* beanValidation-2.0
 * bells-1.0
 * blueprint-1.0
 
@@ -97,7 +88,6 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 
 * cdi-1.0
 * cdi-1.2
-* cdi-2.0
 * cloudant-1.0
 * cloudAutowiring-1.0 
 * concurrent-1.0
@@ -128,13 +118,11 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 * jacc-1.5
 * jaspic-1.1
 * javaee-7.0
-* javaee-8.0
 * javaMail-1.5
-* javaMail-1.6
 * jaxb-2.2
 * jaxrs-1.1
 * jaxrs-2.0
-* jaxrs-2.1
+* jaxrsClient-2.0
 * jaxws-2.2 
 * jca-1.6 
 * jca-1.7
@@ -149,15 +137,11 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 * jndi-1.0
 * jpa-2.0
 * jpa-2.1
-* jpa-2.2
 * jsf-2.0
 * jsf-2.2
-* jsf-2.3
 * jsfContainer-2.2
 * json-1.0 
-* jsonb-1.0
 * jsonp-1.0
-* jsonp-1.1
 * jsp-2.2
 * jsp-2.3
 * jwt-1.0
@@ -178,11 +162,13 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 * microProfile-1.0
 * microProfile-1.2
 * microProfile-1.3
-* microProfile-1.4
-* microProfile-2.0
-* microProfile-2.1
 * mongodb-2.0 
 * monitor-1.0 
+* mpConfig-1.1
+* mpFaultTolerance-1.0
+* mpHealth-1.0
+* mpJwt-1.0
+* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
@@ -216,7 +202,6 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 * scim-1.0
 * servlet-3.0
 * servlet-3.1
-* servlet-4.0
 * sessionDatabase-1.0 
 * sipServlet-1.1
 * socialLogin-1.0
@@ -238,7 +223,6 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 * webCache-1.0 
 * webProfile-6.0 
 * webProfile-7.0
-* webProfile-8.0
 * websocket-1.0
 * websocket-1.1
 * wmqJmsClient-1.1 
@@ -246,3 +230,10 @@ Liberty 提供的部分特性無法在 Liberty for Java 運行環境中使用，
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
+
+# 相關鏈結
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Liberty 運行環境](index.html)
+* [Liberty 概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

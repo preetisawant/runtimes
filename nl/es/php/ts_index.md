@@ -3,7 +3,6 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
-subcollection: "PHP"
 
 ---
 
@@ -15,5 +14,5 @@ subcollection: "PHP"
 
 Resuelva los problemas de sus paquetes de compilación y aplicaciones PHP con los recursos siguientes:
 
-* [Resolución de problemas de tiempos de ejecución](docs/runtimes-common/ts_runtimes.html#runtimes)
-* [Resolución de problemas de tiempos de ejecución: PHP](docs/runtimes-common/ts_runtimes.html#ts_php)
+* [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html#runtimes)
+* [Resolución de problemas de tiempos de ejecución: PHP](../common/ts_runtimes.html#ts_php)

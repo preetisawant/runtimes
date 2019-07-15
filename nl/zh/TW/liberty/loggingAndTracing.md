@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-10"
-subcollection: "liberty"
 
 ---
 
@@ -45,7 +44,7 @@ subcollection: "liberty"
 
 ### 透過 SSH 變更追蹤配置
 
-當您推送應用程式時，server.xml 檔案會包含預設內容 **updateTrigger**（設為 **polled**）和 **monitorInterval**（設為 1 分鐘）。Liberty 伺服器會自動配置為每分鐘檢查一次是否有 server.xml 檔的更新。
+當您推送應用程式時，server.xml 檔案會包含預設內容 **updateTrigger**（設為 **polled**）和 **monitorInterval**（設為 1 分鐘）。Liberty 伺服器會自動配置為每分鐘檢查一次是否有 server.xml 檔的更新項目。
 
 如需使用自訂 `server.xml` 檔推送 Liberty 應用程式的選項，請參閱[使用 server.xml 推送 Liberty 應用程式](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing)。
 
@@ -102,3 +101,10 @@ vi /app/wlp/usr/servers/defaultServer/server.xml
   {: codeblock}
 
 您也可以使用 `scp` 及其他類似工具來檢視及下載傾出檔案。如需相關資訊，請參閱 [Accessing Apps with SSH ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html)。
+
+# 相關鏈結
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Liberty 運行環境](index.html)
+* [Liberty 概觀](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

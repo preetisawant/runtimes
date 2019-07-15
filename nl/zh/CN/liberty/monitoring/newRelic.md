@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-12"
-subcollection: "liberty"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -32,14 +31,42 @@ New Relic 是第三方服务，其提供应用程序的监视度量值。有关 
 ```
 {: codeblock}
 
+## 添加 New Relic 服务
+{: #add_new_relic}
 
-## 添加用户提供的 New Relic 服务
+对于 {{site.data.keyword.Bluemix_notm}} 中要使用 New Relic 监视的现有 Java 应用程序，请遵循以下步骤。
+1. 在 {{site.data.keyword.Bluemix_notm}} 中创建 New Relic 服务实例。
+
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
+  {: codeblock}
+
+2. 使用 New Relic 服务将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。请参阅以下样本应用程序清单：
+
+  <pre>
+        &dash;&dash;&dash;
+        applications:
+        - name: myapp
+         memory: 1G
+         instances: 1
+         host: myapp
+         domain: mybluemix.net
+         path: myapp.war
+         services:
+         - mynewrelic
+  </pre>
+  {: codeblock}
+
+3. 直接从应用程序的 {{site.data.keyword.Bluemix_notm}} 仪表板访问应用程序的 New Relic 仪表板。
+
+### 添加用户提供的 New Relic 服务
 {: #add_user_provided_new_relic}
 
 如果现有 New Relic 帐户和许可证密钥，那么可以使用“用户提供的服务”将现有 New Relic 服务绑定到应用程序。
 
 1. 使用现有许可证密钥来创建用户提供的服务实例。例如，如果现有许可证密钥为 1234567，那么可以使用 {{site.data.keyword.Bluemix_notm}} CLI 来执行“create-user-provided-service”命令，并在提示时提供许可证密钥 1234567，如下所示：
-
+  
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -67,3 +94,10 @@ New Relic 服务的自动配置与其他服务的自动配置不同，因为该�
 * 选择退出不是一个选项。
 * 服务集成依赖于 New Relic 代理程序，而它是一种 Java 代理程序。因此，这种代理程序是通过 Java 选项进行配置的，与 server.xml 文件中的云变量完全不同。
 * 配置依赖于 VCAP_SERVICES 和 VCAP_APPLICATION。
+
+# 相关链接
+{: #rellinks notoc}
+## 常规
+{: #general notoc}
+* [Liberty 运行时](index.html)
+* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

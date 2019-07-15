@@ -71,3 +71,10 @@ Oracle JRE 文件必须在 Web 服务器上进行托管，并且 Liberty buildpa
    -----> Downloading OpenJdk 1.8.0_91 from https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz (6.2s)
 ```
 {: codeblock}
+
+# 相关链接
+{: #rellinks notoc}
+## 常规
+{: #general notoc}
+* [Liberty 运行时](index.html)
+* [Liberty 概要文件概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

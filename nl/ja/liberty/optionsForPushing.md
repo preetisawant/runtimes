@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-03"
-subcollection: "liberty"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ subcollection: "liberty"
 * サーバー・ディレクトリーをプッシュする
 * パッケージされたサーバーをプッシュする
 
-重要: Liberty ビルドパックでアプリケーションをデプロイする際には、アプリケーションのメモリー限度として最小 512M を指定してください。 [『メモリー制限および Liberty ビルドパック』](/docs/runtimes/liberty/memoryLimits.html)を参照してください。
+重要: Liberty ビルドパックでアプリケーションをデプロイする際には、アプリケーションのメモリー限度として最小 512M を指定してください。 [『メモリー制限および Liberty ビルドパック』](memoryLimits.html)を参照してください。
 
 ## スタンドアロン・アプリケーション
 {: #stand_alone_apps}
@@ -64,8 +64,8 @@ jsp-2.3 フィーチャーと websocket-1.1 フィーチャーのみを使用可
 ```
 {: codeblock}
 
-注: 最高の結果を得るには、JBP_CONFIG_LIBERTY 環境変数で Liberty フィーチャーを設定するか、または、カスタム server.xml ファイルを使用して、アプリケーションを[サーバー・ディレクトリー](/docs/runtimes/liberty/optionsForPushing.html#server_directory)または r [パッケージされたサーバー](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)としてデプロイします。 この環境変数を設定すると、アプリケーションは必要なフィーチャーのみを使用して、ビルドパックのデフォルト Liberty フィーチャー・セットの変更による影響を受けないことが確実になります。 フィーチャー・セット以外にさらに Liberty 構成が必要な場合、
-[サーバー・ディレクトリー](/docs/runtimes/liberty/optionsForPushing.html#server_directory)または[パッケージされたサーバー](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)のオプションを使用してアプリケーションをデプロイします。
+注: 最高の結果を得るには、JBP_CONFIG_LIBERTY 環境変数で Liberty フィーチャーを設定するか、または、カスタム server.xml ファイルを使用して、アプリケーションを[サーバー・ディレクトリー](optionsForPushing.html#server_directory)または r [パッケージされたサーバー](optionsForPushing.html#packaged_server)としてデプロイします。 この環境変数を設定すると、アプリケーションは必要なフィーチャーのみを使用して、ビルドパックのデフォルト Liberty フィーチャー・セットの変更による影響を受けないことが確実になります。 フィーチャー・セット以外にさらに Liberty 構成が必要な場合、
+[サーバー・ディレクトリー](optionsForPushing.html#server_directory)または[パッケージされたサーバー](optionsForPushing.html#packaged_server)のオプションを使用してアプリケーションをデプロイします。
 
 WAR ファイルをデプロイした場合、Web アプリケーションは組み込み ibm-web-ext.xml ファイルで設定されたコンテキスト・ルートの下でアクセス可能です。 ibm-web-ext.xml ファイルが存在しないか、ファイルにコンテキスト・ルートが指定されていない場合、アプリケーションはルート・コンテキストの下でアクセス可能です。 以下に例を示します。
 
@@ -254,3 +254,10 @@ Liberty ビルドパックが server.xml ファイル内のサービス・バイ
 * connection.password: このアプリケーションをサービスに対して認証するために使用されるパスワード。 パスワードは Cloud Foundry によって自動生成されます (例: pvyCY0YzX9pu5)。
 
 バインドされたサービスが Liberty ビルドパックによって自動構成されないサービスの場合、アプリケーション自体がバックエンド・リソースのアクセスを管理する必要があります。
+
+# 関連リンク
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Liberty ランタイム](index.html)
+* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

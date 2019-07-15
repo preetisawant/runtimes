@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html" path="runtimes/nodejs"}
+{: .toc subcollection="Nodejs" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html"}
 SDK for Node.js
 
     {: .navgroup id="learn"}
@@ -13,24 +13,30 @@ SDK for Node.js
     startup.md
     runningLocally.md
     enforceHTTPS.md
-    hooks.md
+    dynatrace.md
+
     {: .topicgroup}
-    Aplicaciones de inicio y buildpacks de la comunidad
-        /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
+    Trabajar fuera de línea o con un proxy
+        offlineMode.md
+        ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    /runtimes-common/runtimes-common-app_management
-    /runtimes-common/runtimes-common-working_with_proxy 
-    offline.md
+    fipsMode.md
+    ../common/app_mng.md
+
+    {: .topicgroup}
+    Aplicaciones de inicio y paquetes de compilación
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    ../common/buildpackSupport.md
+
     {: .navgroup-end}

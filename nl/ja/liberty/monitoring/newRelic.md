@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-12"
-subcollection: "liberty"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -34,14 +33,42 @@ Liberty ビルドパックがアプリケーション用に生成したサンプ
 ```
 {: codeblock}
 
+## New Relic サービスの追加
+{: #add_new_relic}
 
-## ユーザー提供の New Relic サービスの追加
+{{site.data.keyword.Bluemix_notm}} 内で New Relic を使用して既存の Java アプリケーションをモニターするには、以下のステップに従ってください。
+1. {{site.data.keyword.Bluemix_notm}} に New Relic サービス・インスタンスを作成します。
+
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
+  {: codeblock}
+
+2. New Relic サービスを使用してアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイします。  以下のサンプル・アプリケーション・マニフェストを参照してください。
+
+  <pre>
+        &dash;&dash;&dash;
+        applications:
+        - name: myapp
+         memory: 1G
+         instances: 1
+         host: myapp
+         domain: mybluemix.net
+         path: myapp.war
+         services:
+         - mynewrelic
+  </pre>
+  {: codeblock}
+
+3. アプリケーションの {{site.data.keyword.Bluemix_notm}} ダッシュボードからアプリケーションの New Relic ダッシュボードに直接アクセスします。
+
+### ユーザー提供の New Relic サービスの追加
 {: #add_user_provided_new_relic}
 
 既存の New Relic アカウントとライセンス・キーがある場合は、「ユーザー提供のサービス」を使用して既存の New Relic サービスをアプリケーションにバインドできます。
 
 1. 既存のライセンス・キーを使用してユーザー提供のサービス・インスタンスを作成します。  例えば、既存のライセンス・キーが 1234567 の場合、「create-user-provided-service」に {{site.data.keyword.Bluemix_notm}} CLI を使用して、以下のプロンプトでライセンス・キー 1234567 を入力できます。
-
+  
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -69,3 +96,10 @@ New Relic サービスの自動構成は、ビルドバックのフレームワ�
 * オプトアウトはオプションではありません。
 * サービス統合は Java エージェントである New Relic エージェントに依存します。 したがって、server.xml ファイルのクラウド変数とは対照的に、これは Java オプションから構成されます。
 * 構成は VCAP_SERVICES および VCAP_APPLICATION の両方に依存します。
+
+# 関連リンク
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Liberty ランタイム](index.html)
+* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

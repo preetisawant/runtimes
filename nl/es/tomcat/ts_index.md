@@ -3,7 +3,6 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
-subcollection: "Tomcat"
 
 ---
 
@@ -15,4 +14,4 @@ subcollection: "Tomcat"
 
 Resuelva sus aplicaciones Tomcat y de compilación con el siguiente recurso:
 
-* [Resolución de problemas de tiempos de ejecución](/docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html#runtimes)

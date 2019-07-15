@@ -3,7 +3,6 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2017-02-08"
-subcollection: "liberty"
 
 ---
 
@@ -22,14 +21,14 @@ Consulte os seguintes links:
 ## JConsole
 {: #jconsole notoc}
 
-Para monitorar o Liberty com *JConsole*, veja [Monitorando o Liberty no Bluemix com JConsole](/docs/runtimes/liberty/monitoring/jconsole.html)
+Para monitorar o Liberty com *JConsole*, veja [Monitorando o Liberty no Bluemix com JConsole](jconsole.html)
 
 ## Dynatrace
 {: #dynatrace notoc}
 
-Para monitorar o Liberty com *Dynatrace*, veja [Usando o Dynatrace](/docs/runtimes/liberty/monitoring/dynatrace.html)
+Para monitorar o Liberty com *Dynatrace*, veja [Usando o Dynatrace](dynatrace.html)
 
 ## New Relic
 {: #newrelic notoc}
 
-Para monitorar o Liberty com *New Relic*, veja [Usando o New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)
+Para monitorar o Liberty com *New Relic*, veja [Usando o New Relic](newRelic.html)

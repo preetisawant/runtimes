@@ -29,7 +29,7 @@ Necesitará las siguientes cuentas y herramientas:
 * [Eclipse IDE for Java EE Developers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 Si ha completado la [Guía de aprendizaje de iniciación](getting-started.md), es posible que ya tenga estas herramientas y cuentas. Antes de empezar, asegúrese de que también ha instalado y registrado lo siguiente:
-* [Cuenta de {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
+* [Cuenta de {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
 * [CLI de {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://maven.apache.org/download.cgi){: new_window}
@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Si no puede iniciar sesión utilizando los mandatos `ibmcloud login` porque tiene un ID de usuario federado, utilice lo siguiente para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id) para obtener más información.
+  Si no puede iniciar sesión utilizando los mandatos `ibmcloud login` porque tiene un ID de usuario federado, utilice lo siguiente para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
   ```
 ibmcloud login --sso
   ```
@@ -106,7 +106,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Si no tiene una org o un espacio configurado, consulte [Adición de organizaciones y espacios](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers).
+  Si no tiene una org o un espacio configurado, consulte [Adición de organizaciones y espacios](https://console.bluemix.net/docs/account/orgs_spaces.html).
   {: tip}
 
 ## Paso 5: Desarrollo mediante Eclipse

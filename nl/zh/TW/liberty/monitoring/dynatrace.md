@@ -3,7 +3,6 @@
 copyright:
   years: 2016, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -13,7 +12,7 @@ subcollection: "liberty"
 # 使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Liberty
 {: #using_dynatrace}
 
-Dynatrace 是協力廠商服務，可為您的應用程式提供監視功能。您可以整合 Dynatrace 與 Liberty 應用程式，但 IBM 不提供對協力廠商服務的支援。如需相關資訊，請參閱[協力廠商服務](/docs/runtimes-common/buildpackSupport.html#third-party)。
+Dynatrace 是協力廠商服務，可為您的應用程式提供監視功能。您可以整合 Dynatrace 與 Liberty 應用程式，但 IBM 不提供對協力廠商服務的支援。如需相關資訊，請參閱[協力廠商服務](../../common/buildpackSupport.html#third-party)。
 
 如需 Dynatrace 及其授權的相關資訊，請參閱 [Dynatrace Application Monitoring ![外部鏈結圖示](../../../icons/launch-glyph.svg "外部鏈結圖示")](http://www.dynatrace.com/en/products/application-monitoring.html)。
 

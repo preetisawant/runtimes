@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Python"
-
+lastupdated: "2018-08-21"
 
 ---
 
@@ -26,17 +24,17 @@ O python_buildpack será usado se o diretório-raiz de seu app contiver um arqui
 
 O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do Python.  O aplicativo iniciador do Python é um app Python simples que fornece um modelo
 que pode ser usado por seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
-{{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](docs/runtimes-common/starter_app_usage.html) para obter ajuda sobre o uso
+{{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
-## Versões de tempo de execução
+## Versões de runtime
 {: #runtime_versions}
 
 É possível especificar a versão do Python a ser usada por seu app, configurando python-versionnumber no arquivo runtime.txt
 na raiz de seu aplicativo. Por exemplo:
 
 ```
-python-3.6.4
+python-3.6.1
 ```
 {: codeblock}
 
@@ -61,3 +59,9 @@ As seguintes versões do Python estão disponíveis no
 
 Se seu aplicativo requerer uma versão do Python não listada, é possível usar o
 [buildback Python](https://github.com/cloudfoundry/python-buildpack) externo para implementar o app.
+
+# rellinks
+{: #rellinks notoc}
+## geral
+{: #general notoc}
+* [Buildpack do Cloud Foundry para Python](https://github.com/cloudfoundry/python-buildpack)

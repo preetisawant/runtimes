@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-03"
-subcollection: "liberty"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -28,7 +28,7 @@ Per distribuire le tue applicazioni Liberty a {{site.data.keyword.Bluemix_notm}}
 * Esecuzione del push di una directory server
 * Esecuzione del push di un server in pacchetto
 
-Importante: quando distribuisci un'applicazione con il pacchetto di build Liberty, specifica un minimo di 512M come limite di memoria per le tue applicazioni. Per ulteriori informazioni, consulta [Limiti di memoria e pacchetto di build Liberty](/docs/runtimes/liberty/memoryLimits.html).
+Importante: quando distribuisci un'applicazione con il pacchetto di build Liberty, specifica un minimo di 512M come limite di memoria per le tue applicazioni. Per ulteriori informazioni, consulta [Limiti di memoria e pacchetto di build Liberty](memoryLimits.html).
 
 ## Applicazioni autonome
 {: #stand_alone_apps}
@@ -71,12 +71,12 @@ nuovo l'applicazione:
 ```
 {: codeblock}
 
-Nota: per dei risultati ottimali, imposta le funzioni Liberty con la variabile di ambiente JBP_CONFIG_LIBERTY oppure distribuisci la tua applicazione come una [directory server](/docs/runtimes/liberty/optionsForPushing.html#server_directory) o un [server in pacchetto](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) con un file server.xml personalizzato. L'impostazione di questa
+Nota: per dei risultati ottimali, imposta le funzioni Liberty con la variabile di ambiente JBP_CONFIG_LIBERTY oppure distribuisci la tua applicazione come una [directory server](optionsForPushing.html#server_directory) o un [server in pacchetto](optionsForPushing.html#packaged_server) con un file server.xml personalizzato. L'impostazione di questa
 				variabile di ambiente garantisce che la tua applicazione utilizzi solo la funzione di cui
 				ha bisogno e che non risenta delle modifiche dell'insieme di funzioni Liberty predefinito del pacchetto di build. Se devi fornire una configurazione Liberty aggiuntiva oltre all'insieme di funzioni, utilizza
 					l'opzione [directory
-					server](/docs/runtimes/liberty/optionsForPushing.html#server_directory) o [server
-					in pacchetto](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) per distribuire la tua applicazione.
+					server](optionsForPushing.html#server_directory) o [server
+					in pacchetto](optionsForPushing.html#packaged_server) per distribuire la tua applicazione.
 
 Se hai distribuito un file WAR, l'applicazione web è accessibile sotto il root di contesto come impostato nel file ibm-web-ext.xml incorporato. Se il file ibm-web-ext.xml non esiste, o non specifica il root di contesto, l'applicazione è accessibile sotto la root di contesto. Ad esempio,
 
@@ -253,7 +253,7 @@ sono sensibili al maiuscolo/minuscolo.
 ### Accesso alle informazioni dei servizi di cui è stato eseguito il bind
 {: #accessing_info_of_bound_services}
 
-Quando desideri eseguire il bind di un servizio alla tua applicazione, le informazioni sul servizio, come le credenziali di connessione, sono incluse nella [variabile di ambiente VCAP_SERVICES ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) che Cloud Foundry imposta per l'applicazione. Per i [servizi configurati automaticamente](autoConfig.html), il pacchetto di build Liberty genera o aggiorna le voci di bind di servizio nel file server.xml. Il contenuto delle voci di bind di
+Quando desideri eseguire il bind di un servizio alla tua applicazione, le informazioni sul servizio, come le credenziali di connessione, sono incluse nella [variabile di ambiente VCAP_SERVICES ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES) che Cloud Foundry imposta per l'applicazione. Per i [servizi configurati automaticamente](autoConfig.html), il pacchetto di build Liberty genera o aggiorna le voci di bind di servizio nel file  server.xml. Il contenuto delle voci di bind di
 				servizio può essere in uno dei seguenti formati:
 
 * cloud.services.&lt;nome-servizio&gt;.&lt;proprietà&gt;, che descrive informazioni quali il nome, il tipo e il piano del servizio.
@@ -272,3 +272,10 @@ L'insieme di informazioni tipico è il seguente:
 * connection.password: la password utilizzata per autenticare questa applicazione presso il servizio. La password viene generata automaticamente da Cloud Foundry, ad esempio, pvyCY0YzX9pu5.
 
 Per i servizi di cui è stato eseguito il bind che non sono configurati automaticamente dal pacchetto di build Liberty, l'applicazione deve gestire direttamente l'accesso della risorsa di backend.
+
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
+* [Runtime Liberty](index.html)
+* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

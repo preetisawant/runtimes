@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2018-02-01"
-subcollection: "liberty"
+  years: 2015, 2018
+lastupdated: "2018-03-06"
 
 ---
 
@@ -25,42 +24,42 @@ Liberty for Java에서 지원하는 환경 변수
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>[App Management 유틸리티](/docs/runtimes-common/app_mng.html)를 사용으로 설정합니다.</td>
+<td>[App Management 유틸리티](../common/app_mng.html)를 사용으로 설정합니다.</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>[App Management 유틸리티](/docs/runtimes-common/app_mng.html)를 설치합니다.</td>
+<td>[App Management 유틸리티](../common/app_mng.html)를 설치합니다.</td>
 </tr>
 
 <tr>
-<td>IBM_LIBERTY_MONTHLY</td>
-<td>[Liberty 월별 릴리스 런타임](/docs/runtimes/liberty/usingMonthlyRuntime.html)을 사용으로 설정합니다.</td>
+<td>IBM_LIBERTY_BETA</td>
+<td>[Liberty 베타 기능](usingBetaFeatures.html)을 사용으로 설정합니다.</td>
 </tr>
 
 <tr>
 <td>JAVA_OPTS</td>
-<td>[Java 옵션](/docs/runtimes/liberty/customizingJRE.html)을 설정합니다.</td>
+<td>[Java 옵션](customizingJRE.html)을 설정합니다.</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
-<td>[Dynatrace 에이전트 위치 정보](/docs/runtimes/liberty/monitoring/dynatrace.html#configuring_liberty_app)를 구성합니다.</td>
+<td>[Dynatrace 에이전트 위치 정보](dynatrace.html#configuring_liberty_app)를 구성합니다.</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_IBMJDK </td>
-<td>[IBM JRE 버전](/docs/runtimes/liberty/customizingJRE.html)을 구성합니다.</td>
+<td>[IBM JRE 버전](customizingJRE.html)을 구성합니다.</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>[WAR 또는 EAR 파일의 기능](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)을 포함하여 다양한 Liberty 런타임 옵션을 구성합니다.</td>
+<td>[WAR 또는 EAR 파일의 기능](optionsForPushing.html#stand_alone_apps)을 포함하여 다양한 Liberty 런타임 옵션을 구성합니다.</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>[OpenJDK JRE 버전](/docs/runtimes/liberty/customizingJRE.html)을 구성합니다.</td>
+<td>[OpenJDK 버전](customizingJRE.html)을 구성합니다.</td>
 </tr>
 
 <tr>
@@ -75,17 +74,17 @@ Liberty for Java에서 지원하는 환경 변수
 
 <tr>
 <td>JVM</td>
-<td>[JRE 유형](/docs/runtimes/liberty/customizingJRE.html)을 선택합니다.</td>
+<td>[JRE 유형](customizingJRE.html)을 선택합니다.</td>
 </tr>
 
 <tr>
 <td>JVM_ARGS</td>
-<td>[JVM 인수](/docs/runtimes/liberty/customizingJRE.html)를 설정합니다.</td>
+<td>[JVM 인수](customizingJRE.html)를 설정합니다.</td>
 </tr>
 
 <tr>
 <td>LBP_SERVICE_CONFIG_xxxx</td>
-<td>[서비스 구성을 대체합니다. ](/docs/runtimes/liberty/autoConfig.html#override_service_config)</td>
+<td>[서비스 구성을 대체합니다. ](autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>
@@ -100,7 +99,7 @@ Liberty for Java에서 지원하는 환경 변수
 
 <tr>
 <td>services_autoconfig_excludes</td>
-<td>[auto-configuration](/docs/runtimes/liberty/autoConfig.html#opting_out) 서비스를 사용 안함으로 설정합니다.</td>
+<td>[auto-configuration](autoConfig.html#opting_out) 서비스를 사용 안함으로 설정합니다.</td>
 </tr>
 </table>
 {: caption="표 1. Liberty for Java에 사용 가능한 환경 변수" caption-side="top"}
@@ -153,3 +152,10 @@ Liberty for Java에서 지원하는 환경 변수
 </tr>
 </table>
 {: caption="표 1. Liberty for Java에서 사용 안함으로 설정한 속성" caption-side="top"}
+
+# 관련 링크
+{: #rellinks notoc}
+## 일반
+{: #general notoc}
+* [Liberty 런타임](index.html)
+* [Liberty 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

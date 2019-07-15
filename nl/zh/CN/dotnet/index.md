@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-25"
-subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -24,4 +23,11 @@ subcollection: "Dotnet"
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} 提供了“ASP.NET 核心”入门模板应用程序。“ASP.NET 核心”入门模板应用程序是一个简单的应用程序，它提供了一个可供您使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](docs/runtimes-common/starter_app_usage.html)。
+{{site.data.keyword.Bluemix_notm}} 提供了“ASP.NET 核心”入门模板应用程序。“ASP.NET 核心”入门模板应用程序是一个简单的应用程序，它提供了一个可供您使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../common/starter_app_usage.html)。
+
+# 相关链接
+{: #rellinks notoc}
+## 常规
+{: #general notoc}
+* [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
+* [ASP.NET 核心概述](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

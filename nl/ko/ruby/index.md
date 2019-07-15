@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Ruby"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -33,7 +32,7 @@ ruby_buildpack은 앱의 루트 디렉토리에 Gemfile이 있는 경우 사용�
 
 ```
   source 'https://rubygems.org'
-  ruby '2.5.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
@@ -61,3 +60,10 @@ ruby_buildpack은 앱의 루트 디렉토리에 Gemfile이 있는 경우 사용�
 외부
 [Ruby 빌드팩](https://github.com/cloudfoundry/ruby-buildpack)을
 사용하여 애플리케이션을 배치할 수 있습니다.
+
+# 관련 링크
+{: #rellinks notoc}
+## 일반
+{: #general notoc}
+* [Ruby에 대한 Cloud Foundry 빌드팩](https://github.com/cloudfoundry/cf-buildpack-ruby)
+* [Ruby on Rails 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](http://api.rubyonrails.org/)

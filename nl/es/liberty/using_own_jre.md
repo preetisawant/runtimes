@@ -3,7 +3,6 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -13,7 +12,7 @@ subcollection: "liberty"
 # Utilice su propio JRE
 {: #using_own_jre}
 
-Puede ejecutar la aplicación Liberty en {{site.data.keyword.Bluemix}} con su propio JRE. El paquete de compilación liberty-for-java proporcionará soporte para los tiempos de ejecución soportados por [WebSphere Liberty](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13), pero no puede garantizar una funcionalidad total de las versiones no soportadas. Debe completar lo siguiente para que su JRE esté disponible en su aplicación.
+Puede ejecutar la aplicación Liberty en {{site.data.keyword.Bluemix}} con su propio JRE. Debe completar lo siguiente para que su JRE esté disponible en su aplicación.
 * Alojar el JRE en una ubicación desde la que el paquete de compilación pueda descargarlo.
 * Alojar un archivo `index.yml` que proporcione la ubicación del JRE.
 * Configurar la aplicación para utilizar el JRE.
@@ -21,11 +20,11 @@ Puede ejecutar la aplicación Liberty en {{site.data.keyword.Bluemix}} con su pr
 ## Alojar el JRE e `index.yml`
 {: #hosting_jre}
 
-Debe alojar el archivo JRE en un servidor web desde el que el paquete de compilación liberty-for-java pueda descargarlo. Puede alojar el archivo en {{site.data.keyword.Bluemix_notm}} con cualquiera de los servicios de servidor disponibles o puede alojarlo en una ubicación disponible públicamente. El servidor debe estar configurado con un archivo `index.yml` que especifique los detalles sobre el archivo JRE.
+Debe alojar el archivo JRE en un servidor web desde el que el paquete de compilación pueda descargarlo. Puede alojar el archivo en {{site.data.keyword.Bluemix_notm}} con cualquiera de los servicios de servidor disponibles o puede alojarlo en una ubicación disponible públicamente. El servidor debe estar configurado con un archivo `index.yml` que especifique los detalles sobre el archivo JRE.
 
 Complete los pasos siguientes para alojar el JRE y el archivo `index.yml`:
   1. Adquiera el JRE, que debe ser una versión que pueda utilizar en un SO UNIX de 64 bits, y debe ser un archivo `tar.gz`.
-  2. Aloje el archivo JRE en una ubicación desde la que el paquete de compilación liberty-for-java pueda descargarlo.
+  2. Aloje el archivo JRE en una ubicación desde la que el paquete de compilación de Liberty pueda descargarlo.
   3. Proporcione un archivo `index.yml` en la ubicación de alojamiento. El archivo `index.yml` debe incluir una entrada que contenga un ID de versión del JRE seguido de una coma y el URL completo de dicho archivo JRE.
     * Define la versión del JRE en el archivo `index.yml`.
 

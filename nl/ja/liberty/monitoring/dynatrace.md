@@ -3,7 +3,6 @@
 copyright:
   years: 2016, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -13,7 +12,7 @@ subcollection: "liberty"
 # Dynatrace を使用した {{site.data.keyword.cloud_notm}} 内の Liberty のモニター
 {: #using_dynatrace}
 
-Dynatrace は、アプリケーションのモニタリングを提供するサード・パーティー・サービスです。 Dynatrace を Liberty アプリケーションに統合することは可能ですが、IBM はサード・パーティー・サービスに関するサポートは提供しません。 詳しくは、[サード・パーティー・サービス](/docs/runtimes-common/buildpackSupport.html#third-party)を参照してください。
+Dynatrace は、アプリケーションのモニタリングを提供するサード・パーティー・サービスです。 Dynatrace を Liberty アプリケーションに統合することは可能ですが、IBM はサード・パーティー・サービスに関するサポートは提供しません。 詳しくは、[サード・パーティー・サービス](../../common/buildpackSupport.html#third-party)を参照してください。
 
 Dynatrace とそのライセンスについて詳しくは、[Dynatrace の『Application Monitoring』 ![外部リンク・アイコン](../../../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.dynatrace.com/en/products/application-monitoring.html) を参照してください。
 

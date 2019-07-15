@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-11-10"
-subcollection: "liberty"
 
 ---
 
@@ -86,3 +85,10 @@ jconsole コマンドに <b>&dash;J&dash;Djavax.net.debug=ssl</b> を追加す�
     <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
 ```
 {: codeblock}
+
+# 関連リンク
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Liberty ランタイム](index.html)
+* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-12-12"
-subcollection: "liberty"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -36,14 +35,44 @@ Vedi la configurazione di esempio generata dal pacchetto di build Liberty per l'
 ```
 {: codeblock}
 
+## Aggiungi un servizio New Relic
+{: #add_new_relic}
 
-## Aggiungi un servizio New Relic fornito dall'utente
+Per fare in modo che un'applicazione Java esistente sia monitorata con New Relic in {{site.data.keyword.Bluemix_notm}}, attieniti alla seguente procedura.
+1. Crea un'istanza del servizio New Relic in {{site.data.keyword.Bluemix_notm}}.
+
+  ```
+  ibmcloud cf create-service newrelic standard mynewrelic
+  ```
+  {: codeblock}
+
+2. Distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} con il servizio New Relic.  Consulta il seguente manifest dell'applicazione
+di esempio:
+
+  <pre>
+        &dash;&dash;&dash;
+        applications:
+        - name: myapp
+         memory: 1G
+         instances: 1
+         host: myapp
+         domain: mybluemix.net
+         path: myapp.war
+         services:
+         - mynewrelic
+  </pre>
+  {: codeblock}
+
+3. Accedi al dashboard New Relic dalla tua applicazione direttamente dal dashboard {{site.data.keyword.Bluemix_notm}}
+della tua applicazione.
+
+### Aggiungi un servizio New Relic fornito dall'utente
 {: #add_user_provided_new_relic}
 
 Se hai un account e una chiave di licenza New Relic esistenti, puoi eseguire il bind del servizio New Relic esistente alla tua applicazione utilizzando un "servizio fornito dall'utente".
 
 1. Crea un'istanza del servizio fornito dall'utente utilizzando la tua chiave di licenza esistente.  Ad esempio, se la tua chiave di licenza esistente è 1234567, puoi utilizzare la CLI {{site.data.keyword.Bluemix_notm}} per eseguire una creazione del servizio fornito dall'utente ("create-user-provided-service") e fornire la chiave di licenza 1234567 al prompt come segue:
-
+  
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -75,3 +104,10 @@ reso disponibile mediante il framework, la configurazione automatica per questo 
 * La non inclusione (opt-out) non è un'opzione.
 * L'integrazione del servizio si basa sull'agent di New Relic, un agent Java. Viene pertanto configurato mediante le opzioni Java invece che mediante le variabili cloud nel file server.xml.
 * La configurazione si basa sia su VCAP_SERVICES sia su VCAP_APPLICATION.
+
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
+* [Runtime Liberty](index.html)
+* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

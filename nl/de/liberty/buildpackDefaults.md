@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-26"
-subcollection: "liberty"
 
 ---
 
@@ -26,16 +25,15 @@ nicht auf die Buildpackstandardwerte zurückgegriffen werden muss.
 {: #liberty_versions}
 
 Das Buildpack stellt zwei Versionen der Liberty-Laufzeit bereit:
-1. Ein langfristiges, stabiles Release
+1. Das stabile Release
   * Dies ist die Standard-Liberty-Laufzeit.
-  * Es stellt keine [Beta-Features](/docs/runtimes/liberty/usingBetaFeatures.html) bereit.
+  * Es stellt keine [Beta-Features](usingBetaFeatures.html) bereit.
   * Es wird normalerweise vierteljährlich aktualisiert.
 
 2. Das monatliche Release
-  * Es muss durch Festlegen des Werts **"version: +"** für die Umgebungsvariable **JBP_CONFIG_LIBERTY** und des Werts **true**
-  für die Umgebungsvariable **IBM_LIBERTY_MONTHLY** explizit aktiviert werden.
-  * Es stellt [monatliche Features](/docs/runtimes/liberty/usingMonthlyRuntime.html) bereit.
-  * Es wird normalerweise alle vier Wochen aktualisiert.
+  * Sie muss durch Angabe des Werts **"version: +"** für die Umgebungsvariable **JBP_CONFIG_LIBERTY** explizit aktiviert werden.
+  * Sie stellt [Beta-Features](usingBetaFeatures.html) bereit.
+  * Sie wird normalerweise monatlich aktualisiert.
 
 ## Liberty-Features
 {: #liberty_features}
@@ -48,10 +46,10 @@ mit denen Sie sicherstellen können, dass die Anwendung nicht durch Änderungen 
 wird.
 
 * Legen Sie die Umgebungsvariable JBP_CONFIG_LIBERTY so fest, dass sie explizit eine Liste aktivierter Features für die
-Anwendung angibt. Weitere Informationen finden Sie in [Eigenständige Anwendungen](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps).
+Anwendung angibt. Weitere Informationen finden Sie in [Eigenständige Anwendungen](optionsForPushing.html#stand_alone_apps).
 * Stellen Sie Ihre Anwendung als
-[Serververzeichnis](/docs/runtimes/liberty/optionsForPushing.html#server_directory) oder
-[paketierten Server](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) bereit. Passen Sie die Datei 'server.xml' so an, dass sie das exakte für Ihre Anwendung benötigte Feature-Set enthält, und stellen Sie sie bereit.
+[Serververzeichnis](optionsForPushing.html#server_directory) oder
+[paketierten Server](optionsForPushing.html#packaged_server) bereit. Passen Sie die Datei 'server.xml' so an, dass sie das exakte für Ihre Anwendung benötigte Feature-Set enthält, und stellen Sie sie bereit.
 
 Anwendungen, die als Serververzeichnis oder
 paketierter Server bereitgestellt werden, werden durch Änderungen an den Liberty-Featurestandardwerten nicht beeinträchtigt.
@@ -62,4 +60,12 @@ paketierter Server bereitgestellt werden, werden durch Änderungen an den Libert
 Das Buildpack stellt eine Standard-JRE für die Anwendung bereit. Die übergeordnete oder untergeordnete Version der JRE kann von einem Buildpack-Release zum nächsten geändert werden. Die untergeordnete Version der JRE wird möglicherweise häufig aktualisiert,
 während die übergeordnete Version nur selten aktualisiert wird. Änderungen an der übergeordneten Version der JRE können sich nachteilig auf die Anwendung auswirken.
 
-Damit sichergestellt ist, dass die Anwendung nicht durch Änderungen an der übergeordneten Version beeinträchtigt wird, legen Sie die Umgebungsvariable wie in [JRE anpassen](/docs/runtimes/liberty/customizingJRE.html) beschrieben auf die entsprechende JRE-Version fest. Die besten Ergebnisse erzielen Sie, wenn Sie für Ihre Anwendungen Java 8 verwenden.
+Damit sichergestellt ist, dass die Anwendung nicht durch Änderungen an der übergeordneten Version beeinträchtigt wird, legen Sie die Umgebungsvariable wie in [JRE anpassen](customizingJRE.html) beschrieben auf die entsprechende JRE-Version fest. Die besten Ergebnisse erzielen Sie, wenn Sie für Ihre Anwendungen Java 8 verwenden.
+
+
+# Zugehörige Links
+{: #rellinks notoc}
+## Allgemein
+{: #general notoc}
+* [Liberty-Laufzeit](index.html)
+* [Übersicht über das Liberty-Profil](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

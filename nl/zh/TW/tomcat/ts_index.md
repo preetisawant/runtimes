@@ -3,7 +3,6 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
-subcollection: "Tomcat"
 
 ---
 
@@ -15,4 +14,4 @@ subcollection: "Tomcat"
 
 請使用下列資源，對 Tomcat 應用程式及建置套件進行疑難排解：
 
-* [運行環境的疑難排解](/docs/runtimes-common/ts_runtimes.html#runtimes)
+* [運行環境的疑難排解](../common/ts_runtimes.html#runtimes)

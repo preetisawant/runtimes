@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html" path="runtimes/liberty"}
+{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -17,25 +17,28 @@ Liberty for Java
     secureWebApp.md
     loggingAndTracing.md
 
+    {: .topicgroup}
+    IBM Eclipse Tools for IBM Cloud の使用
+        eclipseDevelop.md
+        [IBM Eclipse Tools for IBM Cloud を使用したアプリのデプロイ](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
+
     autoConfig.md
     customizingJRE.md
     using_own_jre.md
-    installFeatures.md
-    usingMonthlyRuntime.md
     usingBetaFeatures.md
-    [バインドされたサービスのオプトアウト](/runtimes/liberty/liberty-auto_config#opting_out)
+    [バインドされたサービスのオプトアウト](autoConfig.html#opting_out)
 
     {: .topicgroup}
     IBM Cloud 内の Liberty のモニター
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
-        [Availability Monitoring の概説](/AvailabilityMonitoring/AvailabilityMonitoring-avmon_gettingstarted)
+        [Availability Monitoring の概説](../../services/AvailabilityMonitoring/index.html)
 
     {: .topicgroup}
-    オフラインでの作業またはプロキシーの処理
+    オフラインの処理またはプロキシーの処理
         offlineMode.md
-		/runtimes-common/runtimes-common-working_with_proxy 
+        ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -44,17 +47,18 @@ Liberty for Java
     libertyFeatures.md
     environmentVariables.md
 
-	{: .topicgroup}
-    スターター・アプリケーションとコミュニティーのビルドパック
-	    /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
+    {: .topicgroup}
+    スターター・アプリケーションおよびビルドパック
+        ../common/starter_app_usage.md
+        ../common/byob.md
+
     buildpackDefaults.md
-    /runtimes-common/runtimes-common-app_management
+    ../common/app_mng.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
-    [IBM Cloud Log Analysis の概説](services/CloudLogAnalysis/index.html)
+    [IBM Cloud Log Analysis の概説](../../services/CloudLogAnalysis/index.html)
     updates.md
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    ../common/buildpackSupport.md
     {: .navgroup-end}

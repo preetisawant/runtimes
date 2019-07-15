@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-01"
-subcollection: "liberty"
+  years: 2015, 2018
+lastupdated: "2018-08-10"
 
 ---
 
@@ -15,39 +14,6 @@ subcollection: "liberty"
 
 ## Liste mit den neuesten Aktualisierungen im Liberty-Buildpack
 
-### 01. März 2019: Liberty-Buildpack v3.29-20190223-2128 aktualisiert
-
-* Die Standard-GA-Version der Liberty-Laufzeit ist das Release 18.0.0.4.
-* Die alternative GA-Version 19.0.0.2 der Liberty-Laufzeit wurde hinzugefügt.   
-* Die Cloudant-Clientbibliotheken wurden auf Version 2.14.0 aktualisiert. 
-
-### 01. Februar 2019: Liberty-Buildpack v3.28-20190127-1723 aktualisiert
-
-* Die Standard-GA-Version der Liberty-Laufzeit ist das Release 18.0.0.4.
-* Die alternative GA-Version 19.0.0.1 der Liberty-Laufzeit wurde hinzugefügt.  
-* Das monatliche Liberty-Beta-Release wurde entfernt.  
-* Die IBM JRE-Version wurde auf 8 SR5 FP27 aktualisiert.
-* Der MQ-Client wurde auf das Release 9.1.0.0 aktualisiert.
-* Der Agent für automatische Skalierung wurde aktualisiert.
-
-### 14. Dezember 2018: Liberty-Buildpack v3.27-20181130-1702 aktualisiert
-
-* Das Buildpack enthält nun Java Platform, Enterprise Edition 8.0. Java EE 8 muss für die Bereitstellung einer Anwendung per Push-Operation nicht mehr installiert werden.  
-* Die Standardversion der Liberty-Laufzeit wurde auf das Release 18.0.0.4 aktualisiert.
-* Die monatliche Version der Liberty-Laufzeit wurde auf Release 2018.11.0.0 aktualisiert.
-* Die IBM JRE-Version wurde auf 8 SR5 FP26 aktualisiert.
-
-### 29. Oktober 2018: Liberty-Buildpack v3.26-20181023-1545 aktualisiert
-
-* Die Standardversion der Liberty-Laufzeit `18.0.0.3` wurde aktualisiert und enthält einen Fix für die [Sicherheitslücke CVE-2014-7810 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055).
-* Die monatliche Version der Liberty-Laufzeit wurde auf Release 2018.10.0.0 aktualisiert.
-* Die IBM JRE-Version wurde auf 8 SR5 FP22 aktualisiert.
-
-### 21. September 2018: Liberty-Buildpack v3.25-20180918-1034 aktualisiert
-* Das Buildpack unterstützt nun Java Platform, Enterprise Edition 8.0. Zur Verwendung von Java EE 8 müssen Sie das Liberty-Feature `javaee-8.0` installieren, wenn Sie Ihre App per Push-Operation übertragen. Weitere Informationen finden Sie im Abschnitt zur [Installation von Liberty-Features](installFeatures.html).
-* Die Standardversion der Liberty-Laufzeit wurde auf das Release 18.0.0.3 aktualisiert.
-* Die monatliche Version der Liberty-Laufzeit wurde auf das Release [2018.8.0.1 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/) aktualisiert.
-* Die IBM JRE-Version wurde auf 8 SR5 FP20 aktualisiert.
 
 ### 10. August 2018: Liberty-Buildpack v3.24-20180806-1313 aktualisiert
 * Die monatliche Liberty-Laufzeitversion wurde auf 2018.8.0.0 aktualisiert.
@@ -140,8 +106,8 @@ subcollection: "liberty"
 * Die Standardversion der Liberty-Laufzeit umfasst auch das PI75512 WebSockets iFix.
 * Die monatliche Liberty-Laufzeitversion wurde auf das Release [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/) aktualisiert.
 * Die IBM JRE-Versionen 8 und 7.1 wurden auf SR4 FP1 aktualisiert.
-* Die Unterstützung für die automatische Konfiguration wurde auf [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html) erweitert.
-* Die Unterstützung für die automatische Konfiguration für [Cloudant NoSQL Database](/docs/services/Cloudant/index.html) wurde aktualisiert, um die Option zur Verwendung von Cloudant Java Library anstelle von org.ektorp zur Verfügung zu stellen. Um die Verwendung von Cloudant Java Library zu aktivieren, müssen Sie die folgende Umgebungsvariable festlegen:    
+* Die Unterstützung für die automatische Konfiguration wurde auf [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html) erweitert.
+* Die Unterstützung für die automatische Konfiguration für [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) wurde aktualisiert, um die Option zur Verwendung von Cloudant Java Library anstelle von org.ektorp zur Verfügung zu stellen. Um die Verwendung von Cloudant Java Library zu aktivieren, müssen Sie die folgende Umgebungsvariable festlegen:    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -152,12 +118,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 23. Januar 2017: Liberty-Buildpack v3.7-20170118-2046 aktualisiert
 * Die monatliche Liberty-Laufzeit wurde auf das Release [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/) aktualisiert.
 * Die IBM JRE-Version 8 wurde auf die Version SR3 FP22 aktualisiert.
-* Die Unterstützung für die [automatische Konfiguration](autoConfig.html) wurde auch auf den [Service 'Compose for MongoDB'](/docs/services/ComposeForMongoDB/index.html) erweitert. (Aktuell nur über die monatliche Liberty-Laufzeit verfügbar.)
+* Die Unterstützung für die [automatische Konfiguration](autoConfig.html) wurde auch auf den [Service 'Compose for MongoDB'](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) erweitert. (Aktuell nur über die monatliche Liberty-Laufzeit verfügbar.)
 
 ### 13. Dezember 2016: Liberty-Buildpack v3.6-20161209-1351 aktualisiert
 * Die Standardversion der Liberty-Laufzeit wurde auf Release [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661) aktualisiert.
 * Die IBM JRE-Version 8 wurde auf die Version SR3 FP21 aktualisiert.
-* Die Unterstützung für die [automatische Konfiguration](autoConfig.html) wurde auch auf den [Service 'Compose for PostgreSQL'](/docs/services/ComposeForPostgreSQL/index.html) erweitert.
+* Die Unterstützung für die [automatische Konfiguration](autoConfig.html) wurde auch auf den [Service 'Compose for PostgreSQL'](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html) erweitert.
 * Das Buildpack stellt auch eine aktualisierte Version des Agenten für den [Service 'Auto-Scaling'](/docs/services/Auto-Scaling/index.html) bereit.
 * Das Buildpack wurde für die Unterstützung von Umgebungsvariablen als Teil der Includepositionen (include locations) in den Dateien `server.xml`-Dateien aktualisiert.
 
@@ -169,7 +135,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * Die Integration des Service 'Monitoring and Analytics' wurde verändert, um die Funktion mit [Diego ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html) zu ermöglichen.
 * Die Serviceintegrationen von [Dynatrace](dynatrace.html) wurden aktualisiert, um eine bessere Funktion mit den Serviceangeboten von Dynatrace zu ermöglichen.
 * Die Unterstützung für die [automatische Konfiguration](autoConfig.html) für die PostgreSQL- und MySQL-Servicetypen wurde verbessert, damit die Bereitstellung eines Serververzeichnisses oder eines paketierten Servers besser zu funktioniert.
-* Die Node.js-Laufzeit, die von den [App-Management-Dienstprogrammen 'devconsole' und 'shell'](docs/runtimes-common/app_mng.html#app_management) verwendet wird, wurde auf die neueste Version `0.12.17` aktualisiert.
+* Die Node.js-Laufzeit, die von den [App-Management-Dienstprogrammen 'devconsole' und 'shell'](../common/app_mng.html#app_management) verwendet wird, wurde auf die neueste Version `0.12.17` aktualisiert.
 * [Sicherheitsfixes](http://www.ibm.com/support/docview.wss?uid=swg21994945) für die Liberty-Laufzeit sind eingeschlossen.
 
 ### 1. November 2016: Liberty-Buildpack v3.4.1-20161030-2241 aktualisiert
@@ -380,3 +346,10 @@ Die aktualisierten JREs enthalten die [neuesten Sicherheitskorrekturen](http://w
   * Mit dem neuen Feature 'CouchDB' kann der Cloudant®-Service nun eine automatische Konfiguration der Liberty-Anwendung vornehmen, sodass Ihnen nun ein Connectorobjekt zur Verfügung steht. Das Parsing durch VCAP_SERVICES und die Angabe der Ektorp-Client-JAR-Dateien ist nicht mehr erforderlich.
 * Die neue Version von IBM SDK for Java ist da!
   * Wenn Sie nun eine weitere Push-Operation für Ihre Anwendungen durchführen, wird IBM SDK for Java Version 7.1-1.0 verwendet. Dies führt zu einer deutlichen Leistungsverbesserung. Der Durchsatz Ihrer Anwendung wird sich erhöhen und die Speicherbelegung wird reduziert. Weitere Informationen zu IBM Java SDK finden Sie [hier](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
+
+# Zugehörige Links
+{: #rellinks notoc}
+## Allgemein
+{: #general notoc}
+  * [Liberty-Laufzeit](index.html)
+  * [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="PHP" audience="runtime" arm="385" href="/docs/runtimes/php/getting-started.html" path="runtimes/php"}
+{: .toc subcollection="PHP" audience="runtime" arm="385" href="/docs/runtimes/php/getting-started.html"}}
 PHP
 
     {: .navgroup id="learn"}
@@ -10,18 +10,18 @@ PHP
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-	{: .topicgroup}
-    스타터 애플리케이션 및 커뮤니티 빌드팩
-	    /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
-    [Enforce HTTPS on all pages](runtimes/php/index.html#enforce_https)
+    ../common/workingWithProxy.md
+    [모든 페이지에서 HTTPS 강제 실행](index.html#enforce_https)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-	/runtimes-common/runtimes-common-working_with_proxy 
+    {: .topicgroup}
+    스타터 애플리케이션 및 빌드팩
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    /runtimes-common/runtimes-common-runtimes
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    ts_index.md
+    ../common/buildpackSupport.md
     {: .navgroup-end}

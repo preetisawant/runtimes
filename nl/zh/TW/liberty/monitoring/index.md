@@ -3,7 +3,6 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2017-02-08"
-subcollection: "liberty"
 
 ---
 
@@ -22,14 +21,14 @@ subcollection: "liberty"
 ## JConsole
 {: #jconsole notoc}
 
-若要使用 *JConsole* 來監視 Liberty，請參閱[使用 JConsole 在 Bluemix 中監視 Liberty](/docs/runtimes/liberty/monitoring/jconsole.html)
+若要使用 *JConsole* 來監視 Liberty，請參閱[使用 JConsole 在 Bluemix 中監視 Liberty](jconsole.html)
 
 ## Dynatrace
 {: #dynatrace notoc}
 
-若要使用 *Dynatrace* 來監視 Liberty，請參閱[使用 Dynatrace](/docs/runtimes/liberty/monitoring/dynatrace.html)
+若要使用 *Dynatrace* 來監視 Liberty，請參閱[使用 Dynatrace](dynatrace.html)
 
 ## New Relic
 {: #newrelic notoc}
 
-若要使用 *New Relic* 來監視 Liberty，請參閱[使用 New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)
+若要使用 *New Relic* 來監視 Liberty，請參閱[使用 New Relic](newRelic.html)

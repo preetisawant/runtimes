@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-20"
-subcollection: "Nodejs"
+  years: 2015, 2017
+lastupdated: "2017-10-26"
 
 ---
 
@@ -23,7 +22,7 @@ El paquete de compilación Node.js almacena en caché las versiones de tiempo de
 
 * Utilice el parámetro **nodo** en la sección **motores** del archivo **package.json** para especificar la versión de tiempo de ejecución de Node.js que desee ejecutar.
 
-* Si necesita especificar una versión de `npm` que no sea la versión empaquetada con Node.js, utilice el parámetro `npm` en la sección `engines` del archivo `package.json`.  
+* Si necesita especificar una versión de npm que no sea la versión empaquetada con Node.js., utilice el parámetro **npm** en la sección **engines** del archivo **package.json**.  
 
 Consulte el siguiente ejemplo:
 
@@ -40,4 +39,4 @@ Consulte el siguiente ejemplo:
 ```
 {: codeblock}
 
-**Nota:** especifique siempre una versión de nodo en el archivo `package.json`. Si no se especifica una versión, se utiliza la última versión del nodo.
+**Nota:** debería especificarse siempre una versión de nodo en el archivo **package.json**. Si no, se utilizará la versión del nodo más reciente.

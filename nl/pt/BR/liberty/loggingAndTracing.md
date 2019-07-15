@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-10"
-subcollection: "liberty"
 
 ---
 
@@ -111,3 +110,10 @@ Por padrão, os vários arquivos de dump são colocados no diretório `dumps` do
   {: codeblock}
 
 Também é possível usar `scp` e outras ferramentas semelhantes para visualizar e fazer download dos arquivos de dump. Consulte [Acessando apps com SSH ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) para obter mais informações.
+
+# rellinks
+{: #rellinks notoc}
+## geral
+{: #general notoc}
+* [Tempo de execução do Liberty](index.html)
+* [Visão geral do Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-03"
-subcollection: "liberty"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -22,7 +22,7 @@ subcollection: "liberty"
 * 推送服务器目录
 * 推送打包服务器
 
-重要信息：使用 Liberty buildpack 部署应用程序时，请为应用程序指定至少 512M 的内存限制。有关更多信息，请参阅[内存限制和 Liberty buildpack](/docs/runtimes/liberty/memoryLimits.html)。
+重要信息：使用 Liberty buildpack 部署应用程序时，请为应用程序指定至少 512M 的内存限制。有关更多信息，请参阅[内存限制和 Liberty buildpack](memoryLimits.html)。
 
 ## 独立应用程序
 {: #stand_alone_apps}
@@ -62,7 +62,7 @@ subcollection: "liberty"
 ```
 {: codeblock}
 
-注：为了获得最佳结果，请使用 JBP_CONFIG_LIBERTY 环境变量来设置 Liberty 功能，或者使用定制 server.xml 文件将应用程序部署为[服务器目录](/docs/runtimes/liberty/optionsForPushing.html#server_directory)或[打包服务器](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)。设置此环境变量将确保应用程序只使用其所需的功能，并且不受 buildpack 的缺省 Liberty 功能集更改的影响。如果需要提供功能集以外的额外 Liberty 配置，请使用[服务器目录](/docs/runtimes/liberty/optionsForPushing.html#server_directory)或[打包服务器](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)选项来部署应用程序。
+注：为了获得最佳结果，请使用 JBP_CONFIG_LIBERTY 环境变量来设置 Liberty 功能，或者使用定制 server.xml 文件将应用程序部署为[服务器目录](optionsForPushing.html#server_directory)或[打包服务器](optionsForPushing.html#packaged_server)。设置此环境变量将确保应用程序只使用其所需的功能，并且不受 buildpack 的缺省 Liberty 功能集更改的影响。如果需要提供功能集以外的额外 Liberty 配置，请使用[服务器目录](optionsForPushing.html#server_directory)或[打包服务器](optionsForPushing.html#packaged_server)选项来部署应用程序。
 
 如果部署了 WAR 文件，那么可以像在内嵌 ibm-web-ext.xml 文件中所设置的那样，在上下文根下访问 Web 应用程序。如果 ibm-web-ext.xml 文件不存在，或者未指定上下文根，那么可在根上下文下访问应用程序。例如，
 
@@ -248,3 +248,10 @@ http://<yourappname>.mybluemix.net/acme/
 * connection.password：用于向服务认证此应用程序的密码。密码由 Cloud Foundry 自动生成，例如 pvyCY0YzX9pu5。
 
 对于 Liberty buildpack 未自动配置的绑定服务，应用程序需要自己管理后端资源的访问。
+
+# 相关链接
+{: #rellinks notoc}
+## 常规
+{: #general notoc}
+* [Liberty 运行时](index.html)
+* [Liberty 概要文件概述](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

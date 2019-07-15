@@ -3,7 +3,6 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -13,7 +12,7 @@ subcollection: "liberty"
 # Use seu próprio JRE
 {: #using_own_jre}
 
-É possível executar o aplicativo Liberty no {{site.data.keyword.Bluemix}} com seu próprio JRE. O buildpack liberty-for-java fornecerá suporte para os [tempos de execução suportados pelo WebSphere Liberty](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13), mas não será possível garantir a funcionalidade completa de versões não suportadas. Deve-se concluir o seguinte para disponibilizar seu JRE para seu aplicativo.
+É possível executar o aplicativo Liberty no {{site.data.keyword.Bluemix}} com seu próprio JRE. Deve-se concluir o seguinte para disponibilizar seu JRE para seu aplicativo.
 * Hospede o JRE em um local de onde o buildpack possa fazer seu download.
 * Hospede um arquivo `index.yml` que fornece o local do JRE.
 * Configure seu aplicativo para usar seu JRE.
@@ -21,11 +20,11 @@ subcollection: "liberty"
 ## Hospede o JRE e o `index.yml`
 {: #hosting_jre}
 
-Deve-se hospedar o arquivo JRE em um servidor da web do qual o buildpack liberty-for-java pode fazer download. É possível hospedar o arquivo no {{site.data.keyword.Bluemix_notm}} com qualquer um dos recursos do servidor disponíveis ou é possível hospedá-lo em um local publicamente disponível. O servidor deve ser configurado com um arquivo `index.yml` que especifique detalhes sobre o arquivo JRE.
+Deve-se hospedar o arquivo JRE em um servidor da web do qual o buildpack do Liberty possa fazer download. É possível hospedar o arquivo no {{site.data.keyword.Bluemix_notm}} com qualquer um dos recursos do servidor disponíveis ou é possível hospedá-lo em um local publicamente disponível. O servidor deve ser configurado com um arquivo `index.yml` que especifique detalhes sobre o arquivo JRE.
 
 Conclua as etapas a seguir para hospedar o JRE e o arquivo `index.yml`:
   1. Adquira o JRE, que deve ser a versão para uso em um S.O. UNIX 64 de bits e deve ser um arquivo `tar.gz`.
-  2. Hospede o arquivo JRE em um local do qual o buildpack liberty-for-java pode fazer download dele.
+  2. Hospede o arquivo JRE em um local a partir do qual o buildpack do Liberty possa fazer download dele.
   3. Forneça um arquivo `index.yml` no local de hospedagem. O arquivo `index.yml` deve incluir uma entrada que contém um ID de versão do JRE seguido por dois-pontos e a URL completa do local do arquivo JRE.
     * Defina a versão JRE no arquivo `index.yml`.
 

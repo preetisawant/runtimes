@@ -44,7 +44,7 @@ Nel metodo `Main` Program.cs, rimuovi la seguente riga:
 ```
 {: codeblock}
 
-Queste modifiche consentono alla CLI .NET di trovare le `Views` della tua applicazione che saranno ora copiate nell'output di build quando viene eseguito il comando `dotnet run`.  Se la tua applicazione dispone di altri file, come ad esempio dei file di configurazione json, richiesti durante il runtime, devi quindi aggiungerli nella sezione `include` di `copyToOutput` nel file project.json del tuo progetto.
+Queste modifiche consentono alla CLI .NE di trovare le `Views` della tua applicazione che saranno ora copiate nell'output di build quando viene eseguito il comando `dotnet run`.  Se la tua applicazione dispone di altri file, come ad esempio dei file di configurazione json, richiesti durante il runtime, devi quindi aggiungerli nella sezione `include` di `copyToOutput` nel file project.json del tuo progetto.
 
 #### Utilizzo dello strumento MSBuild
 
@@ -71,4 +71,4 @@ Nel metodo `Main` Program.cs, rimuovi la seguente riga:
 ```
 {: codeblock}
 
-Queste modifiche consentono alla CLI .NET di trovare le `Views` della tua applicazione che saranno ora copiate nell'output di build quando viene eseguito il comando `dotnet publish`.  Se la tua applicazione dispone di altri file, come ad esempio dei file di configurazione json, richiesti durante il runtime, devi quindi aggiungerli nella proprietà `Include` dell'elemento `Content` nel file .csproj del tuo progetto, separati da punti e virgola.
+Queste modifiche consentono alla CLI .NE di trovare le `Views` della tua applicazione che saranno ora copiate nell'output di build quando viene eseguito il comando `dotnet publish`.  Se la tua applicazione dispone di altri file, come ad esempio dei file di configurazione json, richiesti durante il runtime, devi quindi aggiungerli nella proprietà `Include` dell'elemento `Content` nel file .csproj del tuo progetto, separati da punti e virgola.

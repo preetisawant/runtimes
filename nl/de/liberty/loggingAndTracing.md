@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-10"
-subcollection: "liberty"
 
 ---
 
@@ -102,3 +101,10 @@ Verschiedene Speicherauszugsdateien werden standardmäßig im Verzeichnis `dumps
   {: codeblock}
 
 Es ist auch möglich, `scp` und andere ähnliche Tools zu verwenden, um die Speicherauszugsdateien anzuzeigen und herunterzuladen. Weitere Informationen finden Sie unter [Accessing Apps with SSH ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html).
+
+# Zugehörige Links
+{: #rellinks notoc}
+## Allgemein
+{: #general notoc}
+* [Liberty-Laufzeit](index.html)
+* [Übersicht über Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

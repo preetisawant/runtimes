@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -33,7 +32,7 @@ subcollection: "liberty"
 
 部署应用程序时，将监视整个进程的内存使用量。如果内存使用量超出部署该应用程序指定的内存限制，那么内核会停止进程。此操作发生时不会有警告，可能会以几种方式体现。
 
- 如果应用程序部署期间超出“内存限制”，您会收到发生故障的消息，还可能会看到以下任一情况。
+ 如果应用程序部署期间超出“内存限制”，您会收到发生故障的消息，还可能会看到以下情况。
 
   * 您可能会看到应用程序不太稳定。
   * 还可能会看到应用程序多次尝试启动，但始终不成功。
@@ -74,4 +73,4 @@ subcollection: "liberty"
 ```
 {: codeblock}
 
-* 如果应用程序是[服务器目录](/docs/runtimes/liberty/optionsForPushing.html#server_directory)或[打包服务器](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)，请在 jvm.options 文件中指定 -Xmx 自变量。有关使用 `jvm.options` 文件及 Liberty 运行时的更多信息，请参阅[设置类属 JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474)。  
+* 如果应用程序是[服务器目录](optionsForPushing.html#server_directory)或[打包服务器](optionsForPushing.html#packaged_server)，请在 jvm.options 文件中指定 -Xmx 自变量。有关使用 `jvm.options` 文件及 Liberty 运行时的更多信息，请参阅[设置类属 JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474)。  

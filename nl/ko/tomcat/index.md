@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Tomcat"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -41,7 +40,7 @@ JBP_CONFIG_OPEN_JDK_JRE 환경 변수를 사용하여 앱에서 사용할 Java �
 두 환경 변수 모두 애플리케이션의 Manifest 파일에서 지정할 수 있습니다.  예를 들어, 다음과 같습니다.
 ```
     env:
-        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.5.+ }}'
+        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
@@ -54,7 +53,7 @@ JBP_CONFIG_OPEN_JDK_JRE 환경 변수를 사용하여 앱에서 사용할 Java �
 {{site.data.keyword.Bluemix_notm}} 내부 프록시를 신뢰하고 HTTP 트래픽을 HTTPS(SSL)로 경로를 재지정할 수 있도록 Tomcat 런타임을 구성할 수 있습니다.
 이 작업을 수행하려면 `server.xml` 파일을 수정하여 `RemoteIpValve` Valve 요소를 `internalProxies` 및 `protocolHeader` 옵션으로 설정하십시오.
 
-빌드팩에 포함된 Tomcat 런타임 [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml)은 기본적으로 `RemoteIpValve` Valve 요소의 `protocolHeader`만 설정합니다.  {{site.data.keyword.Bluemix_notm}}에서 HTTP 트래픽의 경로를 HTTPS로 재지정하려면 다음 예제에 표시된 대로 사용자 정의 `server.xml`에서 `RemoteIpValve` 요소를 구성하십시오.
+빌드팩에 포함된 Tomcat 런타임 [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml)은 기본적으로 `RemoteIpValve` Valve 요소의 `protocolHeader`만 설정합니다. {{site.data.keyword.Bluemix_notm}}에서 HTTP 트래픽의 경로를 HTTPS로 재지정하려면 다음 예제에 표시된 대로 사용자 정의 `server.xml`에서 `RemoteIpValve` 요소를 구성하십시오.
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />

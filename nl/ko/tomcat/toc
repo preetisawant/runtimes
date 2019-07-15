@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Tomcat" audience="runtime" arm="390" href="/docs/runtimes/tomcat/getting-started.html" path="runtimes/tomcat"}
+{: .toc subcollection="Tomcat" audience="runtime" arm="390" href="/docs/runtimes/tomcat/getting-started.html"}}
 Tomcat
 
     {: .navgroup id="learn"}
@@ -10,17 +10,19 @@ Tomcat
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-	{: .topicgroup}
-    스타터 애플리케이션 및 커뮤니티 빌드팩
-	    /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
+    eclipseTomcat.md
+    ../common/workingWithProxy.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-	/runtimes-common/runtimes-common-working_with_proxy 
+    {: .topicgroup}
+    스타터 애플리케이션 및 커뮤니티 빌드팩
+        ../common/starter_app_usage.md
+        ../common/byob.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    /runtimes-common/runtimes-common-runtimes
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    ts_index.md
+    [런타임 버전](index.html#runtime_versions)
+    ../common/buildpackSupport.md
     {: .navgroup-end}

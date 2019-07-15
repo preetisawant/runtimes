@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-20"
-subcollection: "Swift"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -14,7 +13,7 @@ subcollection: "Swift"
 # IBM Cloud Runtime for Swift
 {: #swift_runtime}
 
-Runtime for Swift en {{site.data.keyword.Bluemix}} está basado en el [paquete de compilación de {{site.data.keyword.Bluemix_notm}} para Swift](https://github.com/IBM-Swift/swift-buildpack) (es decir, swift_buildpack).
+Runtime for Swift en {{site.data.keyword.Bluemix}} está basado en el paquete de compilación de [{{site.data.keyword.Bluemix_notm}} for Swift](https://github.com/IBM-Swift/swift-buildpack) (es decir, swift_buildpack).
 El paquete de compilación proporciona un entorno de ejecución completo para aplicaciones Swift.
 {: shortdesc}
 
@@ -60,7 +59,7 @@ Se utiliza el swift_buildpack predeterminado en {{site.data.keyword.Bluemix_notm
 
 ## Entornos de desarrollador
 
-Los desarrolladores tienen varias opciones al crear aplicaciones del lado del servidor con Swift. Aquellos que utilicen dispositivos macOS de Apple podrían preferir utilizar Xcode IDE, aunque no es un requisito.  Las apps basadas en Swift que se desplegarán y ejecutarán en {{site.data.keyword.Bluemix_notm}} pueden utilizar cualquier editor de programación o IDE.  El realce y la comprobación de la sintaxis para Swift está disponible para muchos editores populares. La herramienta de línea de mandatos REPL de Swift que se incluye en los binarios desde [Swift.org ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/), permite una compilación y comprobación local antes de desplegar en {{site.data.keyword.Bluemix_notm}}.
+Los desarrolladores tienen varias opciones al crear aplicaciones del lado del servidor con Swift. Aquellos que utilicen dispositivos macOS de Apple podrían preferir utilizar Xcode IDE, aunque no es un requisito.  Las apps basadas en Swift que se desplegarán y ejecutarán en {{site.data.keyword.Bluemix_notm}} pueden utilizar cualquier editor de programación o IDE.  El realce y la comprobación de la sintaxis para Swift está disponible para muchos editores populares. La herramienta de línea de mandatos REPL de Swift que se incluye en los binarios desde [Swift.org![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://swift.org/), permite una compilación y comprobación local antes de desplegar en {{site.data.keyword.Bluemix_notm}}.
 
 Los usuarios de macOS pueden utilizar la [Kitura App ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.kitura.io/app.html) que simplifica la creación, el desarrollo, la gestión y el control de apps Swift del lado del servidor que se ejecutan en {{site.data.keyword.Bluemix_notm}}.  
 
@@ -73,7 +72,7 @@ Trabajar con la [infraestructura web de Kitura](http://ibm-swift.github.io/Kitur
 - [SwiftMetrics ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant y CouchDB ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/IBM-Swift/Swift-Kuery/)
+- [Swift Kuery ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/Swift-Kuery/)
 - [Swift Kuery ORM ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 Para encontrar más paquetes Swift para incluir en la aplicación, vaya a la sección de paquetes de [Kitura.io](https://www.kitura.io/packages.html). Los paquetes pueden añadirse a una aplicación Swift incluyendo los detalles de versión y el URL de Git del paquete en el archivo `Package.swift` de la app. Para obtener más detalles sobre la gestión de paquetes, consulte la [sección de Package Manager de Swift.org](https://swift.org/package-manager/).

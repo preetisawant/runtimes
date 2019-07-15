@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Tomcat"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -39,7 +38,7 @@ Vous pouvez modifier la version de Java que votre application doit utiliser en u
 Ces deux variables d'environnement peuvent être définies dans le fichier manifeste de l'application.  Par exemple :
 ```
     env:
-        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.5.+ }}'
+        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
@@ -52,7 +51,7 @@ Pour plus d'informations, voir les informations sur les [éditions java-buildpac
 L'environnement d'exécution Tomcat peut être configuré pour faire confiance aux proxy internes {{site.data.keyword.Bluemix_notm}} et autoriser la redirection du trafic HTTP vers HTTPS (SSL).
 Pour ce faire, modifiez le fichier `server.xml` et définissez l'élément `RemoteIpValve` Valve avec les options `internalProxies` et `protocolHeader`.
 
-Le fichier [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) de l'environnement d'exécution Tomcat inclus dans le pack de construction ne définit par défaut que l'option `protocolHeader` pour l'élément `RemoteIpValve` Valve.  Pour rediriger le trafic HTTP vers HTTPS dans {{site.data.keyword.Bluemix_notm}}, configurez l'élément `RemoteIpValve` dans le fichier `server.xml` personnalisé, comme illustré dans l'exemple suivant :
+Le fichier [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml) de l'environnement d'exécution Tomcat inclus dans le pack de construction ne définit par défaut que l'option `protocolHeader` pour l'élément `RemoteIpValve` Valve. Pour rediriger le trafic HTTP vers HTTPS dans {{site.data.keyword.Bluemix_notm}}, configurez l'élément `RemoteIpValve` dans le fichier `server.xml` personnalisé, comme illustré dans l'exemple suivant :
 
 ```
  <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto' internalProxies='.*' />

@@ -1,48 +1,21 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-18"
-subcollection: "Nodejs"
+  years: 2015, 2018
+lastupdated: "2018-07-24"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# SDK for Node.js 建置套件的最新更新
+# SDK for Node.js 建置套件的最新更新項目
 {: #latest_updates}
 
-sdk-for-nodejs 建置套件中的最新更新清單。
-
-## 2019 年 3 月 18 日：已更新 Node.js 建置套件 v3.26
-
-SDK for Node.js 建置套件 3.26 版提供 IBM SDK for Node.js 4.8.5 版、4.8.7 版，以及 Node.js 社群 6.16.0 版、6.17.0 版、8.15.0 版、8.15.1 版、10.15.0  版及 10.15.3 版。預設值是最新的 6.x，因此它目前是 6.17.0。
-
-## 2019 年 1 月 23 日：已更新 Node.js 建置套件 3.25.1 版
-
-SDK for Node.js 建置套件 3.25.1 版提供 IBM SDK for Node.js 4.8.5 版、4.8.7 版，以及 Node.js 社群 6.14.4 版、6.16.0 版、8.11.4 版、8.15.0 版、10.10.0 版及 10.15.0 版。預設值是最新的 6.x，因此它目前是 6.16.0。最後一個建置套件中已包含的 6.15.0 版、8.14.0 版及 10.14.0 版具有迴歸。迴歸已在現在改為包含的 6.16.0、8.15.0 及 10.15.0 中修正。
-
-## 2019 年 1 月 7 日：已更新 Node.js 建置套件 3.25 版
-
-SDK for Node.js 建置套件 3.25 版提供 IBM SDK for Node.js 4.8.5 版、4.8.7 版，以及 Node.js 社群 6.14.4 版、6.15.0 版、8.11.4 版、8.14.0 版、10.10.0 版及 10.14.0 版。預設值是最新的 6.x，因此它目前是 6.15.0。此建置套件也會修正 Dynatrace 連結鉤中的次要錯誤。
-
-## 2018 年 12 月 5 日：已更新 Node.js 建置套件 3.24 版
-
-SDK for Node.js 建置套件 3.24 版提供 IBM SDK for Node.js 4.8.5 版、4.8.7 版，以及 Node.js 社群 6.14.3 版、6.14.4 版、8.11.3 版、8.11.4 版、10.9.0 版及 10.10.0 版。預設值是最新的 6.x，因此它目前是 6.14.4。此建置套件也會修正 Dynatrace 連結鉤中的次要錯誤。
-
-## 2018 年 9 月 7 日：已更新 Node.js 建置套件 3.22 版
-{:#fips-deprecation}
-
-**重要事項**：從這個建置套件開始，SDK for Node.js 建置套件包含了 6.x 和 8.x 版的 Node.js 社群版本運行環境。由於這項變更，Node.js OpenSSL FIPS 模組不再包含於這些版本的建置套件中。只有 4.x 版繼續包含 OpenSSL FIPS 模組。  
-
-SDK for Node.js 建置套件 3.22 版提供 IBM SDK for Node.js 4.8.5、4.8.7 版，以及 Node.js 社群版本 6.14.3、8.11.3 及 8.11.4。預設值是最新的 6.x，因此它目前是 6.14.4。
-
-此版本也包含下列安全漏洞的修正程式：
-* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
+sdk-for-nodejs 建置套件中的最新更新項目清單。
 
 ## 2018 年 7 月 24 日：已更新 Node.js 建置套件 3.21 版
-
+{:#fips-deprecation}
 **重要事項**：從這版的最新 Node.js 6.x 和 8.x 版本開始，SDK for Node.js 建置套件是以 Node.js 社群版本為基礎。由於這項變更，將不再更新建置套件中的 Node.js OpenSSL FIPS 模組。現行 OpenSSL FIPS 模組和 IBM SDK for Node.js 建置在 2018 年 8 月 24 日為止符合移除資格。如需相關資訊，請參閱 [Aligning the Node.js Buildpack to Community Runtimes ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660) 部落格文章。
 
 SDK for Node.js 建置套件 3.21 版提供 IBM SDK for Node.js 4.8.5、4.8.7、6.13.0 及 8.9.4 版，以及 Node.js 社群版本 6.14.3 及 8.11.3。預設值是最新的 6.x，因此它目前是 6.14.3。
@@ -51,13 +24,13 @@ SDK for Node.js 建置套件 3.21 版提供 IBM SDK for Node.js 4.8.5、4.8.7、
 * [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
 
 ## 2018 年 6 月 1 日：已更新 Node.js 建置套件 3.20.2 版
-SDK for Node.js 建置套件 3.20.2 版新增現行 Node.js 運行環境的 Dynatrace Managed PaaS 整合。
+SDK for Node.js 建置套件 3.20.2 版新增現行 Node.js 運行環境的 Dynatrace Managed PaaS 整合。請參閱[使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Node.js](dynatrace.html)。
 
 ## 2018 年 5 月 17 日：已更新 Node.js 建置套件 3.20.1 版
-SDK for Node.js 建置套件 3.20.1 版修正現行 Node.js 運行環境的 Dynatrace PaaS 整合。
+SDK for Node.js 建置套件 3.20.1 版修正現行 Node.js 運行環境的 Dynatrace PaaS 整合。請參閱[使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Node.js](dynatrace.html)。
 
 ## 2018 年 4 月 9 日：已更新 Node.js 建置套件 3.20 版
-SDK for Node.js 建置套件 3.20 版新增現行 Node.js 運行環境的 Dynatrace PaaS 整合。
+SDK for Node.js 建置套件 3.20 版新增現行 Node.js 運行環境的 Dynatrace PaaS 整合。請參閱[使用 Dynatrace 在 {{site.data.keyword.cloud_notm}} 中監視 Node.js](dynatrace.html)。
 
 ## 2018 年 3 月 16 日：已更新 Node.js 建置套件 3.19 版
 SDK for Node.js 建置套件 3.19 版提供 IBM SDK for Node.js 4.8.5 版、4.8.7 版、6.12.3 版、6.13.0 版、8.9.3 版及 8.9.4 版。預設值是最新的 6.x，因此它目前是 6.13.0。
@@ -106,7 +79,7 @@ SDK for Node.js 建置套件 3.12 版提供 IBM SDK for Node.js 0.12.17、0.12.1
 ## 2016 年 10 月 7 日：已更新 Node.js 建置套件 v3.8-20161006-1211
 這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.46、0.10.47、0.12.15、0.12.16、4.5.0、4.6.0、6.6.0 及 6.7.0。預設值現在是 4.6.0。
 
-除了新的運行環境之外，這個版本還包含建置套件錯誤修正程式。使用 Node.js 6.x 以及 v3.7-20160826-1101 版更新所提及的「開發模式」時的已知問題修正程式就是其中一個。這個版本同時還與 [Cloud Foundry Node.js 建置套件 v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) 同步。
+除了新的運行環境之外，這個版本還包含建置套件錯誤修正程式。使用 Node.js 6.x 以及 v3.7-20160826-1101 版更新項目所提及的「開發模式」時的已知問題修正程式就是其中一個。這個版本同時還與 [Cloud Foundry Node.js 建置套件 v1.5.20](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.20) 同步。
 
 ## 2016 年 8 月 26 日：已更新 Node.js 建置套件 v3.7-20160826-1101
 這個版本的建置套件支援 IBM SDK for Node.js 運行環境版本：0.10.45、0.10.46、0.12.14、0.12.15、4.4.7、4.5.0、6.2.2 和 6.4.0。預設值現在是 4.5.0。
@@ -171,7 +144,7 @@ SDK for Node.js 建置套件 3.12 版提供 IBM SDK for Node.js 0.12.17、0.12.1
 
 此版本與 [Cloud Foundry 社群 Node.js](https://github.com/cloudfoundry/nodejs-buildpack) 建置套件完全同步。除了社群變更之外，也會修改特定預設值，並且進行最佳化來減少編譯打包時間，以及更新「應用程式管理」特性。
 
-* 建置套件更新：
+* 建置套件更新項目：
 
   * Node.js 4.2.4 版（IBM SDK for Node.js 第 4 版）現在是 {{site.data.keyword.Bluemix_notm}} 上的預設運行環境，取代 0.12.9 版。如果未針對應用程式指定特定版本，這項變更可能會造成您的應用程式有不同的行為。若要瞭解如何指定 {{site.data.keyword.Bluemix_notm}} 應用程式的 Node.js 版本，請參閱 [Node.js 運行環境](index.html)文件。
 
@@ -179,13 +152,13 @@ SDK for Node.js 建置套件 3.12 版提供 IBM SDK for Node.js 0.12.17、0.12.1
 
   * 已包括 Monitoring and Analytics 服務的錯誤修正程式。
 
-* 快取更新：
+* 快取更新項目：
 
   * 如果已停用快取 (NODE_MODULES_CACHE=false)，建置套件將不會嘗試快取任何模組/元件。先前此設定使得快取不會被取出，但它仍然會快取已安裝的模組供未來部署使用。現在，它將不會取出快取，也不會嘗試儲存任何快取。
 
   * 除了 node_modules 之外，依預設，還會快取 bower_components。
 
-* 其他更新：
+* 其他更新項目：
 
   * 已新增 gulp、bower 及 angular 這類遺漏相依關係的有用警告。
 

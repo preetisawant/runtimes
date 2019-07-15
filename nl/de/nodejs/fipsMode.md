@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-13"
+lastupdated: "2018-07-24"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2018-09-13"
 Die Node.js-Buildpack-Versionen v3.2-20160315-1257 bis v3.20.2-20180523-1639 unterstützen [FIPS ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards).  
 {: shortdesc}
 
-**Das OpenSSL-FIPS-Modul wird nicht weiter verwendet:** Ab Node.js-Buildpack Version 3.22 ist das OpenSSL-FIPS-Modul in Version 6.x und 8.x der Laufzeit nicht mehr verfügbar. Nur Version 4.x enthält das OpenSSL-FIPS-Modul weiterhin. Weitere Informationen finden Sie in [Neueste Aktualisierungen für das Node.js-Buildpack](updates.html#fips-deprecation).
+**Das OpenSSL-FIPS-Modul wird nicht weiterverwendet:** In Übereinstimmung mit der Node.js-Community-Version wird das OpenSSL-FIPS-Modul nicht weiterverwendet und kann ab 24. August 2018 entfernt werden. Weitere Informationen finden Sie in [Neueste Aktualisierungen für das Node.js-Buildpack](updates.html#fips-deprecation).
 
 Setzen Sie die Umgebungsvariable FIPS_MODE auf 'true', wenn Sie eine FIPS-fähige Knotenengine verwenden möchten.
 Beispiel:

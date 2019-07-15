@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-05-31"
-subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -11,10 +10,9 @@ subcollection: "Dotnet"
 {:codeblock: .codeblock}
 
 
-# Customize as fontes do pacote NuGet
+# Sobre a customização de fontes de pacote NuGet
 {: #customizing_nuget}
-
-É possível usar o arquivo `NuGet.Config` no diretório-raiz do aplicativo para controlar onde o aplicativo faz download das dependências. No exemplo a seguir, a configuração da propriedade `<packageSources>` define quaisquer chaves e URLs de API para o aplicativo para recuperar os pacotes.
+É possível usar o arquivo NuGet.Config no diretório raiz do aplicativo para controlar onde o aplicativo faz download de dependências. No exemplo a seguir, a configuração da propriedade `<packageSources>` define quaisquer chaves e URLs de API para o aplicativo para recuperar os pacotes.
 ```
    <?xml version="1.0" encoding="utf-8"?>
    <configuration>

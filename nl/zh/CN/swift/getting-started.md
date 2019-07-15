@@ -2,8 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-05"
-subcollection: "Swift"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -17,7 +16,6 @@ subcollection: "Swift"
 {:app_name: data-hd-keyref="app_name"}
 
 # 入门教程
-{: #getting-started}
 
 * {: download}恭喜您，您已在 {{site.data.keyword.Bluemix}} 上部署了 Hello World 样本应用程序！要开始使用，请按照本逐步指南进行操作。或者，<a class="xref" href="http://bluemix.net" target="_blank" title="（下载样本代码）"><img class="hidden" src="../../images/btn_starter-code.svg" alt="下载应用程序代码" />下载样本代码</a>并自行探究。
 
@@ -29,7 +27,7 @@ subcollection: "Swift"
 ## 开始之前
 {: #prereqs}
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
-* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * 适用于您平台的 [Swift 编译器 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://swift.org/download/)。
 
 ## 步骤 1：克隆样本应用程序
@@ -116,7 +114,7 @@ ibmcloud login
 ```
   {: codeblock}
 
-  如果您有联合用户标识，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](/docs/cli/login_federated_id.html)以了解更多信息。
+  如果您有联合用户标识，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
 
   ```
 ibmcloud login --sso
@@ -129,11 +127,10 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  如果未设置组织或空间，请参阅[添加组织和空间](/docs/account/orgs_spaces.html)。
+  如果未设置组织或空间，请参阅[添加组织和空间](https://console.bluemix.net/docs/account/orgs_spaces.html)。
   {: tip}
 
 1. 从 *get-started-swift* 目录中，将应用程序推送到 {{site.data.keyword.Bluemix_notm}}
-
   ```
 ibmcloud cf push
   ```
@@ -142,28 +139,22 @@ ibmcloud cf push
   这可能需要一分钟。如果部署过程中发生错误，可以使用命令 `ibmcloud cf logs <Your-App-Name> --recent` 进行故障诊断。
 
 部署完成后，应该会看到一条消息，指示应用程序正在运行。可以通过 push 命令输出中列出的 URL 查看应用程序。还可以发出以下命令来查看应用程序状态和 URL。
-
   ```
 ibmcloud cf apps
 ```
   {: codeblock}
 
-您还可以转至 {{site.data.keyword.Bluemix_notm}} [资源列表](https://cloud.ibm.com/resources)来查看应用程序。
-
 ## 步骤 5：添加数据库
 {: #add_database}
 
-接下来，我们要将 {{site.data.keyword.cloudant_short_notm}} NoSQL 数据库添加到此应用程序中，并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
+接下来，我们要将 {{site.data.keyword.cloudant_short_notm}} 数据库添加到此应用程序中，并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
 1. 在浏览器中，登录到 {{site.data.keyword.Bluemix_notm}}，然后转至“仪表板”。选择**创建资源**。
-1. 搜索 **{{site.data.keyword.cloudant_short_notm}}**，并选择服务。
-1. 针对**可用的认证方法**，选择**使用旧凭证和 IAM**。可以将其他字段保留缺省设置。单击**创建**来创建服务。
-1. 在导航中，转至**连接**，然后单击**创建连接**。选择应用程序，并单击**连接**。
-1. 使用缺省值，单击**连接并重新编译打包应用程序**以将数据库连接到应用程序。系统提示时，单击**重新编译打包**。
+2. 选择**数据和分析**部分，选择 **{{site.data.keyword.cloudant_short_notm}}**，然后创建该服务。
+3. 转至**连接**视图，选择应用程序，然后选择**创建连接**。
+4. 出现提示时，选择**重新编译打包**。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
 
-   {{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
-
-通过环境变量，可以将部署设置与源代码分开。例如，您可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
+通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
 {: tip}
 
 ## 步骤 6：使用数据库
@@ -202,7 +193,7 @@ ibmcloud cf apps
 使用 `cloudfoundry:cloudant` 配置中的 `cloudant` 占位符，可以更轻松地将用户提供的 Cloudant 服务绑定到应用程序。使用 `cloudfoundry:cloudant` 配置，可创建在服务名称中包含字符串 `cloudant` 的 Cloudant 服务，而无需编辑 `config.json` 文件。如果修改此配置，并在稍后想要使用用户提供的 Cloudant 服务，您需要编辑 `cloudfoundry:cloudant` 的配置或使用用户提供的服务名称定义 `cloudfoundry:`。
 {: tip}
 
-在 {{site.data.keyword.Bluemix_notm}} [资源列表](https://cloud.ibm.com/resources)中查找应用程序。在应用程序的“服务详细信息”页面上，单击侧边栏中的**连接**。单击 {{site.data.keyword.cloudant_short_notm}} 菜单图标 (**&hellip;**)，然后选择**查看凭证**。
+在浏览器中，转至 {{site.data.keyword.Bluemix_notm}} 仪表板，然后选择**_您的应用程序_ > 连接**。单击 {{site.data.keyword.cloudant_short_notm}} 菜单图标 (**&vellip;**)，然后选择**查看凭证**。
 
 仅将凭证复制并粘贴到本地 config.json 文件的相应字段中。
 
@@ -217,7 +208,7 @@ swift build
  ```
  {: codeblock}
 
- 查看应用程序：`http://localhost:8080`。现在，您输入到应用程序中的所有名称都已添加到数据库。
+ 查看应用程序：http://localhost:8080。现在，您输入到应用程序中的所有名称都已添加到数据库。
 
  此样本应用程序使用 `Kitura-CouchDB` 软件包与 Cloudant 进行交互。[了解更多...](https://github.com/IBM-Swift/Kitura-CouchDB)
 

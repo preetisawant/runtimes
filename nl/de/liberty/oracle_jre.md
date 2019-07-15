@@ -71,3 +71,10 @@ Um zu bestätigen, dass die erwartete JRE verwendet wird, überprüfen Sie das S
    -----> Downloading OpenJdk 1.8.0_91 from https://myHostingApp.ng.bluemix.net/jre-8u91-fcs-bin-b14-linux-x64-01_apr_2016.tar.gz (6.2s)
 ```
 {: codeblock}
+
+# Zugehörige Links
+{: #rellinks notoc}
+## Allgemein
+{: #general notoc}
+* [Liberty-Laufzeit](index.html)
+* [Übersicht über das Liberty-Profil](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

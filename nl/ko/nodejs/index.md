@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-06-21"
-subcollection: "Nodejs"
 ---
 
 {:shortdesc: .shortdesc}
@@ -29,8 +28,15 @@ var port = (process.env.PORT || 3000);
 ## 스타터 애플리케이션
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}}는 Node.js 스타터 애플리케이션을 제공합니다.  Node.js 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 Node.js 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 {{site.data.keyword.Bluemix_notm}} 환경을 변경하고 변경사항을 푸시할 수 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](/docs/runtimes-common/starter_app_usage.html)을 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 Node.js 스타터 애플리케이션을 제공합니다.  Node.js 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 Node.js 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 {{site.data.keyword.Bluemix_notm}} 환경을 변경하고 변경사항을 푸시할 수 있습니다. 스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../common/starter_app_usage.html)을 참조하십시오.
 
 ## App Management
 {: #app_management}
-{{site.data.keyword.Bluemix_notm}}는 Node.js 앱을 관리하고 디버깅하는 몇 가지 유틸리티를 제공합니다.  전체 세부사항은 [App Management](/docs/runtimes-common/app_mng.html)를 참조하십시오.
+{{site.data.keyword.Bluemix_notm}}는 Node.js 앱을 관리하고 디버깅하는 몇 가지 유틸리티를 제공합니다.  전체 세부사항은 [App Management](../common/app_mng.html)를 참조하십시오.
+
+# 관련 링크
+{: #rellinks notoc}
+## 일반
+{: #general notoc}
+* [Node.js ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://nodejs.org)
+* [IBM API Connect](https://strongloop.com/)

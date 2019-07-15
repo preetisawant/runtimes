@@ -3,7 +3,6 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -13,7 +12,7 @@ subcollection: "liberty"
 # 使用自己的 JRE
 {: #using_own_jre}
 
-您可以使用自己的 JRE 在 {{site.data.keyword.Bluemix}} 上运行 Liberty 应用程序。liberty-for-java buildpack 将支持 [WebSphere Liberty 支持的运行时](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13)，但无法保证不受支持版本的完全功能。必须完成以下操作，才能使 JRE 可用于应用程序。
+您可以使用自己的 JRE 在 {{site.data.keyword.Bluemix}} 上运行 Liberty 应用程序。必须完成以下操作，才能使 JRE 可用于应用程序。
 * 在 buildpack 可以下载该 JRE 的位置托管该 JRE。
 * 托管一个 `index.yml` 文件，该文件用于提供 JRE 的位置。
 * 配置应用程序，以使用您的 JRE。
@@ -21,11 +20,11 @@ subcollection: "liberty"
 ## 托管 JRE 和 `index.yml`
 {: #hosting_jre}
 
-必须在 liberty-for-java buildpack 可以从中下载该 JRE 文件的 Web 服务器上托管该文件。可以使用任一可用的服务器工具在 {{site.data.keyword.Bluemix_notm}} 上托管该文件，也可以在公共可用的位置进行托管。该服务器必须配置有一个 `index.yml` 文件，该文件用于指定有关 JRE 文件的详细信息。
+在 Liberty buildpack 可以下载该 JRE 文件的 Web 服务器中托管该文件。可以使用任一可用的服务器工具在 {{site.data.keyword.Bluemix_notm}} 上托管该文件，也可以在公共可用的位置进行托管。该服务器必须配置有一个 `index.yml` 文件，该文件用于指定有关 JRE 文件的详细信息。
 
 要托管 JRE 和 `index.yml` 文件，请完成以下步骤：
   1. 获取 JRE，该 JRE 必须是能够在 UNIX 64 位操作系统上使用的版本，并且必须是 `tar.gz` 文件。
-  2. 在 liberty-for-java buildpack 可以从中下载该 JRE 文件的位置中托管该文件。
+  2. 在 Liberty buildpack 可以下载该 JRE 文件的位置中托管该文件。
   3. 在托管位置提供 `index.yml` 文件。`index.yml` 文件中必须包含由以下各项组成的条目：JRE 的版本标识，后跟一个冒号和完整的 JRE 文件位置 URL。
     * 在 `index.yml` 文件中定义 JRE 版本。
 

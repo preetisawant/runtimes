@@ -2,8 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-05"
-subcollection: "Nodejs"
+lastupdated: "2018-07-03"
 ---
 
 {:shortdesc: .shortdesc}
@@ -17,7 +16,6 @@ subcollection: "Nodejs"
 
 
 # Esercitazione introduttiva
-{: #getting-started}
 
 * {: download} Congratulazioni, hai distribuito un'applicazione di esempio Hello World su {{site.data.keyword.Bluemix}}!  Per iniziare, segui questa guida dettagliata. O <a class="xref" href="http://bluemix.net" target="_blank" title="(Scarica il codice di esempio)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Scarica codice di esempio" />scarica codice di esempio</a> o esplora da solo.
 
@@ -30,8 +28,8 @@ In questi documenti, i riferimenti alla CLI Cloud Foundry sono ora aggiornati al
 {: #prereqs}
 
 Ti serviranno i seguenti account e strumenti:
-* [Account {{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com/registration)
-* [CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
+* [Account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
+* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
 * [Node ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://nodejs.org/en/){: new_window}
 
@@ -103,7 +101,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
+  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
   ```
 ibmcloud login --sso
   ```
@@ -116,7 +114,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](/docs/account/orgs_spaces.html).
+  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](https://console.bluemix.net/docs/account/orgs_spaces.html).
     {: tip}
 
 1. Dall'interno della directory *get-started-node*, trasmetti la tua applicazione a {{site.data.keyword.Bluemix_notm}}.
@@ -133,8 +131,6 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-Puoi anche andare all'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources) per visualizzare la tua applicazione.
-
 Puoi risolvere gli errori nel processo di distribuzione eseguendo il comando `ibmcloud cf logs <Your-App-Name> --recent`.
 {: tip}
 
@@ -144,14 +140,11 @@ Puoi risolvere gli errori nel processo di distribuzione eseguendo il comando `ib
 Successivamente, aggiungeremo un database NoSQL {{site.data.keyword.cloudant_short_notm}} a questa applicazione e la configureremo in modo che possa essere eseguita localmente e su {{site.data.keyword.Bluemix_notm}}.
 
 1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Crea risorsa**.
-1. Cerca **{{site.data.keyword.cloudant_short_notm}}** e seleziona il servizio.
-1. Per **Metodi di autenticazione disponibili**, seleziona **Utilizza sia credenziali legacy che IAM**. Puoi lasciare le impostazioni predefinite per gli altri campi. Fai clic su **Crea** per creare il servizio.
-1. Nella navigazione, vai a **Connessioni** e fai clic su **Crea connessione**. Seleziona la tua applicazione e fai clic su **Connetti**.
-1. Utilizzando i valori predefiniti, fai clic su **Collega e riprepara l'applicazione** per connettere il database alla tua applicazione. Fai clic su **Riprepara** quando ti viene richiesto.
+2. Scegli la sezione **Data and Analytics** e seleziona **{{site.data.keyword.cloudant_short_notm}}** e crea il tuo servizio.
+3. Passa alla vista **Connessioni** e seleziona la tua applicazione, quindi **Crea connessione**.
+4. Seleziona **Riprepara** quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
 
-   {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
-
-Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice sorgente. Ad esempio, invece di impostare come hardcoded una password del database, puoi memorizzarla in una variabile di ambiente a cui fai riferimento nel tuo codice sorgente.
+Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi archiviarla in una variabile di ambiente di riferimento nel tuo codice di origine.
 {: tip}
 
 ## Passo 6: Utilizza il database
@@ -175,7 +168,7 @@ Ora aggiorneremo il tuo codice locale per puntare a questo database. Creeremo un
   ```
   {: codeblock}
 
-2. Trova la tua applicazione nell'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources). Nella pagina Dettagli servizio per la tua applicazione, fai clic su **Connessioni** nella barra laterale. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) e seleziona **Visualizza credenziali**.
+2. Nel tuo browser, vai al dashboard {{site.data.keyword.Bluemix_notm}} e seleziona **_la_tua_applicazione_ > Connessioni**. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e seleziona **Visualizza credenziali**.
 
 3. Copia e incolla solo l'`url` dalle credenziali nel campo `url` del file `vcap-local.json`, sostituendo `CLOUDANT_DATABASE_URL`.
 

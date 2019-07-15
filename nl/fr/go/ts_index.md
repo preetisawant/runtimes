@@ -3,7 +3,6 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
-subcollection: "Go"
 ---
 
 {:shortdesc: .shortdesc}
@@ -15,4 +14,4 @@ subcollection: "Go"
 
 Dépannez vos applications et packs de construction Go avec les ressources suivantes :
 
-* [Traitement des incidents liés aux contextes d'exécution](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html#runtimes)

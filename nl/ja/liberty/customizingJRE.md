@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-01-11"
-subcollection: "liberty"
+  years: 2015, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -17,7 +16,8 @@ subcollection: "liberty"
 
 ## {{site.data.keyword.IBM_notm}}JRE
 
-デフォルトでは、アプリケーションは軽量版の {{site.data.keyword.IBM}} JRE で実行するように構成されます。 この軽量 JRE は、中核の重要な機能のみを提供するようにしたもので、ディスクおよびメモリーにおける占有スペースが大幅に削減されます。 軽量 JRE の内容について詳しくは、[Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html) を参照してください。
+デフォルトでは、アプリケーションは軽量版の {{site.data.keyword.IBM}} JRE で実行するように構成されます。 この軽量 JRE は、
+中核の重要な機能のみを提供するようにしたもので、ディスクおよびメモリーにおける占有スペースが大幅に削減されます。 軽量 JRE の内容について詳しくは、[Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html) を参照してください。
 
  デフォルトでは {{site.data.keyword.IBM_notm}} JRE バージョン 8 が使用されます。 別のバージョンの {{site.data.keyword.IBM_notm}} JRE を指定するには、JBP_CONFIG_IBMJDK 環境変数を使用します。 例えば、最新の {{site.data.keyword.IBM_notm}} JRE 7.1 を使用するには、以下の環境変数を設定します。
 ```
@@ -30,7 +30,8 @@ version プロパティーをバージョン範囲に設定することができ
 ## OpenJDK
 {: #openjdk}
 
-オプションで、JRE として OpenJDK を使用して実行するようにアプリケーションを構成できます。 アプリケーションを OpenJDK を使用して実行できるようにするには、JVM 環境変数を「openjdk」に設定します。 例えば、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールを使用して、次のコマンドを実行します。
+オプションで、JRE として OpenJDK を使用して実行するようにアプリケーションを構成できます。 アプリケーションを OpenJDK を使用して実行できるようにするには、JVM 環境変数を「openjdk」に設定します。 例えば、
+{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールを使用して、次のコマンドを実行します。
 ```
     ibmcloud cf set-env myapp JVM 'openjdk'
 ```
@@ -42,33 +43,12 @@ version プロパティーをバージョン範囲に設定することができ
 ```
 {: codeblock}
 
-version プロパティーは、1.7.+ や 1.8.+ などのバージョン範囲、または [使用可能な OpenJDK のバージョンのリスト](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)にリストされている特定のバージョンに設定できます。 最高の結果を得るには Java 8 を使用してください。
-
-## OpenJ9
-{: #openj9}
-
-オプションで、JRE または JDK として OpenJ9 で実行するようにアプリケーションを構成することができます。 アプリケーションを OpenJ9 で実行できるようにするには、JVM 環境変数を「openj9」に設定します。 例えば、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・ツールを使用して、次のコマンドを実行します。
-```
-    ibmcloud cf set-env myapp JVM 'openj9'
-```
-{: codeblock}
-
-有効な場合、OpenJ9 バージョン 11 がデフォルトで使用されます。 OpenJ9 の代替バージョンを指定するには、JBP_CONFIG_OPENJ9 環境変数を使用します。 例えば、最新の OpenJ9 8 を使用するには、次のように環境変数を設定します。
-```
-    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
-```
-{: codeblock}
-
-有効な場合、OpenJ9 JRE がデフォルトで使用されます。 OpenJ9 の JDK バージョンを使用するには、JBP_CONFIG_OPENJ9 環境変数を使用します。 例えば、OpenJ9 JDK を使用するには、次のように環境変数を設定します。
-```
-    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
-```
-{: codeblock}
+version プロパティーは、バージョン範囲 (例えば 1.7.+) に設定するか、[使用可能な OpenJDK バージョンのリスト](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml)に示されている、任意の特定のバージョンに設定することができます。 最高の結果を得るには Java 8 を使用してください。
 
 ## Oracle JRE
 {: #oracle_jre}
 
-Oracle JRE の使用については、『[独自の JRE の使用](/docs/runtimes/liberty/using_own_jre.html)』を参照してください。
+Oracle JRE の使用については、[『Oracle JRE の使用』](oracle_jre.html)を参照してください。
 
 ## JRE オプションの構成
 {: #configuring_jre}
@@ -79,10 +59,10 @@ Oracle JRE の使用については、『[独自の JRE の使用](/docs/runtime
 Liberty ビルドパックにより、以下を考慮して、デフォルト JVM オプションが構成されます。
 
 * アプリケーションのメモリー制限。  適用される JVM ヒープ設定は、以下に基づいて計算されます。
-  * アプリケーションのメモリー制限 ([『メモリー制限および Liberty ビルドパック』](/docs/runtimes/liberty/memoryLimits.html#memory_limits)を参照)
+  * アプリケーションのメモリー制限 ([『メモリー制限および Liberty ビルドパック』](memoryLimits.html#memory_limits)を参照)
   * JRE のタイプ (JVM のヒープ関連オプションは JRE でサポートされるオプションによって異なるため)
 
-* {{site.data.keyword.Bluemix_notm}} でサポートされている [Liberty フィーチャー](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures)。
+* [{{site.data.keyword.Bluemix_notm}} でサポートされている Liberty フィーチャー](libertyFeatures.html#libertyfeatures)。
   * {{site.data.keyword.Bluemix_notm}} では 2 フェーズ・コミット・グローバル・データベース・トランザクションはサポートされないため、-Dcom.ibm.tx.jta.disable2PC=true を設定して無効にされます。
 
 * {{site.data.keyword.Bluemix_notm}} 環境。
@@ -261,7 +241,7 @@ Diego セルで実行されているアプリケーションの `jvm.options` �
 ```
 {: codeblock}
 
- 生成されたダンプ・ファイルの表示およびダウンロードについて詳しくは、[ロギングおよびトレース](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps)の説明を参照してください。
+ 生成されたダンプ・ファイルの表示およびダウンロードについて詳しくは、[ロギングおよびトレース](loggingAndTracing.html#download_dumps)の説明を参照してください。
 
 ### JRE のオーバーレイ
 {: #overlaying_jre}
@@ -318,3 +298,10 @@ Diego セルで実行されているアプリケーションの `jvm.options` �
 {: codeblock}
 
 アプリケーションをプッシュすると、これらの jar が Java ランタイムのデフォルトのポリシー jar をオーバーレイします。 このプロセスにより、AES 256 ビット暗号化が有効になります。
+
+# 関連リンク
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Liberty ランタイム](index.html)
+* [Liberty プロファイル概要](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

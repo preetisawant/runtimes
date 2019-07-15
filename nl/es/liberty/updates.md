@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-01"
-subcollection: "liberty"
+  years: 2015, 2018
+lastupdated: "2018-08-10"
 
 ---
 
@@ -15,39 +14,6 @@ subcollection: "liberty"
 
 ## Una lista de las últimas actualizaciones del paquete de compilación de Liberty.
 
-### 1 de marzo de 2019: Actualizado el paquete de compilación de Liberty v3.29-20190223-2128
-
-* La versión de disponibilidad general del tiempo de ejecución de Liberty predeterminada es el release 18.0.0.4.
-* Se ha añadido la versión alternativa de disponibilidad general del tiempo de ejecución de Liberty 19.0.0.2.  
-* Las bibliotecas de cliente de Cloudant se han actualizado a 2.14.0.
-
-### 1 de febrero de 2019: Actualizado el paquete de compilación de Liberty v3.28-20190127-1723
-
-* La versión de disponibilidad general del tiempo de ejecución de Liberty predeterminada es el release 18.0.0.4.
-* Se ha añadido la versión alternativa de disponibilidad general del tiempo de ejecución de Liberty 19.0.0.1.  
-* Se ha eliminado el release beta de Liberty mensual.  
-* La versión de IBM JRE se ha actualizado a 8 SR5 FP27.
-* El cliente de MQ se ha actualizado al release 9.1.0.0.
-* Se ha actualizado el agente de escalado automático.
-
-### 14 de diciembre de 2018: se ha actualizado el paquete de compilación de Liberty v3.27-20181130-1702
-
-* Ahora el paquete de compilación incluye Java Platform, Enterprise Edition 8.0. Ya no es necesario instalar Java EE 8 cuando se envía por push una aplicación.  
-* La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release 18.0.0.4.
-* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release 2018.11.0.0.
-* La versión de IBM JRE se ha actualizado a 8 SR5 FP26.
-
-### 29 de octubre de 2018: se ha actualizado el paquete de compilación de Liberty v3.26-20181023-1545
-
-* La versión del tiempo de ejecución predeterminada de Liberty, `18.0.0.3`, se ha actualizado para incluir un arreglo para la [vulnerabilidad de seguridad CVE-2014-7810 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055).
-* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release 2018.10.0.0.
-* La versión de IBM JRE se ha actualizado a 8 SR5 FP22.
-
-### 21 de septiembre de 2018: se ha actualizado el paquete de compilación de Liberty v3.25-20180918-1034
-* Ahora el paquete de compilación da soporte a Java Platform, Enterprise Edition 8.0. Para utilizar Java EE 8, instale la característica de Liberty `javaee-8.0` cuando envíe por push la app. Encontrará más información en [Instalar características de Liberty](installFeatures.html).
-* La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release 18.0.0.3.
-* La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2018.8.0.1 ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/).
-* La versión de IBM JRE se ha actualizado a 8 SR5 FP20.
 
 ### 10 de agosto de 2018: Se ha actualizado el paquete de compilación de Liberty v3.24-20180806-1313
 * La versión de tiempo de ejecución mensual de Liberty se ha actualizado a 2018.8.0.0.
@@ -140,8 +106,8 @@ subcollection: "liberty"
 * El tiempo de ejecución predeterminado de Liberty también incluye el PI75512 WebSockets iFix.
 * La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/).
 * Las versiones de IBM JRE 8 y 7.1 se han actualizado a SR4 FP1.
-* El soporte de configuración automática se ha ampliado para que funciones con [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
-* El soporte de configuración automática para la [base de datos Cloudant NoSQL](/docs/services/Cloudant/index.html) se ha actualizado para ofrecer la opción de utilizar Cloudant Java Library en lugar de org.ektorp. Para permitir el uso de Cloudant Java Library, debe definir la siguiente variable de entorno:    
+* El soporte de configuración automática se ha ampliado para que funciones con [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
+* El soporte de configuración automática para la [base de datos Cloudant NoSQL](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) se ha actualizado para ofrecer la opción de utilizar Cloudant Java Library en lugar de org.ektorp. Para permitir el uso de Cloudant Java Library, debe definir la siguiente variable de entorno:    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -152,12 +118,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 23 de enero de 2017: se ha actualizado el paquete de compilación de Liberty v3.7-20170118-2046
 * La versión de tiempo de ejecución mensual de Liberty se ha actualizado al release [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/).
 * La versión 8 de IBM JRE se ha actualizado a la versión SR3 FP22.
-* El soporte de [configuración automática](autoConfig.html) se ha ampliado para que funcione con el [servicio Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (actualmente solo disponible con el tiempo de ejecución Liberty mensual).
+* El soporte de [configuración automática](autoConfig.html) se ha ampliado para que funcione con el [servicio Compose for MongoDB](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (actualmente solo disponible con el tiempo de ejecución Liberty mensual).
 
 ### 13 de diciembre de 2016: se ha actualizado el paquete de compilación de Liberty v3.6-20161209-1351
 * La versión de tiempo de ejecución predeterminada de Liberty se ha actualizado al release [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661).
 * La versión 8 de IBM JRE se ha actualizado a la versión SR3 FP21.
-* El soporte de [configuración automática](autoConfig.html) se ha ampliado para que funcione con el [servicio Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html).
+* El soporte de [configuración automática](autoConfig.html) se ha ampliado para que funcione con el [servicio Compose for PostgreSQL](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html).
 * El paquete de compilación también proporciona una versión actualizada del agente para el [Servicio de escalado automático](/docs/services/Auto-Scaling/index.html).
 * El paquete de compilación se ha actualizado para dar soporte a variables de entorno como parte de las ubicaciones incluidas en los archivos `server.xml`.
 
@@ -169,7 +135,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * La integración del servicio Monitoring and Analytics se ha corregido para que funcione con [Diego ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html).
 * Las integraciones de servicios [Dynatrace](dynatrace.html) se han actualizado para que funcionen mejor con las ofertas de servicios Dynatrace.
 * El soporte de [configuración automática](autoConfig.html) para el tipo de servicios PostgreSQL y MySQL se ha mejorado para que funcione mejor cuando se despliega un directorio de servidores o servidor empaquetado.
-* El tiempo de ejecución de Node.js utilizado por los [programas de utilidad devconsole y shell App Management](docs/runtimes-common/app_mng.html#app_management) se ha actualizado a la última versión `0.12.17`.
+* El tiempo de ejecución de Node.js utilizado por los [programas de utilidad devconsole y shell App Management](../common/app_mng.html#app_management) se ha actualizado a la última versión `0.12.17`.
 * Se incluyen [arreglos de seguridad](http://www.ibm.com/support/docview.wss?uid=swg21994945) para el tiempo de ejecución de Liberty.
 
 ### 1 de noviembre de 2016: se ha actualizado el paquete de compilación de Liberty v3.4.1-20161030-2241
@@ -308,7 +274,7 @@ algunas características como por ejemplo los EJB remotos no se admiten totalmen
 
 ### 15 de abril de 2015: se ha actualizado el paquete de compilación de Liberty v1.16-20150407-1737
 * Esta versión del paquete de compilación contiene un IBM JRE 7.1-2.11 actualizado con un [arreglo de seguridad para la vulnerabilidad Bar Mitzvah](http://www-01.ibm.com/support/docview.wss?uid=swg21882777).
-* Cuando se despliegan archivos WAR autónomos, si se proporciona, el paquete de compilación utilizará ahora la raíz de contexto especificada en el archivo **ibm-web-ext.xml** incorporado como la raíz de contexto de la aplicación. Con este cambio, las aplicaciones que antes se desplegaban bajo el contexto raíz se podrán desplegar bajo un contexto distinto, basándose en los parámetros del archivo **ibm-web-ext.xml**.
+* Cuando se despliegan archivos WAR autónomos, si se proporciona, el paquete de compilación utilizará ahora la raíz de contexto especificada en el archivo **ibm-web-ext.xml** incorporado como la raíz de contexto de la aplicación. Con este cambio, las aplicaciones que antes se desplegaban bajo el contexto raíz se podrá desplegar bajo un contexto distinto, en base al archivo **ibm-web-ext.xml**.
 
 ### 3 de abril de 2015: se ha actualizado el paquete de compilación de Liberty v1.15-20150402-1422
 * El paquete de compilación contiene una versión actualizada del perfil de Liberty basado en la versión [beta de marzo](https://developer.ibm.com/wasdev/blog/2015/03/13/announcing-liberty-beta-tools-march-2015/). La versión actualizada de los perfiles de Liberty hace que la función beta jsf-2.2 esté disponible en {{site.data.keyword.Bluemix_notm}}.
@@ -316,8 +282,8 @@ algunas características como por ejemplo los EJB remotos no se admiten totalmen
 
 ### 20 de marzo de 2015: se ha actualizado el paquete de compilación de Liberty v1.14-20150319-1159
 * Esta versión del paquete de compilación contiene un IBM JRE 7.1.2.11 actualizado con un arreglo de seguridad para la [vulnerabilidad de FREAK](http://www-01.ibm.com/support/docview.wss?uid=swg21699864).
-* El servicio de [base de datos SQL](services/SQLDB/index.html#SQLDB) ofrece planes de pago que proporcionan una opción para la conexión con el servidor de bases de datos sobre el protocolo SSL. El soporte de auto-configuración del paquete de compilación para el servicio de base de datos SQL se ha actualizado para configurar el tiempo de ejecución para conectar con la base de datos sobre SSL si está disponible la información de conexión SSL.
-* El paquete de compilación se ha actualizado para que informe de un error cuando se despliegue un archivo WAR o EAR que contiene un archivo de configuración **server.xml** en la raíz del archivo de la aplicación.
+* El servicio de [ base de datos SQL](services/SQLDB/index.html#SQLDB) ofrece planes de pago que proporcionan una opción para la conexión con el servidor de bases de datos sobre el protocolo SSL. El soporte de auto-configuración del paquete de compilación para el servicio de base de datos SQL se ha actualizado para configurar el tiempo de ejecución para conectar con la base de datos sobre SSL si está disponible la información de conexión SSL.
+* El paquete de compilación se ha actualizado para que informe de un error cuando se despliegue un archivo WAR o EAR que contiene un archivo de configuración **server.xml ** en la raíz del archivo de la aplicación.
 * El paquete de compilación contiene un arreglo para el plugin del servicio de auto-configuración que en algunos casos ha generado configuración de **server.xml** no válida.
 
 ### 10 de febrero de 2015: se ha actualizado el paquete de compilación de Liberty v1.13-20150209-1122
@@ -391,3 +357,10 @@ algunas características como por ejemplo los EJB remotos no se admiten totalmen
 * La versión nueva de IBM SDK para Java ya ha llegado.
   * Cuando las aplicaciones se envíen de nuevo, utilizarán IBM SDK para Java Versión 7.1-1.0. Se acompaña
 de una mejora sustancia en rendimiento. Su aplicación muestra mejor rendimiento y un menor uso de la memoria. Consulte más información sobre IBM Java SDK [aquí](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
+
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
+  * [Tiempo de ejecución de Liberty](index.html)
+  * [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

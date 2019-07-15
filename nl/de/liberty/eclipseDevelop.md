@@ -29,7 +29,7 @@ Sie benötigen die folgenden Konten und Tools:
 * [Eclipse IDE for Java EE Developers ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon2){: new_window}
 
 Wenn Sie das [Lernprogramm zur Einführung](getting-started.md) ausgeführt haben, haben Sie diese Tools und Konten möglicherweise bereits installiert. Stellen Sie vor dem Starten sicher, dass auch Folgendes installiert und registriert ist:
-* [{{site.data.keyword.Bluemix_notm}}-Konto](https://cloud.ibm.com/registration)
+* [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/registration/)
 * [{{site.data.keyword.Bluemix_notm}}-CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://maven.apache.org/download.cgi){: new_window}
@@ -94,7 +94,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Wenn Sie sich nicht mit `ibmcloud login` anmelden können, weil Sie eine eingebundene Benutzer-ID haben, verwenden Sie den folgenden Befehl, um sich mit Ihrer Single Sign-on-ID anzumelden. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](https://cloud.ibm.com/docs/iam?topic=iam-federated_id#federated_id).
+  Wenn Sie sich nicht mit `ibmcloud login` anmelden können, weil Sie eine eingebundene Benutzer-ID haben, verwenden Sie den folgenden Befehl, um sich mit Ihrer Single Sign-on-ID anzumelden. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id).
 
   ```
 ibmcloud login --sso
@@ -108,7 +108,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Wenn Sie keine eingerichtete Organisation oder keinen eingerichteten Bereich haben, finden Sie weitere Informationen unter [Organisationen und Bereiche hinzufügen](https://cloud.ibm.com/docs/account?topic=account-orgsspacesusers#orgsspacesusers).
+  Wenn Sie keine eingerichtete Organisation oder keinen eingerichteten Bereich haben, finden Sie weitere Informationen unter [Organisationen und Bereiche hinzufügen](https://console.bluemix.net/docs/account/orgs_spaces.html).
   {: tip}
 
 ## Schritt 5: Entwickeln Sie mit Eclipse.

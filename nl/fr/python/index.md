@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Python"
-
+lastupdated: "2018-08-21"
 
 ---
 
@@ -24,7 +22,7 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui peut servir de modèle pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}.  Voir [Utilisation des applications de démarrage](docs/runtimes-common/starter_app_usage.html) pour obtenir de l'aide.
+{{site.data.keyword.Bluemix_notm}} propose une application de démarrage Python.  L'application de démarrage Python est une appli Python simple qui peut servir de modèle pour votre appli. Vous pouvez expérimenter cette application et effectuer des modifications puis les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}.  Voir [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide.
 
 ## Versions d'environnement d'exécution
 {: #runtime_versions}
@@ -32,7 +30,7 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 Vous pouvez spécifier la version de Python à utiliser par votre appli en définissant python-versionnumber dans le fichier runtime.txt se trouvant à la racine de votre application. Par exemple :
 
 ```
-python-3.6.4
+python-3.6.1
 ```
 {: codeblock}
 
@@ -55,3 +53,9 @@ Les versions de Python suivantes sont disponibles dans le [pack de construction 
 * 3.6.4
 
 Si votre application requiert une version de Python qui n'est pas répertoriée, vous pouvez utiliser le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack) externe pour la déployer.
+
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
+* [Cloud Foundry buildpack for Python](https://github.com/cloudfoundry/python-buildpack)

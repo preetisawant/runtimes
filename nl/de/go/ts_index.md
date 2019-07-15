@@ -3,7 +3,6 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
-subcollection: "Go"
 ---
 
 {:shortdesc: .shortdesc}
@@ -15,4 +14,4 @@ subcollection: "Go"
 
 Verwenden Sie die folgenden Ressourcen zur Fehlerbehebung bei Ihren Go-Anwendungen und -Buildpacks:
 
-* [Fehlerbehebung für Laufzeiten](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Fehlerbehebung für Laufzeiten](../common/ts_runtimes.html#runtimes)

@@ -3,7 +3,6 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
-subcollection: "Python"
 
 ---
 
@@ -15,5 +14,5 @@ subcollection: "Python"
 
 Dépannez vos applications et packs de construction Python avec les ressources suivantes :
 
-* [Traitement des incidents liés aux contextes d'exécution](docs/runtimes-common/ts_runtimes.html#runtimes)
-* [Traitement des incidents liés aux contextes d'exécution : Python](docs/runtimes-common/ts_runtimes.html#ts_python)
+* [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html#runtimes)
+* [Traitement des incidents liés aux contextes d'exécution : Python](../common/ts_runtimes.html#ts_python)

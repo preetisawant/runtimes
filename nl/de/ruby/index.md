@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Ruby"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -32,7 +31,7 @@ Sie können die Version von Ruby, die von Ihrer App verwendet werden soll, im El
 
 ```
   source 'https://rubygems.org'
-  ruby '2.5.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
@@ -55,3 +54,10 @@ Folgende Ruby-Versionen stehen im [Ruby-Buildpack](https://github.com/cloudfound
 * 2.5.0
 
 Wenn für Ihre App eine Ruby-Version erforderlich ist, die nicht aufgelistet ist, können Sie die App mit dem externen [Ruby-Buildpack](https://github.com/cloudfoundry/ruby-buildpack) implementieren.
+
+# Zugehörige Links
+{: #rellinks notoc}
+## Allgemein
+{: #general notoc}
+* [Cloud Foundry-Buildpack für Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
+* [Dokumentation zu Ruby on Rails ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://api.rubyonrails.org/)

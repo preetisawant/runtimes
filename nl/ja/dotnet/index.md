@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-25"
-subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -26,4 +25,11 @@ subcollection: "Dotnet"
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} には、ASP.NET Core スターター・アプリケーションが用意されています。  ASP.NET Core スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルなアプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](docs/runtimes-common/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、ASP.NET Core スターター・アプリケーションが用意されています。  ASP.NET Core スターター・アプリケーションは、使用可能なテンプレートを提供する、シンプルなアプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../common/starter_app_usage.html)を参照してください。
+
+# 関連リンク
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
+* [ASP.NET Core Overview](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}

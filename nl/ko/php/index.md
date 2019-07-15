@@ -3,7 +3,6 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-08-21"
-subcollection: "PHP"
 
 ---
 
@@ -15,6 +14,7 @@ subcollection: "PHP"
 {: #php_runtime}
 
 {{site.data.keyword.Bluemix}}의 PHP 런타임은 php_buildpack을 통해 제공됩니다.
+
 php_buildpack은 PHP 앱을 위한 완전한 런타임 환경을
 제공합니다.
 {: shortdesc}
@@ -28,7 +28,7 @@ php_buildpack은 다음과 같은 조건에서 사용됩니다.
 {: #starter_application}
 
 {{site.data.keyword.Bluemix}}는 PHP 스타터 애플리케이션을 제공합니다.  PHP 스타터 애플리케이션은 앱에 사용할 수 있는 템플리트를 제공하는 단순한 PHP 앱입니다. 스타터 앱을 사용하여 시험해 볼 수 있으며 {{site.data.keyword.Bluemix}} 환경을 변경하고 변경사항을 푸시할 수
-있습니다.  스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](docs/runtimes-common/starter_app_usage.html)을 참조하십시오.
+있습니다.  스타터 애플리케이션 사용에 대한 도움말은 [스타터 애플리케이션 사용](../common/starter_app_usage.html)을 참조하십시오.
 
 ## 애플리케이션의 모든 페이지에서 HTTPS 강제 실행
 {: #enforce_https}

@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Ruby"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -31,7 +30,7 @@ subcollection: "Ruby"
 
 ```
   source 'https://rubygems.org'
-  ruby '2.5.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
 gem 'haml', '>= 0'
 gem 'json', '>=0'
@@ -54,3 +53,10 @@ gem 'json', '>=0'
 * 2.5.0
 
 如果您应用程序所需的 Ruby 版本没有列在上述列表中，那么可以使用外部 [Ruby buildpack](https://github.com/cloudfoundry/ruby-buildpack) 来部署应用程序。
+
+# 相关链接
+{: #rellinks notoc}
+## 常规
+{: #general notoc}
+* [用于 Ruby 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/cf-buildpack-ruby)
+* [Ruby on Rails 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://api.rubyonrails.org/)

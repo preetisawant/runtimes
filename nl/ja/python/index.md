@@ -2,9 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Python"
-
+lastupdated: "2018-08-21"
 
 ---
 
@@ -24,7 +22,7 @@ python_buildpack は、アプリケーションのルート・ディレクトリ
 ## スターター・アプリケーション
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} には、Python スターター・アプリケーションが用意されています。  Python スターター・アプリケーションは、アプリケーションに使用できるテンプレートを提供する、シンプルな Python アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](docs/runtimes-common/starter_app_usage.html)を参照してください。
+{{site.data.keyword.Bluemix_notm}} には、Python スターター・アプリケーションが用意されています。  Python スターター・アプリケーションは、アプリケーションに使用できるテンプレートを提供する、シンプルな Python アプリケーションです。 スターター・アプリケーションを試し、{{site.data.keyword.Bluemix_notm}} 環境に対して変更を行い、プッシュすることができます。  スターター・アプリケーションの使用に関するヘルプについては、[『スターター・アプリケーションの使用』](../common/starter_app_usage.html)を参照してください。
 
 ## ランタイム・バージョン
 {: #runtime_versions}
@@ -32,7 +30,7 @@ python_buildpack は、アプリケーションのルート・ディレクトリ
 アプリケーションのルートにある runtime.txt ファイルで python-versionnumber を設定することにより、アプリケーションで使用する Python のバージョンを指定できます。 例えば、次のように指定します。
 
 ```
-python-3.6.4
+python-3.6.1
 ```
 {: codeblock}
 
@@ -55,3 +53,9 @@ python-3.6.4
 * 3.6.4
 
 アプリケーションが、リストされていない Python バージョンを必要とする場合は、外部の [Python ビルドパック](https://github.com/cloudfoundry/python-buildpack)を使用してアプリケーションをデプロイできます。
+
+# 関連リンク
+{: #rellinks notoc}
+## 一般
+{: #general notoc}
+* [Cloud Foundry buildpack for the Python Language](https://github.com/cloudfoundry/python-buildpack)

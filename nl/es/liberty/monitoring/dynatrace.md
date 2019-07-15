@@ -3,7 +3,6 @@
 copyright:
   years: 2016, 2018
 lastupdated: "2018-06-27"
-subcollection: "liberty"
 
 ---
 
@@ -13,7 +12,7 @@ subcollection: "liberty"
 # Utilización de Dynatrace para supervisar Liberty en {{site.data.keyword.cloud_notm}}
 {: #using_dynatrace}
 
-Dynatrace es un servicio de otro proveedor que proporciona supervisión de la app. Puede integrar Dynatrace con la aplicación Liberty, pero IBM no proporciona soporte para servicios de terceros. Consulte [Servicios de terceros](/docs/runtimes-common/buildpackSupport.html#third-party) para obtener más información.
+Dynatrace es un servicio de otro proveedor que proporciona supervisión de la app. Puede integrar Dynatrace con la aplicación Liberty, pero IBM no proporciona soporte para servicios de terceros. Consulte [Servicios de terceros](../../common/buildpackSupport.html#third-party) para obtener más información.
 
 Para obtener más información sobre Dynatrace y su licencia, consulte [Supervisión de la aplicación Dynatrace ![Icono de enlace externo](../../../icons/launch-glyph.svg "Icono de enlace externo")](http://www.dynatrace.com/en/products/application-monitoring.html).
 

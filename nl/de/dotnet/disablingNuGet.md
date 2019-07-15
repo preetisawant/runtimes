@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-20"
-subcollection: "Dotnet"
+lastupdated: "2018-06-27"
 ---
 
 {:shortdesc: .shortdesc}
@@ -15,14 +14,13 @@ subcollection: "Dotnet"
 
 In einigen Situationen ist es möglicherweise erforderlich, den NuGet-Paketcache für Ihre Anwendung zu bereinigen.  Bei diesem Vorgang werden alle vorhandenen NuGet-Pakete, die im Cache gespeichert sind, bereinigt und es wird verhindert, dass das Buildpack neue Pakete im Cache speichert.
 
-Sie können den Cache bereinigen, indem Sie die Umgebungsvariable `CACHE_NUGET_PACKAGES` über die {{site.data.keyword.Bluemix_notm}}-CLI auf den Wert `false` setzen:
+Sie können dies erreichen, indem Sie die Umgebungsvariable `CACHE_NUGET_PACKAGES` über die {{site.data.keyword.Bluemix_notm}}-CLI auf den Wert `false` setzen:
 
 ```shell
   ibmcloud cf set-env <app_name> CACHE_NUGET_PACKAGES false
 ```
-{: codeblock}
 
-Alternativ können Sie die Umgebungsvariable `CACHE_NUGET_PACKAGES` in der Datei `manifest.yml` Ihrer Anwendung auf den Wert `false` setzen:
+Alternativ können Sie die Umgebungsvariable `CACHE_NUGET_PACKAGES` in der Datei 'manifest.yml' Ihrer Anwendung auf den Wert `false` setzen:
 
 ```yml
 ---
@@ -32,4 +30,3 @@ applications:
   env:
     CACHE_NUGET_PACKAGES: false
 ```
-{: codeblock}

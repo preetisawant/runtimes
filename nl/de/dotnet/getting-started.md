@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-03-20"
-subcollection: "Dotnet"
+  years: 2017, 2018
+lastupdated: "2018-07-03"
 
 ---
 
@@ -27,10 +26,10 @@ Indem Sie diesem Lernprogramm zur Einführung folgen, werden Sie eine Entwicklun
 {: #prereqs}
 
 Sie benötigen Folgendes:
-* [{{site.data.keyword.Bluemix_notm}}-Konto](https://cloud.ibm.com/registration)
-* [{{site.data.keyword.Bluemix_notm}}-CLI](/docs/cli/reference/ibmcloud/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}}-Konto](https://console.bluemix.net/registration/)
+* [{{site.data.keyword.Bluemix_notm}}-CLI](../../cli/reference/bluemix_cli/download_cli.html)
 * [Git ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads){: new_window}
-* Installieren Sie .NET Core 2.2.2 SDK 2.2.104 von der [.NET Core-Download-Website ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.microsoft.com/net/download/core).
+* Installieren Sie .NET Core 1.1 SDK 1.0.4 von der Website [dot.net ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.microsoft.com/net/download/core) mithilfe der Anweisungen.
 
 ## Schritt 1: Klonen Sie die Beispielapp.
 {: #clone}
@@ -96,7 +95,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Wenn Sie eine eingebundene Benutzer-ID haben, verwenden Sie stattdessen den folgenden Befehl, um sich mit Ihrer Single Sign-on-ID anzumelden. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](/docs/cli/login_federated_id.html).
+  Wenn Sie eine eingebundene Benutzer-ID haben, verwenden Sie stattdessen den folgenden Befehl, um sich mit Ihrer Single Sign-on-ID anzumelden. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id).
  ```
 ibmcloud login --sso
   ```
@@ -108,7 +107,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Wenn Sie keine eingerichtete Organisation oder keinen eingerichteten Bereich haben, finden Sie weitere Informationen unter [Organisationen und Bereiche hinzufügen](/docs/account/orgs_spaces.html).
+  Wenn Sie keine eingerichtete Organisation oder keinen eingerichteten Bereich haben, finden Sie weitere Informationen unter [Organisationen und Bereiche hinzufügen](https://console.bluemix.net/docs/account/orgs_spaces.html).
   {: tip}
 
 1. **Stellen Sie sicher, dass Sie sich im Hauptverzeichnis `get-started-aspnet-core` für Ihre Anwendung befinden** und übertragen Sie Ihre Anwendung durch eine Push-Operation an {{site.data.keyword.Bluemix_notm}}:
@@ -125,63 +124,51 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-Sie können die App auch über die {{site.data.keyword.Bluemix_notm}} [Ressourcenliste](https://cloud.ibm.com/resources) anzeigen.
+## Schritt 5: Stellen Sie eine Verbindung zu einer MySQL-Datenbank her.
+{: connect_mysql}
 
-## Schritt 5: Fügen Sie eine Datenbank hinzu.
-{: #add_database}
-
-Als Nächstes werden Sie dieser Anwendung eine {{site.data.keyword.cloudant_short_notm}} NoSQL-Datenbank hinzufügen und die Anwendung so einrichten, dass sie lokal und unter {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann.
+Als Nächstes werden Sie dieser Anwendung eine ClearDB MySQL-Datenbank hinzufügen und die Anwendung so einrichten, dass sie lokal und unter {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann.
 
 1. Melden Sie sich in Ihrem Browser bei {{site.data.keyword.Bluemix_notm}} an und wechseln Sie zum Dashboard. Wählen Sie **Ressource erstellen** aus.
-1. Suchen Sie nach **{{site.data.keyword.cloudant_short_notm}}** und wählen Sie den Service aus.
-1. Wählen Sie für **Verfügbare Authentifizierungsmethoden** die Option **Sowohl traditionelle Berechtigungsnachweise als auch IAM verwenden** aus. Sie können die Standardeinstellungen für die anderen Felder belassen. Klicken Sie auf **Erstellen**, um den Service zu erstellen.
-1. Rufen Sie in der Navigation **Verbindungen** auf und klicken Sie dann auf **Verbindung erstellen**. Wählen Sie Ihre Anwendung aus und klicken Sie auf **Verbinden**.
-1. Verwenden Sie die Standardwerte und klicken Sie auf **Verbinden & Erneutes Staging für App**, um eine Verbindung von der Datenbank zur Anwendung herzustellen. Klicken Sie auf **Erneutes Staging**, wenn Sie dazu aufgefordert werden.
+2. Wählen Sie den Abschnitt **Daten und Analyse** und anschließend **ClearDB Managed MySQL Database** aus und erstellen Sie Ihren Service.
+3. Rufen Sie die Ansicht **Verbindungen** auf. Wählen Sie Ihre Anwendung und anschließend **Verbindung erstellen** aus.
+4. Wählen Sie **Erneutes Staging** aus, wenn Sie dazu aufgefordert werden. {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und stellt die Datenbankberechtigungsnachweise für Ihre Anwendung durch die Umgebungsvariable `VCAP_SERVICES` bereit. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
 
-   {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und stellt die Datenbankberechtigungsnachweise für Ihre Anwendung durch die Umgebungsvariable `VCAP_SERVICES` bereit. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
-
-Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Beispiel: Anstelle der festen Codierung eines Datenbankkennworts können Sie es in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen.
+Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Anstelle der festen Codierung eines Datenbankkennworts können Sie dieses in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen.
 {: tip}
 
 ## Schritt 6: Verwenden Sie die Datenbank lokal.
 {: #use_database}
 
-Sie werden jetzt Ihren lokalen Code aktualisieren, um auf diese Datenbank zu verweisen. Sie werden die Berechtigungsnachweise für die Services in einer JSON-Datei speichern. Diese Datei wird NUR dann verwendet, wenn die Anwendung lokal ausgeführt wird. Bei der Ausführung in {{site.data.keyword.Bluemix_notm}} werden die Berechtigungsnachweise aus der Umgebungsvariablen `VCAP_SERVICES` gelesen.
+Sie werden jetzt Ihren lokalen Code aktualisieren, um auf diese Datenbank zu verweisen. Sie werden die Berechtigungsnachweise für die Services in einer JSON-Datei speichern. Diese Datei wird NUR dann verwendet, wenn die Anwendung lokal ausgeführt wird. Bei der Ausführung in {{site.data.keyword.Bluemix_notm}} werden die Berechtigungsnachweise aus der Umgebungsvariablen VCAP_SERVICES gelesen.
 
-1. Erstellen Sie im Verzeichnis `src/GetStartedDotnet` eine Datei mit dem Namen `vcap-local.json`.
+1. Erstellen Sie die Datei 'src/GetStartedDotnet/vcap-local.json'.
 
-1. Kopieren Sie das folgende JSON-Objekt, fügen Sie es in die Datei `vcap-local.json` ein und speichern Sie die Änderungen.
+2. Wechseln Sie in Ihrem Browser zum {{site.data.keyword.Bluemix_notm}}-Dashboard und wählen Sie **_Ihre App_ > Verbindungen** aus. Klicken Sie auf das {{site.data.keyword.cloudant_short_notm}}-Menüsymbol (**&vellip;**) und wählen Sie **Berechtigungsnachweise anzeigen** aus.
 
-   ```json
-   {
-     "services": {
-       "cloudantNoSQLDB": [
-        {
-           "credentials": {
-             "url":"CLOUDANT_DATABASE_URL"
-           },
-          "label": "cloudantNoSQLDB"
-        }
-       ]
-     }
-   }
-   ```
-   {: codeblock}
+3. Kopieren Sie das gesamte JSON-Objekt aus den Berechtigungsnachweisen und fügen Sie es in die Datei `vcap-local.json` ein. Danach speichern Sie die Änderungen.  Das Ergebnis sieht in etwa wie im folgenden Beispiel aus:
+  ```
+  {
+  "cleardb": [
+    {
+      "credentials": {
+        ...
+        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
+        ...
+      },
+      ...
+      "name": "My ClearDB service instance name",
+      ...
+    }
+  ]
+}
+  ```
 
-1. Suchen Sie Ihre App in der {{site.data.keyword.Bluemix_notm}} [Ressourcenliste](https://cloud.ibm.com/resources). Klicken Sie auf der Servicedetailseite für die App auf **Verbindungen** in der Seitenleiste. Klicken Sie auf das {{site.data.keyword.cloudant_short_notm}}-Menüsymbol (**&hellip;**) und wählen Sie **Berechtigungsnachweise anzeigen** aus.
+4. Starten Sie Ihre Anwendung aus dem Verzeichnis `get-started-aspnet-core/src/GetStartedDotnet` mit dem Befehl `dotnet run` erneut.
 
-1. Kopieren Sie einfach den Wert für `url` aus den Berechtigungsnachweisen in das Feld `url` der Datei `vcap-local.json` und ersetzen Sie dabei `CLOUDANT_DATABASE_URL`.
+Aktualisieren Sie Ihre Browseransicht unter: http://localhost:5000/. Alle Namen, die Sie in die App eingegeben haben, werden der Datenbank jetzt hinzugefügt.
 
-1. Starten Sie die Anwendung im Verzeichnis `get-started-aspnet-core/src/GetStartedDotnet` neu; führen Sie hierzu den folgenden Befehl aus.
-
-   ```
-   dotnet run
-   ```
-   {: codeblock}
-
-1. Aktualisieren Sie Ihre Browseransicht unter http://localhost:5000/. Alle Namen, die Sie in die App eingegeben haben, werden der Datenbank jetzt hinzugefügt.
-
-Ihre lokale App und die {{site.data.keyword.Bluemix_notm}}-App verwenden die Datenbank gemeinsam.  Ihre {{site.data.keyword.Bluemix_notm}}-App wird unter der URL angezeigt, die in der Ausgabe des Befehls `ibmcloud cf push` aufgelistet ist.  Namen, die Sie in einer der Apps eingeben, sollten nach einer Aktualisierung des Browsers in beiden angezeigt werden.
+Ihre lokale App und die {{site.data.keyword.Bluemix_notm}}-App verwenden die Datenbank gemeinsam.  Ihre {{site.data.keyword.Bluemix_notm}}-App wird unter der URL angezeigt, die in der Ausgabe der oben erwähnten Push-Operation aufgelistet wird.  Namen, die Sie in einer der Apps eingeben, sollten nach einer Aktualisierung des Browsers in beiden angezeigt werden.
 
 Denken Sie daran, Ihre App zu stoppen, wenn Sie sie nicht benötigen, damit keine unerwarteten Gebühren anfallen.
 {: tip}

@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-03"
-subcollection: "liberty"
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -21,7 +21,7 @@ Puede utilizar los siguientes métodos para desplegar aplicaciones Liberty en {{
 * Envío por push de un directorio del servidor
 * Envío por push de un servidor empaquetado
 
-Importante: Cuando despliegue una aplicación con el paquete de compilación de Liberty, especifique un mínimo de 512 M como límite de memoria para las aplicaciones. Para obtener más información, consulte [Límites de memoria y el paquete de compilación de Liberty](/docs/runtimes/liberty/memoryLimits.html).
+Importante: Cuando despliegue una aplicación con el paquete de compilación de Liberty, especifique un mínimo de 512 M como límite de memoria para las aplicaciones. Para obtener más información, consulte [Límites de memoria y el paquete de compilación de Liberty](memoryLimits.html).
 
 ## Apps autónomas
 {: #stand_alone_apps}
@@ -62,7 +62,7 @@ Estas características corresponden a las características de Java EE 7 Web Prof
 ```
 {: codeblock}
 
-Nota: Para obtener los mejores resultados, establezca las características de Liberty con la variable de entorno JBP_CONFIG_LIBERTY o despliegue su aplicación como un [directorio de servidor](/docs/runtimes/liberty/optionsForPushing.html#server_directory) o [servidor empaquetado](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) con un archivo server.xml personalizado. El establecimiento de esta variable de entorno garantiza que la aplicación utilice únicamente la característica que necesita y si no está afectada por los cambios del conjunto de características de Liberty predeterminadas del paquete de compilación. Si necesita proporcionar configuración adicional de Liberty más allá del conjunto de características, utilice el 					[directorio de servidor](/docs/runtimes/liberty/optionsForPushing.html#server_directory) o la opción [servidor empaquetado](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) para desplegar su aplicación.
+Nota: Para obtener los mejores resultados, establezca las características de Liberty con la variable de entorno JBP_CONFIG_LIBERTY o despliegue su aplicación como un [directorio de servidor](optionsForPushing.html#server_directory) o [servidor empaquetado](optionsForPushing.html#packaged_server) con un archivo server.xml personalizado. El establecimiento de esta variable de entorno garantiza que la aplicación utilice únicamente la característica que necesita y si no está afectada por los cambios del conjunto de características de Liberty predeterminadas del paquete de compilación. Si necesita proporcionar configuración adicional de Liberty más allá del conjunto de características, utilice el 					[directorio de servidor](optionsForPushing.html#server_directory) o la opción [servidor empaquetado](optionsForPushing.html#packaged_server) para desplegar su aplicación.
 
 Si ha desplegado un archivo WAR, la aplicación web estará accesible bajo la raíz de contexto según lo establecido en el archivo ibm-web-ext.xml incorporado. Si el archivo ibm-web-ext.xml no existe, o no especifica la raíz de contexto, se puede acceder a la aplicación bajo el contexto raíz. Por ejemplo,
 
@@ -227,7 +227,7 @@ Las siguientes variables están definidas en el archivo `runtime-vars.xml` y se 
 * ${application_version}: la versión de esta instancia de la aplicación, que tiene el formato de un UUID, como por ejemplo `b687ea75-49f0-456e-b69d-e36e8a854caa`. Esta variable cambia con cada envío sucesivo de la aplicación que contiene código nuevo o cambios en los artefactos de la aplicación.
 * ${host}: la dirección IP de la instancia de la aplicación.
 * ${application_uris}: una matriz de tipo JSON de puntos finales que se puede utilizar para acceder a esta aplicación; por ejemplo: myapp.mydomain.com.
-* ${start}: la fecha y hora en que se ha iniciado la aplicación, con un formato parecido al siguiente: `2013-08-22 10:10:18 -0400`. No se establece si se ejecuta en Diego.
+* ${start}: la fecha y hora en que se ha iniciado la aplicación, con un formato parecido al siguiente:`2013-08-22 10:10:18 -0400`. No se establece si se ejecuta en Diego.
 
 ### Acceso a la información de los servicios enlazados
 {: #accessing_info_of_bound_services}
@@ -250,3 +250,10 @@ El conjunto de información típico es el siguiente:
 * connection.password: la contraseña que se utiliza para autenticar esta aplicación ante el servicio. Cloud Foundry genera automáticamente la contraseña, por ejemplo pvyCY0YzX9pu5.
 
 Para los servicios enlazados que el paquete de compilación de Liberty no configura automáticamente, la aplicación tiene que gestionar por su cuenta el acceso del recurso de fondo.
+
+# rellinks
+{: #rellinks notoc}
+## general
+{: #general notoc}
+* [Tiempo de ejecución de Liberty](index.html)
+* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

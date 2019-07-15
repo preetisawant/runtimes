@@ -3,7 +3,6 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2017-02-08"
-subcollection: "liberty"
 
 ---
 
@@ -22,14 +21,14 @@ Liberty for Java 应用程序在 {{site.data.keyword.Bluemix}} 上运行时，�
 ## JConsole
 {: #jconsole notoc}
 
-要使用 *JConsole* 监视 Liberty，请参阅[使用 JConsole 监视 Bluemix 中的 Liberty](/docs/runtimes/liberty/monitoring/jconsole.html)
+要使用 *JConsole* 监视 Liberty，请参阅[使用 JConsole 监视 Bluemix 中的 Liberty](jconsole.html)
 
 ## Dynatrace
 {: #dynatrace notoc}
 
-要使用 *Dynatrace* 监视 Liberty，请参阅[使用 Dynatrace](/docs/runtimes/liberty/monitoring/dynatrace.html)
+要使用 *Dynatrace* 监视 Liberty，请参阅[使用 Dynatrace](dynatrace.html)
 
 ## New Relic
 {: #newrelic notoc}
 
-要使用 *New Relic* 监视 Liberty，请参阅[使用 New Relic](/docs/runtimes/liberty/monitoring/newRelic.html)
+要使用 *New Relic* 监视 Liberty，请参阅[使用 New Relic](newRelic.html)

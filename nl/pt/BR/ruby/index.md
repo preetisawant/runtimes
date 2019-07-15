@@ -2,8 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-05"
-subcollection: "Ruby"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -28,14 +27,14 @@ ser usado para seu app. É possível experimentar o app iniciador, fazendo e env
 {{site.data.keyword.Bluemix_notm}}.  Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
-## Versões de tempo de execução
+## Versões de runtime
 {: #runtime_versions}
 
 É possível especificar a versão do Ruby a ser usada por seu aplicativo no Gemfile de seu aplicativo. Por exemplo:
 
 ```
   source 'https://rubygems.org'
-  ruby '2.5.0'
+  ruby '2.4.1'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
@@ -59,3 +58,10 @@ As seguintes versões do Ruby estão disponíveis no [buildpack do Ruby](https:/
 
 Se seu app requer uma versão do Ruby não listada, é possível usar o
 [buildpack Ruby](https://github.com/cloudfoundry/ruby-buildpack) externo para implementar o app.
+
+# rellinks
+{: #rellinks notoc}
+## geral
+{: #general notoc}
+* [Buildpack Cloud Foundry para Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
+* [Documentação do Ruby on Rails ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://api.rubyonrails.org/)

@@ -1,48 +1,21 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-18"
-subcollection: "Nodejs"
+  years: 2015, 2018
+lastupdated: "2018-07-24"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Últimas actualizaciones en el paquete de compilación SDK for Node.js
+# Últimas actualizaciones en el paquete de complicación SDK for Node.js
 {: #latest_updates}
 
 Una lista de las últimas actualizaciones del paquete de compilación sdk-for-nodejs.
 
-## 18 de marzo de 2019: se ha actualizado el paquete de compilación Node.js v3.26
-
-El paquete de compilación de SDK for Node.js v3.26 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.16.0, 6.17.0, 8.15.0, 8.15.1, 10.15.0 y 10.15.3. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.17.0.
-
-## 23 de enero de 2019: se ha actualizado el paquete de compilación de Node.js v3.25.1
-
-El paquete de compilación de SDK for Node.js v3.25.1 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 y 10.15.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.16.0. Las versiones 6.15.0, 8.14.0 y 10.14.0 que se incluían en el último paquete de compilación tenían una regresión. Las regresiones se han solucionado en las 6.16.0, 8.15.0 y 10.15.0 que se incluyen ahora en su lugar.
-
-## 7 de enero de 2019: se ha actualizado el paquete de compilación de Node.js v3.25
-
-El paquete de compilación de SDK for Node.js v3.25 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.4, 6.15.0, 8.11.4, 8.14.0, 10.10.0 y 10.14.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.15.0. El paquete de compilación también soluciona un error menor en el gancho de Dynatrace.
-
-## 5 de diciembre de 2018: se ha actualizado el paquete de compilación de Node.js v3.24
-
-El paquete de compilación de SDK for Node.js v3.24 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0 y 10.10.0. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.14.4. El paquete de compilación también soluciona un error menor en el gancho de Dynatrace.
-
-## 7 de septiembre de 2018: se ha actualizado el paquete de compilación de Node.js v3.22
-{:#fips-deprecation}
-
-**Importante:** A partir de este paquete de compilación, el SDK para el paquete de compilación de Node.js incluye los tiempos de ejecución del release de la comunidad de Node.js para las versiones 6.x y 8.x. Con este cambio, el módulo Node.js OpenSSL FIPS ya no se incluye en estas versiones del paquete de compilación. Sólo la versión 4.x sigue incluyendo el módulo OpenSSL FIPS.  
-
-El paquete de compilación de SDK for Node.js v3.22 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7 y las versiones de la comunidad Node.js 6.14.3, 6.14.4, 8.11.3 y 8.11.4. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.14.4.
-
-Este release también incluye arreglos para la siguiente vulnerabilidad de seguridad:
-* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
-
 ## 24 de julio de 2018: paquete de compilación de Node.js v3.21
-
+{:#fips-deprecation}
 **Importante:** empezando por las últimas versiones de Node.js 6.x y 8.x en este release, el SDK para el paquete de compilación Node.js se basa en el release de la comunidad Node.js. Con este cambio, el módulo Node.js OpenSSL FIPS del paquete de compilación ya no se actualizará más. El módulo OpenSSL FIPS actual y las compilaciones IBM SDK for Node.js son elegibles para su eliminación el 24 de agosto de 2018. Para obtener más información, consulte la publicación de post [Alineación del paquete de compilación de Node.js a tiempos de ejecución de la comunidad ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660).
 
 El paquete de compilación de SDK for Node.js v3.21 proporciona las versiones IBM SDK for Node.js 4.8.5, 4.8.7, 6.13.0 y 8.9.4 y las versiones de la comunidad Node.js 6.14.3 y 8.11.3. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.14.3.
@@ -51,13 +24,13 @@ Este release también incluye arreglos para la siguiente vulnerabilidad de segur
 * [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
 
 ## 1 de junio de 2018: se ha actualizado el paquete de compilación de Node.js v3.20.2
-El paquete de compilación de SDK for Node.js v3.20.2 añade la integración de Dynatrace PaaS gestionada para los tiempos de ejecución de Node.js.
+El paquete de compilación de SDK for Node.js v3.20.2 añade la integración de Dynatrace PaaS gestionada para los tiempos de ejecución de Node.js. Consulte [Utilización de Dynatrace para supervisar Node.js en {{site.data.keyword.cloud_notm}}](dynatrace.html).
 
 ## 17 de mayo de 2018: se ha actualizado el paquete de compilación de Node.js v3.20.1
-El paquete de compilación de SDK for Node.js v3.20.1 corrige la integración de Dynatrace PaaS para los tiempos de ejecución de Node.js.
+El paquete de compilación de SDK for Node.js v3.20.1 corrige la integración de Dynatrace PaaS para los tiempos de ejecución de Node.js. Consulte [Utilización de Dynatrace para supervisar Node.js en {{site.data.keyword.cloud_notm}}](dynatrace.html).
 
 ## 9 de abril de 2018: se ha actualizado el paquete de compilación de Node.js v3.20
-El paquete de compilación de SDK for Node.js v3.20 añade la integración de Dynatrace PaaS para los tiempos de ejecución de Node.js.
+El paquete de compilación de SDK for Node.js v3.20 añade la integración de Dynatrace PaaS para los tiempos de ejecución de Node.js. Consulte [Utilización de Dynatrace para supervisar Node.js en {{site.data.keyword.cloud_notm}}](dynatrace.html).
 
 ## 16 de marzo de 2018: se ha actualizado el paquete de compilación de Node.js v3.19
 El paquete de compilación de SDK for Node.js v3.19 proporciona las versiones de IBM SDK for Node.js 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 y 8.9.4. El valor predeterminado más reciente es 6.x, de modo que actualmente es 6.13.0.
@@ -114,7 +87,7 @@ Este release del paquete de compilación da soporte a las versiones de tiempo de
 
 Este release incluye arreglos de errores, incluidos los del [paquete de compilación Node.js de Cloud Foundry 1.5.18](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.18).
 
-Esta versión elimina el soporte para el manejador de gestión de app strongpm, tal como se ha publicado en [Paquete de compilación de {{site.data.keyword.Bluemix_notm}} Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
+Esta versión elimina el soporte para el manejador de gestión de app strongpm, tal como se ha publicado en [{{site.data.keyword.Bluemix_notm}} Paquete de compilación de Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/).
 
 Tenga en cuenta que es un problema conocido cuando se utiliza Node.js 6.x y la [modalidad de desarrollo](../common/app_mng.html#devmode). Como una solución provisional será necesario volver a transferir la aplicación después de habilitar la modalidad de desarrollo antes de poder empezar a utilizarla.
 
@@ -130,7 +103,7 @@ Se incluyen arreglos para las siguientes vulnerabilidades de seguridad:
 
 Este release del paquete de compilación añade el tiempo de ejecución de IBM SDK for Node.js versiones 4.4.5 y 6.2.0. El valor predeterminado es 4.4.5.
 
-Esta versión elimina el soporte para versiones de tiempo de ejecución anteriores, tal y como se ha publicado en [Paquete de compilación de {{site.data.keyword.Bluemix_notm}} Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). El paquete de compilación ahora da soporte a 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 y 6.2.0.
+Esta versión elimina el soporte para versiones de tiempo de ejecución anteriores, tal y como se ha publicado en [{{site.data.keyword.Bluemix_notm}} Paquete de compilación Node.js v3.3 – Modalidad FIPS y más](https://developer.ibm.com/bluemix/2016/05/05/node-buildpack-update-fips-mode/). El paquete de compilación ahora da soporte a 0.10.44, 0.10.45, 0.12.13, 0.12.14, 4.4.4, 4.4.5, 6.1.0 y 6.2.0.
 
 Este release incluye correcciones de errores del [paquete de compilación Node.js de Cloud Foundry 1.5.14](https://github.com/cloudfoundry/nodejs-buildpack/tree/v1.5.14).
 

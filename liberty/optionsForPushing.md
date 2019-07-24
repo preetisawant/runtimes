@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-06-20"
 subcollection: "liberty"
 ---
 
@@ -117,14 +117,14 @@ The entire default Liberty server.xml configuration file is as follows:
 ### Java Main (for jars with a main() class)
 {: #java_main}
 
-Java applications, including SpringBoot applications, that contain a class with a main() method are executed using `java -jar`.  Liberty's native SpringBoot support is enabled by using the LIBERTY_NATIVE_SPRINGBOOT environment variable.
+Java applications, including SpringBoot applications, that contain a class with a main() method are executed using `java -jar`.  Liberty's native SpringBoot support can be enabled using the LIBERTY_NATIVE_SPRINGBOOT environment variable.
 For example, to use Liberty's springBoot-2.0 feature:
 
 ```
 	ibmcloud cf set-env myapp LIBERTY_NATIVE_SPRINGBOOT 2.0
 ```
 
-The Liberty server runs the application if the LIBERTY_NATIVE_SPRINGBOOT environment variable is set to a valid Liberty springBoot feature version.
+The Liberty server is used to run the application if the LIBERTY_NATIVE_SPRINGBOOT environment variable is set to a valid Liberty springBoot feature version.
 
 
 ### CDI 1.2

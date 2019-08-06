@@ -2,13 +2,15 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-16"
+lastupdated: "2019-08-16"
 subcollection: "Nodejs"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:important: .important}
+{:note: .note}
 
 # Latest updates to the SDK for Node.js buildpack
 {: #latest_updates}
@@ -42,7 +44,8 @@ The SDK for Node.js buildpack v3.24 provides IBM SDK for Node.js versions 4.8.5,
 ## September 7, 2018: Updated Node.js buildpack v3.22
 {:#fips-deprecation}
 
-**Important:** Beginning with this buildpack, the SDK for Node.js buildpack includes the Node.js community release runtimes for version 6.x and 8.x. With this change, the Node.js OpenSSL FIPS module is no longer included in these versions of the buildpack. Only version 4.x continues to include the OpenSSL FIPS module.  
+Beginning with this buildpack, the SDK for Node.js buildpack includes the Node.js community release runtimes for version 6.x and 8.x. With this change, the Node.js OpenSSL FIPS module is no longer included in these versions of the buildpack. Only version 4.x continues to include the OpenSSL FIPS module.  
+{: important}
 
 The SDK for Node.js buildpack v3.22 provides IBM SDK for Node.js versions 4.8.5, 4.8.7 and Node.js community versions 6.14.3, 6.14.4, 8.11.3 and 8.11.4. The default is latest 6.x, so it is currently 6.14.4.
 
@@ -51,7 +54,8 @@ This release also includes fixes for the following security vulnerability:
 
 ## July 24, 2018: Updated Node.js buildpack v3.21
 
-**Important:** Beginning with the latest Node.js 6.x and 8.x versions in this release, the SDK for Node.js buildpack is based on the Node.js community release. With this change, the Node.js OpenSSL FIPS module in the buildpack will no longer be updated. The current OpenSSL FIPS module and IBM SDK for Node.js builds are eligible for removal as of 24 August 2018. For more information, see the [Aligning the Node.js Buildpack to Community Runtimes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660) blog post.
+Beginning with the latest Node.js 6.x and 8.x versions in this release, the SDK for Node.js buildpack is based on the Node.js community release. With this change, the Node.js OpenSSL FIPS module in the buildpack will no longer be updated. The current OpenSSL FIPS module and IBM SDK for Node.js builds are eligible for removal as of 24 August 2018. For more information, see the [Aligning the Node.js Buildpack to Community Runtimes ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/announcements/aligning-the-node-js-buildpack-to-community-runtimes) blog post.
+{: important}
 
 The SDK for Node.js buildpack v3.21 provides IBM SDK for Node.js versions 4.8.5, 4.8.7, 6.13.0 and 8.9.4 and Node.js community versions 6.14.3 and 8.11.3. The default is latest 6.x, so it is currently 6.14.3.
 
@@ -230,7 +234,8 @@ To push your application with v3.0beta:
 
 This change to the default runtime will not affect your application if you configured a specific version of Node.js in your application's package.json.
 
-**Note:** You can always specify the version of Node.js to run your application by using the engines.node entry in your package.json as explained in [Available versions](index.html#available_versions).
+You can always specify the version of Node.js to run your application by using the engines.node entry in your package.json as explained in [Available versions](index.html#available_versions).
+{: note}
 
 ## November 23, 2015: Updated Node.js buildpack v2.7-20151118-1003
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-05"
+  years: 2017, 2019
+lastupdated: "2018-08-12"
 
 ---
 
@@ -12,15 +12,17 @@ lastupdated: "2018-12-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
-{:download: .download}
+{:hide-in-docs: .hide-in-docs}
 {:app_name: data-hd-keyref="app_name"}
 
 # Getting started tutorial
 {: #getting_started}
 
-* {: download} Congratulations, you deployed a Hello World sample application on {{site.data.keyword.Bluemix}}!  To get started, follow this step-by-step guide. Or, download the sample code and explore on your own.
+Congratulations, you deployed a Hello World sample application on {{site.data.keyword.Bluemix}}!  To get started, follow this step-by-step guide. Or, download the sample code and explore on your own.
+{: hide-in-docs}
 
 <a class="xref" href="https://github.com/IBM-Cloud/get-started-tomcat" target="_blank" title="(Download sample code)"><img class="w3-image" src="docs/runtimes/images/btn_starter-code.svg" alt="Download application code" /></a> 
+{: hide-in-docs}
 
 
 By following this getting started tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate a database service in your app.

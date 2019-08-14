@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Go"
 
 ---
 
@@ -23,7 +24,7 @@ go_buildpack se utiliza si la aplicación contiene un archivo denominado *.go.
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Go.  La aplicación de inicio Go es una sencilla app Go que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de inicio y realizar y enviar cambios push al entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de iniciador](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de iniciador.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de Go.  La aplicación de inicio Go es una sencilla app Go que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de inicio y realizar y enviar cambios push al entorno de {{site.data.keyword.Bluemix_notm}}. Consulte [Utilización de las aplicaciones de iniciador](docs/runtimes-common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de iniciador.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -33,7 +34,7 @@ Puede especificar la versión de Go que utilizará la app estableciendo la propi
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.8.3",
+	"GoVersion": "go1.10",
 	"Deps": []
 }
 ```
@@ -63,11 +64,3 @@ Si la app requiere una versión de Go que no aparece en la lista,
 puede utilizar el
 [paquete de compilación de Go](https://github.com/cloudfoundry/go-buildpack.git){: new_window} externo para
 desplegar la aplicación.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Paquete de compilación de Cloud Foundry para Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

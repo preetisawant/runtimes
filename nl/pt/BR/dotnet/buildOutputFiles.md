@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-08-10"
+  years: 2018, 2019
+lastupdated: "2019-02-02"
+subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,13 +14,14 @@ lastupdated: "2017-08-10"
 # Copie os arquivos necessários para construir a pasta de saída
 {: #copy_files_build_output}
 
-É possível usar o conjunto de ferramentas project.json ou MSBuild para assegurar que seu aplicativo tenha todos os arquivos necessários na pasta de saída de construção.
-{: #shortdesc}
+É possível usar o conjunto de ferramentas project.json ou MSBuild para assegurar que o aplicativo tenha todos os arquivos necessários na pasta de saída de construção.
+{: shortdesc}
 
 
 ## Usar o conjunto de ferramentas project.json
+{: #projectjson}
 
-Inclua a propriedade a seguir na seção `buildOptions` de project.json:
+Inclua a seguinte propriedade na seção `buildOptions` do arquivo `project.json`.
 ```
   "copyToOutput": {
     "include": [
@@ -32,13 +34,13 @@ Inclua a propriedade a seguir na seção `buildOptions` de project.json:
 ```
 {: codeblock}
 
-No método Startup.cs `Startup`, remova a linha a seguir:
+No método `Startup` de Startup.cs, remova a linha a seguir.
 ```
   .SetBasePath(env.ContentRootPath)
 ```
 {: codeblock}
 
-No método Program.cs `Main`, remova a linha a seguir:
+No método `Main` de Program.cs, remova a linha a seguir.
 ```
   .UseContentRoot(Directory.GetCurrentDirectory())
 ```
@@ -46,11 +48,12 @@ No método Program.cs `Main`, remova a linha a seguir:
 
 Essas mudanças devem permitir que a CLI .NET localize as `Views`
 do seu aplicativo, uma vez que elas agora serão copiadas na saída de construção quando o
-comando `dotnet run` for executado.  Se o seu aplicativo tiver quaisquer outros arquivos, como arquivos de configuração json, que são necessários no tempo de execução, também será necessário incluí-los na seção de `include` de `copyToOutput` no arquivo project.json de seu projeto.
+comando `dotnet run` for executado.  Se o aplicativo tiver outros arquivos, como os arquivos de configuração JSON, que são necessários no tempo de execução, também inclua-os na seção `include` de `copyToOutput` no arquivo `project.json` para o projeto.
 
 ## Usar o conjunto de ferramentas MSBuild
+{: #msbuild}
 
-Inclua um elemento `<Content>` no elemento `<ItemGroup>` de seu arquivo .csproj:
+Inclua um elemento `<Content>` no elemento `<ItemGroup>` de seu arquivo `.csproj`.
 ```
   <ItemGroup>
     <Content Include="wwwroot/**/*;Areas/**/Views/*;Views/*;appsettings.json">
@@ -61,16 +64,16 @@ Inclua um elemento `<Content>` no elemento `<ItemGroup>` de seu arquivo .csproj:
 ```
 {: codeblock}
 
-No método Startup.cs `Startup`, remova a linha a seguir:
+No método `Startup` de `Startup.cs`, remova a linha a seguir.
 ```
   .SetBasePath(env.ContentRootPath)
 ```
 {: codeblock}
 
-No método Program.cs `Main`, remova a linha a seguir:
+No método `Main` de `Program.cs`, remove a linha a seguir.
 ```
   .UseContentRoot(Directory.GetCurrentDirectory())
 ```
 {: codeblock}
 
-Essas mudanças devem permitir que a CLI de .NET localize as `Visualizações` de seu aplicativo, uma vez que elas agora serão copiadas na saída de construção quando o comando `dotnet publish` for executado.  Se o seu aplicativo tiver quaisquer outros arquivos, como arquivos de configuração json, que são necessários no tempo de execução, também será necessário incluí-los na propriedade de `Include` do elemento `Content` no arquivo .csproj de seu projeto, separados por pontos e vírgulas.
+Essas mudanças permitem que a CLI do .NET localize as `Views` do aplicativo, uma vez que elas são copiadas para a saída de construção quando o comando `dotnet publish` é executado.  Se o aplicativo tiver outros arquivos, como os arquivos de configuração JSON, que são necessários no tempo de execução, também os inclua na propriedade `Include` do elemento `Content` no arquivo .csproj para o projeto, separado por ponto e vírgulas.

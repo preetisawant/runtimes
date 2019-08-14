@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Go"
 
 ---
 
@@ -22,7 +23,7 @@ lastupdated: "2018-08-21"
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} 提供了 Go 入门模板应用程序。Go 入门模板应用程序是一个简单的 Go 应用程序，它提供了一个可供您的应用程序使用的模板。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。请参阅[使用入门模板应用程序](../common/starter_app_usage.html)，以获取有关使用入门模板应用程序的帮助。
+{{site.data.keyword.Bluemix_notm}} 提供了 Go 入门模板应用程序。Go 入门模板应用程序是一个简单的 Go 应用程序，它提供了一个可供您的应用程序使用的模板。您可以体验该入门模板应用程序，对其进行更改并将更改推送到 {{site.data.keyword.Bluemix_notm}} 环境。请参阅[使用入门模板应用程序](docs/runtimes-common/starter_app_usage.html)，以获取有关使用入门模板应用程序的帮助。
 
 ## 运行时版本
 {: #runtime_versions}
@@ -32,7 +33,7 @@ lastupdated: "2018-08-21"
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.8.3",
+	"GoVersion": "go1.10",
 	"Deps": []
 }
 ```
@@ -61,11 +62,3 @@ lastupdated: "2018-08-21"
 * 1.10
 
 如果您应用程序所需的 Go 版本没有列在上述列表中，那么可以使用外部 [Go buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} 来部署应用程序。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [用于 Go 的 Cloud Foundry buildpack](https://github.com/cloudfoundry/go-buildpack){: new_window}

@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-10"
+subcollection: "liberty"
 
 ---
 
@@ -70,7 +71,7 @@ Remarque : Les modifications du fichier server.xml seront perdues lors d'une rec
 
 Consultez [Traitement des incidents dans Liberty : Journalisation et Trace](http://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_logging.html){: new_window} pour les détails concernant la syntaxe de la spécification de trace.
 
-### Déclenchement des vidages via SSL
+### Déclenchement des vidages via SSH
 
 Pour provoquer un vidage des unités d'exécution et du tas Java via l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} en utilisant la fonction SSH, utilisez la commande suivante :
 
@@ -101,10 +102,3 @@ Par défaut, les différents fichiers de vidage sont placés dans le répertoire
   {: codeblock}
 
 Il est aussi possible d'utiliser `scp` et d'autres outils similaires pour voir et télécharger les fichiers de vidage. Pour plus d'informations, consultez [Accessing Apps with SSH![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html).
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Environnement d'exécution Liberty](index.html)
-* [Présentation de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

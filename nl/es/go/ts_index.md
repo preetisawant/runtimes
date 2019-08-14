@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
+subcollection: "Go"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,4 +15,4 @@ lastupdated: "2018-02-22"
 
 Resuelva sus aplicaciones Go y de paquetes de compilación con el siguiente recurso:
 
-* [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html#runtimes)
+* [Resolución de problemas de tiempos de ejecución](docs/runtimes-common/ts_runtimes.html#runtimes)

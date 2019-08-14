@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
@@ -73,4 +74,4 @@ Vous pouvez définir la taille de segment de mémoire à l'aide de variables d'e
 ```
 {: codeblock}
 
-* Indiquez l'argument -Xmx dans le fichier jvm.options si votre application est un [répertoire de serveur](optionsForPushing.html#server_directory) ou un [package de serveur](optionsForPushing.html#packaged_server). Pour plus d'informations sur l'utilisation du fichier `jvm.options` avec l'environnement d'exécution Liberty, voir [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  
+* Indiquez l'argument -Xmx dans le fichier jvm.options si votre application est un [répertoire de serveur](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou un [package de serveur](/docs/runtimes/liberty/optionsForPushing.html#packaged_server). Pour plus d'informations sur l'utilisation du fichier `jvm.options` avec l'environnement d'exécution Liberty, voir [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474).  

@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-08-21"
+subcollection: "PHP"
 
 ---
 
@@ -25,7 +26,7 @@ El php_buildpack se utiliza en las condiciones siguientes:
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} proporciona una app de inicio de PHP.  La aplicación de inicio de PHP es una app de PHP simple que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix}}.  Consulte [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix}} proporciona una app de inicio de PHP.  La aplicación de inicio de PHP es una app de PHP simple que proporciona una plantilla que puede utilizar para la app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix}}.  Consulte [Utilización de las aplicaciones de inicio](docs/runtimes-common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Aplicar HTTPS en todas las páginas de la aplicación
 {: #enforce_https}

@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-10"
+subcollection: "liberty"
 
 ---
 
@@ -101,10 +102,3 @@ SSH 기능을 사용하여 {{site.data.keyword.Bluemix_notm}} CLI를 통해 스�
   {: codeblock}
 
 `scp` 및 기타 유사한 도구를 사용하여 덤프 파일을 보고 다운로드할 수 있습니다. 자세한 정보는 [Accessing Apps with SSH ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html)를 참조하십시오.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Liberty 런타임](index.html)
-* [Liberty 개요](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

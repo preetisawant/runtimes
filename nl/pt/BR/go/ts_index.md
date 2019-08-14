@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
+subcollection: "Go"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,4 +15,4 @@ lastupdated: "2018-02-22"
 
 Solucione problemas dos aplicativos e buildpacks Go com o recurso a seguir:
 
-* [Resolução de problemas para tempos de execução](../common/ts_runtimes.html#runtimes)
+* [Resolução de Problemas para Tempos de execução](docs/runtimes-common/ts_runtimes.html#runtimes)

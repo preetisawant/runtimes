@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2017-02-08"
+subcollection: "liberty"
 
 ---
 
@@ -21,14 +22,14 @@ lastupdated: "2017-02-08"
 ## JConsole
 {: #jconsole notoc}
 
-*JConsole*을 사용하여 Liberty를 모니터하려면 [JConsole을 사용하여 Bluemix의 Liberty 모니터링](jconsole.html)을 참조하십시오.
+*JConsole*을 사용하여 Liberty를 모니터하려면 [JConsole을 사용하여 Bluemix의 Liberty 모니터링](/docs/runtimes/liberty/monitoring/jconsole.html)을 참조하십시오.
 
 ## Dynatrace
 {: #dynatrace notoc}
 
-*Dynatrace*를 사용하여 Liberty를 모니터하려면 [Dynatrace 사용](dynatrace.html)을 참조하십시오.
+*Dynatrace*를 사용하여 Liberty를 모니터하려면 [Dynatrace 사용](/docs/runtimes/liberty/monitoring/dynatrace.html)을 참조하십시오.
 
 ## New Relic
 {: #newrelic notoc}
 
-*New Relic*을 사용하여 Liberty를 모니터하려면 [New Relic 사용](newRelic.html)을 참조하십시오.
+*New Relic*을 사용하여 Liberty를 모니터하려면 [New Relic 사용](/docs/runtimes/liberty/monitoring/newRelic.html)을 참조하십시오.

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
+subcollection: "Swift"
 
 ---
 
@@ -59,7 +60,7 @@ Swift 언어는 자주 변경되므로 사용하는 애플리케이션과 함께
 
 ## 개발자 환경
 
-개발자는 Swift로 서버 측 애플리케이션을 작성할 때 몇 가지 옵션을 사용할 수 있습니다. Apple macOS 디바이스를 사용하는 개발자는 Xcode IDE가 요구사항이 아님에도 불구하고 이를 사용하는 것을 선호할 수 있습니다. {{site.data.keyword.Bluemix_notm}}에서 배치되고 실행되는 Swift 기반 앱은 모든 프로그래밍 편집기 또는 IDE를 사용할 수 있습니다.  Swift의 구문 강조표시 및 린팅(linting)을 다수의 인기있는 편집기에 사용할 수 있습니다. [Swift.org ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://swift.org/)의 바이너리에 포함된 Swift REPL 명령행 도구를 통해 {{site.data.keyword.Bluemix_notm}}에 배치하기 전에 로컬 컴파일과 테스트를 수행할 수 있습니다.
+개발자는 Swift로 서버 측 애플리케이션을 작성할 때 몇 가지 옵션을 사용할 수 있습니다. Apple macOS 디바이스를 사용하는 개발자는 Xcode IDE가 요구사항이 아님에도 불구하고 이를 사용하는 것을 선호할 수 있습니다.  {{site.data.keyword.Bluemix_notm}}에서 배치되고 실행되는 Swift 기반 앱은 모든 프로그래밍 편집기 또는 IDE를 사용할 수 있습니다.  Swift의 구문 강조표시 및 린팅(linting)을 다수의 인기있는 편집기에 사용할 수 있습니다. [Swift.org ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://swift.org/)의 바이너리에 포함된 Swift REPL 명령행 도구를 통해 {{site.data.keyword.Bluemix_notm}}에 배치하기 전에 로컬 컴파일과 테스트를 수행할 수 있습니다.
 
 macOS 사용자는 {{site.data.keyword.Bluemix_notm}}에서 실행되는 서버 측 Swift 앱을 간단하게 작성, 배치, 관리 및 제어하는 [Kitura 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.kitura.io/app.html)을 사용할 수 있습니다.  
 
@@ -72,7 +73,7 @@ macOS 사용자는 {{site.data.keyword.Bluemix_notm}}에서 실행되는 서버 
 - [SwiftMetrics ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant and CouchDB ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 애플리케이션에 포함할 추가 Swift 패키지를 찾으려면 [Kitura.io](https://www.kitura.io/packages.html)의 패키지 섹션으로 이동하십시오. 패키지의 Git URL 및 버전 세부사항을 앱의 `Package.swift` 파일에 포함시킴으로써 Swift 애플리케이션에 패키지를 추가할 수 있습니다. 패키지 관리에 대한 세부사항은 [Swift.org의 Package Manager 섹션](https://swift.org/package-manager/)을 참조하십시오.

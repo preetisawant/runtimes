@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -12,6 +13,8 @@ lastupdated: "2018-08-10"
 # Utilizza le funzioni beta
 {: #using_beta_features}
 
+**Importante**:  a partire dal pacchetto di build Liberty for Java v3.28, il runtime beta non è più incluso.  
+
 Le funzioni beta Liberty forniscono un accesso anticipato ai nuovi modelli di funzionalità e
 programmazione che potrebbero essere inclusi in una futura release di Liberty. La maggior parte delle funzioni beta può essere
 utilizzata anche nelle applicazioni distribuite a {{site.data.keyword.Bluemix}}.
@@ -20,23 +23,19 @@ utilizzata anche nelle applicazioni distribuite a {{site.data.keyword.Bluemix}}.
 
 | Funzioni |
 | ------ |
-| `audit-1.0` |
+| `jdbc-4.3` |
 | `logstashCollector-1.1` |
-| `mpConfig-1.3` |
-| `mpFaultTolerance-1.1` |
-| `usageMetering-1.0` |
 | `validator-1.0` |
 {: caption="Tabella 1. Funzioni beta Liberty disponibili in Liberty for Java in {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 Per utilizzare le funzioni beta Liberty in {{site.data.keyword.Bluemix_notm}}, dovrai eseguire quanto segue:
 
-1. [Distribuire una directory server o un server in pacchetto](optionsForPushing.html) con una o più funzioni beta abilitate nel file server.xml come nel seguente esempio:
+1. [Distribuire una directory server o un server in pacchetto](/docs/runtimes/liberty/optionsForPushing.html) con una o più funzioni beta abilitate nel file server.xml come nel seguente esempio:
 
   ```
 <server>
     <featureManager>
-        <feature>usageMetering-1.0</feature>
-        <feature>validator-1.0</feature>
+        <feature>jdbc-4.3</feature>
     </featureManager>
 </server>
   ```
@@ -44,7 +43,7 @@ Per utilizzare le funzioni beta Liberty in {{site.data.keyword.Bluemix_notm}}, d
 
 2.  Imposta la variabile di ambiente `IBM_LIBERTY_BETA` su `true`. Questa variabile indica al pacchetto di build Liberty
 di installare e abilitare le funzioni beta per la tua applicazione.  Ad esempio:
-  * Utilizzando la CLI [{{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html):
+  * Utilizzando la CLI [{{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html):
     ```
     ibmcloud cf set-env <yourappname> IBM_LIBERTY_BETA true
     ```
@@ -57,7 +56,7 @@ di installare e abilitare le funzioni beta per la tua applicazione.  Ad esempio:
     ```
     {: .codeblock}
 
-3. Imposta la variabile di ambiente `JBP_CONFIG_LIBERTY` su `"version: +"`. Questa variabile abilita il [Runtime mensile Liberty](buildpackDefaults.html#liberty_versions), che supporta le funzioni beta. Ad esempio:
+3. Imposta la variabile di ambiente `JBP_CONFIG_LIBERTY` su `"version: +"`. Questa variabile abilita il [Runtime mensile Liberty](/docs/runtimes/liberty/buildpackDefaults.html#liberty_versions), che supporta le funzioni beta. Ad esempio:
   * Utilizzando lo strumento CLI {{site.data.keyword.Bluemix_notm}}:
     ```
     ibmcloud cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"

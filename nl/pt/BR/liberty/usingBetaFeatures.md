@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -11,6 +12,8 @@ lastupdated: "2018-08-10"
 
 # Usar os recursos beta
 {: #using_beta_features}
+
+**Importante**: a partir do buildpack v3.28 do Liberty for Java, o tempo de execução beta não está mais incluído.  
 
 Os recursos beta do Liberty fornecem um acesso antecipado aos novos
 modelos de programação e de funcionalidade que podem ser incluídos em uma liberação futura
@@ -24,24 +27,20 @@ licença beta](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/was
 
 | Recursos |
 | ------ |
-| `audit-1.0` |
+| `jdbc-4.3` |
 | `logstashCollector-1.1` |
-| `mpConfig-1.3` |
-| `mpFaultTolerance-1.1` |
-| `usageMetering-1.0` |
 | `validator-1.0` |
 {: caption="Tabela 1. Recursos do Liberty Beta disponíveis no Liberty for Java em{{site.data.keyword.Bluemix_notm}}" caption-side="top"}
 
 
 Para usar os recursos beta do Liberty no {{site.data.keyword.Bluemix_notm}}, será necessário fazer o seguinte:
 
-1. [Implemente um diretório do servidor ou um servidor em pacote](optionsForPushing.html) com um ou mais recursos beta ativados no arquivo server.xml como no exemplo a seguir:
+1. [Implemente um diretório do servidor ou um servidor em pacote](/docs/runtimes/liberty/optionsForPushing.html) com um ou mais recursos beta ativados no arquivo server.xml como no exemplo a seguir:
 
   ```
 <server>
     <featureManager>
-        <feature>usageMetering-1.0</feature>
-        <feature>validator-1.0</feature>
+        <feature>jdbc-4.3</feature>
     </featureManager>
 </server>
   ```
@@ -49,7 +48,7 @@ Para usar os recursos beta do Liberty no {{site.data.keyword.Bluemix_notm}}, ser
 
 2.  Configure a variável de ambiente `IBM_LIBERTY_BETA` como `true`. Essa variável direciona o buildpack do Liberty para instalar
 e ativar os recursos beta em seu aplicativo.  Por exemplo:
-  * Usando a [CLI do {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html):
+  * Usando a  [ CLI do {{site.data.keyword.Bluemix_notm}}  ](/docs/cli/reference/ibmcloud/download_cli.html):
     ```
     ibmcloud cf set-env < yourappname> IBM_LIBERTY_BETA true
     ```
@@ -63,7 +62,7 @@ e ativar os recursos beta em seu aplicativo.  Por exemplo:
     {: .codeblock}
 
 3. Configure a variável de ambiente `JBP_CONFIG_LIBERTY` como
-`"version: +"`. Essa variável ativa o [Tempo de execução mensal do Liberty ](buildpackDefaults.html#liberty_versions), que suporta os recursos beta. Por exemplo:
+`"version: +"`. Essa variável ativa o [Tempo de execução mensal do Liberty ](/docs/runtimes/liberty/buildpackDefaults.html#liberty_versions), que suporta os recursos beta. Por exemplo:
   * Usando a ferramenta CLI do  {{site.data.keyword.Bluemix_notm}} :
     ```
     ibmcloud cf set-env <yourappname> JBP_CONFIG_LIBERTY "version: +"

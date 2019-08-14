@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-03"
-
+subcollection: "liberty"
 ---
 
 {:shortdesc: .shortdesc}
@@ -21,7 +21,7 @@ Liberty 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려
 * 서버 디렉토리 푸시
 * 패키지된 서버 푸시
 
-중요: Liberty 빌드팩으로 애플리케이션을 배치하는 경우, 애플리케이션의 메모리 한계로 최소 512M을 지정하십시오. 자세한 정보는 [메모리 한계 및 Liberty 빌드팩](memoryLimits.html)을 참조하십시오.
+중요: Liberty 빌드팩으로 애플리케이션을 배치하는 경우, 애플리케이션의 메모리 한계로 최소 512M을 지정하십시오. 자세한 정보는 [메모리 한계 및 Liberty 빌드팩](/docs/runtimes/liberty/memoryLimits.html)을 참조하십시오.
 
 ## 독립형 앱
 {: #stand_alone_apps}
@@ -62,7 +62,7 @@ Liberty 애플리케이션을 {{site.data.keyword.Bluemix_notm}}에 배치하려
 ```
 {: codeblock}
 
-참고: 최상의 결과를 얻으려면 JBP_CONFIG_LIBERTY 환경 변수로 Liberty 기능을 설정하거나 사용자 정의 server.xml 파일로 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server)로서 애플리케이션을 배치하십시오. 이 환경 변수를 설정하면 애플리케이션이 필요한 기능만 사용하며 빌드팩의 기본 Liberty 기능 설정 변경사항의 영향을 받지 않도록 합니다. 기능 세트 외에도 추가 Liberty 구성을 제공해야 하는 경우에는 [서버 디렉토리](optionsForPushing.html#server_directory) 또는 [패키지된 서버](optionsForPushing.html#packaged_server) 옵션을 사용하여 애플리케이션을 배치하십시오.
+참고: 최상의 결과를 얻으려면 JBP_CONFIG_LIBERTY 환경 변수로 Liberty 기능을 설정하거나 사용자 정의 server.xml 파일로 [서버 디렉토리](/docs/runtimes/liberty/optionsForPushing.html#server_directory) 또는 [패키지된 서버](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)로서 애플리케이션을 배치하십시오. 이 환경 변수를 설정하면 애플리케이션이 필요한 기능만 사용하며 빌드팩의 기본 Liberty 기능 설정 변경사항의 영향을 받지 않도록 합니다. 기능 세트 외에도 추가 Liberty 구성을 제공해야 하는 경우에는 [서버 디렉토리](/docs/runtimes/liberty/optionsForPushing.html#server_directory) 또는 [패키지된 서버](/docs/runtimes/liberty/optionsForPushing.html#packaged_server) 옵션을 사용하여 애플리케이션을 배치하십시오.
 
 WAR 파일을 배치한 경우, 웹 애플리케이션은 임베디드 ibm-web-ext.xml 파일에 설정된 대로 컨텍스트 루트에서 액세스 가능합니다. ibm-web-ext.xml 파일이 존재하지 않거나 컨텍스트 루트를 지정하지 않는 경우에는 애플리케이션이 루트 컨텍스트에서 액세스 가능합니다. 예를 들어, 다음과 같습니다.
 
@@ -167,8 +167,7 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 ```
 {: codeblock}
 
-서버 디렉토리가 준비되면,
-{{site.data.keyword.Bluemix_notm}}에 배치할 수 있습니다.
+서버 디렉토리가 준비되면, {{site.data.keyword.Bluemix_notm}}에 배치할 수 있습니다.
 
 ```
     ibmcloud cf push <yourappname> -p defaultServer
@@ -185,8 +184,7 @@ Liberty 프로파일이 워크스테이션에 설치되어 있지 않으면 다�
 ## 패키지된 서버
 {: #packaged_server}
 
-패키지된 서버 파일을
-{{site.data.keyword.Bluemix_notm}}에 푸시할 수도 있습니다. 패키지된 서버 파일은 Liberty의 서버 패키지 명령을 사용하여 작성됩니다. 패키지된 서버 파일에는 애플리케이션과 구성 파일 외에 애플리케이션에 필요한 공유 리소스 및 Liberty 사용자 기능이 포함되어 있습니다.
+패키지된 서버 파일을 {{site.data.keyword.Bluemix_notm}}에 푸시할 수도 있습니다. 패키지된 서버 파일은 Liberty의 서버 패키지 명령을 사용하여 작성됩니다. 패키지된 서버 파일에는 애플리케이션과 구성 파일 외에 애플리케이션에 필요한 공유 리소스 및 Liberty 사용자 기능이 포함되어 있습니다.
 
 Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/server package` 명령을 사용하십시오. 서버 이름을 지정하고 `--include=usr` 옵션을 포함하십시오.
 예를 들어, Liberty 서버가 `defaultServer`이면 다음 명령을 실행하십시오.
@@ -234,7 +232,7 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 ### 바인드된 서비스 정보 액세스
 {: #accessing_info_of_bound_services}
 
-애플리케이션에 서비스를 바인드하려는 경우 서비스에 대한 정보(예: 연결 신임 정보)는 Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
+애플리케이션에 서비스를 바인드하려는 경우 서비스에 대한 정보(예: 연결 인증 정보)는 Cloud Foundry가 애플리케이션에 대해 설정하는 [VCAP_SERVICES 환경 변수 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES)에 포함됩니다. [자동으로 구성되는 서비스](autoConfig.html)의 경우, Liberty 빌드팩이 server.xml 파일에 서비스 바인딩 항목을 생성하거나 업데이트합니다. 서비스 바인딩 항목의 컨텐츠는 다음 형식 중 하나입니다.
 
 * cloud.services.&lt;service-name&gt;.&lt;property&gt; 서비스의 이름, 유형, 플랜과 같은 정보를 설명합니다.
 * cloud.services.&lt;service-name&gt;.connection.&lt;property&gt; 서비스의 연결 정보를 설명합니다.
@@ -252,10 +250,3 @@ Liberty 서버를 패키징하려면 Liberty 설치 디렉토리에서 `./bin/se
 * connection.password: 이 애플리케이션을 서비스에 인증하는 데 사용되는 비밀번호입니다. Cloud Foundry에서 비밀번호를 자동 생성합니다(예: pvyCY0YzX9pu5).
 
 Liberty 빌드팩을 통해 자동으로 구성되지 않는 바인드된 서비스의 경우, 애플리케이션에서 자체적으로 백엔드 리소스의 액세스를 관리해야 합니다.
-
-# 관련 링크
-{: #rellinks notoc}
-## 일반
-{: #general notoc}
-* [Liberty 런타임](index.html)
-* [Liberty 프로파일 개요](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

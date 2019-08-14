@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-16"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -12,39 +13,39 @@ lastupdated: "2018-03-16"
 # Recursos do Liberty suportados no {{site.data.keyword.cloud_notm}}
 {: #liberty_features}
 
-O tempo de execução instantâneo do Liberty for Java inclui um subconjunto de recursos do Liberty.  Alguns recursos que o
-Liberty fornece não estão disponíveis no tempo de execução instantâneo do Liberty for Java porque não são aplicáveis no ambiente de
-nuvem.
+O tempo de execução do Liberty for Java inclui um subconjunto de recursos do Liberty. Para usar um recurso que não está incluído no tempo de execução, consulte [Instalar os recursos do Liberty](/docs/runtimes/liberty/installFeatures.html). Para obter uma lista completa dos recursos disponíveis no Liberty, juntamente com as versões Java EE e outras informações, consulte [Recursos do Liberty ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html).
 
-Os recursos a seguir estão incluídos que são específicos para {{site.data.keyword.Bluemix_notm}}:
+## Recursos específicos do Cloud
+{:#cloud-features}
+
+Os recursos a seguir estão incluídos e são específicos para o {{site.data.keyword.Bluemix_notm}}:
+* appstate-1.0
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
 Um subconjunto dos recursos disponíveis é ativado por padrão ao implementar
-arquivos WAR ou EAR.  Consulte
-[Apps independentes](optionsForPushing.html#stand_alone_apps) para obter
+arquivos WAR ou EAR. Consulte
+[Apps independentes](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps) para obter
 detalhes.
 
 O tempo de execução do Liberty for Java também torna alguns recursos beta do Liberty
-disponíveis. Esses recursos não são listados, mas podem ser localizados em
-[Usando os recursos beta](/docs/runtimes/liberty/usingBetaFeatures.html).
+disponíveis. Esses recursos estão listados em [Usando os recursos beta](/docs/runtimes/liberty/usingBetaFeatures.html).
+
+## Compatibilidade de recurso
+{:#feature-compatibility}
+
+Alguns recursos que o Liberty fornece não estão disponíveis no tempo de execução do Liberty for Java porque não são aplicáveis no ambiente de nuvem.
 
 Lembre-se de que um servidor não pode carregar recursos incompatíveis; por isso,
-certifique-se de que ele esteja configurado para permitir somente recursos compatíveis. Consulte
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">Combinações
-de recursos Java EE 6 e 7 suportados</a>.
+certifique-se de que ele esteja configurado para permitir somente recursos compatíveis. Consulte [Combinações de recursos Java EE 6 e 7 suportadas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html)
+e [Combinações de recursos Java EE 7 e 8 suportadas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html).
 
-Para ver uma lista completa dos recursos disponíveis no Liberty com as versões do
-Java EE e outras informações, consulte
-[Recursos
-do Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html) no IBM Knowledge Center.
-
-Os aplicativos que usam EJBs remotos podem ser implementados no {{site.data.keyword.Bluemix_notm}} no entanto, os EJBs
-remotos não são acessíveis remotamente com o protocolo CORBA/IIOP devido a restrições de porta no ambiente do {{site.data.keyword.Bluemix_notm}}.
+Os aplicativos que usam os EJBs remotos podem ser implementados no {{site.data.keyword.Bluemix_notm}}, mas os EJBs remotos não são acessíveis remotamente com o protocolo CORBA/IIOP devido a restrições de porta no ambiente do {{site.data.keyword.Bluemix_notm}}.
 
 ## Índice de recursos do Liberty
 {: #libertyfeat_index}
+
 Vá para a seção da lista de recursos usando o índice a seguir ou é possível consultar a [lista de recursos do Liberty for Java](#libertyfeat_list).
 
 ### A-E
@@ -82,6 +83,7 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 * apiDiscovery-1.0
 * appSecurity-1.0
 * appSecurity-2.0
+* appSecurity-3.0
 * appstate-1.0
 * appstate-2.0
 
@@ -91,6 +93,7 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 * batch-1.0
 * batchManagement-1.0
 * beanValidation-1.1
+* beanValidation-2.0
 * bells-1.0
 * blueprint-1.0
 
@@ -99,6 +102,7 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 
 * cdi-1.0
 * cdi-1.2
+* cdi-2.0
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
@@ -129,11 +133,13 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 * jacc-1.5
 * jaspic-1.1
 * javaee-7.0
+* javaee-8.0
 * javaMail-1.5
+* javaMail-1.6
 * jaxb-2.2
 * jaxrs-1.1
 * jaxrs-2.0
-* jaxrsClient-2.0
+* jaxrs-2.1
 * jaxws-2.2
 * jca-1.6
 * jca-1.7
@@ -148,11 +154,15 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 * jndi-1.0
 * jpa-2.0
 * jpa-2.1
+* jpa-2.2
 * jsf-2.0
 * jsf-2.2
+* jsf-2.3
 * jsfContainer-2.2
 * json-1.0
+* jsonb-1.0
 * jsonp-1.0
+* jsonp-1.1
 * jsp-2.2
 * jsp-2.3
 * jwt-1.0
@@ -173,13 +183,11 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 * microProfile-1.0
 * microProfile-1.2
 * microProfile-1.3
+* microProfile-1.4
+* microProfile-2.0
+* microProfile-2.1
 * mongodb-2.0
 * monitor-1.0
-* mpConfig-1.1
-* mpFaultTolerance-1.0
-* mpHealth-1.0
-* mpJwt-1.0
-* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
@@ -213,6 +221,7 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 * scim-1.0
 * servlet-3.0
 * servlet-3.1
+* servlet-4.0
 * sessionDatabase-1.0
 * sipServlet-1.1
 * socialLogin-1.0
@@ -234,6 +243,7 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 * webCache-1.0
 * webProfile-6.0
 * webProfile-7.0
+* webProfile-8.0
 * websocket-1.0
 * websocket-1.1
 * wmqJmsClient-1.1
@@ -241,10 +251,3 @@ Vá para a seção da lista de recursos usando o índice a seguir ou é possíve
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

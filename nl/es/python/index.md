@@ -2,7 +2,9 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Python"
+
 
 ---
 
@@ -22,7 +24,7 @@ El python_buildpack se utilizará si el directorio raíz de la app contiene un a
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Python.  La aplicación de inicio Python es una sencilla app Python que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio Python.  La aplicación de inicio Python es una sencilla app Python que ofrece una plantilla que puede utilizar para su app. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](docs/runtimes-common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
 
 ## Versiones de tiempo de ejecución
 {: #runtime_versions}
@@ -30,7 +32,7 @@ El python_buildpack se utilizará si el directorio raíz de la app contiene un a
 Puede especificar la versión de Python que va a utilizar la app estableciendo python-versionnumber en el archivo runtime.txt en la raíz de la aplicación. Por ejemplo:
 
 ```
-python-3.6.1
+python-3.6.4
 ```
 {: codeblock}
 
@@ -58,9 +60,3 @@ Si la aplicación requiere una versión de Python que no aparece en la lista,
 puede utilizar el
 [paquete de compilación de Python](https://github.com/cloudfoundry/python-buildpack) externo para
 desplegar la app.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Paquete de compilación de Cloud Foundry for Python](https://github.com/cloudfoundry/python-buildpack)

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-11-20"
+subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,13 +11,11 @@ lastupdated: "2018-06-27"
 {:codeblock: .codeblock}
 
 
-# Informazioni sulle librerie personalizzate
+# Utilizza le librerie native personalizzate
 {: #use_customlib}
 
-{: #shortdesc}
+Alcune librerie potrebbero richiedere che utilizzi sia un pacchetto NuGet che alcuni file della libreria nativa (file `.so`).  
 
-## Utilizzo delle librerie native personalizzate.
-{: #using_custom_native_libraries}
+Per utilizzare queste librerie con il pacchetto di build, inseriscile in una cartella `ld_library_path` all'interno della cartella root della tua applicazione. Il pacchetto di build aggiunge automaticamente questo percorso alla variabile di ambiente `LD_LIBRARY_PATH` durante la fase di preparazione.  
 
-Alcune librerie possono richiederti di utilizzare sia un pacchetto NuGet che alcuni file della libraria nativa (file .so).  Per poter utilizzare queste librerie con il pacchetto di build, dovresti posizionarle in una cartella denominata *ld_library_path* nella cartella root della tua applicazione.
-Il pacchetto di build aggiungerà automaticamente questo percorso alla variabile di ambiente `LD_LIBRARY_PATH` durante la fase di preparazione.  In alternativa, puoi specificare la variabile di ambiente `LD_LIBRARY_PATH` nel file `manifest.yml` della tua applicazione o utilizzando il comando `ibmcloud cf set-env` per utilizzare un nome della cartella differente da *ld_library_path*.  In questo caso, il pacchetto di build accoderà questo percorso personalizzato alla variabile `LD_LIBRARY_PATH` generata dal pacchetto di build.
+In alternativa, puoi specificare la variabile di ambiente `LD_LIBRARY_PATH` nel file `manifest.yml` della tua applicazione o utilizzando il comando `ibmcloud cf set-env` per utilizzare un nome cartella diverso da `ld_library_path`.  In questo caso, il pacchetto di build accoda questo percorso personalizzato al `LD_LIBRARY_PATH` generato dal pacchetto di build.

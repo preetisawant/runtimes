@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-11-10"
+subcollection: "liberty"
 
 ---
 
@@ -88,10 +89,3 @@ Também é possível incluir <b>&dash;J&dash;Djavax.net.debug=ssl</b> no comando
     <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
 ```
 {: codeblock}
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
+subcollection: "Swift"
 
 ---
 
@@ -71,7 +72,7 @@ $ cat .swift-version
 - [SwiftMetrics ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant 和 CouchDB ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 要找到可包含在应用程序中的更多 Swift 程序包，请转至 [Kitura.io](https://www.kitura.io/packages.html) 的“包”部分。通过将软件包的 Git URL 和版本详细信息包含到应用程序的 `Package.swift` 文件中，即可将软件包添加到 Swift 应用程序中。有关管理软件包的更多详细信息，请参阅 [Swift.org 的软件包管理器部分](https://swift.org/package-manager/)。

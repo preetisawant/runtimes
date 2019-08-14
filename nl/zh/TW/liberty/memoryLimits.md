@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
@@ -32,7 +33,7 @@ lastupdated: "2018-06-27"
 
 當您部署應用程式時，會監視整個處理程序的記憶體用量。如果記憶體用量超出您在應用程式部署時指定的記憶體限制，則核心會停止該處理程序。這個動作發生時不會有警告，而可能以數種方式表現。
 
- 如果在應用程式部署期間超出記憶體限制，您會收到發生失敗的訊息，並且可能看到下列幾項。
+ 如果在應用程式部署期間超出「記憶體限制」，您會收到發生失敗的訊息，並且可能看到下列幾項。
 
   * 您可能會看到應用程式在飄動。
   * 您可能會看到應用程式試圖多次啟動，但一直不成功。
@@ -73,4 +74,4 @@ lastupdated: "2018-06-27"
 ```
 {: codeblock}
 
-* 如果您的應用程式是[伺服器目錄](optionsForPushing.html#server_directory)或[包裝伺服器](optionsForPushing.html#packaged_server)，請在 jvm.options 檔案中指定 -Xmx 引數。如需使用 `jvm.options` 檔案搭配 Liberty 運行環境的相關資訊，請參閱 [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474)。  
+* 如果您的應用程式是[伺服器目錄](/docs/runtimes/liberty/optionsForPushing.html#server_directory)或[包裝伺服器](/docs/runtimes/liberty/optionsForPushing.html#packaged_server)，請在 jvm.options 檔案中指定 -Xmx 引數。如需使用 `jvm.options` 檔案搭配 Liberty 運行環境的相關資訊，請參閱 [Setting generic JVM](http://www-01.ibm.com/support/docview.wss?uid=swg21596474)。  

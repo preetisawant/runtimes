@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-24"
+  years: 2015, 2019
+lastupdated: "2019-03-18"
+subcollection: "Nodejs"
 
 ---
 
@@ -14,8 +15,34 @@ lastupdated: "2018-07-24"
 
 sdk-for-nodejs buildpack 中最新更新的列表。
 
-## 2018 年 7 月 24 日：更新了 Node.js buildpack V3.21
+## 2019 年 3 月 18 日：更新了 Node.js buildpack V3.26
+
+SDK for Node.js buildpack V3.26 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.16.0、V6.17.0、V8.15.0、V8.15.1、V10.15.0 和 V10.15.3。缺省值是最新的 6.x，所以目前是 6.17.0。
+
+## 2019 年 1 月 23 日：更新了 Node.js buildpack V3.25.1
+
+SDK for Node.js buildpack V3.25.1 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.14.4、V6.16.0、V8.11.4、V8.15.0、V10.10.0 和 V10.15.0。缺省值是最新的 6.x，所以目前是 6.16.0。原先最新 buildpack 中包含的 V6.15.0、V8.14.0 和 V10.14.0 具有回归。现在改为包含 6.16.0、8.15.0 和 10.15.0，在这些版本中已修订这些回归。
+
+## 2019 年 1 月 7 日：更新了 Node.js buildpack V3.25
+
+SDK for Node.js buildpack V3.25 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.14.4、V6.15.0、V8.11.4、V8.14.0、V10.10.0 和 V10.14.0。缺省值是最新的 6.x，所以目前是 6.15.0。buildpack 还修订了 Dynatrace hook 中的小错误。
+
+## 2018 年 12 月 5 日：更新了 Node.js buildpack V3.24
+
+SDK for Node.js buildpack V3.24 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.14.3、V6.14.4、V8.11.3、V8.11.4、V10.9.0 和 V10.10.0。缺省值是最新的 6.x，所以目前是 6.14.4。buildpack 还修订了 Dynatrace hook 中的小错误。
+
+## 2018 年 9 月 7 日：更新了 Node.js buildpack V3.22
 {:#fips-deprecation}
+
+**重要信息：**从该 buildpack 开始，SDK for Node.js buildpack 包含适用于 V6.x 和 V8.x 的 Node.js 社区发行版运行时。在此更改后，这些 buildpack 版本中将不再包含 Node.js OpenSSL FIPS 模块。仅 V4.x 继续包含 OpenSSL FIPS 模块。  
+
+SDK for Node.js buildpack V3.22 提供 IBM SDK for Node.js V4.8.5、V4.8.7 以及 Node.js 社区 V6.14.3、V6.14.4、V8.11.3 和 V8.11.4。缺省值是最新的 6.x，所以目前是 6.14.4。
+
+此发行版中还包含针对以下安全漏洞的修订：
+* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
+
+## 2018 年 7 月 24 日：更新了 Node.js buildpack V3.21
+
 **重要信息：**在此发行版中从最新的 Node.js 6.x 和 8.x 版本开始，SDK for Node.js buildpack 基于 Node.js 社区发行版。在此更改后，该 buildpack 中的 Node.js OpenSSL FIPS 模块将不再更新。当前的 OpenSSL FIPS 模块和 IBM SDK for Node.js 构建在 2018 年 8 月 24 日即符合删除条件。有关更多信息，请参阅 [Aligning the Node.js Buildpack to Community Runtimes ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660) 博客帖子。
 
 SDK for Node.js buildpack V3.21 提供 IBM SDK for Node.js V4.8.5、V4.8.7、V6.13.0、V8.9.4 以及 Node.js 社区 V6.14.3 和 V8.11.3。缺省值是最新的 6.x，所以目前是 6.14.3。
@@ -24,13 +51,13 @@ SDK for Node.js buildpack V3.21 提供 IBM SDK for Node.js V4.8.5、V4.8.7、V6.
 * [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
 
 ## 2018 年 6 月 1 日：更新了 Node.js buildpack V3.20.2
-SDK for Node.js buildpack V3.20.2 为当前的 Node.js 运行时添加了 Dynatrace Managed PaaS 集成。请参阅[在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Node.js](dynatrace.html)。
+SDK for Node.js buildpack V3.20.2 为当前的 Node.js 运行时添加了 Dynatrace Managed PaaS 集成。
 
 ## 2018 年 5 月 17 日：更新了 Node.js buildpack V3.20.1
-SDK for Node.js buildpack V3.20.1 为当前的 Node.js 运行时修复了 Dynatrace PaaS 集成。请参阅[在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Node.js](dynatrace.html)。
+SDK for Node.js buildpack V3.20.1 为当前的 Node.js 运行时修复了 Dynatrace PaaS 集成。
 
 ## 2018 年 4 月 9 日：更新了 Node.js buildpack V3.20
-SDK for Node.js buildpack V3.20 为当前的 Node.js 运行时添加了 Dynatrace PaaS 集成。请参阅[在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Node.js](dynatrace.html)。
+SDK for Node.js buildpack V3.20 为当前的 Node.js 运行时添加了 Dynatrace PaaS 集成。
 
 ## 2018 年 3 月 16 日：更新了 Node.js buildpack V3.19
 SDK for Node.js buildpack V3.19 提供了 IBM SDK for Node.js V4.8.5、V4.8.7、V6.12.3、V6.13.0、V8.9.3 和 V8.9.4。缺省值是最新的 6.x，所以目前是 6.13.0。

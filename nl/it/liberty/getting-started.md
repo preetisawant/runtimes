@@ -2,7 +2,8 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-12-05"
+subcollection: "liberty"
 
 ---
 
@@ -16,6 +17,7 @@ lastupdated: "2018-07-03"
 {:app_name: data-hd-keyref="app_name"}
 
 # Esercitazione introduttiva
+{: #getting-started}
 
 * {: download} Congratulazioni, hai distribuito un'applicazione di esempio Hello World su {{site.data.keyword.Bluemix}}!  Per iniziare, segui questa guida dettagliata. O <a class="xref" href="http://bluemix.net" target="_blank" title="(Scarica il codice di esempio)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Scarica codice di esempio" />scarica codice di esempio</a> o esplora da solo.
 
@@ -29,7 +31,7 @@ In questi documenti, i riferimenti alla CLI Cloud Foundry sono ora aggiornati al
 
 Ti serviranno i seguenti account e strumenti:
 * [Account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
+* [CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
 * [Maven ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://maven.apache.org/download.cgi){: new_window}
 
@@ -47,7 +49,7 @@ git clone https://github.com/IBM-Cloud/get-started-java
 ## Passo 2: Esegui l'applicazione localmente utilizzando la riga di comando
 {: #run_locally}
 
-Utilizza Maven per creare il tuo codice di origine ed eseguire l'applicazione risultante.
+Utilizza Maven per creare il tuo codice sorgente ed eseguire l'applicazione risultante.
 
 1. Nella riga di comando, modifica la directory in cui è ubicata l'applicazione di esempio.
 
@@ -107,7 +109,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
+  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](/docs/cli/login_federated_id.html) per ulteriori informazioni.
 
   ```
 ibmcloud login --sso
@@ -121,7 +123,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](/docs/account/orgs_spaces.html).
   {: tip}
 
 1. Dall'interno della directory `get-started-java`, trasmetti la tua applicazione a {{site.data.keyword.Bluemix_notm}}.
@@ -131,14 +133,16 @@ ibmcloud cf push
   ```
   {: codeblock}
 
-La distribuzione della tua applicazione può impiegare diversi minuti. Quando la distribuzione è stata completata, visualizzerai un messaggio che la tua applicazione è in esecuzione. Visualizza la tua applicazione all'URL elencato nell'output del comando trasmesso o visualizza l'URL e lo stato di distribuzione dell'applicazione eseguendo il seguente comando:
+La distribuzione della tua applicazione può impiegare diversi minuti. Quando la distribuzione è stata completata, viene visualizzato un messaggio che indica che la tua applicazione è in esecuzione. Visualizza la tua applicazione all'URL elencato nell'output del comando push con "/GetStartedJava" alla fine oppure visualizza sia lo stato di distribuzione dell'applicazione che l'URL eseguendo il seguente comando:
 
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
 
-Puoi risolvere gli errori nel processo di distribuzione eseguendo il comando `ibmcloud cf logs <Your-App-Name> --recent`.
+Puoi anche andare all'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources) per visualizzare la tua applicazione. Se fai clic su **Visita URL applicazione**, ricordati di accodare "/GetStartedJava" all'URL.
+
+Puoi risolvere gli errori nel processo di distribuzione utilizzando il comando `ibmcloud cf logs GetStartedJava --recent`.
 {: tip}  
 
 ## Passo 5: Aggiungi un database
@@ -147,18 +151,21 @@ Puoi risolvere gli errori nel processo di distribuzione eseguendo il comando `ib
 Successivamente, aggiungeremo un database NoSQL {{site.data.keyword.cloudant_short_notm}} a questa applicazione e la configureremo in modo che possa essere eseguita localmente e su {{site.data.keyword.Bluemix_notm}}.
 
 1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Crea risorsa**.
-2. Scegli la sezione **Data and Analytics** e seleziona **{{site.data.keyword.cloudant_short_notm}}** e crea il tuo servizio.
-3. Passa alla vista **Connessioni** e seleziona la tua applicazione, quindi **Crea connessione**.
-4. Seleziona **Riprepara** quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+1. Cerca **{{site.data.keyword.cloudant_short_notm}}** e seleziona il servizio.
+1. Per **Metodi di autenticazione disponibili**, seleziona **Utilizza sia credenziali legacy che IAM**. Puoi lasciare le impostazioni predefinite per gli altri campi. Fai clic su **Crea** per creare il servizio.
+1. Nella navigazione, vai a **Connessioni** e fai clic su **Crea connessione**. Seleziona la tua applicazione e fai clic su **Connetti**.
+1. Utilizzando i valori predefiniti, fai clic su **Collega e riprepara l'applicazione** per connettere il database alla tua applicazione. Fai clic su **Riprepara** quando ti viene richiesto.
 
-Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi archiviarla in una variabile di ambiente di riferimento nel tuo codice di origine.
+   {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+
+Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice sorgente. Ad esempio, invece di impostare come hardcoded una password del database, puoi memorizzarla in una variabile di ambiente a cui fai riferimento nel tuo codice sorgente.
 {: tip}
 
 ## Passo 6: Utilizza il database
 {: #use_database}
 Ora aggiorneremo il tuo codice locale per puntare a questo database. Archivieremo le credenziali per i servizi in un file properties. Questo file sarà utilizzato SOLO quando l'applicazione è in esecuzione localmente. Quando è in esecuzione in {{site.data.keyword.Bluemix_notm}}, le credenziali saranno lette dalla variabile di ambiente `VCAP_SERVICES`.
 
-1. Nel tuo browser, vai al dashboard {{site.data.keyword.Bluemix_notm}} e seleziona **_la_tua_applicazione_ > Connessioni**. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e seleziona **Visualizza credenziali**.
+1. Trova la tua applicazione nell'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources). Nella pagina Dettagli servizio per la tua applicazione, fai clic su **Connessioni** nella barra laterale. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) e seleziona **Visualizza credenziali**.
 
 2. Copia e incolla solo l'`url` dalle credenziali nel campo `url` del file `src/main/resources/cloudant.properties` e salva le modifiche.
 

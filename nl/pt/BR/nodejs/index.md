@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-06-21"
+subcollection: "Nodejs"
 ---
 
 {:shortdesc: .shortdesc}
@@ -28,15 +29,8 @@ var port = (process.env.PORT || 3000);
 ## Aplicativo iniciador
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador Node.js.  O aplicativo iniciador Node.js é um app Node.js simples que fornece um modelo que você pode usar para seu app. É possível experimentar o app iniciador e fazer e enviar mudanças por push para o ambiente do {{site.data.keyword.Bluemix_notm}}. Veja [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso do aplicativo iniciador.
+{{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador Node.js.  O aplicativo iniciador Node.js é um app Node.js simples que fornece um modelo que você pode usar para seu app. É possível experimentar o app iniciador e fazer e enviar mudanças por push para o ambiente do {{site.data.keyword.Bluemix_notm}}. Veja [Usando os aplicativos iniciadores](/docs/runtimes-common/starter_app_usage.html) para obter ajuda sobre o uso do aplicativo iniciador.
 
 ## App Management
 {: #app_management}
-{{site.data.keyword.Bluemix_notm}} fornece vários utilitários para gerenciar e depurar seu app Node.js.  Consulte [Gerenciamento de App](../common/app_mng.html) para obter detalhes completos.
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Node.js ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)
+{{site.data.keyword.Bluemix_notm}} fornece vários utilitários para gerenciar e depurar seu app Node.js.  Consulte [Gerenciamento de App](/docs/runtimes-common/app_mng.html) para obter detalhes completos.

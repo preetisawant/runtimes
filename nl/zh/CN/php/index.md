@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-08-21"
+subcollection: "PHP"
 
 ---
 
@@ -24,7 +25,7 @@ lastupdated: "2018-08-21"
 ## 入门模板应用程序
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} 提供了 PHP 入门模板应用程序。PHP 入门模板应用程序是一个简单的 PHP 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](../common/starter_app_usage.html)。
+{{site.data.keyword.Bluemix}} 提供了 PHP 入门模板应用程序。PHP 入门模板应用程序是一个简单的 PHP 应用程序，它提供了一个可供您的应用程序使用的模板。您可以尝试使用该入门模板应用程序来进行更改并将更改推送到 {{site.data.keyword.Bluemix}} 环境。有关使用入门模板应用程序的帮助，请参阅[使用入门模板应用程序](docs/runtimes-common/starter_app_usage.html)。
 
 ## 在应用程序的所有页面上强制实施 HTTPS
 {: #enforce_https}

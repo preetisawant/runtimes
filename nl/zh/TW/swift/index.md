@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
+subcollection: "Swift"
 
 ---
 
@@ -66,13 +67,13 @@ $ cat .swift-version
 
 ## 加強的整合
 
-使用 [Kitura Web 架構](http://ibm-swift.github.io/Kitura/)可提供相當多的功能。Kitura 的本質是模組化，而且您很快就會想要使用套裝的 SDK 擴充其功能，以提供如下功能：鑑別、存取 Watson 型服務，以及廣泛的各種資料庫。Kitura 可直接支援許多資料庫，而其他開放程式碼專案也會針對許多資料庫平台提供 SDK。下列是 Kitura 所提供以使用外部資源之 SDK 的非完整清單。
+使用 [Kitura Web 架構](http://ibm-swift.github.io/Kitura/)可提供相當多的功能。Kitura 的本質是模組化，而且您很快就會想要使用套裝的 SDK 擴充其功能，以提供如下特性：鑑別、存取 Watson 型服務，以及廣泛的各種資料庫。Kitura 可直接支援許多資料庫，而其他開放程式碼專案也會針對許多資料庫平台提供 SDK。下列是 Kitura 所提供以使用外部資源之 SDK 的非完整清單。
 
 - [IBM Watson Developer Cloud Swift SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/watson-developer-cloud/swift-sdk/)
 - [SwiftMetrics ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant and CouchDB ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 若要尋找要併入您應用程式中的其他 Swift 套件，請移至 [Kitura.io](https://www.kitura.io/packages.html) 的 Packages 區段。套件可以新增至 Swift 應用程式，方法為將套件的 Git URL 及版本詳細資料併入應用程式的 `Package.swift` 檔案中。如需套件管理的其他詳細資料，請參閱 [Swift.org 的套件管理小節](https://swift.org/package-manager/)，

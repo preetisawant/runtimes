@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-03"
+  years: 2015, 2019
+lastupdated: "2019-01-11"
+subcollection: "liberty"
 
 ---
 
@@ -23,7 +24,7 @@ sono configurate per essere eseguite con una versione leggera di {{site.data.key
 leggero è semplificato per fornire una funzionalità di base ed essenziale con
 un ingombro su disco e in memoria decisamente ridotto. Per ulteriori informazioni sui contenuti del JRE leggero, consulta [Small Footprint JRE](http://www.ibm.com/support/knowledgecenter/SSYKE2_8.0.0/com.ibm.java.lnx.80.doc/user/small_jre.html).
 
- Per impostazione predefinita, viene utilizzato {{site.data.keyword.IBM_notm}}JRE versione 8. Utilizza la variabile di ambiente JBP_CONFIG_IBMJDK per specificare una versione alternativa di {{site.data.keyword.IBM_notm}} JRE. Ad esempio, per utilizzare {{site.data.keyword.IBM_notm}} JRE 7.1  più recente, imposta la seguente variabile di ambiente:
+ Per impostazione predefinita, viene utilizzato {{site.data.keyword.IBM_notm}}JRE versione 8. Utilizza la variabile di ambiente JBP_CONFIG_IBMJDK per specificare una versione alternativa di {{site.data.keyword.IBM_notm}} JRE. Ad esempio, per utilizzare {{site.data.keyword.IBM_notm}} JRE 7.1 più recente, imposta la seguente variabile di ambiente:
 ```
     ibmcloud cf set-env myapp JBP_CONFIG_IBMJDK "version: 1.7.+"
 ```
@@ -44,7 +45,7 @@ lo strumento riga di comando {{site.data.keyword.Bluemix_notm}}, esegui il coman
 ```
 {: codeblock}
 
-Se abilitato, viene utilizzato OpenJDK versione 8 per impostazione predefinita. Utilizza la variabile di ambiente JBP_CONFIG_OPENJDK  per specificare una versione alternativa di OpenJDK. Ad
+Se abilitato, viene utilizzato OpenJDK versione 8 per impostazione predefinita. Utilizza la variabile di ambiente JBP_CONFIG_OPENJDK per specificare una versione alternativa di OpenJDK. Ad
 				esempio, per utilizzare l'OpenJDK 7 più recente, imposta la seguente variabile di
 				ambiente:
 ```
@@ -52,13 +53,35 @@ Se abilitato, viene utilizzato OpenJDK versione 8 per impostazione predefinita. 
 ```
 {: codeblock}
 
-La proprietà version può essere impostata su un intervallo di versioni come 1.7.+ o qualsiasi versione
-				specifica elencata nell'[elenco di versioni OpenJDK disponibili](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Per dei risultati ottimali, utilizza Java 8.
+La proprietà version può essere impostata su un intervallo di versioni come 1.7,+, 1.8.+ o qualsiasi versione
+specifica elencata nell'[elenco di versioni OpenJDK disponibili](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml). Per dei risultati ottimali, utilizza Java 8.
+
+## OpenJ9
+{: #openj9}
+
+Facoltativamente, le applicazioni possono essere configurate per l'esecuzione con OpenJ9 come JRE o JDK. Per abilitare l'esecuzione di un'applicazione con OpenJ9, imposta la variabile di ambiente JVM su "openj9". Ad esempio, utilizzando
+lo strumento riga di comando {{site.data.keyword.Bluemix_notm}}, esegui il comando:
+```
+    ibmcloud cf set-env myapp JVM 'openj9'
+```
+{: codeblock}
+
+Se abilitato, viene utilizzato OpenJ9 versione 11 per impostazione predefinita. Utilizza la variabile di ambiente JBP_CONFIG_OPENJ9 per specificare una versione alternativa di OpenJ9. Ad esempio, per utilizzare OpenJ9 8 più recente, imposta la seguente variabile di ambiente:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
+```
+{: codeblock}
+
+Se abilitato, viene utilizzato per impostazione predefinito JRE OpenJ9. Utilizza la variabile di ambiente JBP_CONFIG_OPENJ9 per utilizzare la versione JDK di OpenJ9. Ad esempio, per utilizzare il JDK OpenJ9, imposta la seguente variabile di ambiente:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
+```
+{: codeblock}
 
 ## JRE Oracle
 {: #oracle_jre}
 
-Consulta [Utilizzo di JRE Oracle](oracle_jre.html) per informazioni sull'utilizzo di JRE Oracle.
+Vedi [Utilizzo del tuo JRE](/docs/runtimes/liberty/using_own_jre.html) per informazioni sull'utilizzo di JRE Oracle.
 
 ## Configurazione delle opzioni JRE
 {: #configuring_jre}
@@ -69,10 +92,10 @@ Consulta [Utilizzo di JRE Oracle](oracle_jre.html) per informazioni sull'utilizz
 Il pacchetto di build Liberty configura le opzioni JVM predefinite tenendo conto di quanto segue:
 
 * Il limite di memoria dell'applicazione.  Le impostazioni heap JVM applicate sono calcolate in base:
-  * il limite di memoria di un'applicazione, come spiegato in [Limiti di memoria e pacchetto di build Liberty](memoryLimits.html#memory_limits)
+  * il limite di memoria di un'applicazione, come spiegato in [Limiti di memoria e pacchetto di build Liberty](/docs/runtimes/liberty/memoryLimits.html#memory_limits)
   * il tipo di JRE, poiché le opzioni correlate all'heap per JVM variano in base alle opzioni supportate del JRE.
 
-* Le [Funzioni Liberty supportate in {{site.data.keyword.Bluemix_notm}}](libertyFeatures.html#libertyfeatures).
+* Le [Funzioni Liberty supportate in {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures).
   * Le transazioni database globali con commit in due fasi non sono supportate in {{site.data.keyword.Bluemix_notm}} e sono pertanto disabilitate impostando -Dcom.ibm.tx.jta.disable2PC=true.
 
 * L'ambiente {{site.data.keyword.Bluemix_notm}}.
@@ -204,7 +227,7 @@ Per visualizzare il file `staging_info.yml` in un'applicazione in esecuzione in 
 ```
 {: codeblock}
 
-Le opzioni JVM per la distribuzione di WAR, EAR, directory server e server in pacchetto sono memorizzate in un file `jvm.options`. Il file `jvm.options` può essere trovato nella directory `app/wlp/usr/servers/<serverName>/`. Nella maggior parte dei casi, il `<serverName>` è impostato su `defaultServer` a meno che un server compresso non era stato distribuito con un nome server diverso. Ad esempio:
+Le opzioni JVM per la distribuzione di WAR, EAR, directory server e server in pacchetto sono memorizzate in un file `jvm.options`. Il file `jvm.options` può essere trovato nella directory `app/wlp/usr/servers/<serverName>/`. Nella maggior parte dei casi `<serverName>` è impostato su `defaultServer` a meno che un server compresso non era stato distribuito con un nome server diverso. Ad esempio:
 
 Per visualizzare il file `jvm.options` in un'applicazione in esecuzione in un nodo DEA, esegui:
 
@@ -255,7 +278,7 @@ Distribuzione di un'applicazione con le opzioni JVM personalizzate per abilitare
 ```
 {: codeblock}
 
- Consulta la documentazione [Registrazione e traccia](loggingAndTracing.html#download_dumps) per i dettagli sulla visualizzazione e lo scaricamento dei file di dump generati.
+ Consulta la documentazione [Registrazione e traccia](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps) per i dettagli sulla visualizzazione e lo scaricamento dei file di dump generati.
 
 ### Sovrapposizione del JRE
 {: #overlaying_jre}
@@ -315,10 +338,3 @@ Scarica i file di politica senza limitazioni appropriati e aggiungili all'applic
 {: codeblock}
 
 Quando esegui il push dell'applicazione, questi jar si sovrappongono ai jar di politica predefiniti nel runtime Java. Questi processo abilita la crittografia AES a 256 bit.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-16"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -12,26 +13,33 @@ lastupdated: "2018-03-16"
 # {{site.data.keyword.cloud_notm}} でサポートされる Liberty フィーチャー
 {: #liberty_features}
 
-Liberty for Java インスタント・ランタイムには、Liberty フィーチャーのサブセットが含まれています。  Liberty が提供するフィーチャーの中には、クラウド環境で適用されないために Liberty for Java インスタント・ランタイムでは使用できないものがあります。
+Liberty for Java ランタイムには、Liberty フィーチャーのサブセットが含まれています。 ランタイムに含まれていないフィーチャーを使用する方法については、『[Liberty フィーチャーのインストール](/docs/runtimes/liberty/installFeatures.html)』を参照してください。 Liberty で使用可能なフィーチャー、Java EE バージョンおよびその他の情報の完全なリストを確認するには、[Liberty フィーチャー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html) を参照してください。
+
+## Cloud 固有のフィーチャー
+{:#cloud-features}
 
 {{site.data.keyword.Bluemix_notm}} に固有の以下のフィーチャーが含まれています。
+* appstate-1.0
 * appstate-2.0
 * cloudAutowiring-1.0
 * logAnalysis-1.0
 
-使用可能なフィーチャーのサブセットは、WAR ファイルまたは EAR ファイルのデプロイ時にデフォルトで有効にされます。  詳細については、[『スタンドアロン・アプリケーション』](optionsForPushing.html#stand_alone_apps)を参照してください。
+使用可能なフィーチャーのサブセットは、WAR ファイルまたは EAR ファイルのデプロイ時にデフォルトで有効にされます。 詳細については、[『スタンドアロン・アプリケーション』](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)を参照してください。
 
-Liberty for Java ランタイムは、一部の Liberty ベータ・フィーチャーも使用可能にします。 これらのフィーチャーはリストされていませんが、[『ベータ・フィーチャーの使用』](/docs/runtimes/liberty/usingBetaFeatures.html)に記載されています。
+Liberty for Java ランタイムは、一部の Liberty ベータ・フィーチャーも使用可能にします。 これらのフィーチャーは、『[ベータ・フィーチャーの使用](/docs/runtimes/liberty/usingBetaFeatures.html)』にリストされています。
 
-サーバーは互換性のないフィーチャーをロードできないことに注意してください。そのため、互換性のあるフィーチャーのみを有効にするようにサーバーを構成してください。 
-    <a href="https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html">『Supported Java EE 6 and 7 feature combinations』</a>を参照してください。
+## フィーチャーの互換性
+{:#feature-compatibility}
 
-Liberty で使用可能なフィーチャー、Java EE バージョン、およびその他の情報の完全なリストを確認するには、IBM Knowledge Center の[『Liberty フィーチャー』](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_feat.html)を参照してください。
+Liberty が提供するフィーチャーの中には、クラウド環境で適用されないために Liberty for Java ランタイム内で使用可能でないものがあります。
 
-リモート EJB を使用するアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイできますが、{{site.data.keyword.Bluemix_notm}} 環境でのポートに関する制限のため、CORBA/IIOP プロトコルを使用してリモート側でリモート EJB にアクセスすることはできません。
+サーバーは互換性のないフィーチャーをロードできないことに注意してください。そのため、互換性のあるフィーチャーのみを有効にするようにサーバーを構成してください。 『[サポートされる Java EE 6 と 7 フィーチャーの組み合わせ](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos.html)』および『[サポートされる Java EE 7 と 8 フィーチャーの組み合わせ](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_prog_model_supported_combos_7_8.html)』を参照してください。
+
+リモート EJB を使用するアプリケーションを {{site.data.keyword.Bluemix_notm}} にデプロイできますが、{{site.data.keyword.Bluemix_notm}} 環境でのポートに関する制限のため、リモート EJB に CORBA/IIOP プロトコルでリモートにアクセスすることはできません。
 
 ## Liberty フィーチャーの索引
 {: #libertyfeat_index}
+
 以下の索引を使用して、フィーチャー・リストの該当セクションに進めます。あるいは、[Liberty for Java フィーチャー・リスト](#libertyfeat_list)に目を通すことも可能です。
 
 ### A-E
@@ -69,6 +77,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * apiDiscovery-1.0
 * appSecurity-1.0
 * appSecurity-2.0
+* appSecurity-3.0
 * appstate-1.0
 * appstate-2.0
 
@@ -78,6 +87,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * batch-1.0
 * batchManagement-1.0
 * beanValidation-1.1
+* beanValidation-2.0
 * bells-1.0
 * blueprint-1.0
 
@@ -86,6 +96,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 
 * cdi-1.0
 * cdi-1.2
+* cdi-2.0
 * cloudant-1.0
 * cloudAutowiring-1.0
 * concurrent-1.0
@@ -116,11 +127,13 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * jacc-1.5
 * jaspic-1.1
 * javaee-7.0
+* javaee-8.0
 * javaMail-1.5
+* javaMail-1.6
 * jaxb-2.2
 * jaxrs-1.1
 * jaxrs-2.0
-* jaxrsClient-2.0
+* jaxrs-2.1
 * jaxws-2.2
 * jca-1.6
 * jca-1.7
@@ -135,11 +148,15 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * jndi-1.0
 * jpa-2.0
 * jpa-2.1
+* jpa-2.2
 * jsf-2.0
 * jsf-2.2
+* jsf-2.3
 * jsfContainer-2.2
 * json-1.0
+* jsonb-1.0
 * jsonp-1.0
+* jsonp-1.1
 * jsp-2.2
 * jsp-2.3
 * jwt-1.0
@@ -160,13 +177,11 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * microProfile-1.0
 * microProfile-1.2
 * microProfile-1.3
+* microProfile-1.4
+* microProfile-2.0
+* microProfile-2.1
 * mongodb-2.0
 * monitor-1.0
-* mpConfig-1.1
-* mpFaultTolerance-1.0
-* mpHealth-1.0
-* mpJwt-1.0
-* mpMetrics-1.0
 
 ### O
 {: #libertyfeat_O}
@@ -200,6 +215,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * scim-1.0
 * servlet-3.0
 * servlet-3.1
+* servlet-4.0
 * sessionDatabase-1.0
 * sipServlet-1.1
 * socialLogin-1.0
@@ -221,6 +237,7 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * webCache-1.0
 * webProfile-6.0
 * webProfile-7.0
+* webProfile-8.0
 * websocket-1.0
 * websocket-1.1
 * wmqJmsClient-1.1
@@ -228,10 +245,3 @@ Liberty で使用可能なフィーチャー、Java EE バージョン、およ�
 * wsAtomicTransaction-1.2
 * wsSecurity-1.1
 * wsSecuritySaml-1.1
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty ランタイム](index.html)
-* [Liberty の概要](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-06"
+  years: 2015, 2019
+lastupdated: "2018-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -24,42 +25,42 @@ Liberty for Java 支持的环境变量。
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>启用[应用程序管理实用程序](../common/app_mng.html)</td>
+<td>启用[应用程序管理实用程序](/docs/runtimes-common/app_mng.html)</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>安装[应用程序管理实用程序](../common/app_mng.html)</td>
+<td>安装[应用程序管理实用程序](/docs/runtimes-common/app_mng.html)</td>
 </tr>
 
 <tr>
-<td>IBM_LIBERTY_BETA</td>
-<td>启用 [Liberty Beta 功能](usingBetaFeatures.html)</td>
+<td>IBM_LIBERTY_MONTHLY</td>
+<td>启用 [Liberty 每月发行版运行时](/docs/runtimes/liberty/usingMonthlyRuntime.html)</td>
 </tr>
 
 <tr>
 <td>JAVA_OPTS</td>
-<td>设置 [Java 选项](customizingJRE.html)</td>
+<td>设置 [Java 选项](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
-<td>配置 [Dynatrace 代理程序位置信息](dynatrace.html#configuring_liberty_app)</td>
+<td>配置 [Dynatrace 代理程序位置信息](/docs/runtimes/liberty/monitoring/dynatrace.html#configuring_liberty_app)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_IBMJDK </td>
-<td>配置 [IBM JRE 版本](customizingJRE.html)</td>
+<td>配置 [IBM JRE 版本](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>配置各种 Liberty 运行时选项，包括[用于 WAR 或 EAR 文件的功能](optionsForPushing.html#stand_alone_apps)</td>
+<td>配置各种 Liberty 运行时选项，包括[用于 WAR 或 EAR 文件的功能](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>配置 [OpenJDK 版本](customizingJRE.html)</td>
+<td>配置 [OpenJDK 版本](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
@@ -74,17 +75,17 @@ Liberty for Java 支持的环境变量。
 
 <tr>
 <td>JVM</td>
-<td>选择 [JRE 类型](customizingJRE.html)</td>
+<td>选择 [JRE 类型](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>JVM_ARGS</td>
-<td>设置 [JVM 自变量](customizingJRE.html)</td>
+<td>设置 [JVM 自变量](/docs/runtimes/liberty/customizingJRE.html)</td>
 </tr>
 
 <tr>
 <td>LBP_SERVICE_CONFIG_xxxx</td>
-<td>[覆盖服务配置](autoConfig.html#override_service_config)</td>
+<td>[覆盖服务配置](/docs/runtimes/liberty/autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>
@@ -99,7 +100,7 @@ Liberty for Java 支持的环境变量。
 
 <tr>
 <td>services_autoconfig_excludes</td>
-<td>禁用服务[自动配置](autoConfig.html#opting_out)。</td>
+<td>禁用服务[自动配置](/docs/runtimes/liberty/autoConfig.html#opting_out)。</td>
 </tr>
 </table>
 {: caption="表 1. 可用于 Liberty for Java 的环境变量" caption-side="top"}
@@ -152,10 +153,3 @@ Liberty buildpack 会自动禁用一些属性。您无法覆盖这些属性。�
 </tr>
 </table>
 {: caption="表 1. Liberty for Java 禁用的属性" caption-side="top"}
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Liberty 运行时](index.html)
-* [Liberty 概述](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

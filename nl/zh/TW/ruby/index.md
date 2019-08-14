@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Ruby"
 
 ---
 
@@ -31,7 +32,7 @@ ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
 
 ```
   source 'https://rubygems.org'
-  ruby '2.4.1'
+  ruby '2.5.0'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
@@ -54,10 +55,3 @@ ruby_buildpack 為 Ruby 應用程式提供完整的運行環境。
 * 2.5.0
 
 如果您的應用程式需要未列出的 Ruby 版本，可以使用外部 [Ruby 建置套件](https://github.com/cloudfoundry/ruby-buildpack)來部署該應用程式。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Cloud Foundry buildpack for Ruby, Sinatra and Rails](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](http://api.rubyonrails.org/)

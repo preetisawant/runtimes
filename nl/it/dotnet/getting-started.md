@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-07-03"
+  years: 2017, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 
 ---
 
@@ -27,9 +28,9 @@ Seguendo questa esercitazione introduttiva, configurerai un ambiente di sviluppo
 
 Avrai bisogno di quanto segue:
 * [Account {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/registration/)
-* [CLI {{site.data.keyword.Bluemix_notm}}](../../cli/reference/bluemix_cli/download_cli.html)
+* [CLI {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://git-scm.com/downloads){: new_window}
-* Installa .NET Core 1.1 SDK 1.0.4 dalle istruzioni del [sito web dot.net ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.microsoft.com/net/download/core).
+* Installa .NET Core 2.2.2 SDK 2.2.104 dal [sito web dei download di .NET Core ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.microsoft.com/net/download/core).
 
 ## Passo 1: Clona l'applicazione di esempio
 {: #clone}
@@ -95,7 +96,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) per ulteriori informazioni.
+  Se hai un ID utente federato, usa invece il seguente comando per eseguire l'accesso con il tuo ID SSO (single sign-on). Consulta [Accesso con un ID federato](/docs/cli/login_federated_id.html) per ulteriori informazioni.
  ```
 ibmcloud login --sso
   ```
@@ -107,16 +108,16 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Se non hai un'organizzazione o uno spazio configurati, consulta [Aggiunta di organizzazioni e spazi](/docs/account/orgs_spaces.html).
   {: tip}
 
-1. **Assicurati di essere nella directory principale, `get-started-aspnet-core`,  per la tua applicazione** esegui quindi il push della tua applicazione a {{site.data.keyword.Bluemix_notm}}:
+1. **Assicurati di essere nella directory principale, `get-started-aspnet-core`, per la tua applicazione** esegui quindi il push della tua applicazione a {{site.data.keyword.Bluemix_notm}}:
   ```
 ibmcloud cf push
   ```
   {: codeblock}
 
-  Ci può volere un minuto. Se si verifica un errore nel processo di distribuzione, puoi utilizzare il comando `ibmcloud cf logs. <Your-App-Name> --recent` per risolverlo.
+  Ci può volere un minuto. Se si verifica un errore nel processo di distribuzione, puoi utilizzare il comando `ibmcloud cf logs <Your-App-Name> --recent` per risolvere il problema.
 
 Quando la distribuzione è stata completata, dovresti vedere un messaggio che indica che la tua applicazione è in esecuzione.  Visualizza la tua applicazione all'URL elencato nell'output del comando trasmesso.  Puoi anche immettere il seguente comando per visualizzare lo stato della tua applicazioni e vedere l'URL.
   ```
@@ -124,51 +125,63 @@ ibmcloud cf apps
   ```
   {: codeblock}
 
-## Passo 5: Collegati a un database MySQL
-{: connect_mysql}
+Puoi anche andare all'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources) per visualizzare la tua applicazione.
 
-Successivamente, aggiungeremo un database ClearDB MySQL a questa applicazione e la configureremo in modo che possa essere eseguita localmente e su {{site.data.keyword.Bluemix_notm}}.
+## Passo 5: Aggiungi un database
+{: #add_database}
+
+Successivamente, aggiungeremo un database NoSQL {{site.data.keyword.cloudant_short_notm}} a questa applicazione e la configureremo in modo che possa essere eseguita localmente e su {{site.data.keyword.Bluemix_notm}}.
 
 1. Nel tuo browser, accedi a {{site.data.keyword.Bluemix_notm}} e passa al dashboard. Seleziona **Crea risorsa**.
-2. Scegli la sezione **Data and Analytics** e seleziona **ClearDB Managed MySQL Database** e crea il tuo servizio.
-3. Passa alla vista **Connessioni** e seleziona la tua applicazione, quindi **Crea connessione**.
-4. Seleziona **Riprepara** quando richiesto. {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+1. Cerca **{{site.data.keyword.cloudant_short_notm}}** e seleziona il servizio.
+1. Per **Metodi di autenticazione disponibili**, seleziona **Utilizza sia credenziali legacy che IAM**. Puoi lasciare le impostazioni predefinite per gli altri campi. Fai clic su **Crea** per creare il servizio.
+1. Nella navigazione, vai a **Connessioni** e fai clic su **Crea connessione**. Seleziona la tua applicazione e fai clic su **Connetti**.
+1. Utilizzando i valori predefiniti, fai clic su **Collega e riprepara l'applicazione** per connettere il database alla tua applicazione. Fai clic su **Riprepara** quando ti viene richiesto.
 
-Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi archiviarla in una variabile di ambiente di riferimento nel tuo codice di origine.
+   {{site.data.keyword.Bluemix_notm}} riavvierà la tua applicazione e fornirà le credenziali del database alla tua applicazione utilizzando la variabile di ambiente `VCAP_SERVICES`. Questa variabile di ambiente è disponibile per l'applicazione solo quando è in esecuzione su {{site.data.keyword.Bluemix_notm}}.
+
+Le variabili di ambiente ti abilitano a separare le impostazioni di distribuzione dal tuo codice di origine. Ad esempio, invece di impostare come hardcoded una password del database, puoi memorizzarla in una variabile di ambiente a cui fai riferimento nel tuo codice sorgente.
 {: tip}
 
 ## Passo 6: Utilizza il database localmente
 {: #use_database}
 
-Ora aggiorneremo il tuo codice locale per puntare a questo database. Archivieremo le credenziali per i servizi in un file JSON. Questo file sarà utilizzato SOLO quando l'applicazione è in esecuzione localmente. Quando è in esecuzione in {{site.data.keyword.Bluemix_notm}}, le credenziali saranno lette dalla variabile di ambiente VCAP_SERVICES.
+Ora aggiorneremo il tuo codice locale per puntare a questo database. Archivieremo le credenziali per i servizi in un file JSON. Questo file sarà utilizzato SOLO quando l'applicazione è in esecuzione localmente. Quando è in esecuzione in {{site.data.keyword.Bluemix_notm}}, le credenziali saranno lette dalla variabile di ambiente `VCAP_SERVICES`.
 
-1. Crea il file src/GetStartedDotnet/vcap-local.json
+1. Nella directory `src/GetStartedDotnet`, crea un file `vcap-local.json`.
 
-2. Nel tuo browser, vai al dashboard {{site.data.keyword.Bluemix_notm}} e seleziona **_la_tua_applicazione_ > Connessioni**. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&vellip;**) e seleziona **Visualizza credenziali**.
+1. Copia e incolla il seguente oggetto JSON nel file `vcap-local.json` e salva le tue modifiche.
 
-3. Copia e incolla l'oggetto json completo dalle credenziali nel file `vcap-local.json` e salva le modifiche.  Il risultato sarà qualcosa di simile al seguente esempio:
-  ```
-  {
-  "cleardb": [
-    {
-      "credentials": {
-        ...
-        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
-        ...
-      },
-      ...
-      "name": "My ClearDB service instance name",
-      ...
-    }
-  ]
-}
-  ```
+   ```json
+   {
+     "services": {
+       "cloudantNoSQLDB": [
+        {
+           "credentials": {
+             "url":"CLOUDANT_DATABASE_URL"
+           },
+          "label": "cloudantNoSQLDB"
+        }
+       ]
+     }
+   }
+   ```
+   {: codeblock}
 
-4. Dalla directory `get-started-aspnet-core/src/GetStartedDotnet` riavvia la tua applicazione con il comando `dotnet run`.
+1. Trova la tua applicazione nell'{{site.data.keyword.Bluemix_notm}} [Elenco risorse](https://cloud.ibm.com/resources). Nella pagina Dettagli servizio per la tua applicazione, fai clic su **Connessioni** nella barra laterale. Fai clic sull'icona del menu {{site.data.keyword.cloudant_short_notm}} (**&hellip;**) e seleziona **Visualizza credenziali**.
 
-Aggiorna la tua vista del browser all'indirizzo: http://localhost:5000/. Tutti i nomi immessi nell'applicazione saranno ora aggiunti al database.
+1. Copia e incolla solo il valore `url` dalle credenziali al campo `url` del file `vcap-local.json`, sostituendo `CLOUDANT_DATABASE_URL`.
 
-La tua applicazione locale e {{site.data.keyword.Bluemix_notm}} stanno condividendo il database.  Visualizza la tua applicazione {{site.data.keyword.Bluemix_notm}} all'URL elencato nell'output del comando trasmesso precedentemente.  I nomi che aggiungi dall'applicazione dovrebbero essere visualizzati entrambi quando aggiorni i browser.
+1. Dalla directory `get-started-aspnet-core/src/GetStartedDotnet`, riavvia la tua applicazione eseguendo questo comando.
+
+   ```
+   dotnet run
+   ```
+   {: codeblock}
+
+1. Aggiorna la tua vista del browser all'indirizzo http://localhost:5000/. Tutti i nomi immessi nell'applicazione saranno ora aggiunti al database.
+
+La tua applicazione locale e {{site.data.keyword.Bluemix_notm}} condividono il database.  Visualizza la tua applicazione {{site.data.keyword.Bluemix_notm}} all'URL nell'output del comando `ibmcloud cf push`.  I nomi che aggiungi dall'applicazione dovrebbero essere visualizzati entrambi quando aggiorni i browser.
 
 Ricorda: se non hai bisogno della tua applicazione live, arrestala così da non incorrere in alcun addebito non previsto.
 {: tip}

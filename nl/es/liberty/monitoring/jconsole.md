@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-11-10"
+subcollection: "liberty"
 
 ---
 
@@ -85,10 +86,3 @@ También puede añadir <b>&dash;J&dash;Djavax.net.debug=ssl</b> al mandato jcons
     <logging traceSpecification="com.ibm.ws.jmx.*=all"/>
 ```
 {: codeblock}
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general del perfil de Liberty](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

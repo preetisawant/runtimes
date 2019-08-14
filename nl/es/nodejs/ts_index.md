@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-02-21"
+subcollection: "Nodejs"
 
 ---
 
@@ -14,6 +15,5 @@ lastupdated: "2018-02-21"
 
 Resuelva su SDK para aplicaciones Node.js y paquetes de compilación con los siguientes recursos:
 
-* [Resolución de problemas de tiempos de ejecución](../common/ts_runtimes.html#runtimes)
-* [Resolución de problemas de tiempos de ejecución: Node.js](../common/ts_runtimes.html#ts_nodejs)
-* [Application Management](../common/app_mng.html)
+* [Resolución de problemas de tiempos de ejecución](/docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Application Management](/docs/runtimes-common/app_mng.html)

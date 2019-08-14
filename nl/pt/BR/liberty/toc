@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html"}
+{: .toc subcollection="liberty" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html" path="runtimes/liberty"}
 Liberty for Java
 
     {: .navgroup id="learn"}
@@ -17,28 +17,25 @@ Liberty for Java
     secureWebApp.md
     loggingAndTracing.md
 
-    {: .topicgroup}
-    Use o IBM Eclipse Tools for IBM Cloud
-        eclipseDevelop.md
-        [Implementar aplicativos com o IBM Eclipse Tools for IBM Cloud](../../manageapps/eclipsetools/eclipsetools.html#eclipsetools)
-
     autoConfig.md
     customizingJRE.md
     using_own_jre.md
+    installFeatures.md
+    usingMonthlyRuntime.md
     usingBetaFeatures.md
-    [Fazer opt-out de serviços de limite](autoConfig.html#opting_out)
+    [Fazer opt-out de serviços de limite](/runtimes/liberty/liberty-auto_config#opting_out)
 
     {: .topicgroup}
     Monitore o Liberty no IBM Cloud
         monitoring/jconsole.md
         monitoring/dynatrace.md
         monitoring/newRelic.md
-        [Introdução ao monitoramento de disponibilidade](../../services/AvailabilityMonitoring/index.html)
+        [Introdução ao monitoramento de disponibilidade](/AvailabilityMonitoring/AvailabilityMonitoring-avmon_gettingstarted)
 
     {: .topicgroup}
-    Trabalhe off-line ou com um proxy
+    Trabalhar off-line ou com um proxy
         offlineMode.md
-        ../common/workingWithProxy.md
+		/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -47,18 +44,17 @@ Liberty for Java
     libertyFeatures.md
     environmentVariables.md
 
-    {: .topicgroup}
-    Aplicativos iniciadores e buildpacks
-        ../common/starter_app_usage.md
-        ../common/byob.md
-
+	{: .topicgroup}
+    Aplicativos Starter e buildpacks de comunidade
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     buildpackDefaults.md
-    ../common/app_mng.md
+    /runtimes-common/runtimes-common-app_management
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
-    [Introdução ao IBM Cloud Log Analysis](../../services/CloudLogAnalysis/index.html)
+    [Introdução ao IBM Cloud Log Analysis](services/CloudLogAnalysis/index.html)
     updates.md
-    ../common/buildpackSupport.md
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

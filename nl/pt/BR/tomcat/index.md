@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Tomcat"
 
 ---
 
@@ -34,7 +35,7 @@ O {{site.data.keyword.Bluemix_notm}} fornece um aplicativo iniciador do Tomcat. 
 {{site.data.keyword.Bluemix_notm}}. Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para obter ajuda sobre o uso
 do aplicativo iniciador.
 
-## Versões de runtime
+## Versões de tempo de execução
 {: #runtime_versions}
 
 É possível mudar a versão do Tomcat a ser usada por seu app com a variável de ambiente JBP_CONFIG_TOMCAT.
@@ -42,7 +43,7 @@ do aplicativo iniciador.
 Ambos podem ser especificados no arquivo manifest do aplicativo.  Por exemplo:
 ```
     env:
-        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
+        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.5.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}
@@ -58,7 +59,7 @@ Para fazer isso, modifique o arquivo `server.xml`, configurando o elemento Valve
 
 Por padrão, o [server.xml](https://github.com/cloudfoundry/java-buildpack/blob/master/resources/tomcat/conf/server.xml)
 do runtime do Tomcat incluído no buildpack configura apenas o `protocolHeader` do elemento Valve
-`RemoteIpValve`. Para redirecionar o tráfego HTTP para HTTPS no {{site.data.keyword.Bluemix_notm}},
+`RemoteIpValve`.  Para redirecionar o tráfego HTTP para HTTPS no {{site.data.keyword.Bluemix_notm}},
 configure o elemento `RemoteIpValve` no `server.xml` customizado, conforme mostrado no exemplo a seguir:
 
 ```

@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-26"
+subcollection: "liberty"
 
 ---
 
@@ -28,15 +29,15 @@ non si basi sui valori predefiniti del pacchetto di build.
 {: #liberty_versions}
 
 Il pacchetto di build fornisce due versioni del runtime Liberty:
-1. La release stabile
+1. Una release stabile a lungo termine
   * È il runtime Liberty predefinito.
-  * Non fornisce alcuna [funzione beta](usingBetaFeatures.html).
+  * Non fornisce alcuna [funzione beta](/docs/runtimes/liberty/usingBetaFeatures.html).
   * Normalmente aggiornato su base trimestrale.
 
 2. La release mensile
-  * Deve essere abilitata esplicitamente impostando la variabile di ambiente **JBP_CONFIG_LIBERTY** con il valore **"version: +"**.
-  * Fornisce le [funzioni beta](usingBetaFeatures.html).
-  * Normalmente aggiornata su base mensile.
+  * Deve essere esplicitamente abilitata impostando la variabile di ambiente **JBP_CONFIG_LIBERTY** con il valore **"version: +"** e la variabile di ambiente **IBM_LIBERTY_MONTHLY** con **true**.
+  * Forrnisce le [funzioni mensili](/docs/runtimes/liberty/usingMonthlyRuntime.html).
+  * Normalmente aggiornata ogni 4 settimane.
 
 ## Funzioni Liberty
 {: #liberty_features}
@@ -51,9 +52,9 @@ delle opzioni per garantire che l'applicazione non risenta della modifica nei
 valori predefiniti delle funzioni.
 
 * Imposta la variabile di ambiente JBP_CONFIG_LIBERTY per specificare esplicitamente
-un elenco di funzioni abilitate per l'applicazione. Per ulteriori informazioni, consulta [Applicazioni autonome](optionsForPushing.html#stand_alone_apps).
-* Distribuisci la tua applicazione come una [directory server](optionsForPushing.html#server_directory)
-o un [server in pacchetto](optionsForPushing.html#packaged_server). Fornisci un file server.xml personalizzato che specifica l'esatto insieme di funzioni di cui la tua applicazione ha bisogno.
+un elenco di funzioni abilitate per l'applicazione. Per ulteriori informazioni, consulta [Applicazioni autonome](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps).
+* Distribuisci la tua applicazione come una [directory server](/docs/runtimes/liberty/optionsForPushing.html#server_directory)
+o un [server in pacchetto](/docs/runtimes/liberty/optionsForPushing.html#packaged_server). Fornisci un file server.xml personalizzato che specifica l'esatto insieme di funzioni di cui la tua applicazione ha bisogno.
 
 Le applicazioni distribuite come una directory server
 o come un server in pacchetto non risentono della modifica nel valore predefinito delle funzioni Liberty.
@@ -68,13 +69,5 @@ secondaria del JRE potrebbe essere aggiornata frequentemente, mentre
 la versione principale viene aggiornata di rado. La modifica nella versione principale
 del JRE potrebbe avere un impatto negativo sull'applicazione.
 
-Per garantire che l'applicazione non sia influenzata dalla modifica della versione principale, imposta la variabile di ambiente con la versione JRE appropriata come descritto in [Customizing the JRE](customizingJRE.html). Per dei risultati
+Per garantire che l'applicazione non sia influenzata dalla modifica della versione principale, imposta la variabile di ambiente con la versione JRE appropriata come descritto in [Customizing the JRE](/docs/runtimes/liberty/customizingJRE.html). Per dei risultati
 ottimali, adotta Java 8 per le tue applicazioni.
-
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Runtime Liberty](index.html)
-* [Panoramica di Liberty Profile](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

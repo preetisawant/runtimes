@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
+subcollection: "PHP"
 
 ---
 
@@ -14,5 +15,5 @@ lastupdated: "2018-02-22"
 
 Risoluzione dei problemi dei tuoi pacchetti di build e applicazioni PHP con le seguenti risorse:
 
-* [Risoluzione dei problemi relativi ai runtime](../common/ts_runtimes.html#runtimes)
-* [Risoluzione dei problemi relativi ai runtime: PHP](../common/ts_runtimes.html#ts_php)
+* [Risoluzione dei problemi relativi ai runtime](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Risoluzione dei problemi relativi ai runtime: PHP](docs/runtimes-common/ts_runtimes.html#ts_php)

@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Ruby"
 
 ---
 
@@ -31,7 +32,7 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 
 ```
   source 'https://rubygems.org'
-  ruby '2.4.1'
+  ruby '2.5.0'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
@@ -54,10 +55,3 @@ ruby_buildpack は、アプリケーションのルート・ディレクトリ�
 * 2.5.0
 
 アプリケーションが、リストされていないバージョンの Ruby を必要とする場合は、外部の [Ruby ビルドパック](https://github.com/cloudfoundry/ruby-buildpack)を使用してアプリケーションをデプロイできます。
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Cloud Foundry buildpack for Ruby, Sinatra and Rails](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Ruby on Rails の資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://api.rubyonrails.org/)

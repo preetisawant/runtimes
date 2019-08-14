@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-08-21"
+subcollection: "PHP"
 
 ---
 
@@ -29,7 +30,7 @@ um diretório existente dentro de seu app.
 
 O {{site.data.keyword.Bluemix}} fornece um app iniciador em PHP.  O aplicativo iniciador em PHP é um app em PHP simples que fornece um modelo
 que pode ser usado para seu app. É possível experimentar o app iniciador, fazendo e enviando mudanças por push para o ambiente
-{{site.data.keyword.Bluemix}}.  Consulte [Usando os aplicativos iniciadores](../common/starter_app_usage.html) para
+{{site.data.keyword.Bluemix}}.  Consulte [Usando os aplicativos iniciadores](docs/runtimes-common/starter_app_usage.html) para
 obter ajuda sobre o uso do app iniciador.
 
 ## Impingir HTTPS em todas as páginas em seu aplicativo
@@ -44,7 +45,7 @@ RewriteCond %{ENV:BLUEMIX_REGION} !^$
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 ```
 
-## Versões de runtime
+## Versões de tempo de execução
 {: #runtime_versions}
 
 É possível especificar a versão do PHP a ser usado por seu app no arquivo composer.json. Por exemplo:

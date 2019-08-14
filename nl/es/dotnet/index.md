@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-25"
+subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,11 +26,4 @@ El paquete de compilación de ASP.NET Core de {{site.data.keyword.Bluemix}} se u
 ## Aplicación de inicio
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de ASP.NET Core.  La aplicación de inicio de ASP.NET Core es una app sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](../common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [NuGet](https://docs.nuget.org/Consume/Overview){: new_window}
-* [Visión general de ASP.NET Core](http://docs.asp.net/en/latest/conceptual-overview/aspnet.html){: new_window}
+{{site.data.keyword.Bluemix_notm}} proporciona una aplicación de inicio de ASP.NET Core.  La aplicación de inicio de ASP.NET Core es una app sencilla que proporciona una plantilla que puede utilizar. Puede experimentar con la app de iniciador, y realizar y enviar por push cambios en el entorno de {{site.data.keyword.Bluemix_notm}}.  Consulte [Utilización de las aplicaciones de inicio](docs/runtimes-common/starter_app_usage.html) para obtener ayuda con el uso de la aplicación de inicio.

@@ -19,7 +19,7 @@
    enable-background="new -127.9 -17 271.9 50"
    xml:space="preserve"
    inkscape:version="0.48.5 r"
-   sodipodi:docname="btn_starter-code-01.svg"><metadata
+   sodipodi:docname="btn_starter-code.svg"><metadata
      id="metadata17"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
@@ -49,12 +49,14 @@
      width="271.9"
      height="50"
      id="rect3" /><text
-     transform="scale(0.94617705,1.0568846)"
+     transform="scale(0.94617709,1.0568846)"
      font-size="14.583"
      id="text5"
-     x="-117.14561"
+     x="-87.552834"
      y="12.583965"
-     style="font-size:13.79810047px;fill:#ffffff;font-family:HelvNeueBoldforIBM">スターター・コードのダウンロード</text>
+     style="font-size:13.79810047px;fill:#ffffff;font-family:HelvNeueBoldforIBM"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MS UI Gothic;-inkscape-font-specification:MS UI Gothic"
+       id="tspan5334">スターター・コードのダウンロード</tspan></text>
 <g
      id="g7"><polygon
        fill="#FFFFFF"

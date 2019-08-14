@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-07-10"
+subcollection: "liberty"
 
 ---
 
@@ -48,7 +49,7 @@ Cuando envía por push la aplicación, el archivo server.xml incluye las propied
 
 Consulte en [Enviar por push apps de Liberty con server.xml](https://console.ng.bluemix.net/docs/runtimes/liberty/optionsForPushing.html#options_for_pushing) para encontrar opciones para impulsar apps de Liberty con un archivo `server.xml` personalizado.
 
-Consulte [Control de actualizaciones dinámicas ](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para saber cómo configurar la actualización dinámica en el archivo server.xml.
+Consulte [Control de actualizaciones dinámicas](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dyn_upd.html){: new_window} para saber cómo configurar la actualización dinámica en el archivo server.xml.
 
 Siga estos pasos para cambiar la configuración de rastreo:
 
@@ -101,10 +102,3 @@ De forma predeterminada, los diversos archivos de volcado se colocan en el direc
   {: codeblock}
 
 También se puede utilizar `scp` y otras herramientas similares para ver y descargar los archivos de volcado. Consulte el apartado sobre [Acceso a apps con SSH  ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/devguide/deploy-apps/ssh-apps.html) para obtener más información.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Tiempo de ejecución de Liberty](index.html)
-* [Visión general de Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

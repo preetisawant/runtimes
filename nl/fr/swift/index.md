@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
+subcollection: "Swift"
 
 ---
 
@@ -20,7 +21,7 @@ Ce pack de construction fournit un environnement d'exécution complet pour les a
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} fournit une [application de démarrage](https://github.com/IBM-Cloud/Kitura-Starter) Swift basée sur Kitura ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"). L'application de démarrage Kitura est une application Swift simple que vous pouvez utiliser pour découvrir les types d'applications serveur que vous pouvez développer en utilisant le langage de programmation Swift. Cette application exemple crée un serveur HTTP Kitura de base qui renvoie un contenu HTML au client.
+{{site.data.keyword.Bluemix_notm}} fournit une [application de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Cloud/Kitura-Starter) Swift basée sur Kitura. L'application de démarrage Kitura est une application Swift simple que vous pouvez utiliser pour découvrir les types d'applications serveur que vous pouvez développer en utilisant le langage de programmation Swift. Cette application exemple crée un serveur HTTP Kitura de base qui renvoie un contenu HTML au client.
 
 **Remarque :** L'application de démarrage Kitura est destinée à être utilisée pour répondre à des besoins de formation. Vous pouvez expérimenter cette application en effectuant des modifications puis en les envoyant par push vers l'environnement {{site.data.keyword.Bluemix_notm}}. Voir [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide.
 
@@ -72,7 +73,7 @@ L'utilisation de l'[infrastructure Web Kitura](http://ibm-swift.github.io/Kitura
 - [SwiftMetrics ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant et CouchDB ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 Pour trouver d'autres packages Swift à inclure dans votre application, allez à la section Packages de [Kitura.io](https://www.kitura.io/packages.html). Les packages peuvent être ajoutés à une application Swift en incluant l'URL Git du package et les détails de version dans le fichier `Package.swift` de l'application. Pour plus de détails sur la gestion des packages, voir la [section Package Manager de Swift.org](https://swift.org/package-manager/).
@@ -82,5 +83,5 @@ Pour trouver d'autres packages Swift à inclure dans votre application, allez à
 
 D'autres outils en ligne sont également proposés par IBM au développeur Swift.
 - [IBM Swift DevCenter ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/swift/) - site principal permettant d'accéder à toutes les informations relatives à IBM Swift. Vous pouvez y trouver des détails sur les offres IBM, des blogues, des événements sociaux, de la documentation, entre autres choses.
-- [Kitura.io ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.kitura.io/index.html) fournit des informations, des exemples et des ressources pour créer des applications Kitura. 
+- [Kitura.io ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.kitura.io/index.html) fournit des informations, des exemples et des ressources pour créer des applications Kitura.
 - [Swift@IBM Slack ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://swift-at-ibm-slack.mybluemix.net/) propose des forums pour poser des questions et résoudre des problèmes avec l'équipe Swift@IBM.

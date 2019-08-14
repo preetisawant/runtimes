@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-05-31"
+subcollection: "Dotnet"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,9 +11,10 @@ lastupdated: "2017-05-31"
 {:codeblock: .codeblock}
 
 
-# NuGet パッケージ・ソースのカスタマイズについて
+# NuGet パッケージ・ソースのカスタマイズ
 {: #customizing_nuget}
-アプリケーションのルート・ディレクトリーにある NuGet.Config ファイルを使用して、アプリケーションが依存関係をダウンロードする場所を制御できます。 次の例では、`<packageSources>` プロパティーを構成することで、アプリケーションがパッケージを取り出すためのキーおよび API URL を定義しています。
+
+アプリケーションのルート・ディレクトリー内の `NuGet.Config` ファイルを使用して、アプリケーションが依存関係をダウンロードする場所を制御できます。 次の例では、`<packageSources>` プロパティーを構成することで、アプリケーションがパッケージを取り出すためのキーおよび API URL を定義しています。
 ```
    <?xml version="1.0" encoding="utf-8"?>
    <configuration>

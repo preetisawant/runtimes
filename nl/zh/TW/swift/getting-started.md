@@ -2,7 +2,8 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-12-05"
+subcollection: "Swift"
 
 ---
 
@@ -16,8 +17,9 @@ lastupdated: "2018-07-03"
 {:app_name: data-hd-keyref="app_name"}
 
 # 入門指導教學
+{: #getting-started}
 
-* {: download}恭喜，您已在 {{site.data.keyword.Bluemix}} 上部署 Hello World 範例應用程式！若要開始使用，請遵循本逐步手冊。或者，<a class="xref" href="http://bluemix.net" target="_blank" title="（下載範例程式碼）"><img class="hidden" src="../../images/btn_starter-code.svg" alt="下載應用程式碼" />下載範例程式碼</a>，並自行探索。
+* {: download} 恭喜，您已在 {{site.data.keyword.Bluemix}} 上部署 Hello World 範例應用程式！若要開始使用，請遵循本逐步手冊。或者，<a class="xref" href="http://bluemix.net" target="_blank" title="（下載範例程式碼）"><img class="hidden" src="../../images/btn_starter-code.svg" alt="下載應用程式碼" />下載範例程式碼</a>，並自行探索。
 
 遵循本指導教學，您將設定開發環境、在本端及 {{site.data.keyword.Bluemix}} 上部署應用程式，以及在應用程式中整合 {{site.data.keyword.Bluemix_notm}} 資料庫服務。
 
@@ -27,7 +29,7 @@ lastupdated: "2018-07-03"
 ## 開始之前
 {: #prereqs}
 * [Git ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://git-scm.com/downloads){: new_window}
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * 您平台的 [Swift 編譯器 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://swift.org/download/)。
 
 ## 步驟 1：複製範例應用程式
@@ -114,7 +116,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  如果您有聯合使用者 ID，請改用下列指令，以使用單一登入 ID 登入。若要進一步瞭解，請參閱[使用聯合 ID 登入](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)。
+  如果您有聯合使用者 ID，請改用下列指令，以使用單一登入 ID 登入。若要進一步瞭解，請參閱[使用聯合 ID 登入](/docs/cli/login_federated_id.html)。
 
   ```
 ibmcloud login --sso
@@ -127,10 +129,11 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  如果您未設定組織或空間，請參閱[新增組織及空間](https://console.bluemix.net/docs/account/orgs_spaces.html)。
+  如果您未設定組織或空間，請參閱[新增組織及空間](/docs/account/orgs_spaces.html)。
   {: tip}
 
 1. 從 *get-started-swift* 目錄中，將應用程式推送至 {{site.data.keyword.Bluemix_notm}}
+
   ```
 ibmcloud cf push
   ```
@@ -139,20 +142,26 @@ ibmcloud cf push
   這可能需要一分鐘。如果部署處理程序發生錯誤，則您可以使用指令 `ibmcloud cf logs <Your-App-Name> --recent` 進行疑難排解。
 
 部署完成之後，您應該會看到一則訊息，指出應用程式正在執行。在 push 指令輸出中所列的 URL 檢視應用程式。您也可以發出下列指令來檢視應用程式狀態，以及查看 URL。
+
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
 
+您也可以移至 {{site.data.keyword.Bluemix_notm}} [資源清單](https://cloud.ibm.com/resources)，以檢視應用程式。
+
 ## 步驟 5：新增資料庫
 {: #add_database}
 
-接下來，我們會將 {{site.data.keyword.cloudant_short_notm}} 資料庫新增至此應用程式並設定應用程式，因此，它可以在本端及 {{site.data.keyword.Bluemix_notm}} 上執行。
+接下來，我們會將 {{site.data.keyword.cloudant_short_notm}} NoSQL Database 新增至此應用程式並設定應用程式，因此，它可以在本端及 {{site.data.keyword.Bluemix_notm}} 上執行。
 
 1. 在瀏覽器中，登入 {{site.data.keyword.Bluemix_notm}}，並移至「儀表板」。選取**建立資源**。
-2. 選擇**資料及分析**區段，然後選取 **{{site.data.keyword.cloudant_short_notm}}** 並建立服務。
-3. 移至**連線**視圖並選取應用程式，然後**建立連線**。
-4. 系統提示時，請選取**重新編譯打包**。{{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
+1. 搜尋 **{{site.data.keyword.cloudant_short_notm}}**，並選取服務。
+1. 針對**可用的鑑別方法**，選取**使用舊式認證及 IAM**。其他欄位可以保留預設值。按一下**建立**，以建立服務。
+1. 在導覽中，移至**連線**，然後按一下**建立連線**。選取您的應用程式，然後按一下**連接**。
+1. 使用預設值，按一下**連接並重新編譯打包應用程式**以將資料庫連接至您的應用程式。系統提示時，按一下**重新編譯打包**。
+
+   {{site.data.keyword.Bluemix_notm}} 將重新啟動應用程式，並使用 `VCAP_SERVICES` 環境變數將資料庫認證提供給應用程式。只有在應用程式於 {{site.data.keyword.Bluemix_notm}} 上執行時，才能使用此環境變數。
 
 環境變數可讓您分開部署設定與原始碼。例如，您可以將資料庫密碼儲存在原始碼中所參考的環境變數內，而不要將資料庫密碼寫在程式中。
 {: tip}
@@ -192,7 +201,7 @@ ibmcloud cf apps
 `cloudfoundry:cloudant` 配置中的 `cloudant` 位置保留元可讓您更容易將使用者提供的 Cloudant 服務連結至應用程式。使用 `cloudfoundry:cloudant` 配置，您可以建立在服務名稱某處包括 `cloudant` 字串的 Cloudant 服務，並將其連結至應用程式，無需編輯 `config.json` 檔案。如果您修改此配置，而且稍後想要利用使用者提供的 Cloudant 服務，則需要編輯 `cloudfoundry:cloudant` 的配置，或利用使用者提供之服務的名稱來定義 `cloudfoundry:`。
 {: tip}
 
-在瀏覽器中，移至 {{site.data.keyword.Bluemix_notm}} 儀表板，然後選取**_您的應用程式_ > 連線**。按一下 {{site.data.keyword.cloudant_short_notm}} 功能表圖示 (**&vellip;**)，然後選取**檢視認證**。
+在 {{site.data.keyword.Bluemix_notm}} [資源清單](https://cloud.ibm.com/resources)中找到您的應用程式。在應用程式的「服務詳細資料」頁面上，按一下資訊看板中的**連線**。按一下 {{site.data.keyword.cloudant_short_notm}} 功能表圖示 (**&hellip;**)，然後選取**檢視認證**。
 
 只要將認證複製並貼入本端 config.json 檔案中的對應欄位。
 

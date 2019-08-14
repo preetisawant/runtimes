@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
+subcollection: "Python"
 
 ---
 
@@ -14,5 +15,5 @@ lastupdated: "2018-02-22"
 
 Python アプリケーションおよびビルドパックのトラブルシューティングには、以下の資料を使用できます。
 
-* [ランタイムに関するトラブルシューティング](../common/ts_runtimes.html#runtimes)
-* [ランタイムに関するトラブルシューティング: Python](../common/ts_runtimes.html#ts_python)
+* [ランタイムに関するトラブルシューティング](docs/runtimes-common/ts_runtimes.html#runtimes)
+* [ランタイムに関するトラブルシューティング: Python](docs/runtimes-common/ts_runtimes.html#ts_python)

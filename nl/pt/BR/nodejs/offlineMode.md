@@ -3,6 +3,7 @@
 copyright:
   years: 2016, 2018
 lastupdated: "2018-07-12"
+subcollection: "Nodejs"
 
 ---
 
@@ -32,7 +33,7 @@ uma *lista de desbloqueio* nos ambientes [{{site.data.keyword.Bluemix_dedicated_
 
 Para minimizar o conjunto de sites incluídos na lista de desbloqueio, configure os aplicativos para que eles usem uma versão do
 mecanismo do Node incluída no buildpack do SDK for Node.js.  Consulte as [atualizações mais
-recentes](./updates.html) para o conjunto de versões do mecanismo de nó incluídas no buildpack.  Se você configurar seu aplicativo para usar
+recentes](/docs/runtimes/nodejs/updates.html) para o conjunto de versões do mecanismo de nó incluídas no buildpack.  Se você configurar seu aplicativo para usar
 essas versões do mecanismo de nó, então apenas o site https://registry.npmjs.org será necessário para fazer download dos módulos.
 
 Quando novas versões do buildpack do SDK for Node.js forem instaladas, o conjunto de versões disponíveis
@@ -44,13 +45,12 @@ versão de mecanismo do nó mais recente incluída no buildpack.
 {: #offline_applications}
 
 Para eliminar a necessidade de acessar https://registry.npmjs.org, é possível incluir todos os módulos do Node que o aplicativo
-requer dentro dele. Para fazer isso, execute `npm install` para todos os módulos
+requer dentro dele.  Para fazer isso, execute `npm install` para todos os módulos
 aplicativos necessários e, em seguida, inclua o diretório `node_modules` resultante com seu aplicativo enviado por push.
 
 Suas dependências podem ter dependências que possuam dependências e assim por diante, mas o `package.json`
 conterá somente as dependências de nível superior. Se uma das dependências usar um intervalo no package.json e uma nova versão dele
-for liberada, os módulos no diretório `node_modules` poderão se tornar obsoletos. *Termo-retrátil* ajuda você a bloquear todas as versões de dependência para que isso não possa ocorrer.  Para usar o termo-retrátil, comece com um diretório `node_modules` vazio ou limpo. 
-Em seguida, no diretório-raiz do projeto, execute os comandos a seguir:
+for liberada, os módulos no diretório `node_modules` poderão se tornar obsoletos. *Termo-retrátil* ajuda você a bloquear todas as versões de dependência para que isso não possa ocorrer.  Para usar o termo-retrátil, comece com um diretório `node_modules` vazio ou limpo. Em seguida, no diretório-raiz do projeto, execute os comandos a seguir:
 
 ```
 npm install
@@ -76,4 +76,4 @@ Sempre que você fizer uma mudança nas dependências do arquivo `package.json`,
 Em alguns ambientes como
 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) e
 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), um proxy pode ser configurado. Consulte
-[Trabalhando com um proxy](/docs/manageapps/workingWithProxy.html) para obter mais detalhes.
+[Trabalhando com um proxy](/docs/runtimes-common/workingWithProxy.html) para obter mais detalhes.

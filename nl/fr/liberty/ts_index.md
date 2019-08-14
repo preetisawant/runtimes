@@ -3,6 +3,7 @@
 copyright:
   years: 2016, 2018
 lastupdated: "2018-02-22"
+subcollection: "liberty"
 
 ---
 
@@ -14,6 +15,5 @@ lastupdated: "2018-02-22"
 
 Dépannez vos applications et packs de construction Liberty for Java avec les ressources suivantes :
 
-* [Traitement des incidents liés aux contextes d'exécution](../common/ts_runtimes.html#runtimes)
-* [Traitement des incidents liés aux contextes d'exécution : Liberty](../common/ts_runtimes.html#ts_liberty)
-* [Gestion des applications](../common/app_mng.html)
+* [Traitement des incidents liés aux contextes d'exécution](/docs/runtimes-common/ts_runtimes.html#runtimes)
+* [Gestion des applications](/docs/runtimes-common/app_mng.html)

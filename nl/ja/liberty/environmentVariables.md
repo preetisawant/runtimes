@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-03-06"
+  years: 2015, 2019
+lastupdated: "2018-02-01"
+subcollection: "liberty"
 
 ---
 
@@ -24,42 +25,42 @@ Liberty for Java によってサポートされる環境変数。
 
 <tr>
 <td>BLUEMIX_APP_MGMT_ENABLE</td>
-<td>[アプリケーション管理ユーティリティー](../common/app_mng.html)を使用可能にします</td>
+<td>[アプリケーション管理ユーティリティー](/docs/runtimes-common/app_mng.html)を使用可能にします</td>
 </tr>
 
 <tr>
 <td>BLUEMIX_APP_MGMT_INSTALL</td>
-<td>[アプリケーション管理ユーティリティー](../common/app_mng.html)をインストールします</td>
+<td>[アプリケーション管理ユーティリティー](/docs/runtimes-common/app_mng.html)をインストールします</td>
 </tr>
 
 <tr>
-<td>IBM_LIBERTY_BETA</td>
-<td>[Liberty ベータ・フィーチャー](usingBetaFeatures.html)を使用可能にします</td>
+<td>IBM_LIBERTY_MONTHLY</td>
+<td>[Liberty 月次リリース・ランタイムを有効にします](/docs/runtimes/liberty/usingMonthlyRuntime.html)</td>
 </tr>
 
 <tr>
 <td>JAVA_OPTS</td>
-<td>[Java オプション](customizingJRE.html)を設定します</td>
+<td>[Java オプション](/docs/runtimes/liberty/customizingJRE.html)を設定します</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_DYNATRACEAPPMONAGENT</td>
-<td>[Dynatrace エージェント・ロケーション情報](dynatrace.html#configuring_liberty_app)を構成します</td>
+<td>[Dynatrace エージェント・ロケーション情報](/docs/runtimes/liberty/monitoring/dynatrace.html#configuring_liberty_app)を構成します</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_IBMJDK </td>
-<td>[IBM JRE バージョン](customizingJRE.html)を構成します</td>
+<td>[IBM JRE バージョン](/docs/runtimes/liberty/customizingJRE.html)を構成します</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_LIBERTY</td>
-<td>[WAR ファイルまたは EAR ファイル用のフィーチャー](optionsForPushing.html#stand_alone_apps)を含めて、さまざまな Liberty ランタイム・オプションを構成します</td>
+<td>[WAR ファイルまたは EAR ファイル用のフィーチャー](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps)を含めて、さまざまな Liberty ランタイム・オプションを構成します</td>
 </tr>
 
 <tr>
 <td>JBP_CONFIG_OPENJDK</td>
-<td>[OpenJDK バージョン](customizingJRE.html)を構成します。</td>
+<td>[OpenJDK バージョン](/docs/runtimes/liberty/customizingJRE.html)を構成します</td>
 </tr>
 
 <tr>
@@ -74,17 +75,17 @@ Liberty for Java によってサポートされる環境変数。
 
 <tr>
 <td>JVM</td>
-<td>[JRE タイプ](customizingJRE.html)を選択します</td>
+<td>[JRE タイプ](/docs/runtimes/liberty/customizingJRE.html)を選択します</td>
 </tr>
 
 <tr>
 <td>JVM_ARGS</td>
-<td>[JVM 引数](customizingJRE.html)を設定します</td>
+<td>[JVM 引数](/docs/runtimes/liberty/customizingJRE.html)を設定します</td>
 </tr>
 
 <tr>
 <td>LBP_SERVICE_CONFIG_xxxx</td>
-<td>[サービス構成のオーバーライド](autoConfig.html#override_service_config)</td>
+<td>[サービス構成のオーバーライド](/docs/runtimes/liberty/autoConfig.html#override_service_config)</td>
 </tr>
 
 <tr>
@@ -99,7 +100,7 @@ Liberty for Java によってサポートされる環境変数。
 
 <tr>
 <td>services_autoconfig_excludes</td>
-<td>サービスの[自動構成](autoConfig.html#opting_out)を使用不可にします。</td>
+<td>サービスの[自動構成](/docs/runtimes/liberty/autoConfig.html#opting_out)を使用不可にします。</td>
 </tr>
 </table>
 {: caption="表 1. Liberty for Java で使用可能な環境変数" caption-side="top"}
@@ -152,10 +153,3 @@ Liberty ビルドパックによって自動的に使用不可にされる属性
 </tr>
 </table>
 {: caption="表 1. Liberty for Java で使用不可の属性" caption-side="top"}
-
-# 関連リンク
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty ランタイム](index.html)
-* [Liberty の概要](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-07-03"
+  years: 2017, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 
 ---
 
@@ -27,9 +28,9 @@ lastupdated: "2018-07-03"
 
 您将需要以下内容：
 * [{{site.data.keyword.Bluemix_notm}} 帐户](https://console.bluemix.net/registration/)
-* [{{site.data.keyword.Bluemix_notm}} CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Git ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://git-scm.com/downloads){: new_window}
-* 根据 [dot.net Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.microsoft.com/net/download/core) 的指示信息，安装 .NET 核心 1.1 SDK 1.0.4。
+* 从 [.NET Core 下载 Web 站点 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.microsoft.com/net/download/core) 安装 .NET Core 2.2.2 SDK 2.2.104。
 
 ## 步骤 1：克隆样本应用程序
 {: #clone}
@@ -95,7 +96,7 @@ ibmcloud login
 ```
   {: codeblock}
 
-  如果您有联合用户标识，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)以了解更多信息。
+  如果您有联合用户标识，请改用以下命令来使用单点登录标识进行登录。请参阅[使用联合标识登录](/docs/cli/login_federated_id.html)以了解更多信息。
  ```
 ibmcloud login --sso
   ```
@@ -107,7 +108,7 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  如果未设置组织或空间，请参阅[添加组织和空间](https://console.bluemix.net/docs/account/orgs_spaces.html)。
+  如果未设置组织或空间，请参阅[添加组织和空间](/docs/account/orgs_spaces.html)。
   {: tip}
 
 1. **确保您位于应用程序的主目录 `get-started-aspnet-core` 中，**然后将应用程序推送到 {{site.data.keyword.Bluemix_notm}}：
@@ -116,7 +117,7 @@ ibmcloud cf push
   ```
   {: codeblock}
 
-  这可能需要一分钟。如果部署过程中发生错误，可以使用命令 `ibmcloud cf logs <Your-App-Name> --recent` 进行故障诊断。
+  这可能需要一分钟。如果在部署过程中发生错误，您可以使用 `ibmcloud cf logs <Your-App-Name> --recent` 命令进行故障诊断。
 
 部署完成后，应该会看到一条消息，指示应用程序正在运行。可以通过 push 命令输出中列出的 URL 查看应用程序。还可以发出以下命令来查看应用程序状态和 URL。
   ```
@@ -124,51 +125,63 @@ ibmcloud cf apps
 ```
   {: codeblock}
 
-## 步骤 5：连接 MySQL 数据库
-{: connect_mysql}
+您还可以转至 {{site.data.keyword.Bluemix_notm}} [资源列表](https://cloud.ibm.com/resources)来查看应用程序。
 
-接下来，我们要将 ClearDB MySQL 数据库添加到此应用程序并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
+## 步骤 5：添加数据库
+{: #add_database}
+
+接下来，我们要将 {{site.data.keyword.cloudant_short_notm}} NoSQL 数据库添加到此应用程序中，并设置此应用程序，使其可以在本地以及在 {{site.data.keyword.Bluemix_notm}} 上运行。
 
 1. 在浏览器中，登录到 {{site.data.keyword.Bluemix_notm}}，然后转至“仪表板”。选择**创建资源**。
-2. 选择**数据和分析**部分，选择 **ClearDB 受管 MySQL 数据库**，然后创建该服务。
-3. 转至**连接**视图，选择应用程序，然后选择**创建连接**。
-4. 出现提示时，选择**重新编译打包**。{{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
+1. 搜索 **{{site.data.keyword.cloudant_short_notm}}**，并选择服务。
+1. 针对**可用的认证方法**，选择**使用旧凭证和 IAM**。可以将其他字段保留缺省设置。单击**创建**来创建服务。
+1. 在导航中，转至**连接**，然后单击**创建连接**。选择应用程序，并单击**连接**。
+1. 使用缺省值，单击**连接并重新编译打包应用程序**以将数据库连接到应用程序。系统提示时，单击**重新编译打包**。
 
-通过环境变量，可以将部署设置与源代码分开。例如，可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
+   {{site.data.keyword.Bluemix_notm}} 将重新启动应用程序，并使用 `VCAP_SERVICES` 环境变量为应用程序提供数据库凭证。此环境变量仅可用于在 {{site.data.keyword.Bluemix_notm}} 上运行的应用程序。
+
+通过环境变量，可以将部署设置与源代码分开。例如，您可以将数据库密码存储在环境变量中，然后在源代码中引用此环境变量，而不是对密码进行硬编码。
 {: tip}
 
 ## 步骤 6：本地使用数据库
 {: #use_database}
 
-现在，我们将更新本地代码以指向此数据库。我们将使用 JSON 文件来存储服务的凭证。仅当应用程序在本地运行时，才会使用此文件。在 {{site.data.keyword.Bluemix_notm}} 中运行时，将从 VCAP_SERVICES 环境变量中读取凭证。
+现在，我们将更新本地代码以指向此数据库。我们将使用 JSON 文件来存储服务的凭证。仅当应用程序在本地运行时，才会使用此文件。在 {{site.data.keyword.Bluemix_notm}} 中运行时，将从 `VCAP_SERVICES` 环境变量中读取凭证。
 
-1. 创建文件 src/GetStartedDotnet/vcap-local.json
+1. 在 `src/GetStartedDotnet` 目录中，创建 `vcap-local.json` 文件。
 
-2. 在浏览器中，转至 {{site.data.keyword.Bluemix_notm}} 仪表板，然后选择**_您的应用程序_ > 连接**。单击 {{site.data.keyword.cloudant_short_notm}} 菜单图标 (**&vellip;**)，然后选择**查看凭证**。
+1. 将以下 JSON 对象复制并粘贴到 `vcap-local.json` 文件中，然后保存更改。
 
-3. 将凭证中的整个 JSON 对象复制并粘贴到 `vcap-local.json` 文件，然后保存更改。结果将类似于以下示例：
+   ```json
+   {
+     "services": {
+      "cloudantNoSQLDB": [
+        {
+          "credentials": {
+        "url":"CLOUDANT_DATABASE_URL"
+          },
+          "label": "cloudantNoSQLDB"
+        }
+      ]
+     }
+   }
+   ```
+   {: codeblock}
+
+1. 在 {{site.data.keyword.Bluemix_notm}} [资源列表](https://cloud.ibm.com/resources)中查找应用程序。在应用程序的“服务详细信息”页面上，单击侧边栏中的**连接**。单击 {{site.data.keyword.cloudant_short_notm}} 菜单图标 (**&hellip;**)，然后选择**查看凭证**。
+
+1. 仅将凭证中的 `url` 值复制并粘贴到 `vcap-local.json` 文件的 `url` 字段，以替换 `CLOUDANT_DATABASE_URL`。
+
+1. 从 `get-started-aspnet-core/src/GetStartedDotnet` 目录中，通过运行以下命令来重新启动应用程序。
+
+   ```
+dotnet run
   ```
-  {
-  "cleardb": [
-    {
-      "credentials": {
-        ...
-        "uri": "mysql://user:password@some-hostname.cleardb.net:3306/database-name?reconnect=true",
-        ...
-      },
-      ...
-      "name": "My ClearDB service instance name",
-      ...
-    }
-  ]
-}
-  ```
+   {: codeblock}
 
-4. 从 `get-started-aspnet-core/src/GetStartedDotnet` 目录中，使用 `dotnet run` 命令重新启动应用程序。
+1. 刷新浏览器视图：`http://localhost:5000/`。现在，您输入到应用程序中的所有名称都已添加到数据库。
 
-刷新浏览器视图：http://localhost:5000/。现在，您输入到应用程序中的所有名称都已添加到数据库。
-
-本地应用程序和 {{site.data.keyword.Bluemix_notm}} 应用程序共享该数据库。可以通过上面 push 命令输出中列出的 URL 查看 {{site.data.keyword.Bluemix_notm}} 应用程序。在刷新浏览器后，从任一应用程序添加的名称都应该会同时出现在这两个应用程序中。
+本地应用程序和 {{site.data.keyword.Bluemix_notm}} 应用程序共享该数据库。可以通过 `ibmcloud cf push` 命令输出中列出的 URL 查看 {{site.data.keyword.Bluemix_notm}} 应用程序。在刷新浏览器后，从任一应用程序添加的名称都应该会同时出现在这两个应用程序中。
 
 请记住，如果无需应用程序继续运行，请将其停止，这样就不会产生任何意外的费用。
 {: tip}

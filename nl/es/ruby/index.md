@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Ruby"
 
 ---
 
@@ -31,7 +32,7 @@ Puede especificar la versión de Ruby que utilizará la app en el Gemfile de la 
 
 ```
   source 'https://rubygems.org'
-  ruby '2.4.1'
+  ruby '2.5.0'
   gem 'sinatra', '>= 0'
   gem 'haml', '>= 0'
   gem 'json', '>=0'
@@ -59,10 +60,3 @@ Si la app requiere una versión de Ruby que no aparece en la lista,
 puede utilizar el
 [paquete de compilación de Ruby](https://github.com/cloudfoundry/ruby-buildpack) externo para
 desplegar la app.
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Paquete de compilación de Cloud Foundry para Ruby](https://github.com/cloudfoundry/cf-buildpack-ruby)
-* [Documentación de Ruby on Rails ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://api.rubyonrails.org/)

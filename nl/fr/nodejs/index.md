@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2018-06-21"
+subcollection: "Nodejs"
 ---
 
 {:shortdesc: .shortdesc}
@@ -28,15 +29,8 @@ var port = (process.env.PORT || 3000);
 ## Application de démarrage
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} contient une application de démarrage Node.js.  L'application de démarrage Node.js est une appli Node.js simple qui peut servir de modèle pour votre appli. Vous pouvez l'utiliser pour faire des essais, faire des modifications et les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}. Consultez [Utilisation des applications de démarrage](../common/starter_app_usage.html) pour obtenir de l'aide sur l'application de démarrage.
+{{site.data.keyword.Bluemix_notm}} contient une application de démarrage Node.js.  L'application de démarrage Node.js est une appli Node.js simple qui peut servir de modèle pour votre appli. Vous pouvez l'utiliser pour faire des essais, faire des modifications et les envoyer par commande push vers l'environnement {{site.data.keyword.Bluemix_notm}}. Consultez [Utilisation des applications de démarrage](/docs/runtimes-common/starter_app_usage.html) pour obtenir de l'aide sur l'application de démarrage.
 
 ## App Management
 {: #app_management}
-{{site.data.keyword.Bluemix_notm}} fournit un certain nombre d'utilitaires pour la gestion et le débogage de l'appli Node.js. Pour plus de détails, voir [App Management](../common/app_mng.html).
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-* [Node.js ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://nodejs.org)
-* [IBM API Connect](https://strongloop.com/)
+{{site.data.keyword.Bluemix_notm}} fournit un certain nombre d'utilitaires pour la gestion et le débogage de l'appli Node.js. Pour plus de détails, voir [App Management](/docs/runtimes-common/app_mng.html).

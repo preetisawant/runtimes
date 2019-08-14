@@ -2,7 +2,8 @@
 
 copyright:
   years: 2016, 2018
-lastupdated: "2017-10-26"
+lastupdated: "2018-11-20"
+subcollection: "liberty"
 
 ---
 
@@ -19,8 +20,8 @@ lastupdated: "2017-10-26"
 * https://download.run.pivotal.io 及 https://java-buildpack.cloudfoundry.org 可用來存取下列項目的元件：
   * [AppDynamics 代理程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.appdynamics.com/)
   * [MariaDB JDBC 驅動程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://mariadb.com/)
-  * [New Relic 代理程式](newRelic.html)
-  * [OpenJDK](customizingJRE.html#OpenJDK)
+  * [New Relic 代理程式](/docs/runtimes/liberty/monitoring/newRelic.html)
+  * [OpenJDK](/docs/runtimes/liberty/customizingJRE.html#OpenJDK)
   * [PostgreSQL JDBC 驅動程式 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.postgresql.org)
 * https://dl.zeroturnaround.com/jrebel/ 可用來存取 [JRebel ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://zeroturnaround.com/software/jrebel/) 的元件。
 * https://download.ruxit.com/agent/paas/cloudfoundry/java 可用來存取 [Dynatrace Ruxit 代理程式](dynatrace.html)的元件。
@@ -29,11 +30,4 @@ lastupdated: "2017-10-26"
 ## 使用 Proxy
 {: #working_with_proxy}
 
-在一些如 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 及 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 這類環境中，可以配置 Proxy。如需詳細資訊，請參閱[使用 Proxy](/docs/runtimes/common/workingWithProxy.html)。
-
-# 相關鏈結
-{: #rellinks notoc}
-## 一般
-{: #general notoc}
-* [Liberty 運行環境](index.html)
-* [Liberty 設定檔概觀](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)
+在一些如 [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) 及 [{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local) 這類環境中，可以配置 Proxy。如需詳細資訊，請參閱[使用 Proxy](/docs/runtimes-common/workingWithProxy.html)。

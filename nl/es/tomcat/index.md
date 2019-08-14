@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Tomcat"
 
 ---
 
@@ -39,7 +40,7 @@ Puede cambiar la versión de Java que utilizará la app con la variable de entor
 Ambos se pueden especificar en el archivo de manifiesto de la aplicación.  Por ejemplo:
 ```
     env:
-        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
+        JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.5.+ }}'
         JBP_CONFIG_OPEN_JDK_JRE: '{jre: { version: 1.8.0_+ }}'
 ```
 {: codeblock}

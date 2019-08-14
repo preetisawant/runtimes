@@ -3,16 +3,17 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 
-# Utilizza il tuo proprio JRE
+# Utilizza il tuo JRE
 {: #using_own_jre}
 
-Puoi eseguire la tua applicazione Liberty su {{site.data.keyword.Bluemix}} con il tuo JRE. Devi completare le seguenti informazioni per rendere il tuo JRE disponibile per la tua applicazione.
+Puoi eseguire la tua applicazione Liberty su {{site.data.keyword.Bluemix}} con il tuo JRE. Il pacchetto di build liberty-for-java fornirà il supporto per i [runtime supportati da WebSphere Liberty](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13) ma non può garantire la piena funzionalità delle versioni supportate. Devi completare le seguenti informazioni per rendere il tuo JRE disponibile per la tua applicazione.
 * Ospitare il JRE in un'ubicazione da cui il pacchetto di build può scaricarlo.
 * Ospitare un file `index.yml` che fornisce l'ubicazione del JRE ospitato.
 * Configurare la tua applicazione per utilizzare il tuo JRE.
@@ -20,11 +21,11 @@ Puoi eseguire la tua applicazione Liberty su {{site.data.keyword.Bluemix}} con i
 ## Ospitare il JRE e `index.yml`
 {: #hosting_jre}
 
-Devi ospitare il file JRE su un server web da cui il pacchetto di build Liberty può scaricarlo. Puoi ospitare il file in {{site.data.keyword.Bluemix_notm}} con una qualunque delle funzioni del server disponibili, oppure puoi ospitarlo nelle ubicazioni disponibili pubblicamente. Il server deve essere configurato con un file `index.yml` che specifica i dettagli sul file JRE.
+Devi ospitare il file JRE su un server web da cui il pacchetto di build liberty-for-java può scaricarlo. Puoi ospitare il file in {{site.data.keyword.Bluemix_notm}} con una qualunque delle funzioni del server disponibili, oppure puoi ospitarlo nelle ubicazioni disponibili pubblicamente. Il server deve essere configurato con un file `index.yml` che specifica i dettagli sul file JRE.
 
 Completa i seguenti passi per ospitare JRE e il file `index.yml`:
   1. Acquisisci il JRE, che deve essere la versione per l'utilizzo su un SO a 64-bit Unix e deve essere un file `tar.gz`.
-  2. Ospita il file JRE dell'agent in un'ubicazione da cui il pacchetto di build Liberty può scaricarlo.
+  2. Ospita il file JRE dell'agent in un'ubicazione da cui il pacchetto di build liberty-for-java può scaricarlo.
   3. Fornisci un file `index.yml` all'ubicazione che lo ospita. Il file `index.yml` deve includere una voce che contiene un ID versione del JRE seguito da due punti e l'URL completo dell'ubicazione del file JRE.
     * Definisci la versione JRE nel `index.yml`.
 

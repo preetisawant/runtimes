@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-24"
+  years: 2015, 2019
+lastupdated: "2019-03-18"
+subcollection: "Nodejs"
 
 ---
 
@@ -14,29 +15,55 @@ lastupdated: "2018-07-24"
 
 Liste des dernières mises à jour apportées au pack de construction sdk-for-nodejs.
 
-## 24 juillet 2018 : Mise à jour du pack de construction Node.js v3.21
+## 18 mars 2019 : Mise à jour du pack de construction Node.js v3.26
+
+Le pack de construction SDK for Node.js v3.26 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.16.0, 6.17.0, 8.15.0, 8.15.1, 10.15.0 et 10.15.3. La valeur par défaut est la version 6.x la plus récente, soit la 6.17.0 actuellement.
+
+## 23 janvier 2019 : Mise à jour du pack de construction Node.js v3.25.1
+
+Le pack de construction SDK for Node.js v3.25.1 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.14.4, 6.16.0, 8.11.4, 8.15.0, 10.10.0 et 10.15.0. La valeur par défaut est la version 6.x la plus récente, soit la 6.16.0 actuellement. Les versions 6.15.0, 8.14.0 et 10.14.0 incluses dans le dernier pack de construction comportaient une régression. Les régressions ont été corrigées dans les versions 6.16.0, 8.15.0 et 10.15.0 qui les remplacent désormais.
+
+## 7 janvier 2019 : Mise à jour du pack de construction Node.js v3.25
+
+Le pack de construction SDK for Node.js v3.25 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.14.4, 6.15.0, 8.11.4, 8.14.0, 10.10.0 et 10.14.0. La valeur par défaut est la version 6.x la plus récente, soit la 6.15.0 actuellement. Ce pack de construction corrige également un bogue mineur du point d'ancrage Dynatrace.
+
+## 5 décembre 2018 : Mise à jour du pack de construction Node.js v3.24
+
+Le pack de construction SDK for Node.js v3.24 fournit les versions d'IBM SDK for Node.js 4.8.5, 4.8.7 et les versions communautaires Node.js 6.14.3, 6.14.4, 8.11.3, 8.11.4, 10.9.0 et 10.10.0. La valeur par défaut est la version 6.x la plus récente, soit la 6.14.4 actuellement. Ce pack de construction corrige également un bogue mineur du point d'ancrage Dynatrace.
+
+## 7 septembre 2018 : Mise à jour du pack de construction Node.js v3.22
 {:#fips-deprecation}
+
+**Important :** dorénavant, le pack de construction SDK for Node.js inclut des contextes d'exécution de la communauté Node.js pour les versions 6.x et 8.x. Avec cette modification, le module FIPS OpenSSL du pack de construction Node.js n'est plus inclus dans ces versions du pack. Seule la version 4.x inclut toujours le module FIPS OpenSSL.  
+
+Le pack de construction SDK for Node.js v3.22 fournit les versions 4.8.5, 4.8.7 d'IBM SDK for Node.js et les versions 6.14.3, 6.14.4, 8.11.3 et 8.11.4 de la communauté Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.14.4 actuellement.
+
+Cette édition inclut également des correctifs pour la vulnérabilité suivante en matière de sécurité :
+* [CVE-2018-0732](https://www-01.ibm.com/support/docview.wss?uid=swg22012749)
+
+## 24 juillet 2018 : Mise à jour du pack de construction Node.js v3.21
+
 **Important :** A compter des versions les plus récentes de Node.js 6.x et 8.x dans cette édition, le pack de construction SDK for Node.js se fonde sur l'édition de la communauté Node.js. Avec cette modification, le module FIPS OpenSSL du pack de construction Node.js ne sera plus mis à jour. Le module FIPS OpenSSL actuel et les générations IBM SDK for Node.js peuvent être supprimés à partir du 24 août 2018. Pour plus d'informations, voir l'article de blogue [Alignement du pack de construction Node.js sur les contextes d'exécution de la communauté ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://admin.blogs.prd.ibm.event.ibm.com/blogs/bluemix/?p=139660).
 
-Le pack de construction SDK for Node.js v3.21 fournit les versions 4.8.5, 4.8.7, 6.13.0 et 8.9.4 d'IBM SDK for Node.js et les versions 6.14.3 et 8.11.3 de la communauté Node.js. La valeur par défaut est la version 6.x la plus récente, soit 6.14.3 actuellement. 
+Le pack de construction SDK for Node.js v3.21 fournit les versions 4.8.5, 4.8.7, 6.13.0 et 8.9.4 d'IBM SDK for Node.js et les versions 6.14.3 et 8.11.3 de la communauté Node.js. La valeur par défaut est la version 6.x la plus récente, soit 6.14.3 actuellement.
 
 Cette édition inclut également des correctifs pour la vulnérabilité suivante en matière de sécurité :
 * [CVE-2018-0739](http://www.ibm.com/support/docview.wss?uid=swg22016251)
 
 ## 1er juin 2018 : mise à jour du pack de construction Node.js version 3.20.2
-Le kit SDK du pack de construction Node.js v3.20.2 ajoute l'intégration de Dynatrace Managed PaaS pour les contextes d'exécution Node.js en cours. Voir [Utiliser Dynatrace pour surveiller Node.js dans {{site.data.keyword.cloud_notm}}](dynatrace.html).
+Le kit SDK du pack de construction Node.js v3.20.2 ajoute l'intégration de Dynatrace Managed PaaS pour les contextes d'exécution Node.js en cours.
 
 ## 17 mai 2018 : mise à jour du pack de construction Node.js version 3.20.1
-Le kit SDK du pack de construction Node.js version 3.20.1 corrige l'intégration de Dynatrace PaaS pour les contextes d'exécution Node.js en cours. Voir [Utiliser Dynatrace pour surveiller Node.js dans {{site.data.keyword.cloud_notm}}](dynatrace.html).
+Le kit SDK du pack de construction Node.js version 3.20.1 corrige l'intégration de Dynatrace PaaS pour les contextes d'exécution Node.js en cours.
 
 ## 9 avril 2018 : mise à jour du pack de construction Node.js version 3.20
-Le kit SDK du pack de construction Node.js v3.20 ajoute l'intégration de Dynatrace PaaS pour les contextes d'exécution Node.js en cours. Voir [Utiliser Dynatrace pour surveiller Node.js dans {{site.data.keyword.cloud_notm}}](dynatrace.html).
+Le kit SDK du pack de construction Node.js v3.20 ajoute l'intégration de Dynatrace PaaS pour les contextes d'exécution Node.js en cours.
 
 ## 16 mars 2018 : Mise à jour du pack de construction Node.js v3.19.
 Le pack de construction SDK for Node.js v3.19 fournit les versions 4.8.5, 4.8.7, 6.12.3, 6.13.0, 8.9.3 et 8.9.4 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.13.0 actuellement.
 
 ## 6 février 2018 : Mise à jour du pack de construction Node.js v3.18
-Le pack de construction SDK for Node.js v3.18 fournit les versions 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 et 8.9.4 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.13.3 actuellement.
+Le pack de construction SDK for Node.js v3.18 fournit les versions 4.8.5, 4.8.7, 6.12.2, 6.12.3, 8.9.3 et 8.9.4 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.12.3 actuellement.
 
 ## 8 janvier 2018 : Mise à jour du pack de construction Node.js v3.17
 Le pack de construction SDK for Node.js v3.17 fournit les versions 4.8.5, 4.8.7, 6.12.0, 6.12.2, 8.9.0 et 8.9.3 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit la 6.12.2 actuellement.
@@ -54,7 +81,7 @@ Le pack de construction SDK for Node.js v3.14 fournit les versions 4.8.3, 4.8.4,
 ## 26 juillet 2017 : Mise à jour du pack de construction Node.js v3.13
 Le pack de construction SDK for Node.js v3.13 fournit les versions 4.8.3, 4.8.4, 6.11.0, 6.11.1, 8.1.2 et 8.1.4 d'IBM SDK for Node.js. La valeur par défaut est la version 6.x la plus récente, soit 6.11.1 actuellement. Notez que la version 8 est disponible à des fins de test mais n'est pas encore recommandée en production.  
 
-Ce pack de construction contient les versions mises à jour de Node.js qui traitent les vulnérabilités de sécurité récentes détectées dans Node.js. Les utilisateurs doivent mettre à jour leurs applications pour utiliser les dernières versions disponibles, puis les reconstituer dans {{site.data.keyword.Bluemix_notm}}. Pour plus de détails sur les correctifs CVE-2017-1000381 et CVE-2017-11499 pour les vulnérabilités de sécurité Node.js, consultez <a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">ce bulletin de sécurité</a>.
+Ce pack de construction contient les versions mises à jour de Node.js qui traitent les vulnérabilités de sécurité récentes détectées dans Node.js. Les utilisateurs doivent mettre à jour leurs applications pour utiliser les dernières versions disponibles, puis les reconstituer dans {{site.data.keyword.Bluemix_notm}}.  Pour plus de détails sur les correctifs CVE-2017-1000381 et CVE-2017-11499 pour les vulnérabilités de sécurité Node.js, consultez <a href="http://www-01.ibm.com/support/docview.wss?uid=swg22006722">ce bulletin de sécurité</a>.
 
 ## 5 Mai 2017 : Mise à jour du pack de construction Node.js v3.12
 Le pack de construction SDK for Node.js v3.12 fournit les versions 0.12.17, 0.12.18, 4.8.0, 4.8.2, 6.10.0 et 6.10.2 d'IBM SDK Node.js. La valeur par défaut est passée de la version 4.x la plus récente à la version 6.x la plus récente, soit 6.10.2 actuellement. S'agissant d'un changement de version principale, cela peut affecter les applications qui dépendent de la valeur par défaut. Voir [Node.js version long-term support and the SDK for Node.js buildpack](https://www.ibm.com/blogs/bluemix/2016/11/node-version-support-and-sdk-buildpack/) pour savoir comment éviter les problèmes.
@@ -169,7 +196,7 @@ Cette édition est totalement synchronisée avec le pack de construction [Cloud 
 
 ## 16 décembre 2015 : Mise à jour du pack de construction Node.js v2.8-20151209-1403 et v3.0beta-20151211-2041
 
-Cette édition du pack de construction Node.js est livrée avec deux versions, la version 2.0 et la version 3.0 bêta. Elles incluent toutes les deux les modifications suivantes :
+Cette édition du pack de construction Node.js est livrée avec deux versions, la version 2.8 et la version 3.0 bêta. Elles incluent toutes les deux les modifications suivantes :
 
 Correctif de bogue pour le service Monitoring and Analytics. Inclusion d'un environnement d'exécution en cache pour IBM SDK for Node.js v4.2.3.0, v4.2.2.0, v1.2.0.8 et v1.2.0.7 (versions basées sur les versions Node.js v4.2.3, v4.2.2, v0.12.9 et v0.12.8 de la communauté).
 En outre, dans la version 3.0 bêta, l'environnement d'exécution Node.js par défaut est passé à v4.2.3.

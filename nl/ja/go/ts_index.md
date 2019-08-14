@@ -3,6 +3,7 @@
 copyright:
   years: 2018
 lastupdated: "2018-02-22"
+subcollection: "Go"
 ---
 
 {:shortdesc: .shortdesc}
@@ -14,4 +15,4 @@ lastupdated: "2018-02-22"
 
 Go アプリケーションおよびビルドパックのトラブルシューティングには、以下の資料を使用できます。
 
-* [ランタイムに関するトラブルシューティング](../common/ts_runtimes.html#runtimes)
+* [ランタイムに関するトラブルシューティング](docs/runtimes-common/ts_runtimes.html#runtimes)

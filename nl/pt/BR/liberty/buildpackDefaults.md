@@ -3,6 +3,7 @@
 copyright:
   years: 2015, 2018
 lastupdated: "2017-10-26"
+subcollection: "liberty"
 
 ---
 
@@ -25,15 +26,15 @@ para configurar o aplicativo e evitar o uso dos padrões de buildpack.
 {: #liberty_versions}
 
 O buildpack fornece duas versões do tempo de execução do Liberty:
-1. A liberação estável
+1. Uma libertação estável a longo prazo
   * É o tempo de execução padrão do Liberty.
-  * Não fornece quaisquer [recursos beta](usingBetaFeatures.html).
+  * Não fornece quaisquer [recursos beta](/docs/runtimes/liberty/usingBetaFeatures.html).
   * Normalmente, é atualizado por trimestre.
 
 2. A liberação mensal
-  * Deve ser ativada explicitamente configurando a variável de ambiente **JBP_CONFIG_LIBERTY** com o valor **"version: +"**.
-  * Fornece [recursos beta](usingBetaFeatures.html).
-  * Normalmente, é atualizado por mês.
+  * Deve ser ativado explicitamente ao configurar a variável de ambiente **JBP_CONFIG_LIBERTY** com o valor **"version: +"** e a variável de ambiente **IBM_LIBERTY_MONTHLY** com **true**.
+  * Ele fornece  [ recursos mensais ](/docs/runtimes/liberty/usingMonthlyRuntime.html).
+  * Tipicamente atualizado a cada 4 semanas.
 
 ## Recursos do Liberty
 {: #liberty_features}
@@ -46,8 +47,10 @@ liberações de buildpack. A mudança no conjunto de recursos padrão pode afeta
 adverso o aplicativo. Existem opções para assegurar que o aplicativo
 não seja afetado pela mudança nos padrões de recursos.
 
-* Configure a variável de ambiente JBP_CONFIG_LIBERTY para especificar explicitamente uma lista de recursos ativados para o aplicativo. Para obter mais informações, veja [Aplicativos independentes](optionsForPushing.html#stand_alone_apps).
-* Implemente seu aplicativo como um [diretório do servidor](optionsForPushing.html#server_directory) ou um [servidor em pacote](optionsForPushing.html#packaged_server). Forneça um arquivo server.xml customizado que especifique o conjunto exato dos recursos necessários para seu aplicativo.
+* Configure a variável de ambiente JBP_CONFIG_LIBERTY para especificar explicitamente uma lista de recursos ativados para o aplicativo. Para obter mais informações, veja [Aplicativos independentes](/docs/runtimes/liberty/optionsForPushing.html#stand_alone_apps).
+* Implemente seu aplicativo como um [diretório do
+servidor](/docs/runtimes/liberty/optionsForPushing.html#server_directory) ou um [servidor
+em pacote](/docs/runtimes/liberty/optionsForPushing.html#packaged_server). Forneça um arquivo server.xml customizado que especifique o conjunto exato dos recursos necessários para seu aplicativo.
 
 Os aplicativos que são implementados como um diretório do servidor ou
 um servidor em pacote não são afetados pela mudança no padrão de recursos do
@@ -63,13 +66,5 @@ secundária do JRE pode ser atualizada frequentemente enquanto a versão princip
 é raramente atualizada. A mudança na versão principal do JRE pode
 afetar de modo adverso o aplicativo.
 
-Para assegurar que o aplicativo não seja afetado pela mudança da versão principal, configure a variável de ambiente com a versão apropriada do JRE, conforme descrito em [Customizando o JRE](customizingJRE.html). Para obter os melhores resultados,
+Para assegurar que o aplicativo não seja afetado pela mudança da versão principal, configure a variável de ambiente com a versão apropriada do JRE, conforme descrito em [Customizando o JRE](/docs/runtimes/liberty/customizingJRE.html). Para obter os melhores resultados,
 adote o Java 8 para seus aplicativos.
-
-
-# rellinks
-{: #rellinks notoc}
-## geral
-{: #general notoc}
-* [Tempo de execução do Liberty](index.html)
-* [Visão geral do perfil Liberty](https://www.ibm.com/support/knowledgecenter/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/cwlp_about.html)

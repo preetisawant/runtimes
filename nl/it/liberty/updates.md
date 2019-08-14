@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-10"
+  years: 2015, 2019
+lastupdated: "2019-03-01"
+subcollection: "liberty"
 
 ---
 
@@ -14,6 +15,39 @@ lastupdated: "2018-08-10"
 
 ## Un elenco degli aggiornamenti più recenti nel pacchetto di build Liberty.
 
+### 1° marzo 2019: pacchetto di build Liberty aggiornato v3.29-20190223-2128
+
+* La versione GA del runtime Liberty predefinita è la release 18.0.0.4.
+* È stata aggiunta la versione GA del runtime di Liberty alternativa 19.0.0.2.  
+* Le librerie client Cloudant sono state aggiornate alla 2.14.0.
+
+### 1° febbraio 2019: pacchetto di build Liberty aggiornato v3.28-20190127-1723
+
+* La versione GA del runtime Liberty predefinita è la release 18.0.0.4.
+* È stata aggiunta la versione GA del runtime di Liberty alternativa 19.0.0.1.  
+* La release beta di Liberty mensile è stata rimossa.  
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP27.
+* Il client MQ è stato aggiornato alla release 9.1.0.0.
+* L'agent di ridimensionamento automatico è stato aggiornato.
+
+### 14 dicembre 14, 2018: pacchetto di build Liberty aggiornato v3.27-20181130-1702
+
+* Il pacchetto di build ora include Java Platform, Enterprise Edition 8.0. Java EE 8 non deve più essere necessariamente installato quando viene eseguito il push di un'applicazione.  
+* La versione del runtime Liberty predefinita è stata aggiornata alla release 18.0.0.4.
+* La versione del runtime Liberty mensile è stata aggiornata alla release 2018.11.0.0.
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP26.
+
+### 29 ottobre 2018: pacchetto di build Liberty aggiornato v3.26-20181023-1545
+
+* La versione del runtime Liberty predefinita, `18.0.0.3`, è stata aggiornata per includere una correzione per la [vulnerabilità di sicurezza CVE-2014-7810![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www-01.ibm.com/support/docview.wss?uid=ibm10737055).
+* La versione del runtime Liberty mensile è stata aggiornata alla release 2018.10.0.0.
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP22.
+
+### 21 settembre 2018: pacchetto di build Liberty aggiornato v3.25-20180918-1034
+* Il pacchetto di build ora supporta Java Platform, Enterprise Edition 8.0. Per utilizzare Java EE 8, installa la funzione di Liberty `javaee-8.0` quando esegui il push della tua applicazione. Accedi ad ulteriori informazioni in [Installa le funzioni Liberty](installFeatures.html).
+* La versione del runtime Liberty predefinita è stata aggiornata alla release 18.0.0.3.
+* La versione del runtime Liberty mensile è stata aggiornata alla release [2018.8.0.1 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/wasdev/blog/2018/08/31/reactive-rest-client-liberty-beta/).
+* La versione di IBM JRE è stata aggiornata a 8 SR5 FP20.
 
 ### 10 agosto 2018: pacchetto di build Liberty aggiornato v3.24-20180806-1313
 * La versione del runtime Liberty mensile è stata aggiornata alla 2018.8.0.0.
@@ -106,8 +140,8 @@ lastupdated: "2018-08-10"
 * Il runtime Liberty predefinito include la iFix PI75512 WebSockets.
 * La versione del runtime Liberty è stata aggiornata alla release [2017.2.0.0](https://developer.ibm.com/wasdev/blog/2017/02/17/beta-websphere-liberty-tools-february-2017/).
 * Le versioni di IBM JRE 8 e 7.1 sono state aggiornate a SR4 FP1.
-* Il supporto di configurazione automatica è stato esteso per utilizzare [ibm-websphere-extreme-scale IBM Container](https://console.ng.bluemix.net/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
-* Il supporto di configurazione automatica per [Cloudant NoSQL Database](https://console.ng.bluemix.net/docs/services/Cloudant/index.html) è stato aggiornato per fornire l'opzione di utilizzare la libreria Java Cloudant invece di org.ektorp. Per abilitare l'utilizzo della libreria Java Cloudant devi configurare la seguente variabile di ambiente:    
+* Il supporto di configurazione automatica è stato esteso per utilizzare [ibm-websphere-extreme-scale IBM Container](/docs/images/docker_image_extreme_scale/ibm-websphere-extreme-scale_starter.html).
+* Il supporto di configurazione automatica per [Cloudant NoSQL Database](/docs/services/Cloudant/index.html) è stato aggiornato per fornire l'opzione di utilizzare la libreria Java Cloudant invece di org.ektorp. Per abilitare l'utilizzo della libreria Java Cloudant devi configurare la seguente variabile di ambiente:    
 ```
 ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudant'
 ```
@@ -118,12 +152,12 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 ### 23 gennaio 2017: pacchetto di build Liberty aggiornato v3.7-20170118-2046
 * La versione del runtime Liberty è stata aggiornata alla release [2017.1.0.0](https://developer.ibm.com/wasdev/blog/2017/01/20/beta-websphere-liberty-tools-january-2017/).
 * La versione di IBM JRE 8 è stata aggiornata alla versione SR3 FP22.
-* Il supporto per la [configurazione automatica](autoConfig.html) è stato inoltre esteso per utilizzare il [servizio Compose for MongoDB](https://console.ng.bluemix.net/docs/services/ComposeForMongoDB/index.html) (Al momento disponibile solo con il runtime Liberty mensile).
+* Il supporto per la [configurazione automatica](autoConfig.html) è stato inoltre esteso per utilizzare il [servizio Compose for MongoDB](/docs/services/ComposeForMongoDB/index.html) (Al momento disponibile solo con il runtime Liberty mensile).
 
 ### 13 dicembre, 2016: pacchetto di build Liberty aggiornato v3.6-20161209-1351
 * La versione del runtime Liberty predefinita è stata aggiornata alla release [16.0.0.4](http://www-01.ibm.com/support/docview.wss?uid=swg27009661).
 * La versione di IBM JRE 8 è stata aggiornata alla versione SR3 FP21.
-* Il supporto per la [configurazione automatica](autoConfig.html) è stato inoltre esteso per utilizzare il [servizio Compose for PostgreSQL](https://console.ng.bluemix.net/docs/services/ComposeForPostgreSQL/index.html).
+* Il supporto per la [configurazione automatica](autoConfig.html) è stato inoltre esteso per utilizzare il [servizio Compose for PostgreSQL](/docs/services/ComposeForPostgreSQL/index.html).
 * Il pacchetto di build fornisce inoltre una versione aggiornata dell'agent per il [servizio Auto-Scaling](/docs/services/Auto-Scaling/index.html).
 * Il pacchetto di build è stato aggiornato per supportare le variabili di ambiente come parte delle ubicazioni incluse nei file `server.xml`.
 
@@ -135,7 +169,7 @@ ibmcloud cf set-env <appName> LBP_SERVICE_CONFIG_CLOUDANTNOSQLDB 'type : cloudan
 * L'integrazione del servizio Monitoring and Analytics è stata corretta per utilizzare [Diego ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/concepts/diego/diego-architecture.html).
 * Le integrazioni del servizio [Dynatrace](dynatrace.html) sono state aggiornate per utilizzare in modo migliore le offerte del servizio Dynatrace.
 * Il supporto per la [configurazione automatica](autoConfig.html) per i tipi di servizio PostgreSQL e MySQL è stato migliorato per funzionare in modo migliore durante la distribuzione di una directory server o di un server in pacchetto.
-* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](../common/app_mng.html#app_management) è stato aggiornato alla versione `0.12.17` più recente.
+* Il runtime Node.js utilizzato dai [programmi di utilità devconsole e shell di Gestione applicazioni](docs/runtimes-common/app_mng.html#app_management) è stato aggiornato alla versione `0.12.17` più recente.
 * Sono state incluse [correzioni per la protezione](http://www.ibm.com/support/docview.wss?uid=swg21994945) per il runtime di Liberty.
 
 ### 1 novembre 2016: pacchetto di build Liberty aggiornato v3.4.1-20161030-2241
@@ -249,7 +283,7 @@ contengono le [ultime correzioni di sicurezza](http://www-01.ibm.com/support/doc
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sulla [release 8.5.5.6](https://developer.ibm.com/wasdev/blog/2015/06/25/java-ee-7-has-landed-in-was-liberty/). Con questa release, tutte le funzioni Liberty Java EE 7 precedentemente disponibili come funzioni beta sono ora disponibili come funzioni pronte per la produzione. A causa di limitazioni relative
 alle porte e anche di altra natura esistenti in {{site.data.keyword.Bluemix_notm}}, alcune funzioni come ad esempio gli EJB remoti non sono pienamente supportati nella piattaforma.
 * Il pacchetto di build riconosce ed esegue le applicazioni fornite in [distZip-style ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://docs.gradle.org/current/userguide/application_plugin.html).
-* Il pacchetto di build contiene un raccoglitore di dati aggiornato per il servizio Monitoring and Analytics e WebSphere eXtreme Scale Client che supporta la nuova versione di runtime di Liberty.
+* Il pacchetto di build contiene un raccoglitore di dati aggiornato per il servizio Monitoring and Analytics e WebSphere eXtreme Scale Client che supporta la nuova versione del runtime di Liberty.
 
 ### 30 giugno 2015: pacchetto di build Liberty aggiornato v1.19.1-20150622-1509
 * Questa versione del pacchetto di build contiene un IBM JRE aggiornato con una correzione per la protezione per la [vulnerabilità LogJam](http://www-01.ibm.com/support/docview.wss?uid=swg21961390).
@@ -300,12 +334,12 @@ di MongoDB che, in alcuni casi, generava una configurazione **server.xml** non v
 ### 10 febbraio 2015: pacchetto di build Liberty aggiornato v1.13-20150209-1122
 * Il pacchetto di build contiene delle correzioni per la sicurezza per gli [Apache HttpComponents e le vulnerabilità della funzione di overlay Java](https://www-304.ibm.com/connections/blogs/PSIRT/entry/ibm_security_bulletin_multiple_vulnerabilities_fixed_in_liberty_for_java_for_ibm_bluemix_cve_2012_6153_cve_2014_3577_cve_2015_0178?lang=en_us).
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di febbraio](https://developer.ibm.com/wasdev/blog/2015/02/13/announcing-liberty-beta-tools-february-2015/). La versione aggiornata del profilo Liberty fornisce una versione aggiornata della funzione WebSocket GA websocket-1.1. Rende inoltre disponibili le seguenti funzioni beta Java EE 7 in {{site.data.keyword.Bluemix_notm}}:
-  * cdi-1.2, el-3.0, jsp-2.3,  jca-1.7, jacc-1.5 e jaspic-1.1
+  * cdi-1.2, el-3.0, jsp-2.3, jca-1.7, jacc-1.5 e jaspic-1.1
 * Il pacchetto di build fornisce l'integrazione con [ZeroTrunaround's JRebel tool ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://zeroturnaround.com/software/jrebel/). L'integrazione semplifica l'utilizzo di JRebel con le applicazioni {{site.data.keyword.Bluemix_notm}} e l'esecuzione di aggiornamenti delle applicazioni istantanei senza ridistribuire o ripreparare l'applicazione. Sono supportate solo le applicazioni web autonome.
 
 ### 6 febbraio 2015: pacchetto di build Liberty aggiornato v1.12-20150130-1016
 * Il pacchetto di build contiene una versione aggiornata del profilo Liberty basata sul [beta di gennaio](https://developer.ibm.com/wasdev/blog/2015/01/16/announcing-liberty-beta-tools-january-2015/).
-* Il pacchetto di build contiene una versione snellita del raccoglitore di dati per il servizio  Monitoring and Analytics.
+* Il pacchetto di build contiene una versione snellita del raccoglitore di dati per il servizio Monitoring and Analytics.
 
 ### 23 gennaio 2015: pacchetto di build Liberty aggiornato v1.11-20150119-1511
 * Il pacchetto di build contiene un IBM JRE versione 7.1 SR2 FP1 aggiornato.
@@ -383,10 +417,3 @@ VCAP_SERVICES e fornire i jar client ektorp non è più necessario.
 * La nuova versione di IBM SDK for Java è disponibile!
   * Quando ne verrà eseguito nuovamente il push, le tue applicazioni utilizzeranno IBM SDK for Java Versione 7.1-1.0. Questo si traduce in un notevole miglioramento delle prestazioni. La tua applicazione mostra ora una migliore
 velocità effettiva e un utilizzo della memoria ridotto. Per ulteriori informazioni su IBM Java SDK fai clic [qui](http://www-01.ibm.com/support/docview.wss?uid=swg21671466).
-
-# rellinks
-{: #rellinks notoc}
-## general
-{: #general notoc}
-  * [Runtime Liberty](index.html)
-  * [Panoramica di Liberty Profile](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

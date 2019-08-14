@@ -3,6 +3,7 @@
 copyright:
   years: 2016, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
@@ -12,7 +13,7 @@ lastupdated: "2018-06-27"
 # 在 {{site.data.keyword.cloud_notm}} 中使用 Dynatrace 监视 Liberty
 {: #using_dynatrace}
 
-Dynatrace 是第三方服务，它提供对应用程序的监视。您可以将 Dynatrace 与 Liberty 应用程序集成，但 IBM 不提供对第三方服务的支持。有关更多信息，请参阅[第三方服务](../../common/buildpackSupport.html#third-party)。
+Dynatrace 是第三方服务，它提供对应用程序的监视。您可以将 Dynatrace 与 Liberty 应用程序集成，但 IBM 不提供对第三方服务的支持。有关更多信息，请参阅[第三方服务](/docs/runtimes-common/buildpackSupport.html#third-party)。
 
 有关 Dynatrace 及其许可的更多信息，请参阅 [Dynatrace Application Monitoring ![外部链接图标](../../../icons/launch-glyph.svg "外部链接图标")](http://www.dynatrace.com/en/products/application-monitoring.html)。
 
@@ -35,9 +36,8 @@ Dynatrace 是第三方服务，它提供对应用程序的监视。您可以将 
 
     在此示例中，my-dynatrace-collector 是为服务指定的名称，DynatraceCollectorIPaddress 是已配置的 Dynatrace 收集器的 IP 地址，profile 是与此受监视应用程序关联的可选 Dynatrace 概要文件名称。缺省概要文件值为 Monitoring。可以指定可选参数，如以下示例中所示。
 
-
     ```
-ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
+    ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddress","profile":"Monitoring",
                       "options" : {"dynatrace-parameter-1": "value",
                                    "dynatrace-parameter-2": "value"}}'
     ```
@@ -79,7 +79,6 @@ ibmcloud cf cups my-dynatrace-collector -p '{"server":"DynatraceCollectorIPaddre
 必须将要监视的 Liberty 应用程序配置为可找到先前设置的托管代理程序 `.jar` 文件的服务器。可以使用 **JBP_CONFIG_DYNATRACEAPPMONAGENT** 环境变量来配置应用程序。**JBP_CONFIG_DYNATRACEAPPMONAGENT** 环境变量会通知 buildpack 从什么位置下载 Dynatrace 代理程序。要设置该环境变量，请完成以下步骤：
 
 1. 设置变量 **JBP_CONFIG_DYNATRACEAPPMONAGENT**，使其具有值 *"repository_root: URL_of_server_hosting_index.yml"*。例如，推送应用程序后，发出以下命令：
-
 
         ibmcloud cf se myApp JBP_CONFIG_DYNATRACEAPPMONAGENT 'repository_root: https://my-dynatrace-agent-host.mybluemix.net'
         {: codeblock}

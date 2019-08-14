@@ -3,6 +3,7 @@
 copyright:
   years: 2016, 2018
 lastupdated: "2018-02-22"
+subcollection: "liberty"
 
 ---
 
@@ -14,6 +15,5 @@ lastupdated: "2018-02-22"
 
 使用以下资源对 Liberty for Java 应用程序和 buildpack 进行故障诊断：
 
-* [运行时的故障诊断](../common/ts_runtimes.html#runtimes)
-* [运行时的故障诊断：Liberty](../common/ts_runtimes.html#ts_liberty)
-* [应用程序管理](../common/app_mng.html)
+* [运行时的故障诊断](/docs/runtimes-common/ts_runtimes.html#runtimes)
+* [应用程序管理](/docs/runtimes-common/app_mng.html)

@@ -3,6 +3,7 @@
 copyright:
   years: 2017, 2018
 lastupdated: "2018-06-27"
+subcollection: "liberty"
 
 ---
 
@@ -12,7 +13,7 @@ lastupdated: "2018-06-27"
 # 使用您自己的 JRE
 {: #using_own_jre}
 
-您可以使用自己的 JRE 在 {{site.data.keyword.Bluemix}} 上執行 Liberty 應用程式。您必須完成下列動作，讓您的 JRE 可供您的應用程式使用。
+您可以使用自己的 JRE 在 {{site.data.keyword.Bluemix}} 上執行 Liberty 應用程式。liberty-for-java 建置套件將支援 [WebSphere Liberty 所支援的運行環境](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/rwlp_restrict.html#rwlp_restrict__rest13)，但無法保證不受支援版本的完整功能。您必須完成下列動作，讓您的 JRE 可供您的應用程式使用。
 * 在可供建置套件下載的位置管理 JRE。
 * 管理提供 JRE 位置的 `index.yml` 檔案。
 * 將您的應用程式配置為使用您的 JRE。
@@ -20,11 +21,11 @@ lastupdated: "2018-06-27"
 ## 管理 JRE 及 `index.yml`
 {: #hosting_jre}
 
-您必須管理 Web 伺服器上可從中下載 Liberty 建置套件的 JRE 檔案。您可以使用任何可用的伺服器機能，在 {{site.data.keyword.Bluemix_notm}} 上管理它，也可以在公用的位置上管理它。必須以指定 JRE 檔相關詳細資料的 `index.yml` 檔案來配置伺服器。
+您必須在 liberty-for-java 建置套件可從該處下載的 Web 伺服器上，管理 JRE 檔案。您可以使用任何可用的伺服器機能，在 {{site.data.keyword.Bluemix_notm}} 上管理它，也可以在公用的位置上管理它。必須以指定 JRE 檔相關詳細資料的 `index.yml` 檔案來配置伺服器。
 
 完成下列步驟，以管理 JRE 及 `index.yml` 檔案：
   1. 獲得 JRE，其版本必須是用於 UNIX 64 位元作業系統的版本，而且必須是 `tar.gz` 檔案。
-  2. 在 Liberty 建置套件可下載的位置管理 JRE 檔案。
+  2. 在 liberty-for-java 建置套件可從該處下載的位置管理 JRE 檔案。
   3. 在管理位置提供 `index.yml` 檔案。`index.yml` 檔案必須包括一個項目，其中包含 JRE 的版本 ID，後面接著一個冒號，以及完整的 JRE 檔位置 URL。
     * 在 `index.yml` 檔案中定義 JRE 版本。
 

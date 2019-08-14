@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-10-06"
+  years: 2015, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +12,88 @@ lastupdated: "2017-10-06"
 # ASP.NET 核心 buildpack 的最新更新
 {: #latest_updates}
 
+ASP.NET 核心 buildpack 中最新更新的列表。
 
-aspnet buildpack 中最新更新的列表。
+## 2019 年 3 月 20 日：更新了 ASP.NET Core buildpack v2.2-20190319-1114
+本发行版包含 dotnet-core Cloud Foundry buildpack V2.2.7。
+
+* 添加对 .NET Aspnetcore 2.1.7 的支持
+* 添加对 .NET Aspnetcore 2.1.8 的支持
+* 添加对 .NET Aspnetcore 2.2.1 的支持
+* 添加对 .NET Aspnetcore 2.2.2 的支持
+* 添加对 .NET Runtime 1.1.11 的支持
+* 添加对 .NET Runtime 2.1.7 的支持
+* 添加对 .NET Runtime 2.1.8 的支持
+* 添加对 .NET Runtime 2.2.1 的支持
+* 添加对 .NET Runtime 2.2.2 的支持
+* 添加对 .NET SDK 1.1.12 的支持
+* 添加对 .NET SDK 2.1.504 的支持
+* 添加对 .NET SDK 2.2.104 的支持
+* 除去对 .NET Aspnetcore 2.1.5 的支持
+* 除去对 .NET Aspnetcore 2.1.4 的支持
+* 除去对 .NET Aspnetcore 2.1.2 的支持
+* 除去对 .NET Runtime 1.1.9 的支持
+* 除去对 .NET Runtime 2.1.2 的支持
+* 除去对 .NET Runtime 2.1.4 的支持
+* 除去对 .NET Runtime 2.1.5 的支持
+* 除去对 .NET SDK 1.1.10 的支持
+* 除去对 .NET SDK 2.1.302 的支持
+* 将 Node.js 版本更新为 6.17.0
+
+## 2018 年 12 月 12 日：更新了 ASP.NET 核心 buildpack V2.1-20181205-1536
+本发行版包含 dotnet-core Cloud Foundry buildpack V2.2.0。
+
+* 添加对 .NET Aspnetcore 2.1.2 的支持
+* 添加对 .NET Aspnetcore 2.1.4 的支持
+* 添加对 .NET Aspnetcore 2.1.5 的支持
+* 添加对 .NET 运行时 1.0.11 的支持
+* 添加对 .NET 运行时 1.0.12 的支持
+* 添加对 .NET 运行时 1.1.9 的支持
+* 添加对 .NET 运行时 1.1.10 的支持
+* 添加对 .NET 运行时 2.0.7 的支持
+* 添加对 .NET 运行时 2.0.9 的支持
+* 添加对 .NET 运行时 2.1.2 的支持
+* 添加对 .NET 运行时 2.1.5 的支持
+* 添加对 .NET SDK 1.0.4 的支持
+* 添加对 .NET SDK 1.1.10 的支持
+* 添加对 .NET SDK 1.1.11 的支持
+* 添加对 .NET SDK 2.0.3 的支持
+* 添加对 .NET SDK 2.1.302 的支持
+* 添加对 .NET SDK 2.1.403 的支持
+* 除去对 .NET Framework 2.1.0 的支持
+* 除去对 .NET Framework 2.1.1 的支持
+* 除去对 .NET Framework 1.1.8 的支持
+* 除去对 .NET 核心 SDK 2.0.2 的支持
+* 除去对 .NET 核心 SDK 2.0.3 的支持
+* 除去对 .NET 核心 SDK 2.1.201 的支持
+* 除去对 .NET 核心 SDK 2.1.300 的支持
+* 除去对 .NET 核心 SDK 2.1.301 的支持
+* 将 Node.js 版本更新为 6.14.4
+
+
+## 2018 年 9 月 20 日：更新了 ASP.NET 核心 buildpack V2.0-20180918-1356
+
+**重要信息：**从本发行版开始，ASP.NET 核心 buildpack 基于 [Cloud Foundry .NET 核心 buildpack ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html)。本发行版包含 dotnet-core Cloud Foundry buildpack V2.1.3。
+
+* 添加对 .NET 核心 SDK 1.1.9 的支持
+* 添加对 .NET 核心 SDK 2.0.2 的支持
+* 添加对 .NET 核心 SDK 2.0.3 的支持
+* 添加对 .NET 核心 SDK 2.1.201 的支持
+* 添加对 .NET 核心 SDK 2.1.300 的支持
+* 添加对 .NET 核心 SDK 2.1.301 的支持
+* 添加对 .NET Framework 1.0.11 的支持
+* 添加对 .NET Framework 1.1.8 的支持
+* 添加对 .NET Framework 2.0.7 的支持
+* 添加对 .NET Framework 2.1.0 的支持
+* 添加对 .NET Framework 2.1.1 的支持
+* 除去对 .NET 核心 SDK 1.1.0 的支持
+* 除去对 .NET 核心 SDK 1.0.0-preview2-003156 的支持
+* 除去对 .NET 核心 SDK 2.0.0 的支持
+* 除去对 .NET 核心 SDK 2.0.0-preview2-006497 的支持
+* 除去对 .NET Framework 1.0.4 的支持
+* 除去对 .NET Framework 1.1.1 的支持
+* Node.js 版本更新为 6.14.3
+* 更改缺省 .NET 核心 SDK 2.1.301
 
 ## 2017 年 10 月 6 日：更新了 ASP.NET 核心 buildpack V1.0.26-20170913-1346
 * 添加对 .NET 核心运行时 2.0.0 的支持
@@ -76,7 +157,7 @@ aspnet buildpack 中最新更新的列表。
 
 * 添加对 .NET 核心 1.1.0 的支持
 * 除去对 .NET 核心 1.0.0 RC2 的支持
-* 添加用于清除 NuGet 数据包高速缓存的选项
+* 添加用于清除 NuGet 包高速缓存的选项
 
 ## 2016 年 10 月 10 日：更新了 ASP.NET 核心 buildpack V1.0.1-20161005-1225
 
@@ -119,10 +200,4 @@ dnx src/dotnetstarter kestrel --server.urls http://${VCAP_APP_HOST}:${PORT}
 ```
 {: codeblock}
 
-* 此 buildpack 中不再使用 Nowin Web 服务器，而改为使用 [Kestrel]{https://github.com/aspnet/KestrelHttpServer} Web 服务器。
-
-# 相关链接
-{: #rellinks notoc}
-## 常规
-{: #general notoc}
-* [Dotnet 核心运行时](index.html)
+* 此 buildpack 中不再使用 Nowin Web 服务器，而改为使用 [Kestrel](https://github.com/aspnet/KestrelHttpServer) Web 服务器。

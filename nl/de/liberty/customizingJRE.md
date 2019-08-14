@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-07-03"
+  years: 2015, 2019
+lastupdated: "2019-01-11"
+subcollection: "liberty"
 
 ---
 
@@ -41,12 +42,33 @@ Standardmäßig wird OpenJDK Version 8 verwendet, sofern aktiviert. Mit der Umge
 ```
 {: codeblock}
 
-Die Versionseigenschaft kann auf einen Versionsbereich wie 1.7.+  oder auf eine bestimmte in der [Liste der verfügbaren OpenJDK-Versionen](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml) aufgeführte Version festgelegt werden. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden.
+Die Versionseigenschaft kann auf einen Versionsbereich wie 1.7.+, 1.8.+ oder auf eine bestimmte in der [Liste der verfügbaren OpenJDK-Versionen](https://download.run.pivotal.io/openjdk/lucid/x86_64/index.yml) aufgeführte Version festgelegt werden. Die besten Ergebnisse erzielen Sie, wenn Sie Java 8 verwenden.
+
+## OpenJ9
+{: #openj9}
+
+Optional können Anwendungen für die Ausführung mit OpenJ9 als JRE oder JDK konfiguriert werden. Legen Sie für die JVM-Umgebungsvariable den Wert "openj9" fest, um die Ausführung einer Anwendung mit OpenJ9 zu ermöglichen. Führen Sie zum Beispiel den folgenden Befehl über das {{site.data.keyword.Bluemix_notm}}-Befehlszeilentool aus:
+```
+    ibmcloud cf set-env myapp JVM 'openj9'
+```
+{: codeblock}
+
+Bei entsprechender Aktivierung wird standardmäßig OpenJ9 Version 11 verwendet. Mit der Umgebungsvariablen JBP_CONFIG_OPENJ9 können Sie eine alternative Version von OpenJ9 angeben. Legen Sie beispielsweise die folgende Umgebungsvariable fest, um die neueste Version von OpenJ9 8 zu verwenden:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "version: 8.+"
+```
+{: codeblock}
+
+Bei entsprechender Aktivierung wird standardmäßig die OpenJ9-JRE verwendet. Mit der Umgebungsvariablen JBP_CONFIG_OPENJ9 können Sie die Verwendung der JDK-Version von OpenJ9 angeben. Legen Sie beispielsweise die folgende Umgebungsvariable fest, um das OpenJ9-JDK zu verwenden:
+```
+    ibmcloud cf set-env myapp JBP_CONFIG_OPENJ9 "type: jdk"
+```
+{: codeblock}
 
 ## Oracle JRE
 {: #oracle_jre}
 
-Informationen zur Verwendung von Oracle JRE finden Sie unter [Oracle JRE verwenden](oracle_jre.html).
+In [Eigene JRE verwenden](/docs/runtimes/liberty/using_own_jre.html) finden Sie Informationen zur Verwendung der Oracle-JRE.
 
 ## JRE-Optionen konfigurieren
 {: #configuring_jre}
@@ -57,10 +79,10 @@ Informationen zur Verwendung von Oracle JRE finden Sie unter [Oracle JRE verwend
 Das Liberty-Buildpack konfiguriert die JVM-Standardoptionen unter Berücksichtigung der folgenden Punkte:
 
 * Speicherbegrenzung einer Anwendung.  Die angewendeten JVM-Heapspeichereinstellungen werden basierend auf den folgenden Faktoren berechnet:
-  * Speicherbegrenzung einer Anwendung, wie in [Speicherbegrenzungen und das Liberty-Buildpack](memoryLimits.html#memory_limits) erläutert.
+  * Speicherbegrenzung einer Anwendung, wie in [Speicherbegrenzungen und das Liberty-Buildpack](/docs/runtimes/liberty/memoryLimits.html#memory_limits) erläutert.
   * JRE-Typ, da die auf den Heapspeicher bezogenen Optionen für die JVM in Abhängigkeit von den unterstützten JRE-Optionen variieren.
 
-* Die in {{site.data.keyword.Bluemix_notm}} unterstützten [Liberty-Features](libertyFeatures.html#libertyfeatures).
+* Die in [{{site.data.keyword.Bluemix_notm}} unterstützten Liberty-Features](/docs/runtimes/liberty/libertyFeatures.html#libertyfeatures).
   * Globale Datenbanktransaktionen mit zweiphasigem Commit werden in {{site.data.keyword.Bluemix_notm}} nicht unterstützt und deshalb durch die Einstellung -Dcom.ibm.tx.jta.disable2PC=true inaktiviert.
 
 * Die {{site.data.keyword.Bluemix_notm}}-Umgebung.
@@ -237,7 +259,7 @@ Anwendung mit angepassten JVM-Optionen bereitstellen, um ausführliche {{site.da
 ```
 {: codeblock}
 
- Details zum Anzeigen und Herunterladen der generierten Speicherauszugsdateien finden Sie in der Dokumentation über [Protokollierung und Tracing](loggingAndTracing.html#download_dumps).
+ Details zum Anzeigen und Herunterladen der generierten Speicherauszugsdateien finden Sie in der Dokumentation über [Protokollierung und Tracing](/docs/runtimes/liberty/loggingAndTracing.html#download_dumps).
 
 ### JRE überschreiben
 {: #overlaying_jre}
@@ -295,10 +317,3 @@ herunter und fügen Sie sie Ihrer Anwendung wie folgt hinzu:
 {: codeblock}
 
 Bei Durchführung einer Push-Operation für Ihre Anwendung überschreiben diese JAR-Dateien die JAR-Standardrichtliniendateien in der Java-Laufzeit. Dieser Prozess aktiviert die 256-Bit-AES-Verschlüsselung.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

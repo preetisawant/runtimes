@@ -2,7 +2,8 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-12-05"
+subcollection: "Swift"
 
 ---
 
@@ -16,6 +17,7 @@ lastupdated: "2018-07-03"
 {:app_name: data-hd-keyref="app_name"}
 
 # Lernprogramm 'Einführung'
+{: #getting-started}
 
 * {: download} Herzlichen Glückwunsch! Sie haben die Hello World-Beispielanwendung unter {{site.data.keyword.Bluemix}} bereitgestellt!  Befolgen Sie diese schrittweise Anleitung, um zu starten. Oder laden Sie den <a class="xref" href="http://bluemix.net" target="_blank" title="(Beispielcode herunterladen)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Anwendungscode herunterladen" />Beispielcode herunter</a> und beginnen Sie auf eigene Faust.
 
@@ -27,7 +29,7 @@ In diesen Dokumenten wurden Verweise auf die Cloud Foundry-Befehlszeilenschnitts
 ## Vorbemerkungen
 {: #prereqs}
 * [Git ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://git-scm.com/downloads){: new_window}
-* [{{site.data.keyword.Bluemix_notm}}-CLI](../../cli/reference/bluemix_cli/download_cli.html)
+* [{{site.data.keyword.Bluemix_notm}}-CLI](/docs/cli/reference/ibmcloud/download_cli.html)
 * [Swift-Compiler ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://swift.org/download/) für Ihre Plattform.
 
 ## Schritt 1: Klonen Sie die Beispielapp.
@@ -114,7 +116,7 @@ ibmcloud login
   ```
   {: codeblock}
 
-  Wenn Sie eine eingebundene Benutzer-ID haben, verwenden Sie stattdessen den folgenden Befehl, um sich mit Ihrer Single Sign-on-ID anzumelden. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id).
+  Wenn Sie eine eingebundene Benutzer-ID haben, verwenden Sie stattdessen den folgenden Befehl, um sich mit Ihrer Single Sign-on-ID anzumelden. Weitere Informationen finden Sie unter [Mit eingebundener ID anmelden](/docs/cli/login_federated_id.html).
 
   ```
 ibmcloud login --sso
@@ -127,10 +129,11 @@ ibmcloud target --cf
   ```
   {: codeblock}
 
-  Wenn Sie keine eingerichtete Organisation oder keinen eingerichteten Bereich haben, finden Sie weitere Informationen unter [Organisationen und Bereiche hinzufügen](https://console.bluemix.net/docs/account/orgs_spaces.html).
+  Wenn Sie keine eingerichtete Organisation oder keinen eingerichteten Bereich haben, finden Sie weitere Informationen unter [Organisationen und Bereiche hinzufügen](/docs/account/orgs_spaces.html).
   {: tip}
 
 1. Übertragen Sie Ihre App aus dem Verzeichnis *get-started-swift* mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}}.
+
   ```
 ibmcloud cf push
   ```
@@ -139,22 +142,28 @@ ibmcloud cf push
   Dieser Vorgang kann einige Minuten dauern. Falls ein Fehler im Bereitstellungsprozess auftritt, können Sie mithilfe des Befehls `ibmcloud cf logs <Your-App-Name> --recent` nach dem Fehler suchen.
 
 Wenn die Bereitstellung abgeschlossen ist, sollte eine Nachricht anzeigen, dass Ihre App ausgeführt wird.  Ihre App wird unter der URL angezeigt, die in der Ausgabe der Push-Operation aufgelistet ist.  Sie können auch den folgenden Befehl absetzen, um den Status der App zu prüfen und ihre URL anzuzeigen.
+
   ```
 ibmcloud cf apps
   ```
   {: codeblock}
 
+Sie können die App auch über die {{site.data.keyword.Bluemix_notm}} [Ressourcenliste](https://cloud.ibm.com/resources) anzeigen.
+
 ## Schritt 5: Fügen Sie eine Datenbank hinzu.
 {: #add_database}
 
-Als Nächstes werden Sie dieser Anwendung eine {{site.data.keyword.cloudant_short_notm}}-Datenbank hinzufügen und die Anwendung so einrichten, dass sie lokal und unter {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann.
+Als Nächstes werden Sie dieser Anwendung eine {{site.data.keyword.cloudant_short_notm}} NoSQL-Datenbank hinzufügen und die Anwendung so einrichten, dass sie lokal und unter {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann.
 
 1. Melden Sie sich in Ihrem Browser bei {{site.data.keyword.Bluemix_notm}} an und wechseln Sie zum Dashboard. Wählen Sie **Ressource erstellen** aus.
-2. Wählen Sie den Abschnitt **Daten und Analyse** und anschließend **{{site.data.keyword.cloudant_short_notm}}** aus und erstellen Sie Ihren Service.
-3. Rufen Sie die Ansicht **Verbindungen** auf. Wählen Sie Ihre Anwendung und anschließend **Verbindung erstellen** aus.
-4. Wählen Sie **Erneutes Staging** aus, wenn Sie dazu aufgefordert werden. {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und stellt die Datenbankberechtigungsnachweise für Ihre Anwendung durch die Umgebungsvariable `VCAP_SERVICES` bereit. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
+1. Suchen Sie nach **{{site.data.keyword.cloudant_short_notm}}** und wählen Sie den Service aus.
+1. Wählen Sie für **Verfügbare Authentifizierungsmethoden** die Option **Sowohl traditionelle Berechtigungsnachweise als auch IAM verwenden** aus. Sie können die Standardeinstellungen für die anderen Felder belassen. Klicken Sie auf **Erstellen**, um den Service zu erstellen.
+1. Rufen Sie in der Navigation **Verbindungen** auf und klicken Sie dann auf **Verbindung erstellen**. Wählen Sie Ihre Anwendung aus und klicken Sie auf **Verbinden**.
+1. Verwenden Sie die Standardwerte und klicken Sie auf **Verbinden & Erneutes Staging für App**, um eine Verbindung von der Datenbank zur Anwendung herzustellen. Klicken Sie auf **Erneutes Staging**, wenn Sie dazu aufgefordert werden.
 
-Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Anstelle der festen Codierung eines Datenbankkennworts können Sie dieses in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen.
+   {{site.data.keyword.Bluemix_notm}} startet Ihre Anwendung erneut und stellt die Datenbankberechtigungsnachweise für Ihre Anwendung durch die Umgebungsvariable `VCAP_SERVICES` bereit. Diese Umgebungsvariable ist nur dann für die Anwendung verfügbar, wenn sie unter {{site.data.keyword.Bluemix_notm}} ausgeführt wird.
+
+Umgebungsvariablen ermöglichen es Ihnen, die Bereitstellungseinstellungen von Ihrem Quellcode zu trennen. Beispiel: Anstelle der festen Codierung eines Datenbankkennworts können Sie es in einer Umgebungsvariablen speichern, auf die Sie in Ihrem Quellcode verweisen.
 {: tip}
 
 ## Schritt 6: Verwenden Sie die Datenbank.
@@ -193,7 +202,7 @@ Diese Beispielanwendung verwendet das Paket `CloudEnvironment` für die Interakt
 Der Platzhalter `cloudant` in der Konfiguration `cloudfoundry:cloudant` erleichtert das Binden eines vom Benutzer bereitgestellten Cloudant-Service an Ihre Anwendung. Mit der Konfiguration `cloudfoundry:cloudant` können Sie einen Cloudant-Service erstellen, der die Zeichenfolge `cloudant` im Servicenamen enthält und den Service an Ihre Anwendung bindet, ohne die Datei `config.json` zu bearbeiten. Wenn Sie diese Konfiguration ändern und zu einem späteren Zeitpunkt einen vom Benutzer bereitgestellten Cloudant-Service verwenden möchten, müssen Sie entweder die Konfiguration für `cloudfoundry:cloudant` bearbeiten oder `cloudfoundry:` mit dem Namen des vom Benutzer bereitgestellten Service definieren.
 {: tip}
 
-Wechseln Sie in Ihrem Browser zum {{site.data.keyword.Bluemix_notm}}-Dashboard und wählen Sie **_Ihre App_ > Verbindungen** aus. Klicken Sie auf das {{site.data.keyword.cloudant_short_notm}}-Menüsymbol (**&vellip;**) und wählen Sie **Berechtigungsnachweise anzeigen** aus.
+Suchen Sie Ihre App in der {{site.data.keyword.Bluemix_notm}} [Ressourcenliste](https://cloud.ibm.com/resources). Klicken Sie auf der Servicedetailseite für die App auf **Verbindungen** in der Seitenleiste. Klicken Sie auf das {{site.data.keyword.cloudant_short_notm}}-Menüsymbol (**&hellip;**) und wählen Sie **Berechtigungsnachweise anzeigen** aus.
 
 Kopieren Sie einfach die Berechtigungsnachweise und fügen Sie diese in die entsprechenden Felder in Ihrer lokalen Datei 'config.json' ein.
 

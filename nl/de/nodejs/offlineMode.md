@@ -3,6 +3,7 @@
 copyright:
   years: 2016, 2018
 lastupdated: "2018-07-12"
+subcollection: "Nodejs"
 
 ---
 
@@ -27,7 +28,7 @@ Das Node.js-Buildpack kann auf die folgenden externen Sites zugreifen. Mögliche
 * https://iojs.org wird verwendet, um ältere Versionen des Knotens abzurufen, die entweder im Buildpack nicht enthalten oder unter https://semver.herokuapp.com nicht verfügbar sind.
 * https://registry.npmjs.org wird verwendet, um Knotenmodule wie express abzurufen.
 
-Konfigurieren Sie Ihre Anwendungen für die Verwendung einer Node-Engineversion, die im SDK for Node.js-Buildpack enthalten ist, um die Anzahl der Sites in der Whitelist zu reduzieren.  Die Gruppe der Node-Engineversionen, die im Buildpack enthalten ist, finden Sie in [Neueste Aktualisierungen](./updates.html).  Wenn Sie Ihre Anwendung so konfigurieren, dass diese Node-Engineversionen verwendet werden, ist nur die Site https://registry.npmjs.org erforderlich, um Module herunterzuladen.
+Konfigurieren Sie Ihre Anwendungen für die Verwendung einer Node-Engineversion, die im SDK for Node.js-Buildpack enthalten ist, um die Anzahl der Sites in der Whitelist zu reduzieren.  Die Gruppe der Node-Engineversionen, die im Buildpack enthalten ist, finden Sie in [Neueste Aktualisierungen](/docs/runtimes/nodejs/updates.html).  Wenn Sie Ihre Anwendung so konfigurieren, dass diese Node-Engineversionen verwendet werden, ist nur die Site https://registry.npmjs.org erforderlich, um Module herunterzuladen.
 
 Beachten Sie, dass sich bei der Installation von neuen Versionen des SDK for Node.js-Buildpacks die Gruppe der verfügbaren Engineversionen häufig zu neueren Versionen verschieben.  Eventuell müssen Sie Ihre App rekonfigurieren, um eine neuere Node-Engineversion anzugeben, die im Buildpack vorhanden ist.
 
@@ -61,4 +62,4 @@ Bei jeder Änderung der Abhängigkeiten in der Datei `package.json` müssen Sie 
 {: #working_with_proxy}
 
 In einigen Umgebungen, z. B. [{{site.data.keyword.Bluemix_dedicated_notm}}](/docs/dedicated/index.html#dedicated) und
-[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), kann ein Proxy konfiguriert werden. Weitere Informationen finden Sie unter [Mit einem Proxy arbeiten](/docs/manageapps/workingWithProxy.html).
+[{{site.data.keyword.Bluemix_local_notm}}](/docs/local/index.html#local), kann ein Proxy konfiguriert werden. Weitere Informationen finden Sie unter [Mit einem Proxy arbeiten](/docs/runtimes-common/workingWithProxy.html).

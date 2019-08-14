@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-12-12"
+subcollection: "liberty"
 
 ---
 
@@ -34,42 +35,14 @@ dargestellt, die vom Liberty-Buildpack für die Anwendung generiert wird:
 ```
 {: codeblock}
 
-## New Relic-Service hinzufügen
-{: #add_new_relic}
 
-Führen Sie die folgenden Schritte aus, um eine bereits vorhandene Java-Anwendung mit New Relic in {{site.data.keyword.Bluemix_notm}} zu überwachen.
-1. Erstellen Sie eine New Relic-Serviceinstanz in {{site.data.keyword.Bluemix_notm}}.
-
-  ```
-  ibmcloud cf create-service newrelic standard mynewrelic
-  ```
-  {: codeblock}
-
-2. Stellen Sie Ihre Anwendung mit dem New Relic-Service in {{site.data.keyword.Bluemix_notm}} bereit.  Im Folgenden ist ein Beispiel für ein Anwendungsmanifest aufgeführt:
-
-  <pre>
-        &dash;&dash;&dash;
-        applications:
-        - name: myapp
-         memory: 1G
-         instances: 1
-         host: myapp
-         domain: mybluemix.net
-         path: myapp.war
-         services:
-         - mynewrelic
-  </pre>
-  {: codeblock}
-
-3. Greifen Sie direkt über das {{site.data.keyword.Bluemix_notm}}-Dashboard Ihrer Anwendung auf das New Relic-Dashboard zu.
-
-### Vom Benutzer bereitgestellten New Relic-Service hinzufügen
+## Vom Benutzer bereitgestellten New Relic-Service hinzufügen
 {: #add_user_provided_new_relic}
 
 Wenn Sie über ein vorhandenes New Relic-Konto und den zugehörigen Lizenzschlüssel verfügen, können Sie den vorhandenen New Relic-Service mit einem vom Benutzer bereitgestellten Service an Ihre Anwendung binden.
 
 1. Erstellen Sie eine vom Benutzer bereitgestellte Serviceinstanz und verwenden Sie dazu den bereits vorhandenen Lizenzschlüssel.  Wenn Ihr vorhandener Lizenzschlüssel '1234567' lautet, können Sie die {{site.data.keyword.Bluemix_notm}}-CLI zum Erstellen eines vom Benutzer bereitgestellten Service (create-user-provided-service) verwenden und an der Eingabeaufforderung wie im folgenden Beispiel den Lizenzschlüssel '1234567' angeben:
-  
+
   ```
     ibmcloud cf create-user-provided-service mynewrelic -p "licenseKey"
     licenseKey> 1234567
@@ -97,10 +70,3 @@ Die automatische Konfiguration des New Relic-Service unterscheidet sich von der 
 * Der Ausschluss (Opt-out) kann nicht verwendet werden.
 * Die Serviceintegration basiert auf dem New Relic-Agenten, bei dem es sich um einen Java-Agenten handelt. Aus diesem Grund erfolgt die Konfiguration in der Datei 'server.xml' mithilfe von Java-Optionen und nicht mit Cloudvariablen.
 * Die Konfiguration basiert auf den Umgebungsvariablen VCAP_SERVICES und VCAP_APPLICATION.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Liberty-Laufzeit](index.html)
-* [Übersicht über das Liberty-Profil](http://www-01.ibm.com/support/knowledgecenter/SSAW57_8.5.5/com.ibm.websphere.wlp.nd.doc/ae/cwlp_about.html)

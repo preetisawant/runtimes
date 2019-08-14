@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2017-10-06"
+  years: 2015, 2019
+lastupdated: "2019-03-20"
+subcollection: "Dotnet"
 ---
 
 {:new_window: target="_blank"}
@@ -11,8 +12,88 @@ lastupdated: "2017-10-06"
 # Neueste Aktualisierungen für das Buildpack 'ASP.NET Core'
 {: #latest_updates}
 
+Liste mit den neuesten Aktualisierungen im Buildpack 'ASP.NET Core'
 
-Eine Liste mit den neuesten Aktualisierungen im aspnet-Buildpack.
+## 20. März 2019: ASP.NET Core Buildpack v2.2-20190319-1114 aktualisiert
+Dieses Release beinhaltet Version 2.2.7 des .NET Core-Cloud Foundry-Buildpacks.
+
+* Unterstützung für .NET Aspnetcore 2.1.7 hinzugefügt
+* Unterstützung für .NET Aspnetcore 2.1.8 hinzugefügt
+* Unterstützung für .NET Aspnetcore 2.2.1 hinzugefügt
+* Unterstützung für .NET Aspnetcore 2.2.2 hinzugefügt
+* Unterstützung für .NET Runtime 1.1.11 hinzugefügt
+* Unterstützung für .NET Runtime 2.1.7 hinzugefügt
+* Unterstützung für .NET Runtime 2.1.8 hinzugefügt
+* Unterstützung für .NET Runtime 2.2.1 hinzugefügt
+* Unterstützung für .NET Runtime 2.2.2 hinzugefügt
+* Unterstützung für .NET SDK 1.1.12 hinzugefügt
+* Unterstützung für .NET SDK 2.1.504 hinzugefügt
+* Unterstützung für .NET SDK 2.2.104 hinzugefügt
+* Unterstützung für .NET Aspnetcore 2.1.5 entfernt
+* Unterstützung für .NET Aspnetcore 2.1.4 entfernt
+* Unterstützung für .NET Aspnetcore 2.1.2 entfernt
+* Unterstützung für .NET Runtime 1.1.9 entfernt
+* Unterstützung für .NET Runtime 2.1.2 entfernt
+* Unterstützung für .NET Runtime 2.1.4 entfernt
+* Unterstützung für .NET Runtime 2.1.5 entfernt
+* Unterstützung für .NET SDK 1.1.10 entfernt
+* Unterstützung für .NET SDK 2.1.302 entfernt
+* Aktualisierung der Node.js-Version auf 6.17.0
+
+## 12. Dezember 2018: ASP.NET Core Buildpack v2.1-20181205-1536 aktualisiert
+Dieses Release enthält Version 2.2.0 des .NET Core-Cloud Foundry-Buildpacks.
+
+* Unterstützung für .NET Aspnetcore 2.1.2 hinzugefügt
+* Unterstützung für .NET Aspnetcore 2.1.4 hinzugefügt
+* Unterstützung für .NET Aspnetcore 2.1.5 hinzugefügt
+* Unterstützung für .NET Runtime 1.0.11 hinzugefügt
+* Unterstützung für .NET Runtime 1.0.12 hinzugefügt
+* Unterstützung für .NET Runtime 1.1.9 hinzugefügt
+* Unterstützung für .NET Runtime 1.1.10 hinzugefügt
+* Unterstützung für .NET Runtime 2.0.7 hinzugefügt
+* Unterstützung für .NET Runtime 2.0.9 hinzugefügt
+* Unterstützung für .NET Runtime 2.1.2 hinzugefügt
+* Unterstützung für .NET Runtime 2.1.5 hinzugefügt
+* Unterstützung für .NET SDK 1.0.4 hinzugefügt
+* Unterstützung für .NET SDK 1.1.10 hinzugefügt
+* Unterstützung für .NET SDK 1.1.11 hinzugefügt
+* Unterstützung für .NET SDK 2.0.3 hinzugefügt
+* Unterstützung für .NET SDK 2.1.302 hinzugefügt
+* Unterstützung für .NET SDK 2.1.403 hinzugefügt
+* Unterstützung für .NET Framework 2.1.0 entfernt
+* Unterstützung für .NET Framework 2.1.1 entfernt
+* Unterstützung für .NET Framework 1.1.8 entfernt
+* Unterstützung für .NET Core SDK 2.0.2 entfernt
+* Unterstützung für .NET Core SDK 2.0.3 entfernt
+* Unterstützung für .NET Core SDK 2.1.201 entfernt
+* Unterstützung für .NET Core SDK 2.1.300 entfernt
+* Unterstützung für .NET Core SDK 2.1.301 entfernt
+* Node.js auf Version 6.14.4 aktualisiert
+
+
+## 20. September 2018: ASP.NET Core Buildpack v2.0-20180918-1356 aktualisiert
+
+**Wichtig:** Ab diesem Release basiert das Buildpack 'ASP.NET Core' auf dem [Cloud Foundry-Buildpack .NET Core ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/buildpacks/dotnet-core/index.html). Dieses Release beinhaltet Version 2.1.3 des .NET Core-Cloud Foundry-Buildpacks.
+
+* Unterstützung für .NET Core SDK 1.1.9 hinzugefügt
+* Unterstützung für .NET Core SDK 2.0.2 hinzugefügt
+* Unterstützung für .NET Core SDK 2.0.3 hinzugefügt
+* Unterstützung für .NET Core SDK 2.1.201 hinzugefügt
+* Unterstützung für .NET Core SDK 2.1.300 hinzugefügt
+* Unterstützung für .NET Core SDK 2.1.301 hinzugefügt
+* Unterstützung für .NET Framework 1.0.11 hinzugefügt
+* Unterstützung für .NET Framework 1.1.8 hinzugefügt
+* Unterstützung für .NET Framework 2.0.7 hinzugefügt
+* Unterstützung für .NET Framework 2.1.0 hinzugefügt
+* Unterstützung für .NET Framework 2.1.1 hinzugefügt
+* Unterstützung für .NET Core SDK 1.1.0 entfernt
+* Unterstützung für .NET Core SDK 1.0.0-preview2-003156 entfernt
+* Unterstützung für .NET Core SDK 2.0.0 entfernt
+* Unterstützung für .NET Core SDK 2.0.0-preview2-006497 entfernt
+* Unterstützung für .NET Framework 1.0.4 entfernt
+* Unterstützung für .NET Framework 1.1.1 entfernt
+* Aktualisierung der Node.js-Version auf 6.14.3
+* Standardversion .NET Core SDK 2.1.301 geändert
 
 ## 6. Oktober 2017: ASP.NET Core-Buildpack v1.0.26-20170913-1346 aktualisiert
 * Unterstützung für .NET Core-Laufzeit 2.0.0 hinzugefügt
@@ -119,10 +200,4 @@ Diese Version des Buildpacks enthält die folgenden Änderungen:
 ```
 {: codeblock}
 
-* Die Verwendung des Nowin-Web-Servers wurde in diesem Buildpack entfernt. Dafür wird der [Kestrel]{https://github.com/aspnet/KestrelHttpServer}-Web-Server verwendet.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-* [Dotnet Core-Laufzeit](index.html)
+* Die Verwendung des Nowin-Web-Servers wurde in diesem Buildpack entfernt. Stattdessen wird der [Kestrel](https://github.com/aspnet/KestrelHttpServer)-Web-Server verwendet.

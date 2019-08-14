@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Swift" audience="runtime" arm="393" href="/docs/runtimes/swift/getting-started.html"}}
+{: .toc subcollection="Swift" audience="runtime" arm="393" href="/docs/runtimes/swift/getting-started.html" path="runtimes/swift"}
 Swift
 
     {: .navgroup id="learn"}
@@ -10,17 +10,17 @@ Swift
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    ../common/workingWithProxy.md
+	{: .topicgroup}
+    Starteranwendungen und Community-Buildpacks
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
-    Starteranwendungen und Community-Buildpacks
-        ../common/starter_app_usage.md
-        ../common/byob.md
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ../common/ts_runtimes.md
-    ../common/buildpackSupport.md
+    /runtimes-common/runtimes-common-runtimes
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

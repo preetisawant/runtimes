@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Python" audience="runtime" arm="384" href="/docs/runtimes/python/getting-started.html"}}
+{: .toc subcollection="Python" audience="runtime" arm="384" href="/docs/runtimes/python/getting-started.html" path="runtimes/python"}
 Python
 
     {: .navgroup id="learn"}
@@ -10,17 +10,17 @@ Python
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    ../common/workingWithProxy.md
+	{: .topicgroup}
+    Starteranwendungen und Community-Buildpacks
+	    /runtimes-common/runtimes-common-using_buildpacks
+        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    {: .topicgroup}
-    Starteranwendungen und Community-Buildpacks
-        ../common/starter_app_usage.md
-        ../common/byob.md
+	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_index.md
-    ../common/buildpackSupport.md
+    /runtimes-common/runtimes-common-runtimes
+    /runtimes-common/runtimes-common-buildpack_support_statement
     {: .navgroup-end}

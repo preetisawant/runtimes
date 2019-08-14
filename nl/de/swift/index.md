@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-09-20"
+subcollection: "Swift"
 
 ---
 
@@ -72,7 +73,7 @@ Die Arbeit mit dem [Kitura-Web-Framework](http://ibm-swift.github.io/Kitura/) bi
 - [SwiftMetrics ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/RuntimeTools/SwiftMetrics)
 - [IBM Cloudant und CouchDB ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Swift/Kitura-CouchDB)
 - [KituraKit ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Swift/KituraKit)
-- [Swift Kuery ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/Swift-Kuery/)
+- [Swift Kuery ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Swift/Swift-Kuery/)
 - [Swift Kuery ORM ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Swift/Swift-Kuery-ORM)
 
 Weitere Swift-Pakete, die Sie in Ihre Anwendung integrieren können, finden Sie im Abschnitt zu Paketen in [Kitura.io](https://www.kitura.io/packages.html). Pakete können zu einer Swift-Anwendung hinzugefügt werden, indem die Git-URL des Pakets und Versionsdetails in die Datei `Package.swift` der App einbezogen werden. Weitere Details zum Paketmanagement finden Sie im [Abschnitt zum Paketmanager (Package Manager) von Swift.org](https://swift.org/package-manager/).

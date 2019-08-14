@@ -2,7 +2,8 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
+subcollection: "Go"
 
 ---
 
@@ -23,7 +24,7 @@ Das Buildpack 'go_buildpack' wird verwendet, wenn Ihre Anwendung eine Datei mit 
 ## Starteranwendung
 {: #starter_application}
 
-{{site.data.keyword.Bluemix_notm}} stellt eine Go-Starteranwendung bereit.  Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Informationen zur Verwendung der Starteranwendung finden Sie unter [Starteranwendungen verwenden](../common/starter_app_usage.html).
+{{site.data.keyword.Bluemix_notm}} stellt eine Go-Starteranwendung bereit.  Die Go-Starteranwendung ist eine einfache Go-App, die Sie als Vorlage für Ihre App verwenden können. Sie können mit der Starter-App experimentieren, Änderungen an der {{site.data.keyword.Bluemix_notm}}-Umgebung vornehmen und diese mit einer Push-Operation übertragen. Informationen zur Verwendung der Starteranwendung finden Sie unter [Starteranwendungen verwenden](docs/runtimes-common/starter_app_usage.html).
 
 ## Laufzeitversionen
 {: #runtime_versions}
@@ -33,7 +34,7 @@ Sie können die Version von Go, die von Ihrer App verwendet werden soll, durch F
 ```
 {
 	"ImportPath": "gohelloworld",
-	"GoVersion": "go1.8.3",
+	"GoVersion": "go1.10",
 	"Deps": []
 }
 ```
@@ -58,11 +59,3 @@ Folgende Go-Versionen stehen im [Go-Buildpack](https://github.com/cloudfoundry/g
 * 1.10
 
 Wenn für Ihre App eine Go-Version erforderlich ist, die nicht aufgelistet ist, können Sie die Anwendung mit dem externen [Go-Buildpack](https://github.com/cloudfoundry/go-buildpack.git){: new_window} implementieren.
-
-# Zugehörige Links
-{: #rellinks notoc}
-## Allgemein
-{: #general notoc}
-
-* [GoLang](http://golang.org/){: new_window}
-* [Cloud Foundry-Buildpack für Go](https://github.com/cloudfoundry/go-buildpack){: new_window}

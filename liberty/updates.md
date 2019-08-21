@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-07-18"
+lastupdated: "2019-08-17"
 
 ---
 
@@ -15,24 +15,31 @@ lastupdated: "2019-07-18"
 
 ## A list of the latest updates in the Liberty buildpack.
 
-### June 18, 2019: Updated Liberty buildpack v3.34
+### August 17, 2019: Updated Liberty buildpack v3.35
 
 * The default Liberty runtime GA version is [19.0.0.6](https://openliberty.io/blog/2019/06/21/microprofile-rest-client-19006.html).
-* The alternate Liberty runtime GA version is `19.0.0.7` was added.
-* The IBM JRE version was updated to [8 SR5 FP37](https://developer.ibm.com/javasdk/2019/06/27/ibm-sdk-java-technology-edition-version-8-service-refresh-5-fix-pack-37/).
+* The alternate Liberty runtime GA version `19.0.0.8` was added. 
+* The default JRE is IBM Small footprint JRE version [8 SR5 FP37](https://developer.ibm.com/javasdk/2019/06/27/ibm-sdk-java-technology-edition-version-8-service-refresh-5-fix-pack-37/). 
+* The AdoptOpenJDK OpenJ9 alternate JRE was updated to version 11.0.4+11_openj9-0.15.1.
+
+### July 18, 2019: Updated Liberty buildpack v3.34
+
+* The default Liberty runtime GA version is [19.0.0.6](https://openliberty.io/blog/2019/06/21/microprofile-rest-client-19006.html).
+* The alternate Liberty runtime GA version is [19.0.0.7](https://openliberty.io/blog/2019/07/18/microprofile-30-developer-experience.html) was added. 
+* The IBM JRE version was updated to [8 SR5 FP37](https://developer.ibm.com/javasdk/2019/06/27/ibm-sdk-java-technology-edition-version-8-service-refresh-5-fix-pack-37/). 
 * The OpenJ9 version 11.03 alternate JRE was updated to version 11.0.3+7_openj9-0.14.3.
 
 ### June 14, 2019: Updated Liberty buildpack v3.33-20190619-1058
 
 * The default Liberty runtime GA version was changed to the [19.0.0.6](https://openliberty.io/blog/2019/06/21/microprofile-rest-client-19006.html) release.
-* The alternate Liberty runtime GA version is also the `19.0.0.6` release.
-* The IBM JRE version was updated to [8 SR5 FP36](https://developer.ibm.com/javasdk/2019/05/31/ibm-sdk-java-technology-edition-version-8-service-refresh-5-fix-pack-36/).
-
+* The alternate Liberty runtime GA version is also the `19.0.0.6` release. 
+* The IBM JRE version was updated to [8 SR5 FP36](https://developer.ibm.com/javasdk/2019/05/31/ibm-sdk-java-technology-edition-version-8-service-refresh-5-fix-pack-36/). 
+ 
 ### May 17, 2019: Updated Liberty buildpack v3.32-20190523-1138
 
 * The default Liberty runtime GA version is [19.0.0.3](https://openliberty.io/blog/2019/03/28/microprofile22-liberty-19003.html).
 * The alternate Liberty runtime GA version [19.0.0.5](https://openliberty.io/blog/2019/05/24/java11-hotspot-19005.html) was added.  
-* The IBM JRE version was updated to 8 SR5 FP35.
+* The IBM JRE version was updated to 8 SR5 FP35. 
 * The OpenJ9 version 11.03 was added as an alternate JRE.  
 
 ### April 26, 2019: Updated Liberty buildpack v3.31-20190423-1354
@@ -49,7 +56,7 @@ lastupdated: "2019-07-18"
 * The alternate Liberty runtime GA version is also the `19.0.0.3` release.  
 * The Cloudant client libraries were updated to 2.15.0.
 * The IBM JRE version was updated to 8 SR5 FP30.  
-* Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, you will need to add a httpDispatcher directive with the trustedSensitiveHeaderOrigin attribute set to "*" and enableWelcomePage set to "false" to the server.xml.
+* Possible breaking change: Review the [Potential WebSphere Application Server problems when deployed behind a WebSphere-aware proxy server ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www-01.ibm.com/support/docview.wss?uid=ibm10879485) document to determine if your application is affected. This document includes the steps that are needed to resolve the issue. To resolve the issue, you will need to add a httpDispatcher directive with the trustedSensitiveHeaderOrigin attribute set to "*" and enableWelcomePage set to "false" to the server.xml. 
 
 ### March 1, 2019: Updated Liberty buildpack v3.29-20190223-2128
 

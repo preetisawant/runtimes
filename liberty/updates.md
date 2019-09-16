@@ -3,7 +3,7 @@
 copyright:
   years: 2015, 2019
 
-lastupdated: "2019-08-17"
+lastupdated: "2019-09-13"
 
 ---
 
@@ -14,6 +14,12 @@ lastupdated: "2019-08-17"
 {: #latest_updates}
 
 ## A list of the latest updates in the Liberty buildpack.
+
+### September 13, 2019: Updated Liberty buildpack v3.36-20190905-1704
+
+* The default Liberty runtime GA version was changed to the [19.0.0.9](https://openliberty.io/blog/2019/09/13/microprofile-reactive-messsaging-19009.html) release.
+* The alternate Liberty runtime GA version is also the `19.0.0.9` release. 
+* The IBM JRE version was updated to [8 SR5 FP40](https://developer.ibm.com/javasdk/2019/08/21/ibm-sdk-java-technology-edition-version-8-service-refresh-5-fix-pack-40/). 
 
 ### August 17, 2019: Updated Liberty buildpack v3.35
 

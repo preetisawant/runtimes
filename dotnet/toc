@@ -1,11 +1,10 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Dotnet" category="compute" audience="runtime" arm="391" href="/docs/runtimes/dotnet/getting-started.html" path="runtimes/dotnet"}
+{: .toc subcollection="Dotnet" category="compute" audience="runtime" arm="391" href="/docs/runtimes/dotnet?topic=Dotnet-dotnet_core" path="runtimes/dotnet"}
 ASP.NET Core
 
     {: .navgroup id="learn"}
-    getting-started.md
     index.md
     {: .navgroup-end}
 
@@ -14,23 +13,16 @@ ASP.NET Core
     usingNuGet.md
     compile_pub_deploy.md
     enforceHTTPS.md
-	/runtimes-common/runtimes-common-working_with_proxy 
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     buildOutputfiles.md
     usingCustomLib.md
-
-
-    {: .topicgroup}
-    Starter applications and community buildpacks
-        /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     runtimeVersions.md
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    /cloud-foundry/cloud-foundry-buildpack_support_statement
     {: .navgroup-end}

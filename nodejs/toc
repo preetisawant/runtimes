@@ -1,11 +1,10 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="Nodejs" category="compute" audience="runtime" arm="386" href="/docs/runtimes/nodejs/getting-started.html" path="runtimes/nodejs"}
+{: .toc subcollection="Nodejs" category="compute" audience="runtime" arm="386" href="/docs/runtimes/nodejs?topic=Nodejs-nodejs_runtime" path="runtimes/nodejs"}
 SDK for Node.js
 
     {: .navgroup id="learn"}
-    getting-started.md
     index.md
     {: .navgroup-end}
 
@@ -14,23 +13,17 @@ SDK for Node.js
     runningLocally.md
     enforceHTTPS.md
     hooks.md
-
-    {: .topicgroup}
-    Starter applications and community buildpacks
-        /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     nodejsBuildpacks.md
     configurationOptions.md
-    /runtimes-common/runtimes-common-app_management
-    /runtimes-common/runtimes-common-working_with_proxy
+    /cloud-foundry/cloud-foundry-app_management
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     updates.md
     availableVersions.md
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    /cloud-foundry/cloud-foundry-buildpack_support_statement
     {: .navgroup-end}

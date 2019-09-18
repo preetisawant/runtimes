@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-09-18"
 subcollection: "liberty"
 
 ---
@@ -29,4 +29,4 @@ The Liberty buildpack is used when the following kinds of applications are deplo
 
 ## Starter application
 {: #starter_application}
-{{site.data.keyword.Bluemix_notm}} provides several Liberty starter applications.  The Liberty starter applications are simple Liberty apps that provide a template that you can use. You can experiment with the starter apps, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment.  See [Using the starter applications](/docs/runtimes-common/starter_app_usage.html) for help with using the starter applications.
+{{site.data.keyword.Bluemix_notm}} provides several Liberty starter applications.  The Liberty starter applications are simple Liberty apps that provide a template that you can use. You can experiment with the starter apps, and make and push changes to the {{site.data.keyword.Bluemix_notm}} environment.  

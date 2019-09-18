@@ -1,11 +1,10 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="liberty" category="compute" audience="runtime" arm="387" href="/docs/runtimes/liberty/getting-started.html" path="runtimes/liberty"}
+{: .toc subcollection="liberty" category="compute" audience="runtime" arm="387" href="/docs/runtimes/liberty?topic=liberty-liberty_runtime" path="runtimes/liberty"}
 Liberty for Java
 
     {: .navgroup id="learn"}
-    getting-started.md
     index.md
 
     {: .topicgroup}
@@ -32,10 +31,7 @@ Liberty for Java
         monitoring/newRelic.md
         [Getting started with Availability Monitoring](/AvailabilityMonitoring/AvailabilityMonitoring-avmon_gettingstarted)
 
-    {: .topicgroup}
-    Work offline or with a proxy
-        offlineMode.md
-		/runtimes-common/runtimes-common-working_with_proxy
+    offlineMode.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -43,18 +39,13 @@ Liberty for Java
     memoryLimits.md
     libertyFeatures.md
     environmentVariables.md
-
-	{: .topicgroup}
-    Starter applications and community buildpacks
-	    /runtimes-common/runtimes-common-using_buildpacks
-        /runtimes-common/runtimes-common-using_starter_apps
     buildpackDefaults.md
-    /runtimes-common/runtimes-common-app_management
+    /cloud-foundry/cloud-foundry-app_management
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_index.md
     [Getting started with IBM Cloud Log Analysis](services/CloudLogAnalysis/index.html)
     updates.md
-    /runtimes-common/runtimes-common-buildpack_support_statement
+    /cloud-foundry/cloud-foundry-buildpack_support_statement
     {: .navgroup-end}

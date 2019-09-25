@@ -1,8 +1,9 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-02-21"
+  years: 2017, 2019
+lastupdated: "2019-09-20"
+subcollection: "Nodejs"
 
 ---
 
@@ -15,4 +16,4 @@ lastupdated: "2018-02-21"
 Troubleshoot your SDK for Node.js applications and buildpacks with the following resources:
 
 * [Troubleshooting for runtimes](/docs/runtimes-common/ts_runtimes.html#runtimes)
-* [Application Management](/docs/runtimes-common/app_mng.html)
+* [Application Management](/docs/runtimes-common/app_mng.html) (Deprecated and no longer supported as of version 4.0)

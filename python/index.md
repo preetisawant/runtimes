@@ -31,7 +31,7 @@ environment.  See [Using the starter applications](docs/runtimes-common/starter_
 You can specify the version of Python to be used by your app by setting python-versionnumber in the runtime.txt file in the root of your application. For example:
 
 ```
-python-3.6.4
+python-3.7.4
 ```
 {: codeblock}
 
